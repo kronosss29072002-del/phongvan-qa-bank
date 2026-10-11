@@ -1,0 +1,339 @@
+- generic [active] [ref=f27e1]:
+  - generic [ref=f27e2]:
+    - generic [ref=f27e4]:
+      - generic [ref=f27e5]:
+        - generic [ref=f27e6]:
+          - link "DuckDuckGo home" [ref=f27e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f27e8]: DuckDuckGo
+          - generic [ref=f27e15]:
+            - combobox "Search privately" [ref=f27e17]: site:github.com feedback widget embed javascript open source
+            - button "Search" [ref=f27e19] [cursor=pointer]
+        - button "Open menu" [ref=f27e24] [cursor=pointer]
+      - navigation [ref=f27e32]:
+        - list [ref=f27e33]:
+          - listitem [ref=f27e34]:
+            - link [ref=f27e35] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+feedback+widget+embed+javascript+open+source&ia=web
+              - strong [ref=f27e36]: All
+          - listitem [ref=f27e39]:
+            - link [ref=f27e40] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+feedback+widget+embed+javascript+open+source&ia=images&iax=images
+              - strong [ref=f27e41]: Images
+          - listitem [ref=f27e42]:
+            - link [ref=f27e43] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+feedback+widget+embed+javascript+open+source&ia=videos&iax=videos
+              - strong [ref=f27e44]: Videos
+          - listitem [ref=f27e45]:
+            - link [ref=f27e46] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+feedback+widget+embed+javascript+open+source&ia=news&iar=news
+              - strong [ref=f27e47]: News
+          - listitem [ref=f27e48]:
+            - link [ref=f27e49] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+feedback+widget+embed+javascript+open+source&iaxm=maps
+              - strong [ref=f27e50]: Maps
+        - list [ref=f27e51]:
+          - listitem [ref=f27e52]:
+            - link "Duck.ai" [ref=f27e54] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+feedback+widget+embed+javascript+open+source&ia=chat&entry=serp
+          - listitem [ref=f27e58]:
+            - button "Search Settings ✀" [ref=f27e60] [cursor=pointer]:
+              - generic [ref=f27e63]: Search Settings
+              - generic [ref=f27e64]: ✀
+    - generic [ref=f27e71]:
+      - navigation [ref=f27e73]:
+        - button [ref=f27e75] [cursor=pointer]:
+          - strong [ref=f27e82]: Private
+        - generic [ref=f27e86]:
+          - switch "Filter by the selected region" [ref=f27e90]
+          - button "Vietnam (en)" [ref=f27e92] [cursor=pointer]
+        - button [ref=f27e97] [cursor=pointer]:
+          - strong [ref=f27e99]: "Safe search: moderate"
+        - button [ref=f27e103] [cursor=pointer]:
+          - strong [ref=f27e105]: Any time
+      - generic [ref=f27e109]:
+        - list [ref=f27e110]:
+          - listitem [ref=f27e111]:
+            - generic [ref=f27e112]:
+              - generic [ref=f27e115]:
+                - text: Only showing results from
+                - generic [ref=f27e116]: github.com
+              - button "Show all results" [ref=f27e118] [cursor=pointer]
+          - listitem [ref=f27e119]:
+            - article [ref=f27e120] [cursor=pointer]:
+              - button [ref=f27e122]
+              - generic [ref=f27e126]:
+                - link "Search domain github.com" [ref=f27e128]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e131]:
+                  - paragraph [ref=f27e132]: Github
+                  - link "https://github.com › topics › feedback-widget" [ref=f27e133]:
+                    - /url: https://github.com/topics/feedback-widget
+                    - paragraph [ref=f27e135]:
+                      - generic [ref=f27e136]: https://github.com
+                      - generic [ref=f27e137]: › topics › feedback-widget
+              - heading [level=2] [ref=f27e139]:
+                - link "feedback-widget · GitHub Topics · GitHub" [ref=f27e140]:
+                  - /url: https://github.com/topics/feedback-widget
+              - generic [ref=f27e142]: Features a fully integrated feedback widget powered by Next.js, Prisma, and Vercel. This project demonstrates best practices for building, styling, and extending React apps with real-world features. 🦖Know why your AI-built app broke — plain-English diagnosis + ready fix, in your editor. Open source. Sentry optional.
+          - listitem [ref=f27e147]:
+            - article [ref=f27e148] [cursor=pointer]:
+              - button [ref=f27e150]
+              - generic [ref=f27e154]:
+                - link "Search domain github.com" [ref=f27e156]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e159]:
+                  - paragraph [ref=f27e160]: Github
+                  - link "https://github.com › AdityaGit-1 › github-feedback-widget" [ref=f27e161]:
+                    - /url: https://github.com/AdityaGit-1/github-feedback-widget
+                    - paragraph [ref=f27e163]:
+                      - generic [ref=f27e164]: https://github.com
+                      - generic [ref=f27e165]: › AdityaGit-1 › github-feedback-widget
+              - heading [level=2] [ref=f27e167]:
+                - 'link "GitHub - AdityaGit-1/github-feedback-widget: An embeddable feedback ..." [ref=f27e168]':
+                  - /url: https://github.com/AdityaGit-1/github-feedback-widget
+              - generic [ref=f27e173]:
+                - text: Jul 25, 2026·
+                - generic [ref=f27e174]: A lightweight feedback widget that turns visitor feedback into real GitHub Issues, paired with a GitHub profile lookup tool. Built as an MLH Fellowship / portfolio project to demonstrate a clean full-stack TypeScript + vanilla JS integration with the GitHub REST API.
+          - listitem [ref=f27e175]:
+            - article [ref=f27e176] [cursor=pointer]:
+              - button [ref=f27e178]
+              - generic [ref=f27e182]:
+                - link "Search domain github.com" [ref=f27e184]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e187]:
+                  - paragraph [ref=f27e188]: Github
+                  - link "https://github.com › BetaHuhn › feedback-js" [ref=f27e189]:
+                    - /url: https://github.com/BetaHuhn/feedback-js
+                    - paragraph [ref=f27e191]:
+                      - generic [ref=f27e192]: https://github.com
+                      - generic [ref=f27e193]: › BetaHuhn › feedback-js
+              - heading [level=2] [ref=f27e195]:
+                - 'link "GitHub - BetaHuhn/feedback-js: Simple modern feedback modal for any ..." [ref=f27e196]':
+                  - /url: https://github.com/BetaHuhn/feedback-js
+              - generic [ref=f27e201]:
+                - text: Feb 1, 2025·
+                - generic [ref=f27e202]: "Install feedback-js using NPM: Then add the following JavaScript code: By default feedback-js will add a feedback button to the bottom right corner of your page with the default colors and text. This can be configured using the options object. There are multiple ways to use feedback-js."
+          - listitem [ref=f27e203]:
+            - article [ref=f27e204] [cursor=pointer]:
+              - button [ref=f27e206]
+              - generic [ref=f27e210]:
+                - link "Search domain github.com" [ref=f27e212]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e215]:
+                  - paragraph [ref=f27e216]: Github
+                  - link "https://github.com › feedbackland › feedbackland" [ref=f27e217]:
+                    - /url: https://github.com/feedbackland/feedbackland
+                    - paragraph [ref=f27e219]:
+                      - generic [ref=f27e220]: https://github.com
+                      - generic [ref=f27e221]: › feedbackland › feedbackland
+              - heading [level=2] [ref=f27e223]:
+                - 'link "GitHub - feedbackland/feedbackland: Open-source feedback platform with ..." [ref=f27e224]':
+                  - /url: https://github.com/feedbackland/feedbackland
+              - generic [ref=f27e226]: "Feedbackland Open-source user feedback: an embeddable widget, a feedback board, and AI insights that tell you what to build next. Live demo · feedbackland.com · Self-host"
+          - listitem [ref=f27e231]:
+            - article [ref=f27e232] [cursor=pointer]:
+              - button [ref=f27e234]
+              - generic [ref=f27e238]:
+                - link "Search domain github.com" [ref=f27e240]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e243]:
+                  - paragraph [ref=f27e244]: Github
+                  - link "https://github.com › KebiLab › pulsekit" [ref=f27e245]:
+                    - /url: https://github.com/KebiLab/pulsekit
+                    - paragraph [ref=f27e247]:
+                      - generic [ref=f27e248]: https://github.com
+                      - generic [ref=f27e249]: › KebiLab › pulsekit
+              - heading [level=2] [ref=f27e251]:
+                - 'link "KebiLab/pulsekit: Feedback widget for websites - GitHub" [ref=f27e252]':
+                  - /url: https://github.com/KebiLab/pulsekit
+              - generic [ref=f27e254]: Feedback Widget That Doesn't Suck Embed a beautiful feedback widget on your site in 2 minutes. Screenshot annotations, real-time analytics, Slack alerts. Completely free.
+          - listitem [ref=f27e259]:
+            - article [ref=f27e260] [cursor=pointer]:
+              - button [ref=f27e262]
+              - generic [ref=f27e266]:
+                - link "Search domain github.com" [ref=f27e268]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e271]:
+                  - paragraph [ref=f27e272]: Github
+                  - link "https://github.com › newjersey › feedback-widget" [ref=f27e273]:
+                    - /url: https://github.com/newjersey/feedback-widget/
+                    - paragraph [ref=f27e275]:
+                      - generic [ref=f27e276]: https://github.com
+                      - generic [ref=f27e277]: › newjersey › feedback-widget
+              - heading [level=2] [ref=f27e279]:
+                - 'link "GitHub - newjersey/feedback-widget: Web component for collecting open ..." [ref=f27e280]':
+                  - /url: https://github.com/newjersey/feedback-widget/
+              - generic [ref=f27e282]: Render the feedback widget by adding the following tag in your HTML (likely at the bottom of the page). It's like using any other HTML tag.
+          - listitem [ref=f27e287]:
+            - article [ref=f27e288] [cursor=pointer]:
+              - button [ref=f27e290]
+              - generic [ref=f27e294]:
+                - link "Search domain github.com" [ref=f27e296]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e299]:
+                  - paragraph [ref=f27e300]: Github
+                  - link "https://github.com › BinaryMoura › Feedback-Widget" [ref=f27e301]:
+                    - /url: https://github.com/BinaryMoura/Feedback-Widget
+                    - paragraph [ref=f27e303]:
+                      - generic [ref=f27e304]: https://github.com
+                      - generic [ref=f27e305]: › BinaryMoura › Feedback-Widget
+              - heading [level=2] [ref=f27e307]:
+                - 'link "GitHub - BinaryMoura/Feedback-Widget: AI-powered feedback widget with ..." [ref=f27e308]':
+                  - /url: https://github.com/BinaryMoura/Feedback-Widget
+              - generic [ref=f27e313]:
+                - text: Apr 7, 2026·
+                - generic [ref=f27e314]: AI-powered feedback widget with intelligent triage, drag & drop positioning, and multi-language support. - BinaryMoura/Feedback-Widget
+          - listitem [ref=f27e315]:
+            - article [ref=f27e316] [cursor=pointer]:
+              - button [ref=f27e318]
+              - generic [ref=f27e322]:
+                - link "Search domain github.com" [ref=f27e324]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e327]:
+                  - paragraph [ref=f27e328]: Github
+                  - link "https://github.com › makethisbetter › makethisbetter-js" [ref=f27e329]:
+                    - /url: https://github.com/makethisbetter/makethisbetter-js
+                    - paragraph [ref=f27e331]:
+                      - generic [ref=f27e332]: https://github.com
+                      - generic [ref=f27e333]: › makethisbetter › makethisbetter-js
+              - heading [level=2] [ref=f27e335]:
+                - 'link "GitHub - makethisbetter/makethisbetter-js: Feedback widget with ..." [ref=f27e336]':
+                  - /url: https://github.com/makethisbetter/makethisbetter-js
+              - generic [ref=f27e338]: Feedback widget with screenshots, annotations, and AI triage - makethisbetter/makethisbetter-js
+          - listitem [ref=f27e343]:
+            - article [ref=f27e344] [cursor=pointer]:
+              - button [ref=f27e346]
+              - generic [ref=f27e350]:
+                - link "Search domain github.com" [ref=f27e352]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e355]:
+                  - paragraph [ref=f27e356]: Github
+                  - link "https://github.com › jaffe9 › feedback-app" [ref=f27e357]:
+                    - /url: https://github.com/jaffe9/feedback-app
+                    - paragraph [ref=f27e359]:
+                      - generic [ref=f27e360]: https://github.com
+                      - generic [ref=f27e361]: › jaffe9 › feedback-app
+              - heading [level=2] [ref=f27e363]:
+                - 'link "GitHub - jaffe9/feedback-app: Open-source widget to collect feedback ..." [ref=f27e364]':
+                  - /url: https://github.com/jaffe9/feedback-app
+              - generic [ref=f27e366]: "Generate a webhook URL easily using Rowy's low-code platform and manage feedback data on a collaborative spreadsheet-UI. Optionally, you can further automate on incoming feedback with Rowy's built-in code-editor (eg: notify on team slack/discord, email follow up etc)."
+          - listitem [ref=f27e371]:
+            - article [ref=f27e372] [cursor=pointer]:
+              - button [ref=f27e374]
+              - generic [ref=f27e378]:
+                - link "Search domain github.com" [ref=f27e380]:
+                  - /url: /?q=site%3Agithub.com%20feedback%20widget%20embed%20javascript%20open%20source
+                - generic [ref=f27e383]:
+                  - paragraph [ref=f27e384]: Github
+                  - link "https://github.com › usero-feedback › usero" [ref=f27e385]:
+                    - /url: https://github.com/usero-feedback/usero
+                    - paragraph [ref=f27e387]:
+                      - generic [ref=f27e388]: https://github.com
+                      - generic [ref=f27e389]: › usero-feedback › usero
+              - heading [level=2] [ref=f27e391]:
+                - 'link "GitHub - usero-feedback/usero: Drop-in feedback widget for any web app ..." [ref=f27e392]':
+                  - /url: https://github.com/usero-feedback/usero
+              - generic [ref=f27e394]: Record what your users actually did, with or without the feedback widget. Recording streams rrweb events to Usero in gzipped chunks while the user is on the page, so you capture whole sessions rather than only the moments around a feedback submission.
+        - button "More results" [ref=f27e401] [cursor=pointer]
+    - list [ref=f27e404]:
+      - button "Close menu" [ref=f27e405] [cursor=pointer]
+      - list [ref=f27e409]:
+        - listitem [ref=f27e410]: Search
+        - listitem [ref=f27e411]:
+          - link "Homepage" [ref=f27e412] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f27e413]:
+          - link "Themes" [ref=f27e414] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f27e415]:
+          - link "Settings" [ref=f27e416] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f27e417]:
+        - listitem [ref=f27e418]: Share Feedback
+        - listitem [ref=f27e419]:
+          - generic [ref=f27e422]:
+            - button "Positive feedback" [ref=f27e423] [cursor=pointer]
+            - button "Negative feedback" [ref=f27e427] [cursor=pointer]
+      - list [ref=f27e431]:
+        - listitem [ref=f27e432]: Downloads
+        - listitem [ref=f27e433]:
+          - link "iOS Browser" [ref=f27e434] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f27e435]:
+          - link "Android Browser" [ref=f27e436] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f27e437]:
+          - link "Mac Browser" [ref=f27e438] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f27e439]:
+          - link "Windows Browser" [ref=f27e440] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f27e441]:
+          - link "Browser Extensions" [ref=f27e442] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f27e443]:
+        - listitem [ref=f27e444]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f27e445]:
+          - link "Duck.ai" [ref=f27e446] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f27e447]:
+          - link "Email Protection" [ref=f27e448] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f27e449]:
+          - link "Newsletter" [ref=f27e450] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f27e451]:
+          - link "Blog" [ref=f27e452] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f27e453]:
+          - link "Podcast" [ref=f27e454] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f27e455]:
+          - link "Collaborations" [ref=f27e456] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f27e457]:
+        - listitem [ref=f27e458]: Learn More
+        - listitem [ref=f27e459]:
+          - link "What’s New" [ref=f27e460] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f27e461]:
+          - link "Compare Privacy" [ref=f27e462] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f27e463]:
+          - link "About Our Browser" [ref=f27e464] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f27e465]:
+          - link "About DuckDuckGo" [ref=f27e466] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f27e467]:
+        - listitem [ref=f27e468]: Other Resources
+        - listitem [ref=f27e469]:
+          - link "Help" [ref=f27e470] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f27e471]:
+          - link "Community" [ref=f27e472] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f27e473]:
+          - link "Careers" [ref=f27e474] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f27e475]:
+          - link "Privacy Policy" [ref=f27e476] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f27e477]:
+          - link "Terms of Service" [ref=f27e478] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f27e479]:
+          - link "Press Kit" [ref=f27e480] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f27e481]:
+          - link "Advertise on Search" [ref=f27e482] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f27e488]:
+    - generic [ref=f27e499]:
+      - heading "Introducing DuckDuckGo Collaborations" [level=3] [ref=f27e500]
+      - paragraph [ref=f27e501]: Expertly crafted products for people who give a duck about privacy.
+    - link "See More" [ref=f27e502] [cursor=pointer]:
+      - /url: https://duckduckgo.com/collaborations
+  - button "Share Feedback" [ref=f27e507] [cursor=pointer]

@@ -1,0 +1,254 @@
+- generic [active] [ref=f293e1]:
+  - dialog [ref=f293e2]:
+    - generic [ref=f293e7]:
+      - generic [ref=f293e8]:
+        - paragraph [ref=f293e9]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+        - paragraph [ref=f293e10]:
+          - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+          - link "Điều khoản về quyền riêng tư" [ref=f293e11] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+      - generic [ref=f293e12]:
+        - link "Chấp nhận" [ref=f293e14] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+        - link "Từ chối" [ref=f293e16] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+      - link "Các lựa chọn khác" [ref=f293e18] [cursor=pointer]:
+        - /url: "javascript: void(0)"
+  - banner [ref=f293e19]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f293e20] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f293e23] [cursor=pointer]
+    - generic [ref=f293e26]:
+      - link [ref=f293e27] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f293e28]
+      - search [ref=f293e29]:
+        - button "Tìm kiếm" [ref=f293e32] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f293e33]: "\"kiểm thực ba bước\" \"sổ kiểm thực\" bộn trú quýnh thực"
+        - generic [ref=f293e34] [cursor=pointer]
+        - generic [ref=f293e36] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f293e41] [cursor=pointer]
+      - link [ref=f293e43] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=8c23e91a6cc2c6ffb204d94e099a3ce13ebbcacaa65b33799ce63ecb8bbbbb14JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT0lMjJraSVlMSViYiU4M20rdGglZTElYmIlYjFjK2JhK2IlYzYlYjAlZTElYmIlOWJjJTIyKyUyMnMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyUyMitiJWUxJWJiJTk5bit0ciVjMyViYStxdSVjMyViZG5oK3RoJWUxJWJiJWIxYyZzZW5kcXVlcnk9MSZmb3JtPUhFQ09EWA&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f293e44]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f293e46]:
+      - link "Đăng nhập" [ref=f293e47] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f293e49] [cursor=pointer]:
+        - generic [ref=f293e50]: Rewards
+      - button "Di động" [ref=f293e66] [cursor=pointer]
+    - navigation "Bộ lọc Tìm kiếm" [ref=f293e69]:
+      - list [ref=f293e70]:
+        - listitem [ref=f293e71]:
+          - link "Tất cả" [ref=f293e72] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f293e74]:
+          - link "Web" [ref=f293e75] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=55a47094b3ab63783c3464a3dda753dd59e3b4459df886c620bfbc12ce31722bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPSUyMmtpJWUxJWJiJTgzbSt0aCVlMSViYiViMWMrYmErYiVjNiViMCVlMSViYiU5YmMlMjIrJTIycyVlMSViYiU5NStraSVlMSViYiU4M20rdGglZTElYmIlYjFjJTIyK2IlZTElYmIlOTluK3RyJWMzJWJhK3F1JWMzJWJkbmgrdGglZTElYmIlYjFjJndlYnNjcD0xJkZPUk09SERSV1ND&ntb=1
+        - listitem [ref=f293e76]:
+          - link "Tìm kiếm" [ref=f293e77] [cursor=pointer]:
+            - /url: /copilotsearch?q=%22ki%e1%bb%83m+th%e1%bb%b1c+ba+b%c6%b0%e1%bb%9bc%22+%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%99n+tr%c3%ba+qu%c3%bdnh+th%e1%bb%b1c&FORM=CSSCOP
+        - listitem [ref=f293e80]:
+          - link "Hình ảnh" [ref=f293e81] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=73f33442e46b98b405b11bcd2e55d2abb8025cfef066e6037b8f61d15b49b15cJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT0lMjJraSVlMSViYiU4M20rdGglZTElYmIlYjFjK2JhK2IlYzYlYjAlZTElYmIlOWJjJTIyKyUyMnMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyUyMitiJWUxJWJiJTk5bit0ciVjMyViYStxdSVjMyViZG5oK3RoJWUxJWJiJWIxYyZGT1JNPUhEUlNDMw&ntb=1
+        - listitem [ref=f293e82]:
+          - link "Video" [ref=f293e83] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=14b68881a4c83310e759ec464d280c7a74d441d64cb0169fd0fc0faaf1ccbdbbJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT0lMjJraSVlMSViYiU4M20rdGglZTElYmIlYjFjK2JhK2IlYzYlYjAlZTElYmIlOWJjJTIyKyUyMnMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyUyMitiJWUxJWJiJTk5bit0ciVjMyViYStxdSVjMyViZG5oK3RoJWUxJWJiJWIxYyZGT1JNPUhEUlNDNA&ntb=1
+        - listitem [ref=f293e84]:
+          - link "Bản đồ" [ref=f293e85] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=21c71dedf98eebb43b2cf1d28135469b4ba94111d455fb6e5cd49041bb8359f5JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT0lMjJraSVlMSViYiU4M20rdGglZTElYmIlYjFjK2JhK2IlYzYlYjAlZTElYmIlOWJjJTIyKyUyMnMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyUyMitiJWUxJWJiJTk5bit0ciVjMyViYStxdSVjMyViZG5oK3RoJWUxJWJiJWIxYyZGT1JNPUhEUlNDNg&ntb=1
+        - listitem [ref=f293e86]:
+          - button [ref=f293e87] [cursor=pointer]
+  - generic [ref=f293e91]:
+    - main "Kết quả Tìm kiếm" [ref=f293e92]:
+      - list [ref=f293e93]:
+        - listitem [ref=f293e94]:
+          - link "THƯ VIỆN PHÁP LUẬT" [ref=f293e96] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=745784133694efd916e7564e5e0d04b6c506f3d04013f7f54c571907fa8140bdJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vcGhhcC1sdWF0L2hvLXRyby1waGFwLWx1YXQvZmlsZS1tYXUtc28ta2llbS10aHVjLTMtYnVvYy0yMDI2LXRoZS1uYW8tY2FjaC1naGktc28ta2llbS10aHVjLTMtYnVvYy1jaGktdGlldC12YS1kYXktZHUtcmEtc2FvLTg4NTc2NC0yOTE0MDguaHRtbA&ntb=1
+            - generic [ref=f293e101]:
+              - generic [ref=f293e102]: THƯ VIỆN PHÁP LUẬT
+              - generic [ref=f293e103]: https://thuvienphapluat.vn › phap-luat › ho-tro-phap-luat
+          - heading [level=2] [ref=f293e106]:
+            - link "File Mẫu sổ kiểm thực 3 bước 2026 thế nào? Cách ghi sổ kiểm thực 3 …" [ref=f293e107] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=745784133694efd916e7564e5e0d04b6c506f3d04013f7f54c571907fa8140bdJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vcGhhcC1sdWF0L2hvLXRyby1waGFwLWx1YXQvZmlsZS1tYXUtc28ta2llbS10aHVjLTMtYnVvYy0yMDI2LXRoZS1uYW8tY2FjaC1naGktc28ta2llbS10aHVjLTMtYnVvYy1jaGktdGlldC12YS1kYXktZHUtcmEtc2FvLTg4NTc2NC0yOTE0MDguaHRtbA&ntb=1
+          - paragraph [ref=f293e109]: "16 thg 9, 2026 · File Mẫu sổ kiểm thực 3 bước 2026 và Cách ghi sổ kiểm thực 3 bước chi tiết và đầy đủ như sau:"
+        - listitem [ref=f293e110]:
+          - link "Hoatieu.vn" [ref=f293e112] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=530ff1c1b1343562c7f5b489ee30b967039b34cffef847f142ed092cbed2f2deJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9ob2F0aWV1LnZuL2JpZXUtbWF1L21hdS1zby1raWVtLXRodWMtMy1idW9jLTE0OTc2MA&ntb=1
+            - generic [ref=f293e117]:
+              - generic [ref=f293e118]: Hoatieu.vn
+              - generic [ref=f293e119]: https://hoatieu.vn › bieu-mau
+          - heading [level=2] [ref=f293e122]:
+            - link "Mẫu sổ kiểm thực 3 bước mới nhất 2026 - Hoatieu.vn" [ref=f293e123] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=530ff1c1b1343562c7f5b489ee30b967039b34cffef847f142ed092cbed2f2deJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9ob2F0aWV1LnZuL2JpZXUtbWF1L21hdS1zby1raWVtLXRodWMtMy1idW9jLTE0OTc2MA&ntb=1
+          - generic [ref=f293e124]:
+            - generic [ref=f293e127]:
+              - generic [ref=f293e128]:
+                - button "Bấm để di chuyển sang trái" [ref=f293e129] [cursor=pointer]
+                - tablist [ref=f293e133]:
+                  - tab "Mẫu Sổ Kiểm Thực 3 Bước Là gì?" [ref=f293e134] [cursor=pointer]
+                  - tab "Mẫu Sổ Kiểm Thực 3 Bước Của Bộ Y Tế" [selected] [ref=f293e135]
+                  - tab "Cách Viết Sổ Kiểm Thực 3 Bước" [ref=f293e136] [cursor=pointer]
+                  - tab "Quy Trình Kiểm Thực 3 Bước" [ref=f293e137] [cursor=pointer]
+                  - tab "Hướng dẫn Kiểm Thực 3 Bước" [ref=f293e138] [cursor=pointer]
+                  - tab "Tại Sao Phải Viết Sổ Kiểm thực?" [ref=f293e139] [cursor=pointer]
+                - button "Nhấp để di chuyển sang phải" [ref=f293e140] [cursor=pointer]
+              - tabpanel "Mẫu Sổ Kiểm Thực 3 Bước Của Bộ Y Tế" [ref=f293e144]:
+                - list [ref=f293e145]:
+                  - listitem [ref=f293e146]:
+                    - generic [ref=f293e147]: Nội dung mẫu sổ kiểm thực 3 bước của Bộ Y tế mới nhất ban hành kèm theo Quyết định 1246/QĐ-BYT mời bạn cùng tham khảo. Các bạn có thể chỉnh sửa mẫu sổ trên trang dưới đây để bố sung thêm các thông tin cần thiết, phù hợp với mục đích sử dụng của mình.
+                - link "Xem thêm trên hoatieu.vn" [ref=f293e148] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=530ff1c1b1343562c7f5b489ee30b967039b34cffef847f142ed092cbed2f2deJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9ob2F0aWV1LnZuL2JpZXUtbWF1L21hdS1zby1raWVtLXRodWMtMy1idW9jLTE0OTc2MA&ntb=1
+            - generic [ref=f293e150]:
+              - list [ref=f293e151]:
+                - listitem [ref=f293e152]:
+                  - generic [ref=f293e153]:
+                    - text: 4/5
+                    - 'img "Xếp hạng Sao: 4 trên 5." [ref=f293e154]'
+                    - text: (5)
+              - list [ref=f293e160]:
+                - listitem [ref=f293e161]:
+                  - generic [ref=f293e162]: "Đã phát hành: 23 thg 12, 2024"
+        - listitem [ref=f293e163]:
+          - link "fic.edu.vn" [ref=f293e165] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7f1cfc7f2c4ca3b666e4c553e9d6e1411a3f8321e1f2de01c7a75750318796a9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9maWMuZWR1LnZuL21hdS1zby1raWVtLXRodWMtMy1idW9jLXZhLWx1dS1tYXUv&ntb=1
+            - generic [ref=f293e170]:
+              - generic [ref=f293e171]: fic.edu.vn
+              - generic [ref=f293e172]: https://fic.edu.vn
+          - heading [level=2] [ref=f293e175]:
+            - link "Hướng dẫn điền mẫu sổ kiểm thực 3 bước và lưu mẫu thức ăn" [ref=f293e176] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=7f1cfc7f2c4ca3b666e4c553e9d6e1411a3f8321e1f2de01c7a75750318796a9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9maWMuZWR1LnZuL21hdS1zby1raWVtLXRodWMtMy1idW9jLXZhLWx1dS1tYXUv&ntb=1
+          - paragraph [ref=f293e178]: 12 thg 7, 2026 · Bài viết hướng dẫn chi tiết cách dùng mẫu sổ kiểm thực 3 bước và biểu mẫu lưu mẫu thức ăn theo Quyết định …
+        - listitem [ref=f293e179]:
+          - link "Scribd" [ref=f293e181] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9e1f5e4fa8517235a4a6fb19d98f41b3cbcc9f637cb2b408e22f5f5592c917aaJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NyaWJkLmNvbS9kb2N1bWVudC82NjQ4MzI2ODAvSCVDNiVBRiVFMSVCQiU5QU5HLUQlRTElQkElQUFOLUdISS1TJUUxJUJCJTk0LTMtQiVDNiVBRiVFMSVCQiU5QUM&ntb=1
+            - generic [ref=f293e186]:
+              - generic [ref=f293e187]: Scribd
+              - generic [ref=f293e188]: https://www.scribd.com › document
+          - heading [level=2] [ref=f293e191]:
+            - link "HƯỚNG DẪN GHI SỔ 3 BƯỚC | PDF - Scribd" [ref=f293e192] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=9e1f5e4fa8517235a4a6fb19d98f41b3cbcc9f637cb2b408e22f5f5592c917aaJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NyaWJkLmNvbS9kb2N1bWVudC82NjQ4MzI2ODAvSCVDNiVBRiVFMSVCQiU5QU5HLUQlRTElQkElQUFOLUdISS1TJUUxJUJCJTk0LTMtQiVDNiVBRiVFMSVCQiU5QUM&ntb=1
+          - paragraph [ref=f293e194]: Văn bản hướng dẫn các bếp ăn tập thể và cơ sở chế biến thực phẩm thực hiện ba bước tự kiểm tra về an toàn thực phẩm bao gồm …
+        - listitem [ref=f293e195]:
+          - link "An Toàn Vệ Sinh Thực Phẩm HCM" [ref=f293e197] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=858fe6659b183d4e30b428a6af6f8b494dbdb9ca893d10384cac55d82a869d9dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9hdHZzdHAub3JnLnZuL3F1eWV0LWRpbmgtMTI0Ni1xZC1ieXQta2llbS10aHVjLWJhLWJ1b2MtbHV1LW1hdS10aHVjLWFu&ntb=1
+            - generic [ref=f293e202]:
+              - generic [ref=f293e203]: An Toàn Vệ Sinh Thực Phẩm HCM
+              - generic [ref=f293e204]: https://atvstp.org.vn
+          - heading [level=2] [ref=f293e207]:
+            - 'link "Quyết Định 1246/QĐ-BYT: Kiểm Thực Ba Bước & Lưu Mẫu" [ref=f293e208] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=858fe6659b183d4e30b428a6af6f8b494dbdb9ca893d10384cac55d82a869d9dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9hdHZzdHAub3JnLnZuL3F1eWV0LWRpbmgtMTI0Ni1xZC1ieXQta2llbS10aHVjLWJhLWJ1b2MtbHV1LW1hdS10aHVjLWFu&ntb=1
+          - paragraph [ref=f293e210]: "28 thg 1, 2026 · Quyết định 1246/QĐ-BYT hướng dẫn kiểm thực ba bước và lưu mẫu thức ăn cho cơ sở dịch vụ ăn uống: ghi sổ …"
+        - listitem [ref=f293e211]:
+          - link "Công ty luật Minh Khuê" [ref=f293e213] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=25f4dcc149e6e6b50a0ee7d67ded0f10be54493eeed2d5379c6cc9cafca51b02JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0bWluaGtodWUudm4vbWF1LXNvLWtpZW0tdGh1Yy0zLWJ1b2MuYXNweA&ntb=1
+            - generic [ref=f293e218]:
+              - generic [ref=f293e219]: Công ty luật Minh Khuê
+              - generic [ref=f293e220]: https://luatminhkhue.vn
+          - heading [level=2] [ref=f293e223]:
+            - link "Mẫu sổ kiểm thực 3 bước mới nhất và Cách viết sổ kiểm thực" [ref=f293e224] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=25f4dcc149e6e6b50a0ee7d67ded0f10be54493eeed2d5379c6cc9cafca51b02JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0bWluaGtodWUudm4vbWF1LXNvLWtpZW0tdGh1Yy0zLWJ1b2MuYXNweA&ntb=1
+          - paragraph [ref=f293e226]: 17 thg 5, 2024 · Bài viết dưới đây Luật Minh Khuê xin giới thiệu có bạn đọc mẫu và cách viết mẫu sổ kiểm thực ba bước.
+        - listitem [ref=f293e227]:
+          - link "Scribd" [ref=f293e229] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=f6b54a9d6fc0a06f2e25eb1ece88906cf11109314e2eeb604607902d6f310a8aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NyaWJkLmNvbS9kb2N1bWVudC83Mzk3MDQ3MTQvUyVFMSVCQiU5NS1LaSVFMSVCQiU4M20tVGglRTElQkIlQjFjLTMtQiVDNiVCMCVFMSVCQiU5QmMtVGhlby1RJUM0JTkwLTEyNDYtQllULUNvcHk&ntb=1
+            - generic [ref=f293e234]:
+              - generic [ref=f293e235]: Scribd
+              - generic [ref=f293e236]: https://www.scribd.com › document
+          - heading [level=2] [ref=f293e239]:
+            - link "Sổ Kiểm Thực 3 Bước (Theo QĐ 1246 BYT) | PDF - Scribd" [ref=f293e240] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=f6b54a9d6fc0a06f2e25eb1ece88906cf11109314e2eeb604607902d6f310a8aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NyaWJkLmNvbS9kb2N1bWVudC83Mzk3MDQ3MTQvUyVFMSVCQiU5NS1LaSVFMSVCQiU4M20tVGglRTElQkIlQjFjLTMtQiVDNiVCMCVFMSVCQiU5QmMtVGhlby1RJUM0JTkwLTEyNDYtQllULUNvcHk&ntb=1
+          - paragraph [ref=f293e242]: Sổ Kiểm Thực 3 Bước (Theo QĐ 1246 BYT) Uploaded by luanlvpetrosetco AI-enhanced title License
+        - listitem [ref=f293e243]:
+          - link "THƯ VIỆN PHÁP LUẬT" [ref=f293e245] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=fdcb73a804bc4866276e558260d816212128998ef35166b2245f7b4ebb7d03f6JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vdmFuLWJhbi9UaGUtdGhhby1ZLXRlL1F1eWV0LWRpbmgtMTI0Ni1RRC1CWVQtY2hlLWRvLWtpZW0tdGh1Yy1iYS1idW9jLWx1dS1tYXUtdGh1Yy1hbi1raW5oLWRvYW5oLWRpY2gtdnUtYW4tdW9uZy0yMDE3LTM0NTMyMC5hc3B4&ntb=1
+            - generic [ref=f293e250]:
+              - generic [ref=f293e251]: THƯ VIỆN PHÁP LUẬT
+              - generic [ref=f293e252]: https://thuvienphapluat.vn › van-ban › The-thao-Y-te
+          - heading [level=2] [ref=f293e255]:
+            - link "Quyết định 1246/QĐ-BYT chế độ kiểm thực ba bước lưu mẫu thức ăn …" [ref=f293e256] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=fdcb73a804bc4866276e558260d816212128998ef35166b2245f7b4ebb7d03f6JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vdmFuLWJhbi9UaGUtdGhhby1ZLXRlL1F1eWV0LWRpbmgtMTI0Ni1RRC1CWVQtY2hlLWRvLWtpZW0tdGh1Yy1iYS1idW9jLWx1dS1tYXUtdGh1Yy1hbi1raW5oLWRvYW5oLWRpY2gtdnUtYW4tdW9uZy0yMDE3LTM0NTMyMC5hc3B4&ntb=1
+          - paragraph [ref=f293e258]: Kiểm thực ba bước là việc thực hiện kiểm tra, ghi chép và lưu giữ tài liệu tại cơ sở ghi chép nhằm kiểm soát an toàn thực phẩm …
+        - listitem [ref=f293e259]:
+          - link "Công ty Luật ACC" [ref=f293e261] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=cbad69889ed1fc8fc18604692d38f6dacd501605184fe1ea4afae1efdbd34fdaJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9hY2Nncm91cC52bi9tYXUtc28ta2llbS10aHVjLTMtYnVvYy10aGVvLXF1eWV0LWRpbmgtMTI0NnFkLWJ5dA&ntb=1
+            - generic [ref=f293e266]:
+              - generic [ref=f293e267]: Công ty Luật ACC
+              - generic [ref=f293e268]: https://accgroup.vn
+          - heading [level=2] [ref=f293e271]:
+            - link "Mẫu sổ kiểm thực 3 bước theo quyết định 1246/QĐ-BYT [2024]" [ref=f293e272] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=cbad69889ed1fc8fc18604692d38f6dacd501605184fe1ea4afae1efdbd34fdaJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9hY2Nncm91cC52bi9tYXUtc28ta2llbS10aHVjLTMtYnVvYy10aGVvLXF1eWV0LWRpbmgtMTI0NnFkLWJ5dA&ntb=1
+          - paragraph [ref=f293e274]: Trong bài viết này, chúng tôi sẽ giới thiệu mẫu sổ kiểm thực ba bước mới nhất và hướng dẫn cách viết sổ kiểm thực.
+        - listitem [ref=f293e275]:
+          - link "Công ty Luật ACC" [ref=f293e277] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=60f9eb02c4ebe5c7541a5b9d6f0f383139a2a56e8c95274fd33dfebf82848f8eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9hY2Nncm91cC52bi9tYXUtc28ta2llbS10aHVjLTMtYnVvYy12ZS1zaW5oLWFuLXRvYW4tdGh1Yy1waGFt&ntb=1
+            - generic [ref=f293e282]:
+              - generic [ref=f293e283]: Công ty Luật ACC
+              - generic [ref=f293e284]: https://accgroup.vn
+          - heading [level=2] [ref=f293e287]:
+            - link "Mẫu sổ kiểm thực 3 bước và hướng dẫn viết sổ kiểm thực" [ref=f293e288] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=60f9eb02c4ebe5c7541a5b9d6f0f383139a2a56e8c95274fd33dfebf82848f8eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9hY2Nncm91cC52bi9tYXUtc28ta2llbS10aHVjLTMtYnVvYy12ZS1zaW5oLWFuLXRvYW4tdGh1Yy1waGFt&ntb=1
+          - paragraph [ref=f293e290]: Sổ kiểm thực là công cụ quản lý quá trình kiểm thực ba bước tại cơ sở kinh doanh dịch vụ ăn uống. Dưới đây là hướng dẫn cách …
+        - listitem [ref=f293e291]:
+          - generic [ref=f293e292]:
+            - heading [level=2] [ref=f293e293]:
+              - text: Tìm hiểu kỹ hơn về
+              - strong [ref=f293e294]: "\"kiểm thực ba bước\" \"sổ kiểm thực\" bộn trú quýnh"
+              - text: …
+            - list [ref=f293e295]:
+              - listitem [ref=f293e296]:
+                - link [ref=f293e297] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=26ca9065fdf8f0e8b3214258f8ee80b3a43b85387451261c10ab2cc2d30b6393JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyszK2IlYzYlYjAlZTElYmIlOWJjJkZPUk09UVNSRTE&ntb=1
+                  - generic [ref=f293e299]:
+                    - text: sổ kiểm thực
+                    - strong [ref=f293e300]: "3"
+                    - text: bước
+              - listitem [ref=f293e301]:
+                - link [ref=f293e302] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=7722e673c2bb00d819056827a2022e151bf1430d11e5864b6f970575580dadbfJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPW0lZTElYmElYWJ1K3MlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyZGT1JNPVFTUkUy&ntb=1
+                  - generic [ref=f293e304]:
+                    - strong [ref=f293e305]: mẫu
+                    - text: sổ kiểm thực
+              - listitem [ref=f293e306]:
+                - link [ref=f293e307] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=f1ed0225421b2b23cb20db8a54471da785122c0c0d5a7b45d0139841767e8e24JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyt0aCVlMSViYiViMWMrcGglZTElYmElYTltJkZPUk09UVNSRTM&ntb=1
+                  - generic [ref=f293e309]:
+                    - text: sổ kiểm thực thực
+                    - strong [ref=f293e310]: phẩm
+        - listitem [ref=f293e311]:
+          - link "Một số kết quả đã bị xóa" [ref=f293e313] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e7e0e4b27a77d08e3ba8e737568a767ff44dde3e84c17c7ede3301285b6ea292JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+    - complementary "Kết quả bổ sung" [ref=f293e314]:
+      - list [ref=f293e315]:
+        - listitem [ref=f293e316]:
+          - generic "Tìm kiếm có liên quan" [ref=f293e317]:
+            - generic [ref=f293e319]:
+              - heading [level=2] [ref=f293e321]:
+                - text: Tìm hiểu kỹ hơn về
+                - strong [ref=f293e322]: "\"kiểm thực ba bước\" \"sổ kiểm thực\" bộn trú quýnh"
+                - text: …
+              - generic [ref=f293e323]:
+                - link [ref=f293e325] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=2c2b99482625411547ce5ee6a882a3f22a834de01829df621c664e92ca841e9eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyszK2IlYzYlYjAlZTElYmIlOWJjJkZPUk09UjVGRA&ntb=1
+                  - generic [ref=f293e327]:
+                    - text: sổ kiểm thực
+                    - strong [ref=f293e328]: "3"
+                    - text: bước
+                - link [ref=f293e330] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=3bda6165a25f4ff82f3f53c9cf430e4b01bfc326bb138d97ce8eb8fe433d000cJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPW0lZTElYmElYWJ1K3MlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyZGT1JNPVI1RkQx&ntb=1
+                  - generic [ref=f293e332]:
+                    - strong [ref=f293e333]: mẫu
+                    - text: sổ kiểm thực
+                - link [ref=f293e335] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=6311981a5ed8f33a6adc28b66f2c7a6bcded0784bdbdc908b36202a0db976b0bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyt0aCVlMSViYiViMWMrcGglZTElYmElYTltJkZPUk09UjVGRDI&ntb=1
+                  - generic [ref=f293e337]:
+                    - text: sổ kiểm thực thực
+                    - strong [ref=f293e338]: phẩm
+  - contentinfo [ref=f293e339]:
+    - generic [ref=f293e340]:
+      - list:
+        - listitem [ref=f293e341]:
+          - link "Quyền riêng tư" [ref=f293e342] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f293e343]:
+          - link "Điều khoản" [ref=f293e344] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

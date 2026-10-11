@@ -1,0 +1,279 @@
+{
+  "entries": [
+    {
+      "term": "Binary search (tìm kiếm nhị phân, bisect)",
+      "aliases": [
+        "tìm kiếm nhị phân",
+        "bisect",
+        "chặt nhị phân"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Bảng đã sắp xếp 10 triệu dòng, quét tuần tự tốn 10 triệu phép so sánh còn chia đôi chỉ 24. Nhưng cài sai một chi tiết, mid = (lo + hi) / 2 tràn số nguyên trên mảng lớn — khiến kết quả sai mà test nhỏ không phát hiện.",
+      "origin": "John Mauchly mô tả năm 1946; Joshua Bloch công bố bug tràn số trong binarySearch của Java năm 2006",
+      "how": "So sánh khóa với phần tử giữa rồi loại nửa không gian còn lại, chi phí O(log N). Cơ chế này nằm trong B-tree index và sorted array; query planner cũng chọn index range scan theo nguyên lý đó. Cài đúng cần mid = lo + (hi - lo) / 2, và phân biệt lower_bound (vị trí chèn) với exact match.",
+      "related": [
+        "B-tree (cây B, B-plus tree)",
+        "Big-O notation & độ phức tạp tiệm cận",
+        "Query plan / EXPLAIN"
+      ]
+    },
+    {
+      "term": "Tree & traversal (DFS/BFS, cây nhị phân, n-ary tree)",
+      "aliases": [
+        "DFS",
+        "BFS",
+        "duyệt cây",
+        "cây n-ary"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "API trả về cây danh mục lồng nhau; serialize bằng đệ quy làm tràn stack khi cây sâu hàng chục nghìn node, còn duyệt sai thứ tự (cha trước con hay con trước cha) làm aggregate cha-con tính sai âm thầm.",
+      "origin": "BFS xuất hiện trong Plankalkül của Konrad Zuse (viết 1945, công bố 1972); DFS gắn với thuật toán mê cung của Trémaux thế kỷ 19",
+      "how": "DFS đi hết một nhánh rồi quay lui (đệ quy hoặc stack tường minh), BFS duyệt theo tầng bằng queue. Thứ tự pre/in/post quyết định thời điểm xử lý: post-order cho tính tổng từ lá lên, pre-order cho copy cây. Cây sâu nên thay đệ quy bằng stack tường minh hoặc giới hạn depth.",
+      "related": [
+        "B-tree (cây B, B-plus tree)",
+        "Composite pattern (cây đối tượng)",
+        "Stack vs Heap (bộ nhớ, stack overflow)"
+      ]
+    },
+    {
+      "term": "DAG & topological sort (đồ thị có hướng không chu trình, thứ tự tô pô)",
+      "aliases": [
+        "DAG",
+        "topological sort",
+        "thứ tự tô pô",
+        "đồ thị có hướng không chu trình"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Data pipeline, thứ tự database migration và workflow engine (Temporal/Airflow) đều là bài toán dependency: việc nào chạy trước việc nào. Không phát hiện được chu trình ẩn thì scheduler treo vô hạn, hoặc chạy sai thứ tự mà không ai báo lỗi.",
+      "origin": "Thuật toán Kahn 1962; cách duyệt dựa trên DFS gắn với Tarjan 1976",
+      "how": "Topological sort xếp node sao cho mọi cạnh u→v đều có u đứng trước v; chỉ tồn tại khi đồ thị không có chu trình. Kahn đếm in-degree rồi rút dần node bậc 0 — rút hết được toàn bộ node nghĩa là DAG, còn sót lại chính là cycle. Cycle detection trước khi schedule là bắt buộc.",
+      "related": [
+        "Apache Kafka",
+        "Event-driven architecture",
+        "Saga"
+      ]
+    },
+    {
+      "term": "Memory alignment & struct padding (căn chỉnh bộ nhớ, padding)",
+      "aliases": [
+        "căn chỉnh bộ nhớ",
+        "struct padding",
+        "alignment",
+        "padding"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Parse binary protocol hoặc mmap file rồi ép con trỏ sang struct: sizeof trả về lớn hơn tổng các field vì compiler chèn padding để mỗi field nằm đúng alignment. Hai phía khác padding rules sẽ đọc sai dữ liệu, không crash ngay mà trả số lệch.",
+      "origin": "",
+      "how": "CPU đọc bộ nhớ theo word nên field phải nằm tại offset chia hết cho kích thước của nó; compiler chèn pad byte giữa các field, thứ tự khai báo quyết định tổng struct size. Interop thì dùng packed struct hoặc tự serialize theo spec byte-by-byte thay vì memcpy cả struct.",
+      "related": [
+        "Endianness (thứ tự byte, big-endian, little-endian, network byte order)",
+        "CPU cache line",
+        "Zero-copy file: mmap & huge page"
+      ]
+    },
+    {
+      "term": "Endianness (thứ tự byte, big-endian, little-endian, network byte order)",
+      "aliases": [
+        "big-endian",
+        "little-endian",
+        "network byte order",
+        "thứ tự byte"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Header giao thức mạng và file nhị phân quy định thứ tự byte khác nhau: TCP/IP dùng big-endian, x86 lưu little-endian. Đọc sai một trường 4 byte là bug kinh điển khi tự viết parser nhị phân — giá trị ra sai ngoạn mục mà không exception nào bắn lên.",
+      "origin": "Danny Cohen đặt vấn đề trong 'On Holy Wars and a Plea for Peace' năm 1980; thuật ngữ lấy từ Gulliver's Travels",
+      "how": "Cùng 4 byte mang giá trị khác nhau tùy thứ tự đọc: big-endian từ byte cao (quy ước mạng), little-endian từ byte thấp (x86/ARM). Chuyển đổi bằng htons/htonl và ntohl/ntohs, hoặc thư viện encode/decode tường minh — đừng dựa vào memcpy giữa các struct.",
+      "related": [
+        "TCP",
+        "Memory alignment & struct padding (căn chỉnh bộ nhớ, padding)",
+        "Base64 & hex encoding"
+      ]
+    },
+    {
+      "term": "Memory leak & heap growth (rò rỉ bộ nhớ, RSS creep)",
+      "aliases": [
+        "rò rỉ bộ nhớ",
+        "RSS creep",
+        "memory leak",
+        "heap growth"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Service chạy vài ngày thì RSS tăng đều rồi bị OOM-kill, restart lại vài ngày sau lặp lại. Không phải lúc nào cũng là leak thật — phân biệt heap phình do allocation churn với object bị giữ vô tình là bước đầu để tìm đúng thủ phạm.",
+      "origin": "",
+      "how": "Leak thật nghĩa là object không còn dùng nhưng vẫn reachable từ GC root: cache tăng vô hạn, listener không unsubscribe, static collection tích lũy. Chụp hai heap snapshot cách nhau rồi so sánh retained size để tìm object bị giữ bất thường; GC churn chỉ tốn CPU chứ không giữ bộ nhớ lâu dài.",
+      "related": [
+        "Garbage collection cơ bản (mark & sweep, reference counting)",
+        "Profiling: CPU/heap, flame graph",
+        "Page fault, swap & OOM killer"
+      ]
+    },
+    {
+      "term": "Weak reference (WeakRef, weak map, tham chiếu yếu)",
+      "aliases": [
+        "WeakRef",
+        "weak map",
+        "tham chiếu yếu",
+        "WeakHashMap"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Cache và registry giữ tham chiếu mạnh tới object thì object không bao giờ bị GC thu dù ứng dụng đã bỏ dùng — nguồn leak chính trong ngôn ngữ có GC. Bỏ cache hẳn thì mất lợi ích: cần giữ khi còn ai dùng và tự nhả khi hết.",
+      "origin": "java.lang.ref có từ Java 1.2 (1998); WeakRef vào chuẩn ECMAScript 2021",
+      "how": "Weak reference không ngăn GC thu object: khi chỉ còn weak reference trỏ tới, object bị dọn và tham chiếu trả null. WeakHashMap tự loại entry khi key bị thu — hợp cho cache keyed by object, listener registry. Lưu ý weak reference không đảm bảo object sống tới lúc đọc.",
+      "related": [
+        "Memory leak & heap growth (rò rỉ bộ nhớ, RSS creep)",
+        "Cache",
+        "Observer pattern (event listener)"
+      ]
+    },
+    {
+      "term": "Regular expression & ReDoS (regex, catastrophic backtracking, biểu thức chính quy)",
+      "aliases": [
+        "regex",
+        "biểu thức chính quy",
+        "catastrophic backtracking",
+        "ReDoS"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Regex là công cụ validation và log parsing phổ biến nhất, nhưng pattern dạng (a+)+$ trên engine backtracking có thể mất thời gian hàm mũ với input người dùng — chuỗi 30 ký tự đủ đốt CPU và treo worker. Pattern 'hợp lệ' đúng trong test lại thành lỗ hổng DoS trên production.",
+      "origin": "Crosby và Wallach mô tả ReDoS năm 2003; khái niệm regex từ Kleene 1951",
+      "how": "Engine backtracking thử mọi cách chia nhóm khi nhánh thất bại; lượng từ lồng trong lượng từ nhân số đường thử theo cấp số nhân. Giảm thiểu: tránh nested quantifier, neo ^...$, giới hạn độ dài input trước khi match, đặt timeout, hoặc chuyển sang engine không backtracking (RE2, Rust regex crate).",
+      "related": [
+        "Command injection",
+        "OWASP Top 10",
+        "Log aggregation & ELK Stack"
+      ]
+    },
+    {
+      "term": "Serialization formats (JSON/Protobuf/MessagePack/Avro, binary vs text)",
+      "aliases": [
+        "Protobuf (Protocol Buffers, proto3)",
+        "Protocol Buffers",
+        "Protobuf",
+        "proto3",
+        ".proto IDL",
+        "wire format",
+        "JSON",
+        "MessagePack",
+        "MsgPack",
+        "Avro"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "JSON/XML phình to vì tên field lặp trong từng message, parse chậm và không có hợp đồng cứng: một service đổi kiểu một field là service khác vỡ lúc chạy mà không có gì chặn trước. Chiều ngược lại cũng vỡ: gửi struct nhị phân thô giữa hai service thì hỏng ngay khi một bên thêm field hoặc đổi layout. Chọn wire format ảnh hưởng trực tiếp CPU, latency và khả năng tiến hóa schema, nên RPC nội bộ cần format nhỏ, parse nhanh, thêm field mới mà binary cũ vẫn đọc được.",
+      "origin": "Google phát triển nội bộ từ khoảng 2001, mở mã nguồn 2008; proto3 phát hành 2016.",
+      "how": "JSON là text tự mô tả, hợp public API và debugging; Protobuf/Avro là binary có schema, field gắn tag number nên thêm field không phá reader cũ (forward/backward compat), hợp internal RPC và volume lớn; MessagePack ở giữa: binary nhưng không cần schema. Ranh giới không kiểm soát được cả hai đầu thì chọn JSON. Với Protobuf, message định nghĩa trong file .proto bằng field number, compiler sinh code cho nhiều ngôn ngữ; trên dây chỉ có field number, wire type và giá trị, không có tên field nên payload nhỏ và parse nhanh. Field number là hợp đồng vĩnh viễn: thêm field mới chỉ được đánh số chưa dùng, xóa field phải reserve số cũ, đổi kiểu phải tuân wire compatibility; vi phạm là mất tương thích binary âm thầm.",
+      "related": [
+        "gRPC",
+        "Expand-contract (database migration trong deploy)",
+        "Contract-first",
+        "Field masks"
+      ]
+    },
+    {
+      "term": "inode & inode exhaustion (df -i, file metadata)",
+      "aliases": [
+        "inode",
+        "df -i",
+        "file metadata",
+        "cạn inode"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Volume còn trống dung lượng nhưng ghi file vẫn báo 'No space left on device' — vì đã cạn inode, mỗi file và directory tiêu một inode bất kể kích thước. Hàng triệu file nhỏ (session, cache, mail queue) đốt hết inode trong khi df -h vẫn xanh.",
+      "origin": "Khái niệm từ Unix tại Bell Labs, thập niên 1970",
+      "how": "Inode lưu metadata (owner, permission, size, timestamp, block pointers, link count) tách khỏi tên file; directory là bảng ánh xạ tên sang inode number. Hard link là nhiều tên trỏ cùng một inode. Kiểm tra bằng df -i và ls -li; xử lý bằng xóa bớt file nhỏ hoặc tune bytes-per-inode khi tạo filesystem.",
+      "related": [
+        "File descriptor exhaustion & lsof (Too many open files)",
+        "Page cache",
+        "Journaling filesystem (ext4/XFS, crash consistency)"
+      ]
+    },
+    {
+      "term": "Virtual threads / green threads (Project Loom)",
+      "aliases": [
+        "virtual thread",
+        "green thread",
+        "Project Loom",
+        "Loom"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Thread-per-request chết ở vài nghìn kết nối vì mỗi thread tốn khoảng 1MB stack và context switch đắt, còn event loop buộc viết async code khắp nơi dù phần lớn service chỉ đợi I/O. Java cần cách viết blocking code mà vẫn scale tới hàng trăm nghìn kết nối.",
+      "origin": "Project Loom vào JDK 21 (2023); green threads từng có trong Java 1.1 (1996) rồi bị bỏ từ 1.3",
+      "how": "Virtual thread do JVM scheduler điều phối; khi block trên I/O nó được unmount khỏi carrier thread để carrier chạy virtual thread khác — nhiều virtual thread trên ít OS thread, code vẫn blocking. Giới hạn: pinning khi vào native/synchronized giữ carrier, và connection pool JDBC vẫn phải size theo connection thật.",
+      "related": [
+        "Thread-per-request vs event loop",
+        "Thread pool & pool exhaustion",
+        "C10K / C10M problem"
+      ]
+    },
+    {
+      "term": "Lock-free queue & ring buffer (MPSC)",
+      "aliases": [
+        "lock-free queue",
+        "MPSC",
+        "ring buffer",
+        "Disruptor"
+      ],
+      "level": "advanced",
+      "domain": "Nền tảng máy tính",
+      "problem": "Queue bảo vệ bằng mutex tạo nghẽn đúng chỗ throughput quyết định: consumer giữ lock làm producer chờ, contention đo được bằng số core. Nhưng lock-free không miễn phí — dùng khi chưa đo được contention chỉ thêm chiều sâu debug cho pipeline.",
+      "origin": "Ring buffer MPSC phổ biến hóa bởi LMAX Disruptor (2010); lệnh CAS có từ IBM System/370 (1970)",
+      "how": "Ring buffer cấp phát trước mảng slot, producer và consumer giữ index riêng; MPSC dùng CAS để dành slot và ghi sequence number để phát hiện slot chưa publish. Không lock nhưng cần memory barrier đúng (acquire/release) để tránh reorder, và bounded capacity làm backpressure với chính sách chặn hay drop.",
+      "related": [
+        "Atomic operation & CAS",
+        "False sharing",
+        "Memory model & happens-before (memory visibility)"
+      ]
+    },
+    {
+      "term": "JVM (Java Virtual Machine, bytecode, managed runtime)",
+      "aliases": [
+        "Java Virtual Machine",
+        "bytecode",
+        "managed runtime"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Service Java chạy ổn vài giờ đầu rồi chậm dần, đỉnh điểm xảy ra khi GC pause hoặc thread pool cạn mà log ứng dụng không ghi gì. Đọc hiểu thread dump, GC log và bytecode là kỹ năng bắt buộc để chẩn đoán thay vì đoán.",
+      "origin": "Sun Microsystems, ra mắt cùng Java 1.0 (1996), thiết kế 'write once, run anywhere'",
+      "how": "Source compile thành bytecode; JVM nạp class, verify, chạy interpreter rồi JIT biên dịch method nóng sang native. Heap chia young/old, GC thu theo thế hệ với các loại pause khác nhau. JVM cũng là mẫu chuẩn của managed runtime — đối chiếu .NET CLR và BEAM của Erlang.",
+      "related": [
+        "JIT compilation & warmup",
+        "Garbage collection cơ bản (mark & sweep, reference counting)",
+        "Stop-the-world & GC pause"
+      ]
+    },
+    {
+      "term": "Journaling filesystem (ext4/XFS, crash consistency)",
+      "aliases": [
+        "journaling",
+        "ext4",
+        "XFS",
+        "write-ahead filesystem",
+        "fsck"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Mất điện giữa lúc ghi metadata, tạo file xong nhưng chưa cập nhật bitmap, hoặc crash giữa lúc update nhiều inode của một thao tác — để lại filesystem không nhất quán và có thể phải fsck hàng giờ trên ổ TB.",
+      "origin": "Journaling phổ biến từ ext3 (2001); XFS do SGI phát triển từ 1994",
+      "how": "Journaling ghi trước các thay đổi metadata vào journal rồi mới apply; crash giữa đường thì replay journal đưa về trạng thái nhất quán. ext4 có journal (data=ordered/writeback) và delayed allocation; XFS dùng allocation group cùng log riêng. Writeback nhanh hơn nhưng dữ liệu có thể lệch nếu crash ngay sau commit.",
+      "related": [
+        "WAL (Write-Ahead Logging)",
+        "inode & inode exhaustion (df -i, file metadata)",
+        "fsync cost & SSD vs HDD latency"
+      ]
+    }
+  ],
+  "skipped": [
+    "Regex (biểu thức chính quy) — trùng nghĩa với mục 'Regular expression & ReDoS (regex, catastrophic backtracking)' đã viết trong batch này; đã gộp nội dung regex cơ bản vào entry đó"
+  ]
+}

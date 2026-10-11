@@ -1,0 +1,307 @@
+- generic [active] [ref=f11e1]:
+  - generic:
+    - generic:
+      - link "Bỏ qua để đến phần nội dung chính" [ref=f11e2] [cursor=pointer]
+      - link "Hỗ trợ truy cập" [ref=f11e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=vi
+  - generic [ref=f11e8]:
+    - search [ref=f11e9]:
+      - generic [ref=f11e12]:
+        - link [ref=f11e13] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=vi&ictx=0&sa=X&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQpYkNegQIBhAG
+          - img "Truy cập trang chủ Google" [ref=f11e14]
+        - generic [ref=f11e15]:
+          - combobox "Tìm kiếm" [ref=f11e18]: github "report pothole" OR "issue reporting" map app leaflet portfolio github "report pothole" OR "issue reporting" map app leaflet portfolio
+          - generic [ref=f11e19]:
+            - button "Xóa" [ref=f11e21] [cursor=pointer]
+            - generic [ref=f11e26]:
+              - button "Công cụ nhập" [ref=f11e27] [cursor=pointer]
+              - button "Tìm kiếm bằng giọng nói" [ref=f11e31] [cursor=pointer]
+              - button "Tìm kiếm bằng hình ảnh" [ref=f11e34] [cursor=pointer]
+        - button "Tìm kiếm" [ref=f11e37] [cursor=pointer]
+    - generic [ref=f11e42]:
+      - button "Cài đặt" [ref=f11e44] [cursor=pointer]
+      - button "Chia sẻ" [ref=f11e49] [cursor=pointer]
+      - generic [ref=f11e55]:
+        - button "Các ứng dụng của Google" [ref=f11e57] [cursor=pointer]
+        - link "Đăng nhập" [ref=f11e62] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=vi&passive=true&continue=https://www.google.com/search%3Fq%3Dgithub%2B%2522report%2Bpothole%2522%2BOR%2B%2522issue%2Breporting%2522%2Bmap%2Bapp%2Bleaflet%2Bportfolio&ec=futura_srp_og_si_72236_p
+  - generic [ref=f11e65]:
+    - navigation [ref=f11e71]:
+      - generic [ref=f11e77]:
+        - list [ref=f11e78]:
+          - listitem [ref=f11e79]:
+            - link "Tất cả" [disabled] [ref=f11e80]
+          - listitem [ref=f11e83]:
+            - link "Hình ảnh" [ref=f11e84] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&udm=2&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5PiQrOGlWZazfIvO1OOwW-8dwnklVL2tgsgiAKoRp8d-Umxa6jY_oSeCybcOA1vtGb9j3X9tnLnbDhhjLQ_1NeCTSRKdjCinMHhBMiSQNZmjI9lOdIZkCouJBiTJZeDRJvGM-fFAmH8ac8ahVPT51dvDY9dL9m1Qt4vzTOUZM1ETvMrlE&q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sa=X&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQtKgLegQIGxAB
+          - listitem [ref=f11e87]:
+            - link "Tin tức" [ref=f11e88] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&tbm=nws&source=lnms&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5PiQrOGlWZazfIvO1OOwW-8dwnklVL2tgsgiAKoRp8d-Umxa6jY_oSeCybcOA1vtGb9j3X9tnLnbDhhjLQ_1NeCTSRKdjCinMHhBMiSQNZmjI9lOdIZkCouJBiTJZeDRJvGM-fFAmH8ac8ahVPT51dvDY9dL9m1Qt4vzTOUZM1ETvMrlE&sa=X&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ0pQJegQIGhAB
+          - listitem [ref=f11e91]:
+            - link "Mua sắm" [ref=f11e92] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&udm=28&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5PiQrOGlWZazfIvO1OOwW-8dwnklVL2tgsgiAKoRp8d-Umxa6jY_oSeCybcOA1vtGb9j3X9tnLnbDhhjLQ_1NeCTSRKdjCinMHhBMiSQNZmjI9lOdIZkCouJBiTJZeDRJvGM-fFAmH8ac8ahVPT51dvDY9dL9m1Qt4vzTOUZM1ETvMrlE&q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&ved=1t:220175&ictx=111
+          - listitem [ref=f11e95]:
+            - link "Video" [ref=f11e96] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&udm=vids&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5PiQrOGlWZazfIvO1OOwW-8dwnklVL2tgsgiAKoRp8d-Umxa6jY_oSeCybcOA1vtGb9j3X9tnLnbDhhjLQ_1NeCTSRKdjCinMHhBMiSQNZmjI9lOdIZkCouJBiTJZeDRJvGM-fFAmH8ac8ahVPT51dvDY9dL9m1Qt4vzTOUZM1ETvMrlE&q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sa=X&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQtKgLegQIFxAB
+          - listitem [ref=f11e99]:
+            - link "Video ngắn" [ref=f11e100] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&udm=39&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5PiQrOGlWZazfIvO1OOwW-8dwnklVL2tgsgiAKoRp8d-Umxa6jY_oSeCybcOA1vtGb9j3X9tnLnbDhhjLQ_1NeCTSRKdjCinMHhBMiSQNZmjI9lOdIZkCouJBiTJZeDRJvGM-fFAmH8ac8ahVPT51dvDY9dL9m1Qt4vzTOUZM1ETvMrlE&q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sa=X&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQs6gLegQIGBAB
+          - listitem [ref=f11e103]:
+            - button [ref=f11e104] [cursor=pointer]:
+              - generic "Các bộ lọc khác" [ref=f11e105]: Thêm
+        - button "Công cụ" [ref=f11e112] [cursor=pointer]
+    - heading "Kết quả tìm kiếm" [level=1] [ref=f11e119]
+    - generic [ref=f11e125]:
+      - generic [ref=f11e126]: Looking for results in English?
+      - link [ref=f11e127] [cursor=pointer]:
+        - /url: "#"
+      - link "Change to English" [ref=f11e131] [cursor=pointer]:
+        - /url: /setprefs?sig=0_t5UDDH1-zCax__9uIpTmwchHM3M%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dgithub%2B%2522report%2Bpothole%2522%2BOR%2B%2522issue%2Breporting%2522%2Bmap%2Bapp%2Bleaflet%2Bportfolio&hl=en&sa=X&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQhoQCKAF6BAgUEAQ
+      - link "Tiếp tục sử dụng Tiếng Việt" [ref=f11e132] [cursor=pointer]:
+        - /url: "#"
+      - link "Cài đặt ngôn ngữ" [ref=f11e134] [cursor=pointer]:
+        - /url: /preferences?lang=1&hl=vi&sa=X&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQiIQCKAN6BAgUEAY#languages
+    - main [ref=f11e136]:
+      - generic [ref=f11e140]:
+        - generic [ref=f11e143]:
+          - heading "Web results" [level=2] [ref=f11e144]
+          - generic [ref=f11e145]:
+            - generic [ref=f11e148]:
+              - 'link "fforev/LocalEyes: Civic issue-reporting platform GitHub https://github.com › forevpurity › Loca..." [ref=f11e150] [cursor=pointer]':
+                - /url: /goto?url=CAESYwHrOzAVIHE_v43a8FFqfIRgBOlfrWLvCdEr6bAZEVUon5b4Twgi747IypLnB8dIiopmqTbejTZTtCzAVD-ZMiGclxIsdCm3ShffExHuIgDQvt2VVV0MWOHfQ8PsDh6ZUnnDyw
+                - 'heading "fforev/LocalEyes: Civic issue-reporting platform" [level=3] [ref=f11e151]'
+                - generic [ref=f11e157]:
+                  - generic [ref=f11e158]: GitHub
+                  - generic [ref=f11e160]: https://github.com › forevpurity › Loca...
+              - generic [ref=f11e162]:
+                - generic [ref=f11e163]: ·
+                - link "Dịch trang này" [ref=f11e164] [cursor=pointer]:
+                  - /url: /goto?url=CAESrAEB6zswFVDsnYhufrl4WKhMJEyv_J-lakRMgdup9dgzbcwuVhrrMArKcAZZwfutIo4NZjAHqXWY-o4RYOIEAN2T1h71HF9KVQJ6AtJP9q2HZD8OSMp77X6Y5hbzKTFhO_DnuyIUE-EutZINDu0jTSFlsyKsRJqD2aQ0KZfRb1cvCDjsyYledqUMBJjsP43NYeT033XsmvLV66Orlkq32xhVONXSfwk_70sb8OwZ
+              - button "Thông tin về kết quả này" [ref=f11e169] [cursor=pointer]
+            - generic [ref=f11e176]:
+              - text: A civic
+              - emphasis [ref=f11e177]: issue-reporting
+              - text: platform for Ho Chi Minh City — citizens pin problems on a
+              - emphasis [ref=f11e178]: map
+              - text: ", the responsible city department resolves them, and admins manage the ..."
+        - generic [ref=f11e182]:
+          - generic [ref=f11e185]:
+            - 'link "BhavyaSoni21/SmartCities_Insights: Urban issue ... GitHub https://github.com › BhavyaSoni21 › S..." [ref=f11e187] [cursor=pointer]':
+              - /url: /goto?url=CAESbwHrOzAVxKc8gpINBotlhZbkuCL4Y2XFodeLIhmYBo5_4JqNXfb_hTZTF-FirFT-SpnZfleRR7Fjju_Zt-wXFJrOkzH0adeWJBcJ7xeBXpA8yjuj16S_VSa4QnTKm1TPx2kRA7QC23Om_vLcBOGt5Q
+              - 'heading "BhavyaSoni21/SmartCities_Insights: Urban issue ..." [level=3] [ref=f11e188]'
+              - generic [ref=f11e194]:
+                - generic [ref=f11e195]: GitHub
+                - generic [ref=f11e197]: https://github.com › BhavyaSoni21 › S...
+            - generic [ref=f11e199]:
+              - generic [ref=f11e200]: ·
+              - link "Dịch trang này" [ref=f11e201] [cursor=pointer]:
+                - /url: /goto?url=CAESuAEB6zswFWPaUrIkv0qQ_IAACpeCTVGVI98PSNsj_kjrVGNYfuTpYkzI5NrNv8ODbMAyZU1KjnK0jnfPrJSWqXKLgwWceNUvAmwxfxeAB4YkQk3cwKet7MaqxAr-F3gwqIrGp-dnPw54UfJmMwIfpbuJj9jj5GaKJirMVDmFVVupA5Rcf1yB5rhOXFeE4Z-b4MbfHqWC-5r2jdKq4zyi7IyRmWcqD47dgHnzrqrwdE8m7IopdJZ2G1XU
+            - button "Thông tin về kết quả này" [ref=f11e206] [cursor=pointer]
+          - generic [ref=f11e213]:
+            - text: SmartCity Insight is a responsive, role-based web
+            - emphasis [ref=f11e214]: application
+            - text: designed to streamline urban
+            - emphasis [ref=f11e215]: issue reporting
+            - text: and resolution. Built with a strong civic-first ...
+        - generic [ref=f11e219]:
+          - generic [ref=f11e222]:
+            - link "README.md - SAPTARSHI-coder/civicissue-dashboard GitHub https://github.com › blob › main › RE..." [ref=f11e224] [cursor=pointer]:
+              - /url: /goto?url=CAEShgEB6zswFRmO361G7jsfntHUztV9YimSlBMyWDyrJSOlZtoHnuezEj4ztavC1XJF4DxuQdZccW-y13lMLTzLqcBinlZO7SNy1z_GHFcW4QiH-W9ZMWDQcE6ew-xZHRlH88NUaYg0w8IrXgL0Fah5RKtqhRyk8Nnf1a0Z8QA_OiNYSyxnX2PkNQ
+              - heading "README.md - SAPTARSHI-coder/civicissue-dashboard" [level=3] [ref=f11e225]
+              - generic [ref=f11e231]:
+                - generic [ref=f11e232]: GitHub
+                - generic [ref=f11e234]: https://github.com › blob › main › RE...
+            - generic [ref=f11e236]:
+              - generic [ref=f11e237]: ·
+              - link "Dịch trang này" [ref=f11e238] [cursor=pointer]:
+                - /url: /goto?url=CAES0AEB6zswFe0NEZno4Ur73C0KriwkIF3krB6QrjEQG01eap1P23K8Ixbe_LWL92bj5EmHv64YvVlFmjRvKX8USkV6-PrmQayL3yKZH1Rdj3rZiqRJ5uUOKdA1ljGpGEtfnxCrY1eq9Xv0_2HZjMaq3FbXtQhT71YpZVu-pdgHlktUeAMJVVnX9s56_xE7-LSxENnOFibhN0FgdowNEi0cRAqwdCy_kHGWYXQw4avWvrwhky86a_v3stgfrJ8zprItRuSlH3ELglrDfWLZOUGKw9aD
+            - button "Thông tin về kết quả này" [ref=f11e243] [cursor=pointer]
+          - generic [ref=f11e250]:
+            - text: Full platform walkthrough —
+            - emphasis [ref=f11e251]: issue reporting
+            - text: ", staff dashboard,"
+            - emphasis [ref=f11e252]: map
+            - text: view, and analytics. ✨ Elite Features. Robust Authentication System. Multi-provider ...
+        - generic [ref=f11e256]:
+          - generic [ref=f11e259]:
+            - link "Full Stack Developer Portfolio - Krishna Nandan Jha GitHub Pages documentation https://krishna-7033.github.io › Portfolio" [ref=f11e261] [cursor=pointer]:
+              - /url: /goto?url=CAESZAHrOzAVJt3pCp6OM8IesDuO8yz28ielYDu3ppw03rf61MN4MfH0iRLl_u6kasUIrteu7jSiOnmHHJZBLFJI15LCrujamJoauBraJ-uzho2nNHUqo5xQDF8b5xs1uKAuAGotkrg
+              - heading "Full Stack Developer Portfolio - Krishna Nandan Jha" [level=3] [ref=f11e262]
+              - generic [ref=f11e271]:
+                - generic [ref=f11e272]: GitHub Pages documentation
+                - generic [ref=f11e274]: https://krishna-7033.github.io › Portfolio
+            - generic [ref=f11e276]:
+              - generic [ref=f11e277]: ·
+              - link "Dịch trang này" [ref=f11e278] [cursor=pointer]:
+                - /url: /goto?url=CAESrQEB6zswFSVmLxH7pwgdEXoz5hAUGNTjQWj7V5k-_7CxcE9dc42m6g0IBye7Se4YA6di0YJDGtMmTPneCfZ0u3Z3SejVnh2c-5yPdbk2U5Smum02b44DQVi5Kwg8c6vd68uxwbTycBYkcd33PxLivQERSCFAUgkpYuOPVOZ6EJH89RUeqO5FHJYFec9kZTnAXZL5Nv8jGtmFT9ozxXQPfFtFG-l7NZJXhOU3oE1iTQ
+            - button "Thông tin về kết quả này" [ref=f11e283] [cursor=pointer]
+          - generic [ref=f11e290]:
+            - text: Built Community Hero, a full-stack AI-powered civic
+            - emphasis [ref=f11e291]: issue reporting
+            - text: platform using React, Node. ... Implemented geolocation and interactive
+            - emphasis [ref=f11e292]: mapping
+            - text: using
+            - emphasis [ref=f11e293]: Leaflet
+            - text: ...
+        - generic [ref=f11e297]:
+          - generic [ref=f11e300]:
+            - link "map-visualization GitHub https://github.com › topics › map-visua..." [ref=f11e302] [cursor=pointer]:
+              - /url: /goto?url=CAESggEB6zswFbmMgqqq987o84_hXWCUaMMEO6xPBd5pfpV5YdUAp7Ofj453I80hoUsolNRlrfgF2Ba2C5I5kxwhew0BgDv1roIGC-5F-wG_jvkIAn2dNrBmmbi3V3mq0_y-CPcG-PLrVZOu8GfrahAfL4jPJvU-UCsbCUH1nJZ4u2-OokbZ
+              - heading "map-visualization" [level=3] [ref=f11e303]
+              - generic [ref=f11e309]:
+                - generic [ref=f11e310]: GitHub
+                - generic [ref=f11e312]: https://github.com › topics › map-visua...
+            - generic [ref=f11e314]:
+              - generic [ref=f11e315]: ·
+              - link "Dịch trang này" [ref=f11e316] [cursor=pointer]:
+                - /url: /goto?url=CAES1gEB6zswFSCWddwhAK54izRyqGFWIQGja6tSQ5SGe7nW-T65cufOgUwTvY8e43QdAtmnJrmzGG4gbdhuUJy0QBYdC9K9ZjXgEq8yF9q7Seq02-LQl_ficDdfwjPsisPRwRdhDvpE2XbpREJ7CRvg1qE8aB64dN0lUKJqe4BOqzr1ybn5X4TwJ1ECfxbP4YCcw1LHxj__gOYvnyeKh52d0alSeGFi4k3GO74VeFrrWjxzvQ9HTGW1oH7k2XwCZdVkD4FCwigpN3Cv2CgbcSW_dkw-zZhyEatS
+            - button "Thông tin về kết quả này" [ref=f11e321] [cursor=pointer]
+          - generic [ref=f11e328]:
+            - text: Interactive React-based frontend for a community-driven infrastructure reporting and prioritization platform with geospatial
+            - emphasis [ref=f11e329]: issue reporting
+            - text: ", voting, and role- ..."
+        - generic [ref=f11e333]:
+          - generic [ref=f11e336]:
+            - link "Civic Issue Reporting App Devpost https://devpost.com › software › civic-i..." [ref=f11e338] [cursor=pointer]:
+              - /url: /goto?url=CAEScQHrOzAVbIZ5CVshAEi3o0mM-6yckiFFWZZf4s1qD9CU3E5T62mDwrVq9tCu5WusUDfRyOm1_7SK2JXqBES5zgzb-mE-OP9VN8AXjEca0rFTWvcLTu7z4Nk3zAoL9FbqtGvIoTm7hn-D-D39ocMff-Fc
+              - heading "Civic Issue Reporting App" [level=3] [ref=f11e339]
+              - generic [ref=f11e345]:
+                - generic [ref=f11e346]: Devpost
+                - generic [ref=f11e348]: https://devpost.com › software › civic-i...
+            - generic [ref=f11e350]:
+              - generic [ref=f11e351]: ·
+              - link "Dịch trang này" [ref=f11e352] [cursor=pointer]:
+                - /url: /goto?url=CAESugEB6zswFWTcSXb0v2WsJfmYTar1aZamLew2W3in_KdGTZCfX95pwLJIvGy3QnY2qd05vejSCixP0QdP0E7xk7N1tl1maE4U8NPswzKtn2_TcQoCPLLRf9dB__E8y2Otq5uOyi_dMRUSQyc6pIqDDZuUdYQFlOjI7BwnhN_ot3vxilMh7agkGindde5aMyMf7_zR2kbvVUXogDkMhaJN2lomHy4MjKq43F4LULiOlM1R5XJnpQ_GlFJavmA
+            - button "Thông tin về kết quả này" [ref=f11e357] [cursor=pointer]
+          - generic [ref=f11e363]:
+            - generic [ref=f11e364]: 1 thg 11, 2025 —
+            - generic [ref=f11e365]:
+              - emphasis [ref=f11e366]: Issue Reporting
+              - text: ": Submit detailed reports with photos, location, and categorization · AI-Powered Suggestions: Get automatic category and priority ..."
+        - generic [ref=f11e370]:
+          - generic [ref=f11e373]:
+            - link "Yogaarasu-portfolio Vercel https://yogaarasu-k.vercel.app" [ref=f11e375] [cursor=pointer]:
+              - /url: /goto?url=CAESWgHrOzAVVp-4I_4fW9G2Akwjdyfi6N5u8IJkzS0rsqlEWypZGz-FcakHfoZeKx-eIcpCqq5qPRx9tra9DdBhCTe1rckpXcVYsveT27kNj7shtq8R-Dv9j4E48Q
+              - heading "Yogaarasu-portfolio" [level=3] [ref=f11e376]
+              - generic [ref=f11e382]:
+                - generic [ref=f11e383]: Vercel
+                - generic [ref=f11e385]: https://yogaarasu-k.vercel.app
+            - generic [ref=f11e387]:
+              - generic [ref=f11e388]: ·
+              - link "Dịch trang này" [ref=f11e389] [cursor=pointer]:
+                - /url: /goto?url=CAESowEB6zswFdTntj0ralfVATHwVKtu3CEWk_z_wGdwDje9LHJeGwROwnZiIBW0PdhnxegWoroEoiG0TbiUTxF3Z7RnIJ3fK1Liw-JHA-zDVrebgMlCqX5jtXLAdMWneLHMQBkFLtdZcGiTSt3NpzHtjA48AiT3K6xLib8Nj1wIyGQqO_G27UO20lzgI9q-1IPGVXUCCX1mZqWefXUEMitB11QCG5M0
+            - button "Thông tin về kết quả này" [ref=f11e394] [cursor=pointer]
+          - generic [ref=f11e401]:
+            - text: It features
+            - emphasis [ref=f11e402]: map
+            - text: "-based"
+            - emphasis [ref=f11e403]: issue reporting
+            - text: ", real-time status tracking, and secure Role-Based Access Control to ensure transparent and efficient resolution of public ..."
+        - generic [ref=f11e407]:
+          - generic [ref=f11e410]:
+            - link "Prakhar Verma prakhar9044-code GitHub https://github.com › prakhar9044-code" [ref=f11e412] [cursor=pointer]:
+              - /url: /goto?url=CAESXgHrOzAV0tbgI40hhc9swgg7OcAf58iX76wgRS7Z8i1TAGpydMlb2gu4OiO8kqQB1-SyQIYJBffxFXxV5XLy7ryooQmvNbjFLZBF8HywYvQgEd4LDuiPYcRNhA77rbk
+              - heading "Prakhar Verma prakhar9044-code" [level=3] [ref=f11e413]
+              - generic [ref=f11e419]:
+                - generic [ref=f11e420]: GitHub
+                - generic [ref=f11e422]: https://github.com › prakhar9044-code
+            - generic [ref=f11e424]:
+              - generic [ref=f11e425]: ·
+              - link "Dịch trang này" [ref=f11e426] [cursor=pointer]:
+                - /url: /goto?url=CAESpwEB6zswFas-kGdLEHObvXO3L4vm1mjLpb4U4OiJv3sAHh7kuIW3IS7iZ45AvNJniGEoVDOo_D-IAAA5G7oZTx_Lm1DiNXMcmD2PIbTTskhEow3l9rROP88sCaUd2RqZKJ_iMbTOwACdC2YoV_-jWibdQzTslGmUe6XG2l_5umbt4jlUz26_VzIOL6RGwk2ESVqBnZCNBNz1zyoxgiEnaiBabs644kppgg
+            - button "Thông tin về kết quả này" [ref=f11e431] [cursor=pointer]
+          - generic [ref=f11e438]:
+            - text: 🎙️ Voice-to-text
+            - emphasis [ref=f11e439]: issue reporting
+            - text: (no typing needed); 🗺️
+            - emphasis [ref=f11e440]: Leaflet
+            - text: .js geospatial issue pinning & cluster views; Gamified community funding with ...
+        - generic [ref=f11e444]:
+          - generic [ref=f11e447]:
+            - link "Civic Issue Reporting Platform with Django and PostgreSQL LinkedIn https://www.linkedin.com › posts" [ref=f11e449] [cursor=pointer]:
+              - /url: /goto?url=CAESrwEB6zswFec3wYeq75xNkK8iMCGUS7X3FeRH1K7XaTr2-xmy7FWjhAXX1p3G4kdedACbwy2WZnoWjj-Ky5iAyIIxuZ17JfFE3US8DBpWHyrPgwLV4nUMty1C1XoO-yupNfZKIwd_1R6XOqMoFchjGYHKYzDP0b1KtBH6K14n-zMjpTk4eMTrInp7vQyZbebad7p2TPvRP_cAGiKPzuG3djhOeC5hxfm_upF3agWKzG_q
+              - heading "Civic Issue Reporting Platform with Django and PostgreSQL" [level=3] [ref=f11e450]
+              - generic [ref=f11e456]:
+                - generic [ref=f11e457]: LinkedIn
+                - generic [ref=f11e459]: https://www.linkedin.com › posts
+            - generic [ref=f11e461]:
+              - generic [ref=f11e462]: ·
+              - link "Dịch trang này" [ref=f11e463] [cursor=pointer]:
+                - /url: /goto?url=CAES-QEB6zswFT3r3AJERAotO2FNSWZgRKF7KuIDaCaeBQtCaWvr7N84zla3yqI2csW-kgb72qCaK8Y_llQfZ4E-xaOs4faU_ZMaZnjze8L9zxU-6fNb8C-QoiaRazDYVCvzx1xksg2TdIjplSk34TsR_pK8tucPK-pYzmPBzyIFfz9AxYkxrKvQQvmAxjbaoqngfRcWII4pVqe7SIFM6bp6PLhulx56TtVMyhe2vuCQmKJor9wLdC7ukaO8os38XeWGUKdq6StOR2mTanNDLqqCqUaDRZC9yloMlaW4T1CsAZEVDkjyIoD6gUacYdNOc_SeZFudqtomw4LDjE8
+            - button "Thông tin về kết quả này" [ref=f11e468] [cursor=pointer]
+          - generic [ref=f11e473]: "Thrilled to share my latest development project: SmartLocal! Finding a quick, reliable way to report civic issues like road accidents, waste accumulation, ..."
+        - generic [ref=f11e478]:
+          - generic [ref=f11e481]:
+            - 'link "FixMzansi: Empowering Communities Through Technology LinkedIn https://www.linkedin.com › pulse › fix..." [ref=f11e483] [cursor=pointer]':
+              - /url: /goto?url=CAES0QEB6zswFZWDsJYnFxNXoWL_XLnfbPdYaQFxUYftv0eFBb3mGDwcWUnlcl-0C3BQ52gN81DbC6wtYmm55IX0UeJhlaAWLvF0vQ7f07i6HKCSeUQXFA-cSbNlLjx74CtL06k_BPFHXNGZHTxaVDm3Hnt8wNPee95qE1uopTJEvuxPK1mq338RtIwRauWAHNOdppBMht2TCwaEDX06DAsW_MJBZXUK3FrMQIfWRX81X2Sz7NeQa0C9O6toqd8q11pDnLRPPJVIeVbQpvR1Dd4ZkFp4Nw
+              - 'heading "FixMzansi: Empowering Communities Through Technology" [level=3] [ref=f11e484]'
+              - generic [ref=f11e490]:
+                - generic [ref=f11e491]: LinkedIn
+                - generic [ref=f11e493]: https://www.linkedin.com › pulse › fix...
+            - generic [ref=f11e495]:
+              - generic [ref=f11e496]: ·
+              - link "Dịch trang này" [ref=f11e497] [cursor=pointer]:
+                - /url: /goto?url=CAESnAIB6zswFQlbKRUiQa49-GL3IesJfTF2KMimGm-6j1B_HJpIz81O7Fjk3pyk-KCQuvMm_YlKQHEKaGY1VT1VTKlNJ3zLe70aFU2AP80OVbzJbPlPV5dVhhU6RV2QY9hHN2D1iNHU2jp-yEba5twh1P5yhH7jE8mZqn_baSV2zljfMYnRq0rCPHngC54cyWehduej5GzRk7sqjaBFq2K2Xw-3IRKZch50D154vpuOsCW_bsb5u5KbQJvbqj9Tpa2VCQ_5Y5qT8iG91D118vGahzFoYUvWPbnkMrhyitVXMKwe0bADxvIROX3F4hUag8wwmfWZ_86ziFeHNBFLgN--GiIUblraOi4jh8UUXMuXquztyVqyIOGAAz9VMkIDDA
+            - button "Thông tin về kết quả này" [ref=f11e502] [cursor=pointer]
+          - generic [ref=f11e509]:
+            - emphasis [ref=f11e510]: Issue Reporting
+            - text: ": Users can submit reports of local issues, attaching images and providing descriptions by selecting the exact location on the"
+            - emphasis [ref=f11e511]: Map
+            - text: . Issue ...
+      - navigation [ref=f11e514]:
+        - heading "Điều hướng trang" [level=1] [ref=f11e515]
+        - text: "1"
+        - link "Page 2" [ref=f11e518] [cursor=pointer]:
+          - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=10&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8tMDegQILhAE
+          - text: "2"
+        - link "Page 3" [ref=f11e520] [cursor=pointer]:
+          - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=20&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8tMDegQILhAG
+          - text: "3"
+        - link "Page 4" [ref=f11e522] [cursor=pointer]:
+          - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=30&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8tMDegQILhAI
+          - text: "4"
+        - link "Page 5" [ref=f11e524] [cursor=pointer]:
+          - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=40&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8tMDegQILhAK
+          - text: "5"
+        - link "Page 6" [ref=f11e526] [cursor=pointer]:
+          - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=50&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8tMDegQILhAM
+          - text: "6"
+        - link "Page 7" [ref=f11e528] [cursor=pointer]:
+          - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=60&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8tMDegQILhAO
+          - text: "7"
+        - link "Page 8" [ref=f11e530] [cursor=pointer]:
+          - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=70&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8tMDegQILhAQ
+          - text: "8"
+        - link "Page 9" [ref=f11e532] [cursor=pointer]:
+          - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=80&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8tMDegQILhAS
+          - text: "9"
+        - link "Page 10" [ref=f11e534] [cursor=pointer]:
+          - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=90&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8tMDegQILhAU
+          - text: "10"
+        - heading [level=2] [ref=f11e536]:
+          - link "Tiếp" [ref=f11e537] [cursor=pointer]:
+            - /url: /search?q=github+%22report+pothole%22+OR+%22issue+reporting%22+map+app+leaflet+portfolio&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntJVYh4NYLLjkXu3DOA4DfhcBfzIA:1791457587859&ei=M3nHar_5M6mPvr0P8pG0oQM&start=10&sa=N&sstk=AS6-VmIzMp5bhoB7Z6x8rVzEIW8OcKoAWxS_3991RBEyofYat_o9-h0_lgZLYr0iR0JNuS_8kKxdklmes-DsPdei5x95hDFSkdHYwg&ved=2ahUKEwj_3p3Jo6qXAxWph68BHfIILTQQ8NMDegQILhAW
+      - navigation
+    - contentinfo [ref=f11e540]:
+      - heading "Đường liên kết ở chân trang" [level=1] [ref=f11e541]
+      - generic [ref=f11e545]:
+        - generic [ref=f11e547]:
+          - text: Việt Nam
+          - generic [ref=f11e549]:
+            - button "Thủ Đức, Hồ Chí Minh - Dựa trên địa chỉ IP của bạn" [ref=f11e551] [cursor=pointer]:
+              - generic [ref=f11e552]: Thủ Đức, Hồ Chí Minh
+              - generic [ref=f11e554]:
+                - text: "-"
+                - generic [ref=f11e555]: Dựa trên địa chỉ IP của bạn
+            - text: "-"
+            - button "Cập nhật vị trí" [ref=f11e557] [cursor=pointer]
+        - generic [ref=f11e560]:
+          - link "Trợ giúp" [ref=f11e561] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=vi&fg=1
+          - link "Gửi phản hồi" [ref=f11e562] [cursor=pointer]:
+            - /url: "#"
+          - link "Quyền riêng tư" [ref=f11e563] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=vi&fg=1
+          - link "Điều khoản" [ref=f11e564] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=vi&fg=1

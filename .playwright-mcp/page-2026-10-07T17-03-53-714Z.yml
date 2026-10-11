@@ -1,0 +1,359 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - generic [ref=f4e4]:
+      - generic [ref=f4e6]:
+        - link "DuckDuckGo home" [ref=f4e7] [cursor=pointer]:
+          - /url: /?t=h_
+          - generic [ref=f4e8]: DuckDuckGo
+        - generic [ref=f4e15]:
+          - combobox "Search privately" [ref=f4e17]: junior web developer portfolio project ideas employers 2025
+          - button "Search" [ref=f4e19] [cursor=pointer]
+      - navigation [ref=f4e26]:
+        - list [ref=f4e27]:
+          - listitem [ref=f4e28]:
+            - link [ref=f4e29] [cursor=pointer]:
+              - /url: /?q=junior+web+developer+portfolio+project+ideas+employers+2025&t=h_&ia=web
+              - strong [ref=f4e30]: All
+          - listitem [ref=f4e33]:
+            - link [ref=f4e34] [cursor=pointer]:
+              - /url: /?q=junior+web+developer+portfolio+project+ideas+employers+2025&t=h_&ia=images&iax=images
+              - strong [ref=f4e35]: Images
+          - listitem [ref=f4e36]:
+            - link [ref=f4e37] [cursor=pointer]:
+              - /url: /?q=junior+web+developer+portfolio+project+ideas+employers+2025&t=h_&ia=videos&iax=videos
+              - strong [ref=f4e38]: Videos
+          - listitem [ref=f4e39]:
+            - link [ref=f4e40] [cursor=pointer]:
+              - /url: /?q=junior+web+developer+portfolio+project+ideas+employers+2025&t=h_&iaxm=maps
+              - strong [ref=f4e41]: Maps
+        - list [ref=f4e42]:
+          - listitem [ref=f4e43]:
+            - link "Duck.ai" [ref=f4e45] [cursor=pointer]:
+              - /url: /?q=junior+web+developer+portfolio+project+ideas+employers+2025&t=h_&ia=chat&entry=serp
+          - listitem [ref=f4e49]:
+            - button "Search Settings ✀" [ref=f4e51] [cursor=pointer]:
+              - generic [ref=f4e54]: Search Settings
+              - generic [ref=f4e55]: ✀
+    - generic [ref=f4e62]:
+      - navigation [ref=f4e64]:
+        - button [ref=f4e66] [cursor=pointer]:
+          - strong [ref=f4e73]: Private
+        - generic [ref=f4e77]:
+          - switch "Filter by the selected region" [ref=f4e81]
+          - button "Vietnam (en)" [ref=f4e83] [cursor=pointer]
+        - button [ref=f4e88] [cursor=pointer]:
+          - strong [ref=f4e90]: "Safe search: moderate"
+        - button [ref=f4e94] [cursor=pointer]:
+          - strong [ref=f4e96]: Any time
+      - generic [ref=f4e100]:
+        - list [ref=f4e101]:
+          - listitem [ref=f4e102]:
+            - article [ref=f4e103] [cursor=pointer]:
+              - button [ref=f4e105]
+              - generic [ref=f4e109]:
+                - link "Search domain onehour.digital" [ref=f4e111]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:onehour.digital&t=h_
+                - generic [ref=f4e114]:
+                  - paragraph [ref=f4e115]: onehour.digital
+                  - link "https://onehour.digital › inspiration › junior-developer-portfolio-examples" [ref=f4e116]:
+                    - /url: https://onehour.digital/inspiration/junior-developer-portfolio-examples
+                    - paragraph [ref=f4e118]:
+                      - generic [ref=f4e119]: https://onehour.digital
+                      - generic [ref=f4e120]: › inspiration › junior-developer-portfolio-examples
+              - heading [level=2] [ref=f4e122]:
+                - link "Junior Developer Portfolio Examples | OneHour" [ref=f4e123]:
+                  - /url: https://onehour.digital/inspiration/junior-developer-portfolio-examples
+              - generic [ref=f4e128]:
+                - text: Feb 19, 2025·
+                - generic [ref=f4e129]: This list of Junior Developer Portfolio Examples takes the guesswork out of the process. Whether you're a recent grad, bootcamp completer, or self-taught coder, these portfolios show what works.
+          - listitem [ref=f4e130]:
+            - article [ref=f4e131] [cursor=pointer]:
+              - button [ref=f4e133]
+              - generic [ref=f4e137]:
+                - link "Search domain webportfolios.dev" [ref=f4e139]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:www.webportfolios.dev&t=h_
+                - generic [ref=f4e142]:
+                  - paragraph [ref=f4e143]: webportfolios.dev
+                  - link "https://www.webportfolios.dev › blog › junior-developer-portfolio-guide-2025" [ref=f4e144]:
+                    - /url: https://www.webportfolios.dev/blog/junior-developer-portfolio-guide-2025
+                    - paragraph [ref=f4e146]:
+                      - generic [ref=f4e147]: https://www.webportfolios.dev
+                      - generic [ref=f4e148]: › blog › junior-developer-portfolio-guide-2025
+              - heading [level=2] [ref=f4e150]:
+                - 'link "Complete Guide: Building a Junior Developer Portfolio That Gets ..." [ref=f4e151]':
+                  - /url: https://www.webportfolios.dev/blog/junior-developer-portfolio-guide-2025
+              - generic [ref=f4e156]:
+                - text: Sep 13, 2025·
+                - generic [ref=f4e157]: A complete guide to creating a junior developer portfolio that gets interviews in 2025. Learn how to structure your site, choose projects, and impress recruiters.
+          - listitem [ref=f4e158]:
+            - article [ref=f4e159] [cursor=pointer]:
+              - button [ref=f4e161]
+              - generic [ref=f4e165]:
+                - link "Search domain dev.to" [ref=f4e167]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:dev.to&t=h_
+                - generic [ref=f4e170]:
+                  - paragraph [ref=f4e171]: DEV Community
+                  - link "https://dev.to › avishek_chandradas_7e892 › 15-web-development-project-ideas-for-your-portfolio-30jl" [ref=f4e172]:
+                    - /url: https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl
+                    - paragraph [ref=f4e174]:
+                      - generic [ref=f4e175]: https://dev.to
+                      - generic [ref=f4e176]: › avishek_chandradas_7e892 › 15-web-development-project-ideas-for-your-portfolio-30jl
+              - heading [level=2] [ref=f4e178]:
+                - link "15 Web Development Project Ideas for Your Portfolio" [ref=f4e179]:
+                  - /url: https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl
+              - generic [ref=f4e184]:
+                - text: Aug 19, 2025·
+                - generic [ref=f4e185]: Here's a list of web development project ideas ranging from beginner-friendly to advanced. Use these to learn, improve your skills, or impress future employers! Showcase your work, skills, and resume. Task management with add, edit, delete, and mark as completed. Create, edit, and display blog posts with Markdown support.
+          - listitem [ref=f4e186]:
+            - article [ref=f4e187] [cursor=pointer]:
+              - button [ref=f4e189]
+              - generic [ref=f4e193]:
+                - link "Search domain webportfolios.dev" [ref=f4e195]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:www.webportfolios.dev&t=h_
+                - generic [ref=f4e198]:
+                  - paragraph [ref=f4e199]: webportfolios.dev
+                  - link "https://www.webportfolios.dev › blog › portfolio-projects-guide" [ref=f4e200]:
+                    - /url: https://www.webportfolios.dev/blog/portfolio-projects-guide
+                    - paragraph [ref=f4e202]:
+                      - generic [ref=f4e203]: https://www.webportfolios.dev
+                      - generic [ref=f4e204]: › blog › portfolio-projects-guide
+              - heading [level=2] [ref=f4e206]:
+                - link "Web Development Portfolio Projects (Beginner to Advanced)" [ref=f4e207]:
+                  - /url: https://www.webportfolios.dev/blog/portfolio-projects-guide
+              - generic [ref=f4e212]:
+                - text: Jul 12, 2025·
+                - generic [ref=f4e213]: Discover web development portfolio project ideas for beginners to advanced devs. Includes JavaScript projects, role-based examples, and design tips.
+          - listitem [ref=f4e214]:
+            - article [ref=f4e215] [cursor=pointer]:
+              - button [ref=f4e217]
+              - generic [ref=f4e221]:
+                - link "Search domain buildideas.co" [ref=f4e223]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:buildideas.co&t=h_
+                - generic [ref=f4e226]:
+                  - paragraph [ref=f4e227]: buildideas.co
+                  - link "https://buildideas.co › projects › portfolio" [ref=f4e228]:
+                    - /url: https://buildideas.co/projects/portfolio
+                    - paragraph [ref=f4e230]:
+                      - generic [ref=f4e231]: https://buildideas.co
+                      - generic [ref=f4e232]: › projects › portfolio
+              - heading [level=2] [ref=f4e234]:
+                - link "25+ Projects to Build for Your Developer Portfolio" [ref=f4e235]:
+                  - /url: https://buildideas.co/projects/portfolio
+              - generic [ref=f4e237]: 25+ portfolio-worthy projects that impress hiring managers. Ranked by impact and tech complexity — with presentation tips & README templates.
+          - listitem [ref=f4e242]:
+            - article [ref=f4e243] [cursor=pointer]:
+              - button [ref=f4e245]
+              - generic [ref=f4e249]:
+                - link "Search domain lifedev.net" [ref=f4e251]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:lifedev.net&t=h_
+                - generic [ref=f4e254]:
+                  - paragraph [ref=f4e255]: lifedev.net
+                  - link "https://lifedev.net › 2024 › 06 › best-portfolio-projects-for-junior-developers" [ref=f4e256]:
+                    - /url: https://lifedev.net/2024/06/best-portfolio-projects-for-junior-developers/
+                    - paragraph [ref=f4e258]:
+                      - generic [ref=f4e259]: https://lifedev.net
+                      - generic [ref=f4e260]: › 2024 › 06 › best-portfolio-projects-for-junior-developers
+              - heading [level=2] [ref=f4e262]:
+                - link "Top 5 Best Portfolio Projects For Junior Developers" [ref=f4e263]:
+                  - /url: https://lifedev.net/2024/06/best-portfolio-projects-for-junior-developers/
+              - generic [ref=f4e265]: The best portfolio projects for junior developers should showcase a range of skills, from front-end development and data manipulation to problem-solving abilities.
+          - listitem [ref=f4e270]:
+            - article [ref=f4e271] [cursor=pointer]:
+              - button [ref=f4e273]
+              - generic [ref=f4e277]:
+                - link "Search domain enwebo.com" [ref=f4e279]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:enwebo.com&t=h_
+                - generic [ref=f4e282]:
+                  - paragraph [ref=f4e283]: enwebo.com
+                  - link "https://enwebo.com › blog › web-developer-portfolio-ideas" [ref=f4e284]:
+                    - /url: https://enwebo.com/blog/web-developer-portfolio-ideas
+                    - paragraph [ref=f4e286]:
+                      - generic [ref=f4e287]: https://enwebo.com
+                      - generic [ref=f4e288]: › blog › web-developer-portfolio-ideas
+              - heading [level=2] [ref=f4e290]:
+                - link "25 Web Developer Portfolio Ideas & What to Include" [ref=f4e291]:
+                  - /url: https://enwebo.com/blog/web-developer-portfolio-ideas
+              - generic [ref=f4e293]: Creative project ideas for your web developer portfolio. Learn what projects to showcase and how to present them to impress recruiters and clients.
+          - listitem [ref=f4e298]:
+            - article [ref=f4e299] [cursor=pointer]:
+              - button [ref=f4e301]
+              - generic [ref=f4e305]:
+                - link "Search domain bigtee.dev" [ref=f4e307]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:bigtee.dev&t=h_
+                - generic [ref=f4e310]:
+                  - paragraph [ref=f4e311]: bigtee.dev
+                  - link "https://bigtee.dev › blog › web-developer-portfolio-examples" [ref=f4e312]:
+                    - /url: https://bigtee.dev/blog/web-developer-portfolio-examples/
+                    - paragraph [ref=f4e314]:
+                      - generic [ref=f4e315]: https://bigtee.dev
+                      - generic [ref=f4e316]: › blog › web-developer-portfolio-examples
+              - heading [level=2] [ref=f4e318]:
+                - link "15 Web Developer Portfolio Examples + How to Build Yours (2025)" [ref=f4e319]:
+                  - /url: https://bigtee.dev/blog/web-developer-portfolio-examples/
+              - generic [ref=f4e324]:
+                - text: Nov 30, 2025·
+                - generic [ref=f4e325]: Inspiring web developer portfolio examples with analysis of what makes them effective. Learn how to build a portfolio that lands clients and jobs.
+          - listitem [ref=f4e326]:
+            - article [ref=f4e327] [cursor=pointer]:
+              - button [ref=f4e329]
+              - generic [ref=f4e333]:
+                - link "Search domain mrprogrammer.in" [ref=f4e335]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:mrprogrammer.in&t=h_
+                - generic [ref=f4e338]:
+                  - paragraph [ref=f4e339]: Mr Programmer
+                  - link "https://mrprogrammer.in › web-development-projects-for-resume" [ref=f4e340]:
+                    - /url: https://mrprogrammer.in/web-development-projects-for-resume/
+                    - paragraph [ref=f4e342]:
+                      - generic [ref=f4e343]: https://mrprogrammer.in
+                      - generic [ref=f4e344]: › web-development-projects-for-resume
+              - heading [level=2] [ref=f4e346]:
+                - link "30 Web Development Projects For Resume (2025) - Mr Programmer" [ref=f4e347]:
+                  - /url: https://mrprogrammer.in/web-development-projects-for-resume/
+              - generic [ref=f4e349]: Want to Build Projects For Your Resume and Get Hired? Here are Some Web Development Projects For Resume.
+          - listitem [ref=f4e354]:
+            - article [ref=f4e355] [cursor=pointer]:
+              - button [ref=f4e357]
+              - generic [ref=f4e361]:
+                - link "Search domain buildideas.co" [ref=f4e363]:
+                  - /url: /?q=junior%20web%20developer%20portfolio%20project%20ideas%20employers%202025+site:buildideas.co&t=h_
+                - generic [ref=f4e366]:
+                  - paragraph [ref=f4e367]: buildideas.co
+                  - link "https://buildideas.co › projects › web-development" [ref=f4e368]:
+                    - /url: https://buildideas.co/projects/web-development
+                    - paragraph [ref=f4e370]:
+                      - generic [ref=f4e371]: https://buildideas.co
+                      - generic [ref=f4e372]: › projects › web-development
+              - heading [level=2] [ref=f4e374]:
+                - link "30+ Web Development Project Ideas for Your Portfolio" [ref=f4e375]:
+                  - /url: https://buildideas.co/projects/web-development
+              - generic [ref=f4e377]: 30+ web development project ideas across HTML/CSS, JavaScript, React and full stack — sorted by difficulty with APIs and portfolio tips.
+          - listitem [ref=f4e382]:
+            - generic [ref=f4e384]:
+              - paragraph [ref=f4e385]: Searches related to junior web developer portfolio project ideas employers 2025
+              - generic [ref=f4e386]:
+                - list [ref=f4e387]:
+                  - listitem [ref=f4e388]:
+                    - link "junior developer portfolio examples" [ref=f4e389] [cursor=pointer]:
+                      - /url: "?q=junior%20developer%20portfolio%20examples&origin=related&t=h_"
+                  - listitem [ref=f4e392]:
+                    - link "web development portfolio ideas" [ref=f4e393] [cursor=pointer]:
+                      - /url: "?q=web%20development%20portfolio%20ideas&origin=related&t=h_"
+                  - listitem [ref=f4e396]:
+                    - link "web dev project ideas" [ref=f4e397] [cursor=pointer]:
+                      - /url: "?q=web%20dev%20project%20ideas&origin=related&t=h_"
+                - list [ref=f4e400]:
+                  - listitem [ref=f4e401]:
+                    - link "web development portfolio examples" [ref=f4e402] [cursor=pointer]:
+                      - /url: "?q=web%20development%20portfolio%20examples&origin=related&t=h_"
+                  - listitem [ref=f4e405]:
+                    - link "web developer portfolio examples" [ref=f4e406] [cursor=pointer]:
+                      - /url: "?q=web%20developer%20portfolio%20examples&origin=related&t=h_"
+                  - listitem [ref=f4e409]:
+                    - link "web developer portfolio websites" [ref=f4e410] [cursor=pointer]:
+                      - /url: "?q=web%20developer%20portfolio%20websites&origin=related&t=h_"
+              - generic [ref=f4e418]:
+                - text: Was this helpful?
+                - button "Positive feedback" [ref=f4e419] [cursor=pointer]
+                - button "Negative feedback" [ref=f4e423] [cursor=pointer]
+        - button "More results" [ref=f4e429] [cursor=pointer]
+    - list [ref=f4e432]:
+      - button "Close menu" [ref=f4e433] [cursor=pointer]
+      - list [ref=f4e437]:
+        - listitem [ref=f4e438]: Search
+        - listitem [ref=f4e439]:
+          - link "Homepage" [ref=f4e440] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f4e441]:
+          - link "Themes" [ref=f4e442] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f4e443]:
+          - link "Settings" [ref=f4e444] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f4e445]:
+        - listitem [ref=f4e446]: Share Feedback
+        - listitem [ref=f4e447]:
+          - generic [ref=f4e450]:
+            - button "Positive feedback" [ref=f4e451] [cursor=pointer]
+            - button "Negative feedback" [ref=f4e455] [cursor=pointer]
+      - list [ref=f4e459]:
+        - listitem [ref=f4e460]: Downloads
+        - listitem [ref=f4e461]:
+          - link "iOS Browser" [ref=f4e462] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f4e463]:
+          - link "Android Browser" [ref=f4e464] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f4e465]:
+          - link "Mac Browser" [ref=f4e466] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f4e467]:
+          - link "Windows Browser" [ref=f4e468] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f4e469]:
+          - link "Browser Extensions" [ref=f4e470] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f4e471]:
+        - listitem [ref=f4e472]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f4e473]:
+          - link "Duck.ai" [ref=f4e474] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f4e475]:
+          - link "Email Protection" [ref=f4e476] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f4e477]:
+          - link "Newsletter" [ref=f4e478] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f4e479]:
+          - link "Blog" [ref=f4e480] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f4e481]:
+          - link "Podcast" [ref=f4e482] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f4e483]:
+          - link "Collaborations" [ref=f4e484] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f4e485]:
+        - listitem [ref=f4e486]: Learn More
+        - listitem [ref=f4e487]:
+          - link "What’s New" [ref=f4e488] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f4e489]:
+          - link "Compare Privacy" [ref=f4e490] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f4e491]:
+          - link "About Our Browser" [ref=f4e492] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f4e493]:
+          - link "About DuckDuckGo" [ref=f4e494] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f4e495]:
+        - listitem [ref=f4e496]: Other Resources
+        - listitem [ref=f4e497]:
+          - link "Help" [ref=f4e498] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f4e499]:
+          - link "Community" [ref=f4e500] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f4e501]:
+          - link "Careers" [ref=f4e502] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f4e503]:
+          - link "Privacy Policy" [ref=f4e504] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f4e505]:
+          - link "Terms of Service" [ref=f4e506] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f4e507]:
+          - link "Press Kit" [ref=f4e508] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f4e509]:
+          - link "Advertise on Search" [ref=f4e510] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f4e516]:
+    - generic [ref=f4e527]:
+      - heading "See What’s DuckDuckNew" [level=3] [ref=f4e528]
+      - paragraph [ref=f4e529]: Explore DuckDuckGo’s latest product updates.
+    - link "Learn More" [ref=f4e530] [cursor=pointer]:
+      - /url: https://duckduckgo.com/updates
+  - button "Share Feedback" [ref=f4e535] [cursor=pointer]

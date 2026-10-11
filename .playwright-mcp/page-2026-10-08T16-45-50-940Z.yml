@@ -1,0 +1,999 @@
+- generic [active] [ref=f87e1]:
+  - link "Bỏ tới nội dung" [ref=f87e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f87e3]:
+    - generic [ref=f87e4]:
+      - paragraph [ref=f87e5]: Tham chiếu
+      - heading "Thuật ngữ Backend & System" [level=1] [ref=f87e6]
+      - paragraph [ref=f87e7]:
+        - text: "Mỗi mục trả lời hai câu:"
+        - strong [ref=f87e8]: vấn đề gì khiến thuật ngữ này được sinh ra
+        - text: ", và"
+        - strong [ref=f87e9]: nó giải quyết thế nào
+        - text: . Sắp từ cơ bản đến nâng cao.
+      - paragraph [ref=f87e10]: 575 mục · 3 phần · 13 lĩnh vực · 485 có nguồn gốc
+      - 'img "Phân bố mức độ: cơ bản, trung cấp, nâng cao" [ref=f87e11]':
+        - generic "Nền tảng 178" [ref=f87e12]
+        - generic "Trung cấp 268" [ref=f87e13]
+        - generic "Nâng cao 129" [ref=f87e14]
+  - search [ref=f87e15]:
+    - generic [ref=f87e16]:
+      - generic [ref=f87e17]:
+        - generic [ref=f87e18]: Tìm thuật ngữ
+        - searchbox "Tìm thuật ngữ" [ref=f87e19]: cache
+      - group "Lọc theo mức độ" [ref=f87e20]:
+        - button "Tất cả 575" [ref=f87e21] [cursor=pointer]
+        - button "Nền tảng 178" [pressed] [ref=f87e22] [cursor=pointer]
+        - button "Trung cấp 268" [ref=f87e23] [cursor=pointer]
+        - button "Nâng cao 129" [ref=f87e24] [cursor=pointer]
+      - generic [ref=f87e25]: Lọc theo lĩnh vực
+      - combobox "Lọc theo lĩnh vực" [ref=f87e26]:
+        - option "Tất cả lĩnh vực" [selected]
+        - option "Mạng & Giao thức (46)"
+        - option "Thiết kế API (38)"
+        - option "Cơ sở dữ liệu & Lưu trữ (65)"
+        - option "Caching & Hiệu năng (25)"
+        - option "Hiệu năng (65)"
+        - option "Phân tán & Đồng thời (28)"
+        - option "Messaging & Bất đồng bộ (24)"
+        - option "Kiến trúc & Khả năng mở rộng (28)"
+        - option "Độ tin cậy & Quan sát được (61)"
+        - option "Bền vững & Chị tải (36)"
+        - option "Bảo mật & Xác thực (65)"
+        - option "Kiểm thử & Chất lượng (66)"
+        - option "DevOps & Triển khai (28)"
+      - status [ref=f87e27]: Đang hiển thị 24 / 575 mục
+      - 'button "Giao diện: sáng. Nhấn để đổi." [ref=f87e28] [cursor=pointer]': sáng
+  - generic [ref=f87e29]:
+    - group [ref=f87e30]:
+      - generic "Mục lục ▴" [ref=f87e31] [cursor=pointer]
+      - navigation "Mục lục" [ref=f87e32]:
+        - list [ref=f87e33]:
+          - listitem [ref=f87e34]:
+            - link "I Nền tảng 178" [ref=f87e35] [cursor=pointer]:
+              - /url: "#p-basic"
+              - generic [ref=f87e36]: I
+              - generic [ref=f87e37]: Nền tảng
+              - generic [ref=f87e38]: "178"
+            - list [ref=f87e39]:
+              - listitem [ref=f87e40]:
+                - link "Mạng & Giao thức 20" [ref=f87e41] [cursor=pointer]:
+                  - /url: "#dom-d00"
+                  - generic [ref=f87e42]: Mạng & Giao thức
+                  - generic [ref=f87e43]: "20"
+              - listitem [ref=f87e44]:
+                - link "Thiết kế API 11" [ref=f87e45] [cursor=pointer]:
+                  - /url: "#dom-d01"
+                  - generic [ref=f87e46]: Thiết kế API
+                  - generic [ref=f87e47]: "11"
+              - listitem [ref=f87e48]:
+                - link "Cơ sở dữ liệu & Lưu trữ 19" [ref=f87e49] [cursor=pointer]:
+                  - /url: "#dom-d02"
+                  - generic [ref=f87e50]: Cơ sở dữ liệu & Lưu trữ
+                  - generic [ref=f87e51]: "19"
+              - listitem [ref=f87e52]:
+                - link "Caching & Hiệu năng 9" [ref=f87e53] [cursor=pointer]:
+                  - /url: "#dom-d03"
+                  - generic [ref=f87e54]: Caching & Hiệu năng
+                  - generic [ref=f87e55]: "9"
+              - listitem [ref=f87e56]:
+                - link "Hiệu năng 19" [ref=f87e57] [cursor=pointer]:
+                  - /url: "#dom-d04"
+                  - generic [ref=f87e58]: Hiệu năng
+                  - generic [ref=f87e59]: "19"
+              - listitem [ref=f87e60]:
+                - link "Phân tán & Đồng thời 7" [ref=f87e61] [cursor=pointer]:
+                  - /url: "#dom-d05"
+                  - generic [ref=f87e62]: Phân tán & Đồng thời
+                  - generic [ref=f87e63]: "7"
+              - listitem [ref=f87e64]:
+                - link "Messaging & Bất đồng bộ 8" [ref=f87e65] [cursor=pointer]:
+                  - /url: "#dom-d06"
+                  - generic [ref=f87e66]: Messaging & Bất đồng bộ
+                  - generic [ref=f87e67]: "8"
+              - listitem [ref=f87e68]:
+                - link "Kiến trúc & Khả năng mở rộng 10" [ref=f87e69] [cursor=pointer]:
+                  - /url: "#dom-d07"
+                  - generic [ref=f87e70]: Kiến trúc & Khả năng mở rộng
+                  - generic [ref=f87e71]: "10"
+              - listitem [ref=f87e72]:
+                - link "Độ tin cậy & Quan sát được 12" [ref=f87e73] [cursor=pointer]:
+                  - /url: "#dom-d08"
+                  - generic [ref=f87e74]: Độ tin cậy & Quan sát được
+                  - generic [ref=f87e75]: "12"
+              - listitem [ref=f87e76]:
+                - link "Bền vững & Chị tải 11" [ref=f87e77] [cursor=pointer]:
+                  - /url: "#dom-d09"
+                  - generic [ref=f87e78]: Bền vững & Chị tải
+                  - generic [ref=f87e79]: "11"
+              - listitem [ref=f87e80]:
+                - link "Bảo mật & Xác thực 18" [ref=f87e81] [cursor=pointer]:
+                  - /url: "#dom-d10"
+                  - generic [ref=f87e82]: Bảo mật & Xác thực
+                  - generic [ref=f87e83]: "18"
+              - listitem [ref=f87e84]:
+                - link "Kiểm thử & Chất lượng 25" [ref=f87e85] [cursor=pointer]:
+                  - /url: "#dom-d11"
+                  - generic [ref=f87e86]: Kiểm thử & Chất lượng
+                  - generic [ref=f87e87]: "25"
+              - listitem [ref=f87e88]:
+                - link "DevOps & Triển khai 9" [ref=f87e89] [cursor=pointer]:
+                  - /url: "#dom-d12"
+                  - generic [ref=f87e90]: DevOps & Triển khai
+                  - generic [ref=f87e91]: "9"
+          - listitem [ref=f87e92]:
+            - link "II Trung cấp 268" [ref=f87e93] [cursor=pointer]:
+              - /url: "#p-intermediate"
+              - generic [ref=f87e94]: II
+              - generic [ref=f87e95]: Trung cấp
+              - generic [ref=f87e96]: "268"
+            - list [ref=f87e97]:
+              - listitem [ref=f87e98]:
+                - link "Mạng & Giao thức 19" [ref=f87e99] [cursor=pointer]:
+                  - /url: "#dom-d00"
+                  - generic [ref=f87e100]: Mạng & Giao thức
+                  - generic [ref=f87e101]: "19"
+              - listitem [ref=f87e102]:
+                - link "Thiết kế API 22" [ref=f87e103] [cursor=pointer]:
+                  - /url: "#dom-d01"
+                  - generic [ref=f87e104]: Thiết kế API
+                  - generic [ref=f87e105]: "22"
+              - listitem [ref=f87e106]:
+                - link "Cơ sở dữ liệu & Lưu trữ 27" [ref=f87e107] [cursor=pointer]:
+                  - /url: "#dom-d02"
+                  - generic [ref=f87e108]: Cơ sở dữ liệu & Lưu trữ
+                  - generic [ref=f87e109]: "27"
+              - listitem [ref=f87e110]:
+                - link "Caching & Hiệu năng 9" [ref=f87e111] [cursor=pointer]:
+                  - /url: "#dom-d03"
+                  - generic [ref=f87e112]: Caching & Hiệu năng
+                  - generic [ref=f87e113]: "9"
+              - listitem [ref=f87e114]:
+                - link "Hiệu năng 32" [ref=f87e115] [cursor=pointer]:
+                  - /url: "#dom-d04"
+                  - generic [ref=f87e116]: Hiệu năng
+                  - generic [ref=f87e117]: "32"
+              - listitem [ref=f87e118]:
+                - link "Phân tán & Đồng thời 12" [ref=f87e119] [cursor=pointer]:
+                  - /url: "#dom-d05"
+                  - generic [ref=f87e120]: Phân tán & Đồng thời
+                  - generic [ref=f87e121]: "12"
+              - listitem [ref=f87e122]:
+                - link "Messaging & Bất đồng bộ 8" [ref=f87e123] [cursor=pointer]:
+                  - /url: "#dom-d06"
+                  - generic [ref=f87e124]: Messaging & Bất đồng bộ
+                  - generic [ref=f87e125]: "8"
+              - listitem [ref=f87e126]:
+                - link "Kiến trúc & Khả năng mở rộng 10" [ref=f87e127] [cursor=pointer]:
+                  - /url: "#dom-d07"
+                  - generic [ref=f87e128]: Kiến trúc & Khả năng mở rộng
+                  - generic [ref=f87e129]: "10"
+              - listitem [ref=f87e130]:
+                - link "Độ tin cậy & Quan sát được 28" [ref=f87e131] [cursor=pointer]:
+                  - /url: "#dom-d08"
+                  - generic [ref=f87e132]: Độ tin cậy & Quan sát được
+                  - generic [ref=f87e133]: "28"
+              - listitem [ref=f87e134]:
+                - link "Bền vững & Chị tải 21" [ref=f87e135] [cursor=pointer]:
+                  - /url: "#dom-d09"
+                  - generic [ref=f87e136]: Bền vững & Chị tải
+                  - generic [ref=f87e137]: "21"
+              - listitem [ref=f87e138]:
+                - link "Bảo mật & Xác thực 41" [ref=f87e139] [cursor=pointer]:
+                  - /url: "#dom-d10"
+                  - generic [ref=f87e140]: Bảo mật & Xác thực
+                  - generic [ref=f87e141]: "41"
+              - listitem [ref=f87e142]:
+                - link "Kiểm thử & Chất lượng 25" [ref=f87e143] [cursor=pointer]:
+                  - /url: "#dom-d11"
+                  - generic [ref=f87e144]: Kiểm thử & Chất lượng
+                  - generic [ref=f87e145]: "25"
+              - listitem [ref=f87e146]:
+                - link "DevOps & Triển khai 14" [ref=f87e147] [cursor=pointer]:
+                  - /url: "#dom-d12"
+                  - generic [ref=f87e148]: DevOps & Triển khai
+                  - generic [ref=f87e149]: "14"
+          - listitem [ref=f87e150]:
+            - link "III Nâng cao 129" [ref=f87e151] [cursor=pointer]:
+              - /url: "#p-advanced"
+              - generic [ref=f87e152]: III
+              - generic [ref=f87e153]: Nâng cao
+              - generic [ref=f87e154]: "129"
+            - list [ref=f87e155]:
+              - listitem [ref=f87e156]:
+                - link "Mạng & Giao thức 7" [ref=f87e157] [cursor=pointer]:
+                  - /url: "#dom-d00"
+                  - generic [ref=f87e158]: Mạng & Giao thức
+                  - generic [ref=f87e159]: "7"
+              - listitem [ref=f87e160]:
+                - link "Thiết kế API 5" [ref=f87e161] [cursor=pointer]:
+                  - /url: "#dom-d01"
+                  - generic [ref=f87e162]: Thiết kế API
+                  - generic [ref=f87e163]: "5"
+              - listitem [ref=f87e164]:
+                - link "Cơ sở dữ liệu & Lưu trữ 19" [ref=f87e165] [cursor=pointer]:
+                  - /url: "#dom-d02"
+                  - generic [ref=f87e166]: Cơ sở dữ liệu & Lưu trữ
+                  - generic [ref=f87e167]: "19"
+              - listitem [ref=f87e168]:
+                - link "Caching & Hiệu năng 7" [ref=f87e169] [cursor=pointer]:
+                  - /url: "#dom-d03"
+                  - generic [ref=f87e170]: Caching & Hiệu năng
+                  - generic [ref=f87e171]: "7"
+              - listitem [ref=f87e172]:
+                - link "Hiệu năng 14" [ref=f87e173] [cursor=pointer]:
+                  - /url: "#dom-d04"
+                  - generic [ref=f87e174]: Hiệu năng
+                  - generic [ref=f87e175]: "14"
+              - listitem [ref=f87e176]:
+                - link "Phân tán & Đồng thời 9" [ref=f87e177] [cursor=pointer]:
+                  - /url: "#dom-d05"
+                  - generic [ref=f87e178]: Phân tán & Đồng thời
+                  - generic [ref=f87e179]: "9"
+              - listitem [ref=f87e180]:
+                - link "Messaging & Bất đồng bộ 8" [ref=f87e181] [cursor=pointer]:
+                  - /url: "#dom-d06"
+                  - generic [ref=f87e182]: Messaging & Bất đồng bộ
+                  - generic [ref=f87e183]: "8"
+              - listitem [ref=f87e184]:
+                - link "Kiến trúc & Khả năng mở rộng 8" [ref=f87e185] [cursor=pointer]:
+                  - /url: "#dom-d07"
+                  - generic [ref=f87e186]: Kiến trúc & Khả năng mở rộng
+                  - generic [ref=f87e187]: "8"
+              - listitem [ref=f87e188]:
+                - link "Độ tin cậy & Quan sát được 21" [ref=f87e189] [cursor=pointer]:
+                  - /url: "#dom-d08"
+                  - generic [ref=f87e190]: Độ tin cậy & Quan sát được
+                  - generic [ref=f87e191]: "21"
+              - listitem [ref=f87e192]:
+                - link "Bền vững & Chị tải 4" [ref=f87e193] [cursor=pointer]:
+                  - /url: "#dom-d09"
+                  - generic [ref=f87e194]: Bền vững & Chị tải
+                  - generic [ref=f87e195]: "4"
+              - listitem [ref=f87e196]:
+                - link "Bảo mật & Xác thực 6" [ref=f87e197] [cursor=pointer]:
+                  - /url: "#dom-d10"
+                  - generic [ref=f87e198]: Bảo mật & Xác thực
+                  - generic [ref=f87e199]: "6"
+              - listitem [ref=f87e200]:
+                - link "Kiểm thử & Chất lượng 16" [ref=f87e201] [cursor=pointer]:
+                  - /url: "#dom-d11"
+                  - generic [ref=f87e202]: Kiểm thử & Chất lượng
+                  - generic [ref=f87e203]: "16"
+              - listitem [ref=f87e204]:
+                - link "DevOps & Triển khai 5" [ref=f87e205] [cursor=pointer]:
+                  - /url: "#dom-d12"
+                  - generic [ref=f87e206]: DevOps & Triển khai
+                  - generic [ref=f87e207]: "5"
+    - main [ref=f87e208]:
+      - generic [ref=f87e209]:
+        - generic [ref=f87e210]:
+          - paragraph [aria-hidden] [ref=f87e211]: I
+          - generic [ref=f87e212]:
+            - paragraph [ref=f87e213]: Phần 1
+            - heading "Nền tảng" [level=2] [ref=f87e214]
+            - paragraph [ref=f87e215]: Những khái niệm gặp ngay tuần đầu đi làm. Bỏ qua phần này thì mọi thứ phía trên xây trên cát.
+            - paragraph [ref=f87e216]: 178 thuật ngữ · 13 chủ đề
+        - generic [ref=f87e217]:
+          - heading "Mạng & Giao thức 20" [level=3] [ref=f87e218]:
+            - text: Mạng & Giao thức
+            - generic [ref=f87e219]: "20"
+          - article [ref=f87e220]:
+            - generic [aria-hidden] [ref=f87e221]:
+              - generic [ref=f87e222]: № 004
+              - generic [ref=f87e223]: B
+              - generic [ref=f87e224]: Cơ bản
+            - generic [ref=f87e225]:
+              - generic [ref=f87e226]:
+                - heading "ARP" [level=4] [ref=f87e227]
+                - button "Liên kết tới ARP" [ref=f87e228] [cursor=pointer]: "#"
+                - generic [ref=f87e229]: Mạng & Giao thức
+              - paragraph [ref=f87e230]: HayAddress Resolution Protocol
+              - paragraph [ref=f87e231]:
+                - generic [ref=f87e232]: Vấn đề
+                - text: Ethernet truyền frame dựa trên địa chỉ MAC (địa chỉ phần cứng), nhưng ứng dụng/stack chỉ biết địa chỉ IP — không có cơ chế nào dịch IP sang MAC nên gói không thể đi được trong cùng một LAN; mỗi hệ điều hành sẽ lại tự nghĩ ra cách khác nhau.
+              - paragraph [ref=f87e233]:
+                - generic [ref=f87e234]: Nguồn gốc
+                - text: RFC 826, David C. Plummer, 11/1982.
+              - paragraph [ref=f87e235]:
+                - generic [ref=f87e236]: Xử lý
+                - text: Máy broadcast ARP request 'ai có IP này báo lại địa chỉ MAC của mình', máy sở hữu trả lời, bảng ARP cache lại để các frame sau không phải hỏi lại.
+              - paragraph [ref=f87e237]:
+                - text: Liên quan
+                - link "IP" [ref=f87e238] [cursor=pointer]:
+                  - /url: "#e-ip"
+                - text: · MAC address ·
+                - link "TCP" [ref=f87e239] [cursor=pointer]:
+                  - /url: "#e-tcp"
+                - text: · Subnet · Proxy
+          - article [ref=f87e240]:
+            - generic [aria-hidden] [ref=f87e241]:
+              - generic [ref=f87e242]: № 029
+              - generic [ref=f87e243]: B
+              - generic [ref=f87e244]: Cơ bản
+            - generic [ref=f87e245]:
+              - generic [ref=f87e246]:
+                - heading "Context switch cost" [level=4] [ref=f87e247]
+                - button "Liên kết tới Context switch cost" [ref=f87e248] [cursor=pointer]: "#"
+                - generic [ref=f87e249]: Mạng & Giao thức
+              - paragraph [ref=f87e250]: Haychi phí đổi ngữ cảnh · tốn kém context switch
+              - paragraph [ref=f87e251]:
+                - generic [ref=f87e252]: Vấn đề
+                - text: Mỗi lần CPU chuyển từ tiến trình/thread này sang tiến trình khác, hệ điều phải lưu thanh ghi, cập nhật bảng bảng điều phối, và thường phải flush TLB + làm nhiễu cache CPU — sau đó gần như mọi tham chiếu bộ nhớ đều miss cho tới khi TLB nạp lại. Với 10.000 kết nối đang active, hàng nghìn context switch mỗi giây khiến phần lớn CPU mất vào 'việc nội bộ' thay vì phục vụ request; đây là lý do đo lường thực tế cho thấy thread-per-connection không scale dù RAM còn đủ.
+              - paragraph [ref=f87e253]:
+                - generic [ref=f87e254]: Nguồn gốc
+                - text: không rõ (khái niệm tồn tại từ OS thời kỳ đầu; số liệu cụ thể tùy kiến trúc)
+              - paragraph [ref=f87e255]:
+                - generic [ref=f87e256]: Xử lý
+                - text: "Giảm số lần phải đổi ngữ cảnh: gom nhiều kết nối vào ít thread (event loop), hoặc dùng user-space thread (goroutine) vốn switch gần như rẻ như một lời gọi hàm vì không cần flush TLB."
+              - paragraph [ref=f87e257]:
+                - text: Liên quanThread-per-connection ·
+                - link "Non-blocking I/O" [ref=f87e258] [cursor=pointer]:
+                  - /url: "#e-non-blocking-i-o"
+                - text: ·
+                - link "Event loop" [ref=f87e259] [cursor=pointer]:
+                  - /url: "#e-event-loop"
+          - article [ref=f87e260]:
+            - generic [aria-hidden] [ref=f87e261]:
+              - generic [ref=f87e262]: № 040
+              - generic [ref=f87e263]: B
+              - generic [ref=f87e264]: Cơ bản
+            - generic [ref=f87e265]:
+              - generic [ref=f87e266]:
+                - heading "DNS" [level=4] [ref=f87e267]
+                - button "Liên kết tới DNS" [ref=f87e268] [cursor=pointer]: "#"
+                - generic [ref=f87e269]: Mạng & Giao thức
+              - paragraph [ref=f87e270]: HayDomain Name System · hệ thống tên miền
+              - paragraph [ref=f87e271]:
+                - generic [ref=f87e272]: Vấn đề
+                - text: Trước 1983, SRI duy trì một file HOSTS.TXT duy nhất ánh xạ hostname↔IP, admin phải gọi điện thoại cho SRI NIC trong giờ hành chính để thêm máy mới — file tập trung đó chậm, phình to và trở thành nút cổ chai khi ARPANET lớn dần.
+              - paragraph [ref=f87e273]:
+                - generic [ref=f87e274]: Nguồn gốc
+                - text: Paul Mockapetris, USC/ISI, 1983 (RFC 882/883); chuẩn hóa lại RFC 1034/1035 (1987).
+              - paragraph [ref=f87e275]:
+                - generic [ref=f87e276]: Xử lý
+                - text: Phân cấp tên miền xuống các zone ủy quyền cho name server riêng; resolver hỏi đệ quy hoặc trả lời từ cache (TTL), cuối cùng trả về IP — không còn một file duy nhất làm mọi thứ.
+              - paragraph [ref=f87e277]:
+                - text: Liên quan
+                - link "IP" [ref=f87e278] [cursor=pointer]:
+                  - /url: "#e-ip"
+                - text: ·
+                - link "TTFB" [ref=f87e279] [cursor=pointer]:
+                  - /url: "#e-ttfb"
+                - text: ·
+                - link "CDN" [ref=f87e280] [cursor=pointer]:
+                  - /url: "#e-cdn"
+                - text: ·
+                - link "Cache" [ref=f87e281] [cursor=pointer]:
+                  - /url: "#e-cache"
+                - text: ·
+                - link "UDP" [ref=f87e282] [cursor=pointer]:
+                  - /url: "#e-udp"
+          - article [ref=f87e283]:
+            - generic [aria-hidden] [ref=f87e284]:
+              - generic [ref=f87e285]: № 042
+              - generic [ref=f87e286]: B
+              - generic [ref=f87e287]: Cơ bản
+            - generic [ref=f87e288]:
+              - generic [ref=f87e289]:
+                - heading "DNS resolution chain" [level=4] [ref=f87e290]
+                - button "Liên kết tới DNS resolution chain" [ref=f87e291] [cursor=pointer]: "#"
+                - generic [ref=f87e292]: Mạng & Giao thức
+              - paragraph [ref=f87e293]: Haychuỗi phân giải DNS · recursive resolver · stub resolver
+              - paragraph [ref=f87e294]:
+                - generic [ref=f87e295]: Vấn đề
+                - text: Trước khi request HTTP đầu tiên rời khỏi máy, client phải dịch 'api.example.com' thành IP — nếu mỗi trình ứng dụng tự tra từ đầu (hỏi root → TLD → authoritative) thì mỗi lần mở trang mất thêm vài trăm ms độ trễ và Internet phải gánh lượng query khổng lồ lặp đi lặp lại. Chuỗi phân giải (stub → recursive resolver → root/TLD/authoritative) ra đời để gom việc tra cứu vào một chỗ.
+              - paragraph [ref=f87e296]:
+                - generic [ref=f87e297]: Nguồn gốc
+                - text: Paul Mockapetris, 1983 (USC ISI); RFC 882/883 (11/1983), chuẩn hóa lại bởi RFC 1034/1035 (11/1987)
+              - paragraph [ref=f87e298]:
+                - generic [ref=f87e299]: Xử lý
+                - text: Stub resolver cục bộ gửi 1 câu hỏi cho recursive resolver (thường của ISP); resolver này tự hỏi root, rồi server TLD (.com), rồi authoritative server của domain, trả lời cho client và cache kết quả theo TTL.
+              - paragraph [ref=f87e300]:
+                - text: Liên quan
+                - link "DNS TTL caching" [ref=f87e301] [cursor=pointer]:
+                  - /url: "#e-dns-ttl-caching"
+                - text: ·
+                - link "DNS negative caching" [ref=f87e302] [cursor=pointer]:
+                  - /url: "#e-dns-negative-caching"
+                - text: ·
+                - link "CDN cache key" [ref=f87e303] [cursor=pointer]:
+                  - /url: "#e-cdn-cache-key"
+          - article [ref=f87e304]:
+            - generic [aria-hidden] [ref=f87e305]:
+              - generic [ref=f87e306]: № 043
+              - generic [ref=f87e307]: B
+              - generic [ref=f87e308]: Cơ bản
+            - generic [ref=f87e309]:
+              - generic [ref=f87e310]:
+                - heading "DNS TTL caching" [level=4] [ref=f87e311]
+                - button "Liên kết tới DNS TTL caching" [ref=f87e312] [cursor=pointer]: "#"
+                - generic [ref=f87e313]: Mạng & Giao thức
+              - paragraph [ref=f87e314]:
+                - text: HayTime To Live DNS ·
+                - mark [ref=f87e315]: cache
+                - text: DNS
+              - paragraph [ref=f87e316]:
+                - generic [ref=f87e317]: Vấn đề
+                - text: Nếu mỗi lần phân giải đều phải hỏi hết root → TLD → authoritative thì độ trễ cộng dồn và các root server sẽ bị nhấn chìm bởi hàng tỷ query lặp lại mỗi ngày. Trước khi có TTL cache, 'mọi phân giải trên Internet đều bắt đầu từ root' — không bền.
+              - paragraph [ref=f87e318]:
+                - generic [ref=f87e319]: Nguồn gốc
+                - text: Paul Mockapetris, 1983; TTL có từ thiết kế DNS ban đầu (RFC 1034/1035)
+              - paragraph [ref=f87e320]:
+                - generic [ref=f87e321]: Xử lý
+                - text: Recursive resolver lưu kết quả theo TTL (do chủ zone đặt, thường vài phút tới vài ngày); truy vấn lặp lại trả lời ngay từ bộ nhớ. TTL hết hạn thì tra lại, nên đổi DNS không mất quá lâu để lan ra toàn cầu.
+              - paragraph [ref=f87e322]:
+                - text: Liên quan
+                - link "DNS resolution chain" [ref=f87e323] [cursor=pointer]:
+                  - /url: "#e-dns-resolution-chain"
+                - text: ·
+                - link "DNS negative caching" [ref=f87e324] [cursor=pointer]:
+                  - /url: "#e-dns-negative-caching"
+          - article [ref=f87e325]:
+            - generic [aria-hidden] [ref=f87e326]:
+              - generic [ref=f87e327]: № 051
+              - generic [ref=f87e328]: B
+              - generic [ref=f87e329]: Cơ bản
+            - generic [ref=f87e330]:
+              - generic [ref=f87e331]:
+                - heading "ETag / conditional requests (If-None-Match → 304)" [level=4] [ref=f87e332]
+                - button "Liên kết tới ETag / conditional requests (If-None-Match → 304)" [ref=f87e333] [cursor=pointer]: "#"
+                - generic [ref=f87e334]: Mạng & Giao thức
+              - paragraph [ref=f87e335]:
+                - text: Hayrevalidate
+                - mark [ref=f87e336]: cache
+                - text: · 304 Not Modified
+              - paragraph [ref=f87e337]:
+                - generic [ref=f87e338]: Vấn đề
+                - text: Cache hết hạn (stale) nhưng file có thể vẫn không đổi — nếu tải lại toàn bộ response thì tốn băng thông vô ích, đặc biệt với file lớn. Không có cách nào hỏi 'bản tôi đang giữ còn đúng không?' mà không tải hết body thì cache-hit giảm và origin vẫn bị gọi.
+              - paragraph [ref=f87e339]:
+                - generic [ref=f87e340]: Nguồn gốc
+                - text: RFC 2616 (1997); hiện tại RFC 9110 § field.etag
+              - paragraph [ref=f87e341]:
+                - generic [ref=f87e342]: Xử lý
+                - text: Server trả ETag (hash/nhãn phiên bản của nội dung); khi cache stale, client gửi If-None-Match kèm ETag cũ, server nếu thấy nội dung không đổi chỉ trả 304 Not Modified không body — client dùng tiếp bản cache. ETag mạnh đảm bảo giống byte từng byte, ETag yếu (W/) chỉ đảm bảo tương đương ngữ nghĩa; If-Match còn chống 'mid-air collision' khi ghi đè song song (412).
+              - paragraph [ref=f87e343]:
+                - text: Liên quanHTTP caching với Cache-Control ·
+                - link "CDN cache key" [ref=f87e344] [cursor=pointer]:
+                  - /url: "#e-cdn-cache-key"
+          - article [ref=f87e345]:
+            - generic [aria-hidden] [ref=f87e346]:
+              - generic [ref=f87e347]: № 066
+              - generic [ref=f87e348]: B
+              - generic [ref=f87e349]: Cơ bản
+            - generic [ref=f87e350]:
+              - generic [ref=f87e351]:
+                - heading [level=4] [ref=f87e352]:
+                  - text: HTTP caching với
+                  - mark [ref=f87e353]: Cache
+                  - text: "-Control (freshness)"
+                - button "Liên kết tới HTTP caching với Cache-Control (freshness)" [ref=f87e354] [cursor=pointer]: "#"
+                - generic [ref=f87e355]: Mạng & Giao thức
+              - paragraph [ref=f87e356]:
+                - text: Hay
+                - mark [ref=f87e357]: cache
+                - text: "-control max-age · hết hạn"
+                - mark [ref=f87e358]: cache
+                - text: HTTP
+              - paragraph [ref=f87e359]:
+                - generic [ref=f87e360]: Vấn đề
+                - text: Mọi request tĩnh (HTML, ảnh, JS) đều phải bay tới origin server khiến origin bị overload và user ở xa chờ cả RTT lẫn thời gian server. Trước khi có Cache-Control, caches dùng Expires tuyệt đối — múi giờ lệch là cache sai vĩnh viễn; còn không có cache thì băng thông và độ trễ không cải thiện được.
+              - paragraph [ref=f87e361]:
+                - generic [ref=f87e362]: Nguồn gốc
+                - text: RFC 2616 (HTTP/1.1, 6/1997) định nghĩa Cache-Control; RFC 7234 (2014); hiện hành RFC 9111 (6/2022)
+              - paragraph [ref=f87e363]:
+                - generic [ref=f87e364]: Xử lý
+                - text: Server chỉ định max-age=N (đếm từ lúc sinh ra response, header Age tính nốt thời gian đã nằm ở cache trung gian); trong N giây cache dùng luôn không hỏi origin. no-cache = vẫn lưu nhưng phải revalidate mỗi lần, no-store = cấm lưu, private = chỉ browser được cache (chống rò rỉ data cá nhân ra shared cache).
+              - paragraph [ref=f87e365]:
+                - text: Liên quanETag / conditional requests ·
+                - link "CDN cache key" [ref=f87e366] [cursor=pointer]:
+                  - /url: "#e-cdn-cache-key"
+                - text: ·
+                - link "stale-while-revalidate" [ref=f87e367] [cursor=pointer]:
+                  - /url: "#e-stale-while-revalidate"
+        - generic [ref=f87e368]:
+          - heading "Thiết kế API 11" [level=3] [ref=f87e369]:
+            - text: Thiết kế API
+            - generic [ref=f87e370]: "11"
+          - article [ref=f87e371]:
+            - generic [aria-hidden] [ref=f87e372]:
+              - generic [ref=f87e373]: № 068
+              - generic [ref=f87e374]: B
+              - generic [ref=f87e375]: Cơ bản
+            - generic [ref=f87e376]:
+              - generic [ref=f87e377]:
+                - heading "HTTP methods semantics" [level=4] [ref=f87e378]
+                - button "Liên kết tới HTTP methods semantics" [ref=f87e379] [cursor=pointer]: "#"
+                - generic [ref=f87e380]: Thiết kế API
+              - paragraph [ref=f87e381]: HayHTTP verbs · GET/POST/PUT/PATCH/DELETE semantics
+              - paragraph [ref=f87e382]:
+                - generic [ref=f87e383]: Vấn đề
+                - text: Dùng POST cho mọi thứ làm mất khả năng cache, mất retry an toàn, proxy/CDN không biết request có an toàn để lặp lại không.
+              - paragraph [ref=f87e384]:
+                - generic [ref=f87e385]: Nguồn gốc
+                - text: RFC 9110 (STD 97, 2022, Fielding/Nottingham/Reschke) section 9 - kế thừa RFC 7231/2616.
+              - paragraph [ref=f87e386]:
+                - generic [ref=f87e387]: Xử lý
+                - text: "GET/HEAD = đọc (safe); POST = tạo/submit, không an toàn; PUT = thay thế toàn bộ resource (idempotent); DELETE = xóa (idempotent); PATCH = sửa một phần (không idempotent); OPTIONS = hỏi khả năng. Trả status code đúng ngữ nghĩa: 201 khi tạo, 204 khi xóa thành công."
+              - paragraph [ref=f87e388]:
+                - text: Liên quan
+                - link "Safe & idempotent methods" [ref=f87e389] [cursor=pointer]:
+                  - /url: "#e-safe-idempotent-methods"
+                - text: · Status codes ·
+                - link "PUT vs PATCH" [ref=f87e390] [cursor=pointer]:
+                  - /url: "#e-put-vs-patch"
+          - article [ref=f87e391]:
+            - generic [aria-hidden] [ref=f87e392]:
+              - generic [ref=f87e393]: № 128
+              - generic [ref=f87e394]: B
+              - generic [ref=f87e395]: Cơ bản
+            - generic [ref=f87e396]:
+              - generic [ref=f87e397]:
+                - heading "REST (Representational State Transfer)" [level=4] [ref=f87e398]
+                - button "Liên kết tới REST (Representational State Transfer)" [ref=f87e399] [cursor=pointer]: "#"
+                - generic [ref=f87e400]: Thiết kế API
+              - paragraph [ref=f87e401]: HayRESTful · RESTful API
+              - paragraph [ref=f87e402]:
+                - generic [ref=f87e403]: Vấn đề
+                - text: "Trước 2000 web API thiết kế tùy tiện: mỗi hệ thống tự đặt quy ước URL/verb/định dạng riêng, client phải hardcode cấu trúc máy chủ và vỡ khi hệ thống thay đổi."
+              - paragraph [ref=f87e404]:
+                - generic [ref=f87e405]: Nguồn gốc
+                - text: Roy Fielding, luận án tiến sĩ 'Architectural Styles and the Design of Network-based Software Architectures', UC Irvine, 2000.
+              - paragraph [ref=f87e406]:
+                - generic [ref=f87e407]: Xử lý
+                - text: "Kiểu kiến trúc gồm 6 ràng buộc: client-server, statelessness, cache, uniform interface (tài nguyên định danh bằng URI, thao tác qua representation, message tự mô tả, HATEOAS), layered system, code on demand (tùy chọn). Client chỉ cần URI khởi đầu và tự khám phá phần còn lại qua hypermedia nên ít khớp chặt với máy chủ."
+              - paragraph [ref=f87e408]:
+                - text: Liên quanRepresentational state ·
+                - link "Statelessness" [ref=f87e409] [cursor=pointer]:
+                  - /url: "#e-statelessness"
+                - text: ·
+                - link "HATEOAS" [ref=f87e410] [cursor=pointer]:
+                  - /url: "#e-hateoas"
+                - text: ·
+                - link "HTTP methods semantics" [ref=f87e411] [cursor=pointer]:
+                  - /url: "#e-http-methods-semantics"
+          - article [ref=f87e412]:
+            - generic [aria-hidden] [ref=f87e413]:
+              - generic [ref=f87e414]: № 154
+              - generic [ref=f87e415]: B
+              - generic [ref=f87e416]: Cơ bản
+            - generic [ref=f87e417]:
+              - generic [ref=f87e418]:
+                - heading "Status codes (2xx/4xx/5xx)" [level=4] [ref=f87e419]
+                - button "Liên kết tới Status codes (2xx/4xx/5xx)" [ref=f87e420] [cursor=pointer]: "#"
+                - generic [ref=f87e421]: Thiết kế API
+              - paragraph [ref=f87e422]: HayHTTP status codes · response status
+              - paragraph [ref=f87e423]:
+                - generic [ref=f87e424]: Vấn đề
+                - text: Luôn trả 200 kèm lỗi trong body làm client khó phân biệt thành công/thất bại, cache và monitoring hiểu sai, debug tốn thời gian.
+              - paragraph [ref=f87e425]:
+                - generic [ref=f87e426]: Nguồn gốc
+                - text: RFC 9110 section 15 (2022) định nghĩa bảng status code; RFC 6585 (2012, Nottingham & Fielding) bổ sung 428/429/431/511.
+              - paragraph [ref=f87e427]:
+                - generic [ref=f87e428]: Xử lý
+                - text: 2xx thành công (200 OK, 201 Created, 202 Accepted, 204 No Content); 4xx lỗi phía client (400, 401, 403, 404, 409, 412, 415, 422, 429); 5xx lỗi server (500, 503). Mã lạ client coi như nhóm tương ứng (499 lạ coi như 400).
+              - paragraph [ref=f87e429]:
+                - text: Liên quan
+                - link "Error response shape" [ref=f87e430] [cursor=pointer]:
+                  - /url: "#e-error-response-shape"
+                - text: · RFC 7807 problem+json · Rate limit headers
+        - generic [ref=f87e431]:
+          - heading "Caching & Hiệu năng 9" [level=3] [ref=f87e432]:
+            - text: Caching & Hiệu năng
+            - generic [ref=f87e433]: "9"
+          - article [ref=f87e434]:
+            - generic [aria-hidden] [ref=f87e435]:
+              - generic [ref=f87e436]: № 014
+              - generic [ref=f87e437]: B
+              - generic [ref=f87e438]: Cơ bản
+            - generic [ref=f87e439]:
+              - generic [ref=f87e440]:
+                - heading [level=4] [ref=f87e441]:
+                  - text: Browser
+                  - mark [ref=f87e442]: cache
+                - button "Liên kết tới Browser cache" [ref=f87e443] [cursor=pointer]: "#"
+                - generic [ref=f87e444]: Caching & Hiệu năng
+              - paragraph [ref=f87e445]:
+                - text: HayHTTP
+                - mark [ref=f87e446]: cache
+                - text: · client
+                - mark [ref=f87e447]: cache
+              - paragraph [ref=f87e448]:
+                - generic [ref=f87e449]: Vấn đề
+                - text: Mỗi lần mở trang, browser tải lại toàn bộ CSS/JS/ảnh dù file không đổi — tốn bandwidth, chậm, server chịu load vô nghĩa cho static resource.
+              - paragraph [ref=f87e450]:
+                - generic [ref=f87e451]: Nguồn gốc
+                - text: Phần của HTTP/1.0 (1997) với header Expires; phát triển qua RFC 2616 (1999) và RFC 9111 (2022)
+              - paragraph [ref=f87e452]:
+                - generic [ref=f87e453]: Xử lý
+                - text: Browser lưu response kèm metadata (ETag, Last-Modified, Cache-Control) rồi gửi conditional request (If-None-Match) — server trả 304 Not Modified khi chưa đổi, tiết kiệm cả bandwidth lẫn round-trip.
+              - paragraph [ref=f87e454]:
+                - text: Liên quan
+                - link "Cache" [ref=f87e455] [cursor=pointer]:
+                  - /url: "#e-cache"
+                - text: · TTL ·
+                - link "stale-while-revalidate" [ref=f87e456] [cursor=pointer]:
+                  - /url: "#e-stale-while-revalidate"
+                - text: ·
+                - link "CDN" [ref=f87e457] [cursor=pointer]:
+                  - /url: "#e-cdn"
+          - article [ref=f87e458]:
+            - generic [aria-hidden] [ref=f87e459]:
+              - generic [ref=f87e460]: № 016
+              - generic [ref=f87e461]: B
+              - generic [ref=f87e462]: Cơ bản
+            - generic [ref=f87e463]:
+              - generic [ref=f87e464]:
+                - heading [level=4] [ref=f87e465]:
+                  - mark [ref=f87e466]: Cache
+                - button "Liên kết tới Cache" [ref=f87e467] [cursor=pointer]: "#"
+                - generic [ref=f87e468]: Caching & Hiệu năng
+              - paragraph [ref=f87e469]: Haybộ nhớ đệm
+              - paragraph [ref=f87e470]:
+                - generic [ref=f87e471]: Vấn đề
+                - text: Mỗi request đều đọc database hoặc tính lại dữ liệu khiến hệ thống chậm và database chết tải khi traffic tăng. Đọc ổ cứng/Database tốn hàng chục ms trong khi RAM chỉ tốn vài ms — người phục vụ website động những năm 1990-2000 liên tục bị bottleneck ở tầng lưu trữ.
+              - paragraph [ref=f87e472]:
+                - generic [ref=f87e473]: Nguồn gốc
+                - text: Khái niệm cổ trong khoa học máy tính (CPU cache từ những năm 1960s); không ghi nhận một người phát minh duy nhất
+              - paragraph [ref=f87e474]:
+                - generic [ref=f87e475]: Xử lý
+                - text: Chuỗi lưu kết quả tính sẵn ở nơi đọc nhanh (RAM, ổ đĩa) để request sau đọc lại thay vì truy vấn lại nguồn gốc; chỉ trả về từ nguồn thật khi cache miss.
+              - paragraph [ref=f87e476]:
+                - text: Liên quan
+                - link "in-memory cache" [ref=f87e477] [cursor=pointer]:
+                  - /url: "#e-in-memory-cache"
+                - text: · TTL ·
+                - link "cache invalidation" [ref=f87e478] [cursor=pointer]:
+                  - /url: "#e-cache-invalidation"
+                - text: ·
+                - link "CDN" [ref=f87e479] [cursor=pointer]:
+                  - /url: "#e-cdn"
+          - article [ref=f87e480]:
+            - generic [aria-hidden] [ref=f87e481]:
+              - generic [ref=f87e482]: № 018
+              - generic [ref=f87e483]: B
+              - generic [ref=f87e484]: Cơ bản
+            - generic [ref=f87e485]:
+              - generic [ref=f87e486]:
+                - heading [level=4] [ref=f87e487]:
+                  - mark [ref=f87e488]: Cache
+                  - text: invalidation
+                - button "Liên kết tới Cache invalidation" [ref=f87e489] [cursor=pointer]: "#"
+                - generic [ref=f87e490]: Caching & Hiệu năng
+              - paragraph [ref=f87e491]:
+                - text: Hayhủy
+                - mark [ref=f87e492]: cache
+                - text: · xóa
+                - mark [ref=f87e493]: cache
+              - paragraph [ref=f87e494]:
+                - generic [ref=f87e495]: Vấn đề
+                - text: Dữ liệu trong cache là bản sao — khi user ghi đè database, cache vẫn giữ bản cũ nên user thấy dữ liệu sai (giá cũ, quyền hạn cũ). Invalidate sai cách thì serve data sai; invalidate quá mạnh thì mất hết lợi ích cache.
+              - paragraph [ref=f87e496]:
+                - generic [ref=f87e497]: Nguồn gốc
+                - text: Phát biểu nổi tiếng "there are only two hard things in cache invalidation" gắn với Phil Karlton (late 1990s); không có một phát minh cụ thể
+              - paragraph [ref=f87e498]:
+                - generic [ref=f87e499]: Xử lý
+                - text: "Có nhiều chiến lược: ghi DB thì xóa key tương ứng (cache-aside), version/epoch key, pub/sub broadcast xóa đa node, hoặc để TTL tự hết — chọn theo mức chấp nhận được của staleness."
+              - paragraph [ref=f87e500]:
+                - text: Liên quan
+                - link "Cache" [ref=f87e501] [cursor=pointer]:
+                  - /url: "#e-cache"
+                - text: · TTL · cache-aside ·
+                - link "write-through" [ref=f87e502] [cursor=pointer]:
+                  - /url: "#e-write-through"
+          - article [ref=f87e503]:
+            - generic [aria-hidden] [ref=f87e504]:
+              - generic [ref=f87e505]: № 073
+              - generic [ref=f87e506]: B
+              - generic [ref=f87e507]: Cơ bản
+            - generic [ref=f87e508]:
+              - generic [ref=f87e509]:
+                - heading [level=4] [ref=f87e510]:
+                  - text: In-memory
+                  - mark [ref=f87e511]: cache
+                - button "Liên kết tới In-memory cache" [ref=f87e512] [cursor=pointer]: "#"
+                - generic [ref=f87e513]: Caching & Hiệu năng
+              - paragraph [ref=f87e514]:
+                - text: Hay
+                - mark [ref=f87e515]: cache
+                - text: trong bộ nhớ RAM
+              - paragraph [ref=f87e516]:
+                - generic [ref=f87e517]: Vấn đề
+                - text: Database lưu trên đĩa (hoặc network round-trip) quá chậm so với nhu cầu đọc hàng nghìn lần/giây; đọc cùng một row hàng nghìn lần mà vẫn disk I/O thì throughput bị chặn.
+              - paragraph [ref=f87e518]:
+                - generic [ref=f87e519]: Nguồn gốc
+                - text: không rõ
+              - paragraph [ref=f87e520]:
+                - generic [ref=f87e521]: Xử lý
+                - text: Giữ dữ liệu thường đọc trong RAM của process hoặc service riêng, tra key-value O(1) thay vì truy vấn SQL; đổi lấy chi phí RAM và vấn đề đồng bộ khi dữ liệu gốc thay đổi.
+              - paragraph [ref=f87e522]:
+                - text: Liên quan
+                - link "Redis" [ref=f87e523] [cursor=pointer]:
+                  - /url: "#e-redis"
+                - text: ·
+                - link "Memcached" [ref=f87e524] [cursor=pointer]:
+                  - /url: "#e-memcached"
+                - text: ·
+                - link "Cache" [ref=f87e525] [cursor=pointer]:
+                  - /url: "#e-cache"
+          - article [ref=f87e526]:
+            - generic [aria-hidden] [ref=f87e527]:
+              - generic [ref=f87e528]: № 173
+              - generic [ref=f87e529]: B
+              - generic [ref=f87e530]: Cơ bản
+            - generic [ref=f87e531]:
+              - generic [ref=f87e532]:
+                - heading "TTL (Time To Live)" [level=4] [ref=f87e533]
+                - button "Liên kết tới TTL (Time To Live)" [ref=f87e534] [cursor=pointer]: "#"
+                - generic [ref=f87e535]: Caching & Hiệu năng
+              - paragraph [ref=f87e536]:
+                - text: Haythời gian sống ·
+                - mark [ref=f87e537]: cache
+                - text: expiry
+              - paragraph [ref=f87e538]:
+                - generic [ref=f87e539]: Vấn đề
+                - text: Cache không bao giờ hết hạn thì dữ liệu cũ tồn tại mãi — giá sản phẩm thay đổi nhưng client vẫn thấy giá cũ, hoặc cache phình vô hạn vì không có cơ chế tự dọn.
+              - paragraph [ref=f87e540]:
+                - generic [ref=f87e541]: Nguồn gốc
+                - text: không rõ (khái niệm xuất hiện sớm trong DNS TTL và mạng máy tính)
+              - paragraph [ref=f87e542]:
+                - generic [ref=f87e543]: Xử lý
+                - text: Gắn thời hạn cho mỗi entry; quá hạn thì bị evict hoặc phải revalidate với nguồn, cân bằng giữa độ tươi mới dữ liệu và số lần phải truy vấn nguồn.
+              - paragraph [ref=f87e544]:
+                - text: Liên quan
+                - link "Cache invalidation" [ref=f87e545] [cursor=pointer]:
+                  - /url: "#e-cache-invalidation"
+                - text: · TTL jitter ·
+                - link "stale-while-revalidate" [ref=f87e546] [cursor=pointer]:
+                  - /url: "#e-stale-while-revalidate"
+        - generic [ref=f87e547]:
+          - heading "Hiệu năng 19" [level=3] [ref=f87e548]:
+            - text: Hiệu năng
+            - generic [ref=f87e549]: "19"
+          - article [ref=f87e550]:
+            - generic [aria-hidden] [ref=f87e551]:
+              - generic [ref=f87e552]: № 017
+              - generic [ref=f87e553]: B
+              - generic [ref=f87e554]: Cơ bản
+            - generic [ref=f87e555]:
+              - generic [ref=f87e556]:
+                - heading [level=4] [ref=f87e557]:
+                  - mark [ref=f87e558]: Cache
+                  - text: hit ratio
+                - button "Liên kết tới Cache hit ratio" [ref=f87e559] [cursor=pointer]: "#"
+                - generic [ref=f87e560]: Hiệu năng
+              - paragraph [ref=f87e561]:
+                - text: Haytỉ lệ trúng
+                - mark [ref=f87e562]: cache
+                - text: · hit rate ·
+                - mark [ref=f87e563]: cache
+                - text: hit rate
+              - paragraph [ref=f87e564]:
+                - generic [ref=f87e565]: Vấn đề
+                - text: Thêm Redis nhưng DB vẫn chết vì hit ratio chỉ 40% — 60% request vẫn xuyên thấu xuống database đúng lúc traffic cao điểm.
+              - paragraph [ref=f87e566]:
+                - generic [ref=f87e567]: Xử lý
+                - text: "Hit ratio = số truy cập trả về từ cache / tổng số truy cập. Đo theo key/hotpath, không chỉ tổng thể (một tỷ lệ cao toàn cục vẫn che một vùng key miss 100%). Cải thiện: TTL và refresh phù hợp, warming, nâng cache cho hot key; kết hợp negative caching cho miss lặp lại."
+              - paragraph [ref=f87e568]:
+                - text: Liên quanCache stampede · Negative caching ·
+                - link "Hot key" [ref=f87e569] [cursor=pointer]:
+                  - /url: "#e-hot-key"
+          - article [ref=f87e570]:
+            - generic [aria-hidden] [ref=f87e571]:
+              - generic [ref=f87e572]: № 022
+              - generic [ref=f87e573]: B
+              - generic [ref=f87e574]: Cơ bản
+            - generic [ref=f87e575]:
+              - generic [ref=f87e576]:
+                - heading "CDN edge caching" [level=4] [ref=f87e577]
+                - button "Liên kết tới CDN edge caching" [ref=f87e578] [cursor=pointer]: "#"
+                - generic [ref=f87e579]: Hiệu năng
+              - paragraph [ref=f87e580]:
+                - text: HayCDN · edge
+                - mark [ref=f87e581]: cache
+                - text: ·
+                - mark [ref=f87e582]: cache
+                - text: tại biên · origin shield
+              - paragraph [ref=f87e583]:
+                - generic [ref=f87e584]: Vấn đề
+                - text: "User ở xa origin: mỗi lần tải ảnh/video qua nửa vòng đất, origin chịu load dù nội dung tĩnh — chi phí bandwidth và latency cao vô ích."
+              - paragraph [ref=f87e585]:
+                - generic [ref=f87e586]: Xử lý
+                - text: "CDN phân phối replica nội dung tại PoP gần user: cache HIT → RTT vài ms; MISS → pull về origin rồi phục vụ edge sau. Cấu hình: Cache-Control/TTL, cache key (query string, header), stale-while-revalidate tại edge, purge, origin shield để tránh request storm (cache stampede phân tán). Đo hit ratio theo edge."
+              - paragraph [ref=f87e587]:
+                - text: Liên quan
+                - link "Stale-while-revalidate" [ref=f87e588] [cursor=pointer]:
+                  - /url: "#e-stale-while-revalidate"
+                - text: · Cache stampede ·
+                - link "TTFB" [ref=f87e589] [cursor=pointer]:
+                  - /url: "#e-ttfb"
+          - article [ref=f87e590]:
+            - generic [aria-hidden] [ref=f87e591]:
+              - generic [ref=f87e592]: № 041
+              - generic [ref=f87e593]: B
+              - generic [ref=f87e594]: Cơ bản
+            - generic [ref=f87e595]:
+              - generic [ref=f87e596]:
+                - heading "DNS lookup cost" [level=4] [ref=f87e597]
+                - button "Liên kết tới DNS lookup cost" [ref=f87e598] [cursor=pointer]: "#"
+                - generic [ref=f87e599]: Hiệu năng
+              - paragraph [ref=f87e600]: HayDNS resolution · resolve time · DNS TTL
+              - paragraph [ref=f87e601]:
+                - generic [ref=f87e602]: Vấn đề
+                - text: Mỗi cold request chịu 1-2 lần DNS query hàng chục-hàng trăm ms (đặc biệt mobile/3G hoặc resolver chậm), và TTL thấp làm re-resolve thường xuyên.
+              - paragraph [ref=f87e603]:
+                - generic [ref=f87e604]: Xử lý
+                - text: "Hạ tầng DNS: recursive resolver cache theo TTL; hạ TTL trước khi migrate. Ứng dụng: connection pooling giữ socket sống (không phải resolve lại), happy eyeballs IPv6/IPv4 song song, DNS-over-HTTPS/TCP có chi phí riêng. Đo riêng component DNS trong waterfall."
+              - paragraph [ref=f87e605]:
+                - text: Liên quan
+                - link "Keep-alive" [ref=f87e606] [cursor=pointer]:
+                  - /url: "#e-keep-alive"
+                - text: ·
+                - link "TTFB" [ref=f87e607] [cursor=pointer]:
+                  - /url: "#e-ttfb"
+                - text: · Latency numbers
+          - article [ref=f87e608]:
+            - generic [aria-hidden] [ref=f87e609]:
+              - generic [ref=f87e610]: № 057
+              - generic [ref=f87e611]: B
+              - generic [ref=f87e612]: Cơ bản
+            - generic [ref=f87e613]:
+              - generic [ref=f87e614]:
+                - heading "FCP / LCP (web vitals backend liên quan)" [level=4] [ref=f87e615]
+                - button "Liên kết tới FCP / LCP (web vitals backend liên quan)" [ref=f87e616] [cursor=pointer]: "#"
+                - generic [ref=f87e617]: Hiệu năng
+              - paragraph [ref=f87e618]: HayFirst Contentful Paint · Largest Contentful Paint · Core Web Vitals
+              - paragraph [ref=f87e619]:
+                - generic [ref=f87e620]: Vấn đề
+                - text: LCP 4s trên mobile do HTML render-blocking + ảnh hero không nén + API blockmàn hình đầu — số liệu UX này quyết định SEO/ranking nhưng dev backend thường không nhìn.
+              - paragraph [ref=f87e621]:
+                - generic [ref=f87e622]: Nguồn gốc
+                - text: FCP đến từ cộng đồng W3C Web Performance; LCP do nhóm Chrome/Google giới thiệu ~2019, chuẩn hóa trong Core Web Vitals (web.dev, 2020)
+              - paragraph [ref=f87e623]:
+                - generic [ref=f87e624]: Xử lý
+                - text: "FCP: thời điểm pixel đầu tiên có nội dung xuất hiện. LCP: thời điểm phần tử lớn nhất (hero ảnh/title) hoàn tất. Backend ảnh hưởng qua: TTFB, server-rendered HTML, CDN cache hit, payload ảnh/API blocking. Ngân sách: LCP < 2.5s ở p75, TTFB mục tiêu < 800ms."
+              - paragraph [ref=f87e625]:
+                - text: Liên quan
+                - link "TTFB" [ref=f87e626] [cursor=pointer]:
+                  - /url: "#e-ttfb"
+                - text: · Performance budget ·
+                - link "CDN edge caching" [ref=f87e627] [cursor=pointer]:
+                  - /url: "#e-cdn-edge-caching"
+          - article [ref=f87e628]:
+            - generic [aria-hidden] [ref=f87e629]:
+              - generic [ref=f87e630]: № 077
+              - generic [ref=f87e631]: B
+              - generic [ref=f87e632]: Cơ bản
+            - generic [ref=f87e633]:
+              - generic [ref=f87e634]:
+                - heading "Latency numbers every programmer should know" [level=4] [ref=f87e635]
+                - button "Liên kết tới Latency numbers every programmer should know" [ref=f87e636] [cursor=pointer]: "#"
+                - generic [ref=f87e637]: Hiệu năng
+              - paragraph [ref=f87e638]: Haybảng số độ trễ · 100ns/1ms/10ms · Jeff Dean latency table
+              - paragraph [ref=f87e639]:
+                - generic [ref=f87e640]: Vấn đề
+                - text: "Dev viết code gọi network call cho việc có thể làm bằng RAM cache vì không có 'intuition' về thứ tự độ lớn: 100ns với 10ms chênh 100.000 lần nhưng trong đầu người viết chỉ là 'cũng nhanh thôi'."
+              - paragraph [ref=f87e641]:
+                - generic [ref=f87e642]: Nguồn gốc
+                - text: Bảng số của Jeff Dean (Google) trong các talk (~2002-2009); bản tương tác phổ biến của Colin Scott; nhiều bản cập nhật sau này
+              - paragraph [ref=f87e643]:
+                - generic [ref=f87e644]: Xử lý
+                - text: "Tham chiếu thứ tự độ lớn: ~1ns đọc cache L1, ~100ns đọc RAM / cache L3, ~1ms network RTT cùng trung tâm dữ liệu, ~10-40ms RTT xuyên lục địa, ~10ms đọc SSD, ~100ms-10s đọc HDD/seek. Dùng làm quy tắc ngón tay trước khi quyết định thêm một hop mạng hoặc một lần đọc đĩa."
+              - paragraph [ref=f87e645]:
+                - text: Liên quanSpeed of light RTT · Cache locality ·
+                - link "Bandwidth vs latency" [ref=f87e646] [cursor=pointer]:
+                  - /url: "#e-bandwidth-vs-latency"
+          - article [ref=f87e647]:
+            - generic [aria-hidden] [ref=f87e648]:
+              - generic [ref=f87e649]: № 084
+              - generic [ref=f87e650]: B
+              - generic [ref=f87e651]: Cơ bản
+            - generic [ref=f87e652]:
+              - generic [ref=f87e653]:
+                - heading "Memoization" [level=4] [ref=f87e654]
+                - button "Liên kết tới Memoization" [ref=f87e655] [cursor=pointer]: "#"
+                - generic [ref=f87e656]: Hiệu năng
+              - paragraph [ref=f87e657]:
+                - text: Hayghi nhớ kết quả · memoise · function result
+                - mark [ref=f87e658]: cache
+                - text: · ghi nhớ kết quả hàm
+              - paragraph [ref=f87e659]:
+                - generic [ref=f87e660]: Vấn đề
+                - text: Hàm đệ quy tính lại Fibonacci/parse config/validate token hàng nghìn lần với cùng input — CPU đốt cho việc đã từng tính rồi.
+              - paragraph [ref=f87e661]:
+                - generic [ref=f87e662]: Nguồn gốc
+                - text: Thuật ngữ do Donald Michie đặt năm 1968 (từ tiếng Hy Lạp 'memorikos')
+              - paragraph [ref=f87e663]:
+                - generic [ref=f87e664]: Xử lý
+                - text: "Hash map input → kết quả, lần gọi sau trả thẳng (trade time lấy space). Yêu cầu hàm thuần (cùng input → cùng output) và key hash ổn định; cần TTL/invalidation nếu dữ liệu nền thay đổi. Kết hợp cache-control: LRU cho kích thước, per-key lock chống stampede khi compute đắt."
+              - paragraph [ref=f87e665]:
+                - text: Liên quan
+                - link "Cache hit ratio" [ref=f87e666] [cursor=pointer]:
+                  - /url: "#e-cache-hit-ratio"
+                - text: · Lazy evaluation · Cache stampede ·
+                - link "Cache" [ref=f87e667] [cursor=pointer]:
+                  - /url: "#e-cache"
+                - text: ·
+                - link "Precomputation" [ref=f87e668] [cursor=pointer]:
+                  - /url: "#e-precomputation"
+                - text: ·
+                - link "Materialized view" [ref=f87e669] [cursor=pointer]:
+                  - /url: "#e-materialized-view"
+          - article [ref=f87e670]:
+            - generic [aria-hidden] [ref=f87e671]:
+              - generic [ref=f87e672]: № 095
+              - generic [ref=f87e673]: B
+              - generic [ref=f87e674]: Cơ bản
+            - generic [ref=f87e675]:
+              - generic [ref=f87e676]:
+                - heading "N+1 query" [level=4] [ref=f87e677]
+                - button "Liên kết tới N+1 query" [ref=f87e678] [cursor=pointer]: "#"
+                - generic [ref=f87e679]: Hiệu năng
+              - paragraph [ref=f87e680]: Hayn+1 problem · truy vấn N+1 · chậm vì lặp query
+              - paragraph [ref=f87e681]:
+                - generic [ref=f87e682]: Vấn đề
+                - text: "Danh sách 50 sản phẩm render chậm 2 giây vì code hỏi DB 51 lần: 1 lần lấy list + 50 lần hỏi category từng cái — ORM eager/lazy sai chỗ, QPS DB phình 50x."
+              - paragraph [ref=f87e683]:
+                - generic [ref=f87e684]: Xử lý
+                - text: "Lặp query trong vòng lặp (hoặc lazy-load mỗi phần tử). Fix: JOIN/include prefetch trọn quan hệ, hoặc batch theo id (WHERE id IN (...)), gộp thành map cache. Phát hiện bằng log query + đếm số statement/request, EXPLAIN, pg_stat_statements."
+              - paragraph [ref=f87e685]:
+                - text: Liên quanQuery batching (IN/bulk) · Fan-out ·
+                - link "Prefetch" [ref=f87e686] [cursor=pointer]:
+                  - /url: "#e-prefetch"
+          - article [ref=f87e687]:
+            - generic [aria-hidden] [ref=f87e688]:
+              - generic [ref=f87e689]: № 148
+              - generic [ref=f87e690]: B
+              - generic [ref=f87e691]: Cơ bản
+            - generic [ref=f87e692]:
+              - generic [ref=f87e693]:
+                - heading "Speed of light & network RTT" [level=4] [ref=f87e694]
+                - button "Liên kết tới Speed of light & network RTT" [ref=f87e695] [cursor=pointer]: "#"
+                - generic [ref=f87e696]: Hiệu năng
+              - paragraph [ref=f87e697]: Hayđộ trễ tốc độ ánh sáng · round-trip time · cross-country latency
+              - paragraph [ref=f87e698]:
+                - generic [ref=f87e699]: Vấn đề
+                - text: "Kế hoạch 'gọi service ở datacenter bên kia quả đất cho mỗi request' thất bại vì không phần mềm nào nhanh hơn tín hiệu đi qua cáp quang: mỗi round trip thêm hàng chục ms bất kể code tối ưu thế nào."
+              - paragraph [ref=f87e700]:
+                - generic [ref=f87e701]: Xử lý
+                - text: Tín hiệu trong cáp quang ~200.000 km/s (≈2/3 tốc độ ánh sáng), nên RTT TP.HCM–Hoa Kỳ thực tế ~150-250ms kể cả không nghẽn. Tổng latency request ≈ (số round trip) × RTT + thời gian xử lý. Giảm số round trip (batch, pipeline, cache) thường thắng việc tối ưu vài dòng code.
+              - paragraph [ref=f87e702]:
+                - text: Liên quanLatency numbers ·
+                - link "Bandwidth vs latency" [ref=f87e703] [cursor=pointer]:
+                  - /url: "#e-bandwidth-vs-latency"
+                - text: · TLS handshake cost
+        - generic [ref=f87e704]:
+          - heading "Bền vững & Chị tải 11" [level=3] [ref=f87e705]:
+            - text: Bền vững & Chị tải
+            - generic [ref=f87e706]: "11"
+          - article [ref=f87e707]:
+            - generic [aria-hidden] [ref=f87e708]:
+              - generic [ref=f87e709]: № 055
+              - generic [ref=f87e710]: B
+              - generic [ref=f87e711]: Cơ bản
+            - generic [ref=f87e712]:
+              - generic [ref=f87e713]:
+                - heading "Fallback" [level=4] [ref=f87e714]
+                - button "Liên kết tới Fallback" [ref=f87e715] [cursor=pointer]: "#"
+                - generic [ref=f87e716]: Bền vững & Chị tải
+              - paragraph [ref=f87e717]: Hayphương án thay thế · fallback path
+              - paragraph [ref=f87e718]:
+                - generic [ref=f87e719]: Vấn đề
+                - text: Dependency chính không sẵn sàng thì request fail toàn bộ thay vì trả kết quả thay thế.
+              - paragraph [ref=f87e720]:
+                - generic [ref=f87e721]: Xử lý
+                - text: "Khi primary fail (thường trigger bởi circuit breaker/timeout), chuyển sang đường thay thế: cache/CDN, service dự phòng, dữ liệu mặc định, trả 'đang xử lý sau'. Fallback phải nhanh (không gọi thêm dependency chậm như primary) và tránh tầng tầng lớp phủ lỗi che bug thật."
+              - paragraph [ref=f87e722]:
+                - text: Liên quan
+                - link "Circuit Breaker" [ref=f87e723] [cursor=pointer]:
+                  - /url: "#e-circuit-breaker"
+                - text: ·
+                - link "Graceful Degradation" [ref=f87e724] [cursor=pointer]:
+                  - /url: "#e-graceful-degradation"
+                - text: ·
+                - link "Timeout" [ref=f87e725] [cursor=pointer]:
+                  - /url: "#e-timeout"
+  - contentinfo [ref=f87e726]:
+    - paragraph [ref=f87e727]: 575 mục · 485 có nguồn gốc · dữ liệu tĩnh, không theo dõi, một file HTML.
+  - generic [ref=f87e728]:
+    - button "Về đầu trang": ↑

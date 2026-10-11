@@ -1,0 +1,244 @@
+- generic [active] [ref=f281e1]:
+  - dialog [ref=f281e2]:
+    - generic [ref=f281e7]:
+      - generic [ref=f281e8]:
+        - paragraph [ref=f281e9]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+        - paragraph [ref=f281e10]:
+          - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+          - link "Điều khoản về quyền riêng tư" [ref=f281e11] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+      - generic [ref=f281e12]:
+        - link "Chấp nhận" [ref=f281e14] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+        - link "Từ chối" [ref=f281e16] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+      - link "Các lựa chọn khác" [ref=f281e18] [cursor=pointer]:
+        - /url: "javascript: void(0)"
+  - banner [ref=f281e19]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f281e20] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f281e23] [cursor=pointer]
+    - generic [ref=f281e26]:
+      - link [ref=f281e27] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f281e28]
+      - search [ref=f281e29]:
+        - button "Tìm kiếm" [ref=f281e32] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f281e33]: topdev fresher backend developer yêu cầu CRUD phân quyền "quản lý người dùng"
+        - generic [ref=f281e34] [cursor=pointer]
+        - generic [ref=f281e36] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f281e41] [cursor=pointer]
+      - link [ref=f281e43] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=6dc32ebb9e9d0c7081801f2cd7d280f955972f2f9e86328d14fb9318965379d4JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT10b3BkZXYrZnJlc2hlcitiYWNrZW5kK2RldmVsb3Blcit5JWMzJWFhdStjJWUxJWJhJWE3dStDUlVEK3BoJWMzJWEybitxdXklZTElYmIlODFuKyUyMnF1JWUxJWJhJWEzbitsJWMzJWJkK25nJWM2JWIwJWUxJWJiJTlkaStkJWMzJWI5bmclMjImc2VuZHF1ZXJ5PTEmZm9ybT1IRUNPRFg&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f281e44]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f281e46]:
+      - link "Đăng nhập" [ref=f281e47] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f281e49] [cursor=pointer]:
+        - generic [ref=f281e50]: Rewards
+    - navigation "Bộ lọc Tìm kiếm" [ref=f281e66]:
+      - list [ref=f281e67]:
+        - listitem [ref=f281e68]:
+          - link "Tất cả" [ref=f281e69] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f281e71]:
+          - link "Web" [ref=f281e72] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e0b397a1d673801ef80ea57173f28aff01e5faac4756d17196c91ea6ab08588eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXRvcGRlditmcmVzaGVyK2JhY2tlbmQrZGV2ZWxvcGVyK3klYzMlYWF1K2MlZTElYmElYTd1K0NSVUQrcGglYzMlYTJuK3F1eSVlMSViYiU4MW4rJTIycXUlZTElYmElYTNuK2wlYzMlYmQrbmclYzYlYjAlZTElYmIlOWRpK2QlYzMlYjluZyUyMiZ3ZWJzY3A9MSZGT1JNPUhEUldTQw&ntb=1
+        - listitem [ref=f281e73]:
+          - link "Tìm kiếm" [ref=f281e74] [cursor=pointer]:
+            - /url: /copilotsearch?q=topdev+fresher+backend+developer+y%c3%aau+c%e1%ba%a7u+CRUD+ph%c3%a2n+quy%e1%bb%81n+%22qu%e1%ba%a3n+l%c3%bd+ng%c6%b0%e1%bb%9di+d%c3%b9ng%22&FORM=CSSCOP
+        - listitem [ref=f281e77]:
+          - link "Hình ảnh" [ref=f281e78] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=eb00bff1ea35d82c5e77e1d8a255fb193a2ddd7982e20f98dea4d1b71e66c7dcJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT10b3BkZXYrZnJlc2hlcitiYWNrZW5kK2RldmVsb3Blcit5JWMzJWFhdStjJWUxJWJhJWE3dStDUlVEK3BoJWMzJWEybitxdXklZTElYmIlODFuKyUyMnF1JWUxJWJhJWEzbitsJWMzJWJkK25nJWM2JWIwJWUxJWJiJTlkaStkJWMzJWI5bmclMjImRk9STT1IRFJTQzM&ntb=1
+        - listitem [ref=f281e79]:
+          - link "Video" [ref=f281e80] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c7b7ee59b2c04175ba2c1a495179e670f69b232b8e4fab6d49f1270a0b8a5364JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT10b3BkZXYrZnJlc2hlcitiYWNrZW5kK2RldmVsb3Blcit5JWMzJWFhdStjJWUxJWJhJWE3dStDUlVEK3BoJWMzJWEybitxdXklZTElYmIlODFuKyUyMnF1JWUxJWJhJWEzbitsJWMzJWJkK25nJWM2JWIwJWUxJWJiJTlkaStkJWMzJWI5bmclMjImRk9STT1IRFJTQzQ&ntb=1
+        - listitem [ref=f281e81]:
+          - link "Bản đồ" [ref=f281e82] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c4c695c1b198b79f314102590fc0651e673d6f9f886b8b9ee6d2037669a7a6d9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT10b3BkZXYrZnJlc2hlcitiYWNrZW5kK2RldmVsb3Blcit5JWMzJWFhdStjJWUxJWJhJWE3dStDUlVEK3BoJWMzJWEybitxdXklZTElYmIlODFuKyUyMnF1JWUxJWJhJWEzbitsJWMzJWJkK25nJWM2JWIwJWUxJWJiJTlkaStkJWMzJWI5bmclMjImRk9STT1IRFJTQzY&ntb=1
+        - listitem [ref=f281e83]:
+          - button [ref=f281e84] [cursor=pointer]
+  - generic [ref=f281e88]:
+    - main "Kết quả Tìm kiếm" [ref=f281e89]:
+      - generic [ref=f281e91]:
+        - generic [aria-hidden] [ref=f281e92]:
+          - generic [ref=f281e93] [cursor=pointer]
+          - generic [ref=f281e96] [cursor=pointer]
+          - generic [ref=f281e99] [cursor=pointer]
+        - text: Về 5 kết quả
+      - list [ref=f281e102]:
+        - listitem [ref=f281e103]:
+          - link "TopDev" [ref=f281e105] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=2ff599085a3f6971d46e6fbbf9133297e7e3849a573056b01ea8bb00cfd25fa1JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90b3BkZXYudm4v&ntb=1
+            - generic [ref=f281e110]:
+              - generic [ref=f281e111]: TopDev
+              - generic [ref=f281e112]: https://topdev.vn
+          - heading [level=2] [ref=f281e115]:
+            - link "TopDev - Việc Làm Lương Cao Hàng Đầu" [ref=f281e116] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=2ff599085a3f6971d46e6fbbf9133297e7e3849a573056b01ea8bb00cfd25fa1JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90b3BkZXYudm4v&ntb=1
+          - paragraph [ref=f281e118]: Việc làm lương cao mới nhất tại TopDev. Hàng ngàn việc làm, nhà tuyển dụng hàng đầu, mức lương hấp dẫn và đãi ngộ tốt cho …
+          - generic [ref=f281e119]:
+            - list [ref=f281e120]:
+              - listitem [ref=f281e121]:
+                - link "Tuyển Dụng Tester Lương …" [ref=f281e122] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=d7e2b353b3c55f11830da993acb87db42a86a05d76032e3ef204ed526f71e4edJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90b3BkZXYudm4vdmllYy1sYW0taXQvdGVzdGVyLWt0Nzg&ntb=1
+                - paragraph [ref=f281e123]: 0888 1555 00 Go To Homepage
+              - listitem [ref=f281e124]:
+                - link "Đăng Nhập" [ref=f281e125] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=996a2aa1176a5dfd79e9af47379a7278cbb4db2e39769952b5bdb1214346614aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9hY2NvdW50cy50b3BkZXYudm4v&ntb=1
+                - paragraph [ref=f281e126]: We would like to show you a description here but the …
+            - list [ref=f281e127]:
+              - listitem [ref=f281e128]:
+                - link "Việc Làm Fresher Đa Dạng …" [ref=f281e129] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=a9d1fc716d5c153045d2b18d9da5ed9db0fff461eb0495b5756d4fc392ee8ea9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90b3BkZXYudm4vdG9wLXZpZWMtbGFtLWl0LWZyZXNoZXI&ntb=1
+                - paragraph [ref=f281e130]: Việc làm IT dành cho Fresher Trang thông tin việc làm …
+          - link "Chỉ xem kết quả từ topdev.vn" [ref=f281e131] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b1439df3e7a803d61ff47e425da05b43115bf15f036eca94b4365f6cfc23b7b6JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXNpdGU6dG9wZGV2LnZuK3RvcGRlditmcmVzaGVyK2JhY2tlbmQrZGV2ZWxvcGVyK3klYzMlYWF1K2MlZTElYmElYTd1K0NSVUQrcGglYzMlYTJuK3F1eSVlMSViYiU4MW4rJTIycXUlZTElYmElYTNuK2wlYzMlYmQrbmclYzYlYjAlZTElYmIlOWRpK2QlYzMlYjluZyUyMiZmb3JtPURMSU5LUg&ntb=1
+        - listitem [ref=f281e132]:
+          - link "Scribd" [ref=f281e134] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e63b4d7ca8db072053169b5675d0c8df086ba21b8625e60e92b5f5d8831b8d23JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NyaWJkLmNvbS9kb2N1bWVudC84OTUzMDE2MzUvY2hhdC1RdSVFMSVCQSVBM24tTCVDMyVCRC1OZyVDNiVCMCVFMSVCQiU5RGktRHVuZy1WYS1QaGFuLVF1eSVFMSVCQiU4MW4tQmFja2VuZA&ntb=1
+            - generic [ref=f281e139]:
+              - generic [ref=f281e140]: Scribd
+              - generic [ref=f281e141]: https://www.scribd.com › document › chat...
+          - heading [level=2] [ref=f281e144]:
+            - link "chat-Quản Lý Người Dùng Và Phân Quyền Backend | PDF - Scribd" [ref=f281e145] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=e63b4d7ca8db072053169b5675d0c8df086ba21b8625e60e92b5f5d8831b8d23JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NyaWJkLmNvbS9kb2N1bWVudC84OTUzMDE2MzUvY2hhdC1RdSVFMSVCQSVBM24tTCVDMyVCRC1OZyVDNiVCMCVFMSVCQiU5RGktRHVuZy1WYS1QaGFuLVF1eSVFMSVCQiU4MW4tQmFja2VuZA&ntb=1
+          - paragraph [ref=f281e147]: Tài liệu mô tả chi tiết về các chức năng quản lý người dùng, vai trò và quyền hạn trong một ứng dụng, bao gồm quy trình xử lý từ …
+        - listitem [ref=f281e148]:
+          - link "studocu.vn" [ref=f281e150] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=fee93753cda215bf2b8519c47ac18370f167af4bc3aaf1883af200d7403cdc5dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc3R1ZG9jdS52bi92bi9kb2N1bWVudC90cnVvbmctZGFpLWhvYy1tby10aGFuaC1waG8taG8tY2hpLW1pbmgvcGhhdC10cmllbi1oZS10aG9uZy13ZWIvZGUtYmFpLWJhaS10YXAtZGUtYmFpLXRhcC8xNzIyMTQ3Mzk&ntb=1
+            - generic [ref=f281e155]:
+              - generic [ref=f281e156]: studocu.vn
+              - generic [ref=f281e157]: https://www.studocu.vn › vn › document › truong-dai-hoc...
+          - heading [level=2] [ref=f281e160]:
+            - link "DE_BAI_BAI_TAP.md - Đề Bài Tập Quản Lý User với Spring Boot" [ref=f281e161] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=fee93753cda215bf2b8519c47ac18370f167af4bc3aaf1883af200d7403cdc5dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc3R1ZG9jdS52bi92bi9kb2N1bWVudC90cnVvbmctZGFpLWhvYy1tby10aGFuaC1waG8taG8tY2hpLW1pbmgvcGhhdC10cmllbi1oZS10aG9uZy13ZWIvZGUtYmFpLWJhaS10YXAtZGUtYmFpLXRhcC8xNzIyMTQ3Mzk&ntb=1
+          - paragraph [ref=f281e163]: Đề bài này yêu cầu sinh viên thực hiện dự án quản lý người dùng với Spring Boot, bao gồm các chủ đề như xác thực, phân quyền, …
+        - listitem [ref=f281e164]:
+          - link "Github" [ref=f281e166] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=65ee4711991c88e42e87c0d1257e2dbfe559d1b29584cd75b1c742fedb014e38JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9naXRodWIuY29tL1RtaDMxMDEvVXNlci1TZXJ2aWNl&ntb=1
+            - generic [ref=f281e171]:
+              - generic [ref=f281e172]: Github
+              - generic [ref=f281e173]: https://github.com › User-Service
+          - heading [level=2] [ref=f281e176]:
+            - 'link "GitHub - Tmh3101/user-service: User Management Service is a …" [ref=f281e177] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=65ee4711991c88e42e87c0d1257e2dbfe559d1b29584cd75b1c742fedb014e38JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9naXRodWIuY29tL1RtaDMxMDEvVXNlci1TZXJ2aWNl&ntb=1
+          - paragraph [ref=f281e179]: Dự án User Management Service là một hệ thống quản lý người dùng được xây dựng bằng Spring Boot, cung cấp các chức năng …
+        - listitem [ref=f281e180]:
+          - link "Github" [ref=f281e182] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9af871b5d487abed0fe9239329a7df23e4381e255e88045875ba0f98deb17d1aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9naXRodWIuY29tL3Robmh0YWlpL0xUX1dlYl9CVDA1XzA5MDk&ntb=1
+            - generic [ref=f281e187]:
+              - generic [ref=f281e188]: Github
+              - generic [ref=f281e189]: https://github.com › thnhtaii
+          - heading [level=2] [ref=f281e192]:
+            - link "GitHub - thnhtaii/LT_Web_BT05_0909" [ref=f281e193] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=9af871b5d487abed0fe9239329a7df23e4381e255e88045875ba0f98deb17d1aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9naXRodWIuY29tL3Robmh0YWlpL0xUX1dlYl9CVDA1XzA5MDk&ntb=1
+          - paragraph [ref=f281e195]: "Thêm mới: Phân quyền tài khoản (Admin/User), thiết lập trạng thái khởi tạo, kiểm tra trùng lặp username/email. Chỉnh sửa: Cập nhật …"
+        - listitem [ref=f281e196]:
+          - link "Viblo" [ref=f281e198] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=62a97fa248e5ac3cfce4828b3338b5b31fb6930ebb99743bce7bc2fe59797efaJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AvaGF5LXRodS10cmllbi1raGFpLWhlLXRob25nLXBoYW4tcXV5ZW4tY2hpLXRpZXQtdHJvbmctcGhhbi1tZW0tY3JtLUV2YkxiQVJwSm5r&ntb=1
+            - generic [ref=f281e203]:
+              - generic [ref=f281e204]: Viblo
+              - generic [ref=f281e205]: https://viblo.asia › hay-thu-trien-khai-he-thong...
+          - heading [level=2] [ref=f281e208]:
+            - link "[Hãy thử] Triển khai Hệ thống Phân quyền Chi tiết ... - Viblo" [ref=f281e209] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=62a97fa248e5ac3cfce4828b3338b5b31fb6930ebb99743bce7bc2fe59797efaJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AvaGF5LXRodS10cmllbi1raGFpLWhlLXRob25nLXBoYW4tcXV5ZW4tY2hpLXRpZXQtdHJvbmctcGhhbi1tZW0tY3JtLUV2YkxiQVJwSm5r&ntb=1
+          - paragraph [ref=f281e211]: Bài viết này sẽ hướng dẫn bạn xây dựng hệ thống phân quyền chi tiết sử dụng cơ chế kiểm soát truy cập dựa trên vai trò (Role …
+        - listitem [ref=f281e212]:
+          - link "Viblo" [ref=f281e214] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=67f46ad3621baf3c94984c0b3b9c63befbc5b291027a607035636ef643fe3307JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLWhhaS1PZVZLQmtReVprVw&ntb=1
+            - generic [ref=f281e219]:
+              - generic [ref=f281e220]: Viblo
+              - generic [ref=f281e221]: https://viblo.asia › xay-dung-ung-dung-web-crud...
+          - heading [level=2] [ref=f281e224]:
+            - link "Xây dựng ứng dụng web CRUD với Python và Flask - Phần hai" [ref=f281e225] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=67f46ad3621baf3c94984c0b3b9c63befbc5b291027a607035636ef643fe3307JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLWhhaS1PZVZLQmtReVprVw&ntb=1
+          - paragraph [ref=f281e227]: Đây là phần hai của hướng dẫn để xây dựng một ứng dụng web quản lý nhân viên. Trong phần một trước, mình đã thiết lập cơ sở …
+        - listitem [ref=f281e228]:
+          - link "TikTok" [ref=f281e230] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9e03ff0484e0ca3714de5cd32a9a839a0926b15855d5a9b1f434c3b2e14ad12eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9AbGFwX3RyaW5oX3ZuL3ZpZGVvLzc2OTI3NjUyMjk0OTQ2MDMwMjg&ntb=1
+            - generic [ref=f281e235]:
+              - generic [ref=f281e236]: TikTok
+              - generic [ref=f281e237]: https://www.tiktok.com › @lap_trinh_vn › video
+          - heading [level=2] [ref=f281e240]:
+            - link "CRUD là gì? Ví dụ quản lý người dùng | TikTok" [ref=f281e241] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=9e03ff0484e0ca3714de5cd32a9a839a0926b15855d5a9b1f434c3b2e14ad12eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9AbGFwX3RyaW5oX3ZuL3ZpZGVvLzc2OTI3NjUyMjk0OTQ2MDMwMjg&ntb=1
+          - paragraph [ref=f281e243]: "140 Lượt thích,Video TikTok từ Học lập trình (@lap_trinh_vn): \"Giải thích CRUD và ví dụ áp dụng CRUD trong quản lý người dùng. …"
+        - listitem [ref=f281e244]:
+          - link "Github" [ref=f281e246] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=27e78a417eff4adbed1c898ed1dd76467973171519397f44b3af0e8dabaee640JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9naXRodWIuY29tL3F1b2Nhbmh1Zy93ZWJfYXNzaWdubWVudF9zcHJpbmdfc2VjdXJpdHk&ntb=1
+            - generic [ref=f281e251]:
+              - generic [ref=f281e252]: Github
+              - generic [ref=f281e253]: https://github.com › quocanhug › web_assignment_spring_security
+          - heading [level=2] [ref=f281e256]:
+            - link "GitHub - quocanhug/web_assignment_spring_security · GitHub" [ref=f281e257] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=27e78a417eff4adbed1c898ed1dd76467973171519397f44b3af0e8dabaee640JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9naXRodWIuY29tL3F1b2Nhbmh1Zy93ZWJfYXNzaWdubWVudF9zcHJpbmdfc2VjdXJpdHk&ntb=1
+          - paragraph [ref=f281e259]: "Quản lý Người Dùng (Admin CRUD, Phân trang, Tìm kiếm, Đếm số sản phẩm) Truy cập: /admin/users (Chỉ tài khoản ROLE_ADMIN …"
+        - listitem [ref=f281e260]:
+          - link "Viblo" [ref=f281e262] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7bf6260c25c30f4bd303959b3982c9ade18bf12a2b5f08b482882cccb7ed188dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLW1vdC1uYVFaUnl5ZEt2eA&ntb=1
+            - generic [ref=f281e267]:
+              - generic [ref=f281e268]: Viblo
+              - generic [ref=f281e269]: https://viblo.asia › xay-dung-ung-dung-web-crud...
+          - heading [level=2] [ref=f281e272]:
+            - link "Xây dựng ứng dụng web CRUD với Python và Flask - Phần một" [ref=f281e273] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=7bf6260c25c30f4bd303959b3982c9ade18bf12a2b5f08b482882cccb7ed188dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLW1vdC1uYVFaUnl5ZEt2eA&ntb=1
+          - paragraph [ref=f281e275]: Chào các bạn, hôm nay mình sẽ hướng dẫn cách dựng 1 ứng dụng web quản lý nhân viên CRUD (Create, Read, Update, Delete) …
+        - listitem [ref=f281e276]:
+          - generic [ref=f281e277]:
+            - heading [level=2] [ref=f281e278]:
+              - text: Tìm hiểu kỹ hơn về
+              - strong [ref=f281e279]: topdev fresher backend developer yêu cầu CRUD
+              - text: …
+            - list [ref=f281e280]:
+              - listitem [ref=f281e281]:
+                - link [ref=f281e282] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=0305382e3e0aa75ce563437b81fcc53d29c1ebaabd55ef918709bf49f64b443dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXRvcGRldislYzQlOTElYzQlODNuZytuaCVlMSViYSVhZHAmRk9STT1RU1JFMQ&ntb=1
+                  - generic [ref=f281e284]:
+                    - text: topdev
+                    - strong [ref=f281e285]: đăng nhập
+              - listitem [ref=f281e286]:
+                - link [ref=f281e287] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=ede01b6b5708fb9030ae1f6b6554d59a57d8410e17c1c2dd2077f6e1dd9bbc77JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXRvcGRlditWaWV0bmFtJkZPUk09UVNSRTI&ntb=1
+                  - generic [ref=f281e289]:
+                    - text: topdev
+                    - strong [ref=f281e290]: vietnam
+              - listitem [ref=f281e291]:
+                - link [ref=f281e292] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=850bf33a0bc36894a677b722bc56304fffaa71ae956de1e9d41b923115ee45b1JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXRvcGRldi52biZGT1JNPVFTUkUz&ntb=1
+                  - generic [ref=f281e294]:
+                    - text: topdev.
+                    - strong [ref=f281e295]: vn
+    - complementary "Kết quả bổ sung" [ref=f281e296]:
+      - list [ref=f281e297]:
+        - listitem [ref=f281e298]:
+          - generic "Tìm kiếm có liên quan" [ref=f281e299]:
+            - generic [ref=f281e301]:
+              - heading [level=2] [ref=f281e303]:
+                - text: Tìm hiểu kỹ hơn về
+                - strong [ref=f281e304]: topdev fresher backend developer yêu cầu CRUD
+                - text: …
+              - generic [ref=f281e305]:
+                - link [ref=f281e307] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=78600d4f205b977863c15661c43b39a713d2118a6b15758afe67fd6230bc6907JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXRvcGRldislYzQlOTElYzQlODNuZytuaCVlMSViYSVhZHAmRk9STT1SNUZE&ntb=1
+                  - generic [ref=f281e309]:
+                    - text: topdev
+                    - strong [ref=f281e310]: đăng nhập
+                - link [ref=f281e312] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=fa93fd14051fc0541734ac9e3a70e41afb7a7074372b1135c8708ba02424b942JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXRvcGRlditWaWV0bmFtJkZPUk09UjVGRDE&ntb=1
+                  - generic [ref=f281e314]:
+                    - text: topdev
+                    - strong [ref=f281e315]: vietnam
+                - link [ref=f281e317] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=b6833b4bc2eecf9ee8b22865b0e3c48b193ee82f34bf663ba8f546fe913db091JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXRvcGRldi52biZGT1JNPVI1RkQy&ntb=1
+                  - generic [ref=f281e319]:
+                    - text: topdev.
+                    - strong [ref=f281e320]: vn
+  - contentinfo [ref=f281e321]:
+    - generic [ref=f281e322]:
+      - list:
+        - listitem [ref=f281e323]:
+          - link "Quyền riêng tư" [ref=f281e324] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f281e325]:
+          - link "Điều khoản" [ref=f281e326] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

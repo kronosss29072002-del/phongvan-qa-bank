@@ -1,0 +1,208 @@
+{
+  "entries": [
+    {
+      "term": "Input validation / Data validation (kiểm tra đầu vào)",
+      "aliases": [
+        "input validation",
+        "data validation",
+        "validation",
+        "kiểm tra đầu vào",
+        "input sanitization",
+        "validate input"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Mọi input từ client (query param, body, header, file upload, ID trong URL) đều là dữ liệu không tin cậy có thể phá DB, bật lỗi 500, hoặc mở đường cho SQL injection và path traversal. Nếu server tin client-side validation hoặc không kiểm tra gì, một request thủ công là đủ để khai thác.",
+      "origin": "Saltzer & Schroeder, 'The Protection of Information in Computer Systems' (1975) — complete mediation; OWASP Input Validation Cheat Sheet.",
+      "how": "Validate toàn bộ dữ liệu tại trust boundary (server): định dạng bằng schema/regex, kiểu dữ liệu, range/length, enum/allowlist — allowlist ưu tiên hơn denylist vì denylist bỏ sót biến thể mới. Phân biệt rõ validation (bác bỏ input xấu) với sanitization/encoding (vô hiệu hóa dữ liệu tại điểm output); validation không thay thế output encoding.",
+      "related": [
+        "SQL injection",
+        "Command injection",
+        "XSS",
+        "Path traversal / arbitrary file read (đọc file tùy ý qua đường dẫn)",
+        "mass assignment",
+        "CORS vs CSRF"
+      ]
+    },
+    {
+      "term": "Output encoding / HTML escaping (mã hóa đầu ra)",
+      "aliases": [
+        "output encoding",
+        "HTML escaping",
+        "entity encoding",
+        "context-aware encoding",
+        "mã hóa đầu ra",
+        "escape HTML"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Dữ liệu người dùng hiển thị lại trong trang web mà không qua xử lý sẽ được trình duyệt parse như HTML: chuỗi '<script>alert(1)</script>' biến thành code chạy thật, mở đường cho XSS đánh cắp cookie và session. Validation ở đầu vào không đủ vì không phải dữ liệu nào cũng bác được.",
+      "origin": "OWASP XSS Prevention Cheat Sheet (context-aware encoding); hệ thống hóa trong nghiên cứu injection đầu thập niên 2000.",
+      "how": "Trước khi render dữ liệu không tin cậy, encode ký tự đặc biệt (< > \" ' &) để trình duyệt hiển thị nguyên văn thay vì chạy. Mã hóa theo context: HTML element, HTML attribute, JavaScript string, URL mỗi ngữ cảnh cần bộ encode riêng (context-aware encoding). Khác với validate đầu vào: encoder hoạt động ở điểm output, không làm mất dữ liệu.",
+      "related": [
+        "XSS",
+        "Input validation / Data validation (kiểm tra đầu vào)",
+        "CSP (Content Security Policy)",
+        "Same-origin policy (SOP, chính sách cùng nguồn)"
+      ]
+    },
+    {
+      "term": "Same-origin policy (SOP, chính sách cùng nguồn)",
+      "aliases": [
+        "same-origin policy",
+        "SOP",
+        "chính sách cùng nguồn"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Nếu script từ trang A đọc được dữ liệu của trang B (origin B), một website độc hại có thể đọc email, lịch sử, và token của người dùng ở mọi site khác. Origin là scheme + host + port; trình duyệt phải chặn truy cập chéo origin mặc định.",
+      "origin": "Giới thiệu trong Netscape Navigator 2.0 (1995); chuẩn hóa trong WHATWG HTML spec.",
+      "how": "Browser chặn đọc response và truy cập DOM chéo origin theo mặc định; server opt-in qua CORS để nới lỏng có kiểm soát. Sắc thái quan trọng: SOP chặn ĐỌC, không chặn GỬI request — trang độc hại vẫn gửi được request kèm cookie, đây chính là nền tảng cho CSRF. SOP không ngăn được XSS vì script XSS chạy trong chính origin đó.",
+      "related": [
+        "Cross-Origin Resource Sharing (CORS)",
+        "Cross-Site Request Forgery (CSRF)",
+        "XSS",
+        "SameSite cookie",
+        "CSP (Content Security Policy)",
+        "CORS vs CSRF"
+      ]
+    },
+    {
+      "term": "Thread safety (thread-safe, an toàn luồng)",
+      "aliases": [
+        "thread-safe",
+        "an toàn luồng",
+        "safe publication",
+        "thread-safe collections"
+      ],
+      "level": "basic",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Nhiều thread cùng đọc-sửa shared state gây torn read, lost update, và kết quả không đoán được; các entry công cụ (Mutex, CAS, Memory model) tồn tại để phục vụ một đích duy nhất là làm cho code an toàn khi chạy đồng thời. Chưa entry nào trong glossary định nghĩa chính đích đó.",
+      "origin": "Thuật ngữ xuất hiện cùng hệ điều hành multitasking những năm 1960; chuẩn hóa qua Java Memory Model và tài liệu lập trình đồng thời.",
+      "how": "Thread safety: mọi truy cập đồng thời vào shared state cho kết quả như khi chạy tuần tự. Đạt qua synchronization (mutex, atomic operation), safe publication, immutable/thread-local data, và concurrent collections thay vì collection thường. Lưu ý: GIL của Python không tự làm mọi chuỗi đọc-sửa-ghi an toàn; framework có quy ước riêng trong thread (VD: Flask app context).",
+      "related": [
+        "Race condition",
+        "Mutex & Semaphore",
+        "Atomic operation & CAS",
+        "Memory model & happens-before (memory visibility)",
+        "Thread pool & pool exhaustion"
+      ]
+    },
+    {
+      "term": "Equivalence partitioning & Boundary value analysis (phân vùng tương đương, giá trị biên)",
+      "aliases": [
+        "equivalence partitioning",
+        "equivalence class",
+        "boundary value analysis",
+        "BVA",
+        "phân vùng tương đương",
+        "phân tích giá trị biên",
+        "phân lớp tương đương"
+      ],
+      "level": "intermediate",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Không thể test mọi giá trị input (miền vô hạn hoặc hàng tỷ tổ hợp); test ngẫu nhiên thì sót bug, test toàn bộ thì bất khả thi về thời gian. Cần một cách có hệ thống để chọn bộ input nhỏ mà vẫn bao phủ cùng hành vi.",
+      "origin": "Glenford Myers, 'The Art of Software Testing' (1979); chuẩn mực ISTQB syllabus.",
+      "how": "Chia miền input thành các equivalence class — giá trị cùng lớp được code xử lý giống nhau, test một đại diện mỗi lớp. Bổ sung boundary value analysis vì bug tập trung tại biên: test off-point (ngoài lớp, sát biên) và on-point (trong lớp, sát biên). Ví dụ validation tuổi 18+: test 17/18/19 thay vì 5/52/99. Kết hợp với property-based testing cho miền liên tục khác bản chất (sinh ngẫu nhiên có luật thay vì điểm cố định).",
+      "related": [
+        "Property-based testing",
+        "test data management",
+        "Code coverage",
+        "regression test"
+      ]
+    },
+    {
+      "term": "Black-box / White-box / Grey-box testing (kiểm thử hộp đen, hộp trắng, hộp xám)",
+      "aliases": [
+        "black-box testing",
+        "white-box testing",
+        "grey-box testing",
+        "hộp đen",
+        "hộp trắng",
+        "hộp xám"
+      ],
+      "level": "basic",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Test dựa vào gì để biết hệ thống đúng: chỉ nhìn qua interface (hành vi quan sát được) hay đọc được cả code bên trong? Chọn sai góc nhìn thì test hời hợt bỏ sót nhánh code, hoặc gắn quá chặt vào implementation nên gãy mỗi lần refactor.",
+      "origin": "Thuật ngữ phổ biến từ những năm 1970 qua Glenford Myers và Boris Beizer, 'Software Testing Techniques'.",
+      "how": "Black-box: test theo contract/interface và hành vi quan sát được (API, e2e, UI) — không cần biết code, chống regression tốt. White-box: test theo cấu trúc bên trong (branch/path coverage, unit test nội bộ) — phát hiện nhánh chết và logic sai. Grey-box: kết hợp, điển hình test API kèm kiến thức schema DB để assert đúng state. Thực tế dùng cả ba theo test pyramid, không loại trừ nhau.",
+      "related": [
+        "test pyramid",
+        "unit test",
+        "integration test",
+        "e2e test",
+        "Code coverage",
+        "assertion"
+      ]
+    },
+    {
+      "term": "Root Cause Analysis (RCA) & Five Whys (phân tích nguyên nhân gốc)",
+      "aliases": [
+        "root cause analysis",
+        "RCA",
+        "five whys",
+        "5 whys",
+        "nguyên nhân gốc",
+        "truy tìm nguyên nhân"
+      ],
+      "level": "basic",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Postmortem ghi lại timeline nhưng nếu action items không đánh vào nguyên nhân thật thì chỉ vá triệu chứng và incident tái diễn. Chốt vội tầng gần nhất (restart là xong) không ngăn được lần sau; cần một kỹ thuật có cấu trúc để đào xuống tầng hệ thống/process.",
+      "origin": "Sakichi Toyoda, cha đẻ Toyota Production System (thập niên 1930-1950); phổ biến qua lean manufacturing và SRE practice.",
+      "how": "Five Whys đặt câu hỏi 'tại sao' liên tục cho tới tầng process/hệ thống, phân biệt contributing causes với trigger — hiếm khi có một 'root cause duy nhất'. Đối chiếu timeline và evidence để tránh suy diễn và nhầm correlation với causation. Action items phải đánh đúng nguyên nhân gốc và được follow-up tới khi đóng cửa trong postmortem, kết hợp blameless culture để không chặn luồng khai báo.",
+      "related": [
+        "Blameless Postmortem",
+        "Incident Management",
+        "Runbook",
+        "On-call rotation",
+        "Incident severity & status page (SEV levels, status page, war room)"
+      ]
+    },
+    {
+      "term": "Incident severity & status page (SEV levels, status page, war room)",
+      "aliases": [
+        "SEV levels",
+        "severity classification",
+        "status page",
+        "stakeholder communication",
+        "war room",
+        "phân loại mức độ sự cố"
+      ],
+      "level": "intermediate",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Sự cố không có thang mức (SEV1/SEV2) thì đội không biết ai phải dậy giữa đêm, phải thông báo cho ai, và khách/leadership không có nguồn tin chính thức — mỗi người hỏi một chỗ, engineer bị kéo khỏi việc khôi phục để trả lời. Quyết định 'đây có phải incident không' cũng thiếu tiêu chí.",
+      "origin": "Google SRE Book (2016), chương Incident Response — severity classification; mô hình status page phổ biến qua Statuspage (Atlassian).",
+      "how": "Định nghĩa severity theo impact: số user bị ảnh hưởng, mất tiền, breach dữ liệu — SEV1 (toàn bộ service down, breach) phải page người trực và dựng war room; SEV2/3 giảm dần mức phản hồi. Phân vai incident commander (khôi phục) và communicator (truyền thông) chạy song song; cập nhật status page định kỳ cho khách hàng và internal channels theo khung thời gian cam kết.",
+      "related": [
+        "Incident Management",
+        "On-call rotation",
+        "Runbook",
+        "Blameless Postmortem",
+        "Root Cause Analysis (RCA) & Five Whys (phân tích nguyên nhân gốc)",
+        "SLO"
+      ]
+    },
+    {
+      "term": "Page fault & demand paging (lỗi trang, major/minor page fault)",
+      "aliases": [
+        "page fault",
+        "demand paging",
+        "major page fault",
+        "minor page fault",
+        "lỗi trang"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Virtual memory ánh xạ không gian địa chỉ ảo sang RAM theo nhu cầu (demand paging) thay vì nạp toàn bộ — đó là cơ chế khiến paging tồn tại. Khi backend debug OOM, swap, mmap, hay latency đột biến, cần hiểu chính xác trang chưa nạp thì chuyện gì xảy ra, và vì sao first-touch lại tốn kém.",
+      "origin": "Demand paging từ Atlas (Manchester University, 1959-1962); chuẩn hóa trong mọi OS textbook (Tanenbaum, Modern Operating Systems).",
+      "how": "Truy cập trang chưa có trong RAM → MMU sinh page fault → kernel xử lý: minor fault nếu trang đã trong page cache (hoặc zero-fill/copy-on-write), major fault nếu phải đọc từ disk (hàng ms). Kernel cập nhật page table rồi resume instruction. Page fault cũng là nguồn gốc chi phí first-touch (lazy allocation) và swap-in khi thiếu RAM. Xem thêm góc chẩn đoán hiệu năng tại 'Page fault, swap & OOM killer'.",
+      "related": [
+        "Virtual memory & paging (page table, TLB)",
+        "Page fault, swap & OOM killer",
+        "Copy-on-write",
+        "Memory leak & heap growth (rò rỉ bộ nhớ, RSS creep)",
+        "Stack vs Heap (bộ nhớ, stack overflow)"
+      ]
+    }
+  ]
+}

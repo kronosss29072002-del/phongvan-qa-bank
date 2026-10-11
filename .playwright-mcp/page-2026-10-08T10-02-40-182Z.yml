@@ -1,0 +1,115 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - link [ref=f3e4] [cursor=pointer]:
+      - /url: https://martinfowler.com
+    - generic [ref=f3e7]:
+      - textbox [ref=f3e8]
+      - button "" [ref=f3e9] [cursor=pointer]
+    - link "" [ref=f3e11] [cursor=pointer]:
+      - /url: "#navmenu-bottom"
+    - navigation [ref=f3e12]:
+      - list [ref=f3e13]:
+        - listitem [ref=f3e14]:
+          - link "Refactoring" [ref=f3e15] [cursor=pointer]:
+            - /url: https://refactoring.com
+        - listitem [ref=f3e16]:
+          - link "Agile" [ref=f3e17] [cursor=pointer]:
+            - /url: /agile.html
+        - listitem [ref=f3e18]:
+          - link "Architecture" [ref=f3e19] [cursor=pointer]:
+            - /url: /architecture
+        - listitem [ref=f3e20]:
+          - link "About" [ref=f3e21] [cursor=pointer]:
+            - /url: /aboutMe.html
+        - listitem [ref=f3e22]:
+          - link "Thoughtworks" [ref=f3e23] [cursor=pointer]:
+            - /url: https://www.thoughtworks.com/engineering
+        - listitem [ref=f3e24]:
+          - link "" [ref=f3e25] [cursor=pointer]:
+            - /url: /feed.atom
+        - listitem [ref=f3e26]:
+          - link "" [ref=f3e27] [cursor=pointer]:
+            - /url: https://www.twitter.com/martinfowler
+        - listitem [ref=f3e28]:
+          - link "Mastodon stream" [ref=f3e29] [cursor=pointer]:
+            - /url: https://toot.thoughtworks.com/@mfowler
+        - listitem [ref=f3e32]:
+          - link "LinkedIn" [ref=f3e33] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/martin-fowler-com/
+        - listitem [ref=f3e36]:
+          - link "BlueSky" [ref=f3e37] [cursor=pointer]:
+            - /url: https://bsky.app/profile/martinfowler.com
+  - text:  ⨉
+  - main [ref=f3e40]:
+    - article [ref=f3e41]:
+      - heading [level=1] [ref=f3e42]:
+        - link "Blue Green Deployment" [ref=f3e43] [cursor=pointer]:
+          - /url: BlueGreenDeployment.html
+      - paragraph [ref=f3e44]: 1 March 2010
+      - generic [ref=f3e45]:
+        - generic [ref=f3e46]:
+          - paragraph [ref=f3e47]:
+            - link [ref=f3e48] [cursor=pointer]:
+              - /url: /
+              - img "Photo of Martin Fowler" [ref=f3e49]
+          - paragraph [ref=f3e50]:
+            - link "Martin Fowler" [ref=f3e51] [cursor=pointer]:
+              - /url: /
+        - paragraph [ref=f3e53]:
+          - text: 
+          - link "continuous delivery" [ref=f3e54] [cursor=pointer]:
+            - /url: /tags/continuous%20delivery.html
+      - generic [ref=f3e55]:
+        - paragraph [ref=f3e56]:
+          - text: One of the goals that my colleagues and I urge on our clients is that of a completely automated deployment process. Automating your deployment helps reduce the frictions and delays that crop up in between getting the software “done” and getting it to realize its value. Dave Farley and Jez Humble are finishing up a book on this topic -
+          - link "Continuous Delivery" [ref=f3e57] [cursor=pointer]:
+            - /url: /books/continuousDelivery.html
+          - text: . It builds upon many of the ideas that are commonly associated with
+          - link "Continuous Integration" [ref=f3e58] [cursor=pointer]:
+            - /url: /articles/continuousIntegration.html
+          - text: ", driving more towards this ability to rapidly put software into production and get it doing something. Their section on blue-green deployment caught my eye as one of those techniques that's underused, so I thought I'd give a brief overview of it here."
+        - paragraph [ref=f3e61]
+        - paragraph [ref=f3e62]: One of the challenges with automating deployment is the cut-over itself, taking software from the final stage of testing to live production. You usually need to do this quickly in order to minimize downtime. The blue-green deployment approach does this by ensuring you have two production environments, as identical as possible. At any time one of them, let's say blue for the example, is live. As you prepare a new release of your software you do your final stage of testing in the green environment. Once the software is working in the green environment, you switch the router so that all incoming requests go to the green environment - the blue one is now idle.
+        - paragraph [ref=f3e63]: Blue-green deployment also gives you a rapid way to rollback - if anything goes wrong you switch the router back to your blue environment. There's still the issue of dealing with missed transactions while the green environment was live, but depending on your design you may be able to feed transactions to both environments in such a way as to keep the blue environment as a backup when the green is live. Or you may be able to put the application in read-only mode before cut-over, run it for a while in read-only mode, and then switch it to read-write mode. That may be enough to flush out many outstanding issues.
+        - paragraph [ref=f3e64]: The two environments need to be different but as identical as possible. In some situations they can be different pieces of hardware, or they can be different virtual machines running on the same (or different) hardware. They can also be a single operating environment partitioned into separate zones with separate IP addresses for the two slices.
+        - paragraph [ref=f3e65]: Once you've put your green environment live and you're happy with its stability, you then use the blue environment as your staging environment for the final testing step for your next deployment. When you are ready for your next release, you switch from green to blue in the same way that you did from blue to green earlier. That way both green and blue environments are regularly cycling between live, previous version (for rollback) and staging the next version.
+        - paragraph [ref=f3e66]: An advantage of this approach is that it's the same basic mechanism as you need to get a hot-standby working. Hence this allows you to test your disaster-recovery procedure on every release. (I hope that you release more frequently than you have a disaster.)
+        - paragraph [ref=f3e67]: The fundamental idea is to have two easily switchable environments to switch between, there are plenty of ways to vary the details. One project did the switch by bouncing the web server rather than working on the router. Another variation would be to use the same database, making the blue-green switches for web and domain layers.
+        - paragraph [ref=f3e68]:
+          - text: Databases can often be a challenge with this technique, particularly when you need to change the schema to support a new version of the software. The trick is to separate the deployment of schema changes from application upgrades. So first apply a
+          - link "database refactoring" [ref=f3e69] [cursor=pointer]:
+            - /url: /books/refactoringDatabases.html
+          - text: to change the schema to support both the new and old version of the application, deploy that, check everything is working fine so you have a rollback point, then deploy the new version of the application. (And when the upgrade has bedded down remove the database support for the old version.)
+        - paragraph [ref=f3e70]:
+          - text: This technique has been “out there” for ages, but I don't see it used as often as it should be. Some foggy combination of
+          - link "Daniel Terhorst-North" [ref=f3e71] [cursor=pointer]:
+            - /url: http://dannorth.net/
+          - text: and Jez Humble
+          - link "came up with the name" [ref=f3e72] [cursor=pointer]:
+            - /url: https://gitlab.com/snippets/1846041
+          - text: .
+        - generic [ref=f3e73]:
+          - heading "Further Reading" [level=2] [ref=f3e74]
+          - paragraph [ref=f3e75]:
+            - text: You can find much more detail on this and related techniques from the
+            - link "Continuous Delivery book" [ref=f3e76] [cursor=pointer]:
+              - /url: /books/continuousDelivery.html
+            - text: by Jez Humble and Dave Farley. My
+            - link "guide page on delivery" [ref=f3e77] [cursor=pointer]:
+              - /url: /delivery.html
+            - text: points to more material on these topcis.
+        - generic [ref=f3e78]:
+          - heading "Acknowledgements" [level=2] [ref=f3e79]
+          - text: Illustration by Ketan Padegaonkar
+        - generic [ref=f3e81]:
+          - heading "Updates" [level=2] [ref=f3e82]
+          - paragraph [ref=f3e83]: "2015-06-05: The page got a lot more page traffic today as Hacker News noticed it. So I added a paragraph on database changes and the further reading section."
+  - text:  ⨉
+  - contentinfo [ref=f3e84]:
+    - link [ref=f3e86] [cursor=pointer]:
+      - /url: https://www.thoughtworks.com/engineering
+    - generic [ref=f3e88]: 
+    - paragraph [ref=f3e91]:
+      - text: © Martin Fowler |
+      - link "Disclosures" [ref=f3e92] [cursor=pointer]:
+        - /url: /aboutMe.html#disclosures

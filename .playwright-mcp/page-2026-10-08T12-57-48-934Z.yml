@@ -1,0 +1,477 @@
+- generic [active] [ref=f68e1]:
+  - generic: 
+  - banner [ref=f68e3]:
+    - generic [ref=f68e9]:
+      - link "Grafana Labs is a Leader in the 2026 Gartner® Magic Quadrant™ for Observability Platforms." [ref=f68e10] [cursor=pointer]:
+        - /url: /analyst-reports/gartner-magic-quadrant-observability-platforms
+        - generic "Grafana Labs is a Leader in the 2026 Gartner® Magic Quadrant™ for Observability Platforms." [ref=f68e13]
+      - link "Learn more" [ref=f68e14] [cursor=pointer]:
+        - /url: /analyst-reports/gartner-magic-quadrant-observability-platforms
+    - navigation "Main navigation" [ref=f68e18]:
+      - generic [ref=f68e19]:
+        - link [ref=f68e20] [cursor=pointer]:
+          - /url: /
+          - img "Logo" [ref=f68e21]
+        - button "Open menu" [ref=f68e23] [cursor=pointer]
+  - generic [ref=f68e27]:
+    - generic [ref=f68e29]:
+      - button [ref=f68e30] [cursor=pointer]
+      - generic [ref=f68e33]: Introduction to exemplars
+      - button [ref=f68e34] [cursor=pointer]
+    - main [ref=f68e38]:
+      - generic [ref=f68e39]:
+        - generic [ref=f68e40]:
+          - generic "breadcrumb" [ref=f68e41]:
+            - generic [ref=f68e42]:
+              - link "Documentation" [ref=f68e43] [cursor=pointer]:
+                - /url: /docs/
+              - img "breadcrumb arrow" [ref=f68e44]
+            - generic [ref=f68e45]:
+              - link "Grafana documentation" [ref=f68e46] [cursor=pointer]:
+                - /url: /docs/grafana/latest/
+              - img "breadcrumb arrow" [ref=f68e47]
+            - generic [ref=f68e48]:
+              - link "Introduction" [ref=f68e49] [cursor=pointer]:
+                - /url: /docs/grafana/latest/fundamentals/
+              - img "breadcrumb arrow" [ref=f68e50]
+            - text: Exemplars
+          - generic [ref=f68e51]:
+            - generic [ref=f68e52]:
+              - text: Grafana Cloud
+              - generic [ref=f68e54] [cursor=pointer]
+            - generic [ref=f68e58]:
+              - text: Enterprise
+              - generic [ref=f68e60] [cursor=pointer]
+            - generic [ref=f68e64]:
+              - text: Open source
+              - generic [ref=f68e66] [cursor=pointer]
+          - heading "Introduction to exemplars" [level=1] [ref=f68e70]
+          - paragraph [ref=f68e71]: An exemplar is a specific trace representative of measurement taken in a given time interval. While metrics excel at giving you an aggregated view of your system, traces give you a fine grained view of a single request; exemplars are a way to link the two.
+          - paragraph [ref=f68e72]: Suppose your company website is experiencing a surge in traffic volumes. While more than eighty percent of the users are able to access the website in under two seconds, some users are experiencing a higher than normal response time resulting in bad user experience.
+          - paragraph [ref=f68e73]: To identify the factors that are contributing to the latency, you must compare a trace for a fast response against a trace for a slow response. Given the vast amount of data in a typical production environment, it’s an extremely laborious and time-consuming effort.
+          - paragraph [ref=f68e74]: Use exemplars to help isolate problems within your data distribution by pinpointing query traces exhibiting high latency within a time interval. After you localize the latency problem to a few exemplar traces, you can combine it with additional system based information or location properties to perform a root cause analysis faster, leading to quick resolutions to performance issues.
+          - paragraph [ref=f68e75]:
+            - text: Support for exemplars is available for the Prometheus data source only. After you enable the functionality, exemplar data is available by default. For more information on exemplar configuration and how to enable exemplars, refer to the Exemplars section in
+            - link "Prometheus configuration options" [ref=f68e76] [cursor=pointer]:
+              - /url: /docs/grafana/latest/datasources/prometheus/configure/#configuration-options
+            - text: .
+          - paragraph [ref=f68e77]:
+            - text: Grafana shows exemplars alongside a metric in the Explore view and in dashboards. Each exemplar displays as a highlighted star. You can hover your cursor over an exemplar to view the unique trace ID, which is a combination of a key value pair. To investigate further, click the blue button next to the
+            - code [ref=f68e78]: traceID
+            - text: property.
+          - figure [ref=f68e79]:
+            - link "Screenshot showing the detail window of an exemplar Screenshot showing the detail window of an exemplar" [ref=f68e80] [cursor=pointer]:
+              - /url: /media/docs/grafana/exemplars/screenshot-exemplars.png
+              - img "Screenshot showing the detail window of an exemplar" [ref=f68e82]
+              - generic [ref=f68e83]: Screenshot showing the detail window of an exemplar
+          - paragraph [ref=f68e84]:
+            - text: Refer to
+            - link "View exemplar data" [ref=f68e85] [cursor=pointer]:
+              - /url: "#view-exemplar-data"
+            - text: for instructions on how to drill down and view exemplar trace details from metrics and logs. To know more about exemplars, refer to the blog post
+            - link "Intro to exemplars, which enable Grafana Tempo’s distributed tracing at massive scale" [ref=f68e86] [cursor=pointer]:
+              - /url: /blog/2021/03/31/intro-to-exemplars-which-enable-grafana-tempos-distributed-tracing-at-massive-scale/
+            - text: .
+          - heading "View exemplar data" [level=2] [ref=f68e87]
+          - paragraph [ref=f68e88]: When support for exemplar support is enabled for a Prometheus data source, you can view exemplar data either in the Explore view or from the Loki log details.
+          - heading "In Explore" [level=3] [ref=f68e89]
+          - paragraph [ref=f68e90]:
+            - text: Explore visualizes exemplar traces as highlighted stars alongside metrics data. For more information on how Explore visualizes trace data, refer to
+            - link "Tracing in Explore" [ref=f68e91] [cursor=pointer]:
+              - /url: ../../explore/trace-integration/
+            - text: .
+          - paragraph [ref=f68e92]: "To examine the details of an exemplar trace:"
+          - list [ref=f68e93]:
+            - listitem [ref=f68e94]:
+              - paragraph [ref=f68e95]:
+                - text: Place your cursor over an exemplar (highlighted star). Depending on the trace data source you are using, you may see a blue button with the label
+                - code [ref=f68e96]: Query with <DATA SOURCE NAME>
+                - text: . In the following example, the tracing data source is Tempo.
+              - figure [ref=f68e97]:
+                - link "Screenshot showing exemplar details" [ref=f68e98] [cursor=pointer]:
+                  - /url: /media/docs/grafana/exemplars/screenshot-exemplar-details.png
+            - listitem [ref=f68e101]:
+              - paragraph [ref=f68e102]:
+                - text: Click the
+                - strong [ref=f68e103]: Query with Tempo
+                - text: option next to the
+                - code [ref=f68e104]: traceID
+                - text: property. The trace details, including the spans within the trace are listed in a separate panel on the right.
+              - figure [ref=f68e105]:
+                - link "Explorer view with panel showing trace details" [ref=f68e106] [cursor=pointer]:
+                  - /url: /media/docs/grafana/exemplars/screenshot-exemplar-explore-view.png
+          - paragraph [ref=f68e109]:
+            - text: For more information on how to drill down and analyze the trace and span details, refer to the
+            - link "Analyze trace and span details" [ref=f68e110] [cursor=pointer]:
+              - /url: "#analyze-trace-and-spans"
+            - text: section.
+          - heading "In logs" [level=3] [ref=f68e111]
+          - paragraph [ref=f68e112]:
+            - text: You can also view exemplar trace details from the Loki logs in Explore. Use regular expressions within the Derived fields links for Loki to extract the
+            - code [ref=f68e113]: traceID
+            - text: information. Now when you expand Loki logs, you can see a
+            - code [ref=f68e114]: traceID
+            - text: property under the
+            - strong [ref=f68e115]: Detected fields
+            - text: section. To learn more about how to extract a part of a log message into an internal or external link, refer to
+            - link "using derived fields in Loki" [ref=f68e116] [cursor=pointer]:
+              - /url: ../../explore/logs-integration/
+            - text: .
+          - paragraph [ref=f68e117]: "To view the details of an exemplar trace:"
+          - list [ref=f68e118]:
+            - listitem [ref=f68e119]:
+              - paragraph [ref=f68e120]:
+                - text: Expand a log line and scroll down to the
+                - code [ref=f68e121]: Fields
+                - text: section. Depending on your backend trace data source, you may see a blue button with the label
+                - code [ref=f68e122]: <DATA SOURCE NAME>
+                - text: .
+            - listitem [ref=f68e123]:
+              - paragraph [ref=f68e124]:
+                - text: Click the blue button next to the
+                - code [ref=f68e125]: traceID
+                - text: property. Typically, it has the name of the backend data source. In the following example, the tracing data source is Tempo. The trace details, including the spans within the trace are listed in a separate panel on the right.
+          - figure [ref=f68e126]:
+            - link "Explorer view with panel showing trace details" [ref=f68e127] [cursor=pointer]:
+              - /url: /media/docs/grafana/exemplars/screenshot-exemplar-loki-logs.png
+          - paragraph [ref=f68e130]:
+            - text: For more information on how to drill down and analyze the trace and span details, refer to the
+            - link "Analyze trace and span details" [ref=f68e131] [cursor=pointer]:
+              - /url: "#analyze-trace-and-spans"
+            - text: section.
+          - heading "Analyze trace and spans" [level=3] [ref=f68e132]
+          - paragraph [ref=f68e133]: This panel shows the details of the trace in different segments.
+          - list [ref=f68e134]:
+            - listitem [ref=f68e135]:
+              - paragraph [ref=f68e136]: The top segment displays the trace ID to indicate that the query results correspond to the specific trace.
+              - paragraph [ref=f68e137]:
+                - text: You can add more traces to the results using the
+                - code [ref=f68e138]: Add query
+                - text: button.
+            - listitem [ref=f68e139]:
+              - paragraph [ref=f68e140]: The next segment shows the entire span for the specific trace as a narrow strip. All levels of the trace from the client all the way down to database query is displayed, which provides a bird’s eye view of the time distribution across all layers over which the HTTP request was processed.
+              - list [ref=f68e141]:
+                - listitem [ref=f68e142]:
+                  - paragraph [ref=f68e143]: You can click within this strip view to display a magnified view of a smaller time segment within the span. This magnified view shows up in the bottom segment of the panel.
+                - listitem [ref=f68e144]:
+                  - paragraph [ref=f68e145]: In the magnified view, you can expand or collapse the various levels of the trace to drill down to the specific span of interest.
+                  - paragraph [ref=f68e146]: For example, if the strip view shows that most of the latency was within the app layer, you can expand the trace down the app layer to investigate the problem further. To expand a particular layer of span, click the left icon. The same button can collapse an expanded span.
+            - listitem [ref=f68e147]:
+              - paragraph [ref=f68e148]: To see the details of the span at any level, click the span itself.
+              - paragraph [ref=f68e149]: This displays additional metadata associated with the span. The metadata itself is initially shown in a narrow strip but you can see more details by clicking the metadata strip.
+              - figure [ref=f68e150]:
+                - link "Span details" [ref=f68e151] [cursor=pointer]:
+                  - /url: /media/docs/grafana/exemplars/screenshot-exemplar-span-details.png
+        - generic [ref=f68e155]:
+          - generic [ref=f68e156]:
+            - heading "Was this page helpful?" [level=2] [ref=f68e157]
+            - generic [ref=f68e158]:
+              - button [ref=f68e159] [cursor=pointer]:
+                - generic [ref=f68e160]:
+                  - img "👍" [ref=f68e161]
+                  - text: "Yes"
+              - button [ref=f68e162] [cursor=pointer]:
+                - generic [ref=f68e163]:
+                  - img "👎" [ref=f68e164]
+                  - text: "No"
+          - generic [ref=f68e166]:
+            - link "Suggest an edit in GitHub" [ref=f68e167] [cursor=pointer]:
+              - /url: https://github.com/grafana/grafana/edit/release-13.2.4/docs/sources/fundamentals/exemplars/index.md
+            - link "Create a GitHub issue" [ref=f68e174] [cursor=pointer]:
+              - /url: https://github.com/grafana/grafana/issues/new?title=Documentation%20feedback:%20/docs/sources/fundamentals/exemplars/index.md
+            - link "Email docs@grafana.com" [ref=f68e180] [cursor=pointer]:
+              - /url: mailto:docs@grafana.com
+            - link "Help and support" [ref=f68e188] [cursor=pointer]:
+              - /url: /help/
+            - link "Community" [ref=f68e194] [cursor=pointer]:
+              - /url: /community/
+          - generic [ref=f68e206]:
+            - heading "Related resources from Grafana Labs" [level=2] [ref=f68e207]
+            - generic [ref=f68e208]: "Additional helpful documentation, links, and articles:"
+            - generic [ref=f68e209]:
+              - 'link "video icon Video Getting started with managing your metrics, logs, and traces using Grafana In this webinar, we’ll demo how to get started using the LGTM Stack: Loki for logs, Grafana for visualization, Tempo for traces, and Mimir for metrics." [ref=f68e210] [cursor=pointer]':
+                - /url: https://grafana.com/go/webinar/getting-started-with-grafana-lgtm-stack/?pg=docs-grafana-latest-fundamentals-exemplars&plcmt=related
+                - generic [ref=f68e212]:
+                  - generic [ref=f68e214]:
+                    - img "video icon" [ref=f68e217]
+                    - generic [ref=f68e218]: Video
+                  - generic [ref=f68e221]:
+                    - generic [ref=f68e222]: Getting started with managing your metrics, logs, and traces using Grafana
+                    - generic [ref=f68e223]: "In this webinar, we’ll demo how to get started using the LGTM Stack: Loki for logs, Grafana for visualization, Tempo for traces, and Mimir for metrics."
+              - link "video icon Video Getting started with Grafana dashboard design In this webinar, you'll learn how to design stylish and easily accessible Grafana dashboards that tell a story." [ref=f68e224] [cursor=pointer]:
+                - /url: https://grafana.com/go/webinar/getting-started-with-grafana-dashboard-design/?pg=docs-grafana-latest-fundamentals-exemplars&plcmt=related-2
+                - generic [ref=f68e226]:
+                  - generic [ref=f68e228]:
+                    - img "video icon" [ref=f68e231]
+                    - generic [ref=f68e232]: Video
+                  - generic [ref=f68e235]:
+                    - generic [ref=f68e236]: Getting started with Grafana dashboard design
+                    - generic [ref=f68e237]: In this webinar, you'll learn how to design stylish and easily accessible Grafana dashboards that tell a story.
+              - link "video icon Video Building advanced Grafana dashboards In this webinar, we’ll demo how to build and format Grafana dashboards." [ref=f68e238] [cursor=pointer]:
+                - /url: https://grafana.com/go/webinar/building-advanced-grafana-dashboards/?pg=docs-grafana-latest-fundamentals-exemplars&plcmt=related-3
+                - generic [ref=f68e240]:
+                  - generic [ref=f68e242]:
+                    - img "video icon" [ref=f68e245]
+                    - generic [ref=f68e246]: Video
+                  - generic [ref=f68e249]:
+                    - generic [ref=f68e250]: Building advanced Grafana dashboards
+                    - generic [ref=f68e251]: In this webinar, we’ll demo how to build and format Grafana dashboards.
+    - text: →
+  - contentinfo [ref=f68e252]:
+    - contentinfo "Site footer" [ref=f68e254]:
+      - generic [ref=f68e255]:
+        - generic [ref=f68e257]:
+          - generic [ref=f68e259]:
+            - generic [ref=f68e260]:
+              - heading "Still have questions?" [level=3] [ref=f68e261]
+              - paragraph [ref=f68e262]: Ask your questions. Let AI do the heavy lifting.
+            - generic [ref=f68e263]:
+              - img "Ask AI icon" [ref=f68e264]
+              - textbox "How do I get started with Grafana?" [ref=f68e265]
+              - button "Submit" [ref=f68e266] [cursor=pointer]
+          - generic [ref=f68e269]:
+            - generic [ref=f68e270]:
+              - img "Newsletter icon" [ref=f68e271]
+              - generic [ref=f68e272]:
+                - heading "Get every update" [level=3] [ref=f68e273]
+                - paragraph [ref=f68e274]: Subscribe to our newsletter
+            - generic [ref=f68e276]:
+              - textbox "Email" [ref=f68e277]
+              - button "Subscribe" [ref=f68e278] [cursor=pointer]
+            - paragraph [ref=f68e280]:
+              - text: By submitting, you agree to our
+              - link "Privacy policy" [ref=f68e281] [cursor=pointer]:
+                - /url: /legal/privacy-policy/
+        - generic [ref=f68e283]:
+          - generic [ref=f68e284]:
+            - heading "Grafana Cloud" [level=3] [ref=f68e285]
+            - list [ref=f68e286]:
+              - listitem [ref=f68e287]:
+                - link "Overview" [ref=f68e288] [cursor=pointer]:
+                  - /url: /products/cloud/
+              - listitem [ref=f68e289]:
+                - link "Pricing" [ref=f68e290] [cursor=pointer]:
+                  - /url: /pricing/
+              - listitem [ref=f68e291]:
+                - link "What's in the free tier?" [ref=f68e292] [cursor=pointer]:
+                  - /url: /products/cloud/free-tier
+              - listitem [ref=f68e293]:
+                - link "AI Assistant" [ref=f68e294] [cursor=pointer]:
+                  - /url: /products/cloud/ai-assistant
+              - listitem [ref=f68e295]:
+                - link "Agent Observability" [ref=f68e296] [cursor=pointer]:
+                  - /url: /products/cloud/agent-observability
+              - listitem [ref=f68e297]:
+                - link "Application Observability" [ref=f68e298] [cursor=pointer]:
+                  - /url: /products/cloud/application-observability
+              - listitem [ref=f68e299]:
+                - link "Kubernetes Monitoring" [ref=f68e300] [cursor=pointer]:
+                  - /url: /products/cloud/kubernetes
+              - listitem [ref=f68e301]:
+                - link "Dashboards & Visualization" [ref=f68e302] [cursor=pointer]:
+                  - /url: /products/cloud/grafana
+              - listitem [ref=f68e303]:
+                - link "Database Observability" [ref=f68e304] [cursor=pointer]:
+                  - /url: /products/cloud/database-observability
+              - listitem [ref=f68e305]:
+                - link "Frontend Observability" [ref=f68e306] [cursor=pointer]:
+                  - /url: /products/cloud/frontend-observability
+              - listitem [ref=f68e307]:
+                - link "Synthetic Monitoring" [ref=f68e308] [cursor=pointer]:
+                  - /url: /products/cloud/synthetic-monitoring
+              - listitem [ref=f68e309]:
+                - link "Performance & Load Testing" [ref=f68e310] [cursor=pointer]:
+                  - /url: /products/cloud/performance-load-testing-k6
+              - listitem [ref=f68e311]:
+                - link "Incident Response & Management" [ref=f68e312] [cursor=pointer]:
+                  - /url: /products/cloud/irm
+              - listitem [ref=f68e313]:
+                - link "AI Investigations" [ref=f68e314] [cursor=pointer]:
+                  - /url: /products/cloud/investigations
+              - listitem [ref=f68e315]:
+                - link "What’s New" [ref=f68e316] [cursor=pointer]:
+                  - /url: /whats-new/
+              - listitem [ref=f68e317]:
+                - link "Grafana Cloud Status" [ref=f68e318] [cursor=pointer]:
+                  - /url: https://status.grafana.com/
+          - generic [ref=f68e319]:
+            - heading "Solutions" [level=3] [ref=f68e320]
+            - list [ref=f68e321]:
+              - listitem [ref=f68e322]:
+                - link "AI Observability" [ref=f68e323] [cursor=pointer]:
+                  - /url: /products/cloud/ai-tools-for-observability
+              - listitem [ref=f68e324]:
+                - link "Full-Stack Observability" [ref=f68e325] [cursor=pointer]:
+                  - /url: /solutions/full-stack-observability
+              - listitem [ref=f68e326]:
+                - link "Infrastructure & Cloud Observability" [ref=f68e327] [cursor=pointer]:
+                  - /url: /solutions/cloud-infrastructure-observability
+              - listitem [ref=f68e328]:
+                - link "Cloud Provider Observability" [ref=f68e329] [cursor=pointer]:
+                  - /url: /solutions/cloud-provider-observability
+              - listitem [ref=f68e330]:
+                - link "Digital Experience Monitoring" [ref=f68e331] [cursor=pointer]:
+                  - /url: /solutions/digital-experience-monitoring
+              - listitem [ref=f68e332]:
+                - link "Scaled Prometheus" [ref=f68e333] [cursor=pointer]:
+                  - /url: /products/cloud/metrics#why-scale-metrics-with-grafana-cloud
+              - listitem [ref=f68e334]:
+                - link "Cost Management & Optimization" [ref=f68e335] [cursor=pointer]:
+                  - /url: /products/cloud/cost-management-optimization
+              - listitem [ref=f68e336]:
+                - link "Site Reliability" [ref=f68e337] [cursor=pointer]:
+                  - /url: /solutions/site-reliability
+              - listitem [ref=f68e338]:
+                - link "Log Management" [ref=f68e339] [cursor=pointer]:
+                  - /url: /products/cloud/logs
+              - listitem [ref=f68e340]:
+                - link "Migrate to OpenTelemetry" [ref=f68e341] [cursor=pointer]:
+                  - /url: /solutions/opentelemetry#migrate-to-open-telemetry
+          - generic [ref=f68e342]:
+            - heading "Integrations" [level=3] [ref=f68e343]
+            - list [ref=f68e344]:
+              - listitem [ref=f68e345]:
+                - link "All Integrations" [ref=f68e346] [cursor=pointer]:
+                  - /url: /integrations/
+              - listitem [ref=f68e347]:
+                - link "All Plugins" [ref=f68e348] [cursor=pointer]:
+                  - /url: /plugins/
+              - listitem [ref=f68e349]:
+                - link "AWS" [ref=f68e350] [cursor=pointer]:
+                  - /url: /integrations/cloud-monitoring-aws/
+              - listitem [ref=f68e351]:
+                - link "Google Cloud" [ref=f68e352] [cursor=pointer]:
+                  - /url: /integrations/cloud-monitoring-google-cloud/
+              - listitem [ref=f68e353]:
+                - link "Microsoft Azure" [ref=f68e354] [cursor=pointer]:
+                  - /url: /integrations/cloud-monitoring-microsoft-azure/
+              - listitem [ref=f68e355]:
+                - link "Kubernetes" [ref=f68e356] [cursor=pointer]:
+                  - /url: /products/cloud/kubernetes
+              - listitem [ref=f68e357]:
+                - link "Datadog" [ref=f68e358] [cursor=pointer]:
+                  - /url: /integrations/datadog/visualize/
+              - listitem [ref=f68e359]:
+                - link "New Relic" [ref=f68e360] [cursor=pointer]:
+                  - /url: /integrations/new-relic/visualize/
+          - generic [ref=f68e361]:
+            - heading "Open Source" [level=3] [ref=f68e362]
+            - list [ref=f68e363]:
+              - listitem [ref=f68e364]:
+                - link "Our Projects" [ref=f68e365] [cursor=pointer]:
+                  - /url: /oss/
+              - listitem [ref=f68e366]:
+                - link "GitHub" [ref=f68e367] [cursor=pointer]:
+                  - /url: https://github.com/grafana/
+              - listitem [ref=f68e368]:
+                - link "Downloads" [ref=f68e369] [cursor=pointer]:
+                  - /url: /get/
+              - listitem [ref=f68e370]:
+                - link "Dashboard Templates" [ref=f68e371] [cursor=pointer]:
+                  - /url: /grafana/dashboards/
+          - generic [ref=f68e372]:
+            - heading "Learn" [level=3] [ref=f68e373]
+            - list [ref=f68e374]:
+              - listitem [ref=f68e375]:
+                - link "Documentation" [ref=f68e376] [cursor=pointer]:
+                  - /url: /docs/
+              - listitem [ref=f68e377]:
+                - link "Blog" [ref=f68e378] [cursor=pointer]:
+                  - /url: /blog/
+              - listitem [ref=f68e379]:
+                - link "Community" [ref=f68e380] [cursor=pointer]:
+                  - /url: /community/
+              - listitem [ref=f68e381]:
+                - link "Events" [ref=f68e382] [cursor=pointer]:
+                  - /url: /events/
+              - listitem [ref=f68e383]:
+                - link "Observability Survey & Reports" [ref=f68e384] [cursor=pointer]:
+                  - /url: /observability-benefits-for-business/
+          - generic [ref=f68e385]:
+            - generic [ref=f68e386]:
+              - heading "Company" [level=3] [ref=f68e387]
+              - list [ref=f68e388]:
+                - listitem [ref=f68e389]:
+                  - link "About Grafana Labs" [ref=f68e390] [cursor=pointer]:
+                    - /url: /about/grafana-labs
+                - listitem [ref=f68e391]:
+                  - link "Careers" [ref=f68e392] [cursor=pointer]:
+                    - /url: /careers/
+                - listitem [ref=f68e393]:
+                  - link "Partnerships" [ref=f68e394] [cursor=pointer]:
+                    - /url: /partnerships/
+                - listitem [ref=f68e395]:
+                  - link "Newsroom" [ref=f68e396] [cursor=pointer]:
+                    - /url: /press/
+                - listitem [ref=f68e397]:
+                  - link "Success Stories" [ref=f68e398] [cursor=pointer]:
+                    - /url: /success/
+                - listitem [ref=f68e399]:
+                  - link "Contact Us" [ref=f68e400] [cursor=pointer]:
+                    - /url: /contact/
+                - listitem [ref=f68e401]:
+                  - link "Getting Help" [ref=f68e402] [cursor=pointer]:
+                    - /url: /help/
+                - listitem [ref=f68e403]:
+                  - link "Professional Services" [ref=f68e404] [cursor=pointer]:
+                    - /url: /professional-services/
+                - listitem [ref=f68e405]:
+                  - link "Hey AI" [ref=f68e406] [cursor=pointer]:
+                    - /url: /ai-info/
+            - generic [ref=f68e407]:
+              - heading "Compare" [level=3] [ref=f68e408]
+              - list [ref=f68e409]:
+                - listitem [ref=f68e410]:
+                  - link "Datadog vs. Grafana Cloud" [ref=f68e411] [cursor=pointer]:
+                    - /url: /compare/grafana-vs-datadog
+                - listitem [ref=f68e412]:
+                  - link "Dynatrace vs. Grafana Cloud" [ref=f68e413] [cursor=pointer]:
+                    - /url: /compare/grafana-vs-dynatrace
+                - listitem [ref=f68e414]:
+                  - link "Elasticsearch vs. Grafana Cloud" [ref=f68e415] [cursor=pointer]:
+                    - /url: /compare/grafana-vs-elastic
+                - listitem [ref=f68e416]:
+                  - link "New Relic vs. Grafana Cloud" [ref=f68e417] [cursor=pointer]:
+                    - /url: /compare/grafana-vs-new-relic
+                - listitem [ref=f68e418]:
+                  - link "PagerDuty vs. Grafana Cloud" [ref=f68e419] [cursor=pointer]:
+                    - /url: /compare/grafana-vs-pagerduty
+                - listitem [ref=f68e420]:
+                  - link "Splunk vs. Grafana Cloud" [ref=f68e421] [cursor=pointer]:
+                    - /url: /compare/grafana-vs-splunk
+        - generic [ref=f68e422]:
+          - generic [ref=f68e423]:
+            - generic:
+              - img "Grafana Labs x unique logomark"
+            - paragraph [ref=f68e425]:
+              - text: Donut take our word for it. Try
+              - link "Grafana Cloud" [ref=f68e426] [cursor=pointer]:
+                - /url: /products/cloud/
+              - text: today.
+          - generic [ref=f68e427]:
+            - generic [ref=f68e428]:
+              - navigation "Footer navigation" [ref=f68e429]:
+                - link "Grafana Cloud Status" [ref=f68e430] [cursor=pointer]:
+                  - /url: https://status.grafana.com/
+                - link "Legal & Security" [ref=f68e431] [cursor=pointer]:
+                  - /url: /legal/
+                - link "Terms of Service" [ref=f68e432] [cursor=pointer]:
+                  - /url: /legal/terms
+                - link "Privacy Policy" [ref=f68e433] [cursor=pointer]:
+                  - /url: /legal/privacy-policy
+                - link "Trademark Policy" [ref=f68e434] [cursor=pointer]:
+                  - /url: /trademark-policy/
+              - paragraph [ref=f68e436]: Copyright 2026 © Grafana Labs
+            - generic [ref=f68e437]:
+              - link "Facebook" [ref=f68e438] [cursor=pointer]:
+                - /url: https://www.facebook.com/grafana/
+              - link "X" [ref=f68e440] [cursor=pointer]:
+                - /url: https://twitter.com/grafana
+              - link "Linkedin" [ref=f68e442] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/grafana-labs/
+              - link "Github" [ref=f68e444] [cursor=pointer]:
+                - /url: https://github.com/grafana/
+              - link "Youtube" [ref=f68e446] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw
+              - link "Reddit" [ref=f68e448] [cursor=pointer]:
+                - /url: https://www.reddit.com/r/grafana/

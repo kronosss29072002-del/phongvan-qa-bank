@@ -1,0 +1,333 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - generic [ref=f8e4]:
+      - generic [ref=f8e5]:
+        - generic [ref=f8e6]:
+          - link "DuckDuckGo home" [ref=f8e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f8e8]: DuckDuckGo
+          - generic [ref=f8e15]:
+            - combobox "Search privately" [ref=f8e17]: UTM link shortener analytics track campaign traffic which channel brings signups
+            - button "Search" [ref=f8e19] [cursor=pointer]
+        - button "Open menu" [ref=f8e24] [cursor=pointer]
+      - navigation [ref=f8e32]:
+        - list [ref=f8e33]:
+          - listitem [ref=f8e34]:
+            - link [ref=f8e35] [cursor=pointer]:
+              - /url: /?q=UTM+link+shortener+analytics+track+campaign+traffic+which+channel+brings+signups&ia=web
+              - strong [ref=f8e36]: All
+          - listitem [ref=f8e39]:
+            - link [ref=f8e40] [cursor=pointer]:
+              - /url: /?q=UTM+link+shortener+analytics+track+campaign+traffic+which+channel+brings+signups&ia=images&iax=images
+              - strong [ref=f8e41]: Images
+          - listitem [ref=f8e42]:
+            - link [ref=f8e43] [cursor=pointer]:
+              - /url: /?q=UTM+link+shortener+analytics+track+campaign+traffic+which+channel+brings+signups&ia=videos&iax=videos
+              - strong [ref=f8e44]: Videos
+          - listitem [ref=f8e45]:
+            - link [ref=f8e46] [cursor=pointer]:
+              - /url: /?q=UTM+link+shortener+analytics+track+campaign+traffic+which+channel+brings+signups&iaxm=maps
+              - strong [ref=f8e47]: Maps
+        - list [ref=f8e48]:
+          - listitem [ref=f8e49]:
+            - link "Duck.ai" [ref=f8e51] [cursor=pointer]:
+              - /url: /?q=UTM+link+shortener+analytics+track+campaign+traffic+which+channel+brings+signups&ia=chat&entry=serp
+          - listitem [ref=f8e55]:
+            - button "Search Settings ✀" [ref=f8e57] [cursor=pointer]:
+              - generic [ref=f8e60]: Search Settings
+              - generic [ref=f8e61]: ✀
+    - generic [ref=f8e68]:
+      - navigation [ref=f8e70]:
+        - button [ref=f8e72] [cursor=pointer]:
+          - strong [ref=f8e79]: Private
+        - generic [ref=f8e83]:
+          - switch "Filter by the selected region" [ref=f8e87]
+          - button "Vietnam (en)" [ref=f8e89] [cursor=pointer]
+        - button [ref=f8e94] [cursor=pointer]:
+          - strong [ref=f8e96]: "Safe search: moderate"
+        - button [ref=f8e100] [cursor=pointer]:
+          - strong [ref=f8e102]: Any time
+      - generic [ref=f8e106]:
+        - list [ref=f8e107]:
+          - listitem [ref=f8e108]:
+            - article [ref=f8e109] [cursor=pointer]:
+              - button [ref=f8e111]
+              - generic [ref=f8e115]:
+                - link "Search domain analyticsformarketers.com" [ref=f8e117]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:analyticsformarketers.com
+                - generic [ref=f8e120]:
+                  - paragraph [ref=f8e121]: analyticsformarketers.com
+                  - link "https://analyticsformarketers.com › blog › utm-parameters" [ref=f8e122]:
+                    - /url: https://analyticsformarketers.com/blog/utm-parameters/
+                    - paragraph [ref=f8e124]:
+                      - generic [ref=f8e125]: https://analyticsformarketers.com
+                      - generic [ref=f8e126]: › blog › utm-parameters
+              - heading [level=2] [ref=f8e128]:
+                - 'link "UTM Parameters: How to Track Where Traffic Comes From" [ref=f8e129]':
+                  - /url: https://analyticsformarketers.com/blog/utm-parameters/
+              - generic [ref=f8e134]:
+                - text: Jul 15, 2026·
+                - generic [ref=f8e135]: Learn how to build UTM parameters that show which campaigns, emails, and social posts send traffic to your site, and where to see the results in GA4 reports.
+          - listitem [ref=f8e136]:
+            - article [ref=f8e137] [cursor=pointer]:
+              - button [ref=f8e139]
+              - generic [ref=f8e143]:
+                - link "Search domain support.google.com" [ref=f8e145]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:support.google.com
+                - generic [ref=f8e148]:
+                  - paragraph [ref=f8e149]: Google Support
+                  - link "https://support.google.com › analytics › answer › 10917952?hl=en-uk" [ref=f8e150]:
+                    - /url: https://support.google.com/analytics/answer/10917952?hl=en-uk
+                    - paragraph [ref=f8e152]:
+                      - generic [ref=f8e153]: https://support.google.com
+                      - generic [ref=f8e154]: › analytics › answer › 10917952?hl=en-uk
+              - heading [level=2] [ref=f8e156]:
+                - 'link "URL builders: Collect campaign data with custom URLs - Analytics Help" [ref=f8e157]':
+                  - /url: https://support.google.com/analytics/answer/10917952?hl=en-uk
+              - generic [ref=f8e159]: Discover how to use Google Analytics's URL builder to add utm parameters in order to identify the campaigns that refer traffic. By adding utm campaign parameters to the destination URLs...
+          - listitem [ref=f8e164]:
+            - article [ref=f8e165] [cursor=pointer]:
+              - button [ref=f8e167]
+              - generic [ref=f8e171]:
+                - link "Search domain hide.link" [ref=f8e173]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:hide.link
+                - generic [ref=f8e176]:
+                  - paragraph [ref=f8e177]: hide.link
+                  - link "https://hide.link › blog › utm-parameters-explained" [ref=f8e178]:
+                    - /url: https://hide.link/blog/utm-parameters-explained
+                    - paragraph [ref=f8e180]:
+                      - generic [ref=f8e181]: https://hide.link
+                      - generic [ref=f8e182]: › blog › utm-parameters-explained
+              - heading [level=2] [ref=f8e184]:
+                - 'link "UTM Parameters Explained: Track Your Campaigns (2026) - Hide.link" [ref=f8e185]':
+                  - /url: https://hide.link/blog/utm-parameters-explained
+              - generic [ref=f8e190]:
+                - text: Aug 8, 2026·
+                - generic [ref=f8e191]: UTM parameters tell you exactly where your traffic comes from. Learn what each UTM tag means, see examples, and avoid the most common mistakes.
+          - listitem [ref=f8e192]:
+            - article [ref=f8e193] [cursor=pointer]:
+              - button [ref=f8e195]
+              - generic [ref=f8e199]:
+                - link "Search domain u2l.ai" [ref=f8e201]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:u2l.ai
+                - generic [ref=f8e204]:
+                  - paragraph [ref=f8e205]: u2l.ai
+                  - link "https://u2l.ai › blog › utm-parameters-guide" [ref=f8e206]:
+                    - /url: https://u2l.ai/blog/utm-parameters-guide
+                    - paragraph [ref=f8e208]:
+                      - generic [ref=f8e209]: https://u2l.ai
+                      - generic [ref=f8e210]: › blog › utm-parameters-guide
+              - heading [level=2] [ref=f8e212]:
+                - link "How to Use UTM Parameters to Track Marketing Campaigns" [ref=f8e213]:
+                  - /url: https://u2l.ai/blog/utm-parameters-guide
+              - generic [ref=f8e215]: Learn what UTM parameters are, how to build them for every channel, and how to read the data in GA4. A practical 2026 guide with real campaign examples. UTM parameters are short tags you add to the end of a URL that tell analytics tools like Google Analytics 4 exactly where a click came from.
+          - listitem [ref=f8e220]:
+            - article [ref=f8e221] [cursor=pointer]:
+              - button [ref=f8e223]
+              - generic [ref=f8e227]:
+                - link "Search domain u2l.ai" [ref=f8e229]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:u2l.ai
+                - generic [ref=f8e232]:
+                  - paragraph [ref=f8e233]: u2l.ai
+                  - link "https://u2l.ai › blog › how-to-track-link-clicks" [ref=f8e234]:
+                    - /url: https://u2l.ai/blog/how-to-track-link-clicks
+                    - paragraph [ref=f8e236]:
+                      - generic [ref=f8e237]: https://u2l.ai
+                      - generic [ref=f8e238]: › blog › how-to-track-link-clicks
+              - heading [level=2] [ref=f8e240]:
+                - 'link "How to Track Link Clicks: Complete Guide (UTM + Analytics)" [ref=f8e241]':
+                  - /url: https://u2l.ai/blog/how-to-track-link-clicks
+              - generic [ref=f8e243]: "There are three reliable ways to track link clicks: use a URL shortener with built-in analytics (the simplest), append UTM parameters to your URLs and read the data in Google Analytics 4 (the most flexible), or fire a tracking pixel on the destination page (the most precise for attribution)."
+          - listitem [ref=f8e248]:
+            - article [ref=f8e249] [cursor=pointer]:
+              - button [ref=f8e251]
+              - generic [ref=f8e255]:
+                - link "Search domain meshalive.com" [ref=f8e257]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:meshalive.com
+                - generic [ref=f8e260]:
+                  - paragraph [ref=f8e261]: meshalive.com
+                  - link "https://meshalive.com › blog › utm-parameters-guide" [ref=f8e262]:
+                    - /url: https://meshalive.com/blog/utm-parameters-guide
+                    - paragraph [ref=f8e264]:
+                      - generic [ref=f8e265]: https://meshalive.com
+                      - generic [ref=f8e266]: › blog › utm-parameters-guide
+              - heading [level=2] [ref=f8e268]:
+                - 'link "UTM Parameters: The Complete Guide for 2026 | Meshalive" [ref=f8e269]':
+                  - /url: https://meshalive.com/blog/utm-parameters-guide
+              - generic [ref=f8e271]: UTM parameters are small tags you add to URLs so Google Analytics can tell you exactly which campaign, channel, and piece of content is driving traffic. Here is everything you need to know.
+          - listitem [ref=f8e276]:
+            - article [ref=f8e277] [cursor=pointer]:
+              - button [ref=f8e279]
+              - generic [ref=f8e283]:
+                - link "Search domain utmmanager.com" [ref=f8e285]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:utmmanager.com
+                - generic [ref=f8e288]:
+                  - paragraph [ref=f8e289]: utmmanager.com
+                  - link "https://utmmanager.com › blog › utm-tracking-the-complete-guide-to-campaign-tracking-with-examples" [ref=f8e290]:
+                    - /url: https://utmmanager.com/blog/utm-tracking-the-complete-guide-to-campaign-tracking-with-examples/
+                    - paragraph [ref=f8e292]:
+                      - generic [ref=f8e293]: https://utmmanager.com
+                      - generic [ref=f8e294]: › blog › utm-tracking-the-complete-guide-to-campaign-tracking-with-examples
+              - heading [level=2] [ref=f8e296]:
+                - 'link "UTM Tracking: The Complete Guide to Campaign Tracking (With Examples)" [ref=f8e297]':
+                  - /url: https://utmmanager.com/blog/utm-tracking-the-complete-guide-to-campaign-tracking-with-examples/
+              - generic [ref=f8e299]: "UTM tracking allows you to see exactly where your traffic comes from, which campaigns drive results, and which links actually convert. In this guide, you'll learn:"
+          - listitem [ref=f8e304]:
+            - article [ref=f8e305] [cursor=pointer]:
+              - button [ref=f8e307]
+              - generic [ref=f8e311]:
+                - link "Search domain seosearchlight.com" [ref=f8e313]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:seosearchlight.com
+                - generic [ref=f8e316]:
+                  - paragraph [ref=f8e317]: seosearchlight.com
+                  - link "https://seosearchlight.com › blog › utm-parameters-complete-guide" [ref=f8e318]:
+                    - /url: https://seosearchlight.com/blog/utm-parameters-complete-guide
+                    - paragraph [ref=f8e320]:
+                      - generic [ref=f8e321]: https://seosearchlight.com
+                      - generic [ref=f8e322]: › blog › utm-parameters-complete-guide
+              - heading [level=2] [ref=f8e324]:
+                - 'link "UTM Parameters Complete Guide: Track Every Campaign Click" [ref=f8e325]':
+                  - /url: https://seosearchlight.com/blog/utm-parameters-complete-guide
+              - generic [ref=f8e330]:
+                - text: Apr 1, 2026·
+                - generic [ref=f8e331]: UTM parameters are the five small tags you append to a URL that tell Google Analytics (and every other analytics platform) exactly where a visitor came from, what campaign drove them, and which specific ad or link they clicked. Without them, you are flying blind.
+          - listitem [ref=f8e332]:
+            - article [ref=f8e333] [cursor=pointer]:
+              - button [ref=f8e335]
+              - generic [ref=f8e339]:
+                - link "Search domain aroralabs.org" [ref=f8e341]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:aroralabs.org
+                - generic [ref=f8e344]:
+                  - paragraph [ref=f8e345]: aroralabs.org
+                  - link "https://aroralabs.org › blog › utm-tracking-guide" [ref=f8e346]:
+                    - /url: https://aroralabs.org/blog/utm-tracking-guide/
+                    - paragraph [ref=f8e348]:
+                      - generic [ref=f8e349]: https://aroralabs.org
+                      - generic [ref=f8e350]: › blog › utm-tracking-guide
+              - heading [level=2] [ref=f8e352]:
+                - 'link "UTM Parameters Explained: Track Every Click from Every Campaign" [ref=f8e353]':
+                  - /url: https://aroralabs.org/blog/utm-tracking-guide/
+              - generic [ref=f8e358]:
+                - text: May 9, 2026·
+                - generic [ref=f8e359]: A clear guide to all 5 UTM parameters, real examples for email, social, and paid campaigns, and the common mistakes that corrupt your analytics data.
+          - listitem [ref=f8e360]:
+            - article [ref=f8e361] [cursor=pointer]:
+              - button [ref=f8e363]
+              - generic [ref=f8e367]:
+                - link "Search domain lincs.io" [ref=f8e369]:
+                  - /url: /?q=UTM%20link%20shortener%20analytics%20track%20campaign%20traffic%20which%20channel%20brings%20signups+site:www.lincs.io
+                - generic [ref=f8e372]:
+                  - paragraph [ref=f8e373]: lincs.io
+                  - link "https://www.lincs.io › blog › how-to-use-utm-parameters-with-short-links" [ref=f8e374]:
+                    - /url: https://www.lincs.io/blog/how-to-use-utm-parameters-with-short-links
+                    - paragraph [ref=f8e376]:
+                      - generic [ref=f8e377]: https://www.lincs.io
+                      - generic [ref=f8e378]: › blog › how-to-use-utm-parameters-with-short-links
+              - heading [level=2] [ref=f8e380]:
+                - 'link "UTM Parameters Short Links: How to Track Campaigns Effectively | lincs.io" [ref=f8e381]':
+                  - /url: https://www.lincs.io/blog/how-to-use-utm-parameters-with-short-links
+              - generic [ref=f8e386]:
+                - text: Jul 15, 2026·
+                - generic [ref=f8e387]: Learn how to combine UTM parameters with short links to track campaign performance, measure ROI, and gain deeper insights into your traffic sources.
+        - button "More results" [ref=f8e390] [cursor=pointer]
+    - list [ref=f8e393]:
+      - button "Close menu" [ref=f8e394] [cursor=pointer]
+      - list [ref=f8e398]:
+        - listitem [ref=f8e399]: Search
+        - listitem [ref=f8e400]:
+          - link "Homepage" [ref=f8e401] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f8e402]:
+          - link "Themes" [ref=f8e403] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f8e404]:
+          - link "Settings" [ref=f8e405] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f8e406]:
+        - listitem [ref=f8e407]: Share Feedback
+        - listitem [ref=f8e408]:
+          - generic [ref=f8e411]:
+            - button "Positive feedback" [ref=f8e412] [cursor=pointer]
+            - button "Negative feedback" [ref=f8e416] [cursor=pointer]
+      - list [ref=f8e420]:
+        - listitem [ref=f8e421]: Downloads
+        - listitem [ref=f8e422]:
+          - link "iOS Browser" [ref=f8e423] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f8e424]:
+          - link "Android Browser" [ref=f8e425] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f8e426]:
+          - link "Mac Browser" [ref=f8e427] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f8e428]:
+          - link "Windows Browser" [ref=f8e429] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f8e430]:
+          - link "Browser Extensions" [ref=f8e431] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f8e432]:
+        - listitem [ref=f8e433]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f8e434]:
+          - link "Duck.ai" [ref=f8e435] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f8e436]:
+          - link "Email Protection" [ref=f8e437] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f8e438]:
+          - link "Newsletter" [ref=f8e439] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f8e440]:
+          - link "Blog" [ref=f8e441] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f8e442]:
+          - link "Podcast" [ref=f8e443] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f8e444]:
+          - link "Collaborations" [ref=f8e445] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f8e446]:
+        - listitem [ref=f8e447]: Learn More
+        - listitem [ref=f8e448]:
+          - link "What’s New" [ref=f8e449] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f8e450]:
+          - link "Compare Privacy" [ref=f8e451] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f8e452]:
+          - link "About Our Browser" [ref=f8e453] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f8e454]:
+          - link "About DuckDuckGo" [ref=f8e455] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f8e456]:
+        - listitem [ref=f8e457]: Other Resources
+        - listitem [ref=f8e458]:
+          - link "Help" [ref=f8e459] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f8e460]:
+          - link "Community" [ref=f8e461] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f8e462]:
+          - link "Careers" [ref=f8e463] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f8e464]:
+          - link "Privacy Policy" [ref=f8e465] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f8e466]:
+          - link "Terms of Service" [ref=f8e467] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f8e468]:
+          - link "Press Kit" [ref=f8e469] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f8e470]:
+          - link "Advertise on Search" [ref=f8e471] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f8e477]:
+    - generic [ref=f8e488]:
+      - heading "Introducing DuckDuckGo Collaborations" [level=3] [ref=f8e489]
+      - paragraph [ref=f8e490]: Expertly crafted products for people who give a duck about privacy.
+    - link "See More" [ref=f8e491] [cursor=pointer]:
+      - /url: https://duckduckgo.com/collaborations
+  - button "Share Feedback" [ref=f8e496] [cursor=pointer]

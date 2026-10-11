@@ -1,0 +1,960 @@
+- generic [active] [ref=f8e1]:
+  - link "Bỏ qua danh mục dự án" [ref=f8e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f8e3]:
+    - banner [ref=f8e4]:
+      - paragraph [ref=f8e5]: junior → junior-middle · catalog 2026
+      - heading "15 dự án thực tế để vượt junior" [level=1] [ref=f8e6]
+      - paragraph [ref=f8e7]:
+        - text: "Mỗi dự án ở đây là một bài toán có thật team từng gặp: business rule tường minh, deploy được, defend được trong phỏng vấn."
+        - strong [ref=f8e8]: Thứ tự đánh số là thứ tự học
+        - text: — nền tảng trước, flagship sau. Làm hết 78 tuần là đường dài; cách thực tế là làm nền tảng, chọn 1-2 intermediate theo hướng nghề, rồi chốt bằng một flagship.
+        - strong [ref=f8e9]: Mọi số tuần là tuần full-time
+        - text: (làm ~20h/tuần thì nhân ~2).
+      - list [ref=f8e10]:
+        - listitem [ref=f8e11]:
+          - generic [ref=f8e12]: "15"
+          - text: dự án đã spec + phản biện
+        - listitem [ref=f8e13]:
+          - generic [ref=f8e14]: "78"
+          - text: tuần full-time nếu làm tuần tự
+        - listitem [ref=f8e15]:
+          - generic [ref=f8e16]: 3/7/5
+          - text: nền tảng / trung cấp / flagship
+        - listitem [ref=f8e17]:
+          - generic [ref=f8e18]: TypeScript
+          - text: full-stack, một stack suốt lộ trình
+    - region "Bối cảnh thị trường" [ref=f8e19]:
+      - heading "Vì sao lộ trình này có hình dạng này" [level=2] [ref=f8e20]
+      - list [ref=f8e21]:
+        - listitem [ref=f8e22]:
+          - strong [ref=f8e23]: Junior + backend 36 việc, junior + React 8 việc
+          - text: trên ITviec — nên mọi dự án đều có API/DB depth, không frontend-only. itviec.com · 2026-10
+        - listitem [ref=f8e24]:
+          - strong [ref=f8e25]: Lương entry backend ~12,4 tr/tháng
+          - text: ", 1-2 năm lên ~25 tr — band tốt nhất cho người mới. ITviec Salary Report 2025-26"
+        - listitem [ref=f8e26]:
+          - strong [ref=f8e27]: Junior 276/704 tin tuyển
+          - text: ", Fresher chỉ 27 — vào bằng tag Junior, và 9/20 JD junior vẫn đòi 1-2+ năm kinh nghiệm → portfolio + OSS PR thay cho năm tháng. itviec.com · 2026-10"
+        - listitem [ref=f8e28]:
+          - strong [ref=f8e29]: Remote chỉ 19/704
+          - text: (VN); global board gần như không có role VN — đặt cược vào on-site/hybrid trong nước. itviec.com · 2026-10
+    - navigation "Lọc dự án" [ref=f8e30]:
+      - group "Lọc theo bậc" [ref=f8e31]:
+        - button "Tất cả" [pressed] [ref=f8e32] [cursor=pointer]
+        - button "Nền tảng" [ref=f8e33] [cursor=pointer]
+        - button "Trung cấp" [ref=f8e34] [cursor=pointer]
+        - button "Flagship" [ref=f8e35] [cursor=pointer]
+      - generic [ref=f8e36]:
+        - generic [ref=f8e37]: Tìm trong catalog
+        - searchbox "Tìm trong catalog" [ref=f8e38]
+        - status [ref=f8e39]: 15/15
+    - main [ref=f8e40]:
+      - heading "Danh mục 15 dự án" [level=2] [ref=f8e41]
+      - paragraph [ref=f8e42]: Số liệu trong ô "Câu chuyện phỏng vấn" là mục tiêu mẫu — đo lại trên code của bạn trước khi dùng trong phỏng vấn.
+      - list [ref=f8e43]:
+        - listitem [ref=f8e44]:
+          - article [ref=f8e45]:
+            - generic [ref=f8e46]:
+              - generic [ref=f8e47]: "#01"
+              - heading "ZoneCheck" [level=3] [ref=f8e48]
+              - generic [ref=f8e49]: Nền tảng
+              - generic [ref=f8e50]: 3 tuần
+              - generic [ref=f8e51]: geo
+            - paragraph [ref=f8e52]: "Đội vận hành của shop giao hàng cập nhật zone theo cách thủ công: nhân viên tra tay địa chỉ trên Google Maps rồi đoán phí ship, sai zone thì lỗ tiền hoặc khách hủy đơn, còn file zone nằm rải rác trong Excel do quản lý chỉnh tay. ZoneCheck cho khách nhập địa chỉ, hệ thống bắn điểm lên polygon vùng phục vụ (team ops import từ GeoJSON họ cấp, không phải khách tự vẽ) và trả về ngay phí ship + thời gian giao theo zone, ngoài vùng trả not deliverable rõ ràng thay vì im lặng. Dự án đáng làm vì nó buộc bạn dùng geo-query thật (point-in-polygon qua PostGIS ST_Contains, khoảng cách ST_DWithin trên geography) chứ không chỉ nhúng Google Maps, và business rule tính phí nằm hẳn trong backend với validation địa lý chặt."
+            - generic [ref=f8e53]:
+              - generic [ref=f8e54]:
+                - heading "Phạm vi" [level=4] [ref=f8e55]
+                - list [ref=f8e56]:
+                  - listitem [ref=f8e57]: "Admin khai báo zone giao hàng: tạo/sửa/xóa zone (tên, base fee, surcharge, ETA giao, polygon ring nhập tọa độ hoặc import GeoJSON) — v1 không vẽ polygon trên bản đồ; validate polygon tự khép kín, tối thiểu 3 điểm, không self-intersect (ST_IsValid)"
+                  - listitem [ref=f8e58]: "Chặn overlap: 2 polygon chồng nhau → trả 409 Conflict kèm zone_ids xung đột, pre-check dùng ST_Intersects(a, b) AND NOT ST_Touches(a, b) — bắt được cả zone chứa zone và vẫn cho 2 zone chung biên (ST_Overlaps bỏ lọt containment; EXCLUDE với operator bbox thì over-block nên không dùng làm enforcement); enforcement ở DB bằng trigger BEFORE INSERT/UPDATE query qua GiST index"
+                  - listitem [ref=f8e59]: "Tra cứu phí ship: khách nhập địa chỉ (chuỗi) → geocode qua Nominatim, fallback nhập tay tọa độ → điểm (lat, lng) chạy ST_Contains tìm zone → trả {zone, baseFee, surcharge, totalFee, etaHours, distanceKm}"
+                  - listitem [ref=f8e60]: "Phụ phí khoảng cách: cast geometry → geography (EPSG:4326) rồi ST_DWithin / ST_Distance tính theo mét (không có function ST_SphereDistance, và không tính trên geometry degrees — 5 độ ≈ 555km); điểm xa tâm zone trên 5km (hằng số SHIP_DISTANCE_THRESHOLD_KM) cộng surcharge; regression test khẳng định 5km không bằng 5 độ"
+                  - listitem [ref=f8e61]: "Ngoài vùng: điểm không thuộc polygon nào → HTTP 200 với {deliverable: false, reason: 'outside_service_area'} — không bao giờ silent-fail, không bao giờ trả phí mặc định"
+                  - listitem [ref=f8e62]: "Tie-break điểm nằm trên biên chung 2 zone: thử ST_Contains trước, fallback ST_Covers với sort zone_id ASC để kết quả xác định (không phụ thuộc thứ tự row); unit test cho điểm trên biên"
+                  - listitem [ref=f8e63]: "Auth JWT 2 role: admin CRUD zone + xem báo cáo, staff chỉ tra cứu phí (route tra cứu public-optional cho khách, log tra cứu gắn staff khi đăng nhập) — guard check role ở route, không chỉ giấu nút UI"
+                  - listitem [ref=f8e64]: "Import GeoJSON tuyến hành chính VN: nguồn dữ liệu và granularity (quận hay phường) được ghim trong README ngay tuần 1 (dữ liệu hành chính VN đổi lớn sau sáp nhập 2025, rủi ro link 404/bản cũ); batch insert trong 1 transaction, rollback toàn bộ nếu 1 feature invalid; endpoint import hoàn thiện ở tuần 3"
+                  - listitem [ref=f8e65]: "Trang tra cứu cho khách: nhập địa chỉ → map Leaflet hiển thị điểm + polygon zone khớp + bảng breakdown phí, copy kết quả dán vào đơn hàng"
+              - generic [ref=f8e66]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e67]
+                - list [ref=f8e68]:
+                  - listitem [ref=f8e69]: Tích hợp Google Maps paid Geocoding/Directions chính thức (dùng Nominatim free + nhập tay tọa độ fallback; tránh key + quota)
+                  - listitem [ref=f8e70]: Tích hợp đơn hàng / thanh toán / đẩy đơn sang shipper — ZoneCheck chỉ trả quote, không tạo đơn
+                  - listitem [ref=f8e71]: Tính phí theo trọng lượng hay kilometer đường đi thật (chỉ dùng khoảng cách chim bay trên geography, không gọi routing API)
+                  - listitem [ref=f8e72]: Vẽ/sửa polygon trực tiếp trên bản đồ (Leaflet.draw) — v1 chỉ nhập tọa độ ring + import GeoJSON
+                  - listitem [ref=f8e73]: Realtime tracking ship, websocket, bản đồ mobile app
+                  - listitem [ref=f8e74]: Đa chi nhánh / đa cửa hàng — 1 cửa hàng, 1 set zone
+                  - listitem [ref=f8e75]: OAuth social login, phân quyền phức tạp hơn 2 role
+            - generic [ref=f8e76]:
+              - generic [ref=f8e77]:
+                - generic [ref=f8e78]: Stack
+                - generic [ref=f8e79]: Next.js 15 (App Router, map Leaflet + react-leaflet) + NestJS 11 API (DTO class-validator, ValidationPipe whitelist + forbidNonWhitelisted, global exception filter map Prisma P2002→409 / P2025→404) + PostgreSQL 16 với extension PostGIS, Prisma 7 (raw SQL cho ST_* qua $queryRaw tagged template), Docker Compose (postgis/postgis + api + web), GitHub Actions CI (lint, typecheck, unit test service, e2e tra cứu phí với PostGIS service container), deploy web trên Vercel + API/DB trên VPS (Caddy/Nginx), env validated at startup, /health + /ready, Vitest (unit test), Playwright (e2e smoke)
+              - generic [ref=f8e80]:
+                - generic [ref=f8e81]: Kỹ năng
+                - generic [ref=f8e82]: "PostGIS geo-query: ST_Contains / ST_Covers (point-in-polygon), ST_Intersects + ST_Touches (phát hiện overlap bao gồm containment), ST_IsValid validate polygon"
+                - generic [ref=f8e83]: "Đo khoảng cách đúng: cast geometry → geography rồi ST_DWithin / ST_Distance theo mét, hiểu bẫy degrees-vs-km trên EPSG:4326"
+                - generic [ref=f8e84]: "Thiết kế schema địa lý: column geometry(Polygon, 4326), GiST index cho spatial lookup, trigger BEFORE INSERT/UPDATE chặn overlap tại DB"
+                - generic [ref=f8e85]: "NestJS backend chuẩn: DTO class + ValidationPipe, guard JWT 2 role, global exception filter map Prisma error code, unit test mock PrismaService by token"
+                - generic [ref=f8e86]: Raw SQL an toàn qua Prisma $queryRaw tagged template (tránh SQL injection với input tọa độ)
+                - generic [ref=f8e87]: Transaction batch import GeoJSON — 1 feature invalid rollback toàn bộ
+                - generic [ref=f8e88]: "Business rule tính phí tách pure function để unit test: base + zone surcharge + distance surcharge, hằng số có tên"
+                - generic [ref=f8e89]: "Xử lý input địa lý không hoàn hảo: tọa độ ngoài bbox, geocode fail → fallback nhập tay, error message actionable"
+                - generic [ref=f8e90]: Next.js + Leaflet map integration, tách map component khỏi logic tính phí
+                - generic [ref=f8e91]: Docker Compose multi-service với PostGIS image, CI chạy e2e với service container
+            - blockquote [ref=f8e92]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e93]
+              - paragraph [ref=f8e94]: "Địa chỉ giao hàng không phải điểm chuẩn — nó rơi vào vùng, và bài kinh điển là tìm polygon chứa point. Ban đầu mình định loop polygon trong JS (ray-casting tay), nhưng N zone × M tra cứu thành bottleneck và mớ polygon chồng nhau khó kiểm tra overlap trong application code. Quyết định: đẩy toàn bộ xuống PostGIS, ST_Contains với GiST index để lookup log n, và chặn overlap lúc validate zone bằng ST_Intersects AND NOT ST_Touches (bắt cả zone chứa zone, vẫn cho zone chung biên) cộng trigger BEFORE INSERT/UPDATE nên không bao giờ commit được 2 zone chồng. Khó nhất là điểm nằm exactly trên biên polygon: ST_Contains trả false, ST_Intersects trả true khiến quote lúc được lúc không, mình chuẩn hóa bằng ST_Covers cho phép biên, thêm tie-break sort zone_id ASC để kết quả xác định bất kể thứ tự row, kèm regression test cho điểm biên. Một bài học khác: ban đầu mình đo khoảng cách bằng ST_DDistance trên geometry 4326 nên 5km thành 5 độ (≈555km), surcharge sai hết, fix bằng cast sang geography và có test khẳng định 5km không bằng 5 độ. Kết quả đo được trong benchmark (ghi vào README ngay khi đo): tra cứu 500 địa chỉ trong 1 transaction dưới 300ms (trước đó loop JS + external geocode ~4s), overlap bị chặn 100% ở DB thay vì phát hiện khi render map, và mọi quote trả breakdown đầy đủ base + surcharge + distance nên nhân viên không còn đoán phí ship."
+            - paragraph [ref=f8e95]:
+              - generic [ref=f8e96]: REALITY
+              - generic [ref=f8e97]: Nếu chưa quen PostGIS, tuần 1 sẽ trễ hơn dự kiến ở phần validate polygon + GiST index — 3 tuần này chỉ khả thi khi không nhận thêm việc khác, và benchmark chỉ được ghi vào README sau khi thật sự đo.
+            - group [ref=f8e98]:
+              - generic "Mở rộng sau (5 mục)" [ref=f8e99] [cursor=pointer]
+            - group [ref=f8e100]:
+              - generic "Ghi chú deploy" [ref=f8e101] [cursor=pointer]
+        - listitem [ref=f8e102]:
+          - article [ref=f8e103]:
+            - generic [ref=f8e104]:
+              - generic [ref=f8e105]: "#02"
+              - heading "MediSlot" [level=3] [ref=f8e106]
+              - generic [ref=f8e107]: Nền tảng
+              - generic [ref=f8e108]: 4 tuần
+              - generic [ref=f8e109]: scheduling
+            - paragraph [ref=f8e110]: "Phòng khám nhỏ vẫn ghi lịch hẹn bằng sổ tay hoặc tin nhắn, nên hai người có thể cùng giữ một khung giờ với bác sĩ và nhân viên phải gọi điện xác nhận thủ công. MediSlot là trang đặt lịch khám nơi bệnh nhân tự chọn slot trống theo ngày/dịch vụ/bác sĩ, và hệ thống chặn double-book ngay ở tầng database (partial unique index + transaction) thay vì chỉ check-if-exists trong service — đây chính là điểm khiến dự án đáng giá trong phỏng vấn: bạn chứng minh hiểu race condition thật sự và biết cách để DB là người quyết định, không phải code."
+            - generic [ref=f8e111]:
+              - generic [ref=f8e112]:
+                - heading "Phạm vi" [level=4] [ref=f8e113]
+                - list [ref=f8e114]:
+                  - listitem [ref=f8e115]: Sinh slot tự động theo khung giờ làm việc của từng bác sĩ (VD 8:00–11:30, 13:30–17:00), chia theo duration của dịch vụ (khám tổng quát 20 phút, siêu âm 40 phút) cộng buffer chuyển phòng 5 phút — admin sửa khung giờ thì slot tương lai sinh lại
+                  - listitem [ref=f8e116]: Booking đã xác nhận không bao giờ bị hủy hoặc hẹn lại ngầm bởi thay đổi khung giờ hay bật blackout; thay đổi chỉ tác động slot available tương lai, và slot generator không sinh giờ chồng lên booking hiện có (block ở tầng tạo slot); conflict còn lại admin tự xử lý thủ công
+                  - listitem [ref=f8e117]: "Đặt lịch chống trùng: mỗi slot chỉ đặt được 1 lần bằng partial unique index trên (doctorId, startAt) chỉ khi status = 'booked' trong bảng Booking + transaction, map lỗi Prisma P2002 → HTTP 409; stress test 2 request song song cùng slot thì đúng 1 request thành công"
+                  - listitem [ref=f8e118]: "Quy tắc hủy/đổi: hủy miễn phí trước giờ khám từ 2 giờ trở lên (slot trả về available), dưới 2 giờ chặn với thông báo rõ; lịch đã qua không cho hủy, chỉ admin đánh dấu no-show"
+                  - listitem [ref=f8e119]: "Ràng buộc thời gian đặt: chỉ nhận lịch trong tương lai và trong vòng 30 ngày tới, từ chối request giả lập clock trước quá khứ hoặc vượt 30 ngày"
+                  - listitem [ref=f8e120]: Blackout ngày nghỉ lễ VN hardcode trong seed + admin CRUD bật/tắt blackout theo ngày, slot trong ngày blackout không hiển thị cho bệnh nhân
+                  - listitem [ref=f8e121]: "Auth 2 roles: bệnh nhân đăng nhập bằng JWT (email + password, seed sẵn), admin qua role claim; guard phân quyền trang admin dashboard"
+                  - listitem [ref=f8e122]: "Admin dashboard: liệt kê lịch theo ngày với 3 trạng thái (booked / cancelled / no-show), filter theo bác sĩ, đếm nhanh số lịch trong ngày"
+              - generic [ref=f8e123]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e124]
+                - list [ref=f8e125]:
+                  - listitem [ref=f8e126]: Gửi email/SMS nhắc lịch (twilio, resend) — chỉ hiển thị trạng thái trên UI
+                  - listitem [ref=f8e127]: Thanh toán online hoặc bảo hiểm — đặt lịch hoàn toàn miễn phí, không có flow tiền
+                  - listitem [ref=f8e128]: Đặt lịch cho nhiều bác sĩ cùng lúc / gói khám (bundle) — mỗi booking đúng 1 bác sĩ, 1 dịch vụ
+                  - listitem [ref=f8e129]: Video call / hồ sơ bệnh án / EMR — đây là booking tool, không phải hệ thống y tế đầy đủ
+                  - listitem [ref=f8e130]: OTP qua SMS/Email thật (mock cũng không) — chỉ giữ JWT password cho gọn scope
+            - generic [ref=f8e131]:
+              - generic [ref=f8e132]:
+                - generic [ref=f8e133]: Stack
+                - generic [ref=f8e134]: "Next.js 15 (App Router) frontend + NestJS 11 API + PostgreSQL với Prisma 7 — partial unique index khai bằng @@unique([doctorId, startAt], where: raw('status = 'booked'')) với previewFeatures partialIndexes, hoặc raw SQL migration CREATE UNIQUE INDEX ... WHERE status = 'booked' (ghi rõ trong README dạng nào được Prisma Migrate quản lý) + Docker Compose (postgres + api + web) + GitHub Actions CI (lint, typecheck, prisma validate, chạy test), deploy web lên Vercel + API lên VPS/Fly.io, Vitest (unit test), Playwright (e2e smoke)"
+              - generic [ref=f8e135]:
+                - generic [ref=f8e136]: Kỹ năng
+                - generic [ref=f8e137]: "Thiết kế DB chống race condition: partial unique index + transaction callback-style thay vì check-then-insert"
+                - generic [ref=f8e138]: Map lỗi Prisma sang HTTP đúng ngữ nghĩa qua global exception filter (P2002→409, P2025→404)
+                - generic [ref=f8e139]: NestJS module/DTO/ValidationPipe discipline, guard phân quyền theo role claim
+                - generic [ref=f8e140]: "Domain logic có business rule: state machine nhẹ của booking (available → booked → cancelled / no-show) với ràng buộc thời gian và quy tắc không đụng booking đã xác nhận khi đổi khung giờ"
+                - generic [ref=f8e141]: Prisma migration an toàn (expand-contract, seed dữ liệu 3 bác sĩ 2 dịch vụ + blackout Tết)
+                - generic [ref=f8e142]: Next.js App Router + form validation, gọi API typed, phân biệt client/server component
+                - generic [ref=f8e143]: "Viết integration test cho điều kiện race: 2 request song song cùng slot"
+                - generic [ref=f8e144]: Docker Compose multi-service + GitHub Actions CI pipeline
+            - blockquote [ref=f8e145]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e146]
+              - paragraph [ref=f8e147]: "Problem: phòng khám ghi lịch bằng sổ tay nên hay bị double-book, và version service đầu tiên của mình cũng vậy — code check findUnique rồi mới create, hai request đến gần nhau vẫn both pass. Quyết định: bỏ check-if-exists, đưa ràng buộc xuống database bằng partial unique index trên (doctorId, startAt) chỉ khi status = 'booked' (Prisma previewFeatures partialIndexes hoặc raw SQL migration), bắt lỗi P2002 trong Prisma transaction và map sang 409 Conflict. Khó nhất là viết được integration test chứng minh nó thật sự chặn: spawn 2 request song song cùng 1 slot, assert đúng 1 cái 201 và cái kia 409, lần đầu test này fail vì mình vẫn để race window giữa check và insert. Kết quả định lượng: 0 ca double-book trong 200 lần chạy song song, thời gian xử lý đặt lịch không đổi (~120ms), và README có đoạn ghi lại đúng tradeoff này (DB constraint mạnh hơn service check vì còn chặn được cả client khác, cron job, admin script trực tiếp DB)."
+            - paragraph [ref=f8e148]:
+              - generic [ref=f8e149]: REALITY
+              - generic [ref=f8e150]: Integration test 2 request song song trên CI dễ mất nửa ngày đầu vì connection pool mặc định chỉ trả 1 kết nối — chuẩn bị 2 connection/transaction thật trước, nếu không test sẽ fail ảo.
+            - group [ref=f8e151]:
+              - generic "Mở rộng sau (5 mục)" [ref=f8e152] [cursor=pointer]
+            - group [ref=f8e153]:
+              - generic "Ghi chú deploy" [ref=f8e154] [cursor=pointer]
+        - listitem [ref=f8e155]:
+          - article [ref=f8e156]:
+            - generic [ref=f8e157]:
+              - generic [ref=f8e158]: "#03"
+              - heading "LeadIntake CRM" [level=3] [ref=f8e159]
+              - generic [ref=f8e160]: Nền tảng
+              - generic [ref=f8e161]: 4 tuần
+              - generic [ref=f8e162]: CRM & sales pipelines
+            - paragraph [ref=f8e163]: "Nhân viên sales của một SMB nhỏ đang ghi lead vào sheet chung nên trùng email/SĐT, không biết ai đã liên hệ và để sót lead ngân sách cao. LeadIntake CRM là công cụ nội bộ: bắt lead từ form public, chặn trùng lặp ngay tại API (không im lặng gộp record), chấm điểm tự động theo nguồn + ngân sách, và buộc mọi deal đi qua pipeline 5 stage đúng luật chuyển trạng thái — vừa đủ nhỏ để một người dựng trong 4 tuần, vừa đủ backend depth (permission, state machine, Prisma error mapping) để defend trong phỏng vấn."
+            - generic [ref=f8e164]:
+              - generic [ref=f8e165]:
+                - heading "Phạm vi" [level=4] [ref=f8e166]
+                - list [ref=f8e167]:
+                  - listitem [ref=f8e168]: "Form capture lead công khai (tên, SĐT, email, nguồn, ngân sách): validate E.164 cho SĐT, email hợp lệ, nguồn thuộc {ads, referral, organic}, ngân sách là số dương; anonymous POST kèm rate limit 10 req/phút/IP qua @nestjs/throttler"
+                  - listitem [ref=f8e169]: "Chống trùng lặp lúc tạo: chuẩn hóa SĐT về E.164 rồi so email/phone với record đã có; nếu trùng → HTTP 409 kèm leadId + tên record gợi ý, không bao giờ tự gộp im lặng; pre-check vẫn có race nên bắt cả unique constraint P2002 → 409"
+                  - listitem [ref=f8e170]: "Chấm điểm server-side: điểm = nguồn (ads 10 / referral 20 / organic 5) + điểm ngân sách theo thang exclusive, ưu tiên ngưỡng cao hơn: dưới 2 triệu +0, từ 2 triệu đến dưới 500 triệu +15, từ 500 triệu trở lên +30 (lead 600 triệu được +30, lead 3 triệu được +15); tính lại mỗi khi nguồn hoặc ngân sách đổi; client không gửi được trường điểm"
+                  - listitem [ref=f8e171]: "Pipeline 5 stage New → Contacted → Qualified → Proposal → Won/Lost với full transition matrix tường minh — allowed set: New→Contacted, Contacted→Qualified, Qualified→Proposal, Proposal→Won, Qualified→Lost, Proposal→Lost; không có transition ngược, không nhảy cột (New→Won bị chặn), Won/Lost là terminal (không reopen); vi phạm trả 400 kèm transition bị chặn, mọi transition hợp lệ tự ghi activity system"
+                  - listitem [ref=f8e172]: "Auth: POST /auth/login + seed 2 user (owner / staff), JWT guard cho mọi route ngoài form public"
+                  - listitem [ref=f8e173]: "Quyền 2 role JWT (owner/staff): staff chỉ đọc/sửa/xóa lead và thêm activity cho lead mình tạo (403 khi chạm lead khác), owner toàn quyền; check bằng guard + decorator trên mọi write, không dựa vào frontend"
+                  - listitem [ref=f8e174]: "Activity timeline append-only: mỗi lần đổi stage hoặc thêm ghi chú/call (người thực hiện, thời điểm, nội dung) tạo 1 bản ghi; không cho sửa/xóa activity đã ghi"
+                  - listitem [ref=f8e175]: "Filter + phân trang: 4 filter (stage, nguồn, khoảng ngày tạo, khoảng điểm) + 2 sort (điểm hoặc ngày tạo); response trả total để dựng pagination UI"
+                  - listitem [ref=f8e176]: Export CSV theo đúng bộ filter hiện tại, chạy dưới quyền người dùng (staff chỉ export được lead của mình)
+              - generic [ref=f8e177]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e178]
+                - list [ref=f8e179]:
+                  - listitem [ref=f8e180]: Gửi email/Zalo thật (webhook, template, scheduler) — activity chỉ ghi tay, giữ scope backend-focused
+                  - listitem [ref=f8e181]: Multi-tenant nhiều công ty, mời thành viên, thêm role ngoài owner/staff
+                  - listitem [ref=f8e182]: Realtime (WebSocket/SSE) — list refetch sau mỗi mutation
+                  - listitem [ref=f8e183]: Dashboard BI nâng cao (funnel chart, cohort retention) — chỉ đếm số lead theo stage
+                  - listitem [ref=f8e184]: OAuth social login, UI merge lead trùng thủ công, mobile app/PWA offline
+            - generic [ref=f8e185]:
+              - generic [ref=f8e186]:
+                - generic [ref=f8e187]: Stack
+                - generic [ref=f8e188]: "React + Vite (TypeScript) · NestJS 11 (class-validator + global ValidationPipe, JWT guard, @nestjs/throttler cho rate limit) · PostgreSQL + Prisma 7 · Docker Compose · GitHub Actions CI · deploy: Vercel (web) + Render/VPS (API) + Neon Postgres, Vitest (unit test), Playwright (e2e smoke)"
+              - generic [ref=f8e189]:
+                - generic [ref=f8e190]: Kỹ năng
+                - generic [ref=f8e191]: "NestJS 11: module structure, DTO class + class-validator, guard + custom decorator cho role/ownership"
+                - generic [ref=f8e192]: "Prisma 7: schema modeling với unique constraint (email, phone chuẩn hóa E.164), transaction callback-style cho create có dedupe"
+                - generic [ref=f8e193]: "Map Prisma error → HTTP qua global exception filter: P2002 → 409 (kèm record gợi ý), P2025 → 404"
+                - generic [ref=f8e194]: State machine validation ở service layer (transition matrix đầy đủ) thay vì disable nút phía frontend
+                - generic [ref=f8e195]: "Business rule server-side: lead scoring tính lại khi input đổi, không tin client"
+                - generic [ref=f8e196]: Permission model 2 role + ownership where clause trên mọi write path
+                - generic [ref=f8e197]: Filter query builder + pagination + CSV export theo scope quyền
+                - generic [ref=f8e198]: "React + Vite: form public có error state, bảng lead, pipeline board, react hook form + fetch layer có typed error"
+                - generic [ref=f8e199]: Docker Compose + GitHub Actions (lint, typecheck, prisma validate, unit test mock PrismaService by token, e2e)
+                - generic [ref=f8e200]: "Deploy thật: env validation ở startup, /health + /ready, seed script reproducible"
+            - blockquote [ref=f8e201]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e202]
+              - paragraph [ref=f8e203]: "Một tiệm dịch vụ nhỏ từng mất lead vì 3 nhân viên ghi chung một sheet, em dựng LeadIntake CRM để chặn việc đó ngay ở API. Quyết định chính: dedupe không dựa vào pre-check query (vẫn race) mà dựa vào unique constraint trên email + SĐT đã chuẩn hóa E.164, bắt P2002 và trả 409 kèm record trùng để user tự chọn; điểm số tính ở server để client không gửi được điểm cao giả; pipeline validate bằng transition matrix đầy đủ trong service thay vì để frontend disable nút. Bug khó nhất: người dùng nhập 0901234567, +84901234567, 84901234567 đều qua validation nhưng không normalize thì dedupe vẫn lọt — em chuẩn hóa về dạng +84 ở DTO + DB và bổ sung case test cho từng format; bug thứ hai là 2 request trùng submit trong 100ms cùng vượt qua pre-check, fix bằng transaction + bắt unique violation thay vì chỉ check trước. Kết quả định lượng: seed 500 lead gồm 60 bản ghi trùng cố ý → 0 bản ghi trùng lọt vào DB, 60/60 trả 409 đúng gợi ý; 4 filter + 2 sort và export CSV chạy dưới 200ms trên dataset đó; suite ~60 test xanh trong CI, deploy lên Vercel + Render có URL live trong README."
+            - paragraph [ref=f8e204]:
+              - generic [ref=f8e205]: REALITY
+              - generic [ref=f8e206]: Tuần 4 gánh cùng lúc frontend + ~60 test + CI + deploy, chỉ khả thi nếu UI giữ tối giản đúng spec (không drag-drop pipeline, refetch sau mỗi mutation) — polish UI là thứ đầu tiên làm dự án trễ.
+            - group [ref=f8e207]:
+              - generic "Mở rộng sau (4 mục)" [ref=f8e208] [cursor=pointer]
+            - group [ref=f8e209]:
+              - generic "Ghi chú deploy" [ref=f8e210] [cursor=pointer]
+        - listitem [ref=f8e211]:
+          - article [ref=f8e212]:
+            - generic [ref=f8e213]:
+              - generic [ref=f8e214]: "#04"
+              - heading "StockLedger" [level=3] [ref=f8e215]
+              - generic [ref=f8e216]: Trung cấp
+              - generic [ref=f8e217]: 3 tuần
+              - generic [ref=f8e218]: Inventory & Warehousing
+            - paragraph [ref=f8e219]: "Team kho ghi tồn bằng tồn -= 1 trên một dòng record, nên hai request reserve chạy song song luôn oversell hoặc lệch sổ mà không ai phát hiện cho tới khi kiểm kho. StockLedger là sổ cái tồn kho append-only: mọi thay đổi tồn là một journal row bất biến kèm reasonCode + actorId, và invariant available = on_hand − reserved được giữ bằng conditional update bên trong transaction cho cả RESERVE, OUT và ADJUST — dev chứng minh mình viết backend có kiểm soát đồng thời và audit trail thật, không chỉ dựng CRUD."
+            - generic [ref=f8e220]:
+              - generic [ref=f8e221]:
+                - heading "Phạm vi" [level=4] [ref=f8e222]
+                - list [ref=f8e223]:
+                  - listitem [ref=f8e224]: "CRUD SKU + vị trí kho với DTO validation Prisma/NestJS: SKU unique, quantity bắt buộc ≥ 0, payload lạ bị reject nhờ whitelist + forbidNonWhitelisted, mọi lỗi trả về đúng mã HTTP"
+                  - listitem [ref=f8e225]: "Ghi journal append-only với 5 loại movement: IN (nhập), OUT (xuất), ADJUST (kiểm kho), RESERVE (giữ hàng cho đơn), RELEASE (hủy giữ). Mọi dòng bắt buộc có reasonCode + actorId; API không expose endpoint UPDATE/DELETE journal, chỉ INSERT — sửa lịch sử là bug, không phải feature"
+                  - listitem [ref=f8e226]: "Reserve chống race: chạy trong transaction với conditional update UPDATE stock SET reserved = reserved + qty WHERE sku_id = ... AND on_hand - reserved >= qty; affected row = 0 thì trả 409 OUT_OF_STOCK kèm số available còn lại, không bao giờ cho reserved vượt on_hand"
+                  - listitem [ref=f8e227]: "OUT guard: UPDATE stock SET on_hand = on_hand - qty WHERE sku_id = ... AND on_hand - reserved >= qty — cùng semantics với RESERVE, không bao giờ đẩy available xuống dưới 0; affected row = 0 → 409 OUT_OF_STOCK"
+                  - listitem [ref=f8e228]: "ADJUST là số tuyệt đối (kiểm kho): trong transaction đọc on_hand hiện tại, journal ghi delta = new − on_hand, update SET on_hand = new WHERE new >= reserved — new dưới reserved trả 409 (không để kiểm kho âm đầu available)"
+                  - listitem [ref=f8e229]: "Invariant check chủ động: endpoint đối chiếu tổng signed quantity trong journal với bảng stock theo từng cặp (sku, location) VÀ assert available = on_hand − reserved ≥ 0 trên từng dòng stock; lệch thì trả 500 INTEGRITY_VIOLATION kèm danh sách dòng sai để truy ngược bug"
+                  - listitem [ref=f8e230]: "Reconciliation script chạy on-demand (không có cron trong scope): đối chiếu journal đã cộng dồn với bảng stock, xuất báo cáo lệch khi mở trang Integrity"
+                  - listitem [ref=f8e231]: Trang Audit filter journal theo SKU, actor, loại movement, khoảng thời gian; xem lịch sử một SKU dạng timeline để đối chiếu nhanh
+                  - listitem [ref=f8e232]: Seed script sinh 1000 dòng journal cho ~30 SKU ở 3 kho (kèm fixture oversell cố ý để regression test bắt được)
+              - generic [ref=f8e233]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e234]
+                - list [ref=f8e235]:
+                  - listitem [ref=f8e236]: Không tính giá vốn hàng bán (FIFO/weighted average) — chỉ tồn kho số lượng, không đụng tới tiền và đơn giá
+                  - listitem [ref=f8e237]: Không chuyển kho (transfer giữa 2 location trong 1 transaction), không tính thuế hay đơn giá
+                  - listitem [ref=f8e238]: Không tích hợp ERP/POS/quét barcode thật; mọi thao tác qua UI và REST API
+                  - listitem [ref=f8e239]: Không realtime push (WebSocket/SSE) — alert đọc bằng cách mở trang
+                  - listitem [ref=f8e240]: Không chạy cron DailySnapshot trong scope (chỉ reconciliation script on-demand) — xem stretchGoals
+                  - listitem [ref=f8e241]: Phân quyền dừng ở 2 role (admin, staff) qua JWT + role guard; không xây hệ thống permission theo từng resource
+            - generic [ref=f8e242]:
+              - generic [ref=f8e243]:
+                - generic [ref=f8e244]: Stack
+                - generic [ref=f8e245]: Next.js 15 (App Router, TypeScript) frontend + NestJS 11 API + PostgreSQL 16 + Prisma 7, Docker Compose chạy local, GitHub Actions CI (lint, typecheck, unit + e2e test), deploy Vercel (web) + Railway/VPS (API, Postgres managed Neon), Vitest (unit test), Playwright (e2e smoke)
+              - generic [ref=f8e246]:
+                - generic [ref=f8e247]: Kỹ năng
+                - generic [ref=f8e248]: Modeling schema append-only + invariant reconciliation (journal sum vs bảng stock, available ≥ 0 theo row)
+                - generic [ref=f8e249]: "NestJS: DTO class-validator (whitelist/forbidNonWhitelisted), global ValidationPipe, JwtAuthGuard + RolesGuard"
+                - generic [ref=f8e250]: Transaction callback-style và optimistic concurrency bằng conditional UPDATE cho cả RESERVE, OUT, ADJUST (không lock whole table)
+                - generic [ref=f8e251]: Thiết kế audit log và invariant check — kỹ năng backend cấp mid mà CRUD không cho
+                - generic [ref=f8e252]: Mapping lỗi domain sang HTTP (409 OUT_OF_STOCK, 500 INTEGRITY_VIOLATION) qua global exception filter
+                - generic [ref=f8e253]: Seed data + reconciliation script, Docker Compose, GitHub Actions CI, deploy full-stack có live URL
+                - generic [ref=f8e254]: "React: bảng lớn filter/pagination, timeline render 1000 dòng journal không lag"
+            - blockquote [ref=f8e255]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e256]
+              - paragraph [ref=f8e257]: "Mình dựng lại tình huống oversell đọc được từ case flash sale của một sàn TMĐT: hai nhân viên reserve cùng một đơn vị hàng cuối cùng, code cũ đọc available rồi ghi đè nên cả hai đều thành công, tổng đơn vượt tồn kho thật. Mình quyết định không sửa bằng cách thêm lock cho cẩn thận mà đổi mô hình: mọi thay đổi tồn phải đi qua journal append-only kèm reasonCode, còn bảng stock chỉ là cache được xây dựng lại từ journal. Khó nhất là reproducer race — mình viết test bắn 50 request reserve đồng thời vào 10 đơn vị hàng còn lại, ban đầu vẫn oversell vì đọc-rồi-ghi, cuối cùng fix bằng conditional update WHERE on_hand - reserved >= ? bên trong transaction và bỏ hẳn bước read trước đó; riêng OUT và ADJUST từng làm vỡ invariant (OUT khi reserved = on_hand, kiểm kho set on_hand xuống dưới reserved) dù journal và stock vẫn nhất quán với nhau, nên mình thêm guard conditional cho 2 type này và mở rộng invariant check sang assert available ≥ 0 trên từng dòng stock. Kết quả định lượng: 50 request → đúng 10 thành công, 40 trả 409, invariant check soi 1000 dòng seed journal báo 0 mismatch, và reconciliation script on-demand chạy sạch, mỗi claim này đều có test chạy được trong CI để bảo vệ."
+            - paragraph [ref=f8e258]:
+              - generic [ref=f8e259]: REALITY
+              - generic [ref=f8e260]: Race test 50 request trong GitHub Actions có thể ăn 1–2 ngày debug connection pool — nếu trễ, cắt audit timeline trước/sau từng dòng xuống danh sách thường, đừng cắt guard OUT/ADJUST vì đó là invariant chính.
+            - group [ref=f8e261]:
+              - generic "Mở rộng sau (6 mục)" [ref=f8e262] [cursor=pointer]
+            - group [ref=f8e263]:
+              - generic "Ghi chú deploy" [ref=f8e264] [cursor=pointer]
+        - listitem [ref=f8e265]:
+          - article [ref=f8e266]:
+            - generic [ref=f8e267]:
+              - generic [ref=f8e268]: "#05"
+              - heading "HookLab" [level=3] [ref=f8e269]
+              - generic [ref=f8e270]: Trung cấp
+              - generic [ref=f8e271]: 3 tuần
+              - generic [ref=f8e272]: devtools
+            - paragraph [ref=f8e273]: Dev tích hợp payment/SaaS bên thứ ba (Stripe, GitHub, Shopee...) cần một nơi nhận webhook thật để debug, nhưng ngrok thì hết hạn còn log server thì không cho replay payload đã sửa. HookLab cấp cho mỗi workspace một endpoint công khai ổn định, verify chữ ký HMAC, ghi lại timeline request gần realtime và cho phép replay payload đã chỉnh sửa về đích đã khai báo — đúng thứ một team backend dùng hàng ngày khi tích hợp service bên ngoài.
+            - generic [ref=f8e274]:
+              - generic [ref=f8e275]:
+                - heading "Phạm vi" [level=4] [ref=f8e276]
+                - list [ref=f8e277]:
+                  - listitem [ref=f8e278]: "Subscriber endpoint theo workspace: mỗi workspace tạo endpoint tạm POST /ingest/:token với token sinh ngẫu nhiên 32 byte, HMAC-SHA256 secret riêng, và destination mặc định (method + URL + optional headers — validate URL khi tạo/sửa, chỉ chấp nhận http/https); token có thể rotate (sinh secret mới, secret cũ hết hiệu lực ngay) hoặc revoke (endpoint trả 410 Gone, request tới token đã revoke không được lưu)"
+                  - listitem [ref=f8e279]: "Chống SSRF khi replay: trước khi gửi request ra ngoài, DNS resolve rồi chặn loopback / private / link-local / cloud-metadata range (127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 169.254.0.0/16, ::1, fc00::/7) — blocked trả 400 replay_target_blocked, không gửi request"
+                  - listitem [ref=f8e280]: "Capture raw request nguyên vẹn: middleware body parser riêng cho route /ingest/* giữ raw body (không parse JSON trước khi verify), lưu method, URL, whitelist header (x-hub-signature, x-request-id, user-agent, content-type), raw body tối đa 1MB — vượt 413 vẫn ghi 1 record rejected kèm lý do body_too_large"
+                  - listitem [ref=f8e281]: "Verify chữ ký HMAC theo endpoint: header tên configurable (mặc định X-Hub-Signature-256 dạng sha256=<hex>), so sánh bằng timingSafeEqual; đúng chữ ký → record status=verified trả 200, sai/thiếu chữ ký → vẫn lưu record status=rejected kèm lý do cụ thể (missing_signature / invalid_signature) và trả 401, để hai tab Verified/Rejected trong UI luôn tách bạch"
+                  - listitem [ref=f8e282]: "Timeline request gần realtime: list record mới nhất trước, filter theo status (verified/rejected), search theo token/event type, mở chi tiết xem raw body đã format JSON + toàn bộ header; poll mỗi 2s (không WebSocket) để thấy request mới xuất hiện mà không refresh trang"
+                  - listitem [ref=f8e283]: "Replay payload đã sửa: người dùng sửa JSON ngay trong detail view rồi gửi lại tới destination đã khai báo ở subscriber (method + URL + header), bản replay lưu riêng với replayOfId trỏ về record gốc; metric requests received và mọi count/badge chỉ đếm record where replayOfId IS NULL nên replay không bao giờ làm số liệu tăng ảo; response status + body của bản replay lưu lại để so sánh với phản hồi gốc, timeout 10s trả về replay_timeout"
+                  - listitem [ref=f8e284]: "Rate limit 60 request/phút/token: vượt limit trả 429 kèm header Retry-After (số giây còn lại của window) và vẫn ghi 1 record rejected với reason=rate_limited để chủ endpoint thấy traffic đang bị chặn; counter sliding window trong PostgreSQL chỉ đếm request đi qua trước khi check limit — record reason=rate_limited KHÔNG được cộng vào window (tránh self-extending ban), reset khi token rotate"
+                  - listitem [ref=f8e285]: "Retention 7 ngày: cron hàng ngày (03:00 UTC, @nestjs/schedule) xóa record cũ hơn 7 ngày kèm replay của chúng (cascade), mỗi lần chạy ghi log số record đã dọn; workspace thấy records auto-delete after 7 days ngay trong UI"
+              - generic [ref=f8e286]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e287]
+                - list [ref=f8e288]:
+                  - listitem [ref=f8e289]: Không làm RBAC nhiều role/SSO/OAuth2 — chỉ JWT email/password + membership owner/member đơn giản, mọi record thuộc workspace
+                  - listitem [ref=f8e290]: Không làm retry/backoff tự động cho replay (chỉ replay thủ công từng bản, không job queue, không dead-letter)
+                  - listitem [ref=f8e291]: Không hỗ trợ payload binary/multipart/streaming và không vượt 1MB — chỉ JSON/text; không làm tunnel kiểu ngrok, không IP allowlist, không mTLS
+                  - listitem [ref=f8e292]: Không làm alerting (Slack/email khi webhook fail) hay analytics nâng cao (chart phân bố event theo thời gian)
+                  - listitem [ref=f8e293]: Không làm multi-region/horizontal scaling cho ingest path — 1 VPS, 1 worker là đủ
+            - generic [ref=f8e294]:
+              - generic [ref=f8e295]:
+                - generic [ref=f8e296]: Stack
+                - generic [ref=f8e297]: React 18 + Vite + TypeScript (frontend SPA), NestJS 11 + Prisma 7 + PostgreSQL (API, raw body capture qua body parser riêng cho route /ingest/*), JWT auth, @nestjs/schedule cho cron retention, Docker Compose deploy VPS (Caddy TLS), GitHub Actions CI (lint, typecheck, unit test, docker build). Vitest (unit test)
+              - generic [ref=f8e298]:
+                - generic [ref=f8e299]: Kỹ năng
+                - generic [ref=f8e300]: Raw body capture trong NestJS/Express (body parser per-route, vì verify HMAC phải tính trên bytes gốc)
+                - generic [ref=f8e301]: HMAC-SHA256 verify an toàn bằng timingSafeEqual, hiểu được vì sao so sánh string == là timing attack
+                - generic [ref=f8e302]: Rate limiting thủ công bằng sliding window trong PostgreSQL + HTTP 429/Retry-After header, chống self-extending ban
+                - generic [ref=f8e303]: "Chống SSRF: DNS resolve rồi kiểm tra IP private/loopback/metadata trước khi server-side fetch"
+                - generic [ref=f8e304]: Prisma schema design cho self-referencing (replayOfId), cascade delete, query theo retention window
+                - generic [ref=f8e305]: Cron job retention với @nestjs/schedule và log quan sát được
+                - generic [ref=f8e306]: Polling realtime 2s + JSON detail view trên React (không cần WebSocket phức tạp)
+                - generic [ref=f8e307]: Docker Compose + Caddy TLS để nhận POST public, GitHub Actions CI pipeline
+            - blockquote [ref=f8e308]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e309]
+              - paragraph [ref=f8e310]: "Một service thanh toán bên thứ ba gửi webhook về server nội bộ nhưng dev không reproduce được bug chữ ký sai vì không giữ được raw body — quyết định của em là route /ingest/* dùng body parser riêng giữ nguyên bytes thay vì để JSON parse nuốt mất, vì HMAC phải tính trên đúng từng byte đã nhận. Bug khó nhất: replay ban đầu bị ghi thành record mới nên metric requests received tăng ảo mỗi lần bắn lại, em tách schema thành record gốc và record replay (replayOfId nullable) rồi sửa mọi count/query chạy qua 1 hàm duy nhất filter replayOfId IS NULL, viết regression test fail trước khi fix theo đúng bug-fix protocol. Load test 500 request/5 phút (ở mức vượt rate limit 60/phút): mọi request đều nhận response đúng (200 hoặc 429 kèm Retry-After), không request nào timeout hay treo. Retention cron dọn xong data cũ đúng 1 lần/ngày, và toàn bộ flow ingest → verify → replay chạy live trên VPS với URL thật để demo khi phỏng vấn."
+            - paragraph [ref=f8e311]:
+              - generic [ref=f8e312]: REALITY
+              - generic [ref=f8e313]: "3 tuần sát trần: phần dễ trượt nhất là deploy VPS + Caddy TLS và CI docker build — nếu lùi thì cắt search/filter trước, giữ nguyên verify/replay/rate-limit vì đó là phần signal phỏng vấn."
+            - group [ref=f8e314]:
+              - generic "Mở rộng sau (5 mục)" [ref=f8e315] [cursor=pointer]
+            - group [ref=f8e316]:
+              - generic "Ghi chú deploy" [ref=f8e317] [cursor=pointer]
+        - listitem [ref=f8e318]:
+          - article [ref=f8e319]:
+            - generic [ref=f8e320]:
+              - generic [ref=f8e321]: "#06"
+              - heading "ShipTrack" [level=3] [ref=f8e322]
+              - generic [ref=f8e323]: Trung cấp
+              - generic [ref=f8e324]: 4 tuần
+              - generic [ref=f8e325]: Logistics Integrations
+            - paragraph [ref=f8e326]: Team vận hành một cửa hàng e-commerce phải theo dõi hàng trăm đơn mỗi ngày trên 3-4 đơn vị vận chuyển (GHN, GHTK, Viettel Post...), mỗi đơn vị trả về một bộ trạng thái thô khác nhau nên nhân viên phải mở nhiều tab và đoán đơn nào đang kẹt. ShipTrack chuẩn hoá mọi trạng thái thô về một state machine chung, nhận webhook idempotent có xác thực chữ ký và push realtime lên dashboard, để người vận hành thấy ngay đơn nào đang giao, đơn nào kẹt quá 48h trên một màn hình.
+            - generic [ref=f8e327]:
+              - generic [ref=f8e328]:
+                - heading "Phạm vi" [level=4] [ref=f8e329]
+                - list [ref=f8e330]:
+                  - listitem [ref=f8e331]: "State machine chuẩn hoá: 5 trạng thái carrier thô (mỗi carrier một mapping table riêng, ~15 mã thô) quy về 6 trạng thái chuẩn pending → picked_up → in_transit → out_for_delivery → delivered | exception | returned; transition không hợp lệ (vd. delivered → in_transit) bị reject và ghi audit thay vì âm thầm ghi đè"
+                  - listitem [ref=f8e332]: "Webhook authentication: mỗi carrier có shared secret/token riêng, verify chữ ký (hoặc header token) bằng timingSafeEqual trước khi parse business payload, sai → 401; rate limit cơ bản cho route /webhooks"
+                  - listitem [ref=f8e333]: "Webhook receiver idempotent: unique constraint trên (deliveryId, eventVersion), xử lý trong transaction; duplicate key (P2002) → catch → trả 200 không ghi trùng"
+                  - listitem [ref=f8e334]: "Xử lý event về sai thứ tự: mỗi shipment có trackingVersion monotonic, event có version nhỏ hơn version hiện tại bị bỏ qua (không ghi) + ghi audit drop, event mới hơn cập nhật bình thường — phân công tường minh: dedupe bằng unique constraint trước, ordering bằng version sau, không chồng chéo hai cơ chế"
+                  - listitem [ref=f8e335]: "Poll backup định kỳ cho carrier không có webhook (hoặc webhook rớt): scheduler poll trạng thái carrier mỗi 15 phút, đi qua cùng pipeline normalise như webhook nên không tạo 2 luồng ghi khác nhau"
+                  - listitem [ref=f8e336]: "Retry + dead-letter: webhook xử lý lỗi 3 lần exponential backoff (1s / 4s / 16s) rồi chuyển vào dead-letter log với lý do lỗi, UI có trang xem lại (retry tay từ UI nằm ở stretchGoals)"
+                  - listitem [ref=f8e337]: "Dashboard realtime qua SSE: stream đơn đang giao cập nhật không cần refresh, filter theo carrier/trạng thái/thời gian"
+                  - listitem [ref=f8e338]: "Alert shipment kẹt: cron phát hiện đơn ở cùng một trạng thái quá 48h — CHỈ tính các trạng thái non-terminal (pending, picked_up, in_transit, out_for_delivery), loại delivered/returned (terminal đứng yên mãi), đánh dấu stuck và nổi lên đầu dashboard"
+                  - listitem [ref=f8e339]: "Contract test CI: mock payload thật của từng carrier (GHN/GHTK/Viettel Post) chạy qua pipeline normalise trong GitHub Actions, sai mapping là build fail"
+                  - listitem [ref=f8e340]: "RBAC 2 role rõ ràng: admin (quản lý mapping, carrier config) và operator (xem dashboard, xem dead-letter)"
+                  - listitem [ref=f8e341]: "Phân bổ theo tuần: W1 domain + state machine + webhook auth + idempotent · W2 ordering + poll backup + retry/DLQ · W3 SSE dashboard + stuck cron + RBAC · W4 contract test + deploy + README"
+              - generic [ref=f8e342]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e343]
+                - list [ref=f8e344]:
+                  - listitem [ref=f8e345]: Tích hợp API tạo đơn/booking vận chuyển thật (chỉ theo dõi shipment có sẵn, không in phí ship hay gọi carrier để tạo đơn)
+                  - listitem [ref=f8e346]: UI theo dõi bản đồ vị trí xe giao hàng realtime (chỉ có timeline trạng thái + timestamp)
+                  - listitem [ref=f8e347]: Xử lý hoàn tiền/đối soát tiền COD với carrier — chỉ lưu trạng thái, không tính tiền
+                  - listitem [ref=f8e348]: Multi-tenant cho nhiều shop (giữ scope 1 org với 2 role admin/operator)
+                  - listitem [ref=f8e349]: Mobile app native — dashboard responsive web là đủ
+            - generic [ref=f8e350]:
+              - generic [ref=f8e351]:
+                - generic [ref=f8e352]: Stack
+                - generic [ref=f8e353]: "Next.js 15 (App Router) frontend + NestJS 11 API, PostgreSQL 16 + Prisma ORM, Redis (BullMQ cho retry/dead-letter queue + cache), Docker Compose local, GitHub Actions CI (unit + contract test), deploy: API trên VPS (Docker), frontend trên Vercel. Vitest (unit test)"
+              - generic [ref=f8e354]:
+                - generic [ref=f8e355]: Kỹ năng
+                - generic [ref=f8e356]: Thiết kế state machine + transition validation cho business rule thật
+                - generic [ref=f8e357]: Xây webhook receiver có xác thực chữ ký + idempotent (unique constraint + transaction, không double-write)
+                - generic [ref=f8e358]: "Xử lý eventual consistency: tách dedupe (unique constraint) khỏi ordering (monotonic version), poll backup trùng lặp webhook"
+                - generic [ref=f8e359]: BullMQ retry exponential backoff + dead-letter queue cho job lỗi
+                - generic [ref=f8e360]: Prisma transactions, unique constraint, audit log, query theo trạng thái/thời gian có index
+                - generic [ref=f8e361]: Server-Sent Events push realtime từ NestJS (cấu hình proxy không buffer)
+                - generic [ref=f8e362]: Contract test mock payload bên thứ ba trong CI
+                - generic [ref=f8e363]: Role-based permission 2 role (admin/operator)
+                - generic [ref=f8e364]: Docker Compose + GitHub Actions pipeline
+            - blockquote [ref=f8e365]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e366]
+              - paragraph [ref=f8e367]: "Problem: nhân viên CSKH phải mở 3 tab theo dõi 3 carrier, webhook GHN gửi lại nhiều lần nên dashboard từng hiển thị trạng thái nhảy lùi khi event về sai thứ tự. Quyết định: chuẩn hoá mọi nguồn về một state machine chung với mapping table per-carrier thay vì để UI tự diễn giải từng mã thô, và đưa toàn bộ việc ghi qua một pipeline duy nhất (webhook hay poll đều đi qua) với idempotency key là deliveryId + eventVersion. Khó nhất là race condition giữa webhook trùng và poll song song: 2 request cùng cập nhật 1 shipment — fix bằng unique constraint trên (deliveryId, eventVersion) + transaction, cộng trackingVersion monotonic để event cũ bị drop thay vì ghi đè; lúc đầu chỉ check version trong code vẫn race, thêm DB constraint mới ổn định. Kết quả định lượng: duplicate write = 0 sau fix (trước ~4% webhook bị xử lý 2 lần), 100% payload 3 carrier pass contract test trong CI, dashboard cập nhật dưới 1s qua SSE, phát hiện 12 đơn kẹt >48h trong tuần đầu chạy thử (trừ trạng thái terminal), việc trước đây CSKH phát hiện thủ công sau 2-3 ngày."
+            - paragraph [ref=f8e368]:
+              - generic [ref=f8e369]: REALITY
+              - generic [ref=f8e370]: 4 tuần dồn contract test + deploy vào tuần cuối — nếu 3 tuần trước chưa xong thì giữ DLQ log + poll backup, đẩy retry tay từ UI (đã nằm stretch) và giảm số carrier mock còn 2.
+            - group [ref=f8e371]:
+              - generic "Mở rộng sau (5 mục)" [ref=f8e372] [cursor=pointer]
+            - group [ref=f8e373]:
+              - generic "Ghi chú deploy" [ref=f8e374] [cursor=pointer]
+        - listitem [ref=f8e375]:
+          - article [ref=f8e376]:
+            - generic [ref=f8e377]:
+              - generic [ref=f8e378]: "#07"
+              - heading "COD Confirm" [level=3] [ref=f8e379]
+              - generic [ref=f8e380]: Trung cấp
+              - generic [ref=f8e381]: 5 tuần
+              - generic [ref=f8e382]: E-commerce & marketplace
+            - paragraph [ref=f8e383]: "Nhà bán hàng COD tại Việt Nam mất tiền vì đơn nhận rồi bỏ và gọi xác nhận thủ công không ai theo dõi: mỗi ngày hàng chục cuộc gọi, agent quên gọi lại, số đen đặt lại đơn thoải mái, quản lý không biết tỉ lệ chốt đơn của từng người. COD Confirm là tool nội bộ cho team bán hàng — quản lý vòng đời đơn COD qua state machine chặt (pending → calling → confirmed → shipping → delivered / rejected / returned / cancelled), ghi lại từng lần gọi điện, tự động chặn số điện thoại có tiền sử bỏ đơn, và cho phép hủy đơn confirmed có kiểm soát (bắt buộc lý do, sau 2h phải qua duyệt), thứ một team COD thật sẽ dùng hàng ngày."
+            - generic [ref=f8e384]:
+              - generic [ref=f8e385]:
+                - heading "Phạm vi" [level=4] [ref=f8e386]
+                - list [ref=f8e387]:
+                  - listitem [ref=f8e388]: "Order state machine có guard: pending → calling (tạo CallLog) → confirmed → shipping → delivered | rejected | returned | cancelled; cancelled là terminal, chỉ nhận từ pending / calling / confirmed; transition không hợp lệ bị 409 (confirmed không nhảy ngược về pending, returned chỉ đến từ shipping, rejected chỉ từ calling/confirmed); phân biệt hủy trước/sau 2h bằng cờ approval trên chính transition đó chứ không bằng target state khác; mọi transition ghi OrderEvent kèm actor + timestamp để audit"
+                  - listitem [ref=f8e389]: "Gọi điện có nhật ký: mỗi lần gọi agent tạo CallLog (kết quả: answered / no_answer / refused / wrong_number, ghi chú), đơn quá 3 lần no_answer tự chuyển rejected; dashboard hiển thị số lần gọi và agent phụ trách theo từng đơn"
+                  - listitem [ref=f8e390]: "Chống fraud bằng blacklist rule: phone có ≥3 đơn rejected/returned trong 30 ngày (rolling window, tính trên order history) tự động vào blacklist; thứ tự kiểm tra khi POST /orders cố định — blacklist trước (403 kèm lý do), rồi rate limit (429); admin có thể whitelist lại có lý do; sau whitelist, rule vẫn tính từ lịch sử đơn thật nên lần rejected thứ 3 kế tiếp của số đó tự vào lại blacklist ngay, không đếm lại từ đầu"
+                  - listitem [ref=f8e391]: "Hủy đơn confirmed sau 2h bắt buộc qua trang duyệt: chọn reason enum (customer_requested / out_of_stock / duplicate / fraud_suspect), trước 2h hủy tự do nhưng vẫn phải có lý do; mọi lần hủy ghi OrderEvent"
+                  - listitem [ref=f8e392]: "Webhook giả lập carrier (ký HMAC signature, verify bằng secret): POST /webhooks/carrier nhận shipment_id + trạng thái, đẩy shipping → delivered hoặc shipping → returned; đơn không ở trạng thái tương ứng bị bỏ qua có log (idempotent theo event id)"
+                  - listitem [ref=f8e393]: "Rate limit tạo đơn: 1 đơn / 10 phút / phone (qua Redis hoặc table đếm), trả 429 có Retry-After; tách riêng rate limit cho auth endpoint"
+                  - listitem [ref=f8e394]: "Dashboard vận hành: KPI theo ngày (tỉ lệ confirmed/calling, tỉ lệ returned, top agent chốt đơn), bảng lọc đơn theo trạng thái + khoảng ngày, chuyển trạng thái ngay trên hàng (gọi / chốt / reject)"
+              - generic [ref=f8e395]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e396]
+                - list [ref=f8e397]:
+                  - listitem [ref=f8e398]: Tích hợp carrier thật (GHN/GHTK/Viettel Post) — chỉ mock qua webhook nội bộ
+                  - listitem [ref=f8e399]: Gọi điện SIP/voip thật hoặc SMS OTP — CallLog nhập tay bởi agent
+                  - listitem [ref=f8e400]: Payment/hoàn tiền thật (chỉ đánh dấu trạng thái, không xử lý tiền)
+                  - listitem [ref=f8e401]: "Multi-tenant nhiều shop, phân quyền phức tạp — chỉ 2 role: agent và admin"
+                  - listitem [ref=f8e402]: Đồng bộ đơn từ sàn (Shopee/Lazada) qua API sàn
+            - generic [ref=f8e403]:
+              - generic [ref=f8e404]:
+                - generic [ref=f8e405]: Stack
+                - generic [ref=f8e406]: React 18 + Vite + TypeScript frontend, NestJS 11 API, PostgreSQL + Prisma (state machine và blacklist rules nằm trong service + transaction), Redis cho rate limit, Docker Compose chạy local, GitHub Actions CI (lint, typecheck, test), deploy frontend lên Vercel, API + Postgres lên VPS (Coolify/Docker) hoặc Railway. Vitest (unit test)
+              - generic [ref=f8e407]:
+                - generic [ref=f8e408]: Kỹ năng
+                - generic [ref=f8e409]: Thiết kế state machine với transition guard và ghi audit log (OrderEvent), thêm trạng thái terminal cancelled
+                - generic [ref=f8e410]: Prisma aggregation query theo khoảng thời gian (rolling 30 ngày blacklist, KPI dashboard) và $transaction cho transition + event ghi cùng lúc
+                - generic [ref=f8e411]: "Concurrency control thật: pg_advisory_xact_lock theo phone trước khi count blacklist — chống 2 create song song cùng thấy snapshot cũ"
+                - generic [ref=f8e412]: Xử lý lỗi business qua HttpException (409 conflict transition, 403 blacklist, 429 rate limit) đúng ngữ nghĩa HTTP
+                - generic [ref=f8e413]: "Webhook security: HMAC signature verification, idempotency theo event id"
+                - generic [ref=f8e414]: Rate limiting bằng Redis (fixed window / sliding window) tách theo key phone + endpoint
+                - generic [ref=f8e415]: Phân quyền 2 role (JWT + Guard), DTO validation class-validator
+                - generic [ref=f8e416]: Xây dashboard React với filter/pagination server-side, table transition trực tiếp
+                - generic [ref=f8e417]: Docker Compose + CI pipeline cho full-stack TypeScript
+            - blockquote [ref=f8e418]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e419]
+              - paragraph [ref=f8e420]: "Đơn COD bị nhận rồi bỏ làm shop lỗ tiền hàng, còn agent ngồi gọi xác nhận nhưng không ai biết hôm nay ai gọi bao nhiêu cuộc, chốt được bao nhiêu. Mình quyết định không làm CRUD đơn thuần mà tách toàn bộ quy trình ra một state machine có guard — mọi chuyển trạng thái phải đi qua service validation và ghi OrderEvent, nên confirmed nhảy về pending không bao giờ xảy ra bất kể gọi API kiểu gì. Phần khó nhất là rule blacklist: version đầu chỉ count rejected 30 ngày ngay trong transaction tạo đơn, nhưng test bắn 2 create song song cùng phone vẫn cả hai qua, vì dưới READ COMMITTED hai transaction cùng thấy snapshot cũ. Fix bằng pg_advisory_xact_lock theo phone trước khi count, tách rõ 2 race (2 create đồng thời, và create chạy song song với lúc đánh dấu rejected), kèm regression test tái hiện từng case. Kết quả định lượng: dashboard cho thấy tỉ lệ chốt đơn theo từng agent, đơn có ≥3 lần no_answer tự reject không cần người canh, và rate limit 10 phút/phone chặn sạch spam tạo đơn, những con số một manager COD dùng để ra quyết định mỗi sáng."
+            - paragraph [ref=f8e421]:
+              - generic [ref=f8e422]: REALITY
+              - generic [ref=f8e423]: Trang duyệt hủy đơn (admin approval queue) là entity + UI extra không nằm trong 7 bullet chính nên dễ bị bỏ sót tới tuần cuối — làm nó cùng tuần với blacklist, nếu trễ thì cắt dashboard KPI trước.
+            - group [ref=f8e424]:
+              - generic "Mở rộng sau (4 mục)" [ref=f8e425] [cursor=pointer]
+            - group [ref=f8e426]:
+              - generic "Ghi chú deploy" [ref=f8e427] [cursor=pointer]
+        - listitem [ref=f8e428]:
+          - article [ref=f8e429]:
+            - generic [ref=f8e430]:
+              - generic [ref=f8e431]: "#08"
+              - heading "FlagDeck" [level=3] [ref=f8e432]
+              - generic [ref=f8e433]: Trung cấp
+              - generic [ref=f8e434]: 5 tuần
+              - generic [ref=f8e435]: internal-tools
+            - paragraph [ref=f8e436]: "Một team dev không có cách an toàn để bật tính năng mới cho một phần người dùng: bật sai là hỏng prod, bật hết một lần thì không rollback được, và không ai biết ai đã thay đổi flag khi sự cố xảy ra. FlagDeck là bảng điều khiển feature flag nội bộ — rollout phần trăm bám sticky theo user, tách giá trị theo môi trường (dev/staging/prod), audit log đầy đủ diff trước/sau, và kill switch tắt một flag trong 1 hành động có hiệu lực trong vòng 1 giây, đúng thứ một team thật dùng để ship an toàn."
+            - generic [ref=f8e437]:
+              - generic [ref=f8e438]:
+                - heading "Phạm vi" [level=4] [ref=f8e439]
+                - list [ref=f8e440]:
+                  - listitem [ref=f8e441]: "Rollout phần trăm sticky theo user: pin 1 thuật toán murmur3_32, bucket = hash(flag_key + ':' + user_id) % 100 (0–99), enabled khi bucket < pct — 0% = không ai, 100% = tất cả; cùng user luôn rơi cùng nhóm giữa các lần evaluate, tăng % lên 30% thì user đã ở nhóm vẫn giữ nguyên trạng thái; API và SDK phải dùng cùng algorithm + seed"
+                  - listitem [ref=f8e442]: "Targeting rule theo role/cohort/environment: rule có thứ tự (first-match-wins) gồm attribute (role, cohort, env), operator (=, !=, in, contains) và giá trị; rule matching trả override boolean, không match thì fallback sang giá trị phần trăm"
+                  - listitem [ref=f8e443]: "Giá trị tách theo môi trường: cùng flag_key có record riêng cho dev/staging/prod (DB unique constraint trên key + env), sửa prod không ảnh hưởng staging; UI có env switcher rõ ràng, màu khác nhau cho từng env"
+                  - listitem [ref=f8e444]: "Audit log bất biến: mọi mutation (tạo/sửa/xóa flag, đổi %, đổi rule, kill) ghi actor_id, actor_email, timestamp, JSON diff {before, after} đầy đủ; audit chỉ append, không update/delete, có trang filter theo flag/env/actor"
+                  - listitem [ref=f8e445]: "Kill switch toàn cục: endpoint 1 hành động đặt enabled=false cấp flag (ưu tiên trên mọi rule + % rollout); hiệu lực ≤1s cho route /evaluate/:key nhờ Redis pub/sub version key — kill bump version, mọi node invalidate in-memory cache ngay, không chờ hết TTL 15s; SDK snapshot poll mode chấp nhận ≤10s; mỗi lần kill/unkill đều tạo audit entry"
+                  - listitem [ref=f8e446]: "Service evaluate có cache + polling: route GET /evaluate/:key cache in-memory TTL 15s, poll GET /flags/snapshot mỗi 10s để invalidate sớm; hỗ trợ bulk evaluate (nhiều key trong 1 request) để giảm round-trip, chống N+1 (1 query load config theo env)"
+                  - listitem [ref=f8e447]: "Dashboard tỷ lệ expose thực tế: mỗi lần evaluate ghi log expose (flag_key, env, user_hash bucket, kết quả) bất đồng bộ; window mặc định 24h gần nhất, retention 7 ngày, index (flag_key, env, created_at); Redis counter flush mỗi phút vào bảng summary để dashboard so actual vs expected % mà không query bảng thô, cảnh báo lệch >5%"
+                  - listitem [ref=f8e448]: "RBAC 3 role với permission matrix: admin (toàn quyền kể cả kill switch + quản lý role), editor (tạo/sửa flag, rule, %), viewer (chỉ đọc dashboard + audit) — guard ở route, không dựa vào UI"
+              - generic [ref=f8e449]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e450]
+                - list [ref=f8e451]:
+                  - listitem [ref=f8e452]: Không xây SDK publish lên npm thật hay multi-tenant/billing — SDK chỉ là thư viện TS nội bộ trong repo, 1 organization duy nhất
+                  - listitem [ref=f8e453]: Không làm percentage gradual rollout theo thời gian (auto-ramp schedule) hay A/B testing thống kê — chỉ expose log + tỷ lệ thô
+                  - listitem [ref=f8e454]: Không tích hợp realtime qua WebSocket/SSE cho client — SDK dùng polling snapshot 10s; phần invalidation cache kill-switch chạy nội bộ qua Redis pub/sub chứ không phải SSE
+                  - listitem [ref=f8e455]: Không làm approval workflow / 2 người review thay đổi flag — audit log là đủ cho project 1 người
+                  - listitem [ref=f8e456]: Không có SSO/OAuth provider thật — auth JWT nội bộ với 3 role (admin/editor/viewer)
+            - generic [ref=f8e457]:
+              - generic [ref=f8e458]:
+                - generic [ref=f8e459]: Stack
+                - generic [ref=f8e460]: "Next.js 15 (App Router, TypeScript) + NestJS 11 API + PostgreSQL + Prisma 7 + Redis (cache, pub/sub invalidate, expose log buffer) + Docker Compose (postgres/redis/api/web) + GitHub Actions CI (lint, typecheck, unit, e2e) + deploy: web trên Vercel, API + Postgres trên VPS (Docker Compose). Vitest (unit test), Playwright (e2e smoke)"
+              - generic [ref=f8e461]:
+                - generic [ref=f8e462]: Kỹ năng
+                - generic [ref=f8e463]: "Thiết kế schema quorum bất đối xứng: flag định nghĩa 1 lần, giá trị/env config many-to-one, unique constraint (key, env)"
+                - generic [ref=f8e464]: Hash-based deterministic partitioning (murmur3, bucket = hash % 100) — giải thích được vì sao sticky rollout cần hash ổn định thay vì random
+                - generic [ref=f8e465]: "Cache invalidation pattern: TTL + version snapshot + Redis pub/sub, đánh đổi stale 15s vs load, kill switch lan truyền ≤1s"
+                - generic [ref=f8e466]: Permission/role-based access control ở Guard NestJS (CanActivate) phân biệt admin/editor/viewer
+                - generic [ref=f8e467]: Audit log bất biến (append-only) + JSON diff serialization — pattern hay gặp trong fintech/internal tools
+                - generic [ref=f8e468]: Transaction Prisma khi mutate flag + rule + audit trong 1 request (atomicity), outbox-style ghi expose log bất đồng bộ + flush counter về summary
+                - generic [ref=f8e469]: "Bulk evaluate endpoint + query optimization: 1 query load config theo env thay vì N+1"
+                - generic [ref=f8e470]: "Testing: unit test hash bucketing + rule engine (pure function, nhiều case), e2e test rollout sticky qua supertest"
+                - generic [ref=f8e471]: Docker Compose multi-service + GitHub Actions CI pipeline cho monorepo 2 service
+            - blockquote [ref=f8e472]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e473]
+              - paragraph [ref=f8e474]: "Problem: team ship tính năng mới phải bật cho toàn bộ user hoặc chờ deploy lại — một lần bật nhầm ở prod thì không ai biết ai đã sửa và rollback thủ công mất hàng chục phút. Quyết định: mình tách flag definition khỏi per-env config trong schema và chọn hash bucketing (murmur3 của flag_key + user_id) thay vì random mỗi request, vì random làm user bị bật/tắt giữa 2 lần gọi, hash sticky đảm bảo trải nghiệm nhất quán dù cache có miss. Khó nhất là cache invalidation: kill switch phải có hiệu lực ngay nhưng evaluate route đang cache TTL 15s, mình giải quyết bằng version key qua Redis pub/sub: kill bump version, mọi node invalidate in-memory cache ngay → /evaluate/:key phản ánh false trong ≤1s; SDK snapshot poll mode chấp nhận ≤10s. Kết quả định lượng: evaluate p99 dưới 20ms nhờ bulk endpoint + cache; kill switch lan truyền ≤1s; toàn bộ thay đổi flag có audit diff đầy đủ, reproduce lại đúng ai sửa gì lúc nào trong 1 truy vấn; suite test hash bucketing 40+ case chứng minh tỷ lệ expose lệch kỳ vọng dưới 1%."
+            - paragraph [ref=f8e475]:
+              - generic [ref=f8e476]: REALITY
+              - generic [ref=f8e477]: Expose log pipeline + drift dashboard là mục dễ trượt nhất ở tuần 5 — nếu chậm thì giữ Redis counter flush mỗi phút và bỏ chart chi tiết, đừng để mất tuần deploy.
+            - group [ref=f8e478]:
+              - generic "Mở rộng sau (5 mục)" [ref=f8e479] [cursor=pointer]
+            - group [ref=f8e480]:
+              - generic "Ghi chú deploy" [ref=f8e481] [cursor=pointer]
+        - listitem [ref=f8e482]:
+          - article [ref=f8e483]:
+            - generic [ref=f8e484]:
+              - generic [ref=f8e485]: "#09"
+              - heading "ChatDesk Inbox" [level=3] [ref=f8e486]
+              - generic [ref=f8e487]: Trung cấp
+              - generic [ref=f8e488]: 5 tuần
+              - generic [ref=f8e489]: realtime chat / customer support
+            - paragraph [ref=f8e490]: Team sales/support nhỏ (3-5 người) đang trả lời khách qua bảng chat chung nên hay giành nhau một hội thoại, trả lời trùng hoặc bỏ sót khách chờ quá lâu. ChatDesk Inbox là inbox realtime nơi mỗi hội thoại chỉ được 1 agent claim nguyên tử, agent thấy typing indicator, đếm unread theo cursor thật trên server và có timer SLA phản hồi đầu tiên đánh đỏ realtime — đúng các bài toán concurrency + realtime mà team backend đang tuyển.
+            - generic [ref=f8e491]:
+              - generic [ref=f8e492]:
+                - heading "Phạm vi" [level=4] [ref=f8e493]
+                - list [ref=f8e494]:
+                  - listitem [ref=f8e495]: "Auth: JWT 2 role (agent / admin), guard REST + verify token lúc socket connect; seed 5 agent có tài khoản để demo ngay"
+                  - listitem [ref=f8e496]: "Conversation state machine unassigned → claimed → active → waiting → resolved → reopened với transition validate phía server: chỉ agent đang sở hữu được resolve/active, waiting chỉ nhận từ claimed/active; resolved trong 24h khách nhắn lại → reopened (giữ nguyên owner, tính vào capacity 5); quá 24h khách nhắn → tạo hội thoại MỚI ở trạng thái unassigned, hội thoại cũ dừng ở resolved"
+                  - listitem [ref=f8e497]: "Claim hội thoại nguyên tử: Prisma $transaction + version field (optimistic lock) — hai agent bấm claim cùng lúc thì một người thắng, người thua nhận 409 kèm ai đang giữ; không bao giờ 2 agent cùng claim 1 hội thoại"
+                  - listitem [ref=f8e498]: "Agent capacity: tối đa 5 hội thoại active (claimed / active / waiting / reopened) trên 1 agent — trong transaction claim, lock row agent (SELECT FOR UPDATE theo agentId hoặc pg advisory lock) TRƯỚC khi count, nên 2 request claim 2 hội thoại KHÁC nhau cùng lúc không thể cùng qua; claim thứ 6 bị 409 với lý do rõ ràng; concurrency test chạy song song 2 claim khác hội thoại"
+                  - listitem [ref=f8e499]: "Typing indicator qua Socket.IO room theo từng conversation: client emit khi gõ, server broadcast kèm TTL tự hết sau 4s (agent disconnect / không emit nữa thì indicator biến mất, không cần client cleanup)"
+                  - listitem [ref=f8e500]: "Unread theo cursor: mỗi agent lưu lastReadAt per conversation trên server, cập nhật CHỈ khi agent mở hội thoại (server set về timestamp tin mới nhất tại thời điểm mở); unreadCount = count tin nhắn có timestamp > lastReadAt; không mở hội thoại thì cursor không nhảy nên tin cũ chưa đọc vẫn được đếm (không dùng boolean isRead)"
+                  - listitem [ref=f8e501]: "SLA first-response timer: đếm ngược từ tin nhắn customer đầu tiên (hoặc customer reopen), khi agent gửi tin đầu tiên thì dừng; breach quá 5 phút (đọc từ env) do scheduler quét định kỳ ~10s các hội thoại chưa có firstResponseAt và đã quá hạn — mốc thời gian tính lại từ DB nên sống sót khi restart API, phát event realtime đánh đỏ hội thoại cho MỌI agent đang online"
+                  - listitem [ref=f8e502]: Tin nhắn gắn monotonic sequence per conversation, cấp trong ĐÚNG transaction insert tin nhắn (max + 1 với unique constraint (conversationId, sequence), retry khi conflict — không dùng sequence ngoài transaction nên không có hole); client lưu seq cuối cùng, sau reconnect WS gửi seq đó → server backfill các tin bị miss trước khi stream tiếp
+                  - listitem [ref=f8e503]: Seed data demo (5 agent, ~30 hội thoại, tin nhắn trải đều để demo SLA + unread), structured logging Pino kèm correlationId, /health + /ready endpoint
+                  - listitem [ref=f8e504]: "UI (giới hạn cứng, cắt đầu nếu trễ): danh sách hội thoại, thread chat, nút claim / resolve / waiting, badge SLA đỏ; trang admin 1 trang xem SLA breach rate + workload theo agent; timeline poll 5s"
+              - generic [ref=f8e505]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e506]
+                - list [ref=f8e507]:
+                  - listitem [ref=f8e508]: Không tích hợp kênh ngoài thật (Zalo, Facebook Messenger, widget embed website) — chỉ web chat widget giả lập + REST/WS
+                  - listitem [ref=f8e509]: Không AI auto-reply, gợi ý trả lời hay chatbot — toàn bộ trả lời do người
+                  - listitem [ref=f8e510]: Không đính kèm file/video call/group chat nhiều khách — chỉ text + emoji, hội thoại 1-1
+                  - listitem [ref=f8e511]: Không multi-tenant nhiều công ty, không RBAC phức tạp hơn 2 role (agent + admin)
+                  - listitem [ref=f8e512]: Không dashboard analytics nặng (funnel, xuất Excel) — chỉ 1 trang admin nhỏ xem SLA breach rate và workload
+            - generic [ref=f8e513]:
+              - generic [ref=f8e514]:
+                - generic [ref=f8e515]: Stack
+                - generic [ref=f8e516]: "Next.js 15 (App Router, TypeScript) + NestJS 11 API + Socket.IO gateway + PostgreSQL + Prisma 7 (transaction & optimistic lock) + Docker Compose (api, web, postgres) + GitHub Actions CI (lint, typecheck, unit + concurrency test) + deploy: frontend Vercel, API + Postgres trên VPS docker-compose. Vitest (unit test)"
+              - generic [ref=f8e517]:
+                - generic [ref=f8e518]: Kỹ năng
+                - generic [ref=f8e519]: Modeling state machine + validate transition ở server (không để client tự set status)
+                - generic [ref=f8e520]: Prisma $transaction + version field optimistic lock — chống race khi 2 request ghi cùng 1 row; capacity check atomic bằng row lock theo agent
+                - generic [ref=f8e521]: Socket.IO rooms, TTL-based ephemeral state (typing) tính phía server, event broadcast theo scope
+                - generic [ref=f8e522]: Unread cursor pattern (lastReadAt) thay boolean flag — query count theo timestamp
+                - generic [ref=f8e523]: Monotonic sequence gapless cấp trong transaction insert + gap detection/backfill sau reconnect
+                - generic [ref=f8e524]: "Prisma schema design: index cho (conversationId, sequence), (agentId, status)"
+                - generic [ref=f8e525]: Structured logging (Pino + correlationId), health/ready endpoint, env validation startup
+                - generic [ref=f8e526]: Docker Compose + GitHub Actions CI; concurrency test chạy song song 2 claim
+            - blockquote [ref=f8e527]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e528]
+              - paragraph [ref=f8e529]: "Tình huống mình tái dựng từ một team support 3 agent thật: 2 người cùng mở một hội thoại vừa vào nên trả lời trùng khách — reproduce được trên bản dựng, problem thật chứ không phải demo. Quyết định: claim phải nguyên tử ở DB, chọn Prisma $transaction + version field (optimistic lock), conflict hiếm nên fail-fast trả 409 ngay cho UI mà không giữ row lock trong lúc agent gõ tin; capacity 5 thì dùng row lock theo agent trước khi count để 2 claim khác hội thoại không cùng qua. Unread lưu lastReadAt cursor thay vì cờ đã-đọc, vì cờ không trả lời được câu đã đọc bao nhiêu tin. Bug khó nhất: indicator của agent tắt trình duyệt không bao giờ hết trên client thứ 3, fix bằng cách tính TTL phía server (set timer khi nhận event, broadcast stop sau 4s) thay vì để client tự xoá. Bug thứ hai: sau khi WS reconnect, client bị miss 3 tin do sequence gap, thêm monotonic sequence cấp trong transaction insert (không để hole) và REST backfill trước khi stream tiếp. Kết quả đo được: chạy 100 lượt claim song song trên 10 hội thoại bằng script test → 0 trường hợp 2 agent cùng claim, unreadCount khớp DB 100%, SLA breach hiển thị cho mọi agent online trong vòng 1s."
+            - paragraph [ref=f8e530]:
+              - generic [ref=f8e531]: REALITY
+              - generic [ref=f8e532]: Sequence + reconnect backfill là chi tiết kỹ nhất và hay bị underscope — nếu tuần 4 chưa xong thì cắt trang admin trước (đã giới hạn 1 trang), giữ claim + concurrency test vì đó là signal chính.
+            - group [ref=f8e533]:
+              - generic "Mở rộng sau (5 mục)" [ref=f8e534] [cursor=pointer]
+            - group [ref=f8e535]:
+              - generic "Ghi chú deploy" [ref=f8e536] [cursor=pointer]
+        - listitem [ref=f8e537]:
+          - article [ref=f8e538]:
+            - generic [ref=f8e539]:
+              - generic [ref=f8e540]: "#10"
+              - heading "FormForge" [level=3] [ref=f8e541]
+              - generic [ref=f8e542]: Trung cấp
+              - generic [ref=f8e543]: 6 tuần
+              - generic [ref=f8e544]: forms
+            - paragraph [ref=f8e545]: Nội bộ team dùng Google Form nhưng sửa form là response cũ bị lệch schema, còn Typeform/SurveyMonkey thì đắt và không control được data. FormForge là tool builder cho phép đặt luật nhảy có điều kiện (Q3 = Không → nhảy Q7) và publish form dưới dạng version bất biến — mỗi response được validate đúng version tại thời điểm nộp, sửa form không đụng đến data cũ. Nó đáng build vì buộc bạn design schema immutable + validate theo version, đúng kiểu suy nghĩ data model mà team thật cần thay vì CRUD thuần.
+            - generic [ref=f8e546]:
+              - generic [ref=f8e547]:
+                - heading "Phạm vi" [level=4] [ref=f8e548]
+                - list [ref=f8e549]:
+                  - listitem [ref=f8e550]: Auth JWT email/password (register, login, guard populate req.user, seed 2 account owner/viewer) — không có identity thì guard permission không chạy được
+                  - listitem [ref=f8e551]: Builder 7 loại field (text, textarea, rating 1-5, single choice, multi choice, dropdown, số) với order/position — v1 reorder bằng nút lên/xuống (drag-drop nằm stretchGoals); mỗi field có config riêng (required, min/max, options) và được Zod-validate cả ở DTO lẫn client
+                  - listitem [ref=f8e552]: "Skip-logic rule dạng declarative: nếu Q3 = Không → nhảy tới Q7 — trước khi publish, hệ thống build directed graph của rules và từ chối publish nếu graph có vòng (DFS full-cycle, không chỉ self-loop) hoặc trỏ tới field không tồn tại; traversal mặc định khi không rule match: đi field kế theo thứ tự order tăng dần; khi rule match thì các field ở giữa bị skip, skip có transitive (tiếp tục evaluate rule tại đích cho tới khi không match, graph vô vòng nên terminate); dữ liệu trả lời cho field đã skip bị reject"
+                  - listitem [ref=f8e553]: Publish = tạo FormVersion bất biến (snapshot JSON schema + rules) — draft autosave qua PATCH partial không bao giờ chạm version đã publish; response chỉ trỏ formVersionId, không trỏ formId
+                  - listitem [ref=f8e554]: "Submit response: server load đúng FormVersion theo id, evaluate skip-path TRƯỚC rồi mới build schema Zod từ snapshot và validate (field bị skip không bị báo required-missing) — sửa form sau submit không revalidate/không làm vỡ response cũ"
+                  - listitem [ref=f8e555]: "Báo cáo aggregate theo FormVersion được chọn (dropdown chọn version, mặc định version mới nhất; KHÔNG aggregate cross-version vì option-set/rating-config khác nhau): distribution bar cho single/multi choice và dropdown, avg + stddev cho rating, min/max/median cho số — query trên JSONB có expression/GIN index, không load toàn bộ response về Node"
+                  - listitem [ref=f8e556]: Seed script sinh 10k responses (kèm index migration) để đo claim báo cáo dưới 200ms ngay khi build xong
+                  - listitem [ref=f8e557]: "Role owner/viewer theo form: owner CRUD + publish, viewer chỉ đọc responses + report; guard qua decorator + Prisma relation check trên mọi write endpoint"
+              - generic [ref=f8e558]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e559]
+                - list [ref=f8e560]:
+                  - listitem [ref=f8e561]: File upload đính kèm (giữ multipart ra ngoài phạm vi 6 tuần)
+                  - listitem [ref=f8e562]: Multi-step wizard animation/UX phức tạp — UI form renderer cơ bản, functional trước (drag-drop builder nằm stretchGoals)
+                  - listitem [ref=f8e563]: Email notification / webhook khi có response mới
+                  - listitem [ref=f8e564]: Nhúng form public qua iframe + CORS wildcard cho bên thứ ba (chỉ auth qua link nội bộ/demo)
+                  - listitem [ref=f8e565]: Realtime collaboration trên cùng form (chỉ optimistic update đơn giản)
+                  - listitem [ref=f8e566]: Full i18n — UI 1 ngôn ngữ, chỉ structure data hỗ trợ thêm sau
+            - generic [ref=f8e567]:
+              - generic [ref=f8e568]:
+                - generic [ref=f8e569]: Stack
+                - generic [ref=f8e570]: NestJS 11 + Prisma 7 + PostgreSQL (JSONB cho schema snapshot & response payload) + Zod chung cho DTO/backend validation lẫn client types — Zod là source of truth duy nhất (dùng ZodValidationPipe), đây là chủ đích exception so với convention class-validator của repo và phải ghi rõ trong README; frontend React + Vite + TypeScript (React Hook Form + Zod resolver); Docker Compose cho dev, GitHub Actions CI (lint, typecheck, test), deploy API lên VPS (Docker) + frontend trên Vercel. Vitest (unit test)
+              - generic [ref=f8e571]:
+                - generic [ref=f8e572]: Kỹ năng
+                - generic [ref=f8e573]: Thiết kế schema bất biến (immutable version snapshot) — suy nghĩ data model beyond CRUD
+                - generic [ref=f8e574]: "Composite/PK-FK pattern: Form → FormVersion → Response, cascade và indexing trên JSONB"
+                - generic [ref=f8e575]: Zod runtime schema building (build schema từ JSON tại runtime) — dynamic validation thay vì static DTO
+                - generic [ref=f8e576]: Directed graph cycle detection (DFS) cho skip-logic rules — business rule validation trước khi persist
+                - generic [ref=f8e577]: "Prisma transactions: publish form = ghi FormVersion + đánh dấu draft hiện tại trong 1 transaction"
+                - generic [ref=f8e578]: "Permission layer: owner/viewer guard qua custom decorator + policy check trong service"
+                - generic [ref=f8e579]: JSONB aggregation queries (jsonb_each, count, avg/stddev) thay vì pull data về Node xử lý
+                - generic [ref=f8e580]: PATCH partial + autosave pattern (whitelist field, version conflict nhẹ bằng updatedAt)
+            - blockquote [ref=f8e581]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e582]
+              - paragraph [ref=f8e583]: "Problem: team dùng Google Form, sửa câu hỏi là mọi response cũ bị lệch schema — không còn cách nào phân tích đúng theo cấu trúc tại thời điểm nộp, còn Typeform tính tiền theo response. Quyết định: tách Form (container) khỏi FormVersion (immutable snapshot), publish tạo version bất biến, response lưu JSONB kèm formVersionId và được Zod-validate bằng schema build từ đúng snapshot đó lúc submit; skip-logic được validate bằng directed-graph cycle check ngay lúc publish, không để rule vô hạn đến lúc user điền. Khó nhất: bug thật, field bị skip theo rule vẫn bị báo required-missing khi submit vì logic tính required chạy trước khi evaluate skip-path, và publish trước đó không chặn rule trỏ vòng lặp 2-node (graph check chỉ bắt self-loop); fix bằng cách evaluate path trước, mark skipped fields, rồi mới validate, đồng thời DFS full-cycle detection + regression test viết fail trước fix. Kết quả định lượng: 7 loại field chạy được với skip-logic 3 tầng, publish bất biến (sửa form không làm vỡ 1 response cũ nào trong test suite), seed 10k response cho benchmark, báo cáo aggregate trả về dưới 200ms nhờ JSONB query chạy trên DB thay vì load về Node."
+            - paragraph [ref=f8e584]:
+              - generic [ref=f8e585]: REALITY
+              - generic [ref=f8e586]: Builder drag-drop và chart report nếu polish sẽ nuốt tuần 6 — giữ UI functional đúng cam kết (nút reorder, renderer cơ bản) và đừng mở visual editor giữa chừng.
+            - group [ref=f8e587]:
+              - generic "Mở rộng sau (6 mục)" [ref=f8e588] [cursor=pointer]
+            - group [ref=f8e589]:
+              - generic "Ghi chú deploy" [ref=f8e590] [cursor=pointer]
+        - listitem [ref=f8e591]:
+          - article [ref=f8e592]:
+            - generic [ref=f8e593]:
+              - generic [ref=f8e594]: "#11"
+              - heading "DutyBell" [level=3] [ref=f8e595]
+              - generic [ref=f8e596]: Flagship
+              - generic [ref=f8e597]: 6 tuần
+              - generic [ref=f8e598]: devtools
+            - paragraph [ref=f8e599]: "Đội dev 5-10 người chạy production có SLA thật (payment, marketplace hoặc e-commerce), trực theo ca nhưng lịch trực nằm ở Google Sheet, alert gửi vào group chung nên không biết ai đang cầm chịch và không ai bị ép phải ack, đã qua mấy lần thức đêm vì alert rơi vào khoảng trống giữa 2 ca. DutyBell là hệ thống on-call rotation + escalation: xếp lịch trực ca tuần theo timezone Asia/Ho_Chi_Minh, bắn alert qua API key cho hệ thống giám sát, tự escalate lên người backup rồi lên engineering manager nếu không ai ack trong 5 phút, và buộc phải viết postmortem trước khi đóng incident — đúng loại công cụ một team thật sẽ dùng hằng ngày."
+            - generic [ref=f8e600]:
+              - generic [ref=f8e601]:
+                - heading "Phạm vi" [level=4] [ref=f8e602]
+                - list [ref=f8e603]:
+                  - listitem [ref=f8e604]: "Xếp lịch trực tuần (weekly rotation): team chọn thứ tự xoay vòng, hệ thống sinh ca theo tuần với handoff cố định 09:00 Asia/Ho_Chi_Minh; mỗi khung giờ chỉ được gắn đúng 1 on-call primary + 1 backup, conflict detection chặn 2 người cùng trúng 1 ca"
+                  - listitem [ref=f8e605]: "Swap ca 2 người: cả 2 bên phải confirm trước khi có hiệu lực — swap request ở trạng thái pending cho tới khi người thứ 2 xác nhận, chỉ khi đó lịch mới đổi và ghi audit log; từ chối hoặc quá TTL (env SWAP_TTL_HOURS, mặc định 24h) không confirm thì request tự hủy"
+                  - listitem [ref=f8e606]: "Tạo alert qua API key: endpoint nhận {title, severity, service} từ hệ thống giám sát; API key hash sha256 khi lưu, show plaintext 1 lần khi create, revoke bằng cách rotate (mỗi team 1 key); tự resolve người on-call primary tại thời điểm alert và gửi notification (Slack webhook + email stub)"
+                  - listitem [ref=f8e607]: "Escalation chain tự động: nếu không ack trong thời gian ESCALATION_STEP_MINUTES (mặc định 5 phút) → escalate lên backup (lưu escalatedAt), thêm 1 bước nữa → engineering manager; mỗi bước lưu timeline riêng, alert đã ack thì dừng chain; chạy qua background job (BullMQ/cron poll) có idempotency để không escalate 2 lần"
+                  - listitem [ref=f8e608]: "Ack với optimistic locking: mỗi incident có version field, ack phải gửi kèm version hiện tại — 2 người bấm đồng thời chỉ 1 người thắng, loser nhận 409 kèm thông tin người đã ack trước (hardest bug của project, bắt buộc có regression test fail-trước-fix)"
+                  - listitem [ref=f8e609]: "Status enum chốt 1 danh sách duy nhất: triggered → acknowledged → escalated → closed; ack (từ triggered hoặc escalated) → acknowledged; escalation chỉ set status = escalated khi incident vẫn un-acked; closed chỉ nhận từ acknowledged và bắt buộc đã có postmortem đủ field (timeline events + ít nhất 4 câu trả lời 5-whys), thiếu field trả 400 ValidationPipe"
+                  - listitem [ref=f8e610]: "Audit log append-only: mọi hành động (create alert, ack, escalate, swap confirm, close) ghi 1 dòng {actorId, action, incidentId, metadata, createdAt} — API không có route UPDATE/DELETE, chỉ INSERT và GET phân trang"
+                  - listitem [ref=f8e611]: "Dashboard React: timeline incident theo thời gian (polling 5s), lịch on-call dạng calendar tuần swap được (grid đơn giản, không drag-drop), trang incident detail ghi ack/escalate/postmortem"
+              - generic [ref=f8e612]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e613]
+                - list [ref=f8e614]:
+                  - listitem [ref=f8e615]: Mobile app / push notification native — chỉ email + Slack webhook, giữ scope web
+                  - listitem [ref=f8e616]: Tích hợp thật với PagerDuty/Opsgenie/Telegram Bot API — chỉ dùng webhook URL mock + email console transport, tránh OAuth flow dài
+                  - listitem [ref=f8e617]: Multi-tenant billing, SSO/SAML, RBAC phức tạp — chỉ 2 role (member/manager) seed sẵn, auth JWT đơn giản
+                  - listitem [ref=f8e618]: Realtime WebSocket/SSE — dùng polling 5s cho timeline, đủ demo không cần socket infra
+                  - listitem [ref=f8e619]: Alert deduplication/grouping nâng cao và SLA reporting — chỉ lưu escalatedAt thô, không tính metric phức tạp
+            - generic [ref=f8e620]:
+              - generic [ref=f8e621]:
+                - generic [ref=f8e622]: Stack
+                - generic [ref=f8e623]: NestJS 11 + Prisma 7 + PostgreSQL (transaction cho ack + escalate, version field optimistic locking), React 18 + Vite + TypeScript cho dashboard, BullMQ + Redis cho escalation timer jobs, Docker Compose (api + web + postgres + redis), GitHub Actions CI (lint, typecheck, unit + e2e), Sentry error tracking, deploy VPS (Caddy/nginx + docker compose). Vitest (unit test), Playwright (e2e smoke)
+              - generic [ref=f8e624]:
+                - generic [ref=f8e625]: Kỹ năng
+                - generic [ref=f8e626]: Optimistic locking / concurrency control trên write path (version field, mapping 409) — kỹ năng backend jr-middle săn nhất
+                - generic [ref=f8e627]: Prisma transaction + row-level update đúng cách, tránh race giữa ack và escalate
+                - generic [ref=f8e628]: Background job / timer-based state machine (escalation chain idempotent, không double-notify)
+                - generic [ref=f8e629]: State machine cho incident lifecycle enforced bằng validation ở DTO layer
+                - generic [ref=f8e630]: Append-only audit log design (không route sửa/xóa, FK + pagination)
+                - generic [ref=f8e631]: API key auth (hash + rotate) + JWT + role guard trong NestJS
+                - generic [ref=f8e632]: Docker Compose multi-service + GitHub Actions CI + deploy VPS có rollback
+                - generic [ref=f8e633]: Dashboard React có calendar tuần + timeline polling, Error Boundary + fallback UI
+                - generic [ref=f8e634]: Postmortem enforced qua DTO validation — business rule nằm ở validation layer chứ không chỉ UI
+            - blockquote [ref=f8e635]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e636]
+              - paragraph [ref=f8e637]: "Một alert bắn vào DutyBell và 2 engineer cùng mở tab, cùng bấm Ack trong cùng 1 giây — trước khi fix, cả 2 đều được ghi là người ack, escalation timer dừng vô định và audit log ghi 2 dòng mâu thuẫn. Mình viết regression test tái hiện race đó (fail trước), rồi thêm version field vào Incident: ack phải gửi kèm version, update thành updateMany({where: {id, version}}), row count = 0 nghĩa là đã có người thắng, trả 409 kèm userId của người ack trước, loser thấy toast Đã được ack bởi An. Timer job cũng đọc version trước khi escalate nên không bắn notification trùng. Kết quả: test xanh, double-ack biến mất, và mình có câu chuyện phỏng vấn đủ chi tiết, reproduce → fail test → optimistic locking → mapping lỗi Prisma/HTTP đúng ngữ nghĩa, chứng minh đã gặp và fix race condition thật chứ không chỉ làm CRUD."
+            - paragraph [ref=f8e638]:
+              - generic [ref=f8e639]: REALITY
+              - generic [ref=f8e640]: Calendar tuần làm grid đơn giản ngay từ đầu, đừng bắt đầu với drag-drop fullCalendar; debug idempotency của BullMQ escalation dễ ăn thêm 1–2 ngày ở tuần 3.
+            - group [ref=f8e641]:
+              - generic "Mở rộng sau (5 mục)" [ref=f8e642] [cursor=pointer]
+            - group [ref=f8e643]:
+              - generic "Ghi chú deploy" [ref=f8e644] [cursor=pointer]
+        - listitem [ref=f8e645]:
+          - article [ref=f8e646]:
+            - generic [ref=f8e647]:
+              - generic [ref=f8e648]: "#12"
+              - heading "ApprovaFlow" [level=3] [ref=f8e649]
+              - generic [ref=f8e650]: Flagship
+              - generic [ref=f8e651]: 7 tuần
+              - generic [ref=f8e652]: internal-tools
+            - paragraph [ref=f8e653]: "Các công ty vừa và nhỏ tại VN vẫn duyệt chi phí qua email và bảng tính: người duyệt không biết request đang kẹt ở đâu, cấp trên đi nghỉ không ai thay, quá 48h không ai nhắc, và khi có tranh chấp thì không ai truy được ai đã phê duyệt gì lúc nào. ApprovaFlow giải quyết đúng bottleneck đó — một engine duyệt chi phí nội bộ với chuỗi phê duyệt theo ngưỡng số tiền, ủy quyền tự động khi approver nghỉ, SLA nhắc việc + escalate, và audit trail toàn bộ transition. Dự án đáng làm vì nó ép bạn chạm vào đúng ranh giới junior/mid: state machine có guard, optimistic locking chống double-approve, và permission theo vai trò, ba thứ có thể defend nguyên vẹn trong phỏng vấn."
+            - generic [ref=f8e654]:
+              - generic [ref=f8e655]:
+                - heading "Phạm vi" [level=4] [ref=f8e656]
+                - list [ref=f8e657]:
+                  - listitem [ref=f8e658]: "Chuỗi phê duyệt theo ngưỡng: request dưới 1 triệu chỉ cần manager duyệt; 1–10 triệu thêm department head rồi finance; trên 10 triệu thêm CEO — ngưỡng lưu trong DB (không hardcode), tạo approval chain tự động khi submit dựa trên amount + department của người gửi"
+                  - listitem [ref=f8e659]: "Org chart: field users.managerId self-reference + quan hệ department, seed 5 user đủ 4 cấp (employee → manager → dept head/finance → CEO) — SLA escalation dựa vào parent thật, không hardcode"
+                  - listitem [ref=f8e660]: "State machine draft → submitted → in_review → approved / rejected / withdrawn với guard tập trung và aggregate rule tường minh: in_review khi chain có step pending đầu tiên; approved khi mọi step trong chain approved; rejected → tự hủy các step pending còn lại; withdraw chỉ hợp lệ khi chưa step nào approved; transition sai trả 409 kèm lý do rõ ràng"
+                  - listitem [ref=f8e661]: "Self-approval: requester không được approve step của chính mình (vd CEO submit >10 triệu vẫn nằm trong chain của mình) → trả 403 kèm lý do, bước đó chờ delegate hoặc admin xử lý"
+                  - listitem [ref=f8e662]: "Optimistic locking bằng version field trên ApprovalRequest: mỗi lần transition phải gửi kèm version hiện tại, nếu hai approver bấm cùng lúc thì người thứ hai nhận 409 Conflict — integration test trên Postgres thật (docker hoặc testcontainers): Promise.all bắn 2 transition đồng thời trên cùng record, assert đúng 1 success + 1 conflict (mock Prisma không chứng minh được optimistic locking)"
+                  - listitem [ref=f8e663]: "Delegation (ủy quyền): approver đặt người thay thế theo khoảng ngày nghỉ; trong khoảng đó mọi approval step đang chờ của người đó tự động chuyển sang delegate, có audit record ghi rõ approved by delegate X on behalf of Y"
+                  - listitem [ref=f8e664]: "SLA 48h: cron job quét step quá hạn → gửi email nhắc (Gmail SMTP/Resend) lần 1, quá thêm 24h → escalate lên cấp trên trực tiếp của approver (parent org chart trong DB), audit trail ghi mỗi lần reminder/escalate"
+                  - listitem [ref=f8e665]: "Audit trail bất biến: mọi transition (submit, approve, reject, withdraw, delegate, escalate) ghi actor, from_state, to_state, comment, timestamp — UI hiển thị timeline, không endpoint nào được update/xóa record audit"
+                  - listitem [ref=f8e666]: "Upload & gắn hóa đơn (attachment) vào request: file lưu S3-compatible (R2/MinIO) hoặc local disk, hiển thị inline trong trang chi tiết, chỉ người trong chain duyệt hoặc requester được xem"
+                  - listitem [ref=f8e667]: "Rate limit endpoint POST /requests: chống spam submit (5 request/phút/user), trả 429 — dùng @nestjs/throttler, map đúng message cho UI"
+              - generic [ref=f8e668]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e669]
+                - list [ref=f8e670]:
+                  - listitem [ref=f8e671]: Tích hợp ERP kế toán (Fasto, MISA) hay xuất sổ cái — chỉ export CSV đơn giản nếu có thời gian
+                  - listitem [ref=f8e672]: Xử lý thanh toán/chi tiền thật, tích hợp ngân hàng, đa currency — chỉ VND, chỉ quản lý quy trình duyệt
+                  - listitem [ref=f8e673]: Multi-tenant nhiều công ty trên 1 database — mỗi deploy là 1 công ty, không cần org isolation
+                  - listitem [ref=f8e674]: Mobile app native — responsive web là đủ, không build PWA offline
+                  - listitem [ref=f8e675]: Approval chain động phức tạp (parallel branch, conditional route theo nhiều tiêu chí) — chỉ chuỗi tuyến tính theo ngưỡng + role
+            - generic [ref=f8e676]:
+              - generic [ref=f8e677]:
+                - generic [ref=f8e678]: Stack
+                - generic [ref=f8e679]: "Next.js 15 (App Router, TypeScript) cho frontend + NestJS 11 cho API, PostgreSQL 16 + Prisma ORM, JWT auth (access + refresh) với role-based guard, Docker Compose (postgres + api + web), GitHub Actions CI (lint, typecheck, unit test, build), deploy: frontend lên Vercel, API lên VPS (Railway/Fly.io) hoặc cùng VPS Docker — email qua Resend SMTP test. Vitest (unit test)"
+              - generic [ref=f8e680]:
+                - generic [ref=f8e681]: Kỹ năng
+                - generic [ref=f8e682]: Thiết kế state machine có guard tập trung (transition table, từ chối transition bất hợp lệ bằng typed error) + aggregate rule (approved khi mọi step xong, rejected hủy step pending)
+                - generic [ref=f8e683]: Optimistic locking với version field — hiểu tại sao pessimistic lock kẹt, viết được integration test thật chứng minh race condition bị chặn
+                - generic [ref=f8e684]: Prisma transactions + $transaction cho submit request + tạo approval chain atomic, tránh write lệch
+                - generic [ref=f8e685]: "RBAC trên NestJS: Guard + decorator (@CurrentUser, @Roles), phân quyền theo quan hệ data (approver trong chain mới được transition) chứ không chỉ theo role tĩnh, chặn self-approve"
+                - generic [ref=f8e686]: Cron/scheduled job (BullMQ hoặc @nestjs/schedule) cho SLA check, hiểu pitfall job chạy trùng trên nhiều instance
+                - generic [ref=f8e687]: "REST design cho workflow: idempotent withdraw, 409 cho conflict, 429 rate limit, pagination cho inbox duyệt"
+                - generic [ref=f8e688]: Audit logging pattern — tách append-only table, không trộn vào entity chính
+                - generic [ref=f8e689]: Upload file + presigned URL, validate MIME/size
+                - generic [ref=f8e690]: "Xử lý concurrency trong UI: optimistic update + refetch khi 409, toast rõ ràng thay vì im lặng fail"
+                - generic [ref=f8e691]: Dockerize monorepo 2 service, CI chạy đủ lint/test/build cho cả API và web
+            - blockquote [ref=f8e692]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e693]
+              - paragraph [ref=f8e694]: "Problem: approver A và B cùng mở request 8 triệu, cả hai bấm Approve trong cùng 1 giây — version cũ, cả hai đều thành công, request bị ghi nhận 2 lần approve bất chấp rule. Quyết định: dùng optimistic locking (version field) thay vì SELECT FOR UPDATE giữ suốt transaction, vì mỗi transition là 1 thao tác ngắn, conflict hiếm, giữ lock lâu sẽ bottleneck khi nhiều approver thao tác song song khác request; UI gửi kèm version, nếu 409 thì refetch và báo request vừa được xử lý bởi người khác. Khó nhất là reproduce race condition trong test: ban đầu mock Prisma làm test flaky nên mình chuyển sang integration test trên Postgres thật, Promise.all bắn 2 transition đồng thời qua transaction thật rồi assert đúng 1 success + 1 conflict. Kết quả định lượng: 0 incident double-approve qua 200 lượt test CI, demo trực tiếp conflict scenario trong phỏng vấn; thời gian duyệt trên dữ liệu seed mô phỏng giảm từ 3 ngày (không reminder) xuống 1.2 ngày khi bật SLA reminder + delegate, số đo trên dataset demo, không phải user thật nên mình chỉ dùng nó để minh họa cơ chế."
+            - paragraph [ref=f8e695]:
+              - generic [ref=f8e696]: REALITY
+              - generic [ref=f8e697]: "Tuần 7 gần như không còn buffer — nếu tuần 5 delegation + SLA chưa xong thì cắt theo thứ tự: attachment về local disk trước, escalation (chỉ giữ reminder), giữ nguyên race test + state machine vì đó là signal phỏng vấn."
+            - group [ref=f8e698]:
+              - generic "Mở rộng sau (5 mục)" [ref=f8e699] [cursor=pointer]
+            - group [ref=f8e700]:
+              - generic "Ghi chú deploy" [ref=f8e701] [cursor=pointer]
+        - listitem [ref=f8e702]:
+          - article [ref=f8e703]:
+            - generic [ref=f8e704]:
+              - generic [ref=f8e705]: "#13"
+              - heading "FeedForge" [level=3] [ref=f8e706]
+              - generic [ref=f8e707]: Flagship
+              - generic [ref=f8e708]: 7 tuần
+              - generic [ref=f8e709]: social
+            - paragraph [ref=f8e710]: "Một cộng đồng fan K-pop khoảng 2000 thành viên đang sống trong một Facebook group: bài viết cũ trôi mất sau vài ngày, admin không lọc được nội dung, thành viên muốn xem lại cũng không tìm ra. FeedForge là news feed realtime thay group đó, giải bài toán fan-out hỗn hợp: người theo dõi ít thì ghi sẵn timeline vào Redis khi đăng bài, người nổi tiếng thì merge on-read. Dự án đáng ở mức flagship vì chính tradeoff này phải đo bằng benchmark p95 trên dataset seed và giải thích được vì sao chọn ngưỡng, thay vì chỉ làm CRUD post/follow như các candidate khác."
+            - generic [ref=f8e711]:
+              - generic [ref=f8e712]:
+                - heading "Phạm vi" [level=4] [ref=f8e713]
+                - list [ref=f8e714]:
+                  - listitem [ref=f8e715]: Auth JWT email/password (register, login, guard) — nằm trong ước tính 7 tuần, không phải prerequisite ngầm
+                  - listitem [ref=f8e716]: "Post & embedded media: đăng bài có ảnh/giphy (lưu URL + metadata), business rule: mỗi post tối đa 10 media, bài chỉnh sửa giữ nguyên created_at để cursor pagination không nhảy, xóa post soft-delete để timeline đã cache không bị lệch id"
+                  - listitem [ref=f8e717]: "Follow graph + ngưỡng fan-out (threshold là config, mặc định 10k): follow/unfollow có kiểm tra (không tự follow, không follow trùng, chặn cycle self-follow), quyết định strategy theo follower count của người đăng: dưới ngưỡng thì fan-out-on-write (ZADD vào Redis sorted set timeline của từng follower), từ ngưỡng trở lên thì fan-out-on-read"
+                  - listitem [ref=f8e718]: "Seed benchmark: ≥11k users trong đó 1 celebrity account có ~10k follow edge để CẢ 2 nhánh fan-out đều kích hoạt được (1k users thì không bao giờ chạm ngưỡng 10k), cùng script seed 50k posts; threshold là config test ở ngưỡng thấp để e2e cover cả 2 nhánh; đo p95 query time 2 hướng (precomputed ZSET vs merge on-read) và ghi kết quả thật vào README — ghi rõ 10k là ngưỡng suy ra từ cost measurement, không phải crossover đo trực tiếp"
+                  - listitem [ref=f8e719]: "Cursor pagination ổn định: GET /feed?cursor=... trả về theo cặp (created_at, id) đóng cursor, không dùng offset — test bằng cách chèn bài mới giữa chừng khi đang scroll, không được lặp/không được bỏ bài"
+                  - listitem [ref=f8e720]: "Realtime qua SSE: endpoint /events/stream có heartbeat 25s; event id = cặp (created_at, id); client auto-reconnect: gửi Last-Event-ID rồi catch-up fetch /feed?cursor=... TRƯỚC khi resubscribe (Redis pub/sub là fire-and-forget, không replay được event bị lỡ), timeline cập nhật khi người mình follow đăng bài"
+                  - listitem [ref=f8e721]: "Soft-delete/block vs timeline cache: route serving timeline từ ZSET luôn filter-on-read (loại post đã xóa, user đã block — không chỉ dựa vào ZSET), có test case xóa post đã cache và block user đã cache"
+                  - listitem [ref=f8e722]: "Notification gộp: khi n người like cùng 1 post, A và B là 2 like đầu theo created_at, gộp thành 1 dòng A, B và 12 người khác — upsert transaction duy nhất, race-safe khi 2 like chạm nhau cùng lúc (test concurrency)"
+                  - listitem [ref=f8e723]: "Permission & state machine: like/unlike idempotent, owner-only edit/delete post, block user không thấy timeline của nhau — kiểm tra qua guard + query scope chứ không chỉ check ở controller"
+                  - listitem [ref=f8e724]: "Thin client frontend Next.js: infinite scroll theo cursor, composer tối đa 10 media, UI reconnect SSE, trang notification (~1–1.5 tuần, khai báo tường minh để 7 tuần không underestimate)"
+              - generic [ref=f8e725]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e726]
+                - list [ref=f8e727]:
+                  - listitem [ref=f8e728]: Direct message / chat realtime 2 chiều (cần WebSocket room + presence, vượt khung 7 tuần)
+                  - listitem [ref=f8e729]: News feed xếp hạng theo ML/edge rank (chỉ sort theo recency + cursor, không train model)
+                  - listitem [ref=f8e730]: Upload file vật lý lên S3/Cloudinary (chỉ lưu URL media, không build pipeline xử lý ảnh)
+                  - listitem [ref=f8e731]: OAuth login bằng Google/Facebook (chỉ JWT email/password để giữ scope backend focus)
+                  - listitem [ref=f8e732]: Multi-tenant hay group/page (chỉ user-to-user follow graph)
+            - generic [ref=f8e733]:
+              - generic [ref=f8e734]:
+                - generic [ref=f8e735]: Stack
+                - generic [ref=f8e736]: "Next.js 15 (App Router, frontend) + NestJS 11 (API) + PostgreSQL 16 với Prisma ORM + Redis 7 (sorted set timeline cache + pub/sub cho SSE) + Pino structured logging kèm correlation id + Docker Compose dev + GitHub Actions CI (lint, typecheck, prisma migrate status + migrate diff, test) + deploy: API trên VPS/Fly.io, frontend trên Vercel. Vitest (unit test)"
+              - generic [ref=f8e737]:
+                - generic [ref=f8e738]: Kỹ năng
+                - generic [ref=f8e739]: Thiết kế fan-out on-write vs on-read và biện minh bằng benchmark p95 (kiến trúc cache, tradeoff đo được)
+                - generic [ref=f8e740]: Redis sorted set làm timeline cache, TTL strategy, cache invalidation khi unfollow/xóa post + filter-on-read khi serve
+                - generic [ref=f8e741]: Cursor/keyset pagination ổn định theo (created_at, id) thay vì offset — kỹ năng query Prisma + index design
+                - generic [ref=f8e742]: Transaction + upsert race-safe cho notification gộp (Prisma $transaction, atomic increment)
+                - generic [ref=f8e743]: SSE với heartbeat, reconnect + catch-up fetch bằng cursor (hiểu giới hạn pub/sub không replay), tách connection pool để không chặn event loop NestJS
+                - generic [ref=f8e744]: Permission/ownership check bằng guard + query scope (Prisma where injection), state machine like/unlike idempotent
+                - generic [ref=f8e745]: Structured logging Pino + correlation id xuyên API, /health và /ready, GH Actions CI, docker-compose dev environment
+            - blockquote [ref=f8e746]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e747]
+              - paragraph [ref=f8e748]: "Mục tiêu là news feed realtime cho feed network có người nổi tiếng và người thường. Quyết định: fan-out hybrid — dưới ngưỡng follower thì ghi sẵn timeline vào Redis sorted set khi đăng bài, trên ngưỡng thì để reader merge on-read, vì fan-out-on-write tốn O(followers) mỗi post còn on-read tốn O(posts) mỗi load. Hardest bug: timeline mất bài khi follower list thay đổi giữa chừng, lúc user unfollow giữa lúc fan-out đang bơm bài vào ZSET của họ, có post được ghi vào timeline của follower cũ và post mới bị miss vì cursor quét trên snapshot cũ; fix bằng cách lock follow edge trong transaction fan-out + invalidate ZSET của follower đó thay vì bơm tiếp, rồi viết regression test reproduce bằng 2 thread racing. Kết quả đo được từ benchmark trong repo: seed 50k posts, p95 query timeline 48ms (yêu cầu dưới 100ms), benchmark 2 strategy có số thật trong README để defend ngưỡng 10k, và mình ghi rõ ngưỡng là suy ra từ cost measurement vì seed có 1 celebrity account để chạm nhánh on-read."
+            - paragraph [ref=f8e749]:
+              - generic [ref=f8e750]: REALITY
+              - generic [ref=f8e751]: Benchmark p95 nằm giữa schedule và là thứ đầu bị cắt khi trễ — chốt 1 tuần riêng cho nó; và p95 48ms trong câu chuyện phỏng vấn phải tự chạy đo lại lấy số, đừng đọc số có sẵn đi defend.
+            - group [ref=f8e752]:
+              - generic "Mở rộng sau (4 mục)" [ref=f8e753] [cursor=pointer]
+            - group [ref=f8e754]:
+              - generic "Ghi chú deploy" [ref=f8e755] [cursor=pointer]
+        - listitem [ref=f8e756]:
+          - article [ref=f8e757]:
+            - generic [ref=f8e758]:
+              - generic [ref=f8e759]: "#14"
+              - heading "CohortIQ" [level=3] [ref=f8e760]
+              - generic [ref=f8e761]: Flagship
+              - generic [ref=f8e762]: 8 tuần
+              - generic [ref=f8e763]: Dashboards & analytics
+            - paragraph [ref=f8e764]: "Team SaaS Việt Nam bán ra nước ngoài, thu tiền qua Stripe nhưng founder vẫn nối MRR bằng spreadsheet từ export: mỗi lần upgrade giữa kỳ, refund hay đổi gói là một dòng sửa tay, không ai truy vết được vì sao MRR tháng này lệch tháng trước. CohortIQ nhận webhook Stripe, biến mỗi sự kiện thành một dòng bất biến trong ledger MRR (new / expansion / contraction / churn / reactivation), nên tổng ledger tại bất kỳ ngày nào chính xác là MRR ngày đó — truy vấn as-of-date được, sửa lịch sử không được. Dự án đáng làm vì nó đúng loại bài toán production team billing thật sự phỏng vấn: ingest idempotent, ledger bất biến, tính point-in-time và concurrency control trên write path."
+            - generic [ref=f8e765]:
+              - generic [ref=f8e766]:
+                - heading "Phạm vi" [level=4] [ref=f8e767]
+                - list [ref=f8e768]:
+                  - listitem [ref=f8e769]: "Ingest webhook Stripe (checkout.session.completed, invoice.paid, customer.subscription.updated/deleted, charge.refunded) với idempotency bắt buộc: event.id unique trong DB, replay cùng event không sinh movement thứ 2 (e2e test replay 2 lần chỉ sum 1 lần); event xử lý lỗi ghi vào bảng dead-letter kèm lý do + retry count, có endpoint replay DLQ"
+                  - listitem [ref=f8e770]: "Ledger bất biến: mỗi dòng là một MRR movement có loại (new/expansion/contraction/churn/reactivation), amount, occurred_at, source_event_id — không UPDATE/DELETE movement; correction sinh dòng bù trừ mới; SUM(amount) WHERE occurred_at <= :date = MRR tại ngày đó (query as-of-date có API và chart)"
+                  - listitem [ref=f8e771]: "Quy tắc movement tường minh: expansion/contraction = chênh lệch normalized recurring price lấy từ snapshot subscription (full delta, occurred_at = ngày effective), không tính theo phần proration; phần proration/cash ghi ở metadata riêng (paid_amount, paid_at, proration flag) KHÔNG tham gia SUM-MRR; charge.refunded KHÔNG đổi MRR khi subscription còn active — ghi dòng cash/revenue riêng, contraction chỉ sinh từ subscription.updated (price/status giảm) và subscription.deleted"
+                  - listitem [ref=f8e772]: "Normalization MRR: mọi plan normalize về monthly (annual/12, interval_count > 1 chia đúng; sum mọi subscription active của cùng customer); test fixtures chỉ dùng monthly fixed price — metered/seat nằm ngoài outOfScope"
+                  - listitem [ref=f8e773]: "Thứ tự event lệch vẫn đúng: khi invoice.paid đến trễ sau subscription.updated, ledger vẫn tính delta từ snapshot subscription gần nhất chứ không cộng dồn mù — có regression test cho 2 webhook song song của cùng subscription"
+                  - listitem [ref=f8e774]: "Cohort retention với business rule định nghĩa: anchor = checkout.session.completed đầu tiên (first successful payment); predicate active = status active/trialing tại ngày 1 của tháng N; churned rồi reactivation giữ nguyên cohort signup gốc (không tạo cohort mới); heatmap cohort theo tháng (1/3/6 tháng), NRR và GRR theo plan cho cửa sổ 3/6/12 tháng"
+                  - listitem [ref=f8e775]: "Inventory 6 chart thống nhất giữa scope và demo: MRR theo ngày (line), MRR waterfall (new/expansion/contraction/churn/reactivation), cohort heatmap, churn by plan, NRR/GRR line, panel event pipeline (latency ingest + số event DLQ 24h)"
+                  - listitem [ref=f8e776]: "RBAC 2 mức: owner (xem, quản lý webhook secret, replay DLQ, gán viewer bằng username trong workspace — không có email invite, xem outOfScope) và viewer (chỉ đọc dashboard); mọi query dashboard gắn workspace_id, viewer không gọi được mutation"
+                  - listitem [ref=f8e777]: "Monitoring: /health (DB + webhook pipeline) và /ready, structured logging JSON kèm correlation-id xuyên suốt 1 request webhook"
+                  - listitem [ref=f8e778]: "Concurrency: version field (optimistic locking) trên bản aggregate cache MRR theo tháng — 2 webhook xử lý song song cùng workspace không ghi đè nhau, conflict được retry thay vì mất movement; e2e test 2 webhook song song"
+                  - listitem [ref=f8e779]: Seed/fixture generator ≥13 tháng event deterministic (dùng chung cho e2e) nằm trong scope chính — không có data history thì NRR 12 tháng và heatmap 6 tháng rỗng suốt 8 tuần build
+              - generic [ref=f8e780]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e781]
+                - list [ref=f8e782]:
+                  - listitem [ref=f8e783]: Không tích hợp thanh toán thật hay PCI — chỉ dùng Stripe test mode + webhook fixture, không có flow thanh toán của riêng app
+                  - listitem [ref=f8e784]: Không làm multi-tenant marketplace nhiều seller (workspace đơn giản owner/viewer, không org hierarchy, không invite email — owner gán viewer tay trong workspace)
+                  - listitem [ref=f8e785]: Không dự báo revenue forecasting / ML — chỉ query point-in-time và cohort hiện có
+                  - listitem [ref=f8e786]: Không xử lý mọi event type của Stripe (chỉ 5 event liên quan MRR; dispute, tax, Connect payout nằm ngoài); không support plan metered/seat trong fixtures
+                  - listitem [ref=f8e787]: Không real-time websocket push — chart refresh theo polling/refetch
+            - generic [ref=f8e788]:
+              - generic [ref=f8e789]:
+                - generic [ref=f8e790]: Stack
+                - generic [ref=f8e791]: "Next.js 15 (App Router, TypeScript) + NestJS 11 API + PostgreSQL + Prisma 7 + Docker Compose + GitHub Actions CI (lint, typecheck, unit, e2e webhook replay) + Stripe CLI (test mode webhook forward); deploy: NestJS API + Postgres trên VPS (Docker Compose), Next.js trên Vercel; auth JWT 2 tầng role. Vitest (unit test), Playwright (e2e smoke)"
+              - generic [ref=f8e792]:
+                - generic [ref=f8e793]: Kỹ năng
+                - generic [ref=f8e794]: Event-driven ingest với idempotency (unique constraint trên event.id, dedupe an toàn khi replay)
+                - generic [ref=f8e795]: Thiết kế ledger bất biến & bù trừ (append-only, correction entries) — tách MRR movement khỏi cash/proration
+                - generic [ref=f8e796]: Query point-in-time / as-of-date bằng SQL (SUM có điều kiện thời gian, window function cho cohort)
+                - generic [ref=f8e797]: Optimistic locking bằng version field trên write path có race
+                - generic [ref=f8e798]: "NestJS: global ValidationPipe, exception filter map Prisma error (P2002→409), structured logging + correlation-id"
+                - generic [ref=f8e799]: RBAC ở service layer + Prisma client extension filter theo workspace_id (permission + query depth)
+                - generic [ref=f8e800]: "Xử lý webhook bên thứ ba: signature verification (Stripe-Signature), replay attack, DLQ + retry pattern"
+                - generic [ref=f8e801]: "Prisma: callback-style transaction khi ghi movement + update aggregate atomically, migration expand-contract"
+                - generic [ref=f8e802]: Đọc hiểu Stripe billing lifecycle (proration, invoice vs subscription) — kỹ năng integrations có giá trị phỏng vấn
+                - generic [ref=f8e803]: Docker Compose multi-service + CI GitHub Actions chạy e2e
+            - blockquote [ref=f8e804]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e805]
+              - paragraph [ref=f8e806]: "Ban đầu team dùng spreadsheet, mỗi khi có mid-cycle upgrade là founder sửa tay rồi hai số MRR tháng đó lệch nhau không rõ vì sao. Mình quyết định không tính lại MRR từ đầu mà ghi bất biến: mỗi sự kiện Stripe sinh một movement append-only, MRR mọi thời điểm là SUM as-of-date — đánh đổi là phải xử lý idempotency và thứ tự event khó hơn. Khó nhất là bug concurrency: invoice.paid và subscription.updated của cùng subscription đến song song, hai transaction cùng đọc snapshot cũ rồi ghi 2 movement trùng delta làm MRR cộng thừa một lần; mình bắt được bằng e2e test replay webhook đồng thời, fix bằng version field optimistic locking trên aggregate (conflict → retry đọc lại snapshot) cộng unique constraint event.id làm lớp chặn cuối. Một bài học metric: ban đầu mình ghi expansion = phần proration thực thu nên sum sau upgrade ra 15$ trong khi giá recurring đã là 20$, MRR drift vĩnh viễn, vì thế expansion phải tính full delta từ normalized recurring price, phần cash ghi ở metadata riêng. Kết quả định lượng: replay 1000 event không đổi tổng MRR (loại bỏ double-count), query as-of-date trả về đúng số đã chốt trong quá khứ dù dữ liệu hiện tại đã thay đổi, dashboard 6 chart dựng hoàn toàn từ ledger, không có bảng tổng hợp nào phải sửa tay."
+            - paragraph [ref=f8e807]:
+              - generic [ref=f8e808]: REALITY
+              - generic [ref=f8e809]: Race test 2 webhook song song là test deterministic khó nhất dự án và dễ ăn 1.5 tuần — nếu tuần 6 chưa xong thì cắt panel event pipeline + flow gán viewer, giữ seed 13 tháng vì thiếu data thì mọi chart demo đều vô nghĩa.
+            - group [ref=f8e810]:
+              - generic "Mở rộng sau (4 mục)" [ref=f8e811] [cursor=pointer]
+            - group [ref=f8e812]:
+              - generic "Ghi chú deploy" [ref=f8e813] [cursor=pointer]
+        - listitem [ref=f8e814]:
+          - article [ref=f8e815]:
+            - generic [ref=f8e816]:
+              - generic [ref=f8e817]: "#15"
+              - heading "Syndicate" [level=3] [ref=f8e818]
+              - generic [ref=f8e819]: Flagship
+              - generic [ref=f8e820]: 8 tuần
+              - generic [ref=f8e821]: Content platforms & CMS
+            - paragraph [ref=f8e822]: "Các team sản phẩm nhỏ cần một headless CMS để quản lý nội dung (article/page/product) rồi push ra website/app riêng, nhưng CMS có sẵn hoặc quá to (Strapi self-host nặng, Contentful tính tiền theo seat) hoặc không có ranh giới tenant + API key giới hạn quyền + webhook retry rõ ràng. Syndicate là multi-tenant headless CMS: mỗi tổ chức có content và schema riêng, expose public Content API qua scoped API key (read/write) kèm rate limit 60 req/ph, và khi content đổi thì fire webhook có HMAC signature + retry 1m/5m/30m với dead-letter UI — đúng lớp production habit mà một team thật cần ở integration layer."
+            - generic [ref=f8e823]:
+              - generic [ref=f8e824]:
+                - heading "Phạm vi" [level=4] [ref=f8e825]
+                - list [ref=f8e826]:
+                  - listitem [ref=f8e827]: "Multi-tenancy ở tầng DB: mọi query đi qua repository wrapper bắt buộc filter tenantId; regression test chứng minh tenant B không đọc được/ghi đè content của tenant A kể cả khi sửa id trong request body (IDOR probe test, id ở route param)"
+                  - listitem [ref=f8e828]: "Role trong tenant tối thiểu: admin (quản lý content type, API key, đọc audit, CRUD content) và member (chỉ CRUD entry) — guard ở service layer, không phải chỉ ở controller"
+                  - listitem [ref=f8e829]: JWT session auth cho admin dashboard (login / logout / guard), hoạt động song song với API key auth cho public Content API
+                  - listitem [ref=f8e830]: "Quản lý API key: create / list / revoke, hash khi lưu (không plaintext), show plaintext đúng 1 lần khi create"
+                  - listitem [ref=f8e831]: "Content type động: mỗi tenant định nghĩa schema JSON (field name, type string/number/boolean/richtext, required, enum) cho article/page/product; mọi entry validate theo schema của tenant tại DTO pipe + service, schema sai → 400 kèm tên field"
+                  - listitem [ref=f8e832]: "Public Content API dạng REST: GET/POST /v1/content/:type và GET/PATCH/DELETE /v1/content/:type/:id (id nằm ở route param); API key sk_live_<32hex>, scope read chỉ được GET, scope write được POST/PATCH/DELETE; thiếu/sai scope → 403, key hết hạn → 401"
+                  - listitem [ref=f8e833]: "Rate limit 60 req/ph/key bằng Redis sliding window (sorted set + Lua): trả 429 khi vượt, luôn kèm header X-RateLimit-Limit / X-RateLimit-Remaining / X-RateLimit-Reset, có test hammer 61 request liên tiếp"
+                  - listitem [ref=f8e834]: "Publish webhook: tenant đăng ký URL, khi entry chuyển sang status published thì POST JSON payload kèm header X-Signature = HMAC-SHA256(body, secret); receiver verify được signature; response 410 → tự đóng subscription"
+                  - listitem [ref=f8e835]: Delivery pipeline có retry schedule 1m/5m/30m (BullMQ/Redis job) — delay là config/env (WEBHOOK_RETRY_DELAYS) để e2e test dùng thang mili-giây/giây thay vì chờ 36 phút; lưu delivery attempt log (status code, latency, error), sau 3 lần fail đưa vào dead-letter; UI list deliveries kèm nút retry/manual redeliver
+                  - listitem [ref=f8e836]: "Audit log mọi thay đổi content: who (user id hoặc API key id) / what (action) / before-after (JSON diff), chỉ admin trong cùng tenant đọc được, kèm trang Audit trong dashboard"
+                  - listitem [ref=f8e837]: "Production habits: structured logging Pino với correlation ID theo request, endpoint /health (liveness) + /ready (DB/Redis ping), global exception filter map Prisma P2002→409 / P2025→404"
+                  - listitem [ref=f8e838]: "Phân bổ theo tuần: W1-2 scaffold + tenant repository wrapper + IDOR test · W3 bắt đầu dashboard song song (schema editor, dynamic form) · W4 public API + API key scope · W5 rate limit Lua · W5-6 webhook HMAC + BullMQ retry/DLQ · W6-7 audit + Pino/health · W8 e2e + CI + README; v1 schema editor chỉ là JSON textarea"
+              - generic [ref=f8e839]:
+                - heading "Ngoài phạm vi" [level=4] [ref=f8e840]
+                - list [ref=f8e841]:
+                  - listitem [ref=f8e842]: WYSIWYG/richtext editor đầy đủ (dùng textarea hoặc markdown thô — không build editor type tự chế)
+                  - listitem [ref=f8e843]: Visual schema builder kéo-thả — v1 chỉ JSON textarea (nâng cấp nằm stretchGoals)
+                  - listitem [ref=f8e844]: Realtime collaboration (yjs/cursor, presence) — chỉ ghi audit, không live-edit
+                  - listitem [ref=f8e845]: Asset/media upload pipeline (S3, image transform, CDN) — field URL string thay cho upload; nếu làm thì chỉ dev-local
+                  - listitem [ref=f8e846]: GraphQL API, i18n multi-locale per entry, preview link với draft token — chỉ REST public API published/draft
+                  - listitem [ref=f8e847]: Billing/subscription, self-serve tenant signup flow phức tạp — seed 2 tenant mẫu, signup là internal
+            - generic [ref=f8e848]:
+              - generic [ref=f8e849]:
+                - generic [ref=f8e850]: Stack
+                - generic [ref=f8e851]: "TypeScript full-stack: Next.js (App Router) cho admin dashboard, NestJS 11 cho API (global ValidationPipe whitelist + forbidNonWhitelisted, DTO class + class-validator, APP_FILTER map Prisma errors), PostgreSQL + Prisma 7 (migration, transaction callback-style), Redis cho rate limit + BullMQ webhook queue, Docker Compose (postgres/redis/api/web), GitHub Actions CI (lint, typecheck, unit + e2e test), deploy: API lên VPS Docker (hoặc Fly.io), Next.js lên Vercel. Vitest (unit test), Playwright (e2e smoke)"
+              - generic [ref=f8e852]:
+                - generic [ref=f8e853]: Kỹ năng
+                - generic [ref=f8e854]: Multi-tenant data modeling & tenant isolation (row-level security mindset, IDOR prevention, repository-level scoping)
+                - generic [ref=f8e855]: Design JWT session auth + API key auth song song, key scoping (read/write), hash key khi lưu, so sánh 2 cơ chế trong interview
+                - generic [ref=f8e856]: Redis sliding-window rate limit bằng Lua script, hiểu atomicity của atomic operations
+                - generic [ref=f8e857]: Asynchronous job/queue (BullMQ), retry with backoff configurable, dead-letter pattern, idempotent webhook delivery
+                - generic [ref=f8e858]: HMAC-SHA256 webhook signature — verify phía consumer, timing-safe compare
+                - generic [ref=f8e859]: JSON-schema-driven validation động thay cho DTO tĩnh
+                - generic [ref=f8e860]: NestJS module/DI/interceptor/filter discipline; Prisma transaction & query optimization chống N+1
+                - generic [ref=f8e861]: Structured logging (Pino + correlation ID), health/readiness probes, audit log design
+                - generic [ref=f8e862]: Docker Compose multi-service local env + GitHub Actions CI pipeline
+            - blockquote [ref=f8e863]:
+              - heading "Câu chuyện phỏng vấn" [level=4] [ref=f8e864]
+              - paragraph [ref=f8e865]: "Bối cảnh: team sản phẩm tích hợp nội dung vào 3 site riêng nhưng mọi người sửa content trực tiếp trong git hoặc copy-paste — không ai biết file nào đã publish, ai sửa. Tôi quyết định build headless CMS thay vì tự dựng CRUD thường, vì phần khó thật sự nằm ở integration: ai được đọc API, và khi content đổi thì hệ thống bên ngoài biết bằng cách nào. Khó nhất là rate limit + webhook retry: sliding window đầu tiên bị race condition (2 request cùng chạm ngưỡng vẫn qua) nên tôi chuyển sang Lua script chạy atomic trên Redis, và webhook lần đầu retry ngay liên tục làm receiver bị spam, refactor thành BullMQ job với delay 1m/5m/30m (config qua env để test không phải chờ thật) + lưu attempt log để thấy rõ 410 Gone thì tự đóng subscription thay vì retry vô hạn. Kết quả định lượng: 61 request/ph → đúng request thứ 61 trả 429 có header X-RateLimit-Remaining=0 (test hammer tự động), webhook fail toàn bộ 3 lần rơi dead-letter đúng hạn ~36 phút (mặc định prod), regression test chứng minh tenant B sửa id trong URL không đọc được entry của tenant A, audit log ghi trọn before/after mọi thay đổi content."
+            - paragraph [ref=f8e866]:
+              - generic [ref=f8e867]: REALITY
+              - generic [ref=f8e868]: "Tuần 8 gần như zero-buffer: nếu dashboard kéo dài thì schema editor giữ nguyên JSON textarea và đừng mở visual builder giữa chừng — đó là lý do duy nhất khiến 8 tuần này trễ."
+            - group [ref=f8e869]:
+              - generic "Mở rộng sau (6 mục)" [ref=f8e870] [cursor=pointer]
+            - group [ref=f8e871]:
+              - generic "Ghi chú deploy" [ref=f8e872] [cursor=pointer]
+      - region [ref=f8e873]:
+        - generic [ref=f8e874]:
+          - heading "Dự án nên tránh" [level=2] [ref=f8e875]
+          - paragraph [ref=f8e876]: Những thứ hiring manager đóng tab sau vài giây — tất cả đều là tín hiệu âm.
+        - list [ref=f8e877]:
+          - listitem [ref=f8e878]:
+            - strong [ref=f8e879]: To-do / weather / calculator thuần túy
+            - text: Được gọi là "lorem ipsum of developer portfolios". Muốn làm todo thì phải có twist thật (auto-scheduling…) thì mới còn là todo.
+          - listitem [ref=f8e880]:
+            - strong [ref=f8e881]: Clone Netflix/Spotify pixel-perfect
+            - text: "Trả lời \"bạn copy được không?\" thay vì \"bạn build được thứ tôi chưa thấy\". Ngoại lệ: viết lại từ đầu, defend được, mở rộng scope."
+          - listitem [ref=f8e882]:
+            - strong [ref=f8e883]: 12 repo mỏng
+            - text: "\"12 project trong portfolio → homework là delete 9\". 2-3 project sâu thắng 12 project mediocre."
+          - listitem [ref=f8e884]:
+            - strong [ref=f8e885]: Commit 4000 dòng trong một lần
+            - text: Reads as "pasted output, never iterated" — chia nhỏ, có message why/what/tradeoffs.
+      - region [ref=f8e886]:
+        - generic [ref=f8e887]:
+          - heading "Lộ trình 3 giai đoạn" [level=2] [ref=f8e888]
+          - paragraph [ref=f8e889]: "Không làm hết 78 tuần: lộ trình dựng 5-6 dự án (3 nền tảng + 1-2 intermediate + 1 flagship), curate về 3-4 repo pin. 12 tháng ở đây tính theo tuần full-time."
+        - generic [ref=f8e890]:
+          - generic [ref=f8e891]:
+            - generic [ref=f8e892]: GĐ 1 · tháng 1-3
+            - heading "Nền tảng" [level=3] [ref=f8e893]
+            - paragraph [ref=f8e894]: ZoneCheck (3 tuần) → MediSlot (4) → LeadIntake CRM (4). Đủ để quen Prisma migration, validation, auth, state machine, Docker/CI. Dựng CI ngay tuần đầu dù chỉ vài test.
+            - generic [ref=f8e895]: "Tín hiệu: 3 live URL, README tiếng Anh có problem statement, CI xanh, 1 E2E smoke pass mỗi dự án."
+          - generic [ref=f8e896]:
+            - generic [ref=f8e897]: GĐ 2 · tháng 4-8
+            - heading "Chọn 1-2 intermediate theo hướng" [level=3] [ref=f8e898]
+            - paragraph [ref=f8e899]: "Thích concurrency → StockLedger + HookLab. Kể chuyện phỏng vấn VN → ShipTrack + COD Confirm. Product nội bộ → FlagDeck / ChatDesk / FormForge. Song song: 3-5 merged PR lên OSS bạn dùng thật. Chọn theo trục bug khó nhất chứ không theo domain: repo đã có race thì lần sau lấy trục khác (geo, data model, webhook) để 3 câu chuyện phỏng vấn không trùng một mô-típ."
+            - generic [ref=f8e900]: "Tín hiệu: decision log trong mỗi repo, transaction test fail-trước-fix, 3-5 merged PR OSS."
+          - generic [ref=f8e901]:
+            - generic [ref=f8e902]: GĐ 3 · tháng 9-12
+            - heading "Vượt junior → mid" [level=3] [ref=f8e903]
+            - paragraph [ref=f8e904]: "Một flagship (DutyBell hoặc ApprovaFlow) chạy cho team thật ≥ 2 tháng, DEBUGGING.md kể một bug root-cause. Sau đó curate: pin 3 repo, hạ phần còn lại."
+            - generic [ref=f8e905]: "Tín hiệu: 3 câu chuyện phỏng vấn problem → decision → hardest bug → kết quả định lượng, 5-10 merged PR OSS."
+        - paragraph [ref=f8e906]: Giữ nguyên phần "Ngoài phạm vi" của từng dự án khi build — số tuần chỉ vừa nếu cắt đúng chỗ đó. Chọn ít nhất một dự án trong 3-4 cái đầu cho một shop/clb/bạn quen thật rồi deploy cho họ, ghi "X user, Y tuần" vào README.
+      - region [ref=f8e907]:
+        - generic [ref=f8e908]:
+          - heading "Một stack suốt lộ trình" [level=2] [ref=f8e909]
+          - paragraph [ref=f8e910]: Mỗi dự án liệt kê stack cụ thể trong card, nhưng tất cả nằm trong cùng họ công nghệ và tsconfig strict — không đổi menu trong 12 tháng.
+        - generic [ref=f8e911]:
+          - generic [ref=f8e912]: TypeScript strict
+          - generic [ref=f8e913]: Next.js 15
+          - generic [ref=f8e914]: NestJS 11
+          - generic [ref=f8e915]: PostgreSQL 16
+          - generic [ref=f8e916]: Prisma 7
+          - generic [ref=f8e917]: PostGIS (ZoneCheck)
+          - generic [ref=f8e918]: Vitest
+          - generic [ref=f8e919]: Playwright
+          - generic [ref=f8e920]: Docker Compose
+          - generic [ref=f8e921]: GitHub Actions
+          - generic [ref=f8e922]: Vercel / VPS
+        - paragraph [ref=f8e923]: Payment gateway (VNPay / MoMo / Stripe checkout) không nằm trong catalog — nếu JD đòi, tự thêm một flow sandbox riêng; thiếu là chủ đích cắt scope.
+    - contentinfo [ref=f8e924]:
+      - paragraph [ref=f8e925]:
+        - strong [ref=f8e926]: "Cách catalog này được tạo:"
+        - text: "pipeline 52 agent — 20 generator theo 20 lĩnh vực (internal tools, scheduling, CRM, devtools, realtime…) nộp ~100 ứng viên → tuyển 15 (cân bậc, ưu tiên backend theo số liệu VN) → 15 agent viết spec đầy đủ → 15 agent phản biện (scope vs số tuần, bản sao tutorial, tín hiệu phỏng vấn) → gộp và sửa theo phản biện. Nghiên cứu thị trường: ITviec + VietnamWorks (2026-10-07), engineering ladders công khai, review 50 junior portfolio."
+      - list [ref=f8e927]:
+        - listitem [ref=f8e928]:
+          - link "ITviec Salary & Recruitment Market Report 2025-2026" [ref=f8e929] [cursor=pointer]:
+            - /url: https://itviec.com/blog/it-salary-report
+        - listitem [ref=f8e930]:
+          - link "career-ladders.dev — engineering ladder" [ref=f8e931] [cursor=pointer]:
+            - /url: https://career-ladders.dev/engineering/
+        - listitem [ref=f8e932]:
+          - link "jorgef/engineeringladders" [ref=f8e933] [cursor=pointer]:
+            - /url: https://github.com/jorgef/engineeringladders/blob/master/Developer.md
+        - listitem [ref=f8e934]:
+          - link "I reviewed 50 junior developer portfolios (dev.to)" [ref=f8e935] [cursor=pointer]:
+            - /url: https://dev.to/__be2942592/i-reviewed-50-junior-developer-portfolios-the-same-3-problems-kept-showing-up-4ed3
+        - listitem [ref=f8e936]:
+          - link "Side projects that impress hiring managers 2026" [ref=f8e937] [cursor=pointer]:
+            - /url: https://pickuma.com/for-junior/side-projects-that-impress-hiring-managers-2026/
+      - paragraph [ref=f8e938]: Cập nhật 2026-10-08 · số liệu job board thay đổi hằng ngày, coi các con số là xấp xỉ tại thời điểm lấy, không phải phân vùng cố định.

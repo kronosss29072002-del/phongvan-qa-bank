@@ -1,0 +1,301 @@
+- generic [active] [ref=f2e1]:
+  - generic:
+    - generic:
+      - link "Bỏ qua để đến phần nội dung chính" [ref=f2e2] [cursor=pointer]
+      - link "Hỗ trợ truy cập" [ref=f2e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=vi
+  - generic [ref=f2e8]:
+    - search [ref=f2e9]:
+      - generic [ref=f2e12]:
+        - link [ref=f2e13] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=vi&ictx=0&sa=X&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQpYkNegQIBhAG
+          - img "Truy cập trang chủ Google" [ref=f2e14]
+        - generic [ref=f2e15]:
+          - combobox "Tìm kiếm" [ref=f2e18]: hiring manager portfolio projects "to-do list" OR "weather app" overdone stand out hiring manager portfolio projects "to-do list" OR "weather app" overdone stand out
+          - generic [ref=f2e19]:
+            - button "Xóa" [ref=f2e21] [cursor=pointer]
+            - generic [ref=f2e26]:
+              - button "Công cụ nhập" [ref=f2e27] [cursor=pointer]
+              - button "Tìm kiếm bằng giọng nói" [ref=f2e31] [cursor=pointer]
+              - button "Tìm kiếm bằng hình ảnh" [ref=f2e34] [cursor=pointer]
+        - button "Tìm kiếm" [ref=f2e37] [cursor=pointer]
+    - generic [ref=f2e42]:
+      - button "Cài đặt" [ref=f2e44] [cursor=pointer]
+      - button "Chia sẻ" [ref=f2e49] [cursor=pointer]
+      - generic [ref=f2e55]:
+        - button "Các ứng dụng của Google" [ref=f2e57] [cursor=pointer]
+        - link "Đăng nhập" [ref=f2e62] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=vi&passive=true&continue=https://www.google.com/search%3Fq%3Dhiring%2Bmanager%2Bportfolio%2Bprojects%2B%2522to-do%2Blist%2522%2BOR%2B%2522weather%2Bapp%2522%2Boverdone%2Bstand%2Bout%26sei%3D_3jHapC8OJzr1e8PmYP3kAQ&ec=futura_srp_og_si_72236_p
+  - generic [ref=f2e65]:
+    - navigation [ref=f2e71]:
+      - generic [ref=f2e77]:
+        - list [ref=f2e78]:
+          - listitem [ref=f2e79]:
+            - link "Tất cả" [disabled] [ref=f2e80]
+          - listitem [ref=f2e83]:
+            - link "Hình ảnh" [ref=f2e84] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&udm=2&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5V3OuEM9F5-lSyV1K9sTCoiGR82apGrJI7J8SPlYimSA6KORiATk_y4MkjWVo2eQ1RaklTNeL021_A9vWgRNkmVcJoGlWsWMkAWt5k-C2EIKQgL8t1GA3ABIEh2sgBFGW3nxs5TunZw3VuZj0EL5ZkRMkCQd_Eg8y5n1AcFkD2IaxVLte&q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sa=X&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQtKgLegQIFxAB
+          - listitem [ref=f2e87]:
+            - link "Tin tức" [ref=f2e88] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&tbm=nws&source=lnms&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5V3OuEM9F5-lSyV1K9sTCoiGR82apGrJI7J8SPlYimSA6KORiATk_y4MkjWVo2eQ1RaklTNeL021_A9vWgRNkmVcJoGlWsWMkAWt5k-C2EIKQgL8t1GA3ABIEh2sgBFGW3nxs5TunZw3VuZj0EL5ZkRMkCQd_Eg8y5n1AcFkD2IaxVLte&sa=X&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ0pQJegQIGBAB
+          - listitem [ref=f2e91]:
+            - link "Mua sắm" [ref=f2e92] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&udm=28&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5V3OuEM9F5-lSyV1K9sTCoiGR82apGrJI7J8SPlYimSA6KORiATk_y4MkjWVo2eQ1RaklTNeL021_A9vWgRNkmVcJoGlWsWMkAWt5k-C2EIKQgL8t1GA3ABIEh2sgBFGW3nxs5TunZw3VuZj0EL5ZkRMkCQd_Eg8y5n1AcFkD2IaxVLte&q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&ved=1t:220175&ictx=111
+          - listitem [ref=f2e95]:
+            - link "Video ngắn" [ref=f2e96] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&udm=39&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5V3OuEM9F5-lSyV1K9sTCoiGR82apGrJI7J8SPlYimSA6KORiATk_y4MkjWVo2eQ1RaklTNeL021_A9vWgRNkmVcJoGlWsWMkAWt5k-C2EIKQgL8t1GA3ABIEh2sgBFGW3nxs5TunZw3VuZj0EL5ZkRMkCQd_Eg8y5n1AcFkD2IaxVLte&q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sa=X&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQs6gLegQIGhAB
+          - listitem [ref=f2e99]:
+            - link "Video" [ref=f2e100] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&udm=vids&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmGEhzXYEKfT_fKaMIXXPT5V3OuEM9F5-lSyV1K9sTCoiGR82apGrJI7J8SPlYimSA6KORiATk_y4MkjWVo2eQ1RaklTNeL021_A9vWgRNkmVcJoGlWsWMkAWt5k-C2EIKQgL8t1GA3ABIEh2sgBFGW3nxs5TunZw3VuZj0EL5ZkRMkCQd_Eg8y5n1AcFkD2IaxVLte&q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sa=X&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQtKgLegQIGxAB
+          - listitem [ref=f2e103]:
+            - button [ref=f2e104] [cursor=pointer]:
+              - generic "Các bộ lọc khác" [ref=f2e105]: Thêm
+        - button "Công cụ" [ref=f2e112] [cursor=pointer]
+    - heading "Kết quả tìm kiếm" [level=1] [ref=f2e119]
+    - generic [ref=f2e125]:
+      - generic [ref=f2e126]: Looking for results in English?
+      - link [ref=f2e127] [cursor=pointer]:
+        - /url: "#"
+      - link "Change to English" [ref=f2e131] [cursor=pointer]:
+        - /url: /setprefs?sig=0_t5UDDH1-zCax__9uIpTmwchHM3M%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dhiring%2Bmanager%2Bportfolio%2Bprojects%2B%2522to-do%2Blist%2522%2BOR%2B%2522weather%2Bapp%2522%2Boverdone%2Bstand%2Bout%26sei%3D_3jHapC8OJzr1e8PmYP3kAQ&hl=en&sa=X&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQhoQCKAF6BAgUEAQ
+      - link "Tiếp tục sử dụng Tiếng Việt" [ref=f2e132] [cursor=pointer]:
+        - /url: "#"
+      - link "Cài đặt ngôn ngữ" [ref=f2e134] [cursor=pointer]:
+        - /url: /preferences?lang=1&hl=vi&sa=X&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQiIQCKAN6BAgUEAY#languages
+    - generic [ref=f2e135]:
+      - generic [ref=f2e154]:
+        - heading "Đang suy nghĩ Đang tìm kiếm Đang suy nghĩ lâu hơn một chút" [level=2] [ref=f2e158]:
+          - generic [ref=f2e159]:
+            - generic [ref=f2e160]: Đang suy nghĩ
+            - generic [ref=f2e162]: Đang tìm kiếm
+            - generic [ref=f2e172]: Đang suy nghĩ lâu hơn một chút
+        - progressbar "Đang tạo" [ref=f2e175]
+      - main [ref=f2e226]:
+        - generic [ref=f2e230]:
+          - generic [ref=f2e233]:
+            - heading "Web results" [level=2] [ref=f2e234]
+            - generic [ref=f2e235]:
+              - generic [ref=f2e238]:
+                - link "Building a Portfolio That Gets Noticed CareerEx https://www.yourcareerex.com › learn" [ref=f2e240] [cursor=pointer]:
+                  - /url: /goto?url=CAESjAEB6zswFdIFAfYkPrLlS81TV2z2kpi_crkbX9j9tNwWq2JwFTl0wusmLnUDbFudQgrTeD4HEUUkU1livigMwUZv5jxZcaV7_mmdA1Bpi3ttC2YZ9dYxEaOD_HRih6WnGpL-hNGuEyBDD_exCvsrenYD1cRETt__9rbdc0LJJSYf1Q9rl5__Ub5MNggEQg
+                  - heading "Building a Portfolio That Gets Noticed" [level=3] [ref=f2e241]
+                  - generic [ref=f2e247]:
+                    - generic [ref=f2e248]: CareerEx
+                    - generic [ref=f2e250]: https://www.yourcareerex.com › learn
+                - generic [ref=f2e252]:
+                  - generic [ref=f2e253]: ·
+                  - link "Dịch trang này" [ref=f2e254] [cursor=pointer]:
+                    - /url: /goto?url=CAES1gEB6zswFQa3Fktq6vZ0xICmkJqPylj8s-QTvjMQ96LEN-eBJ0VPBVwNZFp6t3Iod1v781wspcjAHzvO2l_nXVi1xH_2fdzwM8TkVDVAgt9HERn92PxtQoeyr3e8Ua_GZtEXRuC6Lon6W9E3BfC4k6WA8ji1SATwkPGuA_BBu0sqg3p_BH40gFeijS2zEq0TkwiG_8eEzTv5v1QXvgGy_-relbmSK0_AgPqEMjK62P195zzqNfHg7zAeON3j1O_nnsH9Vf7jF1nSA4DB1buWuBfWhZMvnRsX
+                - button "Thông tin về kết quả này" [ref=f2e259] [cursor=pointer]
+              - generic [ref=f2e266]:
+                - text: What Makes a
+                - emphasis [ref=f2e267]: Project Stand Out
+                - text: "? 1. Solves a Real Problem."
+                - emphasis [ref=f2e268]: Projects
+                - text: that ...
+                - emphasis [ref=f2e269]: Weather app
+                - text: "| A dashboard with saved locations, hourly charts, and clothing ..."
+          - generic [ref=f2e273]:
+            - generic [ref=f2e276]:
+              - link "As a hiring manager of junior developers. What are the ... Reddit · r/webdev >20 bình luận · 3 năm trước" [ref=f2e278] [cursor=pointer]:
+                - /url: /goto?url=CAESngEB6zswFR_D6cBOs9l61SkCo4PnOwwlAHG7NwSLr-xO7IZXp-caRCHGBmD_ORkWArqGqJOTyYxLfvAyNfK-W4HZh0uojdIhPtayTH0792i4Wt8NmVf93ZZl0l8wizHQ3BwPI52J31HsaAVt2QY48i1cL40yjdmOiR13GA5PoRU-cyzuNVvGYnMRUTBip-4DxY7wTZyhA-KaPKVCKC5FlA
+                - heading "As a hiring manager of junior developers. What are the ..." [level=3] [ref=f2e279]
+                - generic [ref=f2e285]:
+                  - generic [ref=f2e286]: Reddit · r/webdev
+                  - generic [ref=f2e288]: ">20 bình luận · 3 năm trước"
+              - button "Thông tin về kết quả này" [ref=f2e294] [cursor=pointer]
+            - generic [ref=f2e299]: Hi All, I am currently updating my own project examples and was wondering what you as a hiring manager would look for? If you are a hiring manager.
+            - generic [ref=f2e305]:
+              - link "24 câu trả lời" [ref=f2e306] [cursor=pointer]:
+                - /url: /goto?url=CAESpgEB6zswFUZIJTTz0wZvB2joithDBL_1g8yq3xloOlqUFBE00cCJ1WUGs143ny6xv7vITaBxRcoaFzkGIR--33HX39X2HoiYIWyqD1mINOQEhnq_ZMrHbaQPigMGLBy0ewevBGMDsWhdjv8N1G0c5mhoQ_s2tbfGOq9iQkG0ZVdIh2Liz-UX_4WMSYCyM_SVZV7SqmOjHsRyaxMkLVm8lA5WChaTQJEu
+              - generic [ref=f2e307]: ·
+              - generic [ref=f2e308]: "Câu trả lời hàng đầu:"
+              - generic [ref=f2e309]: I don’t agree with the standard answer. Webstores can be copied and tweaked or followed ...
+          - generic [ref=f2e313]:
+            - generic [ref=f2e316]:
+              - link "3 Ways to Make Your Programming Portfolio Stand Out Medium · Erik Andersen 3 năm trước" [ref=f2e318] [cursor=pointer]:
+                - /url: /goto?url=CAESoAEB6zswFdanYQUp8tZSgbWor91u0kxEs1JBuQINs9TqCpXR8gF6-Anc2YCdX3po-V0XXCuNZz914m07X0KA4Sz47YHre6HkGi3o2EIItGbQJGNplRKzhfQSMWrMWJDSoYH8bOVRp-n795nbt9QFn9Ig9nT2zP-w9rUNz7I166nhXMzOukk8vEcVWQVPkgLO6df-r2_yNiN8yFMj8Vde8Yor
+                - heading "3 Ways to Make Your Programming Portfolio Stand Out" [level=3] [ref=f2e319]
+                - generic [ref=f2e325]:
+                  - generic [ref=f2e326]: Medium · Erik Andersen
+                  - generic [ref=f2e328]: 3 năm trước
+              - button "Thông tin về kết quả này" [ref=f2e334] [cursor=pointer]
+            - generic [ref=f2e341]:
+              - text: A
+              - emphasis [ref=f2e342]: To Do list
+              - text: . A
+              - emphasis [ref=f2e343]: Weather App
+              - text: etc. These types of
+              - emphasis [ref=f2e344]: projects
+              - text: don't work as
+              - emphasis [ref=f2e345]: portfolio projects
+              - text: because all they prove is that you know how to ...
+          - generic [ref=f2e349]:
+            - generic [ref=f2e352]:
+              - link "Your portfolio is not weak because you lack projects. ... Facebook https://www.facebook.com › posts › your-portfolio-is-n..." [ref=f2e354] [cursor=pointer]:
+                - /url: /goto?url=CAES0QEB6zswFc88fmTvthTk9He9E_ziuYlyOlmIfmU576k0LXoSlx4cKoUQkJrQ3W6skM0REF3gk-9KvDvNWkwh8UArwz5Q_LbnjNiNxe_qDBhvK57BB0oNPpb6oZtQPgn2Q0NIvM_CvJBPCuDjxdW3X7kQGFQO884_c0QWh7I5BSyz9rczdLGkKREtWymznbwMiF23Qkpw1tilUIbeQl4nYeG0aiNqbyGLssWxtb0surRCJ0TsapD53INoArotQbzwb3QGCJRhIQ8vDbtwlLMXY5X9_w
+                - heading "Your portfolio is not weak because you lack projects. ..." [level=3] [ref=f2e355]
+                - generic [ref=f2e361]:
+                  - generic [ref=f2e362]: Facebook
+                  - generic [ref=f2e364]: https://www.facebook.com › posts › your-portfolio-is-n...
+              - button "Thông tin về kết quả này" [ref=f2e370] [cursor=pointer]
+            - generic [ref=f2e377]:
+              - text: If your
+              - emphasis [ref=f2e378]: portfolio
+              - text: has To-Do App + Calculator +
+              - emphasis [ref=f2e379]: Weather App
+              - text: … I'm sorry. But you're not standing
+              - emphasis [ref=f2e380]: out
+              - text: ". You're blending into the biggest crowd in tech: people ..."
+          - generic [ref=f2e384]:
+            - generic [ref=f2e387]:
+              - link "3 Common Mistakes Data Analysts Make When Job Hunting LinkedIn · Matt Mike >90 lượt thể hiện cảm xúc · 5 tháng trước" [ref=f2e389] [cursor=pointer]:
+                - /url: /goto?url=CAEStAEB6zswFdCaaGARohgtvF6Sz-o9FR_vWltiLiHmXma3ngDHdJ5BjNaOZMQbWMBHKGwhFf2uUUia4Nxp3mvL1l-xrkOtb5cMhhz_mIdltic6UwBmSeGP2JNKktE3pFZRwl-w4MRutqOISXQE3Af0zPn9ERM0oE1SGxD1UHpHV9HN2aYCGmjfR88sR2xtmDzMTWn6MJdO7AW4FITZ90hDIai6qTzwxlyNiO0D6tQL8tM1Z_uv73o
+                - heading "3 Common Mistakes Data Analysts Make When Job Hunting" [level=3] [ref=f2e390]
+                - generic [ref=f2e396]:
+                  - generic [ref=f2e397]: LinkedIn · Matt Mike
+                  - generic [ref=f2e399]: ">90 lượt thể hiện cảm xúc · 5 tháng trước"
+              - button "Thông tin về kết quả này" [ref=f2e405] [cursor=pointer]
+            - generic [ref=f2e412]:
+              - text: If your final-year
+              - emphasis [ref=f2e413]: project
+              - text: is a
+              - emphasis [ref=f2e414]: weather app
+              - text: or a
+              - emphasis [ref=f2e415]: to-do list
+              - text: — recruiters have already moved on. A
+              - emphasis [ref=f2e416]: weather app
+              - text: . A
+              - emphasis [ref=f2e417]: to-do list
+              - text: . A library ...
+          - generic [ref=f2e423]:
+            - generic [ref=f2e426]:
+              - link "Stop building random apps just to add them to your portfolio. ... Facebook · Brototype Malayalam 4 tuần trước" [ref=f2e428] [cursor=pointer]:
+                - /url: /goto?url=CAES0AEB6zswFY_iz4cuXE8sN0574my3hZEo7ShZWsDVYl3Hl-zxQrY2Tjpjq10JGmKe8KNQBqXaPv355iMg__Ezzy9T32LYpey4Rbd-bW-omKdRPRcgfamjl2cOGif8YGcX4RIGZDkX5mdbP4qlzR8xPRQv1BtcZ201O3vOr161oQVPqlYGEcTQIXHqfbEXXYEtgISbNa2FteQ91T9pnczS_bCcebup2UwFHykHTeeeBJVoWvo3qUppVY1-uSQcyHwVE1pj0DDMfLi7g9sHe_DflwnL
+                - heading "Stop building random apps just to add them to your portfolio. ..." [level=3] [ref=f2e429]
+                - generic [ref=f2e435]:
+                  - generic [ref=f2e436]: Facebook · Brototype Malayalam
+                  - generic [ref=f2e438]: 4 tuần trước
+              - button "Thông tin về kết quả này" [ref=f2e444] [cursor=pointer]
+            - generic [ref=f2e449]:
+              - link "Stop building random apps just to add them to your portfolio. ... của Brototype Malayalam trên Facebook. Phát trên Facebook. 1:09" [ref=f2e450] [cursor=pointer]:
+                - /url: /goto?url=CAES0AEB6zswFY_iz4cuXE8sN0574my3hZEo7ShZWsDVYl3Hl-zxQrY2Tjpjq10JGmKe8KNQBqXaPv355iMg__Ezzy9T32LYpey4Rbd-bW-omKdRPRcgfamjl2cOGif8YGcX4RIGZDkX5mdbP4qlzR8xPRQv1BtcZ201O3vOr161oQVPqlYGEcTQIXHqfbEXXYEtgISbNa2FteQ91T9pnczS_bCcebup2UwFHykHTeeeBJVoWvo3qUppVY1-uSQcyHwVE1pj0DDMfLi7g9sHe_DflwnL
+                - generic [ref=f2e451]: 1:09
+              - generic [ref=f2e463]: If your portfolio has To-Do App + Calculator + Weather App… I'm sorry. But you're not standing out. You're blending into the biggest crowd in ...
+          - generic [ref=f2e468]:
+            - generic [ref=f2e471]:
+              - link "Top Web Development Projects Ideas for Beginners & Experts TechAtom https://www.techatom.org › blog › to..." [ref=f2e473] [cursor=pointer]:
+                - /url: /goto?url=CAESewHrOzAVcvNusLPyFmChF17R-8_CDyaN65UhHfUjyCCBFP-SwT2_kO7oVwZGI1ezHko6NPFb8O_Lf9UXv3PwUJ1wyPyZgwW1j50KYX8SmiFJtRp2RdILp5lHoGYTK3zT-09R8-QCF_Fg67Gx5iyChj57NGAWRd6JTgmXuQ
+                - heading "Top Web Development Projects Ideas for Beginners & Experts" [level=3] [ref=f2e474]
+                - generic [ref=f2e480]:
+                  - generic [ref=f2e481]: TechAtom
+                  - generic [ref=f2e483]: https://www.techatom.org › blog › to...
+              - generic [ref=f2e485]:
+                - generic [ref=f2e486]: ·
+                - link "Dịch trang này" [ref=f2e487] [cursor=pointer]:
+                  - /url: /goto?url=CAESxQEB6zswFcQSqcp0sfcflWPgW691sV_HSrbVbc1YFTweR0FqAU3Y1UtEQMFNHteWGBiFcYR6tVw6rPLFDBG095qXocf817HB2-vI3lTsVR6wYTeJVpYJXE11g6GoWvt1YZiVQz8ahwL3K3MJGcpO_LBKlUQcRmKX0be5QJMmGcGYCf-HRSs3cF3HX_6ZYcxevDjo065oq2qYedoRlhYbCKTBGjznAerqohFazs9c9WqmKB_JuWV8VfVGHPmaF4MHsYxRlh3bPA
+              - button "Thông tin về kết quả này" [ref=f2e492] [cursor=pointer]
+            - generic [ref=f2e499]:
+              - text: The best beginner
+              - emphasis [ref=f2e500]: projects
+              - text: include a personal
+              - emphasis [ref=f2e501]: portfolio
+              - text: website,
+              - emphasis [ref=f2e502]: to-do list
+              - text: app,
+              - emphasis [ref=f2e503]: weather app
+              - text: ", and simple quiz game. These"
+              - emphasis [ref=f2e504]: projects
+              - text: help you learn HTML, CSS ...
+          - generic [ref=f2e508]:
+            - generic [ref=f2e511]:
+              - link "Self taught beginner here. Is this portfolio good enough for ... Reddit · r/reactjs >80 bình luận · 5 năm trước" [ref=f2e513] [cursor=pointer]:
+                - /url: /goto?url=CAESnQEB6zswFUykwutsCvIQpY8lK3rQ-FP2tUlBya6HY2-SRREdTo4CULufiUzfbXQn582UmnBiHqV-L6tU6CBgack1Im4tETSsHTwYaZ5_yPtxUuIbiT5T1gtT8rLayNrbaMzElRsGdCAV1qLwDx-vWFVWThcACwyuBU5hnjJ_2DB1AOE0VhJa4DG6yN3Xy17uPmCS0GlSxuchcOkl-655
+                - heading "Self taught beginner here. Is this portfolio good enough for ..." [level=3] [ref=f2e514]
+                - generic [ref=f2e520]:
+                  - generic [ref=f2e521]: Reddit · r/reactjs
+                  - generic [ref=f2e523]: ">80 bình luận · 5 năm trước"
+              - button "Thông tin về kết quả này" [ref=f2e529] [cursor=pointer]
+            - generic [ref=f2e536]:
+              - emphasis [ref=f2e537]: Weather App
+              - text: that displays 7-day forecast when entering in a location. ...
+              - emphasis [ref=f2e538]: to-do list
+              - text: or other generic
+              - emphasis [ref=f2e539]: portfolio project
+              - text: . More replies. [deleted].
+          - generic [ref=f2e543]:
+            - generic [ref=f2e546]:
+              - link "How to Learn Vibe Coding from Scratch in 2026 KnowledgeHut https://www.knowledgehut.com › blog" [ref=f2e548] [cursor=pointer]:
+                - /url: /goto?url=CAESogEB6zswFeFxKdvJCS7u6SPJLTx9IA6gxPIxUvcx1nXE3NMPqi6lXzkbPN3K8TLbx0UMdfqzYESaGUG9yLY0I6yRs34M9QDN-iYm86iDZ9e4COVqFPa4mKWYH4aO1Mgv2KfkZQ-DwsgJHULiytnNzkw0nIRlvs12nGQxz1vLP0cr_GvJmt_Kir_3QcIFfcxAvdbzeXN6GTBuSfHzQU5jXJqfpNo
+                - heading "How to Learn Vibe Coding from Scratch in 2026" [level=3] [ref=f2e549]
+                - generic [ref=f2e555]:
+                  - generic [ref=f2e556]: KnowledgeHut
+                  - generic [ref=f2e558]: https://www.knowledgehut.com › blog
+              - generic [ref=f2e560]:
+                - generic [ref=f2e561]: ·
+                - link "Dịch trang này" [ref=f2e562] [cursor=pointer]:
+                  - /url: /goto?url=CAES7AEB6zswFbQ3hoCOt8fd-wS96qK5coWuFzLVpSp0wjFK7iutF903J04VI1VHEljmwhylDeWOXLYlkXRLBOV-CPehzAB1j7mgZ1XopqCP7_pQ1DQ2F9QXJgnvXgsDXctS9Lm9ZvwvTZxdPJQ2KwMqDvsU7fUmMi8_j0NNpsbOps5x8MA7ziuBoqTlM_OHvPsajdwgi0Xyu2YdhNfqSM41sAi3ZpcKjOBJ4EopuLLzTTKXj4sppnlcC1FEeDUuFZhVVhFDPrPn0mczSHz686CR_lmHwVRaHrvL3288kZJAHTHsmCM50iV6i2tNDY7XwQ
+              - button "Thông tin về kết quả này" [ref=f2e567] [cursor=pointer]
+            - generic [ref=f2e574]:
+              - emphasis [ref=f2e575]: To-do list
+              - text: ;
+              - emphasis [ref=f2e576]: Weather app
+              - text: . These
+              - emphasis [ref=f2e577]: projects
+              - text: "help you understand how code works in real scenarios. Step 5: Learn Version Control (Git & GitHub). Version control is ..."
+        - navigation [ref=f2e580]:
+          - heading "Điều hướng trang" [level=1] [ref=f2e581]
+          - text: "1"
+          - link "Page 2" [ref=f2e584] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=10&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8tMDegQILhAE
+            - text: "2"
+          - link "Page 3" [ref=f2e586] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=20&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8tMDegQILhAG
+            - text: "3"
+          - link "Page 4" [ref=f2e588] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=30&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8tMDegQILhAI
+            - text: "4"
+          - link "Page 5" [ref=f2e590] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=40&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8tMDegQILhAK
+            - text: "5"
+          - link "Page 6" [ref=f2e592] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=50&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8tMDegQILhAM
+            - text: "6"
+          - link "Page 7" [ref=f2e594] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=60&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8tMDegQILhAO
+            - text: "7"
+          - link "Page 8" [ref=f2e596] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=70&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8tMDegQILhAQ
+            - text: "8"
+          - link "Page 9" [ref=f2e598] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=80&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8tMDegQILhAS
+            - text: "9"
+          - link "Page 10" [ref=f2e600] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=90&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8tMDegQILhAU
+            - text: "10"
+          - heading [level=2] [ref=f2e602]:
+            - link "Tiếp" [ref=f2e603] [cursor=pointer]:
+              - /url: /search?q=hiring+manager+portfolio+projects+%22to-do+list%22+OR+%22weather+app%22+overdone+stand+out&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntkXGZ-KTTPM2GwiulKzqPBqz0i9A:1791457536162&ei=AHnHaqzeCK3e1e8PisS62Aw&start=10&sa=N&sstk=AS6-VmJyf-chUSmKn5igjUXaWzDiuP2xjNMVs2zADo5-YC3a7C_n3zL-QEN7441n4p5o5eFkaO00mgMoQNXc4s8LrputMjFIsgWXKA&ved=2ahUKEwis3smwo6qXAxUtb_UHHQqiDssQ8NMDegQILhAW
+        - navigation
+    - contentinfo [ref=f2e606]:
+      - heading "Đường liên kết ở chân trang" [level=1] [ref=f2e607]
+      - generic [ref=f2e611]:
+        - generic [ref=f2e613]:
+          - text: Việt Nam
+          - generic [ref=f2e615]:
+            - button "Thủ Đức, Hồ Chí Minh - Dựa trên địa chỉ IP của bạn" [ref=f2e617] [cursor=pointer]:
+              - generic [ref=f2e618]: Thủ Đức, Hồ Chí Minh
+              - generic [ref=f2e620]:
+                - text: "-"
+                - generic [ref=f2e621]: Dựa trên địa chỉ IP của bạn
+            - text: "-"
+            - button "Cập nhật vị trí" [ref=f2e623] [cursor=pointer]
+        - generic [ref=f2e626]:
+          - link "Trợ giúp" [ref=f2e627] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=vi&fg=1
+          - link "Gửi phản hồi" [ref=f2e628] [cursor=pointer]:
+            - /url: "#"
+          - link "Quyền riêng tư" [ref=f2e629] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=vi&fg=1
+          - link "Điều khoản" [ref=f2e630] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=vi&fg=1

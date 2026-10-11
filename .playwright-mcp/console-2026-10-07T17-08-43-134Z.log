@@ -1,0 +1,2 @@
+[    1375ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://external-content.duckduckgo.com/ip3/dredyson.com.ico:0
+[    2620ms] [WARNING] Attempted to send a wide event that has already been sent serp-web-vertical more-results @ https://duckduckgo.com/dist/wpm.main.85d33292fa7662be583c.js:0

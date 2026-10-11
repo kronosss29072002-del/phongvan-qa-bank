@@ -1,0 +1,606 @@
+- generic [ref=f73e2]:
+  - banner [ref=f73e3]:
+    - generic [ref=f73e11]:
+      - text: Join
+      - link "PromCon EU 2026" [ref=f73e12] [cursor=pointer]:
+        - /url: https://promcon.io/2026-munich/
+      - text: ", the Prometheus users conference, on October 7–8, 2026 in Munich."
+    - generic [ref=f73e19]:
+      - link [ref=f73e20] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f73e21]:
+          - img "Prometheus logo" [ref=f73e22]
+          - paragraph [ref=f73e23]: Prometheus
+      - generic [ref=f73e25]:
+        - link "Docs" [ref=f73e26] [cursor=pointer]:
+          - /url: /docs/introduction/overview/
+        - link "Download" [ref=f73e27] [cursor=pointer]:
+          - /url: /download/
+        - link "Community" [ref=f73e28] [cursor=pointer]:
+          - /url: /community/
+        - link "Support & Training" [ref=f73e29] [cursor=pointer]:
+          - /url: /support-training/
+        - link "Blog" [ref=f73e30] [cursor=pointer]:
+          - /url: /blog/
+  - main [ref=f73e31]:
+    - generic [ref=f73e33]:
+      - navigation [ref=f73e34]:
+        - generic [ref=f73e38]:
+          - link "Introduction" [ref=f73e39] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e51]:
+            - link [ref=f73e52] [cursor=pointer]:
+              - /url: /docs/introduction/overview/
+              - generic [ref=f73e53]: Overview
+            - link [ref=f73e54] [cursor=pointer]:
+              - /url: /docs/introduction/first_steps/
+              - generic [ref=f73e55]: First steps
+            - link [ref=f73e56] [cursor=pointer]:
+              - /url: /docs/introduction/comparison/
+              - generic [ref=f73e57]: Comparison to alternatives
+            - link [ref=f73e58] [cursor=pointer]:
+              - /url: /docs/introduction/faq/
+              - generic [ref=f73e59]: FAQ
+            - link [ref=f73e60] [cursor=pointer]:
+              - /url: /docs/introduction/roadmap/
+              - generic [ref=f73e61]: Roadmap
+            - link [ref=f73e62] [cursor=pointer]:
+              - /url: /docs/introduction/design-doc/
+              - generic [ref=f73e63]: Design documents
+            - link [ref=f73e64] [cursor=pointer]:
+              - /url: /docs/introduction/media/
+              - generic [ref=f73e65]: Media
+            - link [ref=f73e66] [cursor=pointer]:
+              - /url: /docs/introduction/glossary/
+              - generic [ref=f73e67]: Glossary
+            - link [ref=f73e68] [cursor=pointer]:
+              - /url: /docs/introduction/release-cycle/
+              - generic [ref=f73e69]: Long-term support
+          - link "Concepts" [ref=f73e70] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e79]:
+            - link [ref=f73e80] [cursor=pointer]:
+              - /url: /docs/concepts/data_model/
+              - generic [ref=f73e81]: Data model
+            - link [ref=f73e82] [cursor=pointer]:
+              - /url: /docs/concepts/metric_types/
+              - generic [ref=f73e83]: Metric types
+            - link [ref=f73e84] [cursor=pointer]:
+              - /url: /docs/concepts/jobs_instances/
+              - generic [ref=f73e85]: Jobs and instances
+          - link "Prometheus Server" [ref=f73e86] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e96]:
+            - textbox [ref=f73e103] [cursor=pointer]: 3.15 (latest)
+            - link [ref=f73e104] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/getting_started/
+              - generic [ref=f73e105]: Getting started
+            - link [ref=f73e106] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/installation/
+              - generic [ref=f73e107]: Installation
+            - link [ref=f73e108] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f73e109]: Configuration
+            - generic [ref=f73e114]:
+              - link [ref=f73e115] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/configuration/
+                - generic [ref=f73e116]: Configuration
+              - link [ref=f73e117] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/recording_rules/
+                - generic [ref=f73e118]: Recording rules
+              - link [ref=f73e119] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/alerting_rules/
+                - generic [ref=f73e120]: Alerting rules
+              - link [ref=f73e121] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/template_examples/
+                - generic [ref=f73e122]: Template examples
+              - link [ref=f73e123] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/template_reference/
+                - generic [ref=f73e124]: Template reference
+              - link [ref=f73e125] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/promtool/
+                - generic [ref=f73e126]: HTTP configuration for promtool
+              - link [ref=f73e127] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/unit_testing_rules/
+                - generic [ref=f73e128]: Unit testing for rules
+              - link [ref=f73e129] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/https/
+                - generic [ref=f73e130]: HTTPS and authentication
+            - link [ref=f73e131] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/prometheus_agent/
+              - generic [ref=f73e132]: Agent Mode
+            - link [ref=f73e133] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f73e134]: Querying
+            - generic [ref=f73e139]:
+              - link [ref=f73e140] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/basics/
+                - generic [ref=f73e141]: Basics
+              - link [ref=f73e142] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/operators/
+                - generic [ref=f73e143]: Operators
+              - link [ref=f73e144] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/functions/
+                - generic [ref=f73e145]: Functions
+              - link [ref=f73e146] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/examples/
+                - generic [ref=f73e147]: Examples
+              - link [ref=f73e148] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/api/
+                - generic [ref=f73e149]: HTTP API
+              - link [ref=f73e150] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/remote_read_api/
+                - generic [ref=f73e151]: Remote Read API
+            - link [ref=f73e152] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/storage/
+              - generic [ref=f73e153]: Storage
+            - link [ref=f73e154] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/federation/
+              - generic [ref=f73e155]: Federation
+            - link [ref=f73e156] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/http_sd/
+              - generic [ref=f73e157]: HTTP SD
+            - link [ref=f73e158] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/management_api/
+              - generic [ref=f73e159]: Management API
+            - link [ref=f73e160] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f73e161]: Command Line
+            - generic [ref=f73e166]:
+              - link [ref=f73e167] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/command-line/prometheus/
+                - generic [ref=f73e168]: prometheus
+              - link [ref=f73e169] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/command-line/promtool/
+                - generic [ref=f73e170]: promtool
+            - link [ref=f73e171] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/migration/
+              - generic [ref=f73e172]: Migration
+            - link [ref=f73e173] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/stability/
+              - generic [ref=f73e174]: API stability
+            - link [ref=f73e175] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/feature_flags/
+              - generic [ref=f73e176]: Feature flags
+          - link "Visualization" [ref=f73e177] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e186]:
+            - link [ref=f73e187] [cursor=pointer]:
+              - /url: /docs/visualization/browser/
+              - generic [ref=f73e188]: Expression browser
+            - link [ref=f73e189] [cursor=pointer]:
+              - /url: /docs/visualization/grafana/
+              - generic [ref=f73e190]: Grafana
+            - link [ref=f73e191] [cursor=pointer]:
+              - /url: /docs/visualization/perses/
+              - generic [ref=f73e192]: Perses
+            - link [ref=f73e193] [cursor=pointer]:
+              - /url: /docs/visualization/consoles/
+              - generic [ref=f73e194]: Console templates
+          - link "Instrumenting" [ref=f73e195] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e206]:
+            - link [ref=f73e207] [cursor=pointer]:
+              - /url: /docs/instrumenting/clientlibs/
+              - generic [ref=f73e208]: Client libraries
+            - link [ref=f73e209] [cursor=pointer]:
+              - /url: /docs/instrumenting/writing_clientlibs/
+              - generic [ref=f73e210]: Writing client libraries
+            - link [ref=f73e211] [cursor=pointer]:
+              - /url: /docs/instrumenting/pushing/
+              - generic [ref=f73e212]: Pushing metrics
+            - link [ref=f73e213] [cursor=pointer]:
+              - /url: /docs/instrumenting/exporters/
+              - generic [ref=f73e214]: Exporters and integrations
+            - link [ref=f73e215] [cursor=pointer]:
+              - /url: /docs/instrumenting/writing_exporters/
+              - generic [ref=f73e216]: Writing exporters
+            - link [ref=f73e217] [cursor=pointer]:
+              - /url: /docs/instrumenting/exposition_formats/
+              - generic [ref=f73e218]: Exposition formats
+            - link [ref=f73e219] [cursor=pointer]:
+              - /url: /docs/instrumenting/escaping_schemes/
+              - generic [ref=f73e220]: UTF-8 escaping schemes
+            - link [ref=f73e221] [cursor=pointer]:
+              - /url: /docs/instrumenting/content_negotiation/
+              - generic [ref=f73e222]: Content negotiation
+          - link "Operating" [ref=f73e223] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e233]:
+            - link [ref=f73e234] [cursor=pointer]:
+              - /url: /docs/operating/security/
+              - generic [ref=f73e235]: Security
+            - link [ref=f73e236] [cursor=pointer]:
+              - /url: /docs/operating/integrations/
+              - generic [ref=f73e237]: Integrations
+          - link "Alertmanager" [ref=f73e238] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e248]:
+            - textbox [ref=f73e255] [cursor=pointer]: 0.34 (latest)
+            - link [ref=f73e256] [cursor=pointer]:
+              - /url: /docs/alerting/latest/overview/
+              - generic [ref=f73e257]: Alerting overview
+            - link [ref=f73e258] [cursor=pointer]:
+              - /url: /docs/alerting/latest/alertmanager/
+              - generic [ref=f73e259]: Alertmanager
+            - link [ref=f73e260] [cursor=pointer]:
+              - /url: /docs/alerting/latest/configuration/
+              - generic [ref=f73e261]: Configuration
+            - link [ref=f73e262] [cursor=pointer]:
+              - /url: /docs/alerting/latest/high_availability/
+              - generic [ref=f73e263]: High Availability
+            - link [ref=f73e264] [cursor=pointer]:
+              - /url: /docs/alerting/latest/integrations/
+              - generic [ref=f73e265]: Notification Integrations
+            - link [ref=f73e266] [cursor=pointer]:
+              - /url: /docs/alerting/latest/alerts_api/
+              - generic [ref=f73e267]: Alerts API
+            - link [ref=f73e268] [cursor=pointer]:
+              - /url: /docs/alerting/latest/notifications/
+              - generic [ref=f73e269]: Notification template reference
+            - link [ref=f73e270] [cursor=pointer]:
+              - /url: /docs/alerting/latest/notification_examples/
+              - generic [ref=f73e271]: Notification template examples
+            - link [ref=f73e272] [cursor=pointer]:
+              - /url: /docs/alerting/latest/management_api/
+              - generic [ref=f73e273]: Management API
+            - link [ref=f73e274] [cursor=pointer]:
+              - /url: /docs/alerting/latest/https/
+              - generic [ref=f73e275]: HTTPS and authentication
+          - link "Best practices" [ref=f73e276] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e286]:
+            - link "Metric and label naming" [ref=f73e287] [cursor=pointer]:
+              - /url: /docs/practices/naming/
+            - link "Consoles and dashboards" [ref=f73e289] [cursor=pointer]:
+              - /url: /docs/practices/consoles/
+            - link "Instrumentation" [ref=f73e291] [cursor=pointer]:
+              - /url: /docs/practices/instrumentation/
+            - link "Histograms and summaries" [ref=f73e293] [cursor=pointer]:
+              - /url: /docs/practices/histograms/
+            - link "Alerting" [ref=f73e295] [cursor=pointer]:
+              - /url: /docs/practices/alerting/
+            - link "Recording rules" [ref=f73e297] [cursor=pointer]:
+              - /url: /docs/practices/rules/
+            - link "When to use the Pushgateway" [ref=f73e299] [cursor=pointer]:
+              - /url: /docs/practices/pushing/
+            - link "Remote write tuning" [ref=f73e301] [cursor=pointer]:
+              - /url: /docs/practices/remote_write/
+            - link "The Zen of Prometheus" [ref=f73e303] [cursor=pointer]:
+              - /url: /docs/practices/the_zen/
+          - link "Guides" [ref=f73e305] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e314]:
+            - link [ref=f73e315] [cursor=pointer]:
+              - /url: /docs/guides/basic-auth/
+              - generic [ref=f73e316]: Basic auth
+            - link [ref=f73e317] [cursor=pointer]:
+              - /url: /docs/guides/cadvisor/
+              - generic [ref=f73e318]: Monitoring Docker container metrics using cAdvisor
+            - link [ref=f73e319] [cursor=pointer]:
+              - /url: /docs/guides/contributing/
+              - generic [ref=f73e320]: Contributing
+            - link [ref=f73e321] [cursor=pointer]:
+              - /url: /docs/guides/file-sd/
+              - generic [ref=f73e322]: Use file-based service discovery to discover scrape targets
+            - link [ref=f73e323] [cursor=pointer]:
+              - /url: /docs/guides/go-application/
+              - generic [ref=f73e324]: Instrumenting a Go application
+            - link [ref=f73e325] [cursor=pointer]:
+              - /url: /docs/guides/multi-target-exporter/
+              - generic [ref=f73e326]: Understanding and using the multi-target exporter pattern
+            - link [ref=f73e327] [cursor=pointer]:
+              - /url: /docs/guides/node-exporter/
+              - generic [ref=f73e328]: Monitoring Linux host metrics with the Node Exporter
+            - link [ref=f73e329] [cursor=pointer]:
+              - /url: /docs/guides/opentelemetry/
+              - generic [ref=f73e330]: OpenTelemetry
+            - link [ref=f73e331] [cursor=pointer]:
+              - /url: /docs/guides/utf8/
+              - generic [ref=f73e332]: UTF-8 in Prometheus
+            - link [ref=f73e333] [cursor=pointer]:
+              - /url: /docs/guides/dockerswarm/
+              - generic [ref=f73e334]: Docker Swarm
+            - link [ref=f73e335] [cursor=pointer]:
+              - /url: /docs/guides/open_metrics_2_0_migration/
+              - generic [ref=f73e336]: OpenMetrics 2.0 Migration Guide for Client Libraries
+            - link [ref=f73e337] [cursor=pointer]:
+              - /url: /docs/guides/query-log/
+              - generic [ref=f73e338]: Query log
+            - link [ref=f73e339] [cursor=pointer]:
+              - /url: /docs/guides/tls-encryption/
+              - generic [ref=f73e340]: TLS encryption
+          - link "Tutorials" [ref=f73e341] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e351]:
+            - link [ref=f73e352] [cursor=pointer]:
+              - /url: /docs/tutorials/getting_started/
+              - generic [ref=f73e353]: Getting started with Prometheus
+            - link [ref=f73e354] [cursor=pointer]:
+              - /url: /docs/tutorials/understanding_metric_types/
+              - generic [ref=f73e355]: Understanding metric types
+            - link [ref=f73e356] [cursor=pointer]:
+              - /url: /docs/tutorials/instrumenting_http_server_in_go/
+              - generic [ref=f73e357]: Instrumenting HTTP server written in Go
+            - link [ref=f73e358] [cursor=pointer]:
+              - /url: /docs/tutorials/visualizing_metrics_using_grafana/
+              - generic [ref=f73e359]: Visualizing metrics using Grafana
+            - link [ref=f73e360] [cursor=pointer]:
+              - /url: /docs/tutorials/alerting_based_on_metrics/
+              - generic [ref=f73e361]: Alerting based on metrics
+          - link "Specifications" [ref=f73e362] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f73e372]:
+            - link [ref=f73e373] [cursor=pointer]:
+              - /url: /docs/specs/native_histograms/
+              - generic [ref=f73e374]: Native Histograms
+            - link [ref=f73e375] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f73e376]: OpenMetrics
+            - generic [ref=f73e381]:
+              - link [ref=f73e382] [cursor=pointer]:
+                - /url: /docs/specs/om/open_metrics_spec/
+                - generic [ref=f73e383]: "1.0"
+              - link [ref=f73e384] [cursor=pointer]:
+                - /url: /docs/specs/om/open_metrics_spec_2_0/
+                - generic [ref=f73e385]: "2.0"
+            - link [ref=f73e386] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f73e387]: Remote Write
+            - generic [ref=f73e392]:
+              - link [ref=f73e393] [cursor=pointer]:
+                - /url: /docs/specs/prw/remote_write_spec/
+                - generic [ref=f73e394]: "1.0"
+              - link [ref=f73e395] [cursor=pointer]:
+                - /url: /docs/specs/prw/remote_write_spec_2_0/
+                - generic [ref=f73e396]: "2.0"
+      - generic [ref=f73e397]:
+        - generic [ref=f73e398]:
+          - heading "Metric and label naming" [level=1] [ref=f73e399]
+          - generic [ref=f73e400]:
+            - paragraph [ref=f73e401]: The metric and label conventions presented in this document are not required for using Prometheus, but can serve as both a style-guide and a collection of best practices. Individual organizations may want to approach some of these practices, e.g. naming conventions, differently.
+            - heading "Metric names" [level=2] [ref=f73e402]:
+              - text: Metric names
+              - link [ref=f73e403] [cursor=pointer]:
+                - /url: "#metric-names"
+            - paragraph [ref=f73e408]: A metric name...
+            - list [ref=f73e409]:
+              - listitem [ref=f73e410]:
+                - text: ...MUST comply with the
+                - link "data model" [ref=f73e411] [cursor=pointer]:
+                  - /url: /docs/concepts/data_model/#metric-names-and-labels
+                - text: for valid characters.
+              - listitem [ref=f73e412]:
+                - text: ...SHOULD have a (single-word) application prefix relevant to the domain the metric belongs to. The prefix is sometimes referred to as
+                - code [ref=f73e413]: namespace
+                - text: "by client libraries. For metrics specific to an application, the prefix is usually the application name itself. Sometimes, however, metrics are more generic, like standardized metrics exported by client libraries. Examples:"
+                - list [ref=f73e414]:
+                  - listitem [ref=f73e415]:
+                    - code [ref=f73e416]: prometheus_notifications_total
+                    - text: (specific to the Prometheus server)
+                  - listitem [ref=f73e417]:
+                    - code [ref=f73e418]: process_cpu_seconds_total
+                    - text: (exported by many client libraries)
+                  - listitem [ref=f73e419]:
+                    - code [ref=f73e420]: http_request_duration_seconds
+                    - text: (for all HTTP requests)
+              - listitem [ref=f73e421]: ...MUST refer to a single unit (e.g. do not mix seconds with milliseconds) and to a single quantity (e.g. do not mix request size with request duration).
+              - listitem [ref=f73e422]:
+                - text: ...SHOULD use base units (e.g. seconds, bytes, meters - not milliseconds, megabytes, kilometers). See
+                - link "below" [ref=f73e423] [cursor=pointer]:
+                  - /url: "#base-units"
+                - text: for a list of base units.
+              - listitem [ref=f73e424]:
+                - text: ...SHOULD have a suffix describing the unit, in plural form. Note that an accumulating count has
+                - code [ref=f73e425]: total
+                - text: as a suffix, in addition to the unit if applicable. Also note that this applies to units in the narrow sense (like the units in the table below), but not to countable things in general. For example,
+                - code [ref=f73e426]: connections
+                - text: or
+                - code [ref=f73e427]: notifications
+                - text: are not considered units for this rule and do not have to be at the end of the metric name. (See also examples in the next paragraph.)
+                - list [ref=f73e428]:
+                  - listitem [ref=f73e429]:
+                    - code [ref=f73e430]: http_request_duration_seconds
+                  - listitem [ref=f73e431]:
+                    - code [ref=f73e432]: node_memory_usage_bytes
+                  - listitem [ref=f73e433]:
+                    - code [ref=f73e434]: http_requests_total
+                    - text: (for a unit-less accumulating count)
+                  - listitem [ref=f73e435]:
+                    - code [ref=f73e436]: process_cpu_seconds_total
+                    - text: (for an accumulating count with unit)
+                  - listitem [ref=f73e437]:
+                    - code [ref=f73e438]: foobar_build_info
+                    - text: (for a pseudo-metric that provides
+                    - link "metadata" [ref=f73e439] [cursor=pointer]:
+                      - /url: https://www.robustperception.io/exposing-the-software-version-to-prometheus
+                    - text: about the running binary)
+                  - listitem [ref=f73e445]:
+                    - code [ref=f73e446]: data_pipeline_last_record_processed_timestamp_seconds
+                    - text: (for a timestamp that tracks the time of the latest record processed in a data processing pipeline)
+              - listitem [ref=f73e447]:
+                - text: "...MAY order its name components in a way that leads to convenient grouping when a list of metric names is sorted lexicographically, as long as all the other rules are followed. The following examples have their the common name components first so that all the related metrics are sorted together:"
+                - list [ref=f73e448]:
+                  - listitem [ref=f73e449]:
+                    - code [ref=f73e450]: prometheus_tsdb_head_truncations_closed_total
+                  - listitem [ref=f73e451]:
+                    - code [ref=f73e452]: prometheus_tsdb_head_truncations_established_total
+                  - listitem [ref=f73e453]:
+                    - code [ref=f73e454]: prometheus_tsdb_head_truncations_failed_total
+                  - listitem [ref=f73e455]:
+                    - code [ref=f73e456]: prometheus_tsdb_head_truncations_total
+                    - text: The following examples are also valid, but are following a different trade-off. They are easier to read individually, but unrelated metrics like
+                    - code [ref=f73e457]: prometheus_tsdb_head_series
+                    - text: might get sorted in between.
+                  - listitem [ref=f73e458]:
+                    - code [ref=f73e459]: prometheus_tsdb_head_closed_truncations_total
+                  - listitem [ref=f73e460]:
+                    - code [ref=f73e461]: prometheus_tsdb_head_established_truncations_total
+                  - listitem [ref=f73e462]:
+                    - code [ref=f73e463]: prometheus_tsdb_head_failed_truncations_total
+                  - listitem [ref=f73e464]:
+                    - code [ref=f73e465]: prometheus_tsdb_head_truncations_total
+              - listitem [ref=f73e466]:
+                - text: ...SHOULD represent the same logical thing-being-measured across all label dimensions.
+                - list [ref=f73e467]:
+                  - listitem [ref=f73e468]: request duration
+                  - listitem [ref=f73e469]: bytes of data transfer
+                  - listitem [ref=f73e470]: instantaneous resource usage as a percentage
+            - paragraph [ref=f73e471]:
+              - text: As a rule of thumb, either the
+              - code [ref=f73e472]: sum()
+              - text: or the
+              - code [ref=f73e473]: avg()
+              - text: over all dimensions of a given metric should be meaningful (though not necessarily useful). If it is not meaningful, split the data up into multiple metrics. For example, having the capacity of various queues in one metric is good, while mixing the capacity of a queue with the current number of elements in the queue is not.
+            - heading "Why include unit and type suffixes in metric names?" [level=3] [ref=f73e474]:
+              - text: Why include unit and type suffixes in metric names?
+              - link [ref=f73e475] [cursor=pointer]:
+                - /url: "#why-include-unit-and-type-suffixes-in-metric-names"
+            - paragraph [ref=f73e480]: Some metric naming conventions (e.g. OpenTelemetry) do not recommend or even do not allow including information about a metric unit and type in the metric name. A common argument is that those pieces of information are already defined somewhere else (e.g. schema, metadata, other labels, etc.).
+            - paragraph [ref=f73e481]: "Prometheus strongly recommends including unit and type in a metric name, even if you store that information elsewhere, because of the following practical reasons:"
+            - list [ref=f73e482]:
+              - listitem [ref=f73e483]:
+                - strong [ref=f73e484]: Metric consumption reliability and UX
+                - text: ": When interacting with a modern UI to use such a metric in PromQL, it's possible to display rich information about the metric's type and unit (autocompletion, overlays, pop-ups). Unfortunately, interactive, adhoc querying in a powerful UI is not the only way that users interact with metrics. Metric consumption ecosystem is vast. Majority of the consumption comes in a form of the plain YAML configuration for variety of observability tools like alerting, recording, autoscaling, dashboards, analysis, processing, etc. It's"
+                - strong [ref=f73e485]: critical
+                - text: ", especially during monitoring/SRE incident practices to look on PromQL expressions in plain YAML and understand the underlying metric type and unit you work with."
+              - listitem [ref=f73e486]:
+                - strong [ref=f73e487]: Metric collisions
+                - text: ": With growing adoption and metric changes over time, there are cases where lack of unit and type information in the metric name will cause certain series to collide (e.g."
+                - code [ref=f73e488]: process_cpu
+                - text: for seconds and milliseconds).
+            - heading "Labels" [level=2] [ref=f73e489]:
+              - text: Labels
+              - link [ref=f73e490] [cursor=pointer]:
+                - /url: "#labels"
+            - paragraph [ref=f73e495]: "Use labels to differentiate the characteristics of the thing that is being measured:"
+            - list [ref=f73e496]:
+              - listitem [ref=f73e497]:
+                - code [ref=f73e498]: api_http_requests_total
+                - text: "- differentiate request types:"
+                - code [ref=f73e499]: operation="create|update|delete"
+              - listitem [ref=f73e500]:
+                - code [ref=f73e501]: api_request_duration_seconds
+                - text: "- differentiate request stages:"
+                - code [ref=f73e502]: stage="extract|transform|load"
+            - paragraph [ref=f73e503]: Do not put the label names in the metric name, as this introduces redundancy and will cause confusion if the respective labels are aggregated away.
+            - blockquote [ref=f73e504]:
+              - strong [ref=f73e508]: CAUTION
+              - text: ": Remember that every unique combination of key-value label pairs represents a new time series, which can dramatically increase the amount of data stored. Do not use labels to store dimensions with high cardinality (many different label values), such as user IDs, email addresses, or other unbounded sets of values."
+            - heading "Base Units" [level=2] [ref=f73e509]:
+              - text: Base Units
+              - link [ref=f73e510] [cursor=pointer]:
+                - /url: "#base-units"
+            - paragraph [ref=f73e515]: Prometheus does not have any units hard coded. For better compatibility, base units should be used. The following lists some metrics families with their base unit. The list is not exhaustive.
+            - table [ref=f73e516]:
+              - rowgroup [ref=f73e517]:
+                - row [ref=f73e518]:
+                  - columnheader "Family" [ref=f73e519]
+                  - columnheader "Base unit" [ref=f73e520]
+                  - columnheader "Remark" [ref=f73e521]
+              - rowgroup [ref=f73e522]:
+                - row [ref=f73e523]:
+                  - cell "Time" [ref=f73e524]
+                  - cell "seconds" [ref=f73e525]
+                  - cell [ref=f73e526]
+                - row [ref=f73e527]:
+                  - cell "Temperature" [ref=f73e528]
+                  - cell "celsius" [ref=f73e529]
+                  - cell [ref=f73e530]:
+                    - emphasis [ref=f73e531]: celsius
+                    - text: is preferred over
+                    - emphasis [ref=f73e532]: kelvin
+                    - text: for practical reasons.
+                    - emphasis [ref=f73e533]: kelvin
+                    - text: is acceptable as a base unit in special cases like color temperature or where temperature has to be absolute.
+                - row [ref=f73e534]:
+                  - cell "Length" [ref=f73e535]
+                  - cell "meters" [ref=f73e536]
+                  - cell [ref=f73e537]
+                - row [ref=f73e538]:
+                  - cell "Bytes" [ref=f73e539]
+                  - cell "bytes" [ref=f73e540]
+                  - cell [ref=f73e541]
+                - row [ref=f73e542]:
+                  - cell "Bits" [ref=f73e543]
+                  - cell "bytes" [ref=f73e544]
+                  - cell [ref=f73e545]:
+                    - text: To avoid confusion combining different metrics, always use
+                    - emphasis [ref=f73e546]: bytes
+                    - text: ", even where"
+                    - emphasis [ref=f73e547]: bits
+                    - text: appear more common.
+                - row [ref=f73e548]:
+                  - cell "Percent" [ref=f73e549]
+                  - cell "ratio" [ref=f73e550]
+                  - cell [ref=f73e551]:
+                    - text: Values are 0–1 (rather than 0–100).
+                    - code [ref=f73e552]: ratio
+                    - text: is only used as a suffix for names like
+                    - code [ref=f73e553]: disk_usage_ratio
+                    - text: . The usual metric name follows the pattern
+                    - code [ref=f73e554]: A_per_B
+                    - text: .
+                - row [ref=f73e555]:
+                  - cell "Voltage" [ref=f73e556]
+                  - cell "volts" [ref=f73e557]
+                  - cell [ref=f73e558]
+                - row [ref=f73e559]:
+                  - cell "Electric current" [ref=f73e560]
+                  - cell "amperes" [ref=f73e561]
+                  - cell [ref=f73e562]
+                - row [ref=f73e563]:
+                  - cell "Energy" [ref=f73e564]
+                  - cell "joules" [ref=f73e565]
+                  - cell [ref=f73e566]
+                - row [ref=f73e567]:
+                  - cell "Power" [ref=f73e568]
+                  - cell [ref=f73e569]
+                  - cell [ref=f73e570]:
+                    - text: Prefer exporting a counter of joules, then
+                    - code [ref=f73e571]: rate(joules[5m])
+                    - text: gives you power in Watts.
+                - row [ref=f73e572]:
+                  - cell "Mass" [ref=f73e573]
+                  - cell "grams" [ref=f73e574]
+                  - cell [ref=f73e575]:
+                    - emphasis [ref=f73e576]: grams
+                    - text: is preferred over
+                    - emphasis [ref=f73e577]: kilograms
+                    - text: to avoid issues with the
+                    - emphasis [ref=f73e578]: kilo
+                    - text: prefix.
+        - separator [ref=f73e579]
+        - navigation "pagination" [ref=f73e580]:
+          - link [ref=f73e582] [cursor=pointer]:
+            - /url: /docs/alerting/latest/https/
+            - generic [ref=f73e589]:
+              - paragraph [ref=f73e590]: Previous
+              - paragraph [ref=f73e591]: HTTPS and authentication
+          - generic [ref=f73e592]:
+            - link [ref=f73e593] [cursor=pointer]:
+              - /url: https://github.com/prometheus/docs/blob/main/docs/practices/naming.md
+              - paragraph [ref=f73e600]: Edit
+            - link [ref=f73e601] [cursor=pointer]:
+              - /url: https://github.com/prometheus/docs/issues/new?title=docs%3A%20Issue%20with%20%22Metric%20and%20label%20naming%22&body=**Page%3A**%20https%3A%2F%2Fprometheus.io%2Fdocs%2Fpractices%2Fnaming%2F%0A%0A**Describe%20the%20issue%3A**%0A%0A
+              - paragraph [ref=f73e612]: Issue
+          - link [ref=f73e614] [cursor=pointer]:
+            - /url: /docs/practices/consoles/
+            - generic [ref=f73e617]:
+              - paragraph [ref=f73e618]: Next
+              - paragraph [ref=f73e619]: Consoles and dashboards
+  - contentinfo [ref=f73e625]:
+    - generic [ref=f73e627]:
+      - paragraph [ref=f73e628]:
+        - text: © Prometheus Authors 2014-2026 | All components are available under the
+        - link "Apache 2 License" [ref=f73e629] [cursor=pointer]:
+          - /url: http://www.apache.org/licenses/LICENSE-2.0
+        - text: "on"
+        - link "GitHub" [ref=f73e630] [cursor=pointer]:
+          - /url: https://github.com/prometheus
+        - text: .
+      - paragraph [ref=f73e631]:
+        - text: © 2026 The Linux Foundation. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our
+        - link "Trademark Usage" [ref=f73e632] [cursor=pointer]:
+          - /url: https://www.linuxfoundation.org/trademark-usage
+        - text: page.

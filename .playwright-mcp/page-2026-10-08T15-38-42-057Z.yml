@@ -1,0 +1,188 @@
+- generic [active] [ref=f47e1]:
+  - link "Bỏ qua nội dung chính" [ref=f47e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f47e3]:
+    - generic [ref=f47e4]:
+      - generic [ref=f47e5]:
+        - paragraph [ref=f47e6]: Nghiên cứu dự án web · 08.10.2026 · 192 lượt agent
+        - heading "20 dự án web nên làm từ fresher đến middle, xếp theo đúng thứ tự học" [level=1] [ref=f47e7]
+        - paragraph [ref=f47e8]: "Thứ tự này đến từ hai workflow quét GitHub và web: 179 ứng viên gộp còn 123, 34 cái vượt xác minh đối kháng, 20 cái chốt lại. Đây là nghiên cứu lấy mẫu, không phải quét toàn bộ internet — mục Phương pháp nêu rõ chỗ nào còn hổng, và mọi repo mẫu đều ghi license kiểm ngày 08.10.2026."
+      - 'button "Giao diện: hệ thống" [ref=f47e10] [cursor=pointer]'
+      - list [ref=f47e11]:
+        - listitem [ref=f47e12]:
+          - generic [ref=f47e13]: "179"
+          - generic [ref=f47e14]: ứng viên thô
+        - listitem [ref=f47e15]:
+          - generic [ref=f47e16]: "34"
+          - generic [ref=f47e17]: vượt xác minh đối kháng
+        - listitem [ref=f47e18]:
+          - generic [ref=f47e19]: "192"
+          - generic [ref=f47e20]: lượt agent, 2 workflow
+        - listitem [ref=f47e21]:
+          - generic [ref=f47e22]: "28"
+          - generic [ref=f47e23]: repo sửa lại sau audit license
+  - navigation "Lọc dự án" [ref=f47e24]:
+    - group "Lọc theo bậc" [ref=f47e25]:
+      - button "Tất cả" [pressed] [ref=f47e26] [cursor=pointer]
+      - button "Fresher" [ref=f47e27] [cursor=pointer]
+      - button "Junior" [ref=f47e28] [cursor=pointer]
+      - button "Middle" [ref=f47e29] [cursor=pointer]
+    - searchbox "Tìm trong danh sách dự án" [ref=f47e30]
+    - status [ref=f47e31]: 20 / 20 dự án
+  - main [ref=f47e32]:
+    - region [ref=f47e33]:
+      - heading "Tóm tắt 20 dự án" [level=2] [ref=f47e34]
+      - paragraph [ref=f47e35]: Bấm tên dự án để nhảy tới thẻ chi tiết. Bộ lọc phía trên tác động cả bảng này lẫn danh sách chi tiết.
+      - region "Bảng tóm tắt 20 dự án, cuộn ngang được" [ref=f47e36]:
+        - table [ref=f47e37]:
+          - caption [ref=f47e38]: 20 dự án xếp theo thứ tự học, dữ liệu 08.10.2026
+          - rowgroup [ref=f47e39]:
+            - row [ref=f47e40]:
+              - columnheader "#" [ref=f47e41]
+              - columnheader "Dự án" [ref=f47e42]
+              - columnheader "Bậc" [ref=f47e43]
+              - columnheader "Vấn đề cần giải" [ref=f47e44]
+          - rowgroup
+    - region [ref=f47e45]:
+      - heading "Chi tiết từng dự án" [level=2] [ref=f47e46]
+      - paragraph [ref=f47e47]: Thẻ đầu tiên là bậc fresher cỡ lớn; 2-4 là dải ngang; 5-10 xếp hai cột; 11-20 là hàng gọn. “Vấn đề” nói vì sao dự án tồn tại, “Vì sao đáng làm” nói tín hiệu nó tạo ra khi phỏng vấn.
+      - list
+    - region [ref=f47e48]:
+      - heading "Lộ trình fresher → middle" [level=2] [ref=f47e49]
+      - paragraph [ref=f47e50]: "Thứ tự trong bảng là thứ tự học: 6 fresher → 8 junior → 6 middle. Ba đợt dưới đây là cách nghiên cứu giải thích cáchleo đó."
+      - heading "Đợt 1 · Fresher — 6 dự án" [level=3] [ref=f47e51]
+      - paragraph [ref=f47e52]: "Container → CRUD → design-to-code → async API → deliverable agency → open-data viz (thứ 1-6). Phạm vi chung của đợt là lát cắt dọc deploy được: code chạy, README có hướng dẫn chạy, site live. Deploy-to-live là một phần của “done”, không phải phần sau."
+      - heading "Đợt 2 · Junior — 8 dự án" [level=3] [ref=f47e53]
+      - paragraph [ref=f47e54]: "Bậc backend systems cộng 5 workflow Việt Nam/thành phố đã xác minh (thứ 7-14). URL shortener giữ #7 vì là ứng viên được nhắc nhiều nhất vòng 1 (8 lần). Admin dashboard lùi xuống sau bốn workflow thật vì không có judge nào chấm nó ở vòng 1. Phòng khám, nhà trọ, hồ sơ, lớp thêm vào đúng bậc đã xác minh, không phải điểm thô."
+      - heading "Đợt 3 · Middle — 6 dự án" [level=3] [ref=f47e55]
+      - paragraph [ref=f47e56]: Concurrency → domain vận hành → thanh toán → AI → CRDT capstone (thứ 15-20). Chat đứng trước dispatch để bậc concurrency đầu tiên đến trước concurrency gán việc. Bán hàng dẫn đầu vì là điểm real-world cao nhất (90,5).
+      - heading "Quy mô fresher đã chốt cho 6/20 dự án" [level=3] [ref=f47e57]
+      - paragraph [ref=f47e58]: "Scope sizing chỉ có cho 6 dự án; 14 dự án còn lại chưa có delta phạm vi. Các con số dưới đây là lát cắt tối thiểu ở bậc fresher:"
+      - list [ref=f47e59]:
+        - listitem [ref=f47e60]:
+          - generic [ref=f47e61]: URL shortener — 5 REST endpoint sạch
+          - generic [ref=f47e62]: 2-3 tuần
+        - listitem [ref=f47e63]:
+          - generic [ref=f47e64]: Backoffice 2 role, admin seed sẵn
+          - generic [ref=f47e65]: 2 tuần
+        - listitem [ref=f47e66]:
+          - generic [ref=f47e67]: Chat Socket.IO 1 phòng, persist + deploy
+          - generic [ref=f47e68]: 3-4 tuần
+        - listitem [ref=f47e69]:
+          - generic [ref=f47e70]: E-commerce API-first, Stripe test-mode + webhook tạo đơn
+          - generic [ref=f47e71]: 6 tuần
+        - listitem [ref=f47e72]:
+          - generic [ref=f47e73]: RAG chatbot 1 thư mục tài liệu + vector store
+          - generic [ref=f47e74]: 3-4 tuần
+        - listitem [ref=f47e75]:
+          - generic [ref=f47e76]: Editor Yjs, undo theo người dùng + presence
+          - generic [ref=f47e77]: 4 tuần
+      - paragraph [ref=f47e78]: "Delta lên middle luôn là 1-2× thời gian đó và không bao giờ là thêm UI. Nó là reliability, chống lạm dụng và đo lường: audit log + soft delete trên dashboard; delivery ack + Redis pub/sub + smoke test load với chat; webhook signature verification + atomic stock decrement bằng row lock + state machine đơn hàng chặt với e-commerce; eval-as-code + A/B chunking với RAG; ACL + version snapshot với editor; custom slug + rate limit + cache hit-metric với shortener."
+      - paragraph [ref=f47e80]: "Pitfall lặp lại ở cả 6 scope: nhảy vào auth/workspace, search/Elasticsearch, microservices hay IaC trước khi MVP xong. Ranh giới là một cache cộng một queue — không bao giờ Kafka kèm sharding."
+    - region [ref=f47e81]:
+      - heading "Đọc portfolio theo cách nhà tuyển dụng Việt Nam" [level=2] [ref=f47e82]
+      - paragraph [ref=f47e83]: Ba hành vi lặp lại trong các cụm tín hiệu tiếng Việt mà enrichment đã đọc. Đây là tín hiệu định tính từ nội dung TopDev, ITviec, Viblo, CareerBuilder — không phải dữ liệu recruiter ẩn danh.
+      - heading "Bằng chứng nặng hơn số năm" [level=3] [ref=f47e84]
+      - paragraph [ref=f47e85]: "Recruiter chấm theo thứ tự tư duy giải quyết vấn đề → cách trình bày → chất lượng code → kết quả, thay cho “1 năm = junior, 3 năm = middle”. Định dạng được chấp nhận: case study 300-500 chữ (problem → constraints → solution → results → improve) cộng 1-3 repo sạch, README và commit đọc được. “Code demo không để khoe, mà để chứng minh bạn biết mình đang làm gì.”"
+      - heading "Title gắn với stack" [level=3] [ref=f47e86]
+      - paragraph [ref=f47e87]: "Mỗi title trên CareerBuilder đi kèm stack của nó: Java Backend = Java/SQL/Spring Boot, Web Developer = NodeJS/ReactJS, fullstack MBBank = Oracle/Java/MongoDB. TopDev cảnh báo dev PHP apply vào shop Java là bất lợi — “nhà tuyển dụng họ thường xem xét tuyển người phù hợp hơn là người giỏi”. Nhóm React mà TopDev nêu đang có nhu cầu: social, e-commerce ngách, video, messaging realtime, productivity."
+      - heading "Khác biệt bằng bài toán Việt" [level=3] [ref=f47e88]
+      - paragraph [ref=f47e89]: "Thay vì một CRUD/auth clone nữa, phần khác biệt đến từ vấn đề bản địa: bảng tìm phòng trọ, xác nhận đơn COD, tracking đa hãng GHN/GHTK/Viettel Post, hồ sơ hành chính kèm mã PA-2026-XXXX. Ở mấy chỗ này, copy tiếng Việt chính là moat — đối thủ quốc tế không thèm đánh."
+      - paragraph [ref=f47e90]: "Mốc lương các bạn junior hay cite (TopDev 2024): Frontend 10-15 triệu, Backend 10-25 triệu, Fullstack 12-30 triệu VND. Vòng phỏng vấn web còn probe IntersectionObserver, Beacon, Fetch, Service Workers và RUM — nên một tính năng offline-first PWA hoặc SSE đọc là platform depth, không phải framework-following."
+    - region [ref=f47e91]:
+      - heading "Ứng viên tiếp theo, chưa vào top 20" [level=2] [ref=f47e92]
+      - paragraph [ref=f47e93]: Vòng micro cuối sinh 35 ứng viên, 10 vượt xác minh. Đúng một cái nên có chỗ đứng, một cái có điều kiện.
+      - heading "ticket-refund-flow — nên vào" [level=3] [ref=f47e94]
+      - paragraph [ref=f47e95]: "Điểm 81, bậc middle, hiring signal STRONG. Idempotent refund webhook, state machine khung chính sách hoàn tiền và coupling refund → danh sách chờ giữ chỗ là bài probe backend mid-level chuẩn; tài liệu production của pretix nói thẳng (“isn't it sad if those seats stay empty?”, rollover danh sách chờ 2 ngày). Vị trí trong catalog: nối tiếp backend-depth sau e-commerce (#18), không phải bản song song — judge có trừ điểm trùng chủ đề nhẹ."
+      - heading "offline-qr-checkin-app — có điều kiện" [level=3] [ref=f47e96]
+      - paragraph [ref=f47e97]: Điểm 79, bậc junior. Hàng chờ quét offline + sync khi có mạng + chặn trùng + audit trail là thứ chưa dự án nào trong top 20 cover, và nỗi đau tiếng Việt trích nguyên văn trên eventos.vn. Chỉ thêm nếu catalog muốn một ca offline-first PWA; conflict đa thiết bị là mức stretch, và độ khó verify offline trong phỏng vấn là thật.
+      - paragraph [ref=f47e98]: "Các ứng viên sống sót còn lại bị đánh trượt có lý do cụ thể: multi-channel-order-inbox (75) trùng skill dashboard carrier; cafe-kds-ticket-screen (73) dạy cùng bài queue/DLQ như COD Confirm/ShipTrack; reserved-seat-ticketing (71) ngồi trong bể 19k repo “cinema seat booking” — chỉ bán được làm nâng depth cho dự án có sẵn; hawker-qr-kitchen-hybrid (67) — chính verifier phát hiện eatlah đã lấp khoảng trống; conference-workshop-pass (66) tín hiệu yếu; qr-table-ordering (62) — 84% trong 1.046 repo “qr menu” sinh sau 01/2025. meetup-registration-waitlist bị verifier 429 chứ không bị phản bác — cơ chế danh sách chờ gộp thẳng vào phạm vi ticket-refund-flow."
+    - region [ref=f47e99]:
+      - heading "Bị loại và vì sao" [level=2] [ref=f47e100]
+      - list [ref=f47e101]:
+        - listitem [ref=f47e102]: Social media clone — judge vòng real-world xếp thứ 31, không có đau người dùng cụ thể; Clone-Wars bão hòa.
+        - listitem [ref=f47e103]: Ba biến thể blog gộp thành một bậc CMS vì lặp nhau.
+        - listitem [ref=f47e104]: Expense tracker — 239k repo trên GitHub, tự đánh nhau từ đầu.
+        - listitem [ref=f47e105]: Browser game — tín hiệu toy.
+        - listitem [ref=f47e106]: Chia hóa đơn ở trọ — đau Việt Nam thật nhưng không đủ lớn để gánh một portfolio.
+        - listitem [ref=f47e107]: Tìm phòng trọ dạng listing — hấp thụ vào quản lý nhà trọ (#8).
+        - listitem [ref=f47e108]: Markdown notes — CRUD lặp lại bậc to-do.
+        - listitem [ref=f47e109]: PR OSS đầu tiên — meta-skill, không phải một build.
+        - listitem [ref=f47e110]: Quản lý nhà thờ — fit Việt Nam yếu, junior chứ không phải middle.
+        - listitem [ref=f47e111]: Pomodoro và quiz — trivial, tín hiệu yếu.
+    - region [ref=f47e112]:
+      - heading "Phương pháp và giới hạn" [level=2] [ref=f47e113]
+      - heading "Thứ tự đã chạy" [level=3] [ref=f47e114]
+      - paragraph [ref=f47e115]: "Workflow 1 (99 lượt agent): 12 góc quét → 24 xác minh đối kháng → panel judge; vòng real-world riêng 11 sweep + 25 xác minh + judge 2 người; một critic đọc lại toàn bộ. Workflow 2 (93 lượt agent): 45 lượt audit repo (chốt 28 bản sửa ví dụ), 6 cụm tin tiếng Việt, 6 brief phạm vi, 4 đề xuất thiết kế, micro-round 35 ứng viên → 10 xác minh, cộng bước package. Tổng 192 lượt agent, 167 lần trả StructuredOutput thành công. Kết quả: 179 ứng viên thô → 123 không trùng → 34 vượt xác minh (24 vòng 1 + 10 vòng real-world) → 20 vào danh sách."
+      - paragraph [ref=f47e116]: "Critic độc lập tái dựng khoảng 20 trích dẫn trong báo cáo — medusa 36.6k, saleor 23.4k, yjs 22.9k, open-webui 154.1k, realworld 84.3k, TodoMVC 29.0k, Clone-Wars 37.0k; các topic GitHub: chat-app 1.312, ecommerce 30.252, “chatgpt clone” 7.800; bậc roadmap.sh. 0 ứng viên bị phản bác toàn tập trong vòng xác minh."
+      - heading "Lỗ hổng đã biết" [level=3] [ref=f47e117]
+      - list [ref=f47e118]:
+        - listitem [ref=f47e119]: "JD Việt Nam làm ground truth còn mỏng: enrichment đọc đủ 1 cụm (vn-crud-ecom), 5 cụm còn lại chỉ sample — phần portfolio Việt Nam dựa nhiều vào cluster e-commerce."
+        - listitem [ref=f47e120]: Hình thức đóng góp OSS (issue/PR thật) không có trong danh sách — cả 20 đều là build riêng.
+        - listitem [ref=f47e121]: PWA/offline-first chưa có dự án nào trong top 20; ứng viên offline-qr-checkin chờ ở mục trước.
+        - listitem [ref=f47e122]: "Bằng chứng collab editor mạnh nhưng cũ: một quote 2010 (leif), clone tutorial đọc như boilerplate."
+        - listitem [ref=f47e123]: Số repo ở các mục bị loại (expense tracker 239k…) không reproduce được khi chạy lại.
+        - listitem [ref=f47e124]: Scope sizing fresher-vs-middle chỉ có cho 6/20 dự án.
+      - heading "Cảnh báo dữ liệu và giấy phép" [level=3] [ref=f47e125]
+      - list [ref=f47e126]:
+        - listitem [ref=f47e127]: Star và pushed_at là snapshot API 08.10.2026 — dữ liệu lúc đó, không phải hợp đồng.
+        - listitem [ref=f47e128]: Repo không license (adrianhajdin/*, bradtraversy/url_shortener_service, minhquan0802/QuanLyVuaCa, hiendanang-ai/theodoihoso, Baavanadhaz/Air-Quality-… và vài repo khác) = tham khảo/học, không fork-and-publish; license đọc từ field API, không đối chiếu SPDX từng file.
+        - listitem [ref=f47e129]: MIT-claimed nhưng không có file LICENSE (demo-phong-tro-master) = chỉ là claim.
+        - listitem [ref=f47e130]: FSL-1.1-ALv2 của saleor/storefront và license riêng của open-webui không phải OSI — không phải open-source chuẩn, đã flag ngay trên thẻ.
+        - listitem [ref=f47e131]: Tỷ lệ contrast đến từ contrast_calc.py chạy 08.10.2026 (32/32 PASS), không phải prose của agent thiết kế.
+        - listitem [ref=f47e132]: Lương TopDev 2024 và mức hoa hồng giao hàng 25-30% là mốc điểm thời gian.
+        - listitem [ref=f47e133]: Có 11 lượt agent lỗi trong hai workflow; enrich-result.json từng chết một lần vì Cloudflare 524 rồi retry — cấu trúc file vẫn nguyên khi đọc.
+    - region [ref=f47e134]:
+      - heading "Nguồn" [level=2] [ref=f47e135]
+      - paragraph [ref=f47e136]: URL theo từng ứng viên xác minh, do chính các verify agent trả về. Mở từng nhóm để xem.
+      - group [ref=f47e137]:
+        - generic "ai chatbot wrapper (3)" [ref=f47e138] [cursor=pointer]
+      - group [ref=f47e139]:
+        - generic "blog platform with cms (7)" [ref=f47e140] [cursor=pointer]
+      - group [ref=f47e141]:
+        - generic "blogging platform (1)" [ref=f47e142] [cursor=pointer]
+      - group [ref=f47e143]:
+        - generic "browser game (7)" [ref=f47e144] [cursor=pointer]
+      - group [ref=f47e145]:
+        - generic "e commerce storefront (5)" [ref=f47e146] [cursor=pointer]
+      - group [ref=f47e147]:
+        - generic "expense tracker (10)" [ref=f47e148] [cursor=pointer]
+      - group [ref=f47e149]:
+        - generic "markdown note taking app (9)" [ref=f47e150] [cursor=pointer]
+      - group [ref=f47e151]:
+        - generic "personal blog (2)" [ref=f47e152] [cursor=pointer]
+      - group [ref=f47e153]:
+        - generic "personal portfolio website (13)" [ref=f47e154] [cursor=pointer]
+      - group [ref=f47e155]:
+        - generic "pomodoro timer (3)" [ref=f47e156] [cursor=pointer]
+      - group [ref=f47e157]:
+        - generic "portfolio website (7)" [ref=f47e158] [cursor=pointer]
+      - group [ref=f47e159]:
+        - generic "real time chat app (3)" [ref=f47e160] [cursor=pointer]
+      - group [ref=f47e161]:
+        - generic "real time chat application (9)" [ref=f47e162] [cursor=pointer]
+      - group [ref=f47e163]:
+        - generic "real time collaborative editor (5)" [ref=f47e164] [cursor=pointer]
+      - group [ref=f47e165]:
+        - generic "to do list app (5)" [ref=f47e166] [cursor=pointer]
+      - group [ref=f47e167]:
+        - generic "todo list task tracker (7)" [ref=f47e168] [cursor=pointer]
+      - group [ref=f47e169]:
+        - generic "url shortener (7)" [ref=f47e170] [cursor=pointer]
+      - group [ref=f47e171]:
+        - generic "weather app (5)" [ref=f47e172] [cursor=pointer]
+      - group [ref=f47e173]:
+        - generic "weather dashboard (5)" [ref=f47e174] [cursor=pointer]
+      - group [ref=f47e175]:
+        - generic "weather web app (5)" [ref=f47e176] [cursor=pointer]
+      - group [ref=f47e177]:
+        - generic "website clone (7)" [ref=f47e178] [cursor=pointer]
+      - paragraph [ref=f47e179]: "Nguồn thị trường Việt Nam dùng trong mục Portfolio: topdev.vn (portfolio, fresher, lương 2024, React projects), itviec.com (báo cáo lương IT 2025-2026, tag framework), viblo.asia (WebSocket, phỏng vấn, RAG), careerbuilder.vn (bảng tin việc), datareportal.com (Digital 2025 Vietnam), careerviet.vn, coderschool.vn, pretix docs (refund/waitlist). Danh sách đầy đủ theo ứng viên nằm trong các nhóm phía trên."
+  - contentinfo [ref=f47e180]:
+    - generic [ref=f47e181]:
+      - paragraph [ref=f47e182]: Snapshot 08.10.2026 · nghiên cứu lấy mẫu có xác minh đối kháng — không phải quét toàn bộ internet · license từng repo ghi ngay trên thẻ · contrast kiểm bằng contrast_calc.py (32/32 PASS).
+      - paragraph [ref=f47e183]:
+        - text: Catalog 15 dự án Việt Nam đã audit nằm ở
+        - link "du-an-portfolio-web.html" [ref=f47e184] [cursor=pointer]:
+          - /url: du-an-portfolio-web.html
+        - text: — hai danh sách khác nhau, không thay thế nhau.

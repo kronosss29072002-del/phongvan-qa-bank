@@ -1,0 +1,641 @@
+- generic [ref=f28e2]:
+  - banner [ref=f28e3]:
+    - generic [ref=f28e11]:
+      - text: Join
+      - link "PromCon EU 2026" [ref=f28e12] [cursor=pointer]:
+        - /url: https://promcon.io/2026-munich/
+      - text: ", the Prometheus users conference, on October 7–8, 2026 in Munich."
+    - generic [ref=f28e19]:
+      - link [ref=f28e20] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f28e21]:
+          - img "Prometheus logo" [ref=f28e22]
+          - paragraph [ref=f28e23]: Prometheus
+      - generic [ref=f28e25]:
+        - link "Docs" [ref=f28e26] [cursor=pointer]:
+          - /url: /docs/introduction/overview/
+        - link "Download" [ref=f28e27] [cursor=pointer]:
+          - /url: /download/
+        - link "Community" [ref=f28e28] [cursor=pointer]:
+          - /url: /community/
+        - link "Support & Training" [ref=f28e29] [cursor=pointer]:
+          - /url: /support-training/
+        - link "Blog" [ref=f28e30] [cursor=pointer]:
+          - /url: /blog/
+  - main [ref=f28e31]:
+    - generic [ref=f28e33]:
+      - navigation [ref=f28e34]:
+        - generic [ref=f28e38]:
+          - link "Introduction" [ref=f28e39] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e51]:
+            - link [ref=f28e52] [cursor=pointer]:
+              - /url: /docs/introduction/overview/
+              - generic [ref=f28e53]: Overview
+            - link [ref=f28e54] [cursor=pointer]:
+              - /url: /docs/introduction/first_steps/
+              - generic [ref=f28e55]: First steps
+            - link [ref=f28e56] [cursor=pointer]:
+              - /url: /docs/introduction/comparison/
+              - generic [ref=f28e57]: Comparison to alternatives
+            - link [ref=f28e58] [cursor=pointer]:
+              - /url: /docs/introduction/faq/
+              - generic [ref=f28e59]: FAQ
+            - link [ref=f28e60] [cursor=pointer]:
+              - /url: /docs/introduction/roadmap/
+              - generic [ref=f28e61]: Roadmap
+            - link [ref=f28e62] [cursor=pointer]:
+              - /url: /docs/introduction/design-doc/
+              - generic [ref=f28e63]: Design documents
+            - link [ref=f28e64] [cursor=pointer]:
+              - /url: /docs/introduction/media/
+              - generic [ref=f28e65]: Media
+            - link [ref=f28e66] [cursor=pointer]:
+              - /url: /docs/introduction/glossary/
+              - generic [ref=f28e67]: Glossary
+            - link [ref=f28e68] [cursor=pointer]:
+              - /url: /docs/introduction/release-cycle/
+              - generic [ref=f28e69]: Long-term support
+          - link "Concepts" [ref=f28e70] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e80]:
+            - link "Data model" [ref=f28e81] [cursor=pointer]:
+              - /url: /docs/concepts/data_model/
+            - link "Metric types" [ref=f28e83] [cursor=pointer]:
+              - /url: /docs/concepts/metric_types/
+            - link "Jobs and instances" [ref=f28e85] [cursor=pointer]:
+              - /url: /docs/concepts/jobs_instances/
+          - link "Prometheus Server" [ref=f28e87] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e97]:
+            - textbox [ref=f28e104] [cursor=pointer]: 3.15 (latest)
+            - link [ref=f28e105] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/getting_started/
+              - generic [ref=f28e106]: Getting started
+            - link [ref=f28e107] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/installation/
+              - generic [ref=f28e108]: Installation
+            - link [ref=f28e109] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f28e110]: Configuration
+            - generic [ref=f28e115]:
+              - link [ref=f28e116] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/configuration/
+                - generic [ref=f28e117]: Configuration
+              - link [ref=f28e118] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/recording_rules/
+                - generic [ref=f28e119]: Recording rules
+              - link [ref=f28e120] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/alerting_rules/
+                - generic [ref=f28e121]: Alerting rules
+              - link [ref=f28e122] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/template_examples/
+                - generic [ref=f28e123]: Template examples
+              - link [ref=f28e124] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/template_reference/
+                - generic [ref=f28e125]: Template reference
+              - link [ref=f28e126] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/promtool/
+                - generic [ref=f28e127]: HTTP configuration for promtool
+              - link [ref=f28e128] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/unit_testing_rules/
+                - generic [ref=f28e129]: Unit testing for rules
+              - link [ref=f28e130] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/configuration/https/
+                - generic [ref=f28e131]: HTTPS and authentication
+            - link [ref=f28e132] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/prometheus_agent/
+              - generic [ref=f28e133]: Agent Mode
+            - link [ref=f28e134] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f28e135]: Querying
+            - generic [ref=f28e140]:
+              - link [ref=f28e141] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/basics/
+                - generic [ref=f28e142]: Basics
+              - link [ref=f28e143] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/operators/
+                - generic [ref=f28e144]: Operators
+              - link [ref=f28e145] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/functions/
+                - generic [ref=f28e146]: Functions
+              - link [ref=f28e147] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/examples/
+                - generic [ref=f28e148]: Examples
+              - link [ref=f28e149] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/api/
+                - generic [ref=f28e150]: HTTP API
+              - link [ref=f28e151] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/remote_read_api/
+                - generic [ref=f28e152]: Remote Read API
+            - link [ref=f28e153] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/storage/
+              - generic [ref=f28e154]: Storage
+            - link [ref=f28e155] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/federation/
+              - generic [ref=f28e156]: Federation
+            - link [ref=f28e157] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/http_sd/
+              - generic [ref=f28e158]: HTTP SD
+            - link [ref=f28e159] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/management_api/
+              - generic [ref=f28e160]: Management API
+            - link [ref=f28e161] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f28e162]: Command Line
+            - generic [ref=f28e167]:
+              - link [ref=f28e168] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/command-line/prometheus/
+                - generic [ref=f28e169]: prometheus
+              - link [ref=f28e170] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/command-line/promtool/
+                - generic [ref=f28e171]: promtool
+            - link [ref=f28e172] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/migration/
+              - generic [ref=f28e173]: Migration
+            - link [ref=f28e174] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/stability/
+              - generic [ref=f28e175]: API stability
+            - link [ref=f28e176] [cursor=pointer]:
+              - /url: /docs/prometheus/latest/feature_flags/
+              - generic [ref=f28e177]: Feature flags
+          - link "Visualization" [ref=f28e178] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e187]:
+            - link [ref=f28e188] [cursor=pointer]:
+              - /url: /docs/visualization/browser/
+              - generic [ref=f28e189]: Expression browser
+            - link [ref=f28e190] [cursor=pointer]:
+              - /url: /docs/visualization/grafana/
+              - generic [ref=f28e191]: Grafana
+            - link [ref=f28e192] [cursor=pointer]:
+              - /url: /docs/visualization/perses/
+              - generic [ref=f28e193]: Perses
+            - link [ref=f28e194] [cursor=pointer]:
+              - /url: /docs/visualization/consoles/
+              - generic [ref=f28e195]: Console templates
+          - link "Instrumenting" [ref=f28e196] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e207]:
+            - link [ref=f28e208] [cursor=pointer]:
+              - /url: /docs/instrumenting/clientlibs/
+              - generic [ref=f28e209]: Client libraries
+            - link [ref=f28e210] [cursor=pointer]:
+              - /url: /docs/instrumenting/writing_clientlibs/
+              - generic [ref=f28e211]: Writing client libraries
+            - link [ref=f28e212] [cursor=pointer]:
+              - /url: /docs/instrumenting/pushing/
+              - generic [ref=f28e213]: Pushing metrics
+            - link [ref=f28e214] [cursor=pointer]:
+              - /url: /docs/instrumenting/exporters/
+              - generic [ref=f28e215]: Exporters and integrations
+            - link [ref=f28e216] [cursor=pointer]:
+              - /url: /docs/instrumenting/writing_exporters/
+              - generic [ref=f28e217]: Writing exporters
+            - link [ref=f28e218] [cursor=pointer]:
+              - /url: /docs/instrumenting/exposition_formats/
+              - generic [ref=f28e219]: Exposition formats
+            - link [ref=f28e220] [cursor=pointer]:
+              - /url: /docs/instrumenting/escaping_schemes/
+              - generic [ref=f28e221]: UTF-8 escaping schemes
+            - link [ref=f28e222] [cursor=pointer]:
+              - /url: /docs/instrumenting/content_negotiation/
+              - generic [ref=f28e223]: Content negotiation
+          - link "Operating" [ref=f28e224] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e234]:
+            - link [ref=f28e235] [cursor=pointer]:
+              - /url: /docs/operating/security/
+              - generic [ref=f28e236]: Security
+            - link [ref=f28e237] [cursor=pointer]:
+              - /url: /docs/operating/integrations/
+              - generic [ref=f28e238]: Integrations
+          - link "Alertmanager" [ref=f28e239] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e249]:
+            - textbox [ref=f28e256] [cursor=pointer]: 0.34 (latest)
+            - link [ref=f28e257] [cursor=pointer]:
+              - /url: /docs/alerting/latest/overview/
+              - generic [ref=f28e258]: Alerting overview
+            - link [ref=f28e259] [cursor=pointer]:
+              - /url: /docs/alerting/latest/alertmanager/
+              - generic [ref=f28e260]: Alertmanager
+            - link [ref=f28e261] [cursor=pointer]:
+              - /url: /docs/alerting/latest/configuration/
+              - generic [ref=f28e262]: Configuration
+            - link [ref=f28e263] [cursor=pointer]:
+              - /url: /docs/alerting/latest/high_availability/
+              - generic [ref=f28e264]: High Availability
+            - link [ref=f28e265] [cursor=pointer]:
+              - /url: /docs/alerting/latest/integrations/
+              - generic [ref=f28e266]: Notification Integrations
+            - link [ref=f28e267] [cursor=pointer]:
+              - /url: /docs/alerting/latest/alerts_api/
+              - generic [ref=f28e268]: Alerts API
+            - link [ref=f28e269] [cursor=pointer]:
+              - /url: /docs/alerting/latest/notifications/
+              - generic [ref=f28e270]: Notification template reference
+            - link [ref=f28e271] [cursor=pointer]:
+              - /url: /docs/alerting/latest/notification_examples/
+              - generic [ref=f28e272]: Notification template examples
+            - link [ref=f28e273] [cursor=pointer]:
+              - /url: /docs/alerting/latest/management_api/
+              - generic [ref=f28e274]: Management API
+            - link [ref=f28e275] [cursor=pointer]:
+              - /url: /docs/alerting/latest/https/
+              - generic [ref=f28e276]: HTTPS and authentication
+          - link "Best practices" [ref=f28e277] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e286]:
+            - link [ref=f28e287] [cursor=pointer]:
+              - /url: /docs/practices/naming/
+              - generic [ref=f28e288]: Metric and label naming
+            - link [ref=f28e289] [cursor=pointer]:
+              - /url: /docs/practices/consoles/
+              - generic [ref=f28e290]: Consoles and dashboards
+            - link [ref=f28e291] [cursor=pointer]:
+              - /url: /docs/practices/instrumentation/
+              - generic [ref=f28e292]: Instrumentation
+            - link [ref=f28e293] [cursor=pointer]:
+              - /url: /docs/practices/histograms/
+              - generic [ref=f28e294]: Histograms and summaries
+            - link [ref=f28e295] [cursor=pointer]:
+              - /url: /docs/practices/alerting/
+              - generic [ref=f28e296]: Alerting
+            - link [ref=f28e297] [cursor=pointer]:
+              - /url: /docs/practices/rules/
+              - generic [ref=f28e298]: Recording rules
+            - link [ref=f28e299] [cursor=pointer]:
+              - /url: /docs/practices/pushing/
+              - generic [ref=f28e300]: When to use the Pushgateway
+            - link [ref=f28e301] [cursor=pointer]:
+              - /url: /docs/practices/remote_write/
+              - generic [ref=f28e302]: Remote write tuning
+            - link [ref=f28e303] [cursor=pointer]:
+              - /url: /docs/practices/the_zen/
+              - generic [ref=f28e304]: The Zen of Prometheus
+          - link "Guides" [ref=f28e305] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e314]:
+            - link [ref=f28e315] [cursor=pointer]:
+              - /url: /docs/guides/basic-auth/
+              - generic [ref=f28e316]: Basic auth
+            - link [ref=f28e317] [cursor=pointer]:
+              - /url: /docs/guides/cadvisor/
+              - generic [ref=f28e318]: Monitoring Docker container metrics using cAdvisor
+            - link [ref=f28e319] [cursor=pointer]:
+              - /url: /docs/guides/contributing/
+              - generic [ref=f28e320]: Contributing
+            - link [ref=f28e321] [cursor=pointer]:
+              - /url: /docs/guides/file-sd/
+              - generic [ref=f28e322]: Use file-based service discovery to discover scrape targets
+            - link [ref=f28e323] [cursor=pointer]:
+              - /url: /docs/guides/go-application/
+              - generic [ref=f28e324]: Instrumenting a Go application
+            - link [ref=f28e325] [cursor=pointer]:
+              - /url: /docs/guides/multi-target-exporter/
+              - generic [ref=f28e326]: Understanding and using the multi-target exporter pattern
+            - link [ref=f28e327] [cursor=pointer]:
+              - /url: /docs/guides/node-exporter/
+              - generic [ref=f28e328]: Monitoring Linux host metrics with the Node Exporter
+            - link [ref=f28e329] [cursor=pointer]:
+              - /url: /docs/guides/opentelemetry/
+              - generic [ref=f28e330]: OpenTelemetry
+            - link [ref=f28e331] [cursor=pointer]:
+              - /url: /docs/guides/utf8/
+              - generic [ref=f28e332]: UTF-8 in Prometheus
+            - link [ref=f28e333] [cursor=pointer]:
+              - /url: /docs/guides/dockerswarm/
+              - generic [ref=f28e334]: Docker Swarm
+            - link [ref=f28e335] [cursor=pointer]:
+              - /url: /docs/guides/open_metrics_2_0_migration/
+              - generic [ref=f28e336]: OpenMetrics 2.0 Migration Guide for Client Libraries
+            - link [ref=f28e337] [cursor=pointer]:
+              - /url: /docs/guides/query-log/
+              - generic [ref=f28e338]: Query log
+            - link [ref=f28e339] [cursor=pointer]:
+              - /url: /docs/guides/tls-encryption/
+              - generic [ref=f28e340]: TLS encryption
+          - link "Tutorials" [ref=f28e341] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e351]:
+            - link [ref=f28e352] [cursor=pointer]:
+              - /url: /docs/tutorials/getting_started/
+              - generic [ref=f28e353]: Getting started with Prometheus
+            - link [ref=f28e354] [cursor=pointer]:
+              - /url: /docs/tutorials/understanding_metric_types/
+              - generic [ref=f28e355]: Understanding metric types
+            - link [ref=f28e356] [cursor=pointer]:
+              - /url: /docs/tutorials/instrumenting_http_server_in_go/
+              - generic [ref=f28e357]: Instrumenting HTTP server written in Go
+            - link [ref=f28e358] [cursor=pointer]:
+              - /url: /docs/tutorials/visualizing_metrics_using_grafana/
+              - generic [ref=f28e359]: Visualizing metrics using Grafana
+            - link [ref=f28e360] [cursor=pointer]:
+              - /url: /docs/tutorials/alerting_based_on_metrics/
+              - generic [ref=f28e361]: Alerting based on metrics
+          - link "Specifications" [ref=f28e362] [cursor=pointer]:
+            - /url: "#required-for-focus"
+          - generic [ref=f28e372]:
+            - link [ref=f28e373] [cursor=pointer]:
+              - /url: /docs/specs/native_histograms/
+              - generic [ref=f28e374]: Native Histograms
+            - link [ref=f28e375] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f28e376]: OpenMetrics
+            - generic [ref=f28e381]:
+              - link [ref=f28e382] [cursor=pointer]:
+                - /url: /docs/specs/om/open_metrics_spec/
+                - generic [ref=f28e383]: "1.0"
+              - link [ref=f28e384] [cursor=pointer]:
+                - /url: /docs/specs/om/open_metrics_spec_2_0/
+                - generic [ref=f28e385]: "2.0"
+            - link [ref=f28e386] [cursor=pointer]:
+              - /url: "#required-for-focus"
+              - generic [ref=f28e387]: Remote Write
+            - generic [ref=f28e392]:
+              - link [ref=f28e393] [cursor=pointer]:
+                - /url: /docs/specs/prw/remote_write_spec/
+                - generic [ref=f28e394]: "1.0"
+              - link [ref=f28e395] [cursor=pointer]:
+                - /url: /docs/specs/prw/remote_write_spec_2_0/
+                - generic [ref=f28e396]: "2.0"
+      - generic [ref=f28e397]:
+        - generic [ref=f28e398]:
+          - heading "Metric types" [level=1] [ref=f28e399]
+          - generic [ref=f28e400]:
+            - paragraph [ref=f28e401]:
+              - text: The Prometheus instrumentation libraries offer four core metric types. With the exception of native histograms, these are currently only differentiated in the API of instrumentation libraries and in the exposition protocols. The Prometheus server does not yet make use of the type information and flattens all types except native histograms into untyped time series of floating point values. Native histograms, however, are ingested as time series of special composite histogram samples. In the future, Prometheus might handle other metric types as
+              - link "composite types" [ref=f28e402] [cursor=pointer]:
+                - /url: /blog/2026/02/14/modernizing-prometheus-composite-samples/
+              - text: ", too. There is also ongoing work to persist the type information of the simple float samples."
+            - heading "Counter" [level=2] [ref=f28e403]:
+              - text: Counter
+              - link [ref=f28e404] [cursor=pointer]:
+                - /url: "#counter"
+            - paragraph [ref=f28e409]:
+              - text: A
+              - emphasis [ref=f28e410]: counter
+              - text: is a cumulative metric that represents a single
+              - link "monotonically increasing counter" [ref=f28e411] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Monotonic_function
+              - text: whose value can only increase or be reset to zero on restart. For example, you can use a counter to represent the number of requests served, tasks completed, or errors.
+            - paragraph [ref=f28e417]: Do not use a counter to expose a value that can decrease. For example, do not use a counter for the number of currently running processes; instead use a gauge.
+            - paragraph [ref=f28e418]: "Instrumentation library usage documentation for counters:"
+            - list [ref=f28e419]:
+              - listitem [ref=f28e420]:
+                - link "Go" [ref=f28e421] [cursor=pointer]:
+                  - /url: http://godoc.org/github.com/prometheus/client_golang/prometheus#Counter
+              - listitem [ref=f28e427]:
+                - link "Java" [ref=f28e428] [cursor=pointer]:
+                  - /url: https://prometheus.github.io/client_java/getting-started/metric-types/#counter
+              - listitem [ref=f28e434]:
+                - link "Python" [ref=f28e435] [cursor=pointer]:
+                  - /url: https://prometheus.github.io/client_python/instrumenting/counter/
+              - listitem [ref=f28e441]:
+                - link "Ruby" [ref=f28e442] [cursor=pointer]:
+                  - /url: https://github.com/prometheus/client_ruby#counter
+              - listitem [ref=f28e448]:
+                - link ".Net" [ref=f28e449] [cursor=pointer]:
+                  - /url: https://github.com/prometheus-net/prometheus-net#counters
+              - listitem [ref=f28e455]:
+                - link "Rust" [ref=f28e456] [cursor=pointer]:
+                  - /url: https://docs.rs/prometheus-client/latest/prometheus_client/metrics/counter/index.html
+            - heading "Gauge" [level=2] [ref=f28e462]:
+              - text: Gauge
+              - link [ref=f28e463] [cursor=pointer]:
+                - /url: "#gauge"
+            - paragraph [ref=f28e468]:
+              - text: A
+              - emphasis [ref=f28e469]: gauge
+              - text: is a metric that represents a single numerical value that can arbitrarily go up and down.
+            - paragraph [ref=f28e470]: Gauges are typically used for measured values like temperatures or current memory usage, but also "counts" that can go up and down, like the number of concurrent requests.
+            - paragraph [ref=f28e471]: "Instrumentation library usage documentation for gauges:"
+            - list [ref=f28e472]:
+              - listitem [ref=f28e473]:
+                - link "Go" [ref=f28e474] [cursor=pointer]:
+                  - /url: http://godoc.org/github.com/prometheus/client_golang/prometheus#Gauge
+              - listitem [ref=f28e480]:
+                - link "Java" [ref=f28e481] [cursor=pointer]:
+                  - /url: https://prometheus.github.io/client_java/getting-started/metric-types/#gauge
+              - listitem [ref=f28e487]:
+                - link "Python" [ref=f28e488] [cursor=pointer]:
+                  - /url: https://prometheus.github.io/client_python/instrumenting/gauge/
+              - listitem [ref=f28e494]:
+                - link "Ruby" [ref=f28e495] [cursor=pointer]:
+                  - /url: https://github.com/prometheus/client_ruby#gauge
+              - listitem [ref=f28e501]:
+                - link ".Net" [ref=f28e502] [cursor=pointer]:
+                  - /url: https://github.com/prometheus-net/prometheus-net#gauges
+              - listitem [ref=f28e508]:
+                - link "Rust" [ref=f28e509] [cursor=pointer]:
+                  - /url: https://docs.rs/prometheus-client/latest/prometheus_client/metrics/gauge/index.html
+            - heading "Histogram" [level=2] [ref=f28e515]:
+              - text: Histogram
+              - link [ref=f28e516] [cursor=pointer]:
+                - /url: "#histogram"
+            - paragraph [ref=f28e521]:
+              - text: A
+              - emphasis [ref=f28e522]: histogram
+              - text: records observations (usually things like request durations or response sizes) by counting them in configurable buckets. It also provides a sum of all observed values. As such, a histogram is essentially a bucketed counter. However, a histogram can also represent the current state of a distribution, in which case it is called a
+              - emphasis [ref=f28e523]: gauge histogram
+              - text: . In contrast to the usual counter-like histograms, gauge histograms are rarely directly exposed by instrumented programs and are thus not (yet) usable in instrumentation libraries, but they are represented in newer versions of the protobuf exposition format and in
+              - link "OpenMetrics" [ref=f28e524] [cursor=pointer]:
+                - /url: https://openmetrics.io/
+              - text: . They are also created regularly by PromQL expressions. For example, the outcome of applying the
+              - code [ref=f28e530]: rate
+              - text: function to a counter histogram is a gauge histogram, in the same way as the outcome of applying the
+              - code [ref=f28e531]: rate
+              - text: function to a counter is a gauge.
+            - paragraph [ref=f28e532]:
+              - text: "Histograms exists in two fundamentally different versions: The more recent"
+              - emphasis [ref=f28e533]: native histograms
+              - text: and the older
+              - emphasis [ref=f28e534]: classic histograms
+              - text: .
+            - paragraph [ref=f28e535]: A native histogram is exposed and ingested as composite samples, where each sample represents the count and sum of observations together with a dynamic set of buckets.
+            - paragraph [ref=f28e536]:
+              - text: A classic histogram, however, consists of multiple time series of simple float samples. A classic histogram with a base metric name of
+              - code [ref=f28e537]: <basename>
+              - text: "results in the following time series:"
+            - list [ref=f28e538]:
+              - listitem [ref=f28e539]:
+                - text: cumulative counters for the observation buckets, exposed as
+                - code [ref=f28e540]: "<basename>_bucket{le=\"<upper inclusive bound>\"}"
+              - listitem [ref=f28e541]:
+                - text: the
+                - strong [ref=f28e542]: total sum
+                - text: of all observed values, exposed as
+                - code [ref=f28e543]: <basename>_sum
+              - listitem [ref=f28e544]:
+                - text: the
+                - strong [ref=f28e545]: count
+                - text: of events that have been observed, exposed as
+                - code [ref=f28e546]: <basename>_count
+                - text: (identical to
+                - code [ref=f28e547]: "<basename>_bucket{le=\"+Inf\"}"
+                - text: above)
+            - paragraph [ref=f28e548]:
+              - text: Native histograms are generally much more efficient than classic histograms, allow much higher resolution, do not require explicit configuration of bucket boundaries during instrumentation, and provide atomicity when transferred over the network (e.g. via the Prometheus remote write procol, where classic histograms suffer from possible partial transfer because their constituent time series are transferred independently). Their bucketing schema ensures that they are always aggregatable with each other, even if the resolution might have changed, while classic histograms with different bucket boundaries are not generally aggregatable. If the instrumentation library you are using supports native histograms (currently this is the case for Go and Java), you should probably
+              - link "prefer native histograms over classic histograms" [ref=f28e549] [cursor=pointer]:
+                - /url: /docs/practices/histograms/
+              - text: .
+            - paragraph [ref=f28e550]: "If you are stuck with classic histograms for whatever reason, there is a way to get at least some of the benefits of native histograms: You can configure Prometheus to ingest classic histograms into a special form of native histograms, called Native Histograms with Custom Bucket boundaries (NHCB). NHCBs are stored as the same composite samples as usual native histograms, providing increased efficiency and atomic network transfers, similar to regular native histgorms. However, the buckets of NHCBs still have the same layout as in their classic counterparts, statically configured during instrumentation, with the same limited resolution and range and the same problems of aggregatability upon changing the bucket boundaries."
+            - paragraph [ref=f28e551]:
+              - text: Use the
+              - link [ref=f28e552] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/functions/#histogram_quantile
+                - code [ref=f28e553]: histogram_quantile()
+                - text: function
+              - text: to calculate quantiles from histograms or even aggregations of histograms. It works for both classic and native histograms, using a slightly different syntax. Histograms are also suitable to calculate an
+              - link "Apdex score" [ref=f28e554] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Apdex
+              - text: .
+            - paragraph [ref=f28e560]:
+              - text: You can operate directly on the buckets of a classic histogram, as they are represented as individual series (called
+              - code [ref=f28e561]: "<basename>_bucket{le=\"<upper inclusive bound>\"}"
+              - text: as described above). Remember, however, that these buckets are
+              - link "cumulative" [ref=f28e562] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Histogram#Cumulative_histogram
+              - text: ", i.e. every bucket counts all observations less than or equal to the upper boundary provided as a label. With native histograms, you can look at observations within given boundaries with the"
+              - link [ref=f28e568] [cursor=pointer]:
+                - /url: /docs/prometheus/latest/querying/functions/#histogram_fraction
+                - code [ref=f28e569]: histogram_fraction()
+                - text: function
+              - text: (to calculate fractions of observations) and the
+              - link "trim operators" [ref=f28e570] [cursor=pointer]:
+                - /url: ""
+              - text: (to filter for the desired band of observations).
+            - paragraph [ref=f28e571]:
+              - text: See
+              - link "histograms and summaries" [ref=f28e572] [cursor=pointer]:
+                - /url: /docs/practices/histograms/
+              - text: for details of histogram usage and differences to
+              - link "summaries" [ref=f28e573] [cursor=pointer]:
+                - /url: "#summary"
+              - text: .
+            - blockquote [ref=f28e574]:
+              - strong [ref=f28e579]: NOTE
+              - text: ": Beginning with Prometheus v3.0, the values of the"
+              - code [ref=f28e580]: le
+              - text: label of classic histograms are normalized during ingestion to follow the format of
+              - link "OpenMetrics Canonical Numbers" [ref=f28e581] [cursor=pointer]:
+                - /url: https://github.com/prometheus/OpenMetrics/blob/main/specification/OpenMetrics.md#considerations-canonical-numbers
+              - text: .
+            - paragraph [ref=f28e587]: "Instrumentation library usage documentation for histograms:"
+            - list [ref=f28e588]:
+              - listitem [ref=f28e589]:
+                - link "Go" [ref=f28e590] [cursor=pointer]:
+                  - /url: http://godoc.org/github.com/prometheus/client_golang/prometheus#Histogram
+              - listitem [ref=f28e596]:
+                - link "Java" [ref=f28e597] [cursor=pointer]:
+                  - /url: https://prometheus.github.io/client_java/getting-started/metric-types/#histogram
+              - listitem [ref=f28e603]:
+                - link "Python" [ref=f28e604] [cursor=pointer]:
+                  - /url: https://prometheus.github.io/client_python/instrumenting/histogram/
+              - listitem [ref=f28e610]:
+                - link "Ruby" [ref=f28e611] [cursor=pointer]:
+                  - /url: https://github.com/prometheus/client_ruby#histogram
+              - listitem [ref=f28e617]:
+                - link ".Net" [ref=f28e618] [cursor=pointer]:
+                  - /url: https://github.com/prometheus-net/prometheus-net#histogram
+              - listitem [ref=f28e624]:
+                - link "Rust" [ref=f28e625] [cursor=pointer]:
+                  - /url: https://docs.rs/prometheus-client/latest/prometheus_client/metrics/histogram/index.html
+            - heading "Summary" [level=2] [ref=f28e631]:
+              - text: Summary
+              - link [ref=f28e632] [cursor=pointer]:
+                - /url: "#summary"
+            - paragraph [ref=f28e637]:
+              - text: Similar to a
+              - emphasis [ref=f28e638]: histogram
+              - text: ", a"
+              - emphasis [ref=f28e639]: summary
+              - text: samples observations (usually things like request durations and response sizes). While it also provides a total count of observations and a sum of all observed values, it calculates configurable quantiles over a sliding time window.
+            - paragraph [ref=f28e640]:
+              - text: A summary with a base metric name of
+              - code [ref=f28e641]: <basename>
+              - text: "exposes multiple time series during a scrape:"
+            - list [ref=f28e642]:
+              - listitem [ref=f28e643]:
+                - text: streaming
+                - strong [ref=f28e644]: φ-quantiles
+                - text: (0 ≤ φ ≤ 1) of observed events, exposed as
+                - code [ref=f28e645]: "<basename>{quantile=\"<φ>\"}"
+              - listitem [ref=f28e646]:
+                - text: the
+                - strong [ref=f28e647]: total sum
+                - text: of all observed values, exposed as
+                - code [ref=f28e648]: <basename>_sum
+              - listitem [ref=f28e649]:
+                - text: the
+                - strong [ref=f28e650]: count
+                - text: of events that have been observed, exposed as
+                - code [ref=f28e651]: <basename>_count
+            - paragraph [ref=f28e652]:
+              - text: See
+              - link "histograms and summaries" [ref=f28e653] [cursor=pointer]:
+                - /url: /docs/practices/histograms/
+              - text: for detailed explanations of φ-quantiles, summary usage, and differences to
+              - link "histograms" [ref=f28e654] [cursor=pointer]:
+                - /url: "#histogram"
+              - text: .
+            - blockquote [ref=f28e655]:
+              - strong [ref=f28e660]: NOTE
+              - text: ": Beginning with Prometheus v3.0, the values of the"
+              - code [ref=f28e661]: quantile
+              - text: label are normalized during ingestion to follow the format of
+              - link "OpenMetrics Canonical Numbers" [ref=f28e662] [cursor=pointer]:
+                - /url: https://github.com/prometheus/OpenMetrics/blob/main/specification/OpenMetrics.md#considerations-canonical-numbers
+              - text: .
+            - paragraph [ref=f28e668]: "Instrumentation library usage documentation for summaries:"
+            - list [ref=f28e669]:
+              - listitem [ref=f28e670]:
+                - link "Go" [ref=f28e671] [cursor=pointer]:
+                  - /url: http://godoc.org/github.com/prometheus/client_golang/prometheus#Summary
+              - listitem [ref=f28e677]:
+                - link "Java" [ref=f28e678] [cursor=pointer]:
+                  - /url: https://prometheus.github.io/client_java/getting-started/metric-types/#summary
+              - listitem [ref=f28e684]:
+                - link "Python" [ref=f28e685] [cursor=pointer]:
+                  - /url: https://prometheus.github.io/client_python/instrumenting/summary/
+              - listitem [ref=f28e691]:
+                - link "Ruby" [ref=f28e692] [cursor=pointer]:
+                  - /url: https://github.com/prometheus/client_ruby#summary
+              - listitem [ref=f28e698]:
+                - link ".Net" [ref=f28e699] [cursor=pointer]:
+                  - /url: https://github.com/prometheus-net/prometheus-net#summary
+        - separator [ref=f28e705]
+        - navigation "pagination" [ref=f28e706]:
+          - link [ref=f28e708] [cursor=pointer]:
+            - /url: /docs/concepts/data_model/
+            - generic [ref=f28e715]:
+              - paragraph [ref=f28e716]: Previous
+              - paragraph [ref=f28e717]: Data model
+          - generic [ref=f28e718]:
+            - link [ref=f28e719] [cursor=pointer]:
+              - /url: https://github.com/prometheus/docs/blob/main/docs/concepts/metric_types.md
+              - paragraph [ref=f28e726]: Edit
+            - link [ref=f28e727] [cursor=pointer]:
+              - /url: https://github.com/prometheus/docs/issues/new?title=docs%3A%20Issue%20with%20%22Metric%20types%22&body=**Page%3A**%20https%3A%2F%2Fprometheus.io%2Fdocs%2Fconcepts%2Fmetric_types%2F%0A%0A**Describe%20the%20issue%3A**%0A%0A
+              - paragraph [ref=f28e738]: Issue
+          - link [ref=f28e740] [cursor=pointer]:
+            - /url: /docs/concepts/jobs_instances/
+            - generic [ref=f28e743]:
+              - paragraph [ref=f28e744]: Next
+              - paragraph [ref=f28e745]: Jobs and instances
+  - contentinfo [ref=f28e751]:
+    - generic [ref=f28e753]:
+      - paragraph [ref=f28e754]:
+        - text: © Prometheus Authors 2014-2026 | All components are available under the
+        - link "Apache 2 License" [ref=f28e755] [cursor=pointer]:
+          - /url: http://www.apache.org/licenses/LICENSE-2.0
+        - text: "on"
+        - link "GitHub" [ref=f28e756] [cursor=pointer]:
+          - /url: https://github.com/prometheus
+        - text: .
+      - paragraph [ref=f28e757]:
+        - text: © 2026 The Linux Foundation. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our
+        - link "Trademark Usage" [ref=f28e758] [cursor=pointer]:
+          - /url: https://www.linuxfoundation.org/trademark-usage
+        - text: page.

@@ -1,0 +1,1494 @@
+{
+  "title": "Câu hỏi phỏng vấn tình huống",
+  "intro": "Tình huống thực tế từ sản phẩm backend. Mỗi câu gồm bối cảnh, các bước xử lý gợi ý, và các thuật ngữ trong từ điển — bấm chip để nhảy tới mục giải thích.",
+  "categories": [
+    {
+      "id": "design",
+      "title": "Thiết kế & Refactor",
+      "intro": "8 câu phỏng vấn tình huống cho hạng mục Thiết kế & Refactor: if/else lan tràn theo loại thuật toán trong PR, god class cần tách, quyết định abstraction theo rule of three, di trú legacy sang ports & adapters từng bước, DI container phình to khó debug, thêm tính năng không phá SOLID, chọn cấu trúc dữ liệu theo tradeoff Big-O, và nhận diện tight coupling khi review. Mỗi câu chấm theo trình tự chẩn đoán trước, can thiệp sau, kèm tín hiệu tốt và tín hiệu xấu.",
+      "questions": [
+        {
+          "id": "design-pr-review-else-sprawl",
+          "scenario": "PR mở rộng module pricing thêm nhà cung cấp thứ 5: diff +340 dòng, hàm calculatePrice giờ có 5 nhánh if/else theo provider, mỗi nhánh 40 đến 60 dòng, coverage nhánh 92% nhưng thời gian review kéo từ 25 phút lên 2 ngày. Ba lần thêm provider trước cũng sửa đúng hàm này.",
+          "question": "Anh xử lý trong review thế nào: dừng PR để tách trước hay merge rồi refactor sau, và tiêu chí nào chốt lựa chọn đó?",
+          "steps": [
+            "Đọc hết diff trước khi comment, phân biệt nhánh mới lặp cấu trúc với 4 nhánh cũ hay chỉ là một case rẽ nhánh đơn giản",
+            "Kiểm lịch sử git của hàm: đây là lần mở rộng thứ mấy và mỗi lần thêm provider trước đó có phải sửa cùng chỗ không",
+            "Chạy test hiện có để xác nhận hành vi đang được khóa; nếu test mỏng thì yêu cầu bổ sung trước khi bàn cấu trúc",
+            "Đối chiếu rule of three: ba lần lặp cùng một quy tắc chọn thì đủ cơ sở tách Strategy; chỉ khác vài tham số thì để nguyên",
+            "Viết comment nêu phương án cụ thể: interface dự kiến, nhánh nào share, thêm provider thứ 6 sẽ chạm file nào, kèm ví dụ",
+            "Chốt kế hoạch: cho merge bản tối thiểu giữ build xanh, refactor tách PR riêng kèm test khóa hành vi",
+            "Theo dõi PR refactor: đo lại cyclomatic complexity của hàm và số dòng mỗi nhánh trước sau để xác nhận đã giảm"
+          ],
+          "terms": [
+            "Strategy pattern",
+            "cyclomatic complexity",
+            "refactoring",
+            "code review",
+            "regression test"
+          ],
+          "good_signal": "Comment dựa trên mức lặp và lịch sử churn đã đo, đề xuất tách có interface cụ thể, và để refactor đi kèm test khóa hành vi thay vì bắt sửa ngay trong PR.",
+          "red_flag": "Yêu cầu dùng Strategy không kèm bằng chứng hay tiêu chí, hoặc bắt tách ngay trong PR đang chặn release."
+        },
+        {
+          "id": "design-god-class-split",
+          "scenario": "OrderService dài 4.200 dòng, 63 public method trải 11 nhóm chức năng: thanh toán, kho, email, hoàn tiền và các nhóm khác. Quý trước file này chiếm 41% tổng commit và 6 trong 10 bug P1; chạy riêng test của nó mất 6 phút.",
+          "question": "Anh tách class này theo trình tự nào để không làm gãy hành vi và không biến nó thành big-bang refactor?",
+          "steps": [
+            "Đo trước khi đụng code: đếm method theo nhóm chức năng, tần suất commit từng nhóm, và danh sách hành vi đang có test bảo vệ",
+            "Vẽ đồ thị phụ thuộc giữa các nhóm qua state chung: field nào bị nhiều nhóm đọc ghi để chọn đường cắt ít đau nhất",
+            "Viết characterization test cho các luồng chính trên code hiện tại, chạy xanh, để mọi bước sau đều có lưới an toàn",
+            "Bóc nhóm ít phụ thuộc nhất trước (email, thông báo), giữ nguyên chữ ký cũ gọi qua facade để chưa phải sửa caller",
+            "Mỗi PR bóc đúng một nhóm, chạy full suite sau từng bước, giữ diff đủ nhỏ để revert trong một lệnh",
+            "Xử lý state chung: chuyển field dùng riêng cho một nhóm thành tham số hoặc value object thay vì kéo cả state sang class mới",
+            "Sau khi hết nhóm, OrderService còn lại thuần orchestration; đo lại kích thước file, số method và độ phủ test"
+          ],
+          "terms": [
+            "SOLID",
+            "Characterization test",
+            "refactoring",
+            "Composition over Inheritance & Law of Demeter",
+            "Facade pattern (mặt tiền)"
+          ],
+          "good_signal": "Khóa hành vi bằng characterization test trước, cắt từng nhóm theo phụ thuộc thật và giữ vành ngoài ổn định qua facade.",
+          "red_flag": "Đề xuất viết lại từ đầu hoặc tách cả 11 nhóm trong một PR khổng lồ rồi trông cậy test cũ bắt được lỗi."
+        },
+        {
+          "id": "design-abstraction-rule-of-three",
+          "scenario": "Hai module đã copy cùng một khối retry HTTP khoảng 80 dòng, chỉ khác tên hàm; hai tháng qua 3 lần sửa quy tắc retry đều phải sửa cả hai chỗ. Thành viên thứ ba mở PR trích xuất abstraction chung cho cả ba chỗ; reviewer phản đối vì mới có ba chỗ, còn quá sớm.",
+          "question": "Anh quyết định thế nào: gom ngay hay chờ, và tiêu chí nào phân định hai lựa chọn?",
+          "steps": [
+            "So ba bản sao từng dòng: khác nhau ở đâu (policy, backoff, logging) và phần khác đó ổn định hay còn đổi tiếp",
+            "Đo chi phí lặp hiện tại: sửa một quy tắc retry phải sửa mấy chỗ, lần sửa gần nhất có sót chỗ nào không",
+            "Phân loại lặp: trùng cơ học từng dòng khác trùng ý tưởng; chỉ trùng ý tưởng đã ổn định mới đáng gom",
+            "Nếu gom, thiết kế interface tối thiểu che phần chung, để phần khác biệt thành tham số hoặc hook, không nhét cả ba vào một hàm nhiều cờ",
+            "Chuyển từng chỗ một sang bản chung, mỗi lần kèm test của chỗ đó và xóa bản cũ ngay lượt ấy",
+            "Nếu chưa gom, ghi lại lý do và dấu hiệu sẽ đổi quyết định (bản sao thứ tư, hoặc lệch hành vi), để lần sau quyết định có dữ liệu"
+          ],
+          "terms": [
+            "refactoring",
+            "technical debt",
+            "code review",
+            "regression test"
+          ],
+          "good_signal": "Quyết định dựa trên khác biệt hành vi và chi phí sửa đã đo, dám chấp nhận lặp có chủ đích thay vì abstraction sớm.",
+          "red_flag": "Áp rule of three máy móc thành gom ở lần thứ ba, hoặc để lặp vô hạn mà không đo chi phí."
+        },
+        {
+          "id": "design-legacy-hexagonal-migration",
+          "scenario": "Service billing 6 năm tuổi, controller gọi thẳng ORM và SQL, 40% logic nằm trong controller, luồng thanh toán không có test. Mỗi lần đổi nhà cung cấp phải sửa 9 file trong 3 tuần, lần gần nhất gây 2 sự cố production.",
+          "question": "Anh di trú dần sang ports & adapters thế nào mà không dừng phát triển tính năng và không rủi ro big-bang?",
+          "steps": [
+            "Chọn một luồng dọc cụ thể (charge thẻ) làm mẫu, không cải tạo cả service theo mô hình lý tưởng",
+            "Viết characterization test quanh luồng đó bám đúng hành vi hiện tại, không sửa code sản phẩm trong bước này",
+            "Định nghĩa port cho thứ billing thật sự cần (lưu trữ, gọi cổng thanh toán, phát sự kiện), chưa quan tâm công nghệ đích",
+            "Viết adapter bọc code cũ, trỏ port vào adapter đó, giữ đường cũ song song để tắt nhanh nếu lệch",
+            "Di chuyển từng use case sang core, mỗi PR một use case, đối chiếu kết quả hai đường khi hành vi nhạy cảm",
+            "Lặp quy trình cho luồng kế tiếp; xóa code cũ sau khi chứng minh không còn caller bằng tìm kiếm và log",
+            "Đo tiến độ bằng số file phải sửa khi đổi provider và số test bảo vệ luồng, không đo bằng cảm giác sạch đẹp"
+          ],
+          "terms": [
+            "Hexagonal Architecture / Ports & Adapters",
+            "Adapter pattern (wrapper interface)",
+            "Characterization test",
+            "Repository & DAO pattern",
+            "dead code"
+          ],
+          "good_signal": "Cắt theo luồng dọc, adapter bọc code cũ trước khi xóa, mỗi bước có test khóa hành vi và chỉ số đo được.",
+          "red_flag": "Đề xuất viết lại toàn bộ trước khi có test, hoặc vẽ kiến trúc mới trên giấy mà không cắt được luồng nào chạy thật."
+        },
+        {
+          "id": "design-di-container-bloat",
+          "scenario": "App khởi động mất 14 giây, container đăng ký 380 provider, 60 trong đó chỉ phục vụ test. Một provider chết khi thiếu biến môi trường chỉ lộ sau 20 phút chạy integration test; lần gần nhất một dev mất 3 giờ truy vết thứ tự resolve.",
+          "question": "Anh chẩn đoán và gỡ container này theo trình tự nào, và giữ tiêu chí gì để không tái phát?",
+          "steps": [
+            "Tách thời gian khởi động thành hai phần: dựng container và init thật, xem chi phí nằm ở đăng ký nào",
+            "Liệt kê provider theo nơi dùng: chỉ một module, chỉ test, hay cross-cutting; nhóm chỉ test là ứng viên gỡ đầu tiên",
+            "Vẽ chuỗi phụ thuộc của các provider hay lỗi, tìm vòng lặp và chỗ constructor làm việc thật thay vì chỉ gán tham chiếu",
+            "Đẩy việc nặng ra khỏi thời điểm dựng: lazy cho provider không cần ngay, tách bước warm-up ra khỏi diện đồng bộ",
+            "Thêm kiểm tra fail-fast lúc khởi động cho provider bắt buộc: resolve thử và báo lỗi kèm tên provider cùng biến thiếu",
+            "Đo lại thời gian khởi động, số đăng ký, và đặt ngưỡng cảnh báo trong CI khi vượt để chặn tái phát"
+          ],
+          "terms": [
+            "Dependency Injection (DI) & IoC container",
+            "Singleton",
+            "Lazy vs eager loading / lazy evaluation",
+            "test isolation",
+            "dead code"
+          ],
+          "good_signal": "Đo trước, gỡ đăng ký chết và đăng ký test khỏi runtime, lazy hóa việc nặng, thêm fail-fast có tên provider.",
+          "red_flag": "Bỏ DI để new khắp nơi, hoặc nuôi container bằng cách tăng timeout khởi động mà không đo phần nào chậm."
+        },
+        {
+          "id": "design-solid-new-feature",
+          "scenario": "Tính năng export báo cáo định kỳ được cắm vào ReportService bằng một nhánh else if mới, thêm 4 tham số vào chữ ký hàm generate, và 3 method public mới trên class cũ. Hai test hiện có phải sửa mới chạy.",
+          "question": "Anh đánh giá bản nháp này thế nào và yêu cầu chỉnh gì trước khi merge để không phá SOLID?",
+          "steps": [
+            "Phân loại thay đổi: mở rộng thêm biến thể mới hay sửa hành vi cũ; hướng đúng là thêm mới không đụng nhánh đang chạy",
+            "Soi lý do 2 test cũ phải sửa: chúng khóa hành vi quan sát được hay chỉ khóa cấu trúc nội bộ của class",
+            "Kiểm chữ ký hàm generate: 4 tham số mới gom được thành object có tên theo nghiệp vụ, tránh tham số vị trí",
+            "Định nghĩa interface nhỏ đúng nhu cầu của caller cho loại export mới, không tạo interface chung vạn năng",
+            "Cài biến thể mới bằng class implement interface đó, chọn qua factory theo cấu hình, không sửa thân hàm cũ",
+            "Chạy lại toàn bộ test cũ nguyên trạng; nếu vẫn phải sửa, dừng lại tìm chỗ rò rỉ phụ thuộc trước khi merge",
+            "Đo sau merge: số call-site phải đổi, độ dài chữ ký, số nhánh trong hàm cũ, và thời gian thêm biến thể kế tiếp"
+          ],
+          "terms": [
+            "SOLID",
+            "Strategy pattern",
+            "Factory Method (factory pattern)",
+            "Composition over Inheritance & Law of Demeter",
+            "regression test"
+          ],
+          "good_signal": "Phân biệt mở rộng với sửa hành vi, gom tham số thành object có tên, và giữ bộ test cũ không phải sửa.",
+          "red_flag": "Cho qua vì chỉ thêm một nhánh, hoặc bắt viết lại cả service ngay trong PR tính năng."
+        },
+        {
+          "id": "design-data-structure-big-o",
+          "scenario": "Bảng xếp hạng kỳ thi cần trả top 20 từ 2 triệu thí sinh. Endpoint hiện nạp đủ 2 triệu bản ghi vào RAM và sort lại mỗi request; p99 3,8 giây, đỉnh RAM tăng thêm 900MB mỗi đợt cao điểm ở mức 40 request/giây.",
+          "question": "Anh chọn cấu trúc dữ liệu và luồng xử lý nào cho bài này, dựa trên tradeoff gì, và kiểm chứng bằng cách nào?",
+          "steps": [
+            "Viết benchmark với đúng kích thước 2 triệu bản ghi, đo thời gian và bộ nhớ của cách hiện tại làm baseline trước khi đổi",
+            "Chốt đặc tính truy vấn: top k cố định hay động, dữ liệu cập nhật bao lâu một lần, đọc nhiều hay ghi nhiều",
+            "Chọn cấu trúc theo tradeoff đã chốt: top k một lần dùng heap cỡ k; truy vấn lặp trên cùng dữ liệu thì tính trước",
+            "Kiểm tra chi phí ẩn: so số phần tử thực sự phải giữ trong bộ nhớ với kích thước dữ liệu, tránh giữ cả n khi chỉ cần k",
+            "Xử lý biên: điểm bằng nhau ở ranh giới top k, dữ liệu cập nhật sau khi tính trước, và tải đọc đồng thời lúc refresh",
+            "Đo lại p99 và đỉnh RAM trên cùng kịch bản; tăng n lên gấp đôi để xác nhận độ phức tạp mới đúng kỳ vọng",
+            "Ghi lại tradeoff đã chọn cùng điều kiện sẽ đổi cấu trúc (ví dụ cần top k động theo nhiều tiêu chí xếp hạng)"
+          ],
+          "terms": [
+            "Big-O notation & độ phức tạp tiệm cận",
+            "Priority queue",
+            "Precomputation",
+            "Benchmark",
+            "Index (B-tree, hash, composite)"
+          ],
+          "good_signal": "Benchmark đúng cỡ dữ liệu trước, chọn heap cho top k hoặc bảng tính trước cho truy vấn lặp, và kiểm chứng bằng đường cong khi n tăng.",
+          "red_flag": "Đổi cấu trúc theo cảm giác heap nhanh hơn sort mà không đo, hoặc cache kết quả nhưng bỏ qua dữ liệu cập nhật."
+        },
+        {
+          "id": "design-tight-coupling-review",
+          "scenario": "Trong PR, TaxCalculator dài 640 dòng new trực tiếp HTTP client, đọc biến môi trường ở giữa hàm tính, và gọi static method của lớp util dùng chung. 12 call-site của nó không test đơn vị nào chạy nổi nếu thiếu mạng; đổi base URL phải rebuild.",
+          "question": "Anh chỉ ra tight coupling ở đâu, và yêu cầu tách thế nào để test được mà không đắp thêm tầng thừa?",
+          "steps": [
+            "Đọc các call-site để phân loại phụ thuộc: thứ nào cần thay trong test (I/O, thời gian, ngẫu nhiên) và thứ nào là logic thuần",
+            "Viết thử một unit test cho TaxCalculator, ghi lại chính xác chỗ nào buộc phải có mạng hoặc biến môi trường",
+            "Đề xuất nhận phụ thuộc qua constructor dưới dạng interface nhỏ đúng nhu cầu, thay vì tự new bên trong",
+            "Bọc static util thành instance có interface khi nó chứa I/O; hàm thuần không trạng thái thì để nguyên dạng hàm",
+            "Đọc cấu hình từ composition root truyền vào, xóa việc đọc biến môi trường rải rác trong logic tính",
+            "Chỉ tạo test double cho đúng ranh giới đã tách, không mock thứ mình không sở hữu, không mock chuỗi dài",
+            "Đo lại: thời gian chạy unit test và số mock mỗi test; nhiều mock là dấu hiệu ranh giới vẫn còn sai"
+          ],
+          "terms": [
+            "Tight vs Loose Coupling",
+            "Dependency Injection (DI) & IoC container",
+            "test isolation",
+            "mocking/stub/fake/spy",
+            "code review"
+          ],
+          "good_signal": "Chỉ đúng phụ thuộc buộc phải thay trong test, tách bằng interface nhỏ nhận từ constructor, và tránh mock tràn lan.",
+          "red_flag": "Bắt mock toàn bộ để test chạy được, hoặc thêm abstraction cho mọi thứ khiến PR to gấp ba mà không tăng khả năng test."
+        }
+      ]
+    },
+    {
+      "id": "api",
+      "title": "Thiết kế API & Tích hợp",
+      "intro": "8 câu phỏng vấn tình huống cho hạng mục Thiết kế API & Tích hợp: breaking change đổi kiểu field làm client cũ crash, offset sâu trên bảng 40 triệu dòng, chống trừ tiền hai lần khi client retry, webhook giao trùng, N+1 trong một GraphQL request, rate limit cho API công khai, dọn nợ versioning giữa /v1, /v2 và /v3, và lệch hợp đồng dữ liệu giữa frontend với backend. Mỗi câu có bối cảnh kèm số liệu vận hành, các bước điều tra theo thứ tự chẩn đoán trước can thiệp sau, cùng tín hiệu tốt và tín hiệu xấu để chấm câu trả lời.",
+      "questions": [
+        {
+          "id": "api-breaking-change-old-clients",
+          "scenario": "API /v1/orders trả field status dạng chuỗi; đội platform đổi thành object {code, label} và deploy thẳng production. Trong 30 phút, app mobile 2.8 (37% người dùng) crash khi parse, crash rate client nhảy từ 0,4% lên 6,1% dù 5xx của server không đổi.",
+          "question": "Breaking change này lọt qua kiểm tra nào, và em xử lý thế nào để client cũ tiếp tục chạy trong khi vẫn đẩy được thay đổi?",
+          "steps": [
+            "Xem crash log và telemetry theo version client, xác nhận 37% người dùng 2.8 parse hỏng đúng field status vừa đổi.",
+            "Kiểm tra hợp đồng: field bị đổi kiểu trong khi client cũ không tolerant reader, đây là breaking change không được version hóa.",
+            "Rollback bản deploy đổi kiểu field trước, đo lại crash rate để chốt nguyên nhân, không sửa thêm gì trong lúc chờ số liệu.",
+            "Đổi hướng additive: thêm field status_v2 một thời gian, giữ status cũ chạy song song, không xóa gì trong vòng 12 tháng.",
+            "Công bố deprecation policy: thông báo qua changelog, trả header Deprecation và Sunset cho client cũ, hẹn ngày tắt cụ thể.",
+            "Thêm contract test cho response shape vào pipeline để lần đổi kiểu sau làm pipeline đỏ trước khi tới production.",
+            "Theo dõi tỉ lệ client còn gọi path cũ theo tuần, chỉ tắt khi tỉ lệ dưới 0,1% và ghi lại mốc tắt theo từng version."
+          ],
+          "terms": [
+            "Backward compatibility (schema)",
+            "API deprecation policy",
+            "Deprecation/sunset headers",
+            "Contract testing"
+          ],
+          "good_signal": "Rollback trước rồi thêm field additive, có header deprecation và contract test chặn ở pipeline thay vì chỉ xin lỗi khách.",
+          "red_flag": "Bảo client cập nhật app là xong, hoặc mở /v2 cho field mới mà không đụng tới client cũ đang chạy."
+        },
+        {
+          "id": "api-pagination-million-rows",
+          "scenario": "Bảng transactions có 40 triệu dòng; client đang phân trang bằng offset 950.000 nên mỗi request mất 8,4s vì DB phải đọc rồi bỏ qua gần một triệu dòng. Đội frontend muốn infinite scroll mượt dưới 300ms mỗi trang.",
+          "question": "Với bảng cỡ này, em thiết kế lại pagination thế nào và chứng minh nó nhanh hơn bằng cách nào?",
+          "steps": [
+            "Đo lại từng phần của request chậm bằng EXPLAIN ANALYZE, tách thời gian scan, sort và trả dữ liệu cho client.",
+            "Xác nhận nguyên nhân: OFFSET 950.000 khiến DB đọc và bỏ gần một triệu dòng trước khi trả 50 dòng cần thiết.",
+            "Kiểm tra index hiện có phủ được cột filter, cột sort và khóa chính theo đúng thứ tự hay chưa.",
+            "Chuyển sang keyset pagination: trả next_cursor từ khóa chính đã sắp, WHERE (created_at, id) < cursor thay cho OFFSET.",
+            "Thêm index tổ hợp cho cột sort với khóa chính, xác nhận plan đổi từ scan sang index range scan.",
+            "Chặn limit tối đa mỗi trang và trả 400 khi client xin số dòng vượt ngưỡng; giữ tương thích cho cursor cũ trong một chu kỳ.",
+            "Đo lại p95 ở trang đầu và trang sâu, ghi số trước sau vào cùng bảng để so, không nhìn mỗi trang đầu."
+          ],
+          "terms": [
+            "Pagination (offset vs cursor/keyset)",
+            "Cursor / keyset pagination",
+            "Query plan / EXPLAIN",
+            "Covering index"
+          ],
+          "good_signal": "Chẩn đoán bằng EXPLAIN trước, chuyển sang keyset với cursor, và đo lại p95 ở trang sâu thay vì chỉ nhìn trang đầu.",
+          "red_flag": "Đòi tăng RAM hoặc cache thêm cho endpoint trong khi OFFSET 950.000 vẫn còn nguyên trong câu query."
+        },
+        {
+          "id": "api-payment-retry-idempotency",
+          "scenario": "Đối tác gọi POST /payments, cổng thanh toán timeout sau 30 giây nên client retry ba lần cho cùng một đơn. Trong tuần có 1.200 đơn bị trừ tiền hai lần, lệch 49.000 đến 2 triệu đồng mỗi đơn; log ghi ba request với body giống hệt nhau.",
+          "question": "Em chặn double charge khi client retry thế nào, trong khi vẫn phải trả kết quả cũ cho các lần retry sau?",
+          "steps": [
+            "Tái hiện double charge bằng hai request song song cùng body, ghi lại cả hai giao dịch tiền trong DB.",
+            "Đối chiếu log: client giữ nguyên body nhưng không gửi Idempotency-Key, server không có gì để phân biệt hai lần gọi.",
+            "Bắt buộc header Idempotency-Key cho POST /payments, trả 400 kèm hướng dẫn khi thiếu.",
+            "Lưu key vào bảng riêng có unique index trên (key, merchant_id), kèm trạng thái xử lý và response đã ghi.",
+            "Với request trùng, trả đúng response của lần đầu; hai request song song thì một thắng unique constraint, request kia chờ rồi đọc kết quả.",
+            "Gắn TTL cho key theo dedup window 24 giờ và dọn key cũ bằng job riêng, không xóa trong lúc traffic đang chạy.",
+            "Viết regression test: 50 retry song song cùng key, assert chỉ một giao dịch được tạo và mọi response giống nhau."
+          ],
+          "terms": [
+            "Idempotency key (Stripe pattern)",
+            "Idempotency & delivery semantics",
+            "Race condition",
+            "Redis lock (SET NX PX)",
+            "Dedup window"
+          ],
+          "good_signal": "Đặt unique index trên idempotency key lưu bền, trả lại response lần đầu cho retry, và có test song song 50 request cùng key.",
+          "red_flag": "Chỉ bọc khóa Redis quanh handler là xong, không có khóa lưu bền nên process chết vẫn sinh giao dịch thứ hai."
+        },
+        {
+          "id": "api-webhook-duplicate-receiver",
+          "scenario": "Đối tác nhận webhook payment.succeeded và tự tạo đơn trong ERP. Sau 20 phút mạng đứt, sender retry theo exponential backoff, phía nhận lấy 4.700 event trong đó 31% trùng id và đã tạo gần 1.460 đơn nháp trùng.",
+          "question": "Phía nhận xử lý webhook giao trùng thế nào để retry không sinh thêm bản ghi rác?",
+          "steps": [
+            "Thống kê log theo event_id: cùng một id xuất hiện 2 đến 4 lần, xác nhận kênh giao ít nhất một lần chứ không phải exactly-once.",
+            "Kiểm tra endpoint nhận có verify chữ ký không và đang ack nhanh hay xử lý nghiệp vụ trước khi trả 2xx.",
+            "Ghi mỗi event_id vào bảng dedup có unique index trước khi xử lý nghiệp vụ; insert thất bại nghĩa là event đã xử lý.",
+            "Chuyển xử lý nghiệp vụ sang hàng đợi nội bộ: ack nhanh cho sender, worker xử lý sau theo idempotent consumer.",
+            "Event hỏng sau nhiều lần thử thì đẩy vào dead letter queue kèm payload gốc để đối soát thủ công.",
+            "Chỉ trả 2xx sau khi đã ghi dedup, và tách metric đếm số event trùng bị bỏ qua để còn phát hiện bất thường.",
+            "Chạy lại kịch bản mạng đứt 20 phút trong staging, assert số bản ghi nghiệp vụ đúng bằng số event id duy nhất."
+          ],
+          "terms": [
+            "Webhook (delivery, retries, signature)",
+            "Idempotent consumer",
+            "Dedup window",
+            "HMAC",
+            "Dead letter queue"
+          ],
+          "good_signal": "Ghi dedup theo event id trước khi xử lý, ack nhanh rồi làm nền, và coi webhook là giao ít nhất một lần nên consumer phải bất biến.",
+          "red_flag": "Bảo sender đừng retry, hoặc trả 500 khi trùng, không phân biệt giữa giao trùng với mất event."
+        },
+        {
+          "id": "api-graphql-n-plus-one",
+          "scenario": "App mobile dùng GraphQL gateway cho màn hình đơn hàng: 20 đơn, mỗi đơn kèm khách hàng và 5 item. Một query mất 2,1s p95 và DB nhận 121 query cho một request (1 danh sách đơn, 20 khách hàng, 100 item), trong khi REST cũ cần 6 round-trip khoảng 1,1s do RTT 180ms.",
+          "question": "Giữa việc bỏ GraphQL về lại REST và sửa gateway, em phân tích thế nào và xử lý tầng nào trước?",
+          "steps": [
+            "Đếm số DB query thật cho một GraphQL request bằng log query hoặc tracing theo từng resolver.",
+            "Xác nhận N+1: 1 query danh sách đơn, 20 query khách hàng và 100 query item chi tiết đều chạy trong một request.",
+            "Đo đối chứng REST 6 round-trip: 6 lần RTT 180ms cộng payload, phần lớn thời gian nằm ở số vòng gọi, không nằm ở DB.",
+            "Gom query con thành một câu IN theo batch id thay vì gọi từng id, hoặc gộp theo request bằng bộ đệm.",
+            "Cache lớp đọc cho dữ liệu ít đổi như customer, đặt TTL rõ ràng và nêu điều kiện invalidate.",
+            "Chặn độ sâu và độ rộng query tối đa ở gateway, từ chối query vượt ngưỡng để bảo vệ DB.",
+            "Đo lại p95 và số query trên mỗi request, so với baseline 121 query và 2,1s rồi mới chốt giữ GraphQL hay không."
+          ],
+          "terms": [
+            "N+1 problem",
+            "Query batching (IN / bulk)",
+            "REST (Representational State Transfer)",
+            "BFF (Backend for Frontend)"
+          ],
+          "good_signal": "Đếm query thật bằng tracing trước, xác nhận N+1 do resolver lặp, gom bằng IN batch rồi so lại số query lẫn p95.",
+          "red_flag": "Kết luận GraphQL chậm nên bỏ về REST, hoặc thêm cache toàn bộ mà không đo đếm gì."
+        },
+        {
+          "id": "api-public-rate-limit",
+          "scenario": "API công khai mở cho đối tác, hợp đồng chưa ghi giới hạn. Một đối tác gọi 900 req/s chiếm 62% tài nguyên cụm 8 node, p99 của đối tác khác tăng từ 240ms lên 1,9s, và không có header nào cho họ biết mình đang vượt mức.",
+          "question": "Em thiết kế rate limit cho API công khai này thế nào để client tự điều chỉnh mà không phải gọi support mỗi lần bị chặn?",
+          "steps": [
+            "Lấy phân bố request theo API key trong 7 ngày, tách nhóm nặng, vừa, nhẹ và các đỉnh bất thường.",
+            "Đặt quota theo tier: free 20 req/s burst 40, partner 200 req/s burst 400, kèm trần theo tháng cho từng key.",
+            "Đặt token bucket ở gateway khóa theo API key; IP chỉ giữ làm lớp phụ cho client chưa đăng ký.",
+            "Trả 429 kèm RateLimit và Retry-After để client backoff đúng, thay vì 503 khó đoán như hiện tại.",
+            "Công bố giới hạn trong tài liệu API và cảnh báo khi key chạm 80% quota trước khi chặn cứng.",
+            "Bật adaptive throttle khi CPU cụm vượt 70%, hạ dần trần theo mức ưu tiên trước khi phải cắt tải.",
+            "Theo dõi tỉ lệ 429 và tỉ lệ chặn nhầm trong 48 giờ, nới quota cho tier bị siết quá tay."
+          ],
+          "terms": [
+            "Rate Limiting (Adaptive)",
+            "Rate limit headers (429 + Retry-After + RateLimit)",
+            "Backpressure & rate shaping",
+            "Load Shedding",
+            "API key"
+          ],
+          "good_signal": "Đặt quota theo API key có tier và burst, trả 429 kèm RateLimit và Retry-After, và cảnh báo ở 80% quota để client tự điều chỉnh.",
+          "red_flag": "Chỉ thêm node khi tải cao, hoặc gửi email chặn đối tác nặng mà không có quota và header công khai."
+        },
+        {
+          "id": "api-versioning-strategy-debt",
+          "scenario": "Đã hai năm không ai dọn: /v1 còn 214 client trong đó 19 client nội bộ chỉ gọi một endpoint, /v2 chiếm 96% lưu lượng, /v3 làm nửa vời rồi bỏ. Đội sales cần cam kết 12 tháng không phá vỡ hợp đồng cho khách mới.",
+          "question": "Em chọn chiến lược versioning nào cho giai đoạn tiếp theo, và trả nợ /v1 cách nào mà không phá client đang chạy?",
+          "steps": [
+            "Lập bảng client theo version: số request, endpoint dùng, owner và hạn hợp đồng, gắn nhãn ai còn cần hỗ trợ.",
+            "Phân loại các thay đổi dự kiến thành additive hay breaking; thay đổi chỉ thêm field thì không cần version mới.",
+            "Chốt một cơ chế versioning duy nhất, URL prefix cho đối tác hoặc header Accept cho nội bộ, không trộn nhiều kiểu.",
+            "Xây deprecation policy công khai: mốc thông báo, cam kết hỗ trợ tối thiểu 12 tháng, ngày sunset cụ thể cho từng version.",
+            "Đánh dấu /v1 deprecated, trả header Deprecation và Sunset, kèm changelog và hướng dẫn migrate theo endpoint.",
+            "Lấy OpenAPI của /v2 làm nguồn duy nhất, gate CI khi schema đổi mà không khai báo phiên bản hay deprecation.",
+            "Theo dõi lưu lượng /v1 theo tháng, tắt dần endpoint khi nhóm client cuối cùng migrate xong."
+          ],
+          "terms": [
+            "API versioning (URL/header/media type)",
+            "API deprecation policy",
+            "Deprecation/sunset headers",
+            "OpenAPI/Swagger",
+            "Backward compatibility (schema)"
+          ],
+          "good_signal": "Có mốc sunset cụ thể cho từng version, phân loại additive với breaking trước khi mở version mới, và nhìn số liệu client trước khi tắt bất cứ thứ gì.",
+          "red_flag": "Mở thêm /v3 mới trong khi /v1 chưa có ngày chết, hoặc trộn URL với header version không theo quy tắc nào."
+        },
+        {
+          "id": "api-contract-drift-pipeline",
+          "scenario": "Frontend giữ TypeScript types copy tay từ tài liệu; backend đổi total_amount từ number sang string trong bản 2.4.0. Hai ngày sau, màn hình thanh toán hiện NaN ở 8% giao dịch, chỉ trên build frontend từ tuần trước.",
+          "question": "Em phát hiện và chặn kiểu lệch hợp đồng này từ pipeline như thế nào?",
+          "steps": [
+            "Tái hiện NaN: so payload thật từ backend 2.4.0 với type frontend đang build, xác nhận lệch kiểu đúng field total_amount.",
+            "Rà nguồn chân lý: frontend copy tay từ tài liệu, không có bước nào kiểm tra khi backend đổi kiểu.",
+            "Chốt OpenAPI của backend làm nguồn duy nhất, sinh type cho frontend tự động thay vì copy tay.",
+            "Thêm contract test vào CI: build frontend phải chạy được với schema API của bản backend sắp deploy.",
+            "Bổ sung consumer-driven contract cho các consumer chính, lệch hợp đồng làm pipeline đỏ trước khi merge.",
+            "Thêm kiểm tra response shape ở runtime cho thay đổi phá vỡ, log kèm version API và request id để truy vết.",
+            "Đo lại số lỗi NaN sau khi sinh type tự động, giữ gate hai tuần rồi mới dọn code parse thủ công."
+          ],
+          "terms": [
+            "Contract testing",
+            "contract test (Pact)",
+            "consumer-driven contract",
+            "OpenAPI/Swagger",
+            "DTO (Data Transfer Object) & mapping"
+          ],
+          "good_signal": "Sinh type từ schema thay vì copy tay, và để contract test chặn pipeline trước khi merge.",
+          "red_flag": "Sửa NaN bằng parse thủ công ở frontend rồi đóng ticket, không thêm bước phát hiện lệch hợp đồng tự động."
+        }
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "Hiệu năng & Quy mô",
+      "intro": "8 câu phỏng vấn tình huống cho hạng mục Hiệu năng & Quy mô: điều tra endpoint chậm giờ cao điểm theo từng tầng, N+1 query, chọn cache strategy theo workload, pagination chậm khi offset lớn, cold start sau deploy, index sai hướng, gỡ can thiệp tối ưu sai chỗ, và đo lường trước/sau. Mỗi câu đòi hỏi trình tự chẩn đoán trước, can thiệp sau, kèm tín hiệu tốt và tín hiệu xấu để chấm câu trả lời.",
+      "questions": [
+        {
+          "id": "performance-slow-endpoint-peak-hour",
+          "scenario": "GET /api/orders có p99 từ 220ms lên 4.6s từ 9h đến 11h mỗi sáng, QPS chỉ tăng 1.8x nhưng CPU app dưới 50% và thỉnh thoảng có 502 ở gateway. Chiều hôm trước mọi thứ vẫn bình thường.",
+          "question": "Endpoint này chậm theo từng tầng. Anh điều tra thế nào, và can thiệp ở tầng nào trước?",
+          "steps": [
+            "Kéo p50/p95/p99 theo phút của /api/orders trong khung 9h-11h, so với giờ thấp điểm, không nhìn trung bình",
+            "Lấy vài chục trace chậm nhất qua APM, tách thời gian từng tầng: gateway, app, DB, Redis, downstream",
+            "Đọc chỉ số nền song song: CPU throttle cgroup, GC pause, độ đầy thread pool và DB connection pool",
+            "Chốt 1-2 nghi ngờ bằng EXPLAIN câu query nóng hoặc profiling CPU/heap, không kết luận theo cảm tính",
+            "Can thiệp đúng tầng nghi ngờ, giữ nguyên các tầng khác để kết quả đo được quy về một nguyên nhân",
+            "Đo lại p99 đúng khung giờ 9h-11h ngày hôm sau, so cùng điều kiện traffic với baseline trước fix"
+          ],
+          "terms": [
+            "APM",
+            "Distributed tracing",
+            "Phân vị trung vị và phần trăm (p50/p95/p99)",
+            "cgroup limits, CPU throttling & noisy neighbor",
+            "Connection Pool Sizing"
+          ],
+          "good_signal": "Nêu đúng thứ tự phân vị trước, trace tách tầng sau, chỉ chốt nguyên nhân khi có bằng chứng từ EXPLAIN hoặc profiling, và đo lại đúng khung giờ.",
+          "red_flag": "Nhảy ngay vào tăng CPU hoặc thêm replica, hoặc so p99 giờ cao điểm với trung bình ngày rồi kết luận đã ổn."
+        },
+        {
+          "id": "performance-n-plus-one-query",
+          "scenario": "GET /api/posts trả 50 bài viết nhưng mỗi request chạm 1.250 câu query, p99 là 1.9s dù từng query chỉ 1-2ms. Giờ cao điểm 60 rps, database nhận hơn 70.000 query mỗi giây và CPU lên 80%.",
+          "question": "Anh xác nhận đây là N+1 bằng cách gì, và sửa ra sao mà không biến bài toán thành over-fetch?",
+          "steps": [
+            "Bật pg_stat_statements hoặc log query, đếm số câu thực thi và thời gian cộng dồn cho 1 request",
+            "So pattern query giữa các request, xác nhận chuỗi lặp quan hệ con đúng chữ ký N+1",
+            "Truy về code, xác định quan hệ nào đang lazy-load trong ORM và tạo ra vòng lặp query",
+            "Sửa bằng eager load theo danh sách id, hoặc gộp bằng batch query WHERE id IN (...)",
+            "Giới hạn cột select để include không kéo cột thừa, tránh đổi N+1 thành over-fetch bảng rộng",
+            "EXPLAIN lại câu batch, đo số query/request và p99 trước sau trên cùng kịch bản load"
+          ],
+          "terms": [
+            "N+1 query",
+            "Query batching (IN / bulk)",
+            "Lazy vs eager loading / lazy evaluation",
+            "Query plan / EXPLAIN"
+          ],
+          "good_signal": "Đo bằng chứng trước bằng số query thực tế mỗi request, sửa bằng batch hoặc eager load có giới hạn cột, và kiểm chứng plan bằng EXPLAIN.",
+          "red_flag": "Kết luận N+1 chỉ vì code có vòng lặp, hoặc che dấu vấn đề bằng cache thay vì gộp query."
+        },
+        {
+          "id": "performance-cache-workload-strategy",
+          "scenario": "Hai service dùng chung một Redis: catalog sản phẩm đổi giá 2 lần mỗi ngày nhưng TTL 1 giờ khiến khách thấy giá cũ, còn đơn hàng ghi liên tục thì bị cache-aside che mất đơn vừa tạo. Hit ratio 96% vẫn bị khiếu nại.",
+          "question": "Anh chọn chiến lược cache nào cho từng workload này, và tiêu chí phân loại là gì?",
+          "steps": [
+            "Phân loại theo tỉ lệ đọc/ghi và mức stale cho phép: catalog chấp nhận vài chục giây, đơn hàng là không",
+            "Catalog: cache-aside với TTL ngẫu nhiên theo khóa, SWR để vẫn phục vụ bản cũ khi đang làm mới",
+            "Đơn hàng: ghi xong invalidate ngay hoặc write-through, không để TTL dài che dữ liệu vừa ghi",
+            "Chống stampede khi TTL hết hàng loạt: jitter TTL theo khóa, negative caching cho khóa không tồn tại",
+            "Đo cache hit ratio riêng theo từng endpoint, một con số gộp che mất phân bố thật",
+            "Ghi lại lý do chọn strategy từng workload để người sau không vô thức quay về cache-aside everywhere"
+          ],
+          "terms": [
+            "Cache-aside (lazy loading)",
+            "Write-through",
+            "Cache invalidation",
+            "Cache stampede / thundering herd",
+            "Cache hit ratio",
+            "Stale-while-revalidate"
+          ],
+          "good_signal": "Phân loại workload theo yêu cầu stale trước khi chọn strategy, có kế hoạch chống stampede, và đo hit ratio theo từng endpoint thay vì một con số chung.",
+          "red_flag": "Một chiến lược duy nhất cho mọi endpoint, hoặc chọn theo độ quen thuộc với Redis thay vì theo mô hình ghi và độ stale chấp nhận được."
+        },
+        {
+          "id": "performance-deep-offset-pagination",
+          "scenario": "GET /api/products?page=20000&limit=50 mất 3.4s trong khi trang 1 chỉ 40ms, và bảng products đã có 8 triệu dòng. Client retry giờ cao điểm càng làm tình hình nặng thêm.",
+          "question": "Vì sao offset lớn chậm, và anh đổi sang cơ chế gì mà không phá contract với client đang dùng page number?",
+          "steps": [
+            "EXPLAIN ANALYZE câu trang 20000, xác nhận LIMIT 50 vẫn phải quét và loại bỏ khoảng 1 triệu dòng trước",
+            "Kiểm tra thứ tự sort created_at DESC, id đã có composite index khớp truy vấn dẫn xuất chưa",
+            "Chuyển sang keyset: WHERE (created_at, id) < (cursor...) thay cho OFFSET, tìm theo điểm xuất phát",
+            "Giữ contract: thêm tham số cursor song song page, client cũ ở trang nông vẫn chạy, deep page báo rõ",
+            "Đặt trần độ sâu trang cho đường offset còn lại để chặn trang 100000 quét nửa bảng",
+            "Đo p95 theo độ sâu trang trước và sau, trang 20000 phải về cùng bậc với trang 10"
+          ],
+          "terms": [
+            "Pagination cost & keyset pagination",
+            "Cursor / keyset pagination",
+            "Query plan / EXPLAIN",
+            "Index (B-tree, hash, composite)",
+            "Pagination (offset vs cursor/keyset)"
+          ],
+          "good_signal": "Chỉ ra được bằng EXPLAIN dòng nào bị quét rồi bỏ, rồi chuyển keyset có composite index kèm kế hoạch giữ backward-compat cho client cũ.",
+          "red_flag": "Đề nghị tăng limit hoặc cache cả trang rồi coi như xong, hoặc đổi thẳng URL mà không cân nhắc client đang dùng page number."
+        },
+        {
+          "id": "performance-cold-start-warmup",
+          "scenario": "Mỗi lần deploy hoặc autoscale, 8 pod mới mất 6-9s cho request đầu rồi mới về 120ms. Đúng 9h autoscale bật thêm 6 pod, hàng loạt client timeout và nhận 504, trong khi pod đã warm thì không ai phàn nàn.",
+          "question": "Anh đo và xử lý slow cold path này thế nào để user không phải trả giá cho lần gọi đầu tiên?",
+          "steps": [
+            "Tách request đầu sau khởi động bằng trace, liệt kê thành phần: JIT warmup, mở pool kết nối, nạp config, cache lạnh",
+            "Chưa nhận traffic thật: chạy request mẫu ở post-start, readiness chỉ pass khi warmup xong",
+            "Mở sẵn kết nối DB pool lúc khởi động và khi pool co lại, đừng để mỗi pod mới trả giá kết nối mới",
+            "Xử lý cache lạnh lúc scale ra: jitter TTL và negative cache để 8 pod cold cùng lúc không đàn ong vào Redis",
+            "Để autoscaling chạy trước giờ cao điểm theo lịch traffic, thay vì đợi CPU vượt ngưỡng mới scale",
+            "Đo time-to-ready và p99 của 30 giây đầu sau mỗi deploy, coi đây là tiêu chí gate"
+          ],
+          "terms": [
+            "JIT compilation & warmup",
+            "Connection pool vs kết nối mới",
+            "Health Check",
+            "Cache stampede / thundering herd",
+            "Autoscaling (Horizontal/Vertical)"
+          ],
+          "good_signal": "Tách được từng thành phần cold path bằng trace rồi bịt lần lượt bằng warmup, readiness gate và pre-warm pool, chốt bằng số time-to-ready.",
+          "red_flag": "Chỉ tăng timeout phía client hoặc coi chậm sau deploy là bình thường, không đo thành phần nào tốn thời gian."
+        },
+        {
+          "id": "performance-wrong-index-direction",
+          "scenario": "Bảng orders 40 triệu dòng, query WHERE status = 'PAID' ORDER BY created_at DESC có p99 2.8s. Dev đã thêm index (user_id) và index (status) riêng lẻ, EXPLAIN vẫn ra Sort trên 12 triệu dòng.",
+          "question": "Từ EXPLAIN này anh kết luận gì, và sửa index theo hướng nào?",
+          "steps": [
+            "Chạy EXPLAIN (ANALYZE, BUFFERS) trên query thật với data thật, đọc chỗ tốn: seq scan, index sai hay Sort",
+            "Phân tích truy vấn: status là điều kiện equality, created_at là sort, index đơn một cột không phục vụ đủ hai vế",
+            "Kiểm tra cardinality và thống kê planner, stats cũ khiến ước lượng số dòng sai và chọn plan tồi",
+            "Đổi sang composite index đúng thứ tự (status, created_at DESC), xét covering index nếu query chỉ cần vài cột",
+            "Thêm index qua migration an toàn, tránh giữ khóa ghi lâu trên bảng 40 triệu dòng giờ cao điểm",
+            "Chạy lại EXPLAIN xác nhận Index Scan đúng index, rồi quét idx_scan = 0 để dọn index thừa"
+          ],
+          "terms": [
+            "Index (B-tree, hash, composite)",
+            "Covering index",
+            "Query plan / EXPLAIN",
+            "Cardinality estimation",
+            "Primary key vs Secondary index"
+          ],
+          "good_signal": "Đọc plan và chỉ đúng chỗ tốn thời gian, giải thích được thứ tự cột trong composite index, kiểm chứng lại bằng EXPLAIN sau khi đổi.",
+          "red_flag": "Thêm index cho từng cột trong WHERE cho hết, hoặc drop index cũ ngay mà không xem plan và số dòng thật."
+        },
+        {
+          "id": "performance-rollback-bad-optimization",
+          "scenario": "Sáu tháng trước team tối ưu bằng cache-aside cho mọi endpoint với TTL 1 giờ, cộng thêm 4 index chồng nhau và một Redis lock toàn cục cho mọi ghi đơn. Giờ khách vẫn khiếu nại giá cũ, gỡ thì sợ p99 xấu đi.",
+          "question": "Anh tháo những can thiệp tối ưu sai này theo trình tự nào để không gây sự cố mới?",
+          "steps": [
+            "Liệt kê từng can thiệp đang chạy: cache nào, index nào, lock nào, ai thêm và vấn đề gốc ngày đó",
+            "Trước khi gỡ, dựng baseline 3 ngày: p99 theo endpoint, query/s, cache hit ratio, số cảnh báo",
+            "Gỡ sau feature flag, mỗi lần một thứ, cách nhau ít nhất một chu kỳ release để quy được trách nhiệm",
+            "Tắt cache có trật tự: hạ TTL về 0 rồi xóa key, tránh invalidate đột ngột khi traffic vẫn đang chạy",
+            "Drop index thừa chỉ khi idx_scan = 0 vài ngày liên tiếp và EXPLAIN không đổi sau khi bỏ",
+            "Mỗi lần gỡ đo lại so baseline, p99 xấu hơn ngưỡng đã chốt thì rollback đúng lần gỡ đó"
+          ],
+          "terms": [
+            "Cache invalidation",
+            "Cache hit ratio",
+            "Regression detection trong benchmark & A/B perf testing",
+            "Feature flag",
+            "Primary key vs Secondary index"
+          ],
+          "good_signal": "Có inventory lý do tồn tại từng can thiệp, baseline trước khi gỡ, gỡ từng bước sau feature flag và đo lại để rollback đúng chỗ.",
+          "red_flag": "Xóa sạch cache và index trong một pull request rồi chờ xem, hoặc gỡ mà không có baseline để so."
+        },
+        {
+          "id": "performance-measure-before-after",
+          "scenario": "Một PR được ghi nhanh hơn 3x dựa trên một curl chạy trên laptop dev, nhưng hai tuần sau p99 của chính endpoint đó tăng 40% và không ai gắn được với thay đổi nào. Đội chỉ có metric trung bình theo ngày.",
+          "question": "Anh thiết kế đo lường trước và sau một thay đổi hiệu năng thế nào để con số đáng tin?",
+          "steps": [
+            "Chốt SLI trước khi sửa: p95/p99 theo endpoint, số query/request, cache hit ratio, ghi vào PR",
+            "Benchmark cùng môi trường và dữ liệu, warmup đủ, lấy nhiều mẫu rồi đọc khoảng tin cậy thay vì một con số",
+            "Tránh bẫy microbenchmark hàm lẻ, đo ở mức endpoint với truy vấn và dữ liệu thật",
+            "Chạy benchmark trong CI mỗi PR chạm hot path, fail khi regression vượt ngưỡng đã chốt",
+            "Deploy canary 1-2%, so metric trước sau cùng khung giờ và cùng mix traffic trước khi roll-out cả cụm",
+            "Ghi số trước, số sau và điều kiện đo vào PR, không chốt bằng cảm giác nhanh hơn"
+          ],
+          "terms": [
+            "Warmup & statistical significance trong benchmark",
+            "Regression detection trong benchmark & A/B perf testing",
+            "Microbenchmark & bẫy của nó",
+            "Latency SLO",
+            "canary analysis"
+          ],
+          "good_signal": "Chốt SLI và ngưỡng trước khi sửa, benchmark có warmup và khoảng tin cậy, có regression gate trong CI, verify thêm bằng canary trước roll-out.",
+          "red_flag": "So một lần chạy duy nhất trên máy dev, hoặc chỉ nhìn trung bình theo ngày rồi tuyên bố cải tiến."
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Dữ liệu & Tính nhất quán",
+      "intro": "Bộ câu hỏi tình huống cho mảng dữ liệu: race condition, idempotency, migration không downtime, replication lag, xung đột ghi, schema change giữa traffic, backup restore và transaction scope. Thang đo chính: chẩn đoán bằng số liệu trước, can thiệp sau, và mọi cam kết phải đo được chứ không phải trên giấy.",
+      "questions": [
+        {
+          "id": "data-lost-update-topup",
+          "scenario": "Ví điện tử đang chạy, hai request nạp 500.000 VNĐ vào cùng một user đến gần như đồng thời. Số dư chỉ tăng một lần, support nhận 40 ticket kiểu nạp tiền mất trong một giờ. Code hiện tại là read balance, cộng, rồi write, không có khóa.",
+          "question": "Cậu tìm ra nguyên nhân và sửa thế nào để cả hai lần cộng đều phản ánh vào số dư?",
+          "steps": [
+            "Viết test tái hiện hai request song song vào cùng user, khẳng định một lần cộng bị mất",
+            "Xem query log và EXPLAIN, xác nhận luồng là read-modify-write không có SELECT FOR UPDATE hay version field",
+            "Kiểm tra isolation level của transaction hiện tại, xem row lock có được giữ hay không",
+            "Chuyển cộng tiền sang một câu UPDATE balance = balance + amount, bỏ hẳn bước đọc trước",
+            "Với luồng phải check số dư trước khi ghi, thêm SELECT FOR UPDATE hoặc version field so sánh trong WHERE",
+            "Viết regression test: 50 request cộng đồng thời, assert số dư cuối đúng tổng, chạy pass rồi mới merge"
+          ],
+          "terms": [
+            "Race condition",
+            "Lock & deadlock",
+            "Isolation level",
+            "Optimistic vs pessimistic locking"
+          ],
+          "good_signal": "Nhắc đến UPDATE nguyên tử tự tăng hoặc optimistic locking có version field, và dựng lại được kịch bản mất update cụ thể thay vì đoán chung chung.",
+          "red_flag": "Đề xuất retry request thêm một lần hoặc khóa cả bảng, không phân biệt được read-modify-write với update nguyên tử."
+        },
+        {
+          "id": "data-double-charge-idempotency",
+          "scenario": "API charge trừ tiền trực tiếp, client timeout sau 10s ở gateway rồi retry, hai request cùng đi vào. Một phần giao dịch bị trừ hai lần, một phần không ghi nhận. Tỉ lệ lỗi tăng từ 0,2% lên 2,1% sau khi mobile app thêm retry tự động, không có header chống trùng.",
+          "question": "Cậu thiết kế idempotency cho API charge thế nào để retry không tạo giao dịch trùng?",
+          "steps": [
+            "Thống kê giao dịch trùng theo request_id và client, xác nhận retry chính là nguồn gây double charge",
+            "Bắt buộc client gửi Idempotency-Key trong mọi request charge, ghi vào hợp đồng API",
+            "Tra cứu key trong bảng idempotency trước khi xử lý, key tồn tại thì trả về kết quả gốc",
+            "Lưu key và response trong cùng transaction với charge, unique constraint trên cặp key và client_id",
+            "Với luồng async, áp dụng dedup window hoặc inbox pattern ở consumer để chặn message trùng",
+            "Chạy kịch bản: cùng một key gọi 10 lần song song, assert đúng một giao dịch được tạo"
+          ],
+          "terms": [
+            "Idempotency key (Stripe pattern)",
+            "Dedup window",
+            "Exactly-once illusion vs at-least-once",
+            "Idempotent consumer",
+            "Idempotency & delivery semantics"
+          ],
+          "good_signal": "Trả lời đúng thứ tự: nhận key từ client, dedup ở lớp DB bằng unique constraint trong cùng transaction, rồi mới bàn đến retry policy và thời gian sống của key.",
+          "red_flag": "Dùng Redis chống trùng mà không bàn đến persistence, hoặc tin vào exactly-once của message queue mà không có cơ chế trong ứng dụng."
+        },
+        {
+          "id": "data-large-table-migration",
+          "scenario": "Bảng orders 1,2 tỷ dòng, khoảng 480GB đang chạy production, cần thêm cột lưu nguồn đơn hàng. Lần thử ALTER TABLE ADD COLUMN NOT NULL DEFAULT trước đó khóa ghi 18 phút, 5xx vọt lên 3%. Không được phép downtime.",
+          "question": "Cậu đưa cột này vào production thế nào mà không khóa bảng và không downtime?",
+          "steps": [
+            "Chạy migration ở staging trên bản sao dữ liệu production, đo thời gian và lock trước khi đụng production",
+            "Xác nhận lần ALTER cũ vì sao mất 18 phút: đọc lock monitoring, xem có phải do NOT NULL quét toàn bộ bảng",
+            "Thêm cột dạng nullable hoặc DEFAULT hằng số, đây là metadata change không rewrite 480GB",
+            "Backfill dữ liệu cũ theo batch 50k dòng chạy nền lúc thấp tải, theo dõi replication lag và lock",
+            "Đặt NOT NULL bằng ADD CONSTRAINT NOT VALID rồi VALIDATE CONSTRAINT, không khóa ghi trong lúc validate",
+            "Deploy code ghi giá trị cột mới qua feature flag, quan sát 5xx và p99 trước khi tắt cờ"
+          ],
+          "terms": [
+            "Expand-contract (database migration trong deploy)",
+            "Migration",
+            "Backward compatibility (schema)",
+            "Feature flag",
+            "Zero-downtime deploy (rolling deploy)"
+          ],
+          "good_signal": "Tách thành ba giai đoạn thêm nullable, backfill theo batch, đặt constraint validate, và xác nhận được bước nào thực sự khóa bảng trên DB đang dùng.",
+          "red_flag": "Khẳng định ALTER TABLE sẽ chạy nhanh mà không kiểm tra version DB và số liệu từ staging, hoặc gộp backfill và NOT NULL vào một câu lệnh."
+        },
+        {
+          "id": "data-replica-lag-read",
+          "scenario": "Lưu lượng đọc dồn về read replica, số dư và trạng thái đơn hàng vừa ghi vẫn đọc từ replica. Khi replica lag đạt 12s lúc peak, user thấy đơn vừa đặt biến mất rồi xuất hiện lại. Ticket kiểu đơn của tôi đâu tăng gấp 5 lần trong hai tuần.",
+          "question": "Đọc phải dữ liệu cũ từ replica thì cậu xử lý ở đâu: ứng dụng, route, hay hạ tầng?",
+          "steps": [
+            "Xác minh lag thật: so sánh vị trí WAL giữa primary và replica, ghi lag theo giờ peak",
+            "Phân loại request: đơn và số dư vừa ghi là read-after-write, xếp chúng vào luồng đọc primary",
+            "Với request cần dữ liệu mới, gắn dấu session hoặc tham số route tới primary ngay từ gateway",
+            "Đặt ngưỡng lag chấp nhận được: đọc replica khi lag dưới ngưỡng, fallback primary khi vượt",
+            "Theo dõi lag theo percentile và đặt alert, phân biệt lag do replica quá tải với lag do network",
+            "Viết e2e: ghi vào primary rồi đọc ngay qua luồng user, assert không thấy dữ liệu cũ"
+          ],
+          "terms": [
+            "Replication Lag Tolerance",
+            "Replication (master-slave / read replica)",
+            "BASE / Eventual consistency"
+          ],
+          "good_signal": "Phân biệt được read-after-write phải về primary và trường hợp chấp nhận eventual consistency, kèm ngưỡng lag cụ thể và cơ chế fallback.",
+          "red_flag": "Trả lời đọc replica có lag là bình thường cho cả luồng thanh toán, hoặc đề xuất sleep một khoảng thời gian cố định thay vì đo lag."
+        },
+        {
+          "id": "data-conflict-resolution-strategy",
+          "scenario": "Hai service cùng sửa bản ghi user qua API: service A ghi display_name, service B ghi avatar_url. Last-write-wins hiện tại làm mất dữ liệu của service ghi trước, 27 sự cố ghi đè trong tháng. Team cần chọn giữa optimistic locking và merge theo trường.",
+          "question": "Dựa vào đâu để cậu chọn giữa version field và merge theo trường, thay vì chọn bừa một pattern?",
+          "steps": [
+            "Liệt kê các trường mỗi service ghi, xác định trường nào hai service thực sự sửa đồng thời",
+            "Đo tần suất conflict thực tế: đếm số lần ghi đè theo user_id từ log hoặc theo dõi 409 nếu có ETag",
+            "Nếu conflict hiếm và client xử lý được lỗi, chọn optimistic concurrency: version field, trả 409 kèm payload mới nhất",
+            "Nếu hai service ghi trường tách biệt, chọn merge theo trường: UPDATE chỉ set các cột được gửi, báo conflict khi cùng trường",
+            "Định nghĩa chính sách bên nào thắng cho trường thật sự đụng nhau, ghi rõ vào hợp đồng API",
+            "Viết test hai luồng ghi cùng lúc vào cùng bản ghi, assert không trường nào bị mất ở cả hai cách"
+          ],
+          "terms": [
+            "Optimistic vs pessimistic locking",
+            "Optimistic concurrency (ETag/If-Match)",
+            "Race condition",
+            "Lock & deadlock"
+          ],
+          "good_signal": "Đưa quyết định dựa trên tần suất conflict đo được và trường nào thực sự đụng nhau, không tuyên bố một pattern đúng cho mọi trường hợp.",
+          "red_flag": "Chọn last-write-wins vì đơn giản mà không lượng hóa dữ liệu mất, hoặc bảo vệ cả hai pattern mà không có tiêu chí chọn."
+        },
+        {
+          "id": "data-unique-index-live-traffic",
+          "scenario": "Bảng users 300 triệu dòng có cột email varchar(255) chưa unique, một service mới cần email là duy nhất. Traffic 8.000 request/s ở giờ cao điểm, thêm unique index dự kiến nặng và trong dữ liệu hiện có khả năng trùng. Production không được dừng.",
+          "question": "Cậu áp unique constraint lên cột đang có dữ liệu trùng và live traffic như thế nào?",
+          "steps": [
+            "Đếm trùng trước: SELECT email GROUP BY HAVING count > 1, xác định số dòng vi phạm và mức độ",
+            "Bàn với chủ nghiệp vụ việc giữ hay gộp dòng trùng, viết migration chuẩn hóa dữ liệu trước khi áp ràng buộc",
+            "Tạo CREATE UNIQUE INDEX CONCURRENTLY, chạy nền không khóa ghi suốt quá trình scan",
+            "Gắn constraint bằng ADD CONSTRAINT UNIQUE USING INDEX vừa tạo, hoặc NOT VALID rồi VALIDATE CONSTRAINT",
+            "Deploy theo thứ tự expand-contract: code mới xử lý lỗi unique trước, index đến sau cùng",
+            "Theo dõi lock, replication lag và 5xx trong lúc index chạy, có phương án hủy và rollback"
+          ],
+          "terms": [
+            "Expand-contract (database migration trong deploy)",
+            "Backward compatibility (schema)",
+            "Migration",
+            "Row lock vs Table lock"
+          ],
+          "good_signal": "Biết CREATE UNIQUE INDEX CONCURRENTLY không khóa bảng, và dọn dữ liệu trùng trước khi gắn constraint theo đúng thứ tự.",
+          "red_flag": "Chạy ALTER TABLE trực tiếp lên bảng 300 triệu dòng mà không kiểm tra dữ liệu trùng, hoặc không biết CONCURRENTLY tồn tại."
+        },
+        {
+          "id": "data-backup-restore-test",
+          "scenario": "Backup hàng đêm chạy đều, status xanh suốt 14 tháng nhưng chưa ai restore thử. Tuần trước một dòng dữ liệu bị xóa nhầm, restore mất 9 tiếng và dữ liệu của 4 giờ cuối trước lúc backup không có. RPO đo được thực tế là 24 giờ thay vì con số trong tài liệu.",
+          "question": "Cậu tổ chức backup và restore thế nào để RPO/RTO cam kết là số thật, không phải số trên giấy?",
+          "steps": [
+            "Xác định cam kết thực: RPO, RTO và loại backup đang có, điểm phục hồi cuối của từng loại",
+            "Chạy restore test trên môi trường riêng: restore full rồi replay WAL, đo chính xác thời gian đạt điểm phục hồi",
+            "Kiểm tra dữ liệu sau restore bằng checksum hoặc đối chiếu số dòng, không dừng ở việc file mở được",
+            "Bổ sung WAL lưu liên tục hoặc tăng tần suất full backup để kéo RPO từ 24 giờ về mức cam kết",
+            "Đặt lịch restore drill hằng tháng tự động, alert khi restore vượt RTO hoặc phát hiện mất dữ liệu",
+            "Viết runbook restore đủ chi tiết để người trực làm được trong RTO, thử với người không phải tác giả"
+          ],
+          "terms": [
+            "RPO",
+            "RTO",
+            "WAL (Write-Ahead Logging)",
+            "Crash recovery",
+            "Checksum & silent corruption"
+          ],
+          "good_signal": "Nói RPO/RTO là số đo được từ restore drill thực, và biết replay WAL để thu ngắn điểm phục hồi chứ không chỉ tăng tần suất full backup.",
+          "red_flag": "Tự tin backup chạy ổn vì status xanh mà chưa từng restore thành công một lần, hoặc trả lời RPO bằng thời gian chạy job backup."
+        },
+        {
+          "id": "data-transaction-scope",
+          "scenario": "Service đặt hàng mở transaction, bên trong gọi 5 service qua HTTP và emit sự kiện vào Kafka rồi mới commit. p99 đặt hàng từ 180ms lên 4,2s sau khi thêm bước verify kho ngoài, row lock bị giữ lâu. Có ngày gặp 3 deadlock và transaction chạm timeout mặc định 5s.",
+          "question": "Cậu thu nhỏ transaction này về đúng phạm vi cần thiết bằng cách nào?",
+          "steps": [
+            "Đo thời gian từng bước trong transaction bằng tracing, xác định HTTP call và Kafka emit chiếm bao lâu",
+            "Tách các HTTP call ra ngoài transaction, chỉ giữ thao tác DB thực sự cần atomic bên trong",
+            "Chuyển emit Kafka ra sau commit qua transactional outbox, xóa dual-write và rút ngắn giữ lock",
+            "Xác định dòng bị giữ lock, đặt row lock gần cuối transaction để giảm thời gian khóa tối thiểu",
+            "Với flow nhiều service không chung DB, thay transaction bằng saga với bước bù trừ rõ ràng",
+            "Theo dõi lock duration, deadlock và timeout transaction qua metric, đặt alert ngưỡng"
+          ],
+          "terms": [
+            "Transaction & ACID",
+            "Transactional outbox",
+            "Saga",
+            "Row lock vs Table lock",
+            "Deadlock detection",
+            "BEGIN/COMMIT/ROLLBACK"
+          ],
+          "good_signal": "Phân biệt được thứ gì bắt buộc atomic với DB và thứ gì chỉ là side effect, nhắc đến outbox cho Kafka và saga cho flow cross-service.",
+          "red_flag": "Tăng timeout transaction lên 30s để cho chạy đủ, giữ nguyên HTTP call bên trong transaction, hoặc xem lock lâu là chuyện bình thường."
+        }
+      ]
+    },
+    {
+      "id": "distributed",
+      "title": "Phân tán & Đồng thời",
+      "intro": "Tám tình huống vận hành cho vòng phỏng vấn senior backend: oversell khi chạy hai instance, deadlock hai transaction, API công khai bị quét, message độc kẹt queue, partition làm hai nút cùng ghi, fan-out kéo lag, Redis lock gắn bừa, fraud-service chết kéo sập checkout. Mỗi câu gồm bối cảnh có số liệu, câu hỏi đúng giọng phỏng viên, quy trình điều tra đúng thứ tự, chẩn đoán trước rồi can thiệp sau, cùng tín hiệu tốt và tín hiệu xấu để chấm ứng viên. Ứng viên mạnh đi từ log, metric, trace đến nguyên nhân rồi mới sửa và đo lại; ứng viên yếu nhảy thẳng vào giải pháp quen thuộc.",
+      "questions": [
+        {
+          "id": "distributed-order-race-two-instances",
+          "scenario": "Sau khi thêm instance thứ ba, 0,7% đơn hàng trong 24 giờ bị trừ tồn kho hai lần, mỗi lần một units. Log cho thấy hai instance cùng gọi reserve stock cách nhau 40ms trên cùng một SKU, đúng lúc deployment kết thúc lúc 02:15.",
+          "question": "Hai instance xử lý trùng một đơn hàng như vậy, em điều tra từ đâu và sửa ở đâu để hết oversell?",
+          "steps": [
+            "Tra correlation ID của đơn oversell, đối chiếu log hai instance xem hai lần ghi DB cách nhau bao nhiêu.",
+            "Đọc truy vấn cập nhật tồn kho: WHERE qty >= ? có atomic hay đang read-modify-write rồi ghi chồng.",
+            "Chạy lại kịch bản trên staging với hai instance, đo tỉ lệ oversell theo QPS để tái hiện trước khi sửa.",
+            "Đổi ghi tồn kho thành conditional update nguyên tử, chỉ row affected = 1 mới tính giữ chỗ thành công.",
+            "Bọc reserve và trừ kho trong transaction, dùng pessimistic lock hoặc version field, retry khi conflict.",
+            "Kiểm tra idempotency key của API đặt hàng để client retry không tạo thêm đơn thứ hai.",
+            "Thêm regression test chạy song song hai instance và alert tỉ lệ oversell, theo dõi 7 ngày sau fix."
+          ],
+          "terms": [
+            "Race condition",
+            "Atomic operation & CAS",
+            "Lock & deadlock",
+            "Optimistic vs pessimistic locking",
+            "Idempotency"
+          ],
+          "good_signal": "Ứng viên chỉ ra truy vấn thiếu điều kiện atomic, đề xuất conditional update và đo tỉ lệ oversell trước khi bàn tới lock.",
+          "red_flag": "Nhảy ngay vào việc đóng một instance hoặc thêm sleep mà không truy được điểm tranh chấp từ log."
+        },
+        {
+          "id": "distributed-two-lock-deadlock",
+          "scenario": "Đúng 20:10 giờ cao điểm, payment service treo gần 4 phút, pg_stat_activity bắt 14 session đang chờ lock. Postgres ghi hai deadlock mỗi giờ từ lúc deploy 18:40, hai query chết lock là cặp UPDATE đảo thứ tự khóa; team từng tăng deadlock_timeout lên 30 giây thay vì sửa query.",
+          "question": "Hai transaction giữ lock của nhau và cùng chờ, em xác định cặp query nào gây deadlock bằng cách nào, rồi sửa triệt để ra sao?",
+          "steps": [
+            "Đọc log deadlock detected của Postgres, lấy hai PID và nội dung hai transaction đang chờ lock lẫn nhau.",
+            "EXPLAIN hai query, đối chiếu thứ tự acquire row lock giữa hai endpoint xem chỗ nào bị đảo.",
+            "Đếm deadlock theo giờ và đối chiếu với deploy 18:40 để xác nhận đây là regression mới.",
+            "Chuẩn hóa thứ tự lock: sort theo khóa chính trước khi update, hoặc gộp hai UPDATE thành một statement.",
+            "Rút ngắn thời gian giữ lock: chỉ lock row cần thiết, tách transaction dài đang giữ lock xuyên nhiều round-trip.",
+            "Bắt deadlock error ở application layer rồi retry có giới hạn, không để request treo đến hết timeout.",
+            "Thêm test hai transaction chạy song song, đặt alert khi deadlock rate vượt ngưỡng cho phép."
+          ],
+          "terms": [
+            "Deadlock",
+            "Deadlock detection",
+            "Lock & deadlock",
+            "Row lock vs Table lock",
+            "Retry"
+          ],
+          "good_signal": "Ứng viên đọc deadlock log để tìm đúng cặp query rồi chuẩn hóa thứ tự khóa, đồng thời nhắc tới retry sau khi transaction bị abort.",
+          "red_flag": "Đề xuất tăng deadlock_timeout, retry vô hạn, hoặc bỏ một endpoint để né deadlock."
+        },
+        {
+          "id": "distributed-public-api-rate-limit",
+          "scenario": "API tra cứu công khai bị một client quét 20.000 QPS từ dải proxy, p99 tăng từ 210ms lên 6,8s và 43% request của client khác nhận 503. Giới hạn hiện tại chỉ gắn theo IP ở nginx nên đổi IP proxy là vượt qua, trong khi origin chỉ có 4 node.",
+          "question": "Đang có kẻ quét API công khai, em thiết kế rate limit theo tầng nào và xử lý thế nào để client lành không bị vạ lây?",
+          "steps": [
+            "Group request theo API key và IP trong 15 phút gần nhất, tìm top talker và tỉ lệ 5xx theo từng nhóm.",
+            "Gắn quota theo API key ở gateway: tier free 10 req/s qua token bucket, IP chỉ giữ làm lớp phụ.",
+            "Trả 429 kèm Retry-After và header RateLimit để client tự điều chỉnh thay vì nhận 503 mơ hồ.",
+            "Cache kết quả của hot query để giảm tải origin trước khi phải hạn chế client hợp lệ.",
+            "Bật adaptive throttling khi CPU vượt 70% hoặc queue depth vượt ngưỡng, cắt tải dần theo mức ưu tiên.",
+            "Cảnh báo khi một key chiếm hơn 30% lưu lượng, tạm khóa key vi phạm có thời hạn và ghi lại lý do.",
+            "Theo dõi tỉ lệ 429 và tỉ lệ client bị chặn nhầm trong 48 giờ, nới quota nếu siết quá tay."
+          ],
+          "terms": [
+            "Rate Limiting (Adaptive)",
+            "Rate limit headers (429 + Retry-After + RateLimit)",
+            "Backpressure & rate shaping",
+            "Load Shedding"
+          ],
+          "good_signal": "Ứng viên tách quota theo API key, trả 429 đúng chuẩn kèm header, và biết khi nào chuyển sang cắt tải thay vì siết limit.",
+          "red_flag": "Chỉ biết gắn limit theo IP ở nginx rồi tuyên bố sự cố được xử lý."
+        },
+        {
+          "id": "distributed-poison-message-dlq",
+          "scenario": "Consumer RabbitMQ nhận một message thiếu trường amount, throw exception và bị broker redeliver liên tục. Trong 35 phút, lag của consumer group phình từ 2.000 lên 410.000 message, hàng nghìn message lành đứng sau bị kẹt theo vì một consumer duy nhất đang quay vòng trên message đỏ.",
+          "question": "Một message hỏng lặp vô hạn và chặn cả queue, em xử lý thế nào để dòng tin chạy lại mà không mất dữ liệu?",
+          "steps": [
+            "Xem delivery count của message đỏ và stack trace worker, xác định trường nào thiếu gây exception.",
+            "Định tuyến message vượt số lần redeliver sang dead letter queue để chặn vòng lặp vô hạn.",
+            "Đo lag và throughput hiện tại, ước lượng thời gian xả hết 410.000 message sau khi xử lý.",
+            "Sửa handler: validate payload trước khi vào business logic, lỗi schema thì ghi rõ nguyên nhân vào DLQ.",
+            "Replay nội dung DLQ sau khi fix parser, chạy qua idempotent consumer để không xử lý trùng.",
+            "Đặt cảnh báo cho redelivery count vượt 5 và DLQ depth tăng nhanh, gắn vào dashboard của consumer.",
+            "Thêm contract test cho schema giữa producer và consumer trước khi nhận lại traffic bình thường."
+          ],
+          "terms": [
+            "Poison message",
+            "Dead letter queue",
+            "Competing consumers",
+            "Idempotent consumer",
+            "FIFO / Message ordering"
+          ],
+          "good_signal": "Ứng viên tách message đỏ sang DLQ, sửa validate ở handler, replay có idempotency và thêm cảnh báo redelivery count.",
+          "red_flag": "Xóa message lỗi tay rồi restart consumer, không sửa handler và không nhắc tới DLQ."
+        },
+        {
+          "id": "distributed-split-brain-partition",
+          "scenario": "Switch mạng giữa hai region chết 90 giây, health check không detect kịp nên cả hai node cùng nhận write. Sau khi nối lại, 1.200 key có giá trị khác nhau giữa hai node, khoảng 8.000 session user bị logout oan vì token không còn khớp.",
+          "question": "Trong lúc partition hai nút cùng nhận write, em xử lý ngay lúc đó thế nào và thiết kế lại ra sao để không ghi hai chiều?",
+          "steps": [
+            "Dựng timeline từ log hai node theo đồng hồ, xác định cửa sổ partition và đếm số key ghi hai chiều.",
+            "Kiểm tra failover hiện tại: tách node có bầu leader theo majority quorum hay chỉ dựa vào health check ping.",
+            "Chọn node theo majority làm nguồn sự thật, node thiểu số ngừng nhận write ngay khi partition kết thúc.",
+            "Nhóm key xung đột theo loại, resolve thủ công nhóm có giá trị tiền tệ trước, nhóm còn lại theo last-writer.",
+            "Bật cơ chế chặn ghi hai chiều: chỉ primary được ghi, secondary từ chối ghi và báo lỗi rõ cho caller.",
+            "Rút ngắn thời gian detect failover và kiểm tra lại health check để lần sau tách node sớm hơn.",
+            "Chạy chaos test ngắt mạng 30 giây trên staging, đo thời gian detect và số record xung đột trước khi đóng incident."
+          ],
+          "terms": [
+            "Split brain",
+            "Split brain & quorum",
+            "Quorum Read/Write",
+            "Leader election",
+            "CAP theorem"
+          ],
+          "good_signal": "Ứng viên chốt nguồn sự thật theo quorum, ép node thiểu số ngừng ghi, và có kế hoạch resolve key xung đột thay vì chỉ phục hồi rồi thôi.",
+          "red_flag": "Tin rằng health check ping là đủ để hai nút không cùng nhận write, hoặc phục hồi bằng cách copy đè một bên mà không phân tích."
+        },
+        {
+          "id": "distributed-fanout-slow-subscriber",
+          "scenario": "Notification service fan-out một event ra 420 webhook subscriber bằng vòng lặp tuần tự, p95 của bước này là 9,4s. Sau khi thêm 80 subscriber mới, queue chính lag 45.000 message; một subscriber timeout 30 giây mỗi lần gọi kéo chậm cả batch vì chia sẻ chung một connection pool.",
+          "question": "Subscriber đông mà có kẻ chậm, em tái cấu trúc bước fan-out thế nào để hàng đợi chính không bị một subscriber kẹt kéo lùi?",
+          "steps": [
+            "Phân bố thời gian gửi theo từng subscriber, xác định nhóm 10% chậm chiếm phần lớn p95 của fan-out.",
+            "Tách fan-out khỏi consumer chính: mỗi event chỉ enqueue vào per-subscriber queue rồi trả về ngay.",
+            "Gửi song song với số worker giới hạn theo subscriber, gắn timeout riêng cho từng đích thay vì chung batch.",
+            "Dùng bounded queue per subscriber, subscriber chậm bị đo bằng lag metric riêng thay vì chặn cả nhóm.",
+            "Retry webhook fail với exponential backoff + jitter, sau N lần đưa sang DLQ cho người vận hành xử lý.",
+            "Theo dõi amplification factor nội bộ, đặt ngưỡng cảnh báo khi số request nội bộ trên mỗi event vượt mức.",
+            "Ưu tiên subscriber trả phí, nhóm còn lại batch theo lịch để đưa p95 fan-out về dưới 1s."
+          ],
+          "terms": [
+            "Fan-out / Fan-in",
+            "Fan-out & amplification factor",
+            "Queue Backpressure",
+            "Exponential backoff + jitter (client)",
+            "Webhook (delivery, retries, signature)"
+          ],
+          "good_signal": "Ứng viên tách fan-out ra per-subscriber queue với timeout và bounded queue riêng, nhắc tới amplification factor khi đo.",
+          "red_flag": "Đề xuất tăng timeout chung hoặc thêm server, trong đó subscriber chậm vẫn kéo cả batch."
+        },
+        {
+          "id": "distributed-lock-necessity",
+          "scenario": "Team bọc Redis lock quanh mọi endpoint ghi, mỗi request thêm 3 vòng round-trip tới Redis nên p99 tăng từ 95ms lên 310ms. Hôm qua lock hết hạn giữa chừng vì một GC pause 2,5 giây, hai job nền song song ghi đè kết quả nhau và làm sai báo cáo doanh thu một ngày.",
+          "question": "Những chỗ này có thật sự cần distributed lock không, em chốt tiêu chí dùng hay bỏ thế nào, và khi buộc phải dùng thì an toàn ra sao?",
+          "steps": [
+            "Liệt kê mọi nơi đang đặt lock, mỗi chỗ trả lời được: hai process chạy song song thì hỏng gì cụ thể.",
+            "Thử thay lock bằng thứ DB đã có: conditional update, unique constraint, hoặc advisory lock đúng phạm vi.",
+            "Giữ lock chỉ cho critical section ngắn, đo p99 thời gian giữ lock và so sánh với TTL đang khai.",
+            "Khi buộc dùng: SET NX PX kèm fencing token tăng dần, resource từ chối token cũ hơn token đã nhận.",
+            "Khi release phải kiểm tra token rồi mới delete, tránh xóa nhầm lock của process khác.",
+            "Xử lý GC pause và network stall: TTL phải lớn hơn thời gian giữ lock, kèm watchdog gia hạn khi cần.",
+            "Benchmark trước sau khi gỡ lock, thay bằng idempotency hoặc version field và ghi lại lý từng chỗ."
+          ],
+          "terms": [
+            "Distributed lock & fencing token",
+            "Redis lock (SET NX PX)",
+            "Advisory lock (Postgres)",
+            "Optimistic vs pessimistic locking",
+            "Idempotency"
+          ],
+          "good_signal": "Ứng viên hỏi hậu quả cụ thể trước khi quyết định có lock, so sánh conditional update với lock và nhắc fencing token khi lock hết hạn giữa chừng.",
+          "red_flag": "Coi distributed lock là mặc định an toàn, hoặc bỏ qua việc lock hết hạn giữa chừng khi process bị pause."
+        },
+        {
+          "id": "distributed-graceful-degradation-dependency-down",
+          "scenario": "Đúng 14:02, fraud-service chết hoàn toàn, trong khi bình thường p99 của nó là 180ms còn client đang để timeout 3s. Checkout p99 leo từ 400ms lên 11s, thread pool cạn sau 90 giây, 62% request checkout fail dù phần còn lại của hệ thống vẫn chạy tốt.",
+          "question": "Dependency quan trọng chết giữa giờ cao điểm, em xử lý sự cố ngay lúc đó thế nào và thiết kế lại ra sao để lần sau không sập theo?",
+          "steps": [
+            "Xác định blast radius qua trace: request nào gọi fraud-service, tỉ lệ lỗi và latency theo từng endpoint.",
+            "Bật circuit breaker để fail fast, trả degraded response thay vì giữ thread chờ timeout 3s.",
+            "Chuyển kiểm tra gian lận sang bộ rule chạy offline, đánh dấu giao dịch bất thường chờ review thủ công.",
+            "Cắt tải các endpoint không critical, giữ checkout chạy ở chế độ degraded có kiểm soát thay vì từ chối hết.",
+            "Theo dõi thread pool và connection pool hồi phục, gỡ cảnh báo khi các metric về ngưỡng bình thường.",
+            "Thiết kế lại: timeout 180ms, retry budget, bulkhead pool riêng cho dependency dễ hỏng, health check endpoint.",
+            "Viết postmortem có timeline và nguyên nhân, thêm chaos test kill fraud-service vào staging mỗi quý."
+          ],
+          "terms": [
+            "Graceful Degradation",
+            "Circuit Breaker",
+            "Timeout",
+            "Bulkhead",
+            "Cascading Failures"
+          ],
+          "good_signal": "Ứng viên fail fast bằng circuit breaker, giữ checkout ở degraded mode, và chỉ cắt tải sau khi đã cô lập dependency chết.",
+          "red_flag": "Tăng timeout của toàn bộ service rồi chờ dependency hồi phục, coi 62% checkout fail là chuyện của bên thứ ba."
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Bảo mật & Xác thực",
+      "intro": "Tám tình huống bảo mật cho vòng phỏng vấn senior backend: token lọt vào log tập trung, IDOR phát hiện khi review code, SSRF từ URL do người dùng nhập, secret production nằm trong CI, chọn session hay JWT cho mobile, CORS cấu hình sai mở toang, SQL injection lọt qua raw query trong ORM, và xoay credential không downtime. Mỗi câu có thứ tự điều tra trước can thiệp, thuật ngữ đối chiếu glossary, cùng tín hiệu tốt và tín hiệu xấu để chấm điểm.",
+      "questions": [
+        {
+          "id": "security-token-in-logs",
+          "level": "intermediate",
+          "scenario": "API gateway ghi cả header Authorization chứa Bearer token vào log request, đẩy về ELK tập trung với retention 30 ngày cho 12 người có quyền đọc. Đợt rà soát quyền truy cập phát hiện token của một khách hàng doanh nghiệp vẫn nằm nguyên văn trong log cũ.",
+          "question": "Anh xử lý từ lúc phát hiện đến khi chốt xong, và sửa gì ở tầng ghi log để việc này không tái diễn?",
+          "steps": [
+            "Xác định phạm vi rò rỉ: query ELK đếm mọi request có header Authorization trong 30 ngày, tách theo service và khách hàng",
+            "Kiểm tra token còn hiệu lực hay không: đọc exp và jti, đối chiếu các phiên đang hoạt động của tài khoản đó",
+            "Thu hồi trước khi dọn dẹp: revoke refresh token, chấm dứt phiên liên quan, buộc đăng nhập lại các thiết bị bị ảnh hưởng",
+            "Làm sạch log đã lưu: chạy job redact che đúng pattern Bearer trong index cũ, không xóa cả index để giữ dấu vết điều tra",
+            "Sửa tầng ghi log: redaction tại gateway và app, loại các field Set-Cookie, Authorization, password trước khi serialize",
+            "Thêm test hồi quy: bản ghi log mẫu chứa token phải bị che, chạy trong CI như điều kiện chặn merge"
+          ],
+          "terms": [
+            "token",
+            "JWT",
+            "Structured logging",
+            "Log aggregation & ELK Stack",
+            "Refresh token rotation & revocation"
+          ],
+          "good_signal": "Xác định phạm vi rò rỉ bằng truy vấn log trước, thu hồi token còn hiệu lực, rồi mới sửa tầng ghi log bằng redaction kèm test chặn tái diễn.",
+          "red_flag": "Xóa file log trên vài máy rồi đổi mật khẩu người dùng, không đụng tới tầng ghi log nên token tiếp tục lọt ở mỗi request."
+        },
+        {
+          "id": "security-idor-code-review",
+          "level": "intermediate",
+          "scenario": "PR cho endpoint GET /api/invoices/{id} lấy hóa đơn theo id rồi trả về thẳng, không đối chiếu chủ sở hữu. Rà tiếp trong repo phát hiện cùng pattern ở 12 endpoint khác đang chạy production cho 4 tenant.",
+          "question": "Anh đi từ endpoint này tới 12 endpoint còn lại thế nào, và bịt lỗ ở đâu để không phải sửa tay từng chỗ?",
+          "steps": [
+            "Tái hiện có kiểm soát: gọi endpoint bằng tài khoản tenant A với id hóa đơn của tenant B, ghi lại request và response",
+            "Khoanh vùng toàn repo: grep các handler nhận id trực tiếp từ path hoặc query mà không có điều kiện chủ sở hữu",
+            "Đo mức phơi nhiễm: đối chiếu access log tìm truy cập chéo tenant trong 30 ngày, xác định endpoint nào đã bị chạm",
+            "Sửa ở tầng dùng chung: đưa kiểm tra chủ sở hữu vào authorization layer, không vá rải rác từng handler",
+            "Viết test hồi quy cho cả nhóm endpoint, xác nhận test fail trước khi fix rồi mới xanh",
+            "Thêm gate tự động: rule kiểm tra handler truy vấn theo id mà thiếu điều kiện tenant, chạy trong CI"
+          ],
+          "terms": [
+            "IDOR",
+            "authentication vs authorization",
+            "code review",
+            "OWASP Top 10"
+          ],
+          "good_signal": "Tái hiện truy cập chéo tenant trước, khoanh vùng toàn repo, sửa ở tầng authorization dùng chung và khóa pattern bằng test hồi quy.",
+          "red_flag": "Sửa đúng endpoint trong PR rồi merge, không rà các chỗ khác và không có test nào chặn pattern tái xuất."
+        },
+        {
+          "id": "security-ssrf-user-url",
+          "level": "advanced",
+          "scenario": "Tính năng import ảnh nhận URL do người dùng nhập và server tự tải về. Alert của cloud provider báo instance đã gọi metadata endpoint 400 lần trong một giờ; log ghi URL dạng http://169.254.169.254/latest/meta-data/iam/security-credentials/.",
+          "question": "Anh xác minh SSRF trước khi attacker lấy được credential, rồi bịt nó ở tầng nào?",
+          "steps": [
+            "Xác nhận từ log egress: tìm request tới 169.254.169.254 và loopback, dựng lại input người dùng đã nhập",
+            "Chặn hướng khai thác ngay: khóa tạm tính năng fetch nếu chưa có allowlist, không chờ bản fix hoàn chỉnh",
+            "Xoay và thu hẹp credential instance: thu hồi role hiện tại, gắn lại quyền tối thiểu để giảm thiệt hại nếu còn lọt",
+            "Bịt gốc ở tầng fetch: allowlist domain, chặn dải IP nội bộ và redirect, resolve DNS một lần rồi kiểm tra lại trước khi connect",
+            "Bọc egress qua proxy kiểm soát để mọi request ra ngoài đi qua một cửa có luật",
+            "Thêm ca test SSRF vào suite: URL tới loopback, metadata, DNS rebinding đều phải bị từ chối"
+          ],
+          "terms": [
+            "SSRF",
+            "zero trust",
+            "DNS resolution chain",
+            "IP",
+            "Proxy (forward/reverse)"
+          ],
+          "good_signal": "Xác nhận qua log egress, chặn hướng khai thác ngay, xoay credential bị lộ rồi bịt gốc bằng allowlist, chặn IP nội bộ và kiểm tra lại sau khi resolve DNS.",
+          "red_flag": "Thêm đoạn chặn chuỗi chứa 169.254 trong code rồi coi là xong, bỏ qua redirect và DNS rebinding."
+        },
+        {
+          "id": "security-secret-in-ci",
+          "level": "intermediate",
+          "scenario": "Log build trên CI in ra cấu hình có DB_PASSWORD production đặt qua biến môi trường; log lưu 90 ngày và mọi người trong org đều đọc được. Một người ngoài team đã tải log của lần build tháng trước.",
+          "question": "Anh chuyển toàn bộ secret khỏi CI sang quản lý tập trung thế nào mà pipeline không dừng?",
+          "steps": [
+            "Liệt kê toàn bộ secret đang nằm trong CI config, biến môi trường và log build để biết chính xác cái gì đã lộ",
+            "Xoay ngay các secret từng xuất hiện trong log: coi như đã lộ, đổi DB password và API key trước mọi việc khác",
+            "Che log build: mask biến nhạy cảm ở tầng runner, tắt in cấu hình, xử lý log cũ còn chứa giá trị",
+            "Đưa secret vào secret manager, CI chỉ nhận tham chiếu lúc chạy thay vì giá trị nằm trong repo hay config",
+            "Phân quyền đọc theo job và theo môi trường, tách quyền truy cập production khỏi pipeline build thường",
+            "Gắn scanner chặn commit chứa secret và kiểm tra định kỳ để secret không quay lại mã nguồn"
+          ],
+          "terms": [
+            "secrets management",
+            "Secrets in runtime",
+            "Continuous Integration (CI)",
+            "12-Factor App",
+            "least privilege"
+          ],
+          "good_signal": "Khoanh vùng secret đã lộ, xoay trước khi dọn dẹp, đưa vào secret manager và giới hạn quyền đọc theo từng job.",
+          "red_flag": "Chỉ xóa giá trị khỏi file cấu hình và xóa log, giữ nguyên credential cũ, không kiểm tra ai đã đọc được."
+        },
+        {
+          "id": "security-session-vs-jwt-mobile",
+          "level": "advanced",
+          "scenario": "App mobile dùng JWT hạn 24 giờ, không có cơ chế thu hồi trước hạn; tuần trước 3 máy của nhân viên bị mất và team an toàn yêu cầu khóa phiên ngay. API gateway chỉ xác minh chữ ký JWT, không có session store.",
+          "question": "Anh chọn session hay JWT cho mobile, dựa trên tiêu chí nào, và triển khai thu hồi ra sao?",
+          "steps": [
+            "Chốt yêu cầu trước: cần thu hồi tức thời trên thiết bị nào, trong bao lâu, có bắt buộc với mọi phiên không",
+            "Cân chi phí hai phương án: session store phải scale và thêm độ trễ, JWT cần tầng thu hồi bổ sung",
+            "Chọn access token TTL ngắn, refresh token rotation giữ trạng thái phía server để có điểm revoke",
+            "Bắt buộc PKCE cho luồng login mobile, không nhúng client secret trong app, gắn token với thiết bị",
+            "Triển khai revoke: đưa jti vào danh sách chặn tới hạn exp, xóa refresh token của thiết bị bị mất",
+            "Đo lại: xác nhận thiết bị mất bị chặn trong vòng một chu kỳ refresh, theo dõi tỉ lệ refresh lỗi sau rollout"
+          ],
+          "terms": [
+            "Opaque token vs JWT (revocation trade-off)",
+            "session-based auth",
+            "PKCE",
+            "Statelessness",
+            "refresh token rotation"
+          ],
+          "good_signal": "Chốt yêu cầu thu hồi trước, chọn access token TTL ngắn kèm refresh rotation giữ trạng thái server-side, có đường revoke cụ thể và đo lại sau rollout.",
+          "red_flag": "Đổi hẳn sang session store cho mọi client vì cho là bảo mật hơn, không tính chi phí vận hành và không có bước kiểm chứng thu hồi."
+        },
+        {
+          "id": "security-cors-misconfig",
+          "level": "intermediate",
+          "scenario": "API production phản chiếu Origin của request vào Access-Control-Allow-Origin kèm Allow-Credentials: true, thêm từ đợt mở cho subdomain riêng của khách hàng. Access log tuần này ghi 5 domain lạ đã gọi endpoint đọc dữ liệu.",
+          "question": "Anh siết CORS thế nào, và kiểm tra gì để chắc chắn cấu hình không mở lại?",
+          "steps": [
+            "Xác minh khai thác: từ một origin lạ gửi request kèm cookie phiên tới endpoint đọc dữ liệu, xem response có đọc được không",
+            "Rà access log 7 ngày: đếm các Origin bất thường đã gọi API, phân loại domain hợp lệ và domain cần chặn",
+            "Siết cấu hình: allowlist origin cụ thể, bỏ phản chiếu Origin, không dùng wildcard chung với credentials",
+            "Kiểm tra cache: set Vary đúng để response CORS không bị dùng chung giữa các origin",
+            "Rà tầng cookie và CSRF: set SameSite cho cookie phiên, xác nhận endpoint ghi vẫn yêu cầu CSRF token",
+            "Thêm test: suite từ chối origin lạ và kiểm tra preflight trả đúng allowlist trước khi deploy"
+          ],
+          "terms": [
+            "CORS",
+            "CORS preflight (OPTIONS)",
+            "CORS vs CSRF",
+            "Vary header",
+            "SameSite cookie"
+          ],
+          "good_signal": "Xác minh khai thác bằng origin lạ trước, siết về allowlist cụ thể, set Vary đúng và rà luôn SameSite cho cookie phiên.",
+          "red_flag": "Đổi sang allowlist bằng một điều kiện if theo host chứa chuỗi khách hàng, không kiểm tra cache và cookie phiên."
+        },
+        {
+          "id": "security-sqli-raw-query",
+          "level": "intermediate",
+          "scenario": "Endpoint tìm kiếm nối tham số sort vào raw query qua $queryRawUnsafe; pentest chèn được ' OR 1=1-- và đọc sang bảng khác. Cả team trước giờ tin ORM che hết đường vào nên chưa từng rà raw query.",
+          "question": "Anh vá điểm nóng và rà các raw query còn lại thế nào trước khi có người khai thác thật?",
+          "steps": [
+            "Tái hiện ở staging có kiểm soát: chạy lại payload của pentest, ghi request và câu query để chắc chắn đường vào",
+            "Bật log câu query có tham số trên môi trường bị ảnh hưởng để biết input nào chạm tới raw query",
+            "Vá điểm nóng: bỏ nối chuỗi, chuyển sang tham số hóa hoặc whitelist giá trị cho sort và filter",
+            "Rà toàn repo: grep queryRawUnsafe, executeRawUnsafe và mọi SQL ghép từ chuỗi, xếp theo mức phơi nhiễm",
+            "Thêm gate: rule static analysis chặn raw query dựng từ input, bắt buộc review riêng cho mọi raw query",
+            "Giảm thiệt hại nếu còn lọt: thu quyền DB user về đúng bảng cần thiết, không dùng tài khoản toàn quyền cho app"
+          ],
+          "terms": [
+            "SQL injection",
+            "ORM",
+            "Slow query triage (slow query log, pg_stat_statements)",
+            "static analysis",
+            "least privilege"
+          ],
+          "good_signal": "Tái hiện ở staging, vá bằng tham số hóa hoặc whitelist, rà hết raw query còn lại và thêm gate chặn tái diễn.",
+          "red_flag": "Vá đúng câu query bị pentest báo rồi dừng, không rà chỗ khác, vẫn tin ORM che hết mọi đường dữ liệu vào."
+        },
+        {
+          "id": "security-credential-rotation",
+          "level": "advanced",
+          "scenario": "Credential truy cập DB production đã 14 tháng không xoay, chính sách mới bắt buộc 90 ngày một lần. Hệ thống 60 pod và 3 job batch dùng chung credential, deploy bằng rolling update.",
+          "question": "Anh xoay credential ra sao để không downtime, và tự động hóa nó thế nào cho lần sau?",
+          "steps": [
+            "Khoanh vùng người dùng credential: quét config, env, cron, script để biết chính xác cái gì gãy khi đổi",
+            "Tạo credential mới song song, còn hiệu lực bên cạnh credential cũ để có đường lùi trong suốt quá trình xoay",
+            "Rollout theo nhóm nhỏ trước: đổi một vài pod qua rolling, theo dõi lỗi xác thực và connection pool trước khi đổi toàn bộ",
+            "Xác nhận không còn kết nối dùng credential cũ: đối chiếu log xác thực và audit của DB trong grace period",
+            "Thu hồi credential cũ sau khi hết grace period, giữ quy trình lùi lại được trong cửa sổ rollout",
+            "Tự động hóa: secret manager phát credential động TTL ngắn, xoay theo lịch thay vì đổi tay"
+          ],
+          "terms": [
+            "key rotation",
+            "secrets management",
+            "Zero-downtime deploy (rolling deploy)",
+            "Connection pool",
+            "Drain Connections"
+          ],
+          "good_signal": "Liệt kê hết nơi dùng credential, tạo mới song song, rollout theo nhóm có theo dõi lỗi xác thực rồi thu hồi cái cũ sau grace period.",
+          "red_flag": "Đổi mật khẩu DB một lần cho toàn bộ pod vào giờ thấp điểm rồi restart, không có đường lùi và không kiểm tra ai còn dùng."
+        }
+      ]
+    },
+    {
+      "id": "reliability",
+      "title": "Vận hành & Ứng phó sự cố",
+      "intro": "8 câu phỏng vấn tình huống cho vòng senior backend: mở pager lúc 3h sáng, chọn giữa rollback và fix-forward, cứu service bị OOM killer, cắt đàn ong khi hệ thống phục hồi, chẩn đoán khi thiếu tín hiệu, xử lý sự cố phát sinh từ config, điều phối postmortem không đổ lỗi, và dọn hệ thống cảnh báo đang làm on-call mất cảnh giác. Mỗi câu có thứ tự điều tra trước can thiệp, thuật ngữ đối chiếu glossary, cùng tín hiệu tốt và tín hiệu xấu để chấm điểm.",
+      "questions": [
+        {
+          "id": "reliability-oncall-3am",
+          "scenario": "03:12 pager reng: checkout-service 5xx tăng từ 0,1% lên 6,2% trong 3 phút, p99 từ 240ms lên 6,8s, các service khác vẫn xanh. Bạn là on-call duy nhất lúc đó.",
+          "question": "10 phút đầu của bạn trông ra sao, và mốc nào để bạn escalate thay vì tự xử lý?",
+          "steps": [
+            "Xác nhận cảnh báo là thật: mở RED của checkout, số 5xx ở LB, trạng thái downstream, loại alert flaky.",
+            "Chốt mốc thời gian: 5xx đổi từ lúc nào, có trùng deploy, migration hay job định kỳ trong đêm.",
+            "Lấy 3-5 request lỗi theo correlation ID, đối chiếu log từng tầng để tìm đúng điểm gãy.",
+            "Can thiệp mitigate theo bằng chứng: rollback, tắt feature flag hoặc tăng replica, không đoán nguyên nhân.",
+            "Báo trạng thái lên kênh sự cố mỗi 10 phút: ảnh hưởng thực, action đã làm, bước tiếp theo.",
+            "Quá 15 phút chưa locate được hoặc lỗi vượt 5% request thì escalate, không kéo thêm.",
+            "Khi metric về baseline, giám sát 15 phút rồi gom dữ kiện cho postmortem."
+          ],
+          "terms": [
+            "On-call rotation",
+            "Incident Management",
+            "Four Golden Signals",
+            "Metrics, Logs, Traces Correlation"
+          ],
+          "good_signal": "Nghe thấy thứ tự: xác nhận alert, khoanh vùng bằng metric, can thiệp có kiểm soát, ngưỡng escalate định lượng.",
+          "red_flag": "Vào thẳng restart service hoặc restart cả cụm, không đo ảnh hưởng thật và không ai được báo."
+        },
+        {
+          "id": "reliability-rollback-vs-fix-forward",
+          "scenario": "14:32 deploy version 2.14.0, bốn phút sau p99 checkout bật từ 180ms lên 4,2s và 5xx chạm 3,1%. Diff chỉ có một query mới và đổi timeout 2s thành 500ms, đội release đang chờ quyết định.",
+          "question": "Rollback hay fix-forward? Tiêu chí quyết định của bạn là gì và làm ngay trong 5 phút đầu?",
+          "steps": [
+            "Xác nhận thủ phạm là 2.14.0 bằng metric theo nhãn version, không tin theo thứ tự deploy.",
+            "Định lượng ảnh hưởng: tỉ lệ request lỗi, nhóm khách nào bị, hai replica nào còn chạy bản cũ.",
+            "Chọn rollback khi nguyên nhân chưa rõ: một lệnh revert, rủi ro thấp hơn sửa giữa lúc cháy.",
+            "Chạy rollback, chờ traffic cạn hết bản mới, verify p99 về 180ms và 5xx dưới 0,5%.",
+            "Chỉ fix-forward khi nguyên nhân đã chốt và bản fix chạy qua staging, phải kèm canary.",
+            "Nếu rollback va vào migration chưa hoàn tác, tắt feature flag của query mới trước đã.",
+            "Chốt sự cố, chép mốc thời gian từng bước làm đầu vào cho postmortem."
+          ],
+          "terms": [
+            "Rollback",
+            "Canary deploy",
+            "Feature flag",
+            "Zero-downtime deploy (rolling deploy)"
+          ],
+          "good_signal": "Nghe thấy tiêu chí quyết định dựa trên độ rõ của nguyên nhân và blast radius, không phải sở thích cá nhân.",
+          "red_flag": "Trả lời cứng 'luôn rollback' hoặc 'luôn fix-forward' mà không nêu điều kiện, thời gian, rủi ro của từng hướng."
+        },
+        {
+          "id": "reliability-oom-killer",
+          "scenario": "Payment-worker bị OOM killer giết lần thứ tư trong 90 phút, mỗi lần sống khoảng 20 phút. RSS chạm 2,1GB khi limit pod 2GB, full GC xong heap vẫn không về dưới 1,6GB.",
+          "question": "Bạn kết luận đây là leak hay tăng tải, và can thiệp gì trước khi nâng limit?",
+          "steps": [
+            "Xác nhận cái chết: exit code 137, dòng oom-kill trong dmesg hoặc kubectl describe, không đổ cho crash app.",
+            "So curve RSS với request rate: RSS phình độc lập với traffic là leak, không phải đang chịu tải.",
+            "Giữ hiện trường: chụp heap / profile ở lần sống gần nhất trước khi restart xóa bằng chứng.",
+            "Rà thay đổi gần đây: version mới, dependency mới, cache giữ object không TTL trong worker.",
+            "Vá tạm bằng nâng limit hoặc thêm replica giữ traffic, ghi rõ đây là vá chứ chưa phải fix.",
+            "Sửa gốc trong code, thêm cảnh báo theo số restart và trend RSS thay vì chờ 5xx từ user.",
+            "Verify 24 giờ không restart lặp, rồi trả limit về chuẩn trong một change request riêng."
+          ],
+          "terms": [
+            "Page fault, swap & OOM killer",
+            "cgroup limits, CPU throttling & noisy neighbor",
+            "Memory allocation & GC churn",
+            "Stop-the-world & GC pause"
+          ],
+          "good_signal": "Nghe thấy phân biệt leak với tải qua quan hệ RSS-traffic, giữ bằng chứng trước restart, cảnh báo theo restart count.",
+          "red_flag": "Đề xuất tăng limit rồi restart là xong, không giải thích vì sao heap không về baseline sau full GC."
+        },
+        {
+          "id": "reliability-thundering-herd-recovery",
+          "scenario": "02:40 Redis failover khiến 700k key mất đồng loạt. Trong 30 giây MySQL nhận 12k QPS thay vì 800, CPU chạm 95%, query xếp hàng và client retry dồn sau mỗi timeout 5s.",
+          "question": "Thứ tự can thiệp của bạn là gì để cắt đàn ong mà không chặn luôn người dùng?",
+          "steps": [
+            "Nhận diện pattern trước: miss đồng loạt trên hot key cộng retry dồn là cache stampede, không phải traffic thật.",
+            "Cắt nguồn dồn ở nhánh rebuild bằng rate limit hoặc load shedding, giữ nhánh đọc còn phục vụ stale.",
+            "Cho phép serve stale trong lúc rebuild, bật negative caching cho key không tồn tại.",
+            "Ép client retry backoff mũ kèm jitter, thêm circuit breaker chặn vòng gọi downstream vô hạn.",
+            "Nới pool MySQL tạm thời, kill query đang phình để CPU về dưới 70%.",
+            "Xác nhận hồi phục: QPS downstream về 800 và p99 ổn định liên tục 30 giây.",
+            "Sau sự cố, dựng stampede protection ở tầng cache-aside, alert theo cache hit ratio."
+          ],
+          "terms": [
+            "Cache stampede / thundering herd",
+            "Thundering Herd",
+            "Exponential backoff + jitter (client)",
+            "Circuit Breaker",
+            "Load Shedding"
+          ],
+          "good_signal": "Nghe thấy chẩn đoán pattern trước, cắt tải có kiểm soát bảo vệ tầng dưới, biện pháp chống lặp cả phía client lẫn cache.",
+          "red_flag": "Trả lời 'tăng capacity MySQL rồi tính sau', để nguyên retry không jitter và đám rebuild đồng loạt chạy tiếp."
+        },
+        {
+          "id": "reliability-missing-signals",
+          "scenario": "Cuối tuần trước có sự cố 40 phút không chẩn đoán nổi: alert chỉ ghi 'payment API 5xx cao', log mỗi service format riêng, không có correlation ID, metric không gắn nhãn service. Dashboard lớp gateway vẫn xanh.",
+          "question": "Anh dựng lại quy trình chẩn đoán và bổ sung tín hiệu gì để sự cố kiểu này không tái diễn?",
+          "steps": [
+            "Thu các mảnh còn sót: access log LB, slow query log, chỉ số replica, timeline deploy để dựng diễn biến.",
+            "Chốt câu hỏi trước khi mua công cụ: lỗi ở tầng nào, đo ở đâu, vì sao giám sát không thấy.",
+            "Bắt buộc correlation ID xuyên HTTP và message, mọi log line là JSON kèm trace_id, service, version.",
+            "Gắn exemplar lên metric để nhảy từ spike p99 sang đúng span thay vì đoán theo dashboard tổng.",
+            "Chuẩn hóa metric RED từng service thay vì chỉ 5xx ở gateway, kiểm soát cardinality khi thêm nhãn.",
+            "Chạy drill với kịch bản đã biết, đặt mục tiêu thời gian chẩn đoán dưới 5 phút cho lần sau.",
+            "Đưa yêu cầu tín hiệu quan sát vào definition of done của mọi feature mới."
+          ],
+          "terms": [
+            "Observability",
+            "Structured logging",
+            "Context propagation & Correlation ID",
+            "Metrics, Logs, Traces Correlation",
+            "Exemplars"
+          ],
+          "good_signal": "Nghe thấy nối ba tín hiệu qua correlation ID, và quy trình drill đo được thời gian chẩn đoán thay vì chỉ mua tool.",
+          "red_flag": "Trả lời bằng việc mua thêm dashboard hoặc APM rồi yên tâm, không đụng tới log format và truyền ngữ cảnh."
+        },
+        {
+          "id": "reliability-config-incident",
+          "scenario": "09:14 một kỹ sư sửa config map hạ pool của payment-service từ 50 xuống 10 để 'giảm tải DB', push thẳng production không qua review. Chín phút sau 31% request thanh toán timeout vì pool hết slot.",
+          "question": "Bạn xử lý theo thứ tự nào, và sửa gì ở quy trình để không ai push thẳng config lên production nữa?",
+          "steps": [
+            "Xác nhận change gần nhất qua lịch sử config repo và audit log, đối chiếu mốc 09:14 với curve timeout.",
+            "Revert config về giá trị cũ ngay, verify pool hết chờ và tỉ lệ timeout về dưới 0,1%.",
+            "Rà 24 giờ trước trong config repo tìm change tương tự đã áp cho service khác.",
+            "Chặn tạm quyền push thẳng lên production, mọi thay đổi bắt buộc qua pull request có review.",
+            "Chuyển config sang GitOps có drift detection, áp dụng kiểu canary thay vì bung toàn service.",
+            "Thêm alert theo pool wait time và SLO của payment, không chỉ nhìn mỗi CPU.",
+            "Ghi vào postmortem: giá trị cũ, mới, mốc thời gian, lỗ hổng để change lọt thẳng production."
+          ],
+          "terms": [
+            "Config management",
+            "GitOps",
+            "Environment (dev / staging / prod)",
+            "Alerting (threshold alert)",
+            "SLO"
+          ],
+          "good_signal": "Nghe thấy thứ tự đảo ngược đúng: điều tra để xác nhận, revert cắt triệu chứng, rồi bịt lỗ hổng ở tầng quyền và review.",
+          "red_flag": "Kết luận 'do con người bất cẩn' và dừng ở nhắc nhở, không đụng tới cơ chế review và giới hạn quyền push."
+        },
+        {
+          "id": "reliability-blameless-postmortem",
+          "scenario": "Sự cố 92 phút hôm 3/10 làm mất 2,3% đơn hàng. Postmortem đầu tiên kết luận 'on-call fix sai lúc 02:50', action item duy nhất là 'trực ca cẩn thận hơn', và tháng sau kịch bản lặp y hệt.",
+          "question": "Bạn điều phối lại postmortem thế nào để nó dừng là công cụ đổ lỗi?",
+          "steps": [
+            "Mở đầu bằng ground rule: phân tích hệ thống chứ không tìm người, dấu hiệu sai là cái tên xuất hiện trong nguyên nhân.",
+            "Dựng timeline khách quan từ alert, log và change, tách dữ kiện khỏi suy đoán.",
+            "Hỏi vì sao quyết định sai lúc 02:50 vẫn đi qua mọi lớp kiểm tra, xuống tới điều kiện cấu trúc.",
+            "Viết lại nguyên nhân dạng hệ thống: thiếu tín hiệu, ngưỡng sai, rollback khó, đó là việc hệ thống cho phép.",
+            "Action item phải có chủ, có hạn, có tiêu chí done, không nhận 'chú ý hơn' hay 'tăng nhận thức'.",
+            "Chốt metric cho lần sau: MTTR, thời gian chẩn đoán, tỉ lệ alert dẫn tới hành động.",
+            "Chia sẻ bản postmortem rộng, mở lại bài cũ nếu hành động trước chưa đủ."
+          ],
+          "terms": [
+            "Blameless Postmortem",
+            "Postmortem",
+            "MTTR/MTBF",
+            "Incident Management",
+            "Toil"
+          ],
+          "good_signal": "Nghe thấy hướng từ đổ lỗi sang điều kiện hệ thống, timeline dựa trên dữ kiện, action item có chủ có hạn có tiêu chí done.",
+          "red_flag": "Chấp nhận 'rà soát quy trình và nhắc nhở đội' như một action item, vẫn nêu tên người trực trong nguyên nhân."
+        },
+        {
+          "id": "reliability-alert-fatigue",
+          "scenario": "Đêm qua pager reng 9 lần: 8 lần là CPU node test và cache hit ratio dao động, lần thứ chín là lỗi thẻ thật và on-call bỏ lỡ 14 phút. Tuần trước 214 cảnh báo, 96% không cần hành động.",
+          "question": "Bạn thanh lọc hệ thống cảnh báo theo trình tự nào và tiêu chí nào để giữ một alert lại?",
+          "steps": [
+            "Đo trước khi cắt: số page mỗi người trực, tỉ lệ ack, thời gian ack trung bình, mức hành động của từng alert.",
+            "Gỡ hoặc hạ mức cảnh báo không dẫn tới hành động cụ thể, chỉ giữ lại phần dashboard để xem.",
+            "Thay alert ngưỡng đơn bằng burn rate đa cửa sổ trên SLO, bắt được cả burn nhanh lẫn burn chậm.",
+            "Gộp alert trùng, đặt ngưỡng có hysteresis để metric quanh ngưỡng không re-fire liên tục.",
+            "Chỉ page khi ảnh hưởng user vượt error budget, phần còn lại chuyển vào báo cáo ngày.",
+            "Cân lại định kỳ hằng tháng theo tỉ lệ alert cần hành động, dưới 70% lại gỡ tiếp.",
+            "Duy trì kĩ năng trực ca bằng alert giả và game day, thay vì chìm trong nhiễu."
+          ],
+          "terms": [
+            "Alert Fatigue",
+            "Burn rate & multiwindow multi-burn-rate alerting",
+            "Alerting (threshold alert)",
+            "Error Budget",
+            "On-call rotation"
+          ],
+          "good_signal": "Nghe thấy dữ liệu đo được dẫn dắt việc gỡ alert, phân biệt ngưỡng đơn với burn rate trên SLO, tiêu chí giữ lại định lượng.",
+          "red_flag": "Đề xuất tăng ngưỡng chung chung hoặc tắt bớt alert không có tiêu chí, rồi lần sau lại bỏ lọt cảnh báo thật."
+        }
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "Kiểm thử & Triển khai",
+      "intro": "8 câu phỏng vấn tình huống cho hạng mục Kiểm thử & Triển khai: xử lý flaky test trong CI, vì sao coverage cao vẫn lọt bug, migration schema đi kèm deploy, canary bắt lỗi sớm, chọn rollback hay fix-forward, dọn feature flag tồn đọng, dữ liệu test lẫn giữa các môi trường, và pipeline CI quá chậm. Mỗi câu đòi hỏi trình tự chẩn đoán trước, can thiệp sau, kèm tín hiệu tốt và tín hiệu xấu để chấm câu trả lời.",
+      "questions": [
+        {
+          "id": "quality-flaky-test-ci",
+          "scenario": "Bộ test backend 2.400 test, mỗi ngày CI chạy khoảng 60 lần. Ba tuần qua tỉ lệ pipeline đỏ là 22%, mỗi lần một test khác nhau, chạy lại thì xanh, và đội bắt đầu retry toàn suite như phản xạ.",
+          "question": "Anh xử lý flaky test trong CI theo trình tự nào, và khi nào thì cách ly một test khỏi suite thay vì cứ retry?",
+          "steps": [
+            "Gom log CI nhiều tuần, tách test fail chập chờn khỏi test fail ổn định theo tỉ lệ đỏ qua các lần chạy",
+            "Chạy riêng nhóm nghi vấn lặp 30-50 lần ở môi trường sạch để đo tỉ lệ fail thật của từng test",
+            "Đọc trace và log của đúng lần fail: race theo thời gian, phụ thuộc thứ tự chạy, hay dữ liệu dùng chung",
+            "Phân loại nguyên nhân: test tự gây (hẹn giờ, cổng cố định, dữ liệu) hay lỗi sản phẩm thật cần sửa",
+            "Sửa gốc trước: cô lập dữ liệu mỗi test, bỏ phụ thuộc thứ tự, thay chờ cố định bằng điều kiện",
+            "Chỉ quarantine khi chưa tìm ra gốc, kèm người sở hữu và hạn sửa; cấm retry toàn suite để che đỏ",
+            "Theo dõi tỉ lệ đỏ sau fix theo tuần, đặt ngưỡng chặn merge khi flake quay lại"
+          ],
+          "terms": [
+            "flaky test",
+            "Quarantine",
+            "test isolation",
+            "deterministic test",
+            "parallel test execution"
+          ],
+          "good_signal": "Tái hiện được trước khi sửa, phân biệt flaky do test với bug thật, và dùng quarantine có thời hạn thay vì retry mù.",
+          "red_flag": "Trả lời bằng cách tăng retry hoặc xóa test khỏi suite, không đụng tới dữ liệu chung và phụ thuộc thời gian."
+        },
+        {
+          "id": "quality-high-coverage-bug-leak",
+          "scenario": "Module thanh toán đạt 91% line coverage trong báo cáo nhưng hai tháng liên tiếp có bug lọt production: sai làm tròn khi hoàn tiền và nhánh retry webhook chưa từng chạy trong test. Review vẫn dựa vào con số 91%.",
+          "question": "Vì sao coverage cao mà bug vẫn lọt, và anh thay con số đó bằng cách đo nào?",
+          "steps": [
+            "Lấy từng bug vừa lọt, truy ngược về test đáng lẽ phải bắt và lý do nó không bắt được",
+            "Đọc coverage theo nhánh thay vì theo dòng; nhánh lỗi, nhánh hậu kiểm và retry thường trắng",
+            "Kiểm tra assertion thật trên nhánh được phủ: chạy qua code mà không kiểm kết quả thì không tính",
+            "Viết test cho nhánh lỗi trước theo bug-fix protocol: tái hiện đỏ rồi sửa, sau đó mới bàn tăng phủ",
+            "Thêm mutation testing hoặc property-based test cho module tính toán để đo chất lượng assertion",
+            "Đặt quality gate theo nhánh chưa phủ và test cho bug mới, không dùng coverage tổng làm cổng merge"
+          ],
+          "terms": [
+            "test coverage (line vs branch)",
+            "Branch coverage",
+            "mutation testing",
+            "regression test",
+            "test pyramid"
+          ],
+          "good_signal": "Chuyển sang kiểm nhánh lỗi và chất lượng assertion, mỗi bug lọt được gắn với một test tái hiện.",
+          "red_flag": "Đề xuất kéo coverage lên 95% hoặc thêm test hình thức, không truy được vì sao bug trước đó lọt."
+        },
+        {
+          "id": "quality-migration-with-deploy",
+          "scenario": "Release đổi cột orders.total_amount từ float sang decimal(18,2); app cũ và app mới phải chạy song song trong lúc rolling deploy. Lần trước migration chạy trong startup nên khóa bảng 90 giây, checkout trả 5xx.",
+          "question": "Anh xếp migration và deploy theo thứ tự nào để hai phiên bản app cùng sống với một schema?",
+          "steps": [
+            "Tách migration khỏi startup app, chạy thành bước riêng có kiểm soát trước khi đẩy code mới",
+            "Áp expand-contract: thêm cột mới nullable, giữ cột cũ, cả hai bản app đọc ghi tương thích",
+            "Backfill dữ liệu theo lô nhỏ, tránh transaction dài và khóa bảng trên bảng lớn",
+            "Deploy app đọc cột mới, đối chiếu giá trị hai cột trong lúc hai phiên bản chạy song song",
+            "Kiểm tra trước kịch bản rollback: bản app cũ còn chạy được với schema mới hay không",
+            "Chỉ drop cột cũ ở giai đoạn contract sau khi bản cũ biến mất khỏi traffic vài ngày"
+          ],
+          "terms": [
+            "Expand-contract (database migration trong deploy)",
+            "Migration",
+            "Schema migration",
+            "Zero-downtime deploy (rolling deploy)",
+            "Rollback"
+          ],
+          "good_signal": "Chạy schema trước app theo expand-contract, giữ tương thích hai phiên bản, backfill theo lô và tính rollback trước.",
+          "red_flag": "Nhúng migration vào startup hoặc ALTER một phát giữa traffic, chỉ nói đã có backup."
+        },
+        {
+          "id": "quality-canary-early-detection",
+          "scenario": "Mỗi release bật canary 5% traffic trong 10 phút rồi nâng thẳng 100%. Lần trước lỗi chỉ xảy ra ở người dùng gói trả phí và lộ sau 6 giờ, canary khi đó báo xanh.",
+          "question": "Anh thiết kế lại canary thế nào để bắt được đúng loại lỗi này sớm hơn?",
+          "steps": [
+            "Chốt tín hiệu quyết định trước: tỉ lệ lỗi, p99 và chỉ số nghiệp vụ của luồng vừa thay đổi",
+            "So metric theo phiên bản deploy để tách ảnh hưởng của bản mới khỏi nhiễu nền",
+            "Kiểm phân bố nhóm canary có đại diện không: gói trả phí, region, thiết bị chứ không chỉ traffic tổng",
+            "Đặt cửa sổ và ngưỡng tự động nâng traffic, có người xác nhận tại các mốc 5% và 50%",
+            "Chạy smoke test và bài kiểm nghiệp vụ trên chính nhóm canary trước khi nâng tiếp",
+            "Ghi lại lỗi canary bỏ lọt, bổ sung tín hiệu đó vào tiêu chí cho lần release sau"
+          ],
+          "terms": [
+            "canary analysis",
+            "Canary deploy",
+            "smoke test",
+            "Feature flag"
+          ],
+          "good_signal": "Chọn tín hiệu và nhóm người dùng đại diện trước khi chạy, so theo phiên bản và chỉ nâng traffic qua mốc có xác nhận.",
+          "red_flag": "Giữ canary nhìn mỗi 5xx và CPU, hoặc nâng 100% theo đồng hồ mà không kiểm nhóm chịu ảnh hưởng."
+        },
+        {
+          "id": "quality-rollback-vs-fix-forward",
+          "scenario": "18:05 release bản tính phí vận chuyển mới lên 100% traffic. Ba phút sau tỉ lệ đặt hàng thành công rơi 1,8 điểm phần trăm, log lỗi rải ở ba service, chưa khoanh được nguyên nhân.",
+          "question": "Anh chọn rollback hay fix-forward lúc này, và tiêu chí nào quyết định trước khi hết cửa sổ deploy?",
+          "steps": [
+            "Xác nhận tương quan thời gian: so metric luồng đặt hàng theo phiên bản deploy, loại trừ yếu tố bên ngoài",
+            "Kiểm bản mới có đổi contract hay schema không, tức rollback còn nguyên vẹn hay đã bị chặn",
+            "Chưa rõ nguyên nhân thì dừng lỗi trước: tắt kill switch của feature flag hoặc rollback bản cũ",
+            "Chỉ fix-forward khi đã chốt nguyên nhân, bản fix chạy qua staging và quay lại canary từ 5%",
+            "Sau khi dừng lỗi: chạy smoke test và đối chiếu tỉ lệ thành công về mức nền trước release",
+            "Ghi timeline quyết định, kể cả thời điểm do dự, làm đầu vào cho postmortem"
+          ],
+          "terms": [
+            "Rollback",
+            "Feature flag",
+            "Release vs deploy",
+            "Canary deploy"
+          ],
+          "good_signal": "Dừng lỗi trước khi điều tra tiếp, tiêu chí dựa trên độ chắc của nguyên nhân và khả năng rollback còn nguyên.",
+          "red_flag": "Chọn một hướng theo cảm tính rồi mới tìm lý do, hoặc debug tiếp trên traffic đang lỗi."
+        },
+        {
+          "id": "quality-feature-flag-debt",
+          "scenario": "Hệ thống còn 214 feature flag, 61 flag bật 100% từ hơn một năm nhưng code vẫn giữ cả nhánh tắt. Tuần trước xóa một flag tưởng đã chết, API trả 500 cho 3% request.",
+          "question": "Anh dọn nợ feature flag theo trình tự nào để không làm sập tính năng đang chạy?",
+          "steps": [
+            "Trích log truy cập flag và trạng thái thực tế, tách nhóm: không đọc trong 90 ngày, cố định một giá trị, theo mùa",
+            "Đối chiếu với code còn tham chiếu để phân loại chết hẳn, cố định, hoặc còn dùng định kỳ",
+            "Đóng băng flag mới: mọi flag tạo ra phải có người sở hữu và ngày hết hạn ngay từ đầu",
+            "Với flag cố định: đưa giá trị hiện hành thành hằng số, xóa nhánh chết trong PR nhỏ kèm regression test",
+            "Xóa theo môi trường: staging trước, sống một tuần với bản đã xóa rồi mới lên production",
+            "Đo lại số flag tồn đọng hàng tháng và đưa ngưỡng vào checklist release"
+          ],
+          "terms": [
+            "Feature flag",
+            "feature flag testing",
+            "dead code",
+            "technical debt",
+            "regression test"
+          ],
+          "good_signal": "Dọn theo bằng chứng truy cập, biến flag cố định thành hằng số qua PR nhỏ, và bắt flag mới có ngày hết hạn.",
+          "red_flag": "Xóa loạt theo grep tên flag, hoặc giữ mọi nhánh vì sợ, không có vòng đời cho flag mới."
+        },
+        {
+          "id": "quality-dirty-test-data-environments",
+          "scenario": "Staging dùng chung cho integration test và kiểm thử tay. Test tạo user bằng email cố định và không dọn; sáng nay 40 trong 310 test đỏ dù code không đổi, dữ liệu cũ còn từ 9 ngày trước.",
+          "question": "Anh tách bạch và quản lý dữ liệu test giữa các môi trường thế nào để kết quả không phụ thuộc dữ liệu cũ?",
+          "steps": [
+            "Đối chiếu bản ghi còn lại với test tạo ra nó, tìm khóa cố định và dữ liệu không được dọn",
+            "Đổi sang dữ liệu sinh duy nhất mỗi lần chạy, gắn tiền tố nhận biết được nguồn tạo",
+            "Mỗi test tự dựng dữ liệu trong fixture, dọn trong teardown bằng API thay vì thao tác UI",
+            "Cô lập không gian dữ liệu: schema hoặc database riêng cho test, không đụng dữ liệu kiểm thử tay",
+            "Đặt lệnh reset trạng thái đầu ngày và quy ước dữ liệu mẫu chỉ đọc cho người kiểm thử tay",
+            "Theo dõi tỉ lệ đỏ do dữ liệu và phụ thuộc thứ tự test sau một tuần để xác nhận đã sạch"
+          ],
+          "terms": [
+            "test data management",
+            "Environment (dev / staging / prod)",
+            "test isolation",
+            "fixture",
+            "hermetic test"
+          ],
+          "good_signal": "Sinh dữ liệu duy nhất theo lần chạy, cô lập không gian dữ liệu, dọn bằng API và không tranh chấp với người kiểm thử tay.",
+          "red_flag": "Dọn tay trước mỗi lần chạy, hoặc dùng chung bộ dữ liệu mẫu cố định ở mọi môi trường."
+        },
+        {
+          "id": "quality-slow-ci-pipeline",
+          "scenario": "Pipeline backend mất 41 phút cho một pull request: 2.800 test chạy tuần tự sau bước build, cache bị dựng lại mỗi lần mất thêm 6 phút. Dev bắt đầu gộp nhiều thay đổi để né số lần chờ.",
+          "question": "Anh cắt thời gian pipeline theo trình tự nào mà không bỏ bớt kiểm soát?",
+          "steps": [
+            "Đo thời gian từng bước trên vài chạy gần nhất để tìm đúng phần chiếm phần lớn 41 phút",
+            "Sửa cache trước: khóa cache theo lockfile, chỉ dựng lại khi dependency đổi",
+            "Song song hóa test theo shard, tách unit với integration để nhóm nhanh trả kết quả trước",
+            "Đưa bước ít giá trị ra khỏi đường tới hạn: lint chạy song song, e2e chạy sau merge hoặc theo lịch",
+            "Sửa các test chậm nhất: bỏ chờ cố định, thu nhỏ dữ liệu, cắt khởi động thừa trong setup",
+            "Đặt ngân sách thời gian cho pipeline, cảnh báo khi vượt và rà lại mỗi tháng"
+          ],
+          "terms": [
+            "Continuous Integration (CI)",
+            "parallel test execution",
+            "Build artifact",
+            "Trunk-based development vs Git flow",
+            "smoke test"
+          ],
+          "good_signal": "Đo bước tốn thời gian trước, sửa cache và song song hóa đúng chỗ, chỉ dời bước ít giá trị khỏi đường tới hạn.",
+          "red_flag": "Tắt bớt test hoặc bật song song vô tội vạ gây chồng dữ liệu, không đo lại thời gian sau thay đổi."
+        }
+      ]
+    }
+  ]
+}

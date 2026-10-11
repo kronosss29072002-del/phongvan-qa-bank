@@ -1,0 +1,305 @@
+- generic [active] [ref=f32e1]:
+  - generic:
+    - generic:
+      - link "Bỏ qua để đến phần nội dung chính" [ref=f32e2] [cursor=pointer]
+      - link "Hỗ trợ truy cập" [ref=f32e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=vi
+  - generic [ref=f32e8]:
+    - search [ref=f32e9]:
+      - generic [ref=f32e12]:
+        - link [ref=f32e13] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=vi&ictx=0&sa=X&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQpYkNegQIBhAG
+          - img "Truy cập trang chủ Google" [ref=f32e14]
+        - generic [ref=f32e15]:
+          - combobox "Tìm kiếm" [ref=f32e18]: "\"portfolio\" junior developer \"stands out\" site:stackoverflow.com OR site:reddit.com r/webdev hiring \"portfolio\" junior developer \"stands out\" site:stackoverflow.com OR site:reddit.com r/webdev hiring"
+          - generic [ref=f32e19]:
+            - button "Xóa" [ref=f32e21] [cursor=pointer]
+            - generic [ref=f32e26]:
+              - button "Công cụ nhập" [ref=f32e27] [cursor=pointer]
+              - button "Tìm kiếm bằng giọng nói" [ref=f32e31] [cursor=pointer]
+              - button "Tìm kiếm bằng hình ảnh" [ref=f32e34] [cursor=pointer]
+        - button "Tìm kiếm" [ref=f32e37] [cursor=pointer]
+    - generic [ref=f32e42]:
+      - button "Cài đặt" [ref=f32e44] [cursor=pointer]
+      - button "Chia sẻ" [ref=f32e49] [cursor=pointer]
+      - generic [ref=f32e55]:
+        - button "Các ứng dụng của Google" [ref=f32e57] [cursor=pointer]
+        - link "Đăng nhập" [ref=f32e62] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=vi&passive=true&continue=https://www.google.com/search%3Fq%3D%2522portfolio%2522%2Bjunior%2Bdeveloper%2B%2522stands%2Bout%2522%2Bsite:stackoverflow.com%2BOR%2Bsite:reddit.com%2Br/webdev%2Bhiring&ec=futura_srp_og_si_72236_p
+  - generic [ref=f32e65]:
+    - navigation [ref=f32e71]:
+      - generic [ref=f32e77]:
+        - list [ref=f32e78]:
+          - listitem [ref=f32e79]:
+            - link "Tất cả" [disabled] [ref=f32e80]
+          - listitem [ref=f32e83]:
+            - link "Video ngắn" [ref=f32e84] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&udm=39&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzBsVks7WOrwetD1Wc_Bx0JFuTQNEyAJEGdl8G9jc186khPgy_q7Vs-89sL48faxFmbSvjpvP5oHMQI9FKO1gstIis-F7yEVdKBzBlrvEewkh0MNg14tnG1PyJxwksn23Kyspse__90PMrupunHfBc23BfrCj43siXzWQD9JrJi8Z9t6k5sHfGWfHOm49nA7Chkp3Ykeu6Rh8N3BEtHY1sLN6Lb-TjbNbTiwZhN-WkzsmFeX2u&q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sa=X&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQs6gLegQIFxAB
+          - listitem [ref=f32e87]:
+            - link "Hình ảnh" [ref=f32e88] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&udm=2&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzBsVks7WOrwetD1Wc_Bx0JFuTQNEyAJEGdl8G9jc186khPgy_q7Vs-89sL48faxFmbSvjpvP5oHMQI9FKO1gstIis-F7yEVdKBzBlrvEewkh0MNg14tnG1PyJxwksn23Kyspse__90PMrupunHfBc23BfrCj43siXzWQD9JrJi8Z9t6k5sHfGWfHOm49nA7Chkp3Ykeu6Rh8N3BEtHY1sLN6Lb-TjbNbTiwZhN-WkzsmFeX2u&q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sa=X&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQtKgLegQIFhAB
+          - listitem [ref=f32e91]:
+            - link "Video" [ref=f32e92] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&udm=vids&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzBsVks7WOrwetD1Wc_Bx0JFuTQNEyAJEGdl8G9jc186khPgy_q7Vs-89sL48faxFmbSvjpvP5oHMQI9FKO1gstIis-F7yEVdKBzBlrvEewkh0MNg14tnG1PyJxwksn23Kyspse__90PMrupunHfBc23BfrCj43siXzWQD9JrJi8Z9t6k5sHfGWfHOm49nA7Chkp3Ykeu6Rh8N3BEtHY1sLN6Lb-TjbNbTiwZhN-WkzsmFeX2u&q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sa=X&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQtKgLegQIFRAB
+          - listitem [ref=f32e95]:
+            - link "Tin tức" [ref=f32e96] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&tbm=nws&source=lnms&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzBsVks7WOrwetD1Wc_Bx0JFuTQNEyAJEGdl8G9jc186khPgy_q7Vs-89sL48faxFmbSvjpvP5oHMQI9FKO1gstIis-F7yEVdKBzBlrvEewkh0MNg14tnG1PyJxwksn23Kyspse__90PMrupunHfBc23BfrCj43siXzWQD9JrJi8Z9t6k5sHfGWfHOm49nA7Chkp3Ykeu6Rh8N3BEtHY1sLN6Lb-TjbNbTiwZhN-WkzsmFeX2u&sa=X&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ0pQJegQIFBAB
+          - listitem [ref=f32e99]:
+            - link "Mua sắm" [ref=f32e100] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&udm=28&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzBsVks7WOrwetD1Wc_Bx0JFuTQNEyAJEGdl8G9jc186khPgy_q7Vs-89sL48faxFmbSvjpvP5oHMQI9FKO1gstIis-F7yEVdKBzBlrvEewkh0MNg14tnG1PyJxwksn23Kyspse__90PMrupunHfBc23BfrCj43siXzWQD9JrJi8Z9t6k5sHfGWfHOm49nA7Chkp3Ykeu6Rh8N3BEtHY1sLN6Lb-TjbNbTiwZhN-WkzsmFeX2u&q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&ved=1t:220175&ictx=111
+          - listitem [ref=f32e103]:
+            - button [ref=f32e104] [cursor=pointer]:
+              - generic "Các bộ lọc khác" [ref=f32e105]: Thêm
+        - button "Công cụ" [ref=f32e112] [cursor=pointer]
+    - heading "Kết quả tìm kiếm" [level=1] [ref=f32e119]
+    - generic [ref=f32e125]:
+      - generic [ref=f32e126]: Looking for results in English?
+      - link [ref=f32e127] [cursor=pointer]:
+        - /url: "#"
+      - link "Change to English" [ref=f32e131] [cursor=pointer]:
+        - /url: /setprefs?sig=0_t5UDDH1-zCax__9uIpTmwchHM3M%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3D%2522portfolio%2522%2Bjunior%2Bdeveloper%2B%2522stands%2Bout%2522%2Bsite:stackoverflow.com%2BOR%2Bsite:reddit.com%2Br/webdev%2Bhiring&hl=en&sa=X&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQhoQCKAF6BAgQEAQ
+      - link "Tiếp tục sử dụng Tiếng Việt" [ref=f32e132] [cursor=pointer]:
+        - /url: "#"
+      - link "Cài đặt ngôn ngữ" [ref=f32e134] [cursor=pointer]:
+        - /url: /preferences?lang=1&hl=vi&sa=X&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQiIQCKAN6BAgQEAY#languages
+    - main [ref=f32e136]:
+      - generic [ref=f32e140]:
+        - generic [ref=f32e143]:
+          - heading "Web results" [level=2] [ref=f32e144]
+          - generic [ref=f32e145]:
+            - generic [ref=f32e148]:
+              - link "How to make yourself stand out when it comes to applying ... Reddit · r/webdev >40 bình luận · 7 năm trước" [ref=f32e150] [cursor=pointer]:
+                - /url: /goto?url=CAESmwEB6zswFd896YR8hC5Sohly4T3oY-shfEKqykr1HH0jOzntohEuxIVOFQ7WLjEhFp-Dto4TLuhkZwSYUO4hb_wfeNHhiNNtf9sqq4btyecTkwa0u1z22Fq1Ml0JG_--1tYAcorl0WR4KsJTrDm1-MpcfZfE_XVCPdn3-Szo9gWP0H8boFNzAocmLd_Gv_uIMVltO-63XGdXye8wsw
+                - heading "How to make yourself stand out when it comes to applying ..." [level=3] [ref=f32e151]
+                - generic [ref=f32e157]:
+                  - generic [ref=f32e158]: Reddit · r/webdev
+                  - generic [ref=f32e160]: ">40 bình luận · 7 năm trước"
+              - button "Thông tin về kết quả này" [ref=f32e166] [cursor=pointer]
+            - generic [ref=f32e171]: I feel as if, and maybe this is just me, there isn't really much junior developer jobs out there. I would assume this is due to the fact that code camps ...
+            - generic [ref=f32e177]:
+              - link "49 câu trả lời" [ref=f32e178] [cursor=pointer]:
+                - /url: /goto?url=CAESowEB6zswFYMTCRNUzcMGehsEQccWLPuIzhoRyJqkDwbLVGyY_XvQ0wCAc7mFdNlWsPtx0cGet0s8QzC3fRiuCQhgVqLpECsN1tIsr7l2XiR2Yxf589h-isAZd55rGFoQlxx9PdUnMWAVzN1M3Lsr6e6nqepWxZcyI0GEfCW1SPu3swNE8oqJd_CWDFS42GmEubh3WJN4EPfCy8BoXl5JCOB_lq_S
+              - generic [ref=f32e179]: ·
+              - generic [ref=f32e180]: "Câu trả lời hàng đầu:"
+              - generic [ref=f32e181]: ">Now, I do believe I have a better advantage over camp graduates as I'm about to graduate ..."
+        - generic [ref=f32e185]:
+          - generic [ref=f32e188]:
+            - link "Aspiring junior developer here. A feedback on my portfolio ... Reddit · r/reactjs >50 bình luận · 3 năm trước" [ref=f32e190] [cursor=pointer]:
+              - /url: /goto?url=CAESnQEB6zswFUvVfpad-7iNMMxGdF46ourFf8abbISODIR4O4aZovJ-CDWdDTTEuNW86PME2tULyCQyt7EqT5cTpwickvvNg7p7mYQzZlErPp4lmPmByu6QuVvCl-HlxtY43y_nChSyLwH9UXx_vfYDOBLn0zJBjK-cK2cJL3PP1ulr65gElZ-XKUm1L5nLx6eSnET0qtaQR6VwpIo4WSeV
+              - heading "Aspiring junior developer here. A feedback on my portfolio ..." [level=3] [ref=f32e191]
+              - generic [ref=f32e197]:
+                - generic [ref=f32e198]: Reddit · r/reactjs
+                - generic [ref=f32e200]: ">50 bình luận · 3 năm trước"
+            - button "Thông tin về kết quả này" [ref=f32e206] [cursor=pointer]
+          - generic [ref=f32e213]:
+            - text: The image and stuff pop in on the
+            - emphasis [ref=f32e214]: portfolio
+            - text: page in particular
+            - emphasis [ref=f32e215]: stands out
+            - text: . I would personally add
+            - emphasis [ref=f32e216]: a
+            - text: color so the top navbar
+            - emphasis [ref=f32e217]: stands out a
+            - text: bit ...
+        - generic [ref=f32e221]:
+          - generic [ref=f32e224]:
+            - link "What actually makes a junior developer stand out in 2026? Reddit · r/FullStack >40 bình luận · 1 tháng trước" [ref=f32e226] [cursor=pointer]:
+              - /url: /goto?url=CAESoAEB6zswFSYDq2D_zOX8v4RyY01vPq6HRsB6v4L8acv3KAn96qCs5WS90YY8SRf6UupLKiyU2IoX9LOouSn1N5fsv5SdVbXSlFiaM09MTRn77PZCjkgBPJvF1d2S6sAU7a3GWgTJvvd5zfQWnv1eUNtK9OTkQ6UKo_pQn6OeoW05aUHbmZgQIP27ygXJX7CVm0bXcszkXez7CnIbWb7ao2bG
+              - heading "What actually makes a junior developer stand out in 2026?" [level=3] [ref=f32e227]
+              - generic [ref=f32e233]:
+                - generic [ref=f32e234]: Reddit · r/FullStack
+                - generic [ref=f32e236]: ">40 bình luận · 1 tháng trước"
+            - button "Thông tin về kết quả này" [ref=f32e242] [cursor=pointer]
+          - generic [ref=f32e247]: With so many people learning the same technologies and building similar projects, I'm curious what actually makes someone stand out. Personally, I think ...
+          - generic [ref=f32e253]:
+            - link "42 câu trả lời" [ref=f32e254] [cursor=pointer]:
+              - /url: /goto?url=CAESqAEB6zswFWP6pmeO_W95xUAWFte9-ws36T2c_eKIOtTiMF8cu2zZ_EobQRr-DHyrxoIfiPA1kKLoy3AJotCATaLCx_CoBt35k1mukJG_kBzUFfmUJ4nFjR9z1LhDIkx7Oph4sLhJV4vJItTV8DQJ-9GY5ul5-lvIqjibEYo_vSN6wiYe91izTuJMCK00HQoLGwHmYslpArB4FrjpropIETrNz6G58UZM-Co
+            - generic [ref=f32e255]: ·
+            - generic [ref=f32e256]: "Câu trả lời hàng đầu:"
+            - generic [ref=f32e257]: "Very first step: Stop call yourself full stack"
+        - generic [ref=f32e261]:
+          - generic [ref=f32e264]:
+            - link "What projects should i make for my junior portfolio to land a job? ... Reddit https://www.reddit.com › oqblx3 › w..." [ref=f32e266] [cursor=pointer]:
+              - /url: /goto?url=CAESlQEB6zswFXOHk5mkj-aiSKtWSvOcxaZfPtCKsA4oKOAUuWlCDpp0OzEcQa_ZRoJIdOHGEoC6MZg_cd6Vh4_9FPMe1504EiJtqxJiNF0aHec6Ze0NLZYqXnn-36hQxM6EeaGI2YI8Z4rup9UOGVe6uG8L-fXBgZtTu0efLFKrRKX3OzoH6ZMmS_xADVi8TGPlKGt0HpsgQg
+              - heading "What projects should i make for my junior portfolio to land a job? ..." [level=3] [ref=f32e267]
+              - generic [ref=f32e273]:
+                - generic [ref=f32e274]: Reddit
+                - generic [ref=f32e276]: https://www.reddit.com › oqblx3 › w...
+            - generic [ref=f32e278]:
+              - generic [ref=f32e279]: ·
+              - link "Dịch trang này" [ref=f32e280] [cursor=pointer]:
+                - /url: /goto?url=CAES3wEB6zswFWGEpw0EvauJt0NPf7ELZTEnTH25kzP5jIlowH0AeM5YNUnQ9PiEvPwWnsBKmpXpUoSvfjdG2DrDOpaefpKH8i8iqVOxmB2e9x0OYo5GDRsOeTyyTd1SeS_Vq3FlNXWasDSddbK5yzpHiWriOIL4lPTfALpZtSlECEwhPk1MRNuHM1SOegsXQDZ215DsKt6-slZxa1OfqqfnnAh_5YWn2uvdUJFs5TlUQlaEugcdMsBCuiahwck33elbykMY3iv1dHk6BvjBSRgAdOYinNdUjC-36RJf8JtQE9pv
+            - button "Thông tin về kết quả này" [ref=f32e285] [cursor=pointer]
+          - generic [ref=f32e290]: Most of you are experienced web devs, and i am seeking your advise on this. I am trying to make a change in my professional life and apply for web dev ...
+          - generic [ref=f32e296]:
+            - link "5 câu trả lời" [ref=f32e297] [cursor=pointer]:
+              - /url: /goto?url=CAESnQEB6zswFZB9l0n29GfjYFGFwQPl0tCZ7k9p5strJ5KAy0N_-6O2eRWtgf4h4_o6tG28regdHW8tu4agM25d8jv2Q3FTYE3SbWSk0MM0Nm_z90PqaFRJmDW30XFj1EkWNuy_CbMiS2WcnWGHNYOd4ay3FMXzd1p8_Csn71caQtXPTmyLrfFrypqO1svv26PIA-WebEeg1NQ_SD7CsR7W
+            - generic [ref=f32e298]: ·
+            - generic [ref=f32e299]: "Câu trả lời hàng đầu:"
+            - generic [ref=f32e300]: If you can build a website for a small business, that would be ideal, since it's actually being ...
+        - generic [ref=f32e304]:
+          - generic [ref=f32e307]:
+            - link "How on earth can junior web devs stay not depressed ... Reddit · r/webdev >320 bình luận · 6 năm trước" [ref=f32e309] [cursor=pointer]:
+              - /url: /goto?url=CAESlQEB6zswFQvizuchX51yInKj2XbfGBc3sa45mJjOoM3Bb_eTGXUqyzojnwsIyU_KpLOY9VquCrJlLwfRI3s68N00W3zb1-QwMl7HLINChyDY4bIfucC7lLsFPkV3bHOuqQq_niG9J0D3z4fTLc8dUP_Vvi0R_uS75cxXemfHc03zG8DuW1RSmg_1yDaF-gdJ3H4-EYThxg
+              - heading "How on earth can junior web devs stay not depressed ..." [level=3] [ref=f32e310]
+              - generic [ref=f32e316]:
+                - generic [ref=f32e317]: Reddit · r/webdev
+                - generic [ref=f32e319]: ">320 bình luận · 6 năm trước"
+            - button "Thông tin về kết quả này" [ref=f32e325] [cursor=pointer]
+          - generic [ref=f32e330]: I feel like I am a decent junior web dev, but when I see the job requirements or just the internship requirements makes me depressed
+          - generic [ref=f32e336]:
+            - link "324 câu trả lời" [ref=f32e337] [cursor=pointer]:
+              - /url: /goto?url=CAESnQEB6zswFVz2nhxabP5_3Fmzqaa8PWfSjMr7hv7EilA_7wBo5Aj1rnMqAVA-ImE3oSS1MRkstCLwBzNE9qfvHAzD4q9ilG5SPnK1DNumzjz0COR8-GIlxVX7UpsOTdP0qD0PzPrtAEg_BIQubAadx2JFi50Cb6SEHAVMiFi6jSwQWTP0JcvRZ_bCsiqJ7XmV-R39pdXOYn_x56KKaCc2
+            - generic [ref=f32e338]: ·
+            - generic [ref=f32e339]: "Câu trả lời hàng đầu:"
+            - generic [ref=f32e340]: The truth is the requirements are actually a wish-list. If you have none of the requirements ...
+        - generic [ref=f32e344]:
+          - generic [ref=f32e347]:
+            - link "How can I ever find work if these are junior developer ... Reddit · r/webdev >320 bình luận · 4 năm trước" [ref=f32e349] [cursor=pointer]:
+              - /url: /goto?url=CAESmAEB6zswFeT60a0LoUqkWnzPuaQoGw3oQ0Sahul26colvz7GVMKUmLETany62YUI8JLv7PqcP6PEEAmgr82Ub1Ls6r1AfWTlGY02sTiIA7F8ZG7C_9UUCbTdO4LVrJBJlK7ScYVd9L-u9Omn4zgITvlvgz9IrZtFpsyr5ashL6m29jFtdwiry-XJSIew0NvALnbZThCA-CY_DQ
+              - heading "How can I ever find work if these are junior developer ..." [level=3] [ref=f32e350]
+              - generic [ref=f32e356]:
+                - generic [ref=f32e357]: Reddit · r/webdev
+                - generic [ref=f32e359]: ">320 bình luận · 4 năm trước"
+            - button "Thông tin về kết quả này" [ref=f32e365] [cursor=pointer]
+          - generic [ref=f32e372]:
+            - text: If you need
+            - emphasis [ref=f32e373]: a
+            - text: foot-in because no one will recognize your work, build your own projects (as
+            - emphasis [ref=f32e374]: a
+            - text: business or just for
+            - emphasis [ref=f32e375]: portfolio
+            - text: ). ... that
+            - emphasis [ref=f32e376]: stands out
+            - text: ...
+        - generic [ref=f32e380]:
+          - generic [ref=f32e383]:
+            - link "Many devs share their portfolio websites here but I don't ... Reddit · r/reactjs >120 bình luận · 5 năm trước" [ref=f32e385] [cursor=pointer]:
+              - /url: /goto?url=CAESngEB6zswFfJadovHr3flOm0X3c62mgowVsXLzPN-RX6fuXRbBOVrilUkw_0aq5i8xug7ErS5CEh29xCObfjr8kADJHnPr25HogfdZJywUZqGMp8a_rVCLhn5BGLiAFLxJUp3oBGO7M0q3P1cGhDkDc8MFThdykktNtBDPAIJWbSfi-meZrj0gkc0yGf-4etW2t_1Y5HnEC7ZLnyYiifzeg
+              - heading "Many devs share their portfolio websites here but I don't ..." [level=3] [ref=f32e386]
+              - generic [ref=f32e392]:
+                - generic [ref=f32e393]: Reddit · r/reactjs
+                - generic [ref=f32e395]: ">120 bình luận · 5 năm trước"
+            - button "Thông tin về kết quả này" [ref=f32e401] [cursor=pointer]
+          - generic [ref=f32e408]:
+            - text: Having
+            - emphasis [ref=f32e409]: a portfolio
+            - text: website does no harm, gives good impressions to
+            - emphasis [ref=f32e410]: hiring
+            - text: managers and interviewers, and if you are
+            - emphasis [ref=f32e411]: a
+            - text: student or newly grad, ...
+        - generic [ref=f32e415]:
+          - generic [ref=f32e418]:
+            - link "Trying to create my portfolio has made me want to quit and ... Reddit · r/webdev >150 bình luận · 3 năm trước" [ref=f32e420] [cursor=pointer]:
+              - /url: /goto?url=CAESngEB6zswFek7i5a-rcWiYw0jQX1s3QKZ7A0MC0pPbiEQdLGpxZywBgGYXxIDfVCmwIjAsKlOQAlwejzuTC52hMxdE5UrSdIEcrE7EYNJkv22gWWeYFIH0jtV5HTl1o8JE-zb1XcKwGv0jos-vy7RwBIQW_ZcTLE-FYHsNLkGnVU5FzOU6kB_MO68vLWVQSp03Cpsr_RaHY9UoJoOtXPaYg
+              - heading "Trying to create my portfolio has made me want to quit and ..." [level=3] [ref=f32e421]
+              - generic [ref=f32e427]:
+                - generic [ref=f32e428]: Reddit · r/webdev
+                - generic [ref=f32e430]: ">150 bình luận · 3 năm trước"
+            - button "Thông tin về kết quả này" [ref=f32e436] [cursor=pointer]
+          - generic [ref=f32e443]:
+            - text: And now in order to stand out I need to create
+            - emphasis [ref=f32e444]: a
+            - text: good
+            - emphasis [ref=f32e445]: portfolio
+            - text: that
+            - emphasis [ref=f32e446]: stands out
+            - text: ", which means animations, transitions, SVGs, good layout, ..."
+        - generic [ref=f32e450]:
+          - generic [ref=f32e453]:
+            - 'link "Jr. front-end developer portfolio - need advices : r/webdev Reddit https://www.reddit.com › comments" [ref=f32e455] [cursor=pointer]':
+              - /url: /goto?url=CAESmAEB6zswFWdR0pG4q3Q5T7LQzQmlTyzFa-woDA9ApkuYllN72AW0Cpsvgf2oACertU1gl3JUueQXBnmk8T2Odec0zKVrz2D-FdiTAaX_CKP0CI7_E7-jT1tXxCUqh7HtnBfuUU9dOlnQRRjJY96K-MaVVIk6Dy9QpoRUfAoX4UftkLsZykJ5tgQ5oGYYdHKpD3HBFbRPstiyOQ
+              - 'heading "Jr. front-end developer portfolio - need advices : r/webdev" [level=3] [ref=f32e456]'
+              - generic [ref=f32e462]:
+                - generic [ref=f32e463]: Reddit
+                - generic [ref=f32e465]: https://www.reddit.com › comments
+            - generic [ref=f32e467]:
+              - generic [ref=f32e468]: ·
+              - link "Dịch trang này" [ref=f32e469] [cursor=pointer]:
+                - /url: /goto?url=CAES4gEB6zswFdsU8qrdSblwnv-331UDO6OY94jvogWW8ravmBpcadVXpy2jaduLiDzAwmcr-i9oZtLv29EipVHJYj1rmt9bdhDUGW8j48ud_HppQ3t3ldgbwrc1sptRcZZoE1tCr3699uu-kzDurGzUbIqHeGbHiq9ZxERFnWbbdagVV9heZhgxpmS2KtN5AwzkixXqCjvcxe36yUxXtvYXqN9dYAwB5bIJDma2zTduQ4AfmjyNhyc847nFC19p0AmX31y3pEtziWij7xao2YMq-Iu0OXanbkPunbbTe9-Uy1IR7FUg
+            - button "Thông tin về kết quả này" [ref=f32e474] [cursor=pointer]
+          - generic [ref=f32e481]:
+            - text: For what it's worth, if I'm
+            - emphasis [ref=f32e482]: hiring
+            - text: for
+            - emphasis [ref=f32e483]: a
+            - text: role and
+            - emphasis [ref=f32e484]: a
+            - text: resume really
+            - emphasis [ref=f32e485]: stands out
+            - text: in creativity, it'll be at the top of my candidates... But if the
+            - emphasis [ref=f32e486]: portfolio
+            - text: ...
+        - generic [ref=f32e490]:
+          - generic [ref=f32e493]:
+            - link "4+ Year Software Developer — Which Resume Structure Is ... Reddit · r/webdev >80 bình luận · 1 tháng trước" [ref=f32e495] [cursor=pointer]:
+              - /url: /goto?url=CAESnQEB6zswFQYv0jPs09RMDlaj2zcV3gqOTUe2isVp81cCdVF4AdKCdIIVfKJ2mmhtu6JCuBPhtveV704-ZN_a78shjVkuHcHgeJvI-D1xQuz5SYdl6WqPkCsODk8yJijhufWyoC0OBVp3aINxD23Ina47sN3nSqQ1RwPqIbEXP2SXuVlt7w4YXv2KyYK_FXnab4WBN8GC3wGX5vpq5kyY
+              - heading "4+ Year Software Developer — Which Resume Structure Is ..." [level=3] [ref=f32e496]
+              - generic [ref=f32e502]:
+                - generic [ref=f32e503]: Reddit · r/webdev
+                - generic [ref=f32e505]: ">80 bình luận · 1 tháng trước"
+            - button "Thông tin về kết quả này" [ref=f32e511] [cursor=pointer]
+          - generic [ref=f32e516]: For a 4+ year software developer, which resume structure do you think is better? * With a Projects section * Without a Projects section, The data ...
+          - generic [ref=f32e522]:
+            - link "86 câu trả lời" [ref=f32e523] [cursor=pointer]:
+              - /url: /goto?url=CAESpQEB6zswFTdMowHO7qTIn9yBqluGAixldL_u95iEFSpsyWgSxkvhD7uRP7NWT8ncTNSjjVzY3V4ZJjiKTiOQPBrH6USXKPNspV5a3G902HM0gKbSMLd6d0F3EMTySFmVqbQzKciNow6vLHOE0tvdUafW_JH_z4Jb38gJNyzfOwN6Y7eO1GdM2iEwFat1kyQ9AZuYyLlwklj0e-cls-1td-71MWbwhGg
+            - generic [ref=f32e524]: ·
+            - generic [ref=f32e525]: "Câu trả lời hàng đầu:"
+            - generic [ref=f32e526]: 2nd one. No recruiter will ever read all the text from the 1st one.
+      - navigation [ref=f32e529]:
+        - heading "Điều hướng trang" [level=1] [ref=f32e530]
+        - text: "1"
+        - link "Page 2" [ref=f32e533] [cursor=pointer]:
+          - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=10&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8tMDegQIPxAE
+          - text: "2"
+        - link "Page 3" [ref=f32e535] [cursor=pointer]:
+          - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=20&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8tMDegQIPxAG
+          - text: "3"
+        - link "Page 4" [ref=f32e537] [cursor=pointer]:
+          - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=30&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8tMDegQIPxAI
+          - text: "4"
+        - link "Page 5" [ref=f32e539] [cursor=pointer]:
+          - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=40&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8tMDegQIPxAK
+          - text: "5"
+        - link "Page 6" [ref=f32e541] [cursor=pointer]:
+          - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=50&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8tMDegQIPxAM
+          - text: "6"
+        - link "Page 7" [ref=f32e543] [cursor=pointer]:
+          - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=60&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8tMDegQIPxAO
+          - text: "7"
+        - link "Page 8" [ref=f32e545] [cursor=pointer]:
+          - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=70&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8tMDegQIPxAQ
+          - text: "8"
+        - link "Page 9" [ref=f32e547] [cursor=pointer]:
+          - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=80&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8tMDegQIPxAS
+          - text: "9"
+        - link "Page 10" [ref=f32e549] [cursor=pointer]:
+          - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=90&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8tMDegQIPxAU
+          - text: "10"
+        - heading [level=2] [ref=f32e551]:
+          - link "Tiếp" [ref=f32e552] [cursor=pointer]:
+            - /url: /search?q=%22portfolio%22+junior+developer+%22stands+out%22+site:stackoverflow.com+OR+site:reddit.com+r/webdev+hiring&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnv6TuiGGm4JrAadRjTuzseKeYqRTA:1791457895013&ei=Z3rHatowg5W-vQ_Ag7bgDw&start=10&sa=N&sstk=AS6-VmK14tK2iq5pKTzDuyPJ9vZQwn0hF6hc0muYEtCtx1wrNMubu3HqJNB4NfGMuxztwWlzCnwdP3C1gU4JNJJAR00_z-gFkAxWng&ved=2ahUKEwiagNnbpKqXAxWDiq8BHcCBDfwQ8NMDegQIPxAW
+      - navigation
+    - contentinfo [ref=f32e555]:
+      - heading "Đường liên kết ở chân trang" [level=1] [ref=f32e556]
+      - generic [ref=f32e560]:
+        - generic [ref=f32e562]:
+          - text: Việt Nam
+          - generic [ref=f32e564]:
+            - button "Thủ Đức, Hồ Chí Minh - Dựa trên địa chỉ IP của bạn" [ref=f32e566] [cursor=pointer]:
+              - generic [ref=f32e567]: Thủ Đức, Hồ Chí Minh
+              - generic [ref=f32e569]:
+                - text: "-"
+                - generic [ref=f32e570]: Dựa trên địa chỉ IP của bạn
+            - text: "-"
+            - button "Cập nhật vị trí" [ref=f32e572] [cursor=pointer]
+        - generic [ref=f32e575]:
+          - link "Trợ giúp" [ref=f32e576] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=vi&fg=1
+          - link "Gửi phản hồi" [ref=f32e577] [cursor=pointer]:
+            - /url: "#"
+          - link "Quyền riêng tư" [ref=f32e578] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=vi&fg=1
+          - link "Điều khoản" [ref=f32e579] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=vi&fg=1

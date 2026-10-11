@@ -1,0 +1,302 @@
+- generic [active] [ref=f283e1]:
+  - dialog [ref=f283e2]:
+    - generic [ref=f283e7]:
+      - generic [ref=f283e8]:
+        - paragraph [ref=f283e9]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+        - paragraph [ref=f283e10]:
+          - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+          - link "Điều khoản về quyền riêng tư" [ref=f283e11] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+      - generic [ref=f283e12]:
+        - link "Chấp nhận" [ref=f283e14] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+        - link "Từ chối" [ref=f283e16] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+      - link "Các lựa chọn khác" [ref=f283e18] [cursor=pointer]:
+        - /url: "javascript: void(0)"
+  - banner [ref=f283e19]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f283e20] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f283e23] [cursor=pointer]
+    - generic [ref=f283e26]:
+      - link [ref=f283e27] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f283e28]
+      - search [ref=f283e29]:
+        - button "Tìm kiếm" [ref=f283e32] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f283e33]: "\"sổ kiểm thực\" bịu lý về an toàn thực phẩm quýnh thñc trường nghị phát"
+        - generic [ref=f283e34] [cursor=pointer]
+        - generic [ref=f283e36] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f283e41] [cursor=pointer]
+      - link [ref=f283e43] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=1dde63c7ec783e7a7c619e18176ca0104c19095648a8a4aafc2309ae92f5ab47JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT0lMjJzJWUxJWJiJTk1K2tpJWUxJWJiJTgzbSt0aCVlMSViYiViMWMlMjIrYiVlMSViYiU4YnUrbCVjMyViZCt2JWUxJWJiJTgxK2FuK3RvJWMzJWEwbit0aCVlMSViYiViMWMrcGglZTElYmElYTltK3F1JWMzJWJkbmgrdGglYzMlYjFjK3RyJWM2JWIwJWUxJWJiJTlkbmcrbmdoJWUxJWJiJThiK3BoJWMzJWExdCZzZW5kcXVlcnk9MSZmb3JtPUhFQ09EWA&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f283e44]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f283e46]:
+      - link "Đăng nhập" [ref=f283e47] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f283e49] [cursor=pointer]:
+        - generic [ref=f283e50]: Rewards
+    - navigation "Bộ lọc Tìm kiếm" [ref=f283e66]:
+      - list [ref=f283e67]:
+        - listitem [ref=f283e68]:
+          - link "Tất cả" [ref=f283e69] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f283e71]:
+          - link "Web" [ref=f283e72] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6582299477f49095435aada18a0161318c95afb15c31dbaf1a607481e4761a3eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPSUyMnMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyUyMitiJWUxJWJiJThidStsJWMzJWJkK3YlZTElYmIlODErYW4rdG8lYzMlYTBuK3RoJWUxJWJiJWIxYytwaCVlMSViYSVhOW0rcXUlYzMlYmRuaCt0aCVjMyViMWMrdHIlYzYlYjAlZTElYmIlOWRuZytuZ2glZTElYmIlOGIrcGglYzMlYTF0JndlYnNjcD0xJkZPUk09SERSV1ND&ntb=1
+        - listitem [ref=f283e73]:
+          - link "Tìm kiếm" [ref=f283e74] [cursor=pointer]:
+            - /url: /copilotsearch?q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&FORM=CSSCOP
+        - listitem [ref=f283e77]:
+          - link "Hình ảnh" [ref=f283e78] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=a693b1723b9ab22bee8f48e45c8a4fd7ad53274716b749c398856aaf4ec8c85aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT0lMjJzJWUxJWJiJTk1K2tpJWUxJWJiJTgzbSt0aCVlMSViYiViMWMlMjIrYiVlMSViYiU4YnUrbCVjMyViZCt2JWUxJWJiJTgxK2FuK3RvJWMzJWEwbit0aCVlMSViYiViMWMrcGglZTElYmElYTltK3F1JWMzJWJkbmgrdGglYzMlYjFjK3RyJWM2JWIwJWUxJWJiJTlkbmcrbmdoJWUxJWJiJThiK3BoJWMzJWExdCZGT1JNPUhEUlNDMw&ntb=1
+        - listitem [ref=f283e79]:
+          - link "Video" [ref=f283e80] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=648f01007ae35954b24d0c9cf8d578c5cd605a8c55133d61a9c719e6a63ecfc9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT0lMjJzJWUxJWJiJTk1K2tpJWUxJWJiJTgzbSt0aCVlMSViYiViMWMlMjIrYiVlMSViYiU4YnUrbCVjMyViZCt2JWUxJWJiJTgxK2FuK3RvJWMzJWEwbit0aCVlMSViYiViMWMrcGglZTElYmElYTltK3F1JWMzJWJkbmgrdGglYzMlYjFjK3RyJWM2JWIwJWUxJWJiJTlkbmcrbmdoJWUxJWJiJThiK3BoJWMzJWExdCZGT1JNPUhEUlNDNA&ntb=1
+        - listitem [ref=f283e81]:
+          - link "Bản đồ" [ref=f283e82] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6b758d4f4ba95ba94a7de238cb8566cd18fa2dced20d699070e4555d0ac1edf6JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT0lMjJzJWUxJWJiJTk1K2tpJWUxJWJiJTgzbSt0aCVlMSViYiViMWMlMjIrYiVlMSViYiU4YnUrbCVjMyViZCt2JWUxJWJiJTgxK2FuK3RvJWMzJWEwbit0aCVlMSViYiViMWMrcGglZTElYmElYTltK3F1JWMzJWJkbmgrdGglYzMlYjFjK3RyJWM2JWIwJWUxJWJiJTlkbmcrbmdoJWUxJWJiJThiK3BoJWMzJWExdCZGT1JNPUhEUlNDNg&ntb=1
+        - listitem [ref=f283e83]:
+          - button [ref=f283e84] [cursor=pointer]
+  - generic [ref=f283e88]:
+    - main "Kết quả Tìm kiếm" [ref=f283e89]:
+      - generic [ref=f283e91]:
+        - generic [aria-hidden] [ref=f283e92]:
+          - generic [ref=f283e93] [cursor=pointer]
+          - generic [ref=f283e96] [cursor=pointer]
+          - generic [ref=f283e99] [cursor=pointer]
+        - text: Về 2 kết quả
+      - list [ref=f283e101]:
+        - listitem [ref=f283e102]:
+          - generic [ref=f283e106]:
+            - generic [ref=f283e108]:
+              - button "Thích" [ref=f283e109]
+              - button "Không thích" [ref=f283e112]
+            - button "Tuyên bố miễn trừ trách nhiệm về AI" [ref=f283e115]
+        - listitem [ref=f283e140]:
+          - link "vsba.edu.vn" [ref=f283e142] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e7e99dd4bed2718c530cef2b5621f09b540e9b046986c94d64615d42c1db5a29JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92c2JhLmVkdS52bi9xdXktZGluaC12ZS1hbi10b2FuLXRodWMtcGhhbS10cm9uZy10cnVvbmctaG9jLw&ntb=1
+            - generic [ref=f283e147]:
+              - generic [ref=f283e148]: vsba.edu.vn
+              - generic [ref=f283e149]: https://vsba.edu.vn › quy-dinh-ve-an-toan-thuc-pham-trong-truong-hoc
+          - heading [level=2] [ref=f283e152]:
+            - link "Quy định về an toàn thực phẩm trong trường học 2025" [ref=f283e153] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=e7e99dd4bed2718c530cef2b5621f09b540e9b046986c94d64615d42c1db5a29JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92c2JhLmVkdS52bi9xdXktZGluaC12ZS1hbi10b2FuLXRodWMtcGhhbS10cm9uZy10cnVvbmctaG9jLw&ntb=1
+          - paragraph [ref=f283e155]: 20 thg 11, 2025 · Để đảm bảo bếp ăn bán trú và suất ăn học đường luôn trong tình trạng an toàn, tuân thủ pháp luật, các trường học …
+        - listitem [ref=f283e156]:
+          - link "Thư Viện Pháp Luật" [ref=f283e158] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=5b73244333e79af688f6fa021edc2d34dbfc7d3b19bd233d8a5da4617b2bf186JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9tLnRodXZpZW5waGFwbHVhdC52bi9jb25nLXZhbi9HaWFvLWR1Yy9Db25nLXZhbi03NTk4LUJZVC1BVFRQLTIwMjUtdGFuZy1jdW9uZy1jb25nLXRhYy1iYW8tZGFtLWFuLXRvYW4tdGh1Yy1waGFtLWhvYy1kdW9uZy02ODExMzcuYXNweA&ntb=1
+            - generic [ref=f283e163]:
+              - generic [ref=f283e164]: Thư Viện Pháp Luật
+              - generic [ref=f283e165]: https://m.thuvienphapluat.vn › cong-van › Giao-duc
+          - heading [level=2] [ref=f283e168]:
+            - link "Công văn 7598/BYT-ATTP năm 2025 tăng cường công tác bảo đảm …" [ref=f283e169] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=5b73244333e79af688f6fa021edc2d34dbfc7d3b19bd233d8a5da4617b2bf186JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9tLnRodXZpZW5waGFwbHVhdC52bi9jb25nLXZhbi9HaWFvLWR1Yy9Db25nLXZhbi03NTk4LUJZVC1BVFRQLTIwMjUtdGFuZy1jdW9uZy1jb25nLXRhYy1iYW8tZGFtLWFuLXRvYW4tdGh1Yy1waGFtLWhvYy1kdW9uZy02ODExMzcuYXNweA&ntb=1
+          - paragraph [ref=f283e171]: Trong thời gian qua, các cơ quan chức năng ở Trung ương và địa phương đã tích cực triển khai các biện pháp kiểm soát an toàn …
+        - listitem [ref=f283e172]:
+          - link "THƯ VIỆN PHÁP LUẬT" [ref=f283e174] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=24749194e383493a2136466ec020205d902d94b7beb48403c491fe69bd04e33bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vcGhhcC1sdWF0L21hdS1zby1raWVtLXRodWMtMy1idW9jLWN1YS1iby15LXRlLW1vaS1uaGF0LWh1b25nLWRhbi10aHVjLWhpZW4tY2hlLWRvLWtpZW0tdGh1Yy1iYS1idW9jLWNoaS10aWV0LTQ4NTk1LTE3OTgzOS5odG1s&ntb=1
+            - img "Biểu tượng mạng toàn cầu" [ref=f283e178]
+            - generic [ref=f283e179]:
+              - generic [ref=f283e180]: THƯ VIỆN PHÁP LUẬT
+              - generic [ref=f283e181]: https://thuvienphapluat.vn › phap-luat
+          - heading [level=2] [ref=f283e184]:
+            - link "Mẫu sổ kiểm thực 3 bước của Bộ Y tế mới nhất? Hướng dẫn thực …" [ref=f283e185] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=24749194e383493a2136466ec020205d902d94b7beb48403c491fe69bd04e33bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vcGhhcC1sdWF0L21hdS1zby1raWVtLXRodWMtMy1idW9jLWN1YS1iby15LXRlLW1vaS1uaGF0LWh1b25nLWRhbi10aHVjLWhpZW4tY2hlLWRvLWtpZW0tdGh1Yy1iYS1idW9jLWNoaS10aWV0LTQ4NTk1LTE3OTgzOS5odG1s&ntb=1
+          - paragraph [ref=f283e187]: 23 thg 7, 2026 · Trường hợp nguyên liệu, thực phẩm được kiểm tra, đánh giá không đạt yêu cầu về chất lượng, an toàn thực phẩm …
+        - listitem [ref=f283e188]:
+          - generic [ref=f283e189]:
+            - heading [level=2] [ref=f283e190]:
+              - link "Hình ảnh của sổ kiểm thực Bịu Lý về an toàn thực phẩm Quýnh Thñc trường nghị Phát" [ref=f283e191] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=901bf657222d555daa010987237ad4e4e017ef683be03eb08506f887caf837dbJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1zJWUxJWJiJTk1K2tpJWUxJWJiJTgzbSt0aCVlMSViYiViMWMrYiVlMSViYiU4YnUrbCVjMyViZCt2JWUxJWJiJTgxK2FuK3RvJWMzJWEwbit0aCVlMSViYiViMWMrcGglZTElYmElYTltK3F1JWMzJWJkbmgrdGglYzMlYjFjK3RyJWM2JWIwJWUxJWJiJTlkbmcrbmdoJWUxJWJiJThiK3BoJWMzJWExdCZxcHZ0PSUyMnMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyUyMitiJWUxJWJiJThidStsJWMzJWJkK3YlZTElYmIlODErYW4rdG8lYzMlYTBuK3RoJWUxJWJiJWIxYytwaCVlMSViYSVhOW0rcXUlYzMlYmRuaCt0aCVjMyViMWMrdHIlYzYlYjAlZTElYmIlOWRuZytuZ2glZTElYmIlOGIrcGglYzMlYTF0JkZPUk09SUdSRQ&ntb=1
+            - list "Vui lòng sử dụng các phím mũi tên để điều hướng" [ref=f283e202]:
+              - listitem [ref=f283e203]:
+                - list [ref=f283e204]:
+                  - listitem [ref=f283e205]:
+                    - link "Mẫu sổ kiểm thực 3 bước mới nhất và cách viết sổ chi tiết — bePOS Blog ..." [ref=f283e207] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=9CFxn8oH&id=6F69186C3C6D171DB4F57D630CF99FDE1F45B204&thid=OIP.9CFxn8oHEyeIau1xiIsH3AHaJ4&mediaurl=https%3a%2f%2fbepos.io%2fwp-content%2fuploads%2f2023%2f11%2fso-kiem-thuc-3-buoc.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.f421719fca071327886aed71888b07dc%3frik%3dBLJFH96f%252bQxjfQ%26pid%3dImgRaw%26r%3d0&exph=1067&expw=800&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=137A9A5AAE3705258A2CE91FE241373A&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e212]:
+                    - link "Mẫu sổ kiểm thực 3 bước mới nhất và cách viết sổ chi tiết — bePOS Blog ..." [ref=f283e214] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=IctQTNrK&id=6F69186C3C6D171DB4F55922A567F5526C73366C&thid=OIP.IctQTNrKvMTJxnX0BRO51gHaEz&mediaurl=https%3a%2f%2fbepos.io%2fwp-content%2fuploads%2f2023%2f11%2fso-kiem-thuc-3-buoc-16.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.21cb504cdacabcc4c9c675f40513b9d6%3frik%3dbDZzbFL1Z6UiWQ%26pid%3dImgRaw%26r%3d0&exph=454&expw=700&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=51B2F9856297C02CE407E186F0B6F007&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e219]:
+                    - link "Mẫu sổ kiểm thực 3 bước của Bộ Y tế mới nhất? Hướng dẫn thực hiện chế ..." [ref=f283e221] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=vVLkfnvw&id=A4BEC0CDD83ED2FC8414FD609FF88A20A5E013D3&thid=OIP.vVLkfnvwhUoCHBNpy00C8QHaEg&mediaurl=https%3a%2f%2fcdn.thuvienphapluat.vn%2fphap-luat%2f2022-2%2fTHN%2fkiem-thuc-3-buoc-1.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.bd52e47e7bf0854a021c1369cb4d02f1%3frik%3d0xPgpSCK%252bJ9g%252fQ%26pid%3dImgRaw%26r%3d0&exph=400&expw=657&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=47A53BAD103978E477A342333A1A03FF&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e226]:
+                    - link "Biên Bản Kiểm Tra An Toàn Thực Phẩm - Thực Phẩm An Toàn" [ref=f283e228] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=xu00dH1I&id=5A4AA5B1310C542EFCA06F6EAD620A81FD25479F&thid=OIP.xu00dH1I9doYsjCxnTV86gHaKM&mediaurl=https%3a%2f%2fthucphamantoan.net%2fwp-content%2fuploads%2f2023%2f04%2fso-kiem-tra-vsattp-tai-bep-an-ban-tru-tai-truong-28005_8b006d21b89946938adc7e78aee3f846.gif&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.c6ed34747d48f5da18b230b19d357cea%3frik%3dn0cl%252fYEKYq1ubw%26pid%3dImgRaw%26r%3d0&exph=1123&expw=816&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=005ADCBD8AEC12E5DB949B0E1959DEE6&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e233]:
+                    - 'link "Quy Trình Lưu Và Hủy Mẫu Thức Ăn: Hướng Dẫn Chi Tiết và Các Bước Thực ..." [ref=f283e235] [cursor=pointer]':
+                      - /url: /images/search?view=detailV2&ccid=pN4IJmMm&id=DF0348BDE6B6095CA5917A6AAF27E359A20DA3A1&thid=OIP.pN4IJmMmtzpVkc-ALfCtUAHaEL&mediaurl=https%3a%2f%2fvuongluat.com%2fupload%2fproduct%2fso-kiem-thuc-3-buoc-va-quy-trinh-luu-mau-thuc-an-36.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.a4de08266326b73a5591cf802df0ad50%3frik%3doaMNolnjJ69qeg%26pid%3dImgRaw%26r%3d0&exph=924&expw=1640&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=8251BFEFD6DE5CC391FF7247E1C679BB&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e240]:
+                    - link "Sổ kiểm thực 3 bước và lưu mẫu thức ăn" [ref=f283e242] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=jyK%2b80dQ&id=A094480F1E47FCB62D83DDD9E41C3393E8CC4BA6&thid=OIP.jyK-80dQZWxsNTYQP1cZugHaKd&mediaurl=https%3a%2f%2fketoananpha.vn%2fuploads%2fimages%2fbieu-mau%2flinh-vuc-khac%2fSo-kiem-thuc-3-buoc-va-luu-mau-thuc-an-03.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8f22bef34750656c6c3536103f5719ba%3frik%3dpkvM6JMzHOTZ3Q%26pid%3dImgRaw%26r%3d0&exph=1200&expw=849&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=4FF1942F608F90AA28D79ADBC9A08FEF&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e247]:
+                    - 'link "Lưu Mẫu Thực Phẩm Theo Nguyên Tắc: Hướng Dẫn Chi Tiết Quy Trình Và Các ..." [ref=f283e249] [cursor=pointer]':
+                      - /url: /images/search?view=detailV2&ccid=y%2bLd2czV&id=B827C91F756F13B9E329036E76181BA9796969F4&thid=OIP.y-Ld2czVzirWMJmdg_eDYwHaEw&mediaurl=https%3a%2f%2fgiayphepthucpham.vn%2fwp-content%2fuploads%2f2021%2f08%2fluu-mau-thuc-pham1-e1627989803659.png.webp&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.cbe2ddd9ccd5ce2ad630999d83f78363%3frik%3d9GlpeakbGHZuAw%26pid%3dImgRaw%26r%3d0&exph=564&expw=877&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=943145613142D3D11C5F37833C6598A6&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e254]:
+                    - link "Mẫu giấy xác nhận kiến thức về an toàn thực phẩm 2026" [ref=f283e256] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=UQudY0pk&id=BD1B0FAF437159DD6A5B633273957BE81718B3A8&thid=OIP.UQudY0pkzpmOgUkWcBh-1wHaLD&mediaurl=https%3a%2f%2flegalc.vn%2fwp-content%2fuploads%2f2017%2f06%2fmau-giay-xac-nhan-kien-thuc-ve-attp.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.510b9d634a64ce998e81491670187ed7%3frik%3dqLMYF%252bh7lXMyYw%26pid%3dImgRaw%26r%3d0&exph=1042&expw=698&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=49114D1F8112457F6DD5C01A986E724F&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e261]:
+                    - link "#1 Mẫu bản cam kết an toàn thực phẩm. Mẫu giấy cam kết đảm bảo vệ sinh ATTP" [ref=f283e263] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=Wex873Op&id=6307A37C68DCD2C60C6E2B2AA94EACE15803D57E&thid=OIP.Wex873Op8i6W6L09eMWmqAHaE8&mediaurl=https%3a%2f%2flegalc.vn%2fwp-content%2fuploads%2f2021%2f01%2fmau-ban-cam-ket-an-toan-thuc-pham-mau-giay-cam-ket-an-toan-thuc-pham-1024x683.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.59ec7cef73a9f22e96e8bd3d78c5a6a8%3frik%3dftUDWOGsTqkqKw%26pid%3dImgRaw%26r%3d0&exph=683&expw=1024&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=C5C61171D8D0ADF893F3123985FAAE33&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e268]:
+                    - 'link "Bài Kiểm Tra Vệ Sinh An Toàn Thực Phẩm: Hướng Dẫn Toàn Diện và Bộ Câu ..." [ref=f283e270] [cursor=pointer]':
+                      - /url: /images/search?view=detailV2&ccid=UUEH1FIN&id=7A770837AC95F858D886FCA7CC59E939236789E3&thid=OIP.UUEH1FINlc9g7ZMxO47QHgHaJk&mediaurl=https%3a%2f%2fvsattp.vn%2fwp-content%2fuploads%2f2023%2f10%2fMau-bien-ban-kiem-tra-ve-sinh-an-toan-thuc-pham-moi-nhat-1.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.514107d4520d95cf60ed93313b8ed01e%3frik%3d44lnIznpWcyn%252fA%26pid%3dImgRaw%26r%3d0&exph=715&expw=553&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=4AFF89FD13A1C8829EA69C8B9EF8549D&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e275]:
+                    - 'link "Mẫu số 01a: Đơn đề nghị cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn ..." [ref=f283e277] [cursor=pointer]':
+                      - /url: /images/search?view=detailV2&ccid=jfpsCodx&id=A5406480BCE4A8EC45D0FF5E99D3D1C286B1D66E&thid=OIP.jfpsCodx3ZjLep8P0zHVPAHaJl&mediaurl=https%3a%2f%2fketoananpha.vn%2fuploads%2fimages%2fbieu-mau%2fThanh-lap-doanh-nghiep%2fMau-so-01a-Don-de-nghi-cap-giay-chung-nhan-co-so-du-dieu-kien-an-toan-thuc-pham-2.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8dfa6c0a8771dd98cb7a9f0fd331d53c%3frik%3dbtaxhsLR05le%252fw%26pid%3dImgRaw%26r%3d0&exph=1200&expw=927&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=75408F2B9A95F959E1A7B58655D4856D&selectedIndex=0&idpp=serp
+                  - listitem [ref=f283e282]:
+                    - link "Kiểm tra an toàn thực phẩm tại 10 tỉnh, thành" [ref=f283e284] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=9EXkscbQ&id=5B2D2ABBCFB504205754AABF90B61AF92A41EF91&thid=OIP.9EXkscbQGIM47lj3gwyk7QHaFj&mediaurl=https%3a%2f%2fnld.mediacdn.vn%2f291774122806476800%2f2025%2f4%2f14%2fattp12-1733571422844781349065-1744603283504-17446032843831070194512.jpeg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.f445e4b1c6d0188338ee58f7830ca4ed%3frik%3dke9BKvkatpC%252fqg%26pid%3dImgRaw%26r%3d0&exph=1440&expw=1920&q=%22s%e1%bb%95+ki%e1%bb%83m+th%e1%bb%b1c%22+b%e1%bb%8bu+l%c3%bd+v%e1%bb%81+an+to%c3%a0n+th%e1%bb%b1c+ph%e1%ba%a9m+qu%c3%bdnh+th%c3%b1c+tr%c6%b0%e1%bb%9dng+ngh%e1%bb%8b+ph%c3%a1t&mode=overlay&FORM=IQFRBA&ck=C3AE7149F877CD45C7389DA8F05D6558&selectedIndex=0&idpp=serp
+            - link "Xem tất cả hình ảnh" [ref=f283e290] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=ea308e02334524b94407d4976268fce335f13793ad346acc1fb8caee9229ff64JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1zJWUxJWJiJTk1K2tpJWUxJWJiJTgzbSt0aCVlMSViYiViMWMrYiVlMSViYiU4YnUrbCVjMyViZCt2JWUxJWJiJTgxK2FuK3RvJWMzJWEwbit0aCVlMSViYiViMWMrcGglZTElYmElYTltK3F1JWMzJWJkbmgrdGglYzMlYjFjK3RyJWM2JWIwJWUxJWJiJTlkbmcrbmdoJWUxJWJiJThiK3BoJWMzJWExdCZxcHZ0PSUyMnMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyUyMitiJWUxJWJiJThidStsJWMzJWJkK3YlZTElYmIlODErYW4rdG8lYzMlYTBuK3RoJWUxJWJiJWIxYytwaCVlMSViYSVhOW0rcXUlYzMlYmRuaCt0aCVjMyViMWMrdHIlYzYlYjAlZTElYmIlOWRuZytuZ2glZTElYmIlOGIrcGglYzMlYTF0JkZPUk09SVFGUk1M&ntb=1
+              - button "Xem tất cả hình ảnh" [ref=f283e294]
+        - listitem [ref=f283e297]:
+          - link "LuatVietnam" [ref=f283e299] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=17c95b4ffd602a5098c6d56f4abc0e6a412e3ef0b6930b58d19b79a8f1400b55JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0dmlldG5hbS52bi90aHVjLXBoYW0vY29uZy12YW4tNzU5OC1ieXQtYXR0cC0yMDI1LXRhbmctY3VvbmctYmFvLWRhbS1hbi10b2FuLXRodWMtcGhhbS1ob2MtZHVvbmctdmEtYmVwLWFuLXRhcC10aGUtNDE4ODUxLWQ2Lmh0bWw&ntb=1
+            - generic [ref=f283e304]:
+              - generic [ref=f283e305]: LuatVietnam
+              - generic [ref=f283e306]: https://luatvietnam.vn › thuc-pham
+          - heading [level=2] [ref=f283e309]:
+            - link "Công văn 7598/BYT-ATTP 2025 tăng cường bảo đảm an toàn thực …" [ref=f283e310] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=17c95b4ffd602a5098c6d56f4abc0e6a412e3ef0b6930b58d19b79a8f1400b55JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0dmlldG5hbS52bi90aHVjLXBoYW0vY29uZy12YW4tNzU5OC1ieXQtYXR0cC0yMDI1LXRhbmctY3VvbmctYmFvLWRhbS1hbi10b2FuLXRodWMtcGhhbS1ob2MtZHVvbmctdmEtYmVwLWFuLXRhcC10aGUtNDE4ODUxLWQ2Lmh0bWw&ntb=1
+          - paragraph [ref=f283e312]: Trong thời gian qua, các cơ quan chức năng ở Trung ương và địa phương đã tích cực triển khai các biện pháp kiểm soát an toàn …
+        - listitem [ref=f283e313]:
+          - link "fic.edu.vn" [ref=f283e315] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7f1cfc7f2c4ca3b666e4c553e9d6e1411a3f8321e1f2de01c7a75750318796a9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9maWMuZWR1LnZuL21hdS1zby1raWVtLXRodWMtMy1idW9jLXZhLWx1dS1tYXUv&ntb=1
+            - generic [ref=f283e320]:
+              - generic [ref=f283e321]: fic.edu.vn
+              - generic [ref=f283e322]: https://fic.edu.vn
+          - heading [level=2] [ref=f283e325]:
+            - link "Hướng dẫn điền mẫu sổ kiểm thực 3 bước và lưu mẫu thức ăn" [ref=f283e326] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=7f1cfc7f2c4ca3b666e4c553e9d6e1411a3f8321e1f2de01c7a75750318796a9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9maWMuZWR1LnZuL21hdS1zby1raWVtLXRodWMtMy1idW9jLXZhLWx1dS1tYXUv&ntb=1
+          - paragraph [ref=f283e328]: 12 thg 7, 2026 · Bài viết hướng dẫn chi tiết cách dùng mẫu sổ kiểm thực 3 bước và biểu mẫu lưu mẫu thức ăn theo Quyết định …
+        - listitem [ref=f283e329]:
+          - link "THƯ VIỆN PHÁP LUẬT" [ref=f283e331] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=745784133694efd916e7564e5e0d04b6c506f3d04013f7f54c571907fa8140bdJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vcGhhcC1sdWF0L2hvLXRyby1waGFwLWx1YXQvZmlsZS1tYXUtc28ta2llbS10aHVjLTMtYnVvYy0yMDI2LXRoZS1uYW8tY2FjaC1naGktc28ta2llbS10aHVjLTMtYnVvYy1jaGktdGlldC12YS1kYXktZHUtcmEtc2FvLTg4NTc2NC0yOTE0MDguaHRtbA&ntb=1
+            - generic [ref=f283e336]:
+              - generic [ref=f283e337]: THƯ VIỆN PHÁP LUẬT
+              - generic [ref=f283e338]: https://thuvienphapluat.vn › phap-luat › ho-tro-phap-luat
+          - heading [level=2] [ref=f283e341]:
+            - link "File Mẫu sổ kiểm thực 3 bước 2026 thế nào? Cách ghi sổ kiểm thực 3 …" [ref=f283e342] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=745784133694efd916e7564e5e0d04b6c506f3d04013f7f54c571907fa8140bdJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vcGhhcC1sdWF0L2hvLXRyby1waGFwLWx1YXQvZmlsZS1tYXUtc28ta2llbS10aHVjLTMtYnVvYy0yMDI2LXRoZS1uYW8tY2FjaC1naGktc28ta2llbS10aHVjLTMtYnVvYy1jaGktdGlldC12YS1kYXktZHUtcmEtc2FvLTg4NTc2NC0yOTE0MDguaHRtbA&ntb=1
+          - paragraph [ref=f283e344]: 16 thg 9, 2026 · Trường hợp nguyên liệu, thực phẩm được kiểm tra, đánh giá không đạt yêu cầu về chất lượng, an toàn thực phẩm …
+        - listitem [ref=f283e345]:
+          - link "bantru.vn" [ref=f283e347] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=fb9e64913e8c648c0e9d353d31e39c1a526f1d958af79f2c69c7ac268ab5d832JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW50cnUudm4vY2FuLWN1LXBoYXAtbHktdmUta2llbS10aHVjLWJhLWJ1b2MtdmEtbHV1LW1hdS10aHVjLWFuLmh0bWw&ntb=1
+            - generic [ref=f283e352]:
+              - generic [ref=f283e353]: bantru.vn
+              - generic [ref=f283e354]: https://bantru.vn › can-cu-phap-ly-ve-kiem-thuc-ba...
+          - heading [level=2] [ref=f283e357]:
+            - link "Căn cứ pháp lý về kiểm thực ba bước và lưu mẫu thức ăn" [ref=f283e358] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=fb9e64913e8c648c0e9d353d31e39c1a526f1d958af79f2c69c7ac268ab5d832JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW50cnUudm4vY2FuLWN1LXBoYXAtbHktdmUta2llbS10aHVjLWJhLWJ1b2MtdmEtbHV1LW1hdS10aHVjLWFuLmh0bWw&ntb=1
+          - paragraph [ref=f283e360]: Tìm hiểu chi tiết các căn cứ pháp lý hiện hành và hướng dẫn thực hiện quy trình kiểm thực ba bước, lưu mẫu thức ăn cho các bếp …
+        - listitem [ref=f283e361]:
+          - link "Hoatieu.vn" [ref=f283e363] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=530ff1c1b1343562c7f5b489ee30b967039b34cffef847f142ed092cbed2f2deJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9ob2F0aWV1LnZuL2JpZXUtbWF1L21hdS1zby1raWVtLXRodWMtMy1idW9jLTE0OTc2MA&ntb=1
+            - generic [ref=f283e368]:
+              - generic [ref=f283e369]: Hoatieu.vn
+              - generic [ref=f283e370]: https://hoatieu.vn › bieu-mau
+          - heading [level=2] [ref=f283e373]:
+            - link "Mẫu sổ kiểm thực 3 bước mới nhất 2026 - Hoatieu.vn" [ref=f283e374] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=530ff1c1b1343562c7f5b489ee30b967039b34cffef847f142ed092cbed2f2deJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9ob2F0aWV1LnZuL2JpZXUtbWF1L21hdS1zby1raWVtLXRodWMtMy1idW9jLTE0OTc2MA&ntb=1
+          - paragraph [ref=f283e376]: 24 thg 12, 2025 · Mẫu sổ kiểm thực ba bước được ban hành kèm theo Quyết định số 1246/QĐ-BYT ngày 31/3/2017 của Bộ trưởng …
+        - listitem [ref=f283e377]:
+          - link "Báo Tuyên Quang điện tử" [ref=f283e379] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=fe896085dd0a7dc06d512a3397659d5f54cfcd23cb12ce8f3db702a82a26c199JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW90dXllbnF1YW5nLmNvbS52bi94YS1ob2kvMjAyNjA5L3NpZXQtY2hhdC1hbi10b2FuLXRodWMtcGhhbS10YWktY2FjLWJlcC1hbi10YXAtdGhlLXRydW9uZy1ob2MtNjc0NWJmYi8&ntb=1
+            - generic [ref=f283e384]:
+              - generic [ref=f283e385]: Báo Tuyên Quang điện tử
+              - generic [ref=f283e386]: https://baotuyenquang.com.vn › xa-hoi › siet...
+          - heading "Siết chặt an toàn thực phẩm tại các bếp ăn tập thể trường học" [level=2] [ref=f283e389]:
+            - link "Siết chặt an toàn thực phẩm tại các bếp ăn tập thể trường học":
+              - /url: https://www.bing.com/ck/a?!&&p=fe896085dd0a7dc06d512a3397659d5f54cfcd23cb12ce8f3db702a82a26c199JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW90dXllbnF1YW5nLmNvbS52bi94YS1ob2kvMjAyNjA5L3NpZXQtY2hhdC1hbi10b2FuLXRodWMtcGhhbS10YWktY2FjLWJlcC1hbi10YXAtdGhlLXRydW9uZy1ob2MtNjc0NWJmYi8&ntb=1
+          - paragraph [ref=f283e391]: 23 thg 9, 2026 · Sở Y tế Tuyên Quang siết chặt kiểm tra an toàn thực phẩm tại bếp ăn trường học. Phát hiện nhiều tồn tại, yêu cầu …
+        - listitem [ref=f283e392]:
+          - link "Scribd" [ref=f283e394] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=f6b54a9d6fc0a06f2e25eb1ece88906cf11109314e2eeb604607902d6f310a8aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NyaWJkLmNvbS9kb2N1bWVudC83Mzk3MDQ3MTQvUyVFMSVCQiU5NS1LaSVFMSVCQiU4M20tVGglRTElQkIlQjFjLTMtQiVDNiVCMCVFMSVCQiU5QmMtVGhlby1RJUM0JTkwLTEyNDYtQllULUNvcHk&ntb=1
+            - generic [ref=f283e399]:
+              - generic [ref=f283e400]: Scribd
+              - generic [ref=f283e401]: https://www.scribd.com › document
+          - heading "Sổ Kiểm Thực 3 Bước (Theo QĐ 1246 BYT) | PDF - Scribd" [level=2] [ref=f283e404]:
+            - link "Sổ Kiểm Thực 3 Bước (Theo QĐ 1246 BYT) | PDF - Scribd":
+              - /url: https://www.bing.com/ck/a?!&&p=f6b54a9d6fc0a06f2e25eb1ece88906cf11109314e2eeb604607902d6f310a8aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NyaWJkLmNvbS9kb2N1bWVudC83Mzk3MDQ3MTQvUyVFMSVCQiU5NS1LaSVFMSVCQiU4M20tVGglRTElQkIlQjFjLTMtQiVDNiVCMCVFMSVCQiU5QmMtVGhlby1RJUM0JTkwLTEyNDYtQllULUNvcHk&ntb=1
+          - paragraph [ref=f283e406]: "Mẫu số 1: Kiểm tra trước khi chế biến thức ăn (Bước 1) Người kiểm tra: …………………………………………. Theo QĐ Số: 1246/QĐ …"
+        - listitem [ref=f283e407]:
+          - generic [ref=f283e408]:
+            - heading [level=2] [ref=f283e409]:
+              - text: Tìm hiểu kỹ hơn về
+              - strong [ref=f283e410]: "\"sổ kiểm thực\" bịu lý về an toàn thực phẩm quýnh"
+              - text: …
+            - list [ref=f283e411]:
+              - listitem [ref=f283e412]:
+                - link [ref=f283e413] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=26ca9065fdf8f0e8b3214258f8ee80b3a43b85387451261c10ab2cc2d30b6393JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyszK2IlYzYlYjAlZTElYmIlOWJjJkZPUk09UVNSRTE&ntb=1
+                  - generic [ref=f283e415]:
+                    - text: sổ kiểm thực
+                    - strong [ref=f283e416]: 3 bước
+              - listitem [ref=f283e417]:
+                - link [ref=f283e418] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=ca9e50e826aac7ee2a14d79a95cbf3898be2950301c99b13de7f523fc6a7e449JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyttJWUxJWJhJWFidSZGT1JNPVFTUkUy&ntb=1
+                  - generic [ref=f283e420]:
+                    - text: sổ kiểm thực
+                    - strong [ref=f283e421]: mẫu
+              - listitem [ref=f283e422]:
+                - link [ref=f283e423] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=15dbae8fa6d78b0f861bbb82829cda67a343df7ca8bdb4e971c644e28f60cec2JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyt5K3QlZTElYmElYmYmRk9STT1RU1JFMw&ntb=1
+                  - generic [ref=f283e425]:
+                    - text: sổ kiểm thực
+                    - strong [ref=f283e426]: y tế
+              - listitem [ref=f283e427]:
+                - link "sổ kiểm thực thực phẩm" [ref=f283e428] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=f0f5b8f6287dbee2d8c0c48139cbe886f8c1ad73bbf721ef9ffa9b64f862e4e6JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyt0aCVlMSViYiViMWMrcGglZTElYmElYTltJkZPUk09UVNSRTQ&ntb=1
+              - listitem [ref=f283e431]:
+                - link [ref=f283e432] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=cd07e1613a04bdd0aba49e09602c01e9ce4053de83880c42e34e879c1a8a2b34JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPWtpJWUxJWJiJTgzbSt0cmErdGglZTElYmIlYjFjK3BoJWUxJWJhJWE5bSZGT1JNPVFTUkU1&ntb=1
+                  - generic [ref=f283e434]:
+                    - text: kiểm
+                    - strong [ref=f283e435]: tra
+                    - text: thực phẩm
+        - listitem [ref=f283e436]:
+          - link "Một số kết quả đã bị xóa" [ref=f283e438] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e7e0e4b27a77d08e3ba8e737568a767ff44dde3e84c17c7ede3301285b6ea292JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+    - complementary "Kết quả bổ sung" [ref=f283e439]:
+      - list [ref=f283e440]:
+        - listitem [ref=f283e441]:
+          - generic "Tìm kiếm có liên quan" [ref=f283e442]:
+            - generic [ref=f283e444]:
+              - heading [level=2] [ref=f283e446]:
+                - text: Tìm hiểu kỹ hơn về
+                - strong [ref=f283e447]: "\"sổ kiểm thực\" bịu lý về an toàn thực phẩm quýnh"
+                - text: …
+              - generic [ref=f283e448]:
+                - link [ref=f283e450] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=2c2b99482625411547ce5ee6a882a3f22a834de01829df621c664e92ca841e9eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyszK2IlYzYlYjAlZTElYmIlOWJjJkZPUk09UjVGRA&ntb=1
+                  - generic [ref=f283e452]:
+                    - text: sổ kiểm thực
+                    - strong [ref=f283e453]: 3 bước
+                - link [ref=f283e455] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=a7562838d5ceee3373b4d1d82171ab733ffa332517d66d4eceaf0a27db064fd8JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyttJWUxJWJhJWFidSZGT1JNPVI1RkQx&ntb=1
+                  - generic [ref=f283e457]:
+                    - text: sổ kiểm thực
+                    - strong [ref=f283e458]: mẫu
+                - link [ref=f283e460] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=6cf552cb766179cae2a88fe72e19f0deb19628aa549abfc30d5755c6692e570eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyt5K3QlZTElYmElYmYmRk9STT1SNUZEMg&ntb=1
+                  - generic [ref=f283e462]:
+                    - text: sổ kiểm thực
+                    - strong [ref=f283e463]: y tế
+                - link "sổ kiểm thực thực phẩm" [ref=f283e465] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=f0f8c8bc09b86b1440eed8cb2913d92f4332af86ae902aaae5558f1fe99d3556JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXMlZTElYmIlOTUra2klZTElYmIlODNtK3RoJWUxJWJiJWIxYyt0aCVlMSViYiViMWMrcGglZTElYmElYTltJkZPUk09UjVGRDM&ntb=1
+                - link [ref=f283e469] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=3ab25fd1fd45f998ee3ee4a88160d86314bd171c3fa2ad9d7a970f98874ff5a1JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPWtpJWUxJWJiJTgzbSt0cmErdGglZTElYmIlYjFjK3BoJWUxJWJhJWE5bSZGT1JNPVI1RkQ0&ntb=1
+                  - generic [ref=f283e471]:
+                    - text: kiểm
+                    - strong [ref=f283e472]: tra
+                    - text: thực phẩm
+  - contentinfo [ref=f283e473]:
+    - generic [ref=f283e474]:
+      - list:
+        - listitem [ref=f283e475]:
+          - link "Quyền riêng tư" [ref=f283e476] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f283e477]:
+          - link "Điều khoản" [ref=f283e478] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

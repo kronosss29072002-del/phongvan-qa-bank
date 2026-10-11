@@ -1,0 +1,664 @@
+[
+  {
+    "name": "/ck:analyze_flaky_tests",
+    "path": "analyze_flaky_tests.md",
+    "description": "Ph\u00e2n t\u00edch automation tests kh\u00f4ng \u1ed5n \u0111\u1ecbnh (flaky), x\u00e1c \u0111\u1ecbnh root cause v\u00e0 t\u1ef1 \u0111\u1ed9ng kh\u1eafc ph\u1ee5c. H\u1ed7 tr\u1ee3 2 mode \u2014 ANALYZE (ch\u1ec9 b\u00e1o c\u00e1o) v\u00e0 FIX (b\u00e1o c\u00e1o + t\u1ef1 s\u1eeda code).",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:analyze_requirement_document",
+    "path": "analyze_requirement_document.md",
+    "description": "Ph\u00e2n t\u00edch requirement document (Jira ticket, .doc, user story) \u2014 sinh t\u00e0i li\u1ec7u ph\u00e2n t\u00edch chi ti\u1ebft, KH\u00d4NG sinh test cases.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:ask",
+    "path": "ask.md",
+    "description": "Answer technical and architectural questions.",
+    "argument_hint": [
+      "technical-question"
+    ],
+    "power_level": 1,
+    "category": "core"
+  },
+  {
+    "name": "/ck:bootstrap:auto:fast",
+    "path": "bootstrap/auto/fast.md",
+    "description": "Quickly bootstrap a new project automatically",
+    "argument_hint": [
+      "user-requirements"
+    ],
+    "power_level": 3,
+    "category": "bootstrap"
+  },
+  {
+    "name": "/ck:bootstrap:auto",
+    "path": "bootstrap/auto.md",
+    "description": "Bootstrap a new project automatically",
+    "argument_hint": [
+      "user-requirements"
+    ],
+    "power_level": 4,
+    "category": "bootstrap"
+  },
+  {
+    "name": "/ck:bootstrap",
+    "path": "bootstrap.md",
+    "description": "Bootstrap a new project step by step",
+    "argument_hint": [
+      "user-requirements"
+    ],
+    "power_level": 5,
+    "category": "core"
+  },
+  {
+    "name": "/ck:brainstorm",
+    "path": "brainstorm.md",
+    "description": "Brainstorm a feature",
+    "argument_hint": [
+      "question"
+    ],
+    "power_level": 2,
+    "category": "core"
+  },
+  {
+    "name": "/ck:code",
+    "path": "code.md",
+    "description": "Start coding & testing an existing plan",
+    "argument_hint": [
+      "plan"
+    ],
+    "power_level": 1,
+    "category": "core"
+  },
+  {
+    "name": "/ck:content:cro",
+    "path": "content/cro.md",
+    "description": "Analyze the current content and optimize for conversion",
+    "argument_hint": [
+      "issues"
+    ],
+    "power_level": 0,
+    "category": "content"
+  },
+  {
+    "name": "/ck:content:enhance",
+    "path": "content/enhance.md",
+    "description": "Analyze the current copy issues and enhance it",
+    "argument_hint": [
+      "issues"
+    ],
+    "power_level": 0,
+    "category": "content"
+  },
+  {
+    "name": "/ck:content:fast",
+    "path": "content/fast.md",
+    "description": "Write creative & smart copy [FAST]",
+    "argument_hint": [
+      "user-request"
+    ],
+    "power_level": 0,
+    "category": "content"
+  },
+  {
+    "name": "/ck:content:good",
+    "path": "content/good.md",
+    "description": "Write good creative & smart copy [GOOD]",
+    "argument_hint": [
+      "user-request"
+    ],
+    "power_level": 0,
+    "category": "content"
+  },
+  {
+    "name": "/ck:cook:auto:fast",
+    "path": "cook/auto/fast.md",
+    "description": "No research. Only scout, plan & implement [\"trust me bro\"]",
+    "argument_hint": [
+      "tasks-or-prompt"
+    ],
+    "power_level": 1,
+    "category": "cook"
+  },
+  {
+    "name": "/ck:cook:auto",
+    "path": "cook/auto.md",
+    "description": "Implement a feature automatically (\"trust me bro\")",
+    "argument_hint": [
+      "tasks"
+    ],
+    "power_level": 2,
+    "category": "cook"
+  },
+  {
+    "name": "/ck:cook",
+    "path": "cook.md",
+    "description": "Implement a feature [step by step]",
+    "argument_hint": [
+      "tasks"
+    ],
+    "power_level": 3,
+    "category": "core"
+  },
+  {
+    "name": "/ck:debug",
+    "path": "debug.md",
+    "description": "Debugging technical issues and providing solutions.",
+    "argument_hint": [
+      "issues"
+    ],
+    "power_level": 2,
+    "category": "core"
+  },
+  {
+    "name": "/ck:design:3d",
+    "path": "design/3d.md",
+    "description": "Create immersive interactive 3D designs with Three.js",
+    "argument_hint": [
+      "tasks"
+    ],
+    "power_level": 0,
+    "category": "design"
+  },
+  {
+    "name": "/ck:design:describe",
+    "path": "design/describe.md",
+    "description": "Describe a design based on screenshot/video",
+    "argument_hint": [
+      "screenshot"
+    ],
+    "power_level": 0,
+    "category": "design"
+  },
+  {
+    "name": "/ck:design:fast",
+    "path": "design/fast.md",
+    "description": "Create a quick design",
+    "argument_hint": [
+      "tasks"
+    ],
+    "power_level": 0,
+    "category": "design"
+  },
+  {
+    "name": "/ck:design:good",
+    "path": "design/good.md",
+    "description": "Create an immersive design",
+    "argument_hint": [
+      "tasks"
+    ],
+    "power_level": 0,
+    "category": "design"
+  },
+  {
+    "name": "/ck:design:screenshot",
+    "path": "design/screenshot.md",
+    "description": "Create a design based on screenshot",
+    "argument_hint": [
+      "screenshot"
+    ],
+    "power_level": 0,
+    "category": "design"
+  },
+  {
+    "name": "/ck:design:video",
+    "path": "design/video.md",
+    "description": "Create a design based on video",
+    "argument_hint": [
+      "video"
+    ],
+    "power_level": 0,
+    "category": "design"
+  },
+  {
+    "name": "/ck:docs:init",
+    "path": "docs/init.md",
+    "description": "Analyze the codebase and create initial documentation",
+    "argument_hint": "",
+    "power_level": 4,
+    "category": "docs"
+  },
+  {
+    "name": "/ck:docs:summarize",
+    "path": "docs/summarize.md",
+    "description": "",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "docs"
+  },
+  {
+    "name": "/ck:docs:update",
+    "path": "docs/update.md",
+    "description": "Analyze the codebase and update documentation",
+    "argument_hint": "",
+    "power_level": 3,
+    "category": "docs"
+  },
+  {
+    "name": "/ck:fetch_jira_requirements",
+    "path": "fetch_jira_requirements.md",
+    "description": "L\u1ea5y Requirements / User Stories t\u1eeb Jira ticket v\u00e0 l\u01b0u th\u00e0nh file markdown ho\u1eb7c JSON.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:fix:ci",
+    "path": "fix/ci.md",
+    "description": "Analyze Github Actions logs and fix issues",
+    "argument_hint": [
+      "github-actions-url"
+    ],
+    "power_level": 1,
+    "category": "fix"
+  },
+  {
+    "name": "/ck:fix:fast",
+    "path": "fix/fast.md",
+    "description": "Analyze and fix small issues [FAST]",
+    "argument_hint": [
+      "issues"
+    ],
+    "power_level": 1,
+    "category": "fix"
+  },
+  {
+    "name": "/ck:fix:hard",
+    "path": "fix/hard.md",
+    "description": "Use subagents to plan and fix hard issues",
+    "argument_hint": [
+      "issues"
+    ],
+    "power_level": 3,
+    "category": "fix"
+  },
+  {
+    "name": "/ck:fix:logs",
+    "path": "fix/logs.md",
+    "description": "Analyze logs and fix issues",
+    "argument_hint": [
+      "issue"
+    ],
+    "power_level": 1,
+    "category": "fix"
+  },
+  {
+    "name": "/ck:fix:test",
+    "path": "fix/test.md",
+    "description": "Run test suite and fix issues",
+    "argument_hint": [
+      "issues"
+    ],
+    "power_level": 2,
+    "category": "fix"
+  },
+  {
+    "name": "/ck:fix:types",
+    "path": "fix/types.md",
+    "description": "Fix type errors",
+    "argument_hint": "",
+    "power_level": 1,
+    "category": "fix"
+  },
+  {
+    "name": "/ck:fix:ui",
+    "path": "fix/ui.md",
+    "description": "Analyze and fix UI issues",
+    "argument_hint": [
+      "issue"
+    ],
+    "power_level": 2,
+    "category": "fix"
+  },
+  {
+    "name": "/ck:fix",
+    "path": "fix.md",
+    "description": "Analyze and fix small issues [AUTO DETECT COMPLEXITY]",
+    "argument_hint": [
+      "issues"
+    ],
+    "power_level": 2,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_api_tests_from_swagger",
+    "path": "generate_api_tests_from_swagger.md",
+    "description": "Sinh API test cases v\u00e0 automation scripts t\u1eeb Swagger/OpenAPI specification. H\u1ed7 tr\u1ee3 2 mode \u2014 SPEC (ch\u1ec9 test cases) v\u00e0 FULL (test cases + automation scripts).",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_application_test_plan",
+    "path": "generate_application_test_plan.md",
+    "description": "Kh\u00e1m ph\u00e1 \u1ee9ng d\u1ee5ng web, sinh test plan v\u00e0 test scenarios. H\u1ed7 tr\u1ee3 2 mode \u2014 PLAN (ch\u1ec9 test plan) v\u00e0 FULL (test plan + automation skeleton).",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_automation_framework",
+    "path": "generate_automation_framework.md",
+    "description": "Thi\u1ebft k\u1ebf v\u00e0 scaffold automation framework ho\u00e0n ch\u1ec9nh. H\u1ed7 tr\u1ee3 Playwright, Selenium, Appium \u2014 Web, Mobile, API.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_automation_from_testcases",
+    "path": "generate_automation_from_testcases.md",
+    "description": "Convert manual test cases into automation scripts autonomously using the 6-step AI-RBT Framework via Antigravity Capabilities.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_automation_from_ui_flow",
+    "path": "generate_automation_from_ui_flow.md",
+    "description": "Th\u1ef1c thi UI flow tr\u1ef1c ti\u1ebfp tr\u00ean browser, thu th\u1eadp locators t\u1eeb DOM th\u1ef1c t\u1ebf, v\u00e0 sinh automation scripts. H\u1ed7 tr\u1ee3 Playwright, Selenium, Appium.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_combinatorial_test_data",
+    "path": "generate_combinatorial_test_data.md",
+    "description": "Sinh test data cho ma tr\u1eadn k\u1ebft h\u1ee3p \u0111a chi\u1ec1u b\u1eb1ng pipeline ch\u1ea1y th\u1eadt qua nhi\u1ec1u modules. Input t\u1eeb /generate_cross_module_test_plan.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_cross_module_test_plan",
+    "path": "generate_cross_module_test_plan.md",
+    "description": "Ph\u00e2n t\u00edch t\u00ednh n\u0103ng \u0111i qua nhi\u1ec1u modules n\u1ed1i ti\u1ebfp, x\u00e2y d\u1ef1ng Module Map + Dimension Catalog, v\u00e0 sinh ma tr\u1eadn k\u1ebft h\u1ee3p (Pairwise/Business-critical/Full Cartesian). H\u1ed7 tr\u1ee3 2 modes \u2014 DOCUMENT (t\u1eeb t\u00e0i li\u1ec7u) v\u00e0 BROWSER (inspect DOM th\u1ef1c t\u1ebf).",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_locator",
+    "path": "generate_locator.md",
+    "description": "Sinh locator \u1ed5n \u0111\u1ecbnh cho UI element. H\u1ed7 tr\u1ee3 Playwright, Selenium, Appium.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_manual_testcases_rbt",
+    "path": "generate_manual_testcases_rbt.md",
+    "description": "Sinh manual test cases ch\u1ea5t l\u01b0\u1ee3ng cao theo quy tr\u00ecnh AI-RBT 6 b\u01b0\u1edbc (Risk-Based Testing) t\u1eeb requirements.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_requirements_from_website",
+    "path": "generate_requirements_from_website.md",
+    "description": "Generate Requirements content from a provided website module",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_test_data",
+    "path": "generate_test_data.md",
+    "description": "Sinh test data c\u00f3 c\u1ea5u tr\u00fac, unique, traceable cho test cases. H\u1ed7 tr\u1ee3 UI forms, API payloads, data-driven tests.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:generate_testcases_from_requirements",
+    "path": "generate_testcases_from_requirements.md",
+    "description": "Sinh manual test cases nhanh t\u1eeb requirements (QUICK mode \u2014 kh\u00f4ng qua quy tr\u00ecnh 6 b\u01b0\u1edbc).",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:git:cm",
+    "path": "git/cm.md",
+    "description": "Stage all files and create a commit.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "git"
+  },
+  {
+    "name": "/ck:git:cp",
+    "path": "git/cp.md",
+    "description": "Stage, commit and push all code in the current branch",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "git"
+  },
+  {
+    "name": "/ck:git:pr",
+    "path": "git/pr.md",
+    "description": "",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "git"
+  },
+  {
+    "name": "/ck:import_test_results_xray",
+    "path": "import_test_results_xray.md",
+    "description": "\u0110\u1ea9y k\u1ebft qu\u1ea3 test automation (Playwright/JUnit/Allure) l\u00ean Xray Test Management.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:integrate:polar",
+    "path": "integrate/polar.md",
+    "description": "Implement payment integration with Polar.sh",
+    "argument_hint": [
+      "tasks"
+    ],
+    "power_level": 2,
+    "category": "integrate"
+  },
+  {
+    "name": "/ck:integrate:sepay",
+    "path": "integrate/sepay.md",
+    "description": "Implement payment integration with SePay.vn",
+    "argument_hint": [
+      "tasks"
+    ],
+    "power_level": 2,
+    "category": "integrate"
+  },
+  {
+    "name": "/ck:journal",
+    "path": "journal.md",
+    "description": "Write some journal entries.",
+    "argument_hint": "",
+    "power_level": 1,
+    "category": "core"
+  },
+  {
+    "name": "/ck:plan:ci",
+    "path": "plan/ci.md",
+    "description": "Analyze Github Actions logs and provide a plan to fix the issues",
+    "argument_hint": [
+      "github-actions-url"
+    ],
+    "power_level": 0,
+    "category": "plan"
+  },
+  {
+    "name": "/ck:plan:cro",
+    "path": "plan/cro.md",
+    "description": "Create a CRO plan for the given content",
+    "argument_hint": [
+      "issues"
+    ],
+    "power_level": 0,
+    "category": "plan"
+  },
+  {
+    "name": "/ck:plan:fast",
+    "path": "plan/fast.md",
+    "description": "No research. Only analyze and create an implementation plan",
+    "argument_hint": [
+      "task"
+    ],
+    "power_level": 2,
+    "category": "plan"
+  },
+  {
+    "name": "/ck:plan:hard",
+    "path": "plan/hard.md",
+    "description": "Research, analyze, and create an implementation plan",
+    "argument_hint": [
+      "task"
+    ],
+    "power_level": 3,
+    "category": "plan"
+  },
+  {
+    "name": "/ck:plan:two",
+    "path": "plan/two.md",
+    "description": "Research & create an implementation plan with 2 approaches",
+    "argument_hint": [
+      "task"
+    ],
+    "power_level": 4,
+    "category": "plan"
+  },
+  {
+    "name": "/ck:plan",
+    "path": "plan.md",
+    "description": "Intelligent plan creation with prompt enhancement",
+    "argument_hint": [
+      "task"
+    ],
+    "power_level": 3,
+    "category": "core"
+  },
+  {
+    "name": "/ck:qa-flow",
+    "path": "qa-flow.md",
+    "description": "\u0110i\u1ec1u ph\u1ed1i to\u00e0n b\u1ed9 flow QA/QC 6 phase (Strategy \u2192 Plan/Design \u2192 Execution \u2192 Bug Lifecycle \u2192 Metrics \u2192 Release Gate) \u2014 hybrid manual + Playwright, project-agnostic. D\u00f9ng `--one-shot` \u0111\u1ec3 ch\u1ea1y h\u1ebft kh\u00f4ng d\u1eebng.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:qa-full",
+    "path": "qa-full.md",
+    "description": "",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:report-bug",
+    "path": "report-bug.md",
+    "description": "T\u1ea1o bug report chu\u1ea9n \"good bug report\" (repro steps, error nguy\u00ean v\u0103n, version/env, evidence). D\u00f9ng khi ph\u00e1t hi\u1ec7n bug trong manual testing, exploratory testing, automation fail, ho\u1eb7c b\u1ea5t k\u1ef3 l\u00fac n\u00e0o c\u1ea7n log defect.",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:review:codebase",
+    "path": "review/codebase.md",
+    "description": "Scan & analyze the codebase.",
+    "argument_hint": [
+      "tasks-or-prompt"
+    ],
+    "power_level": 3,
+    "category": "review"
+  },
+  {
+    "name": "/ck:scout:ext",
+    "path": "scout/ext.md",
+    "description": "",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "scout"
+  },
+  {
+    "name": "/ck:scout",
+    "path": "scout.md",
+    "description": "",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:skill:add",
+    "path": "skill/add.md",
+    "description": "",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "skill"
+  },
+  {
+    "name": "/ck:skill:create",
+    "path": "skill/create.md",
+    "description": "Create a new agent skill",
+    "argument_hint": [
+      "prompt-or-llms-or-github-url"
+    ],
+    "power_level": 0,
+    "category": "skill"
+  },
+  {
+    "name": "/ck:skill:fix-logs",
+    "path": "skill/fix-logs.md",
+    "description": "Fix the agent skill based on `logs.txt` file.",
+    "argument_hint": [
+      "prompt-or-path-to-skill"
+    ],
+    "power_level": 0,
+    "category": "skill"
+  },
+  {
+    "name": "/ck:skill:optimize:auto",
+    "path": "skill/optimize/auto.md",
+    "description": "",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "skill"
+  },
+  {
+    "name": "/ck:skill:optimize",
+    "path": "skill/optimize.md",
+    "description": "",
+    "argument_hint": "",
+    "power_level": 0,
+    "category": "skill"
+  },
+  {
+    "name": "/ck:test",
+    "path": "test.md",
+    "description": "Run tests locally and analyze the summary report.",
+    "argument_hint": "",
+    "power_level": 1,
+    "category": "core"
+  },
+  {
+    "name": "/ck:use-mcp",
+    "path": "use-mcp.md",
+    "description": "Utilize tools of Model Context Protocol (MCP) servers",
+    "argument_hint": [
+      "task"
+    ],
+    "power_level": 0,
+    "category": "core"
+  },
+  {
+    "name": "/ck:watzup",
+    "path": "watzup.md",
+    "description": "Review recent changes and wrap up the work",
+    "argument_hint": "",
+    "power_level": 1,
+    "category": "core"
+  }
+]

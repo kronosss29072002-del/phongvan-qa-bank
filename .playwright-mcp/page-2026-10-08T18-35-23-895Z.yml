@@ -1,0 +1,249 @@
+- generic [active] [ref=f291e1]:
+  - banner [ref=f291e2]:
+    - navigation [ref=f291e3]:
+      - generic [ref=f291e4]:
+        - link "bantru.vn" [ref=f291e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f291e7]:
+            - strong [ref=f291e8]: BANTRU.VN
+            - generic [ref=f291e9]: Quản lý Bán trú toàn diện
+        - generic [ref=f291e10]:
+          - list [ref=f291e11]:
+            - listitem [ref=f291e12]:
+              - link "Trang chủ" [ref=f291e13] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f291e14]:
+              - link "Tính năng" [ref=f291e15] [cursor=pointer]:
+                - /url: /#chuc-nang
+            - listitem [ref=f291e16]:
+              - link "Quy trình" [ref=f291e17] [cursor=pointer]:
+                - /url: /#quy-trinh
+            - listitem [ref=f291e18]:
+              - link "Báo cáo" [ref=f291e19] [cursor=pointer]:
+                - /url: /#bao-cao
+            - listitem [ref=f291e20]:
+              - link "Đăng ký sử dụng" [ref=f291e21] [cursor=pointer]:
+                - /url: /#dang-ky-su-dung
+            - listitem [ref=f291e22]:
+              - link "Thông tin cần biết" [ref=f291e23] [cursor=pointer]:
+                - /url: https://bantru.vn/thong-tin-can-biet
+          - link "Đăng nhập" [ref=f291e24] [cursor=pointer]:
+            - /url: /user/login
+  - generic [ref=f291e29]:
+    - heading [level=1] [ref=f291e30]:
+      - link "Phần mềm Quản lý Bán trú trường học" [ref=f291e31] [cursor=pointer]:
+        - /url: /
+    - generic [ref=f291e38]:
+      - link "(024) 73000045" [ref=f291e39] [cursor=pointer]:
+        - /url: tel:02473000045
+      - 'link "ZALO: Giáo dục điện tử" [ref=f291e45] [cursor=pointer]':
+        - /url: https://zalo.me/2185029837814013138
+  - main [ref=f291e49]:
+    - generic [ref=f291e52]:
+      - generic [ref=f291e54]:
+        - generic [ref=f291e55]: ĐĂNG NHẬP HỆ THỐNG
+        - generic [ref=f291e56]:
+          - generic [ref=f291e57]:
+            - generic [ref=f291e58]: Tên đăng nhập hoặc SốĐiệnThoại.TênTỉnh
+            - textbox "Tên đăng nhập hoặc SốĐiệnThoại.TênTỉnh" [ref=f291e60]:
+              - /placeholder: Nhập tên đăng nhập
+          - generic [ref=f291e61]:
+            - generic [ref=f291e62]: Mật khẩu
+            - generic [ref=f291e63]:
+              - textbox "Mật khẩu" [ref=f291e64]:
+                - /placeholder: Nhập mật khẩu
+              - button "Hiện mật khẩu" [ref=f291e65] [cursor=pointer]
+          - button "Vào hệ thống" [ref=f291e69] [cursor=pointer]
+          - status [ref=f291e73]
+      - generic [ref=f291e76]:
+        - generic [ref=f291e78]:
+          - article [ref=f291e80]:
+            - img "Banner phần mềm quản lý bán trú trường học 3" [ref=f291e81]
+          - article [ref=f291e83]:
+            - img "Banner phần mềm quản lý bán trú trường học 4" [ref=f291e84]
+          - article [ref=f291e86]:
+            - img "Banner phần mềm quản lý bán trú trường học 5" [ref=f291e87]
+          - article [ref=f291e89]:
+            - img "Banner phần mềm quản lý bán trú trường học 1" [ref=f291e90]
+          - article [ref=f291e92]:
+            - img "Banner phần mềm quản lý bán trú trường học 2" [ref=f291e93]
+          - article [ref=f291e95]:
+            - img "Banner phần mềm quản lý bán trú trường học 3" [ref=f291e96]
+          - article [ref=f291e98]:
+            - img "Banner phần mềm quản lý bán trú trường học 4" [ref=f291e99]
+          - article [ref=f291e101]:
+            - img "Banner phần mềm quản lý bán trú trường học 5" [ref=f291e102]
+          - article [ref=f291e104]:
+            - img "Banner phần mềm quản lý bán trú trường học 1" [ref=f291e105]
+          - article [ref=f291e107]:
+            - img "Banner phần mềm quản lý bán trú trường học 2" [ref=f291e108]
+          - article [ref=f291e110]:
+            - img "Banner phần mềm quản lý bán trú trường học 3" [ref=f291e111]
+        - generic [ref=f291e112]:
+          - button [ref=f291e113] [cursor=pointer]
+          - button [ref=f291e115] [cursor=pointer]
+          - button [ref=f291e117] [cursor=pointer]
+          - button [ref=f291e119] [cursor=pointer]
+          - button [ref=f291e121] [cursor=pointer]
+    - generic [ref=f291e125]:
+      - generic [ref=f291e127]:
+        - strong [ref=f291e131]: Cloud
+        - generic [ref=f291e132]: Web & mobile
+      - generic [ref=f291e134]:
+        - strong [ref=f291e139]: Phân quyền
+        - generic [ref=f291e140]: Sở, Phòng, Trường
+      - generic [ref=f291e142]:
+        - strong [ref=f291e147]: Hồ sơ số
+        - generic [ref=f291e148]: Lưu vết thao tác
+      - generic [ref=f291e150]:
+        - strong [ref=f291e155]: Minh bạch
+        - generic [ref=f291e156]: Phụ huynh tra cứu
+    - generic [ref=f291e158]:
+      - generic [ref=f291e159]:
+        - generic [ref=f291e160]: Nhóm chức năng
+        - heading "Quản lý xuyên suốt từ học sinh đến bữa ăn, tài chính và báo cáo." [level=2] [ref=f291e161]
+        - paragraph [ref=f291e162]: Mỗi nghiệp vụ phát sinh đều gắn với hồ sơ học sinh, lớp học và ngày ăn cụ thể để giảm sai sót khi đối chiếu.
+      - generic [ref=f291e163]:
+        - generic [ref=f291e165]:
+          - heading "Hồ sơ bán trú" [level=3] [ref=f291e170]
+          - paragraph [ref=f291e171]: Quản lý đăng ký, tạm dừng, chuyển lớp, nhóm chính sách, dị ứng thực phẩm và hồ sơ minh chứng.
+        - generic [ref=f291e173]:
+          - heading "Điểm danh suất ăn" [level=3] [ref=f291e177]
+          - paragraph [ref=f291e178]: Chốt suất ăn theo bữa, ghi nhận nghỉ ăn, ăn đột xuất, về sớm và tổng hợp ngày ăn thực tế.
+        - generic [ref=f291e180]:
+          - heading "Thực đơn & dinh dưỡng" [level=3] [ref=f291e185]
+          - paragraph [ref=f291e186]: Lập thực đơn tuần/tháng, tính định lượng nguyên liệu, theo dõi năng lượng và cân đối nhóm chất.
+        - generic [ref=f291e188]:
+          - heading "Kho bếp & nhà cung cấp" [level=3] [ref=f291e192]
+          - paragraph [ref=f291e193]: Quản lý nhập xuất tồn, hạn sử dụng, lô hàng, chứng từ, hợp đồng và hồ sơ an toàn thực phẩm.
+        - generic [ref=f291e195]:
+          - heading "Kiểm thực ba bước" [level=3] [ref=f291e200]
+          - paragraph [ref=f291e201]: Số hóa kiểm thực, lưu mẫu thức ăn, nhật ký vệ sinh bếp và truy xuất khi phát sinh sự cố.
+        - generic [ref=f291e203]:
+          - heading "Tài chính minh bạch" [level=3] [ref=f291e207]
+          - paragraph [ref=f291e208]: Tính khoản thu, hoàn trả, công nợ, phiếu thu, quyết toán và công khai tài chính bán trú.
+    - generic [ref=f291e210]:
+      - generic [ref=f291e211]:
+        - generic [ref=f291e212]: Quy trình vận hành
+        - heading "Một luồng dữ liệu thống nhất cho nhà trường." [level=2] [ref=f291e213]
+        - paragraph [ref=f291e214]: Hệ thống giúp chuyển từ sổ sách và bảng tính rời rạc sang quy trình chốt số liệu, phê duyệt và công khai có kiểm soát.
+      - generic [ref=f291e215]:
+        - generic [ref=f291e216]:
+          - generic [ref=f291e217]: "01"
+          - generic [ref=f291e218]:
+            - heading "Đăng ký & phân quyền" [level=3] [ref=f291e219]
+            - paragraph [ref=f291e220]: Thiết lập năm học, lớp, mức ăn, vai trò và danh sách học sinh bán trú.
+        - generic [ref=f291e221]:
+          - generic [ref=f291e222]: "02"
+          - generic [ref=f291e223]:
+            - heading "Chốt suất & lập thực đơn" [level=3] [ref=f291e224]
+            - paragraph [ref=f291e225]: Điểm danh theo bữa, tổng hợp số suất và tự động tính nhu cầu nguyên liệu.
+        - generic [ref=f291e226]:
+          - generic [ref=f291e227]: "03"
+          - generic [ref=f291e228]:
+            - heading "Kiểm soát bếp ăn" [level=3] [ref=f291e229]
+            - paragraph [ref=f291e230]: Nhập xuất kho, lưu mẫu, kiểm thực ba bước và lưu hồ sơ nhà cung cấp.
+        - generic [ref=f291e231]:
+          - generic [ref=f291e232]: "04"
+          - generic [ref=f291e233]:
+            - heading "Đối chiếu & báo cáo" [level=3] [ref=f291e234]
+            - paragraph [ref=f291e235]: Tổng hợp thu chi, hoàn trả, công khai phụ huynh và báo cáo cơ quan quản lý.
+    - generic [ref=f291e237]:
+      - generic [ref=f291e238]:
+        - generic [ref=f291e239]: Dashboard & báo cáo
+        - heading "Số liệu bán trú sẵn sàng cho điều hành, kiểm tra và công khai." [level=2] [ref=f291e240]
+      - generic [ref=f291e241]:
+        - generic [ref=f291e243]:
+          - strong [ref=f291e247]: Số suất ăn
+          - generic [ref=f291e248]: Theo ngày, tuần, tháng, lớp, khối và trường.
+        - generic [ref=f291e250]:
+          - strong [ref=f291e254]: Khẩu phần & chi phí
+          - generic [ref=f291e255]: Theo thực đơn, định lượng, giá thực phẩm và bình quân mỗi suất.
+        - generic [ref=f291e257]:
+          - strong [ref=f291e262]: Hồ sơ điện tử
+          - generic [ref=f291e263]: Kiểm thực, lưu mẫu, ATTP, chính sách hỗ trợ và quyết toán.
+    - generic [ref=f291e266]:
+      - generic [ref=f291e267]:
+        - generic [ref=f291e268]: Thông tin cần biết
+        - heading "Cập nhật thông tin cần biết về chuyển đổi số bán trú trường học." [level=2] [ref=f291e269]
+        - paragraph [ref=f291e270]: Nơi tổng hợp thông báo triển khai, tài liệu nghiệp vụ, kinh nghiệm vận hành bữa ăn học đường và hoạt động của bantru.vn.
+        - link "Xem thông tin cần biết" [ref=f291e271] [cursor=pointer]:
+          - /url: /thong-tin-can-biet
+      - img "Phần mềm quản lý bán trú trường học" [ref=f291e275]
+    - generic [ref=f291e278]:
+      - generic [ref=f291e279]:
+        - generic [ref=f291e280]: Triển khai theo mô hình từng địa phương
+        - heading "Sẵn sàng chuẩn hóa quản lý bán trú cho năm học mới." [level=2] [ref=f291e281]
+        - paragraph [ref=f291e282]: Tùy chỉnh mức thu, chính sách hỗ trợ, biểu mẫu và quy trình phê duyệt theo từng trường hoặc cơ quan quản lý.
+      - generic [ref=f291e283]:
+        - heading "ĐĂNG KÝ SỬ DỤNG" [level=3] [ref=f291e284]
+        - heading "PHẦN MỀM QUẢN LÝ BÁN TRÚ TRƯỜNG HỌC" [level=3] [ref=f291e285]
+        - generic [ref=f291e287]:
+          - paragraph [ref=f291e288]:
+            - link "(024) 73000045" [ref=f291e289] [cursor=pointer]:
+              - /url: tel:02473000045
+          - paragraph [ref=f291e294]:
+            - 'link "ZALO: Giáo dục điện tử" [ref=f291e295] [cursor=pointer]':
+              - /url: https://zalo.me/2185029837814013138
+  - contentinfo [ref=f291e298]:
+    - generic [ref=f291e299]:
+      - generic [ref=f291e300]:
+        - generic [ref=f291e301]:
+          - link "Bantru.vn Bán trú trường học" [ref=f291e302] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f291e304]:
+              - strong [ref=f291e305]: Bantru.vn
+              - generic [ref=f291e306]: Bán trú trường học
+          - paragraph [ref=f291e307]:
+            - text: Phần mềm Quản lý Bán trú trường học - Hệ thống Giáo dục điện tử, hỗ trợ số hóa bữa ăn bán trú toàn diện, minh bạch tài chính và tăng cường an toàn dinh dưỡng học đường, bảo đảm chi trả đúng đủ chế độ chính sách...
+            - link "bantru.vn" [ref=f291e308] [cursor=pointer]:
+              - /url: https://bantru.vn
+        - generic [ref=f291e309]:
+          - heading "Liên hệ" [level=3] [ref=f291e310]
+          - link "Hệ thống Giáo dục điện tử" [ref=f291e311] [cursor=pointer]:
+            - /url: https://gddt.edu.vn
+          - 'link "Email: hotro@gddt.edu.vn" [ref=f291e312] [cursor=pointer]':
+            - /url: mailto:hotro@gddt.edu.vn
+          - 'link "Hotline: (024) 73000045" [ref=f291e313] [cursor=pointer]':
+            - /url: tel:02473000045
+          - 'link "ZALO: Giáo dục điện tử" [ref=f291e314] [cursor=pointer]':
+            - /url: https://zalo.me/2185029837814013138
+        - generic [ref=f291e315]:
+          - heading "Liên kết" [level=3] [ref=f291e316]
+          - link "Kế hoạch giáo dục" [ref=f291e317] [cursor=pointer]:
+            - /url: https://kehoach.edu.vn
+          - link "Thiết kế bài giảng" [ref=f291e318] [cursor=pointer]:
+            - /url: https://thietkebaigiang.edu.vn
+          - link "Kho học liệu điện tử" [ref=f291e319] [cursor=pointer]:
+            - /url: https://khohoclieu.edu.vn
+          - link "Kiểm tra đánh giá" [ref=f291e320] [cursor=pointer]:
+            - /url: https://kiemtradanhgia.edu.vn
+        - generic [ref=f291e321]:
+          - heading "Quản lý" [level=3] [ref=f291e322]
+          - link "Bảo đảm chất lượng" [ref=f291e323] [cursor=pointer]:
+            - /url: https://baodamchatluong.vn
+          - link "Bồi dưỡng kỹ năng" [ref=f291e324] [cursor=pointer]:
+            - /url: https://boiduongkynang.edu.vn
+          - link "Thi đua khen thưởng" [ref=f291e325] [cursor=pointer]:
+            - /url: https://thiduakhenthuong.vn
+          - link "Thời khóa biểu" [ref=f291e326] [cursor=pointer]:
+            - /url: https://thoikhoabieu.edu.vn
+      - generic [ref=f291e327]:
+        - generic [ref=f291e328]:
+          - text: © 2026 GDDT.BANTRU
+          - link "Điều khoản sử dụng" [ref=f291e329] [cursor=pointer]:
+            - /url: /dieu-khoan-su-dung.html
+          - link "Chính sách bảo mật" [ref=f291e330] [cursor=pointer]:
+            - /url: /chinh-sach-bao-mat.html
+          - link "Thông tin Cookies" [ref=f291e331] [cursor=pointer]:
+            - /url: /thong-tin-cookies.html
+        - generic "Mạng xã hội" [ref=f291e332]:
+          - link "Facebook" [ref=f291e333] [cursor=pointer]:
+            - /url: https://facebook.com/gddt.edu.vn
+            - generic [ref=f291e334]: 
+          - link "YouTube" [ref=f291e335] [cursor=pointer]:
+            - /url: https://youtube.com/@giao-duc-dien-tu
+            - generic [ref=f291e336]: 
+          - link "TikTok" [ref=f291e337] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@giaoducdientu
+            - generic [ref=f291e338]: 

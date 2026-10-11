@@ -1,0 +1,687 @@
+{
+  "domain": "RESILIENCE & CAPACITY",
+  "entries": [
+    {
+      "term": "Retry",
+      "aliases": [
+        "tái thử",
+        "retry policy"
+      ],
+      "level": "basic",
+      "problem": "Lỗi mạng tạm thời hoặc backend chậm đôi lần làm request bị fail dù hệ thống vẫn sống, nên bỏ qua thì mất việc của người dùng. Retry bừa bãi, không phân biệt lỗi tạm thời với lỗi vĩnh viễn hoặc chạy đồng thời ở nhiều tầng, lại biến một lỗi đơn lẻ thành trận mưa request đè thêm lên service đang yếu.",
+      "origin": "",
+      "how": "Gọi lại thao tác thất bại sau một khoảng trễ và chỉ với lỗi tạm thời (timeout, 502/503); chỉ retry thao tác idempotent hoặc có idempotency key. Retry ở nhiều tầng cùng lúc nhân số request lên theo cấp: 3 tầng, mỗi tầng thử 3 lần thì tầng ngoài cùng phát ra 27 request cho mỗi hành động của user (Google SRE Book, chương 22).",
+      "related": [
+        "Exponential Backoff",
+        "Retry Budget",
+        "Timeout",
+        "Cascading Failures"
+      ]
+    },
+    {
+      "term": "Retry Budget",
+      "aliases": [
+        "ngân sách retry",
+        "retry ratio limit"
+      ],
+      "level": "advanced",
+      "problem": "Dù đã có backoff, tổng số retry vẫn có thể vượt lưu lượng gốc và biến retry thành nguồn gây quá tải (amplification).",
+      "origin": "Google SRE Book ch.21 'Handling Overload' (2016): per-request budget (tối đa ~3 attempt), per-client budget (retry/total ≤ 10%), backend đếm retry qua metadata và trả lỗi 'overloaded; don't retry'.",
+      "how": "Giới hạn tỷ lệ retry so với request thành công: client chỉ được retry chừng nào (retries / attempts) nằm dưới ngưỡng (VD 10%); quá ngân sách thì fail ngay về caller. Kết hợp hạn mức mỗi request (VD 3 lần) → khuếch đại retry bị chặn ở ~1.1× thay vì ~3×.",
+      "related": [
+        "Exponential Backoff",
+        "Rate Limiting (Adaptive)",
+        "Overload Protection"
+      ]
+    },
+    {
+      "term": "Circuit Breaker",
+      "aliases": [
+        "ngắt mạch",
+        "circuit breaker pattern"
+      ],
+      "level": "intermediate",
+      "problem": "Service downstream chết chậm: mỗi call của caller phải đợi timeout đầy đủ, thread/pool connections của caller bị treo hết, lỗi lan sang toàn hệ thống (cascading failure).",
+      "origin": "Phổ biến bởi Michael Nygard trong sách 'Release It!' (2007); Martin Fowler mô tả lại trên bliki 'Circuit Breaker' (2014) với 3 trạng thái closed/open/half-open.",
+      "how": "Bọc call đi xa trong state machine: đếm lỗi liên tiếp, vượt ngưỡng thì 'trip' (open) → các call sau fail ngay không chạm backend (chống phục vụ chậm); sau cool-down chuyển half-open cho 1 call thử, thành công thì đóng lại. Ghi log chuyển trạng thái để ops can thiệp tay.",
+      "related": [
+        "Bulkhead",
+        "Timeout",
+        "Fallback",
+        "Graceful Degradation"
+      ]
+    },
+    {
+      "term": "Bulkhead",
+      "aliases": [
+        "vách kín",
+        "bulkhead isolation"
+      ],
+      "level": "intermediate",
+      "problem": "Một dependency chậm/hỏng ăn hết connection pool hoặc thread pool dùng chung, khiến các service khác khỏe mạnh cũng không gọi được.",
+      "origin": "Lấy tên từ vách kín tàu thủy (hull section chỉ ngập phần bị thủng); được tài liệu hóa trong sách 'Release It!' (Michael Nygard) và Azure Architecture Center pattern 'Bulkhead'.",
+      "how": "Chia tài nguyên (thread pool, connection pool, container, queue) thành từng nhóm biệt lập cho từng dependency/tenant: dependency A chết chỉ làm pool của A đầy, pool B/C vẫn chạy. Chi phí là ít dùng chung tài nguyên hơn; thường kết hợp với circuit breaker + retry.",
+      "related": [
+        "Circuit Breaker",
+        "Connection pool",
+        "Thread Pool Sizing",
+        "Cell-Based Architecture"
+      ]
+    },
+    {
+      "term": "Timeout",
+      "aliases": [
+        "hạn chờ",
+        "request timeout",
+        "connect timeout",
+        "Request timeout budgets"
+      ],
+      "level": "basic",
+      "problem": "Không đặt hạn chờ thì một call treo vô hạn giữ thread và kết nối, request đến sau xếp hàng phía sau.",
+      "origin": "",
+      "how": "Đặt giới hạn thời gian cho từng bước (connect, read, tổng request). Chọn giá trị từ độ trễ thật của downstream: AWS Builders Library gợi ý lấy percentile tương ứng mức false-timeout chấp nhận được (VD p99.9 cho tỷ lệ timeout oan 0.1%). Quá cao → lãng phí tài nguyên; quá thấp → retry storm.",
+      "related": [
+        "Deadline Propagation",
+        "Retry",
+        "Circuit Breaker",
+        "Tail Latency"
+      ]
+    },
+    {
+      "term": "Deadline Propagation",
+      "aliases": [
+        "truyền hạn chót",
+        "deadline propagation",
+        "cancellation propagation"
+      ],
+      "level": "advanced",
+      "problem": "RPC đi qua nhiều tầng; khi client đã bỏ cuộc, các tầng sau vẫn tiếp tục xử lý và tiêu tốn thread/CPU cho kết quả không ai đọc.",
+      "origin": "Được mô tả trong Google SRE Book ch.22 'Addressing Cascading Failures' (2016), thực hành của Google RPC stack.",
+      "how": "Client đặt một absolute deadline (thời điểm hết hạn tuyệt đối) và truyền theo từng hop; mỗi service kiểm tra thời gian còn lại trước mỗi bước xử lý, nếu đã hết hạn thì fail-fast và hủy (cancel) call xuống tầng con — cắt hẳn chuỗi xử lý vô ích.",
+      "related": [
+        "Timeout",
+        "Load Shedding",
+        "Graceful Shutdown"
+      ]
+    },
+    {
+      "term": "Graceful Degradation",
+      "aliases": [
+        "suy giảm duyên dáng",
+        "degraded mode",
+        "degraded response"
+      ],
+      "level": "intermediate",
+      "problem": "Khi một thành phần hỏng, trả nguyên trang lỗi 500 cho user tệ hơn nhiều so với bớt đi một tính năng phụ.",
+      "origin": "",
+      "how": "Chủ động bỏ/thay thế các tính năng không cốt lõi khi hệ thống gặp sức ép hoặc dependency hỏng: serve dữ liệu cũ/ít chính xác hơn, tắt recommend, bật trang tĩnh — giữ lõi chức năng chạy được. SRE Book ch.21-22 coi 'serve degraded responses' là công cụ chống quá tải chính.",
+      "related": [
+        "Fallback",
+        "Circuit Breaker",
+        "Load Shedding",
+        "Bulk Sync"
+      ]
+    },
+    {
+      "term": "Fallback",
+      "aliases": [
+        "phương án thay thế",
+        "fallback path"
+      ],
+      "level": "basic",
+      "problem": "Dependency chính không sẵn sàng thì request fail toàn bộ thay vì trả kết quả thay thế.",
+      "origin": "",
+      "how": "Khi primary fail (thường trigger bởi circuit breaker/timeout), chuyển sang đường thay thế: cache/CDN, service dự phòng, dữ liệu mặc định, trả 'đang xử lý sau'. Fallback phải nhanh (không gọi thêm dependency chậm như primary) và tránh tầng tầng lớp phủ lỗi che bug thật.",
+      "related": [
+        "Circuit Breaker",
+        "Graceful Degradation",
+        "Timeout"
+      ]
+    },
+    {
+      "term": "Rate Limiting (Adaptive)",
+      "aliases": [
+        "giới hạn lưu lượng thích nghi",
+        "adaptive throttling",
+        "client-side throttling",
+        "token bucket rate limit"
+      ],
+      "level": "intermediate",
+      "problem": "Rate limit tĩnh (số request/giây) không biết backend đang yếu: giữ nguyên hạn mức trong lúc backend chậm lại thì càng đẩy nó chết thêm.",
+      "origin": "Google SRE Book ch.21 'Handling Overload' (2016): client-side adaptive throttling theo tỷ lệ requests/accepts (hệ số K, hay dùng 2×), cộng per-customer limits và overload priority (CRITICAL/SHEDDABLE).",
+      "how": "Giới hạn dựa trên tín hiệu phản hồi từ hệ thống: client đếm số attempt và số accepted trong cửa sổ trượt; khi attempts vượt K×accepts thì bắt đầu drop probabilistic local (không gửi lên). Mức giới hạn tự nới/thắt theo capacity thật; có thể cộng token bucket giữ rate retry ổn định.",
+      "related": [
+        "Retry Budget",
+        "Load Shedding",
+        "Overload Protection",
+        "Circuit Breaker"
+      ]
+    },
+    {
+      "term": "Load Shedding",
+      "aliases": [
+        "cắt tải",
+        "shed load",
+        "reject excess traffic"
+      ],
+      "level": "intermediate",
+      "problem": "Quá tải: nếu nhận hết rồi xếp hàng, độ trễ phình vô hạn, thread chết hết và toàn bộ service sập thay vì chỉ mất phần dư.",
+      "origin": "Thuật ngữ gốc từ lưới điện (cắt tải khẩn cấp khi cầu vượt cung — Under-frequency load shedding); Google SRE Book ch.21-22 (2016) áp dụng cho server với criticality levels SHEDDABLE_PLUS/SHEDDABLE.",
+      "how": "Khi tín hiệu utilization (CPU, active threads) vượt ngưỡng, server từ chối ngay phần request dư thay vì buffer: drop theo mức ưu tiên thấp nhất trước (sheddable trước critical), trả 429/503 kèm Retry-After. Mục tiêu: throughput ổn định ở mức xử lý được, latency không phình.",
+      "related": [
+        "Overload Protection",
+        "Shed Load vs Queue",
+        "Rate Limiting (Adaptive)",
+        "Graceful Degradation"
+      ]
+    },
+    {
+      "term": "Queue Backpressure",
+      "aliases": [
+        "áp lực ngược hàng đợi",
+        "bounded queue",
+        "queue-full policy"
+      ],
+      "level": "intermediate",
+      "problem": "Hàng đợi không giới hạn luôn nhận thêm message trong khi producer nhanh hơn consumer, đến lúc OOM hoặc latency queue tăng lớn.",
+      "origin": "",
+      "how": "Hàng đợi có giới hạn cứng; khi đầy, hành vi tường minh: block producer, drop (mới nhất/cũ nhất), hay trả lỗi — không bao giờ grow vô hạn. Kết hợp tín hiệu từ consumer lên producer để producer tự chậm lại; hàng đợi nhỏ giúp load shed sớm.",
+      "related": [
+        "Backpressure & rate shaping",
+        "Shed Load vs Queue",
+        "Head-of-Line Blocking"
+      ]
+    },
+    {
+      "term": "Autoscaling (Horizontal/Vertical)",
+      "aliases": [
+        "tự động mở rộng",
+        "scale out/in",
+        "scale up/down",
+        "autoscaler"
+      ],
+      "level": "basic",
+      "problem": "Capacity cố định: mua theo đỉnh thì lãng phí, mua theo trung bình thì sập giờ cao điểm.",
+      "origin": "AWS EC2 Auto Scaling là nơi chuẩn hóa khái niệm trong cloud.",
+      "how": "Horizontal (scale out): thêm/bớt instance theo tín hiệu (CPU, queue depth, request count). Vertical (scale up): tăng CPU/RAM cho instance hiện có. Kèm warmup để instance mới chưa nhận traffic khi chưa sẵn sàng.",
+      "related": [
+        "Cooldown",
+        "Capacity Planning",
+        "Load Testing",
+        "Drain Connections"
+      ]
+    },
+    {
+      "term": "Cooldown",
+      "aliases": [
+        "scaling cooldown",
+        "cooldown period",
+        "thời gian làm nguội"
+      ],
+      "level": "intermediate",
+      "problem": "Autoscaler phản ứng trước khi effect của lần scale trước kịp hiện ra → thrash liên tục.",
+      "origin": "AWS EC2 Auto Scaling documentation: cooldown period mặc định 300 giây (5 phút); AWS khuyên chuyển sang target tracking/step scaling (dùng instance warmup thay cooldown).",
+      "how": "Sau khi launch/terminate instance, autoscaler dừng mọi scaling activity simple-scaling trong khoảng cooldown để cluster ổn định. Scale-in có thể dùng cooldown ngắn hơn; nếu đứng sau ELB thì ELB hoàn tất connection draining trước khi cooldown bắt đầu.",
+      "related": [
+        "Autoscaling (Horizontal/Vertical)",
+        "Drain Connections",
+        "Graceful Shutdown"
+      ]
+    },
+    {
+      "term": "Thundering Herd",
+      "aliases": [
+        "đàn thú",
+        "thundering herd problem",
+        "wake-up storm"
+      ],
+      "level": "basic",
+      "problem": "Khi nhiều tiến trình cùng chờ một sự kiện (futex, epoll, file lock), kernel chỉ có một tín hiệu đánh thức nhưng đánh thức cả loạt tiến trình; chỉ một đứa giành được tài khoản, số còn lại tốn chu kỳ CPU rồi ngủ lại ngay. Vòng thức dậy rồi ngủ lặp lại vô ích làm tăng độ trễ và nóng CPU khi hệ thống đông tiến trình.",
+      "origin": "Wikipedia trích nguồn sớm nhất là Jargon File (bản 4.4.7) — gốc slang hacker; Linux thêm EPOLLEXCLUSIVE (kernel 4.5).",
+      "how": "Giải pháp: random hóa thời điểm đánh thức (jitter), single-flight/gọi trước (1 coroutine fetch, còn lại đợi), EPOLLEXCLUSIVE, Windows I/O completion port chỉ đánh thức 1 thread.",
+      "related": [
+        "Cache stampede / thundering herd",
+        "Exponential Backoff",
+        "Caching Stampede",
+        "Retry"
+      ]
+    },
+    {
+      "term": "Head-of-Line Blocking",
+      "aliases": [
+        "chặn đầu hàng",
+        "HOL blocking",
+        "Head-of-line"
+      ],
+      "level": "advanced",
+      "problem": "1 phần tử hỏng ở đầu hàng đợi làm nghẽn toàn bộ phần tử sau dù chúng xử lý được.",
+      "origin": "IEEE tháng 12/1987 của Karol, Hluchyj & Morgan về input vs output queuing trong packet switch (~58.6% throughput loss); HTTP/1.1 serial, TCP stream blocking, HTTP/3/QUIC tránh được bằng datagram.",
+      "how": "Tách hàng đợi (virtual output queues, priority queues), tách kênh (multiplexing/parallel connections), thêm worker/strand để phần chậm không giữ nguyên hàng.",
+      "related": [
+        "Queue Backpressure",
+        "Thread Pool Sizing",
+        "Tail Latency",
+        "Bottleneck Analysis"
+      ]
+    },
+    {
+      "term": "SLO/SLI",
+      "aliases": [
+        "SLI / SLO",
+        "service level indicator",
+        "service level objective",
+        "chỉ số/mục tiêu mức dịch vụ",
+        "mức cam kết dịch vụ"
+      ],
+      "level": "basic",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Không có con số thống nhất cho 'nhanh là bao nhiêu, ổn là bao nhiêu' nên tranh luận làm feature hay vá độ ổn định chỉ còn cảm tính; chỉ nói chung 'hệ thống nhanh/ổn định' thì không đo được và không quyết định được cần đầu tư vào đâu, trong khi business đã hứa 99.99% với khách mà kỹ thuật không biết mình đang ở đâu và cái gì quan trọng nhất.",
+      "origin": "Google SRE Book (2016), Chương 4 'Service Level Objectives'; Google SRE Workbook, chương 2 'Implementing SLOs' (2018)",
+      "how": "SLI = tỷ số đo được trên một cửa sổ thời gian (tỷ lệ request thành công, latency p99 hoặc phần latency dưới ngưỡng, throughput), chọn theo trải nghiệm người dùng. SLO = ngưỡng cam kết đặt cho SLI (ví dụ 99.9% trong 30 ngày), đặt chặt hơn và không quá sát cam kết với khách (SLA), làm thước đo chung cho quyết định ưu tiên giữa đổi mới và ổn định.",
+      "related": [
+        "Error Budget",
+        "Latency SLO",
+        "Availability Math (Five Nines)",
+        "MTTR/MTBF",
+        "Burn Rate",
+        "RED Method"
+      ]
+    },
+    {
+      "term": "Error Budget",
+      "aliases": [
+        "ngân sách lỗi",
+        "error budget policy"
+      ],
+      "level": "intermediate",
+      "problem": "Cân bằng giữa ổn định và đổi mới không có thước đo chung.",
+      "origin": "Google SRE Book (2016) Chương 4; mô hình 'Embracing Risk' (ch.3).",
+      "how": "Budget = 1 − SLO (VD SLO 99.9% → budget 0.1% ~43 phút/tháng). Hết budget → chỉ fix reliability; còn budget → ship feature.",
+      "related": [
+        "SLO/SLI",
+        "Availability Math (Five Nines)",
+        "Chaos Engineering",
+        "Load Testing"
+      ]
+    },
+    {
+      "term": "Capacity Planning",
+      "aliases": [
+        "lập kế hoạch dung lượng",
+        "capacity forecast"
+      ],
+      "level": "intermediate",
+      "problem": "Không dự trù dung lượng → sập giờ cao điểm; over-provision quanh năm → lãng phí.",
+      "origin": "",
+      "how": "Dự báo traffic → quy đổi resource (CPU, IOPS, connection, bandwidth) → so với capacity hiện tại + headroom; kết hợp load test để đo điểm bão hòa thật.",
+      "related": [
+        "Load Testing",
+        "Autoscaling (Horizontal/Vertical)",
+        "Bottleneck Analysis",
+        "Little's Law"
+      ]
+    },
+    {
+      "term": "Load Testing",
+      "aliases": [
+        "Load Testing",
+        "load test",
+        "kiểm thử tải",
+        "kịch bản tải"
+      ],
+      "level": "basic",
+      "domain": "Bền vững & Chị tải",
+      "problem": "Chưa ai biết hệ thống sẽ phản ứng ra sao khi lượng người dùng tăng vọt: chỉ khi có hàng nghìn user truy cập đồng thời, ứng dụng mới bắt đầu chậm, timeout và mất phản hồi đúng lúc cần vận hành nhiều nhất.",
+      "origin": "Performance testing practice",
+      "how": "Mô phỏng lưu lượng theo kịch bản production-like (ramp-up, steady state, spike, soak) bằng công cụ tạo tải, rồi đo throughput, latency tail và error rate để tìm điểm break cùng ngưỡng ổn định. Chạy thử trước giờ cao điểm và đối chiếu chỉ số với SLO trước khi hệ thống phục vụ khách thật.",
+      "related": [
+        "Stress Test vs Soak Test",
+        "Capacity Planning",
+        "Autoscaling (Horizontal/Vertical)",
+        "Bottleneck Analysis",
+        "soak test",
+        "smoke test"
+      ]
+    },
+    {
+      "term": "Stress Test vs Soak Test",
+      "aliases": [
+        "stress test",
+        "stress testing",
+        "soak test",
+        "soak testing",
+        "endurance test"
+      ],
+      "level": "intermediate",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Hệ thống có hai lớp lỗi khác nhau cần hai loại test khác nhau: lớp lỗi khi vượt tải, cần tìm điểm gãy (breaking point) khi CPU/memory/DB quá tải dẫn đến crash hoặc timeout; lớp lỗi tích lũy sau nhiều giờ chạy ổn định, bộc lộ sau 8-24h (memory leak, connection leak, connection pool cạn kiệt, disk đầy). Chạy một loại test thay cho loại kia sẽ bỏ sót một trong hai lớp lỗi.",
+      "origin": "Performance engineering; Performance testing",
+      "how": "Stress test: tăng lưu lượng vượt ngưỡng dự kiến để tìm breaking point và quan sát hành vi khi quá tải (degradation, recovery). Soak test: chạy tải ổn định trong thời gian dài (4-24h; có nguồn ghi 8-24h) để phát hiện lỗi tích lũy (resource leak): memory leak, connection leak, disk đầy, GC issue.",
+      "related": [
+        "Load Testing",
+        "Chaos Engineering",
+        "Capacity Planning"
+      ]
+    },
+    {
+      "term": "Fault Injection",
+      "aliases": [
+        "tiêm lỗi",
+        "chaos injection"
+      ],
+      "level": "intermediate",
+      "problem": "Không chủ động tạo lỗi khó biết phản ứng hệ thống thực tế.",
+      "origin": "",
+      "how": "Chủ động gây ra lỗi có kiểm soát (kill process, thêm latency, drop packet, auth fail) để xác minh circuit breaker, fallback, retry hoạt động đúng. Thường là công cụ trong chaos engineering.",
+      "related": [
+        "Chaos Engineering",
+        "Circuit Breaker",
+        "Graceful Shutdown"
+      ]
+    },
+    {
+      "term": "Graceful Shutdown",
+      "aliases": [
+        "tắt từ từ",
+        "graceful stop"
+      ],
+      "level": "intermediate",
+      "problem": "Dừng Pod/instance đột ngột làm mất in-flight request, connection bị reset.",
+      "origin": "Kubernetes Pod lifecycle: default terminationGracePeriodSeconds 30s.",
+      "how": "Pod nhận SIGTERM, chạy preStop hook (thường sleep để endpoint propagation), server ngừng accept request mới, hoàn tất in-flight request, rồi exit. Sau grace period hết mà chưa exit → SIGKILL.",
+      "related": [
+        "Drain Connections",
+        "Cooldown",
+        "Deadline Propagation"
+      ]
+    },
+    {
+      "term": "Drain Connections",
+      "aliases": [
+        "rút kết nối",
+        "connection draining",
+        "deregistration"
+      ],
+      "level": "intermediate",
+      "problem": "Endpoint bị loại khỏi load balancer ngay nhưng kết nối đã mở vẫn bị client thấy lỗi.",
+      "origin": "Kubernetes Services + ELB/ALB thực hành connection draining.",
+      "how": "Trước khi dừng process: ngừng accept connection mới (kết nối với LB), hoàn tất request đang xử lý, đóng keep-alive, đợi endpoint propagation. ELB có connection draining timeout (mặc định 300s) để đảm bảo kết nối cũ hoàn tất.",
+      "related": [
+        "Graceful Shutdown",
+        "Zombie Connection",
+        "Cooldown"
+      ]
+    },
+    {
+      "term": "Zombie Connection",
+      "aliases": [
+        "kết nối ma",
+        "stuck connection",
+        "half-open connection",
+        "kết nối zombie"
+      ],
+      "level": "intermediate",
+      "problem": "Client vẫn nghĩ kết nối mở trong khi server đã tắt → timeout/retry lan truyền.",
+      "origin": "",
+      "how": "Xảy ra khi server đóng không đúng cách (không gửi FIN, process exit ngay), LB/endpoint cập nhật chậm, hoặc long-lived connection (WebSocket/gRPC) tồn tại sau khi listener đóng. Khắc phục: preStop sleep, server shutdown tuần tự (stop accepting → finish active → close idle), use keepalive + idle timeout.",
+      "related": [
+        "Drain Connections",
+        "Graceful Shutdown",
+        "Timeout"
+      ]
+    },
+    {
+      "term": "Latency SLO",
+      "aliases": [
+        "p50/p90/p95/p99 SLO",
+        "tail latency SLO"
+      ],
+      "level": "intermediate",
+      "problem": "Chỉ đo trung bình latency che giấu trải nghiệm tệ nhất của user.",
+      "origin": "Google SRE Book nhấn mạnh đo tail (p90/p99) vì slowest requests thường là user quan trọng nhất.",
+      "how": "Xác định SLO theo percentile (VD: 99% < 300ms, 99.9% < 1s) dựa trên user journey. Theo dõi p50/p95/p99/p99.9 và lỗi tỷ lệ vượt SLO.",
+      "related": [
+        "Tail Latency",
+        "SLO/SLI",
+        "Availability Math (Five Nines)"
+      ]
+    },
+    {
+      "term": "Tail Latency",
+      "aliases": [
+        "độ trễ đuôi",
+        "latency tail"
+      ],
+      "level": "advanced",
+      "problem": "Hiếm khi có request cực chậm nhưng với hàng triệu request mỗi ngày, hầu hết user đều gặp ít nhất 1 request chậm (Dean & Barroso, 'The Tail at Scale', 2013).",
+      "origin": "Jeffrey Dean & Luiz André Barroso, 'The Tail at Scale', Communications of the ACM, vol. 56, 2013, pp. 74–80.",
+      "how": "Với hệ thống phân tán (n services, mỗi call cần m backend), xác suất gặp slow call tăng theo m×n. Giải pháp: request hedging, backup requests, speculative retry, latency tail-tolerant design, giảm phụ thuộc serial.",
+      "related": [
+        "Head-of-Line Blocking",
+        "Latency SLO",
+        "Deadline Propagation"
+      ]
+    },
+    {
+      "term": "Availability Math (Five Nines)",
+      "aliases": [
+        "99.999%",
+        "high availability",
+        "uptime calculation"
+      ],
+      "level": "basic",
+      "problem": "Cần quy đổi 'five nines' (99.999%) ra downtime thực tế để đặt kỳ vọng.",
+      "origin": "Thuật ngữ phổ biến trong telecom/carrier-grade tradition (high availability).",
+      "how": "99.9% = ~43 phút/tháng, 99.99% = ~4.3 phút/tháng, 99.999% = ~26 giây/tháng (~5.26 phút/năm). Availability tính theo SLI thành công, không tính planned maintenance nếu quy ước khác nhau.",
+      "related": [
+        "SLO/SLI",
+        "Error Budget",
+        "MTTR/MTBF"
+      ]
+    },
+    {
+      "term": "MTTR/MTBF",
+      "aliases": [
+        "mean time to repair",
+        "mean time between failures",
+        "mean time to detect"
+      ],
+      "level": "intermediate",
+      "problem": "Đo lường độ tin cậy hệ thống: thời gian phục hồi vs thời gian giữa các sự cố.",
+      "origin": "Reliability engineering, gắn liền với MIL-HDBK tiêu chuẩn quân sự/hàng không vũ trụ.",
+      "how": "MTBF = trung bình thời gian giữa hai lần hỏng (càng lớn càng tốt). MTTR = trung bình thời gian phát hiện + sửa để phục hồi (càng nhỏ càng tốt). Availability ≈ MTBF/(MTBF+MTTR). MTTA (time to acknowledge) cũng quan trọng không kém MTTR.",
+      "related": [
+        "Availability Math (Five Nines)",
+        "Error Budget",
+        "SLO/SLI"
+      ]
+    },
+    {
+      "term": "Redundancy/N+1 Redundancy",
+      "aliases": [
+        "dự phòng",
+        "N+1",
+        "active-active",
+        "active-passive"
+      ],
+      "level": "basic",
+      "problem": "Khi mỗi thành phần then chốt chỉ có đúng một bản sao, một lỗi phần cứng đơn lẻ sẽ ngừng toàn bộ dịch vụ. Tình huống này buộc thiết kế phải bố trí thêm bản sao dự phòng để máy chủ, nguồn điện hay service hỏng vẫn không làm mất lưu lượng.",
+      "origin": "Khái niệm HA trong vận hành trung tâm dữ liệu: N và N+1 là số nguồn dự phòng (nguồn điện, thiết bị làm mát, máy chủ) tối thiểu để chịu được một thành phần hỏng mà không mất dịch vụ.",
+      "how": "N = capacity cần thiết để phục vụ; N+1 nghĩa thêm 1 instance dự phòng; N+2 an toàn hơn nhưng tốn kém. Active-active: tất cả xử lý lưu lượng; active-passive: dự phòng chờ kích hoạt. Cần đảm bảo failover nhanh và test định kỳ.",
+      "related": [
+        "Autoscaling",
+        "Capacity Planning",
+        "Replication Lag Tolerance",
+        "Multi-Region / Active-Active"
+      ]
+    },
+    {
+      "term": "Replication Lag Tolerance",
+      "aliases": [
+        "read-after-write consistency",
+        "replica lag"
+      ],
+      "level": "intermediate",
+      "problem": "Đọc từ replica có thể thấy dữ liệu cũ sau khi ghi master (replication lag) gây hiển thị sai cho user.",
+      "origin": "",
+      "how": "Có nhiều mức nhất quán: strong consistency (đọc luôn mới nhất, tốn độ trễ), read-after-write (user ghi xong đọc lại thấy mới nhất), monotonic reads, eventual consistency (cuối cùng đồng bộ). Cần chọn theo use case (cart/checkout cần mạnh hơn newsfeed).",
+      "related": [
+        "Quorum Read/Write",
+        "Redundancy/N+1 Redundancy"
+      ]
+    },
+    {
+      "term": "Quorum Read/Write",
+      "aliases": [
+        "r+w>n",
+        "weighted voting"
+      ],
+      "level": "advanced",
+      "problem": "Cân bằng giữa consistency, availability, partition tolerance khi replica bị lag/lỗi.",
+      "origin": "David K. Gifford, 'Weighted voting for replicated data', SOSP '79 (ACM, 1979); Dynamo-style r+w>n phổ biến sau này.",
+      "how": "Với n replica: yêu cầu write quorum w, read quorum r với r+w>n → mọi read luôn giao với ít nhất 1 replica có dữ liệu mới nhất. Gifford dùng weighted voting (mỗi copy có số phiếu). Vw > V/2 đảm bảo hai write không xung đột.",
+      "related": [
+        "Replication Lag Tolerance",
+        "Redundancy/N+1 Redundancy"
+      ]
+    },
+    {
+      "term": "Overload Protection",
+      "aliases": [
+        "bảo vệ quá tải",
+        "admission control"
+      ],
+      "level": "intermediate",
+      "problem": "Không kiểm soát admission → service tiếp nhận nhiều hơn khả năng xử lý → sập hoàn toàn.",
+      "origin": "",
+      "how": "Áp dụng admission control: từ chối request sớm tại edge/LB/API gateway dựa trên utilization, queue depth, active requests. Kết hợp rate limiting adaptive, load shedding, circuit breaker. Ưu tiên critical request trước shedable.",
+      "related": [
+        "Load Shedding",
+        "Rate Limiting (Adaptive)",
+        "Circuit Breaker",
+        "Retry Budget"
+      ]
+    },
+    {
+      "term": "Shed Load vs Queue",
+      "aliases": [
+        "shed vs queue",
+        "drop vs buffer"
+      ],
+      "level": "intermediate",
+      "problem": "Chọn giữa xếp hàng (buffer) và từ chối ngay (shed) khi quá tải.",
+      "origin": "Google SRE Book ch.22: 'small queues relative to thread counts' giúp reject sớm thay vì buffer lâu.",
+      "how": "Buffer phù hợp khi burst ngắn và có thể phục hồi nhanh; shed phù hợp khi overload kéo dài — giữ latency ổn định bằng cách từ chối dư thay vì phình queue. Quy tắc thực tế: queue nhỏ + rejection sớm tốt hơn queue lớn + chờ vô hạn.",
+      "related": [
+        "Load Shedding",
+        "Queue Backpressure",
+        "Head-of-Line Blocking"
+      ]
+    },
+    {
+      "term": "Little's Law",
+      "aliases": [
+        "L=λW",
+        "Little's theorem"
+      ],
+      "level": "intermediate",
+      "problem": "Cần ước lượng capacity từ traffic mà không mô phỏng phức tạp.",
+      "origin": "John Little, 'A Proof for the Queuing Formula: L = λW', Operations Research, 9(3): 383–387 (1961). Philip M. Morse đưa công thức trước đó; Little chứng minh năm 1961.",
+      "how": "Trong hệ thống ổn định (stationary), L = λW với L = số request trung bình trong hệ thống, λ = tần suất đến trung bình, W = thời gian trung bình ở lại hệ thống. Áp dụng: nếu latency W tăng → số request đồng thời L tăng → cần nhiều worker hơn.",
+      "related": [
+        "Capacity Planning",
+        "Queueing Theory Basics (M/M/1)",
+        "Bottleneck Analysis"
+      ]
+    },
+    {
+      "term": "Bottleneck Analysis",
+      "aliases": [
+        "phát hiện nút thắt",
+        "performance bottleneck"
+      ],
+      "level": "intermediate",
+      "problem": "Scale sai chỗ: thêm CPU nhưng vẫn chậm vì I/O/DB/connection.",
+      "origin": "",
+      "how": "Tìm resource giới hạn: theo dõi CPU, memory, network, disk I/O, DB query time, connection pool usage, queue depth. Dùng Amdahl's Law, flame graph, tracing (distributed tracing), log correlation. Focus vào resource có utilization cao nhất kèm latency tăng.",
+      "related": [
+        "Capacity Planning",
+        "Load Testing",
+        "Little's Law"
+      ]
+    },
+    {
+      "term": "Queueing Theory Basics (M/M/1)",
+      "aliases": [
+        "M/M/1 queue",
+        "Kendall notation"
+      ],
+      "level": "advanced",
+      "problem": "Hiểu hành vi queue để dự đoán latency khi utilization cao.",
+      "origin": "D. G. Kendall giới thiệu Kendall's notation năm 1953 ('Stochastic Processes Occurring in the Theory of Queues...', Annals of Mathematical Statistics, 24(3): 338–354). Erlang có công trình trước đó về telephone traffic.",
+      "how": "M/M/1: arrivals Poisson (M), service times exponential (M), 1 server. Utilization ρ=λ/μ < 1. Mean response time E[T]=1/(μ-λ), mean wait E[W]=ρ/(μ-λ). ρ tiến gần 1 → latency tăng nhanh (non-linear).",
+      "related": [
+        "Little's Law",
+        "Head-of-Line Blocking",
+        "Capacity Planning"
+      ]
+    },
+    {
+      "term": "Thread Pool Sizing",
+      "aliases": [
+        "kích thước thread pool",
+        "executor pool"
+      ],
+      "level": "intermediate",
+      "problem": "Thread pool quá nhỏ → request xếp hàng lâu; quá lớn → context switch nhiều, memory cao.",
+      "origin": "",
+      "how": "Tính theo loại workload: CPU-bound → ~number of cores; I/O-bound → cores × (1 + wait_time/service_time). Dùng queue bounded thay vì unbounded. Theo SRE ch.22: 'small queues relative to thread counts' giúp reject sớm. Monitor queue depth, active threads.",
+      "related": [
+        "Connection pool",
+        "Bulkhead",
+        "Queue Backpressure"
+      ]
+    },
+    {
+      "term": "Bulk Sync",
+      "aliases": [
+        "đồng bộ hàng loạt",
+        "batch sync",
+        "delta sync"
+      ],
+      "level": "intermediate",
+      "problem": "Sync từng item 1-1 gây nhiều request nhỏ → quá tải network/DB.",
+      "origin": "",
+      "how": "Gom nhiều thay đổi vào 1 request (batch) để giảm round-trip. Có thể dùng delta sync (chỉ sync thay đổi từ cursor) thay vì full sync. Cần xử lý partial failure, idempotency, backpressure khi batch quá lớn.",
+      "related": [
+        "Graceful Degradation",
+        "Retry",
+        "Queue Backpressure"
+      ]
+    }
+  ],
+  "sources": [
+    "https://sre.google/sre-book/table-of-contents.html",
+    "https://martinfowler.com/bliki/CircuitBreaker.html",
+    "https://en.wikipedia.org/wiki/Thundering_herd_problem",
+    "https://en.wikipedia.org/wiki/Head-of-line_blocking",
+    "https://en.wikipedia.org/wiki/Little%27s_law",
+    "https://en.wikipedia.org/wiki/Quorum_(distributed_computing)",
+    "https://en.wikipedia.org/wiki/M/M/1_queue",
+    "https://en.wikipedia.org/wiki/Kendall%27s_notation",
+    "https://en.wikipedia.org/wiki/High_availability",
+    "https://research.google/pubs/pub40801/",
+    "https://sre.google/sre-book/handling-overload/",
+    "https://sre.google/sre-book/addressing-cascading-failures/",
+    "https://sre.google/sre-book/service-level-objectives/",
+    "https://sre.google/sre-book/embracing-risk/",
+    "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html",
+    "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+    "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+    "https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead",
+    "https://en.wikipedia.org/wiki/Backpressure",
+    "https://www.reactive-streams.org/",
+    "https://github.com/reactive-streams/reactive-streams-jvm",
+    "https://en.wikipedia.org/wiki/Chaos_engineering"
+  ]
+}

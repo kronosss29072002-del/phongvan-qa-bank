@@ -1,0 +1,416 @@
+{
+  "domain": "OS & network request-path internals",
+  "entries": [
+    {
+      "term": "Thread-per-connection (Blocking I/O model)",
+      "aliases": [
+        "mỗi kết nối một luồng",
+        "blocking server"
+      ],
+      "level": "basic",
+      "problem": "Server thế hệ đầu viết theo mô hình mỗi socket một thread: thread gọi read() và đứng yên chờ client gửi data. Khi số kết nối lên tới hàng nghìn, mỗi thread vẫn còn phải giữ stack 2MB — máy 1GB RAM hết bộ nhớ ở ~512 thread, và CPU thì tiêu hao cho việc đổi ngữ cảnh liên tục thay vì xử lý request. Đây là mô hình mặc định của mọi server đơn giản (Apache prefork từng thời kỳ) và là thứ đầu tiên vỡ khi traffic tăng.",
+      "how": "Tách 'chờ I/O' khỏi 'xử lý': đọc dữ liệu không block (non-blocking) hoặc nhờ một cơ chế tập trung báo biết socket nào đã sẵn sàng, để một thread duy nhất phục vụ hàng nghìn kết nối thay vì mỗi kết nối một thread.",
+      "origin": "không rõ (mô hình socket blocking có từ BSD sockets cổ điển)",
+      "related": [
+        "Non-blocking I/O",
+        "Context switch cost",
+        "C10k problem",
+        "Event loop"
+      ]
+    },
+    {
+      "term": "Context switch cost",
+      "aliases": [
+        "chi phí đổi ngữ cảnh",
+        "tốn kém context switch"
+      ],
+      "level": "basic",
+      "problem": "Mỗi lần CPU chuyển từ tiến trình/thread này sang tiến trình khác, hệ điều phải lưu thanh ghi, cập nhật bảng bảng điều phối, và thường phải flush TLB + làm nhiễu cache CPU — sau đó gần như mọi tham chiếu bộ nhớ đều miss cho tới khi TLB nạp lại. Với 10.000 kết nối đang active, hàng nghìn context switch mỗi giây khiến phần lớn CPU mất vào 'việc nội bộ' thay vì phục vụ request; đây là lý do đo lường thực tế cho thấy thread-per-connection không scale dù RAM còn đủ.",
+      "how": "Giảm số lần phải đổi ngữ cảnh: gom nhiều kết nối vào ít thread (event loop), hoặc dùng user-space thread (goroutine) vốn switch gần như rẻ như một lời gọi hàm vì không cần flush TLB.",
+      "origin": "không rõ (khái niệm tồn tại từ OS thời kỳ đầu; số liệu cụ thể tùy kiến trúc)",
+      "related": [
+        "Thread-per-connection (Blocking I/O model)",
+        "Non-blocking I/O",
+        "Event loop"
+      ]
+    },
+    {
+      "term": "Non-blocking I/O",
+      "aliases": [
+        "I/O không chặn",
+        "non-blocking socket"
+      ],
+      "level": "basic",
+      "problem": "Trong blocking I/O, read() trên socket chưa có data sẽ treo thread tới khi client gửi — 1000 client im lặng đồng nghĩa 1000 thread bị giam, không thread nào làm việc khác được. Mô hình này biến 'chờ mạng' (vài ms tới vài giây, chậm hơn CPU hàng triệu lần) thành lãng phí tài nguyên nghiêm trọng.",
+      "how": "Đặt socket ở chế độ non-blocking: read() trả về ngay 'chưa có data' thay vì chờ, để thread rảnh làm việc khác hoặc poll kết nối khác; việc chờ được thay bằng một vòng lặp hỏi 'socket nào sẵn sàng?'.",
+      "origin": "không rõ (fcntl O_NONBLOCK trên POSIX sockets)",
+      "related": [
+        "I/O multiplexing (select/poll)",
+        "Event loop",
+        "Reactor pattern"
+      ]
+    },
+    {
+      "term": "I/O multiplexing (select/poll)",
+      "aliases": [
+        "nhân rẽ I/O",
+        "polling nhiều socket",
+        "Multiplexing"
+      ],
+      "level": "basic",
+      "problem": "Sau khi có non-blocking, bài toán đặt ra là: một thread muốn biết trong hàng nghìn socket nào có dữ liệu tới. Viết vòng lặp hỏi từng cái là O(n) mỗi lượt và lãng phí; select/poll ra đời để hỏi hàng loạt trong một syscall — nhưng select giới hạn hard cap FD_SETSIZE (mặc định 1024) và poll phải quét lại toàn bộ danh sách mỗi lần, nên càng nhiều socket càng chậm.",
+      "how": "Một syscall duy nhất truyền vào tập socket cần theo dõi, trả về tập socket đang sẵn sàng (đọc/ghi được), để thread chỉ thao tác đúng những socket có việc.",
+      "origin": "không rõ (select có từ BSD 4.2, ~1983)",
+      "related": [
+        "epoll",
+        "kqueue",
+        "C10k problem"
+      ]
+    },
+    {
+      "term": "DNS resolution chain",
+      "aliases": [
+        "chuỗi phân giải DNS",
+        "recursive resolver",
+        "stub resolver"
+      ],
+      "level": "basic",
+      "problem": "Trước khi request HTTP đầu tiên rời khỏi máy, client phải dịch 'api.example.com' thành IP — nếu mỗi trình ứng dụng tự tra từ đầu (hỏi root → TLD → authoritative) thì mỗi lần mở trang mất thêm vài trăm ms độ trễ và Internet phải gánh lượng query khổng lồ lặp đi lặp lại. Chuỗi phân giải (stub → recursive resolver → root/TLD/authoritative) ra đời để gom việc tra cứu vào một chỗ.",
+      "how": "Stub resolver cục bộ gửi 1 câu hỏi cho recursive resolver (thường của ISP); resolver này tự hỏi root, rồi server TLD (.com), rồi authoritative server của domain, trả lời cho client và cache kết quả theo TTL.",
+      "origin": "Paul Mockapetris, 1983 (USC ISI); RFC 882/883 (11/1983), chuẩn hóa lại bởi RFC 1034/1035 (11/1987)",
+      "related": [
+        "DNS TTL caching",
+        "DNS negative caching",
+        "CDN cache key"
+      ]
+    },
+    {
+      "term": "DNS TTL caching",
+      "aliases": [
+        "Time To Live DNS",
+        "cache DNS"
+      ],
+      "level": "basic",
+      "problem": "Nếu mỗi lần phân giải đều phải hỏi hết root → TLD → authoritative thì độ trễ cộng dồn và các root server sẽ bị nhấn chìm bởi hàng tỷ query lặp lại mỗi ngày. Trước khi có TTL cache, 'mọi phân giải trên Internet đều bắt đầu từ root' — không bền.",
+      "how": "Recursive resolver lưu kết quả theo TTL (do chủ zone đặt, thường vài phút tới vài ngày); truy vấn lặp lại trả lời ngay từ bộ nhớ. TTL hết hạn thì tra lại, nên đổi DNS không mất quá lâu để lan ra toàn cầu.",
+      "origin": "Paul Mockapetris, 1983; TTL có từ thiết kế DNS ban đầu (RFC 1034/1035)",
+      "related": [
+        "DNS resolution chain",
+        "DNS negative caching"
+      ]
+    },
+    {
+      "term": "DNS negative caching",
+      "aliases": [
+        "cache DNS 'không tồn tại'",
+        "NXDOMAIN cache",
+        "RFC 2308"
+      ],
+      "level": "intermediate",
+      "problem": "Người dùng gõ sai domain hàng triệu lần mỗi ngày; mỗi lần resolver đều phải hỏi nguyên chuỗi tới authoritative server chỉ để nhận về 'NXDOMAIN, không có tên này'. RFC 1034 gốc có cơ chế cache câu trả lời âm nhưng 'có khuyết tật gốc' — không cho server khác mượn lại cache đó, nên phần lớn DNS traffic vẫn là query vô nghĩa lặp lại.",
+      "how": "Resolver cache cả câu trả lời 'không tồn tại' (NXDOMAIN) và 'tên đúng nhưng sai loại record' (NODATA) theo TTL lấy từ field MINIMUM của SOA; RFC 2308 còn buộc resolver 'nếu cache gì thì phải cache cả câu trả lời âm'.",
+      "origin": "Mark P. Andrews (CSIRO), RFC 2308, tháng 3/1998",
+      "related": [
+        "DNS TTL caching",
+        "DNS resolution chain"
+      ]
+    },
+    {
+      "term": "RTT (Round-Trip Time)",
+      "aliases": [
+        "thời gian khứ hồi",
+        "độ trễ mạng"
+      ],
+      "level": "basic",
+      "problem": "Mọi request web đều bị chi phối bởi thời gian gói tin đi đi về về: client ở Việt Nam tới server Mỹ mất ~200-300ms mỗi RTT, và một trang web cần 20-100 round trip (DNS, TCP, TLS, HTML, JS, API) nên dù server xử lý chỉ 5ms, user vẫn chờ vài giây. Đây là lý do CDN, HTTP/2 multiplexing, keep-alive tồn tại — giảm số RTT, không phải tăng CPU.",
+      "how": "Đo RTT để làm căn cứ cho các cơ chế khác: timeout tính từ RTT ước lượng, TCP tính bandwidth-delay product từ RTT, thuật toán delay-based (BBR, Vegas) dùng RTT tăng làm tín hiệu tắc nghẽn.",
+      "origin": "không rõ (khái niệm cơ bản của networking)",
+      "related": [
+        "TCP slow start",
+        "TCP congestion control (AIMD)",
+        "CDN cache key"
+      ]
+    },
+    {
+      "term": "HTTP caching với Cache-Control (freshness)",
+      "aliases": [
+        "cache-control max-age",
+        "hết hạn cache HTTP"
+      ],
+      "level": "basic",
+      "problem": "Mọi request tĩnh (HTML, ảnh, JS) đều phải bay tới origin server khiến origin bị overload và user ở xa chờ cả RTT lẫn thời gian server. Trước khi có Cache-Control, caches dùng Expires tuyệt đối — múi giờ lệch là cache sai vĩnh viễn; còn không có cache thì băng thông và độ trễ không cải thiện được.",
+      "how": "Server chỉ định max-age=N (đếm từ lúc sinh ra response, header Age tính nốt thời gian đã nằm ở cache trung gian); trong N giây cache dùng luôn không hỏi origin. no-cache = vẫn lưu nhưng phải revalidate mỗi lần, no-store = cấm lưu, private = chỉ browser được cache (chống rò rỉ data cá nhân ra shared cache).",
+      "origin": "RFC 2616 (HTTP/1.1, 6/1997) định nghĩa Cache-Control; RFC 7234 (2014); hiện hành RFC 9111 (6/2022)",
+      "related": [
+        "ETag / conditional requests (If-None-Match → 304)",
+        "CDN cache key",
+        "Stale-while-revalidate"
+      ]
+    },
+    {
+      "term": "ETag / conditional requests (If-None-Match → 304)",
+      "aliases": [
+        "revalidate cache",
+        "304 Not Modified"
+      ],
+      "level": "basic",
+      "problem": "Cache hết hạn (stale) nhưng file có thể vẫn không đổi — nếu lần nào cũng tải lại toàn bộ response thì tốn băng thông vô ích, đặc biệt với file lớn. Không có cách nào hỏi 'bản tôi đang giữ còn đúng không?' mà không tải hết body thì cache-hit giảm và origin vẫn bị gọi.",
+      "how": "Server trả ETag (hash/nhãn phiên bản của nội dung); khi cache stale, client gửi If-None-Match kèm ETag cũ, server nếu thấy nội dung không đổi chỉ trả 304 Not Modified không body — client dùng tiếp bản cache. ETag mạnh đảm bảo giống byte từng byte, ETag yếu (W/) chỉ đảm bảo tương đương ngữ nghĩa; If-Match còn chống 'mid-air collision' khi ghi đè song song (412).",
+      "origin": "RFC 2616 (1997); hiện tại RFC 9110 § field.etag",
+      "related": [
+        "HTTP caching với Cache-Control (freshness)",
+        "CDN cache key"
+      ]
+    },
+    {
+      "term": "C10k problem",
+      "aliases": [
+        "bài toán 10.000 kết nối",
+        "bài toán C10K"
+      ],
+      "level": "intermediate",
+      "problem": "Năm 1999, Dan Kegel chỉ ra rằng phần cứng đã không còn là nút thắt (máy $1200 với 2GB RAM đủ để phục vụ 10.000 client, mỗi client chỉ cần ~50KHz CPU) — thứ vỡ là mô hình phần mềm: thread-per-connection hết stack ở vài trăm thread, select bị cap 1024 fd và O(n) quét, poll chậm khi quét hàng nghìn descriptor mostly-idle. Web server không thể scale theo phần cứng vì kiến trúc I/O cũ.",
+      "how": "Kegel hệ thống hóa 5 hướng giải: non-blocking I/O + readiness (select/poll), edge-triggered notification (epoll/kqueue), asynchronous completion (IOCP/AIO), thread-per-client (giữ làm baseline), và server in-kernel. Kết luận: non-blocking + event-driven + epoll/kqueue cho phép một máy nhỏ phục vụ vượt 10k kết nối.",
+      "origin": "Dan Kegel, 1999 (kegel.com/c10k.html)",
+      "related": [
+        "epoll",
+        "kqueue",
+        "Non-blocking I/O",
+        "Reactor pattern"
+      ]
+    },
+    {
+      "term": "epoll",
+      "aliases": [
+        "event poll Linux",
+        "epoll_wait"
+      ],
+      "level": "intermediate",
+      "problem": "select/poll phải quét toàn bộ danh sách descriptor O(n) mỗi lần hỏi 'ai sẵn sàng?', và select còn hard-cap FD_SETSIZE — server có 100.000 kết nối thì mỗi vòng lặp tốn 100.000 lần kiểm tra, phần lớn kết nối im lặng. Nút thắt này khiến Linux không thể cạnh tranh ở bài toán C10k cho tới khi epoll ra đời.",
+      "how": "Kernel giữ tập descriptor đã đăng ký trong cây đỏ-đen; người dùng thêm/sửa/xóa riêng qua epoll_ctl, rồi epoll_wait chỉ trả về đúng các event đang xảy ra — O(1) cho thao tác thường gặp, không phải quét lại. Hỗ trợ level-triggered (trả về chừng điều kiện còn đúng) và edge-triggered (chỉ trả về khi có event mới).",
+      "origin": "Linux kernel 2.5.45, tháng 10/2002 (được công bố trong bản phát hành của Linus Torvalds; đưa tin bởi Jonathan Corbet trên LWN)",
+      "related": [
+        "kqueue",
+        "C10k problem",
+        "Edge-triggered vs level-triggered",
+        "Event loop"
+      ]
+    },
+    {
+      "term": "kqueue",
+      "aliases": [
+        "kernel event queue",
+        "BSD event mechanism"
+      ],
+      "level": "intermediate",
+      "problem": "FreeBSD/BSD cũng gặp đúng bài toán C10k với select/poll O(n) và cần cơ chế sự kiện của riêng hệ, vì epoll là Linux-specific. nginx và các server production cần một interface hiệu quả để theo dõi hàng nghìn fd trên BSD/macOS.",
+      "how": "Một call kevent() gộp cả đăng ký filter, sửa đổi và chờ event — kernel chỉ trả về đúng những sự kiện người dùng quan tâm; ngoài fd readiness còn theo dõi được file đổi, signal, timer nanosecond, tiến trình con, event người dùng định nghĩa.",
+      "origin": "Jonathan Lemon, FreeBSD Core Team, 2000 (FreeBSD 4.1, tháng 7/2000)",
+      "related": [
+        "epoll",
+        "C10k problem",
+        "I/O multiplexing (select/poll)"
+      ]
+    },
+    {
+      "term": "Event loop",
+      "aliases": [
+        "vòng lặp sự kiện",
+        "lõi sự kiện Node/Nginx"
+      ],
+      "level": "intermediate",
+      "problem": "Muốn một thread phục vụ hàng nghìn kết nối thì phải có thứ thay thế 'mỗi kết nối một thread': một vòng lặp duy nhất hỏi 'cái gì đang xảy ra?' rồi xử lý — nếu không có event loop, code hoặc block chờ (vỡ như thread-per-connection) hoặc busy-wait hỏi liên tục (cháy CPU).",
+      "how": "Vòng lặp: chờ event (epoll_wait/kqueue/IOCP) → nhận danh sách sự kiện đã sẵn sàng → dispatch về handler tương ứng → lặp lại. Node.js, Nginx, Redis đều quay quanh một event loop như vậy — đó là lý do Nginx serve được hàng trăm nghìn kết nối với vài worker.",
+      "origin": "không rõ (cùng họ với Reactor pattern của Douglas Schmidt 1995)",
+      "related": [
+        "Reactor pattern",
+        "epoll",
+        "Non-blocking I/O"
+      ]
+    },
+    {
+      "term": "Reactor pattern",
+      "aliases": [
+        "mẫu Reactor",
+        "readiness-based event handling"
+      ],
+      "level": "intermediate",
+      "problem": "Thiết kế server theo kiểu thủ công 'vòng lặp + if event' khiến mỗi project tự phát minh lại cách demultiplex và dispatch, code trộn lẫn giữa 'chờ socket' và 'xử lý nghiệp vụ', khó bảo trì và dễ block ngoài ý muốn. Bài toán cần một mẫu chuẩn: single thread xử lý nhiều kết nối mà không block.",
+      "how": "Reactor gồm: Handle (socket/fd) → Demultiplexer (epoll/kqueue/select chờ sẵn sàng) → Dispatcher (event loop) → Event handlers đã đăng ký. Sự kiện 'đã sẵn sàng để đọc/ghi' được dispatch đúng handler — readiness-based: kernel báo 'sẵn sàng', handler tự đọc.",
+      "origin": "Douglas C. Schmidt, 1995 — 'Reactor: An Object Behavioral Pattern...', Chương 29, Pattern Languages of Program Design (Addison-Wesley)",
+      "related": [
+        "Proactor pattern",
+        "Event loop",
+        "epoll",
+        "C10k problem"
+      ]
+    },
+    {
+      "term": "Edge-triggered vs level-triggered",
+      "aliases": [
+        "ET/LT",
+        "EPOLLET",
+        "sẵn sàng vs chuyển tiếp"
+      ],
+      "level": "advanced",
+      "problem": "Level-triggered cổ điển liên tục báo lại 'buffer còn data chưa đọc' — mỗi epoll_wait đều trả về dù không có gì mới, tốn CPU xử lý event trùng. Nhưng edge-triggered cực kỳ dễ sai: nếu nhận event mà không đọc hết buffer thì kernel không báo lại → kết nối treo vĩnh viễn, bug khó tìm nhất trong event-driven server.",
+      "how": "Level-triggered: trả về chừng điều kiện còn đúng (giống poll). Edge-triggered: chỉ báo khi CÓ sự kiện mới (data tới, socket đóng); bắt buộc developer phải đọc/ghi tới khi EAGAIN mới nghỉ. Kết hợp với non-blocking để không bao giờ block trong handler.",
+      "origin": "không rõ (epoll hỗ trợ từ đầu 2002; kqueue qua cờ EV_CLEAR)",
+      "related": [
+        "epoll",
+        "kqueue",
+        "Event loop",
+        "Reactor pattern"
+      ]
+    },
+    {
+      "term": "Zero-copy (sendfile)",
+      "aliases": [
+        "copy không qua user space",
+        "sendfile(2)"
+      ],
+      "level": "advanced",
+      "problem": "Phục vụ file tĩnh theo cách thông thường: read() kéo data từ page cache vào buffer user-space, rồi write() đẩy ngược từ user-space vào socket — mỗi byte bị sao chép nhiều lần qua biên giới kernel/user, tốn CPU memcpy và chiếm thêm memory bandwidth. Với server serve hàng GB/giây (static files, CDN origin), overhead sao chép trở thành nút thắt CPU.",
+      "how": "sendfile(in_fd, out_fd) yêu cầu kernel tự chuyển data trực tiếp từ page cache của file sang socket, không đi qua user space. Hạn chế: in_fd phải là file hỗ trợ mmap (không phải socket), file không được sửa đổi khi đang đọc, mỗi lần tối đa ~2GB, không portable — fallback bằng read/write trên EINVAL/ENOSYS. Kết hợp TCP_CORK/MSG_MORE để gộp header.",
+      "origin": "Linux 2.2, glibc 2.1 (sendfile64 thêm ở Linux 2.4 cho file lớn)",
+      "related": [
+        "C10k problem",
+        "Non-blocking I/O",
+        "CDN cache key"
+      ]
+    },
+    {
+      "term": "TCP slow start",
+      "aliases": [
+        "khởi động chậm",
+        "cwnd exponential growth"
+      ],
+      "level": "intermediate",
+      "problem": "Khi mở kết nối TCP, sender không biết đường truyền chịu được bao nhiêu — bung hết dữ liệu ngay sẽ gây packet loss hàng loạt và góp phần làm sập mạng (congestion collapse). Nhưng cũng không thể gửi nhỏ giọt vĩnh viễn vì lãng phí băng thông chờ RTT từng round.",
+      "how": "Khởi đầu với cwnd nhỏ (1-10 MSS), mỗi ACK nhận được lại tăng thêm ~1 MSS → cửa sổ nhân đôi mỗi RTT (tăng hàm mũ) cho tới ngưỡng ssthresh hoặc mất gói; sau đó chuyển sang congestion avoidance tăng tuyến tính +1 MSS/RTT. Cwnd do sender giữ, phân biệt với receiver window (flow control).",
+      "origin": "Van Jacobson & Michael Karels, bài báo 'Congestion avoidance and control', 1988; chuẩn hóa ở RFC 2001 và RFC 5681",
+      "related": [
+        "TCP congestion control (AIMD)",
+        "RTT (Round-Trip Time)",
+        "BBR / CUBIC (congestion control algorithms)"
+      ]
+    },
+    {
+      "term": "TCP congestion control (AIMD)",
+      "aliases": [
+        "kiểm soát tắc nghẽn TCP",
+        "congestion window",
+        "AIMD"
+      ],
+      "level": "intermediate",
+      "problem": "Nếu mọi host bung data theo khả năng đường truyền mà không kiểm soát, router quá tải sẽ drop hàng loạt — các kết nối cùng retransmit làm tình trạng tệ hơn, kéo cả Internet vào 'congestive collapse' (mô tả của Van Jacobson cuối những năm 80). Flow control (receiver window) không giải quyết được vì nó chỉ bảo vệ từng connection, không bảo vệ mạng.",
+      "how": "Sender giữ congestion window (cwnd) giới hạn byte đang trong đường; mất packet/có tín hiệu nghẽn thì cắt cửa sổ (multiplicative decrease), không nghẽn thì tăng từ từ (additive increase) — AIMD. Mất 3 duplicate ACK → fast retransmit ngay không chờ timeout; Tahoe reset về 1 MSS, Reno vào fast recovery. End-to-end: kiểm soát nằm ở host, không ở router.",
+      "origin": "Van Jacobson & Michael Karels, 1988 (RFC 2001, RFC 5681)",
+      "related": [
+        "TCP slow start",
+        "RTT (Round-Trip Time)",
+        "BBR / CUBIC (congestion control algorithms)"
+      ]
+    },
+    {
+      "term": "BBR / CUBIC (congestion control algorithms)",
+      "aliases": [
+        "BBR Google",
+        "CUBIC Linux default"
+      ],
+      "level": "advanced",
+      "problem": "AIMD kiểu Reno/CUBIC phản ứng với MẤT GÓI làm tín hiệu nghẽn — nhưng link không dây/mobile và buffer router lớn (bufferbloat) gây loss không phải vì nghẽn thật, khiến throughput giảm oan; ngoài ra loss-based không phân biệt được 'mất do nghẽn' và 'mất do wifi'. Network nhanh đường dài (BDP lớn) bị throughput kẹt.",
+      "how": "CUBIC (mặc định Linux từ 2.6.19/2006) tăng cwnd theo hàm bậc ba kể từ lần nghẽn cuối, êm hơn BIC. BBR (Google, 2016, Linux 4.9+) ước lượng hai đại lượng: bottleneck bandwidth và RTT propagation, rồi điều khiển pacing cho vừa hai cái đó — không đợi mất gói; trên YouTube BBR tăng throughput trung bình ~4%. v2/v3 bổ sung tín hiệu loss/ECN để fair hơn.",
+      "origin": "CUBIC: Sangtae Heo và cộng sự (mặc định Linux 2.6.19, 2006); BBR: Neal Cardwell & Yuchung Cheng (Google, 2016, Linux 4.9)",
+      "related": [
+        "TCP congestion control (AIMD)",
+        "TCP slow start",
+        "RTT (Round-Trip Time)"
+      ]
+    },
+    {
+      "term": "Proactor pattern",
+      "aliases": [
+        "mẫu Proactor",
+        "completion-based I/O",
+        "IOCP"
+      ],
+      "level": "advanced",
+      "problem": "Reactor vẫn là 'readiness-based': handler phải tự đọc/ghi sau khi báo sẵn sàng — nếu read() chỉ được nửa đường (partial), hoặc thao tác file không theo model readiness, developer phải tự viết state machine nối data. Với I/O thực sự asynchronous của OS (đọc xong mới báo), Reactor không khai thác được và code vẫn rối.",
+      "how": "Proactor là completion-based: initiator nạp trước thao tác async + completion handler cho OS; khi I/O HOÀN TẤT OS mới gọi handler kèm kết quả (data đã đọc xong), không phải 'sẵn sàng'. Các thành phần: proactive initiator, asynchronous operation processor, completion dispatcher. Reactor vẫn có thể nằm trong Proactor để giải quyết phần blocking I/O.",
+      "origin": "Irfan Pyarali, Tim Harrison, Douglas C. Schmidt, Thomas D. Jordan — 'Proactor: An Object Behavioral Pattern...', PLoP '97 (tháng 9/1997)",
+      "related": [
+        "Reactor pattern",
+        "io_uring",
+        "Port"
+      ]
+    },
+    {
+      "term": "io_uring",
+      "aliases": [
+        "async syscall Linux",
+        "io_uring SQ/CQ"
+      ],
+      "level": "advanced",
+      "problem": "Linux APIO cũ (aio_read/aio_write) 'khó dùng và kém hiệu quả', chỉ hoạt động với O_DIRECT trên file đã pre-allocate (không dùng được page cache), và không hỗ trợ socket — không gộp được disk I/O và network I/O vào một vòng event loop. Đồng thời mỗi read/write đều là một syscall riêng: hàng trăm nghìn I/O/giây thì overhead chuyển sang kernel (context switch, copy descriptor) chiếm phần lớn CPU.",
+      "how": "io_uring dùng hai ring buffer chia sẻ giữa user và kernel: Submission Queue (user ghi request vào, không cần syscall từng cái) và Completion Queue (kernel ghi kết quả). Nhờ shared memory, giảm số syscall hàng loạt và gộp được file + socket vào cùng một cơ chế async. liburing là wrapper tiện dùng hơn.",
+      "origin": "Jens Axboe, Linux kernel 5.1, năm 2019",
+      "related": [
+        "Proactor pattern",
+        "Non-blocking I/O",
+        "epoll",
+        "Context switch cost"
+      ]
+    },
+    {
+      "term": "CDN cache key",
+      "aliases": [
+        "khóa cache CDN",
+        "cache key normalization"
+      ],
+      "level": "advanced",
+      "problem": "CDN có thể lưu cùng một URL hàng nghìn bản copy khác nhau nếu key không được kiểm soát: query string trùng thứ tự khác nhau (?a=1&b=2 vs ?b=2&a=1), cookie session vô nghĩa, header ngẫu nhiên — mỗi biến thể là một cache entry riêng, phần lớn chỉ hit một lần rồi bị evict, hit rate sập trong khi origin bị gọi liên tục. Đổi scheme SSL hoặc normalize URL sai còn vô tình bust toàn bộ cache.",
+      "how": "Cache key = trích xuất có kiểm soát từ request (URL + query đã include/exclude/sort + header được phép + method-override headers). Cloudflare mặc định key theo full URL + Origin + các header forward; header như accept-*/user-agent chỉ cho include khi chỉ định giá trị cụ thể (1-10 giá trị). Best practice: dùng mặc định, exclude query param vô nghĩa, bật URL normalization để tránh cache poisoning, chỉ custom key khi thật sự cần (theo device/geo).",
+      "origin": "không rõ (khái niệm có ở mọi CDN; ví dụ cấu hình từ docs Cloudflare)",
+      "related": [
+        "Vary header",
+        "DNS TTL caching",
+        "HTTP caching với Cache-Control (freshness)"
+      ]
+    },
+    {
+      "term": "stale-while-revalidate / immutable",
+      "aliases": [
+        "phục vụ cũ khi đang làm mới",
+        "RFC 5861",
+        "immutable asset"
+      ],
+      "level": "advanced",
+      "problem": "Khi cache hết hạn, client bắt buộc chờ revalidation round-trip về origin (thêm 1+ RTT + thời gian origin) dù nội dung 99% vẫn giữ nguyên — user cảm nhận độ trễ đúng vào lúc họ click. Ngược lại, asset đã hash version (?v=abc123) không bao giờ đổi nội dung nhưng client vẫn gửi conditional request vô ích mỗi lần.",
+      "how": "stale-while-revalidate=N: quá max-age, cache vẫn phục vụ bản cũ NGAY cho user và âm thầm revalidate nền — user không thấy độ trễ. immutable: trong suốt thời gian fresh, không cần revalidate (dùng với URL có version hash + max-age dài). Kết hợp pattern: index.html đặt no-cache để luôn lấy HTML mới trỏ tới asset mới, /assets/* đặt immutable caching vĩnh viễn.",
+      "origin": "stale-while-revalidate: RFC 5861 (2010); immutable: RFC 8246 (2017); Cache-Control nền tảng từ RFC 2616 (1997)",
+      "related": [
+        "HTTP caching với Cache-Control (freshness)",
+        "ETag / conditional requests (If-None-Match → 304)",
+        "CDN cache key"
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Epoll",
+    "https://en.wikipedia.org/wiki/Kqueue",
+    "https://en.wikipedia.org/wiki/Reactor_pattern",
+    "https://en.wikipedia.org/wiki/Io_uring",
+    "https://en.wikipedia.org/wiki/Domain_Name_System",
+    "https://en.wikipedia.org/wiki/TCP_congestion_control",
+    "https://en.wikipedia.org/wiki/Context_switch",
+    "http://www.kegel.com/c10k.html",
+    "https://man7.org/linux/man-pages/man2/sendfile.2.html",
+    "https://datatracker.ietf.org/doc/html/rfc2308",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Vary",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag",
+    "https://developers.cloudflare.com/cache/how-to/cache-keys/",
+    "https://www.dre.vanderbilt.edu/~schmidt/PDF/Proactor.pdf"
+  ]
+}

@@ -1,0 +1,2 @@
+[    1122ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://external-content.duckduckgo.com/ip3/aipatternbook.com.ico:0
+[   77345ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://html.duckduckgo.com/html/?q=%22site%20reliability%20engineering%22%20origin%20Google%202003%20Ben%20Treynor%20Sloss%20coined:0

@@ -1,0 +1,652 @@
+{
+  "domain": "RELIABILITY & OBSERVABILITY",
+  "entries": [
+    {
+      "term": "Reliability vs Availability",
+      "aliases": [
+        "reliability_vs_availability"
+      ],
+      "level": "basic",
+      "problem": "Người ta thường nhầm lẫn giữa độ tin cậy (reliability) và tính sẵn sàng (availability), dẫn đến mục tiêu đo lường sai.",
+      "origin": "Google SRE Book - Chapter 1 (Betsy Beyer et al.)",
+      "how": "Reliability là xác suất hệ thống thực hiện đúng chức năng trong khoảng thời gian đã định. Availability là tỷ lệ thời gian hệ thống có thể sử dụng được (uptime/total time). Hệ thống có thể có downtime có kế hoạch nhưng vẫn đạt reliability mục tiêu.",
+      "related": [
+        "SLO",
+        "Availability Math (Five Nines)",
+        "Error Budget"
+      ]
+    },
+    {
+      "term": "SLI",
+      "aliases": [
+        "Service Level Indicator"
+      ],
+      "level": "basic",
+      "problem": "Khi đội vận hành chỉ nói dịch vụ đang 'ổn' hay 'chậm' bằng cảm tính thì không có bằng chứng nào để tranh luận; SLI ra đời để thay phán đoán bằng một chỉ số đo được, định nghĩa rõ trên cửa sổ thời gian, cho biết người dùng thật sự trải nghiệm gì.",
+      "origin": "Google SRE Book - Chapter 4 (Service Level Objectives)",
+      "how": "SLI là chỉ số định lượng được định nghĩa cẩn thận để đo một khía cạnh của dịch vụ (ví dụ: tỷ lệ request thành công, latency percentile, throughput). Thường được tổng hợp trong cửa sổ đo lường.",
+      "related": [
+        "SLO",
+        "SLA",
+        "error_rate"
+      ]
+    },
+    {
+      "term": "SLO",
+      "aliases": [
+        "Service Level Objective"
+      ],
+      "level": "basic",
+      "problem": "Không có ngưỡng mục tiêu nên mỗi tranh luận giữa sửa độ ổn định và làm feature lại kết thúc theo cảm tính; SLO đặt con số cam kết trên SLI, biến yêu cầu 'phải ổn định' thành tiêu chí ra quyết định và thành cơ sở tính error budget.",
+      "origin": "Google SRE Book - Chapter 4 (Service Level Objectives)",
+      "how": "SLO là giá trị mục tiêu hoặc khoảng mục tiêu cho SLI (ví dụ: p95 latency < 100ms). Giúp cân bằng giữa đổi mới và ổn định.",
+      "related": [
+        "SLI",
+        "SLA",
+        "Error Budget"
+      ]
+    },
+    {
+      "term": "SLA",
+      "aliases": [
+        "Service Level Agreement"
+      ],
+      "level": "basic",
+      "problem": "Cần phân biệt rõ cam kết hợp đồng với khách hàng khỏi mục tiêu nội bộ để tránh nhầm lẫn khái niệm.",
+      "origin": "Google SRE Book - Chapter 4 (Service Level Objectives)",
+      "how": "SLA là hợp đồng rõ ràng hoặc ngầm định với người dùng, bao gồm hậu quả khi đạt/mất SLO (bồi thường, credit...). SRE thường dùng SLO nội bộ cao hơn SLA.",
+      "related": [
+        "SLI",
+        "SLO",
+        "Error Budget"
+      ]
+    },
+    {
+      "term": "Error Budget",
+      "aliases": [
+        "error_budget"
+      ],
+      "level": "intermediate",
+      "problem": "Xung đột giữa phát triển (tốc độ) và ổn định (độ tin cậy) cần được giải quyết có hệ thống.",
+      "origin": "Google SRE Book - Chapter 1 (Introduction)",
+      "how": "Error budget = 1 - SLO (ví dụ: SLO 99.9% -> budget 0.1% downtime/failed requests). Khi budget còn nhiều, có thể đổi mới nhanh hơn; khi gần hết, ưu tiên ổn định.",
+      "related": [
+        "SLO",
+        "Burn Rate",
+        "Availability Math (Five Nines)"
+      ]
+    },
+    {
+      "term": "Burn Rate",
+      "aliases": [
+        "burn_rate",
+        "Burn rate & multiwindow multi-burn-rate alerting",
+        "alert đa cửa sổ",
+        "fast burn/slow burn",
+        "Burn rate multiwindow alerting"
+      ],
+      "level": "advanced",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Alert theo ngưỡng cố định (ví dụ error rate > 0.1%) quá nhạy: một spike vài phút cũng đủ page on-call dù lỗi đã hết ngay, còn alert dựa trên SLO window 30 ngày lại quá chậm, phát hiện xong thì error budget đã cạn. Cửa sổ ngắn cũng vướng vấn đề reset time kém: sau khi hệ thống hồi phục, alert vẫn kêu thêm hàng giờ. Cần phát hiện sớm tốc độ tiêu hao error budget mà không gây nhiễu alert.",
+      "origin": "Google SRE Workbook, chương 5 'Alerting on SLOs' (2018)",
+      "how": "Burn rate là tốc độ tiêu hao error budget so với SLO; burn rate 1 nghĩa là tiêu hết budget đúng bằng kỳ SLO (chẳng hạn 30 ngày). Thay vì một ngưỡng đơn, dùng cụm nhiều cửa sổ chồng lấn: 1h/5m ở burn 14.4 và 6h/30m ở burn 6 để bắt cháy nhanh; cửa sổ ngắn xác nhận lỗi đang còn nên alert tự tắt khoảng 5 phút sau khi hết lỗi. Cách này cân bằng giữa detection time và precision khi phát hiện sớm tiêu hao bất thường.",
+      "related": [
+        "Error Budget",
+        "SLO",
+        "SLO/SLI",
+        "Alert Fatigue"
+      ]
+    },
+    {
+      "term": "Four Golden Signals",
+      "aliases": [
+        "four_golden_signals"
+      ],
+      "level": "basic",
+      "problem": "Cần tập trung vào 4 chỉ số cốt lõi thay vì theo dõi quá nhiều metric gây nhiễu.",
+      "origin": "Google SRE Book - Chapter 6 (Monitoring Distributed Systems)",
+      "how": "Latency (thời gian phản hồi, phân biệt thành công/thất bại), Traffic (lưu lượng yêu cầu), Errors (tỷ lệ thất bại), Saturation (mức độ đầy tải của tài nguyên giới hạn).",
+      "related": [
+        "RED_method",
+        "Profiling: CPU/heap, flame graph",
+        "Bandwidth vs Latency"
+      ]
+    },
+    {
+      "term": "RED Method",
+      "aliases": [
+        "RED"
+      ],
+      "level": "intermediate",
+      "problem": "Cần triết lý giám sát tập trung cho microservices, dễ áp dụng nhất quán.",
+      "origin": "Tom Wilkie (Grafana Labs) - RED Method, 2015",
+      "how": "Rate (số request/giây), Errors (số request thất bại), Duration (thời gian xử lý phân phối). Tập trung vào trải nghiệm người dùng (request-based).",
+      "related": [
+        "Four Golden Signals",
+        "Profiling: CPU/heap, flame graph",
+        "Bandwidth vs Latency"
+      ]
+    },
+    {
+      "term": "USE Method",
+      "aliases": [
+        "USE"
+      ],
+      "level": "intermediate",
+      "problem": "Khi hệ thống chậm hoặc tài nguyên cạn kiệt, đội vận hành thường tra metrics theo cảm tính: CPU trung bình, memory trung bình, các con số average che mất resource đang nghẽn. Thiếu một checklist cố định để rà từng resource CPU, memory, disk, network theo cùng bộ câu hỏi nên saturation và error bị bỏ sót, downtime kéo dài mà chưa xác định được bottleneck nằm ở đâu.",
+      "origin": "Brendan Gregg - Performance Analysis Methodology (USE Method)",
+      "how": "Quét mọi resource theo đúng thứ tự ba câu hỏi: Utilization là % thời gian resource bận xử lý work; Saturation là lượng công việc đang chờ trong queue vượt capacity; Errors là số sự kiện lỗi của chính resource đó. Mỗi ô số gắn vào dashboard và alert resource-level, nhờ đó bottleneck hiện ra ở đúng resource thay vì bị average hóa.",
+      "related": [
+        "Four Golden Signals",
+        "RED_method",
+        "Load average & run queue (loadavg, CPU saturation, process state)"
+      ]
+    },
+    {
+      "term": "Toil",
+      "aliases": [
+        "toil"
+      ],
+      "level": "intermediate",
+      "problem": "Công việc vận hành lặp lại, thủ công làm tiêu tốn thời gian SRE, giảm khả năng tập trung vào việc bền vững.",
+      "origin": "Google SRE Book - Chapter 5 (Eliminating Toil)",
+      "how": "Toil là công việc vận hành sản xuất mang tính thủ công, lặp lại, có thể tự động hóa, mang tính chiến thuật, không giá trị bền vững và tỷ lệ tuyến tính theo quy mô dịch vụ. Phân biệt với overhead/engineering work có giá trị lâu dài.",
+      "related": [
+        "automation",
+        "Postmortem",
+        "On-call rotation"
+      ]
+    },
+    {
+      "term": "Circuit Breaker",
+      "aliases": [
+        "circuit_breaker",
+        "circuit_breaking"
+      ],
+      "level": "advanced",
+      "problem": "Lỗi phụ thuộc lan truyền (cascading) khi upstream chậm/trả lỗi liên tục gây cạn tài nguyên.",
+      "origin": "Michael T. Nygard - Release It!; Martin Fowler (Bliki) - CircuitBreaker, 2014-03-06",
+      "how": "Bao bọc remote call bằng state machine (Closed/Open/Half-Open). Khi thất bại đạt ngưỡng -> mở mạch (trả lỗi ngay, không gọi upstream). Sau timeout thử lại Half-Open để phục hồi an toàn.",
+      "related": [
+        "Cascading Failures",
+        "Retry Budget",
+        "Timeout"
+      ]
+    },
+    {
+      "term": "Retry Budget",
+      "aliases": [
+        "retry_budget"
+      ],
+      "level": "advanced",
+      "problem": "Retry không kiểm soát tạo ra retry storm, làm tăng tải và làm trầm trọng thêm tình trạng overload.",
+      "origin": "Google SRE Book - Chapter 21 (Handling Overload)",
+      "how": "Giới hạn retry: per-request retry budget (ví dụ tối đa 3 lần) và per-client retry budget (tỷ lệ retry < ngưỡng, ví dụ 10%). Ngăn tăng tải nhân đôi/bội số do retry khi cluster đang overload.",
+      "related": [
+        "Circuit Breaker",
+        "Traffic burst & burst capacity",
+        "Overload Protection"
+      ]
+    },
+    {
+      "term": "Distributed tracing",
+      "aliases": [
+        "Trace",
+        "trace phân tán",
+        "phân bố trace",
+        "distributed trace",
+        "trace/span"
+      ],
+      "level": "intermediate",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Một request từ user đi qua gateway → auth → order → payment → DB, mỗi service ghi log riêng với clock lệch nhau; khi request chậm 2 giây không ai biết bottleneck ở đâu vì log từng service không nối được với nhau, grep log không cho biết 'cái này gọi cái kia'. Cần theo dõi yêu cầu xuyên qua nhiều service trong hệ thống phân tán để tìm nguyên nhân lỗi.",
+      "origin": "Google Dapper (Sigelman và cộng sự, 2010); OpenTelemetry Project; W3C Trace Context Working Group",
+      "how": "Mỗi service tự tạo span (start/end, metadata) và nối vào chung trace_id; trace là cây các span mô tả đường đi end-to-end của một request xuyên qua service, process và network boundary. Gom toàn bộ cây gọi kèm thời gian từng bước lại sẽ chỉ ra chính xác bước nào tốn thời gian và lỗi xảy ra ở đâu, phục vụ phân tích nguyên nhân gốc rễ.",
+      "related": [
+        "Trace Context Propagation",
+        "OpenTelemetry",
+        "APM",
+        "Span"
+      ]
+    },
+    {
+      "term": "Trace Context Propagation",
+      "aliases": [
+        "Context propagation & Correlation ID",
+        "correlation ID",
+        "trace context",
+        "traceparent header",
+        "truyền ngữ cảnh",
+        "w3c_tracecontext",
+        "Traceparent"
+      ],
+      "level": "advanced",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Trace chỉ ghép lại được nếu service downstream nhận được trace_id từ upstream. Khi mỗi service tự sinh ID riêng, hoặc header bị proxy hay message queue làm mất, trace đứt thành nhiều mảnh rời rạc và log của cùng một request chạy qua 8 service cũng không nối lại được với nhau.",
+      "origin": "W3C TraceContext specification",
+      "how": "Đính kèm trace_id/parent_id vào HTTP header hoặc message property, đọc lại ở cửa vào và kế thừa khi gọi tiếp. Chuẩn W3C Trace Context quy định header traceparent với định dạng <version>-<trace-id>-<parent-id>-<trace-flags>, cho phép inject/extract context xuyên service boundary; service nhận tạo span con thuộc cùng trace. Correlation ID truyền theo cách tương tự để join toàn bộ log của một request.",
+      "related": [
+        "Distributed tracing",
+        "Structured logging",
+        "OpenTelemetry",
+        "Span"
+      ]
+    },
+    {
+      "term": "Span",
+      "aliases": [
+        "span_id"
+      ],
+      "level": "intermediate",
+      "problem": "Cần đơn vị đo lường thời gian và ngữ cảnh cho từng thao tác trong trace.",
+      "origin": "OpenTelemetry Project",
+      "how": "Span là đơn vị công việc trong trace (operation name, start/end time, attributes, events, status). Liên kết parent-child tạo thành cây causal.",
+      "related": [
+        "Distributed tracing",
+        "Trace Context Propagation",
+        "OpenTelemetry"
+      ]
+    },
+    {
+      "term": "OpenTelemetry",
+      "aliases": [
+        "OTel"
+      ],
+      "level": "intermediate",
+      "problem": "Thiếu chuẩn mở để thu thập traces/metrics/logs, dẫn đến vendor lock-in.",
+      "origin": "OpenTelemetry Project (merger of OpenTracing + OpenCensus)",
+      "how": "SDK/API chuẩn để instrument, thu thập và xuất (export) signals (traces, metrics, logs) với context propagation mặc định (W3C traceparent).",
+      "related": [
+        "Distributed tracing",
+        "Metrics (time-series)",
+        "Log sampling & rate limiting",
+        "Sampling"
+      ]
+    },
+    {
+      "term": "Head-based Sampling",
+      "aliases": [
+        "head_sampling"
+      ],
+      "level": "advanced",
+      "problem": "Cần giảm volume telemetry sớm mà vẫn có tính đại diện, đặc biệt ở throughput cao.",
+      "origin": "OpenTelemetry Concepts - Sampling",
+      "how": "Quyết định sample/drop ngay khi tạo span (trước khi biết toàn bộ trace). Thường dùng Consistent Probability Sampling. Tiết kiệm tài nguyên, nhưng khó chọn dựa trên kết quả toàn trace.",
+      "related": [
+        "Sampling",
+        "OpenTelemetry"
+      ]
+    },
+    {
+      "term": "Sampling",
+      "aliases": [
+        "trace_sampling",
+        "Head-based vs tail-based sampling",
+        "Tail-based Sampling",
+        "tail sampling",
+        "lấy mẫu trace"
+      ],
+      "level": "advanced",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Ở lưu lượng cao (ví dụ 10k req/s), ghi full trace làm chi phí lưu trữ và băng thông phình ra (nhiều backend tính tiền theo GB), nhưng sample mù 1% ở đầu request lại vứt bỏ đúng những incident hiếm (lỗi 0,01%) và không ưu tiên được trace lỗi, chậm hay thuộc service mới; tập mẫu vẫn phải đủ đại diện để phân tích.",
+      "origin": "OpenTelemetry Concepts - Sampling",
+      "how": "Chọn tập con trace đại diện để xử lý và xuất, giảm chi phí mà vẫn phân tích được, theo rule domain-specific và ngân sách observability. Head-based: quyết định ngay lúc bắt đầu theo tỷ lệ % trace ID — đơn giản, rẻ, nhưng không biết trước trace có lỗi hay không. Tail-based: quyết định sau khi thu thập đủ (hoặc toàn bộ) span của trace, cho phép rule phức tạp như luôn giữ trace lỗi/chậm hoặc theo p95, attributes; đổi lại cần buffer và component trạng thái tốn tài nguyên. Hệ thống lớn thường kết hợp cả hai.",
+      "related": [
+        "Head-based Sampling",
+        "Metric cardinality",
+        "Distributed tracing",
+        "OpenTelemetry",
+        "Exemplars"
+      ]
+    },
+    {
+      "term": "Prometheus Pull Model",
+      "aliases": [
+        "Prometheus scrape model (pull)",
+        "pull_model",
+        "prometheus_scrape",
+        "scrape",
+        "mô hình kéo metrics",
+        "endpoint /metrics"
+      ],
+      "level": "intermediate",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Với push, mỗi service phải tự biết địa chỉ collector và gửi metric lên: service chết thì mất luôn dữ liệu báo nó chết, và hạ tầng động (pod đổi IP liên tục, tự nhân bản) khiến cấu hình push target rải khắp nơi thành hỗn loạn. Cần cơ chế thu thập metric an toàn, dễ discovery, kiểm soát được lưu lượng và tránh bị flood từ nhiều nguồn.",
+      "origin": "SoundCloud, khởi đầu năm 2012; gia nhập CNCF năm 2016 (dự án thứ hai sau Kubernetes)",
+      "how": "Prometheus chủ động pull (scrape) endpoint /metrics theo danh sách target lấy từ service discovery (static hoặc k8s); mỗi scrape độc lập theo từng server nên dễ kiểm soát, và target chết để lại tín hiệu rõ: series biến mất hoặc up==0. Metric chỉ gồm số và label, truy vấn bằng PromQL, lưu cục bộ trên từng node nên không phụ thuộc storage tập trung lúc outage. Push vẫn được hỗ trợ qua Pushgateway.",
+      "related": [
+        "Metrics (time-series)",
+        "Metric cardinality",
+        "Exemplars"
+      ]
+    },
+    {
+      "term": "Metric Types",
+      "aliases": [
+        "counter",
+        "gauge",
+        "histogram",
+        "native_histogram"
+      ],
+      "level": "intermediate",
+      "problem": "Cần phân loại metric đúng để tránh diễn giải sai (giá trị tăng/giảm, phân phối).",
+      "origin": "Prometheus Documentation - Metric Types",
+      "how": "Counter: tăng đơn điệu, reset khi restart (requests). Gauge: lên/xuống (memory, concurrent). Histogram: quan sát phân phối theo bucket + sum + count (latency). Native histogram hiệu quả hơn classic.",
+      "related": [
+        "Metrics (time-series)",
+        "Prometheus Pull Model"
+      ]
+    },
+    {
+      "term": "Cardinality Explosion",
+      "aliases": [
+        "cardinality_explosion",
+        "high_cardinality"
+      ],
+      "level": "advanced",
+      "problem": "Dùng label có cardinality cao (user_id, request_id, email...) tạo ra số lượng time series khổng lồ, làm tăng chi phí lưu trữ/queries.",
+      "origin": "Prometheus Best Practices - Metric and Label Naming",
+      "how": "Mỗi tổ hợp (metric_name + label key-values) là 1 time series. Tránh label unbounded; ưu tiên label có số giá trị hữu hạn, ổn định. Giám sát cardinality.",
+      "related": [
+        "Metrics (time-series)",
+        "Sampling"
+      ]
+    },
+    {
+      "term": "Metrics, Logs, Traces Correlation",
+      "aliases": [
+        "signals_correlation",
+        "telemetry_correlation"
+      ],
+      "level": "advanced",
+      "problem": "Các signal riêng rẽ (metrics/logs/traces) khó kết nối để gỡ lỗi nhanh xuyên service.",
+      "origin": "OpenTelemetry Project - Context Propagation",
+      "how": "Context propagation (traceparent) cho phép liên kết: trace+span ID có thể inject vào log records, exemplars liên kết metric buckets với trace representative, giúp chuyển từ symptom (metric) -> trace -> logs nhanh hơn.",
+      "related": [
+        "OpenTelemetry",
+        "Trace Context Propagation",
+        "Exemplars"
+      ]
+    },
+    {
+      "term": "Exemplars",
+      "aliases": [
+        "exemplar"
+      ],
+      "level": "advanced",
+      "problem": "Histogram/metric tổng hợp mất chi tiết trace cụ thể của outlier (p99/p999).",
+      "origin": "Grafana/OpenTelemetry - Exemplars concept",
+      "how": "Exemplar là trace representative của một measurement trong interval, liên kết điểm metric (bucket/value) với 1 trace cụ thể để drill-down từ dashboard metric sang trace.",
+      "related": [
+        "Metric Types",
+        "Distributed tracing",
+        "Metrics (time-series)"
+      ]
+    },
+    {
+      "term": "Chaos Engineering",
+      "aliases": [
+        "chaos_engineering",
+        "chaos test",
+        "chaos testing",
+        "kỹ thuật hỗn loạn",
+        "chaos experiments"
+      ],
+      "level": "advanced",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Hệ thống phân tán thất bại theo những cách khó lường trước (network partition, pod crash, latency bất thường) mà dev/test thông thường không tái hiện được; production vẫn fail dù môi trường dev/test ổn định.",
+      "origin": "Principles of Chaos Engineering (Netflix, 2017+; updated 2019); Netflix (Chaos Monkey)",
+      "how": "Chạy thực nghiệm có kiểm soát: xác định steady state, đặt giả thuyết steady state vẫn giữ sau khi inject biến số phản ánh thực tế (kill instance, crash, network partition, delay network), rồi cố bác bỏ giả thuyết để tìm điểm yếu trước khi lên production; qua đó xác minh hệ thống chịu lỗi và tự phục hồi.",
+      "related": [
+        "Game Day (game day exercise, gameday, incident drill)",
+        "blast_radius",
+        "Fault Injection",
+        "Error Budget",
+        "Graceful Degradation",
+        "Stress Test vs Soak Test",
+        "Canary deploy"
+      ]
+    },
+    {
+      "term": "Blameless Postmortem",
+      "aliases": [
+        "blameless_postmortem"
+      ],
+      "level": "intermediate",
+      "problem": "Văn hóa đổ lỗi (blame) làm người tham gia che giấu sự thật và né tránh chia sẻ thông tin, khiến tổ chức lặp lại cùng một sự cố vì không ai dám nói nguyên nhân thật; biện pháp kỷ luật cá nhân càng thúc đẩy hành vi giấu lỗi.",
+      "origin": "Google SRE Book - Chapter 15 (Postmortem Culture); healthcare/avionics safety culture",
+      "how": "Tập trung vào contributing causes (nguyên nhân góp phần), không quy tội cá nhân/nhóm. Giả định thiện chí, tập trung vào hệ thống/process/thông tin thiếu để rút ra action items có thể thực thi.",
+      "related": [
+        "Postmortem",
+        "Incident Management",
+        "learning_culture"
+      ]
+    },
+    {
+      "term": "Postmortem",
+      "aliases": [
+        "incident_postmortem"
+      ],
+      "level": "intermediate",
+      "problem": "Incident xảy ra lại nếu không có quá trình học hỏi có cấu trúc sau sự cố; kinh nghiệm nằm rải rác trong đầu từng người trực, không được ghi lại, nên bài học không đến được với người xử lý lần sau.",
+      "origin": "Google SRE Book - Chapter 15 (Postmortem Culture)",
+      "how": "Tài liệu sau incident: timeline, impact, root/contributing causes, mitigation, action items, lessons learned. Cần có tiêu chí kích hoạt postmortem rõ ràng trước khi sự cố xảy ra.",
+      "related": [
+        "Blameless Postmortem",
+        "Incident Management",
+        "Runbook"
+      ]
+    },
+    {
+      "term": "Incident Management",
+      "aliases": [
+        "incident_response"
+      ],
+      "level": "intermediate",
+      "problem": "Cần cơ cấu phối hợp rõ ràng khi sự cố xảy ra để giảm MTTR và tránh hỗn loạn.",
+      "origin": "Google SRE Book - Chapter 13/14 (Emergency Response, Managing Incidents)",
+      "how": "Quy trình có cấu trúc: declare incident, establish incident commander, comms/updates, mitigation, resolution, post-incident review. Ưu tiên stabilize trước, xác định root sau.",
+      "related": [
+        "On-call rotation",
+        "Postmortem",
+        "MTTR/MTBF"
+      ]
+    },
+    {
+      "term": "On-call rotation",
+      "aliases": [
+        "On-call rotation",
+        "On-call",
+        "trực production",
+        "trực ca đêm",
+        "trực trực"
+      ],
+      "level": "basic",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Production chạy 24/7 nhưng developer làm giờ hành chính; sự cố ngoài giờ không ai chịu trách nhiệm rõ ràng thì mọi người giả vờ không thấy, hoặc mấy người nhiệt tình bị burnout vì lúc nào cũng bị gọi.",
+      "origin": "Google SRE Book - Chapter 11 (Being On-Call)",
+      "how": "Xếp lịch trực xoay vòng kèm escalation policy: một người luôn là người đầu tiên được gọi, có quyền pause deploy/rollback, sau ca đêm được nghỉ bù; paging dựa trên triệu chứng (alert on symptoms) với ngưỡng alert hợp lý để giảm noise và tránh alert fatigue; PagerDuty hoặc Opsgenie gọi điện, chuyển ca theo lịch.",
+      "related": [
+        "Alert Fatigue",
+        "Alerting (threshold alert)",
+        "Blameless Postmortem",
+        "Incident Management"
+      ]
+    },
+    {
+      "term": "Alert Fatigue",
+      "aliases": [
+        "alert_fatigue",
+        "pager_fatigue"
+      ],
+      "level": "intermediate",
+      "problem": "Quá nhiều alert nhiễu khiến engineer bỏ qua hoặc trì hoãn phản hồi, làm kéo dài outage.",
+      "origin": "Google SRE Book - Chapter 6/10 (Monitoring, Practical Alerting)",
+      "how": "Giảm noise: alert trên symptoms (triệu chứng người dùng cảm nhận) thay vì causes, tránh 'something weird', ưu tiên signal-to-noise cao, dashboard cho non-critical, paging chỉ cho vấn đề cần can thiệp ngay.",
+      "related": [
+        "On-call rotation",
+        "Four Golden Signals",
+        "Burn Rate"
+      ]
+    },
+    {
+      "term": "RPO",
+      "aliases": [
+        "Recovery Point Objective"
+      ],
+      "level": "intermediate",
+      "problem": "Cần xác định mức độ mất dữ liệu có thể chấp nhận được để chọn chiến lược DR phù hợp.",
+      "origin": "AWS Disaster Recovery Whitepapers",
+      "how": "RPO là thời gian tối đa dữ liệu có thể mất (tolerable data loss). Ví dụ RPO 1h nghĩa là có thể mất dữ liệu tối đa 1 giờ. Ảnh hưởng trực tiếp đến tần suất backup/replication.",
+      "related": [
+        "RTO",
+        "disaster_recovery",
+        "backup_restore"
+      ]
+    },
+    {
+      "term": "RTO",
+      "aliases": [
+        "Recovery Time Objective",
+        "RTO (disaster recovery)",
+        "thời gian phục hồi tối đa"
+      ],
+      "level": "intermediate",
+      "problem": "Cần đặt ra thời gian phục hồi tối đa chấp nhận được sau sự cố để cân bằng chi phí hạ tầng dự phòng với mức độ chịu đựng gián đoạn của sản phẩm, tránh DR quá đắt hoặc quá chậm.",
+      "origin": "AWS Disaster Recovery Whitepapers",
+      "how": "RTO là thời gian tối đa để phục hồi dịch vụ sau disaster. Xác định chiến lược DR (Backup/Restore -> Pilot Light -> Warm Standby -> Active-Active).",
+      "related": [
+        "RPO",
+        "disaster_recovery",
+        "Pilot Light"
+      ]
+    },
+    {
+      "term": "Pilot Light",
+      "aliases": [
+        "pilot_light"
+      ],
+      "level": "advanced",
+      "problem": "Cần DR với chi phí hợp lý nhưng vẫn có khả năng phục hồi nhanh (không chỉ backup thuần túy).",
+      "origin": "AWS Disaster Recovery Options (Well-Architected/Whitepapers)",
+      "how": "Core infrastructure luôn chạy ở DR region (ví dụ DB/storage replication), application servers 'tắt' (hoặc không deployed) và được bật/quy mô lại khi failover. RPO/RTO trung bình (phút-giờ).",
+      "related": [
+        "RPO",
+        "RTO",
+        "Warm Standby",
+        "disaster_recovery"
+      ]
+    },
+    {
+      "term": "Warm Standby",
+      "aliases": [
+        "warm_standby"
+      ],
+      "level": "advanced",
+      "problem": "Pilot Light cần thời gian scale-up; cần môi trường DR sẵn sàng hơn để giảm RTO.",
+      "origin": "AWS Disaster Recovery Options (Well-Architected/Whitepapers)",
+      "how": "Bản sao thu nhỏ nhưng đầy đủ chức năng của production chạy liên tục ở DR region (reduced capacity). Khi failover chỉ cần scale up. RTO thấp hơn pilot light.",
+      "related": [
+        "Pilot Light",
+        "active_active",
+        "RTO"
+      ]
+    },
+    {
+      "term": "Multi-Region / Active-Active",
+      "aliases": [
+        "active_active",
+        "multi_region",
+        "multi_site"
+      ],
+      "level": "advanced",
+      "problem": "Mô hình phục hồi chỉ có một region chính không đạt được RPO/RTO gần 0: thời gian khôi phục backup và failover tính bằng phút đến giờ, trong khi workload mission-critical không chấp nhận mất dữ liệu. Yêu cầu này buộc hệ thống phải chạy đồng thời ở nhiều region để chuyển hướng lưu lượng ngay khi một region ngừng hoạt động.",
+      "origin": "AWS Disaster Recovery Options (Well-Architected/Whitepapers)",
+      "how": "Toàn bộ môi trường chạy đồng thời ở nhiều region, traffic phân bố (active-active). Gần zero RPO/RTO, phức tạp về consistency/split-brain cần xử lý cẩn thận.",
+      "related": [
+        "Warm Standby",
+        "RPO",
+        "RTO",
+        "Split brain",
+        "Redundancy/N+1 Redundancy"
+      ]
+    },
+    {
+      "term": "Health Check",
+      "aliases": [
+        "health_check",
+        "liveness_probe",
+        "readiness_probe"
+      ],
+      "level": "intermediate",
+      "problem": "Load balancer/orchestrator cần phân biệt service bị treo (hung) vs đang khởi động/chưa sẵn sàng nhận traffic.",
+      "origin": "Google SRE Book; Kubernetes probe semantics (common practice)",
+      "how": "Shallow/deep health check. Liveness: service còn sống (có thể restart nếu fail). Readiness: sẵn sàng nhận traffic (dependencies ready). Giúp graceful shutdown/drain và tránh route traffic tới instance chưa sẵn sàng.",
+      "related": [
+        "Graceful Shutdown",
+        "Service Discovery",
+        "load_balancing"
+      ]
+    },
+    {
+      "term": "Anomaly Detection",
+      "aliases": [
+        "anomaly_detection"
+      ],
+      "level": "advanced",
+      "problem": "Threshold tĩnh khó bắt biến đổi phức tạp (seasonality, traffic spike hợp lý) dẫn đến false positive/negative.",
+      "origin": "Google SRE Book - Chapter 6 (Monitoring Distributed Systems)",
+      "how": "Phát hiện bất thường dựa trên pattern (statistical/time-series) thay vì threshold cứng. Kết hợp với alert on symptoms, dashboard, tránh dựa hoàn toàn vào ML phức tạp không giải thích được.",
+      "related": [
+        "Alert Fatigue",
+        "Four Golden Signals",
+        "Burn Rate"
+      ]
+    },
+    {
+      "term": "Normalize Load",
+      "aliases": [
+        "load_normalization",
+        "return_excess_requests"
+      ],
+      "level": "advanced",
+      "problem": "Khi backend overload, client retry không kiểm soát làm tăng tải nhanh (retry storm).",
+      "origin": "Google SRE Book - Chapter 21 (Handling Overload)",
+      "how": "Trả lỗi overload sớm, client xử lý backpressure (retry có budget), tránh retry đồng loạt. Mục tiêu 'shed load gracefully' thay vì để hệ thống sụp đổ cascading.",
+      "related": [
+        "Retry Budget",
+        "Circuit Breaker",
+        "Overload Protection"
+      ]
+    },
+    {
+      "term": "Cascading Failures",
+      "aliases": [
+        "cascading_failure",
+        "cascade"
+      ],
+      "level": "advanced",
+      "problem": "Lỗi tại 1 điểm có thể lan truyền nhanh qua chain dependencies gây outage toàn hệ thống.",
+      "origin": "Google SRE Book - Chapter 22 (Addressing Cascading Failures)",
+      "how": "Nguyên nhân thường gặp: retry storm, missed deadlines, CPU/memory exhaustion, GC vicious cycle. Giảm thiểu bằng backpressure, timeouts hợp lý, circuit breaker, load shedding, retry budget.",
+      "related": [
+        "Circuit Breaker",
+        "Retry Budget",
+        "Traffic burst & burst capacity"
+      ]
+    }
+  ],
+  "sources": [
+    "Google SRE Book - https://sre.google/sre-book/table-of-contents/",
+    "Google SRE Workbook - https://sre.google/workbook/alerting-on-slos/",
+    "Martin Fowler - Circuit Breaker (Bliki) - https://martinfowler.com/bliki/CircuitBreaker.html",
+    "Michael Nygard - Release It! (book)",
+    "OpenTelemetry - Concepts (Context Propagation, Sampling) - https://opentelemetry.io/docs/concepts/",
+    "W3C TraceContext - https://www.w3.org/TR/trace-context/",
+    "Prometheus Documentation - https://prometheus.io/docs/",
+    "Grafana Labs - RED Method (Tom Wilkie) - https://grafana.com/blog/the-red-method-how-to-instrument-your-services/",
+    "Brendan Gregg - USE Method",
+    "Principles of Chaos Engineering - https://principlesofchaos.org/",
+    "AWS Disaster Recovery Whitepapers - https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/"
+  ]
+}

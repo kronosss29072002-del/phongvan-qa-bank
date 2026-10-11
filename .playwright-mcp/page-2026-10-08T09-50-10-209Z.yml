@@ -1,0 +1,15 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - link [ref=e3] [cursor=pointer]:
+      - /url: https://www.wikimedia.org
+      - img "Wikimedia" [ref=e4]
+    - generic [ref=e5]:
+      - heading "Error" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Please respect our robot policy https://w.wiki/4wJS. (d761527)
+  - generic [ref=e8]:
+    - paragraph [ref=e9]: If you report this error to the Wikimedia System Administrators, please include the details below.
+    - paragraph [ref=e10]:
+      - code [ref=e11]: "Request served via cp5021 cp5021, Varnish XID 7869638Upstream caches: cp5021 intError: 403, Please respect our robot policy https://w.wiki/4wJS. (d761527) at Thu, 08 Oct 2026 09:50:09 GMT"
+    - group [ref=e12]:
+      - code [ref=e14] [cursor=pointer]: Sensitive client information
+    - paragraph

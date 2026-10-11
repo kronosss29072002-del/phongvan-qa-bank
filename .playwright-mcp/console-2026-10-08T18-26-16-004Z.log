@@ -1,0 +1,59 @@
+[      50ms] [LOG] phai @ https://media.yomedia.vn/2026/07/romano/475x325/475x325.js?2026081206:2290
+[    1809ms] [LOG] Insert before middle node JSHandle@node @ https://static-tuoitre.tuoitre.vn/tuoitre/web_js/tuoitrecloud.detail.06102026v1.min.js:25
+[    1831ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:0
+[    1832ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:0
+[    1832ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:0
+[    2142ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://sso.tuoitre.vn/api/front/v1/auth/info:0
+[    2197ms] [LOG] Hello Alice @ :1
+[    2197ms] [LOG] %2Fgiao-duc%2Fdetail%2F @ :2
+[    2209ms] [LOG] initSendComment:  20240530084427723 https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm VHIlZTElYmElYmIrbSVlMSViYSVhN20rbm9uK2NoJWUxJWJhJWJmdCtkbytiJWUxJWJiJThiK2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbit4ZSUzYStCJWMzJWEwaStoJWUxJWJiJThkYytjJWM1JWE5JTJjK24lZTElYmIlOTdpKyVjNCU5MWF1K20lZTElYmIlOWJpIQ== 13   @ https://static-tuoitre.tuoitre.vn/tuoitre/web_js/tuoitrecloud.detail.06102026v1.min.js:25
+[    2211ms] [LOG] initListComment:  20240530084427723 VHIlZTElYmElYmIrbSVlMSViYSVhN20rbm9uK2NoJWUxJWJhJWJmdCtkbytiJWUxJWJiJThiK2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbit4ZSUzYStCJWMzJWEwaStoJWUxJWJiJThkYytjJWM1JWE5JTJjK24lZTElYmIlOTdpKyVjNCU5MWF1K20lZTElYmIlOWJpIQ== 13 true   2 @ https://static-tuoitre.tuoitre.vn/tuoitre/web_js/tuoitrecloud.detail.06102026v1.min.js:25
+[    2224ms] [LOG] guestsend guestsendbt p.fn.init @ https://static-tuoitre.tuoitre.vn/tuoitre/web_js/corecommentv2.plugin.15092026v3.min.js:0
+[    2598ms] [LOG] {wrapper: .detail-player, cookieName: embedTTS, primaryColor: #f2586e, newsId: 20240530084427723, distributionDate: 2024/05/30} @ https://static-tuoitre.tuoitre.vn/common/js/tto-embedTTSv15.js:0
+[    2704ms] [LOG] Đã chạy vào file check biến ADMStorageFileCDN_123 @ :82
+[    2754ms] [LOG] UrlExists:  {status: 1, data: Requested, message: Success} @ https://static-tuoitre.tuoitre.vn/common/js/tto-embedTTSv15.js:0
+[    5463ms] [LOG] Load Kiem Truong Iframe @ https://quangcao.phanquang.vn/ad_script/pqc_kiemtruong_tto_include.js:16
+[    5593ms] [LOG] showCustomBanner: false @ https://quangcao.phanquang.vn/runscript/pqc/300x600-tuoitre.html:64
+[    5961ms] [LOG] Inside height: 627 @ https://kiemtruong.vn/cachettos/list_tin_horizontal_nhung_tto.html:212
+[    6528ms] [WARNING] [GPT] PubAdsService.disableInitialLoad is deprecated, use googletag.setConfig({disableInitialLoad: ...}) instead.
+https://goo.gle/gpt-message#170 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202610050101/pubads_impl.js?cb=122881430:22
+[    6947ms] [LOG] Content height from event: 627 @ https://quangcao.phanquang.vn/ad_script/pqc_kiemtruong_tto_include.js:31
+[    7102ms] Uncaught TypeError: Cannot read properties of null (reading 'win')
+    at <anonymous> (https://media1.admicro.vn/cms/Arf.min.js:8:50081)
+    at _callFunction (https://media1.admicro.vn/cms/Arf.min.js:8:45353)
+    at write (https://media1.admicro.vn/cms/Arf.min.js:8:45200)
+    at _onScriptDone (https://media1.admicro.vn/cms/Arf.min.js:8:47783)
+    at <anonymous> (https://media1.admicro.vn/cms/Arf.min.js:8:46934)
+    at <anonymous> (https://media1.admicro.vn/cms/Arf.min.js:8:48155)
+    at r (https://media1.admicro.vn/cms/Arf.min.js:8:48521)
+    at onload (https://media1.admicro.vn/cms/Arf.min.js:8:48825)
+[    8815ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://s0.2mdn.net/dfp/536569/111035449/1743217235146/libs/1.0.0/createjs.min.js:14
+[    9712ms] [WARNING] Google Deploy of the SharedId library has been deprecated. Please select another option in the GAM UI. If you use Prebid, we suggest the Prebid.js UserId option. If you do not, you may configure GAM to allow Google to share a first party user identifier with OB and AB participants, which is either the publisherProvidedId or the __gads value when that is missing. @ https://cdn.jsdelivr.net/gh/prebid/shared-id/pubcid.js/docs/pubcid.min.js:0
+[    9730ms] [WARNING] [GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead.
+https://goo.gle/gpt-message#155 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202610050101/pubads_impl.js?cb=122881430:22
+[    9913ms] [INFO] Smartech Initiated @ https://osjs.netcoresmartech.com/v1/js-versioning?clientkey=ADGMOT35CHFLVDHBJNIG50K969QTIFK7EP259O47STRRQ8QM3FS0&siteid=5001f9cce3f1c631ff8bde0c5e9a1cca&rc=s&tk1=20261006151359&tk2=20240819012235:1
+[   10933ms] [ERROR] Failed to load resource: the server responded with a status of 410 () @ https://rtax.criteo.com/delivery/rta/rta.js?netId=2495&amp;cookieName=gen_crtg_rta&amp;rnd=70401610571&amp;varName=__geniee_rta:0
+[   11090ms] [LOG] cross asset stitching enabled @ https://osjs.netcoresmartech.com/v1/js-versioning?clientkey=ADGMOT35CHFLVDHBJNIG50K969QTIFK7EP259O47STRRQ8QM3FS0&siteid=5001f9cce3f1c631ff8bde0c5e9a1cca&rc=s&tk1=20261006151359&tk2=20240819012235:1
+[   11279ms] [ERROR] Failed to load resource: net::ERR_INVALID_REDIRECT @ https://cs.gssprt.jp/yie/ld/mcs?ver=1&dmpid=intimm&format=gif&vid=2:0
+[   12538ms] [TIMEEND] spm-loaded: 1219.263916015625 ms @ https://admd.ink/js/spm.min.js?ak=39192e9a7f620610b782a756fa84a4b9cd30fb83&dg=0&ci=1&gv=1&s1=223679&s2=1597329&s3=https%3a%2f%2ftuoitre.vn%2ftre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm&s4=&s9=300x250&s10=38337&s11=de949304-2ce2-75b9-c084-3980c47e4634:0
+[   12634ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ https://sync.adkernel.com/user-sync?zone=269038&r=https%3A%2F%2Fu-sjc03.e-planning.net%2Fum%3Fuid%3D%7BUID%7D%26dc%3D06ca82c8327a7f3f%26fi%3De32087df7489a632:0
+[   12634ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ https://sync.adkernel.com/user-sync?zone=269038&r=https%3A%2F%2Fu-sjc03.e-planning.net%2Fum%3Fuid%3D%7BUID%7D%26dc%3D06ca82c8327a7f3f%26fi%3De32087df7489a632:0
+[   12863ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ https://sync.adkernel.com/user-sync?zone=269038&r=https%3A%2F%2Fu-sjc03.e-planning.net%2Fum%3Fuid%3D%7BUID%7D%26dc%3D06ca82c8327a7f3f%26fi%3De32087df7489a632:0
+[   13502ms] [ERROR] Failed to load resource: the server responded with a status of 424 (Failed Dependency) @ https://t.adx.opera.com/pub/sync?pubid=pub10101531197440&gdpr=1&gdpr_consent=:0
+[   13646ms] [LOG] Error: Ap Player Setup @ https://cdn.adpushup.com/48302/apInstreamBundle.js:1
+[   14096ms] [ERROR] Failed to load resource: the server responded with a status of 424 (Failed Dependency) @ https://t.adx.opera.com/pub/sync?pubid=pub10101531197440&gdpr=1&gdpr_consent=:0
+[   14261ms] [WARNING] VIDEOJS: WARN: videojs.extend is deprecated as of Video.js 7.22.0 and will be removed in Video.js 8.0.0 @ https://cdn.adpushup.com/instream/videoUtils-b89718e1-1763630796102.js:1
+[   16219ms] [INFO] Messaging: The notification permission was not granted and blocked instead. (messaging/permission-blocked). @ https://osjs.netcoresmartech.com/prod-us/js_sdk/stable/smt-webpush.da538c2a.chunk.js:1
+[   29616ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://ads.yieldmo.com/pbsync?is=adptmx&gdpr=0&us_privacy=1---&redirectUri=https%3A%2F%2Fsea1-sync.a-mo.net%2Fcchain%2F0%2F33849%3Fgdpr%3D0%26A%3Dbf38cde6-ff57-4d6a-9639-1cef9dcd5fbe%26bidder%3Dyieldmo%26cbx%3DaHR0cHM6Ly91LXNqYzAzLmUtcGxhbm5pbmcubmV0L3VtP3VpZD0kVUlEJmRjPTRjYjVlN2YwOWRhMzllNDAmZmk9ZTMyMDg3ZGY3NDg5YTYzMg%253D%253D%26uid%3D%24UID:0
+[   29654ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://tags.crwdcntrl.net/lt/c/16589/sync.min.js:0
+[   31823ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://static.philacct.com/ngvmfg/static/js/bundle.js:0
+[   31859ms] [LOG] Service Worker is registered ServiceWorkerRegistration @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:3929
+[   31872ms] [ERROR] Not signed in with the identity provider. @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:0
+[   35827ms] [LOG] adsQueues: 0 @ https://quangcao.phanquang.vn/ad_script/pqc_300x250_banner_1.js:102
+[   36026ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://accounts.google.com/gsi/client:87
+[   40745ms] [LOG] {type: 7k, zidlog: 522670, sspid: 2028486, size: 300x600, format: 161} @ https://media1.admicro.vn/core/sspcallback.js:0
+[   41664ms] [LOG] {type: 7k, zidlog: 522669, sspid: 2028485, size: 300x600, format: 111} @ https://media1.admicro.vn/core/sspcallback.js:0
+[   41849ms] [LOG] {type: 7k, zidlog: 521623, sspid: 2028326, size: 300x600, format: 8} @ https://media1.admicro.vn/core/sspcallback.js:0
+[   46694ms] [INFO] %c Branch: vt-31179 error (main branch used)  →  WIDGET: 1836416_14fd8  →  library:   →  cli: d00c6b6e76f88e410de7ecdd20f4f41835df9ed4  →  widgetBuilder: 3800e9ac  →  VIDEO_LIB: 1.11.257   color: gold; font: 1rem/1 Tahoma; background: #1d1d1d; padding: 10px; @ https://jsc.mgid.com/t/u/tuoitre.vn.1836416.es6.js:39
+[    8815ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://s0.2mdn.net/dfp/536569/111035449/1743217235146/libs/1.0.0/createjs.min.js:14
+[   48281ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://s0.2mdn.net/dfp/536569/111035449/1743217235146/libs/1.0.0/createjs.min.js:14

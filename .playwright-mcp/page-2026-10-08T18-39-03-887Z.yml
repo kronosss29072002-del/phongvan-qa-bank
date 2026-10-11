@@ -1,0 +1,124 @@
+- generic [active] [ref=f412e1]:
+  - dialog [ref=f412e2]:
+    - generic [ref=f412e7]:
+      - generic [ref=f412e8]:
+        - paragraph [ref=f412e9]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+        - paragraph [ref=f412e10]:
+          - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+          - link "Điều khoản về quyền riêng tư" [ref=f412e11] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+      - generic [ref=f412e12]:
+        - link "Chấp nhận" [ref=f412e14] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+        - link "Từ chối" [ref=f412e16] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+      - link "Các lựa chọn khác" [ref=f412e18] [cursor=pointer]:
+        - /url: "javascript: void(0)"
+  - banner [ref=f412e19]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f412e20] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f412e23] [cursor=pointer]
+    - generic [ref=f412e26]:
+      - link [ref=f412e27] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f412e28]
+      - search [ref=f412e29]:
+        - button "Tìm kiếm" [ref=f412e32] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f412e33]: junior backend developer tỵng dỳ "quản lý ngưới dùng" "quản lý dịch vụ" phân quyền jwt viec-lam
+        - generic [ref=f412e34] [cursor=pointer]
+        - generic [ref=f412e36] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f412e41] [cursor=pointer]
+      - link [ref=f412e43] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=5193b5a379acc6d1668382e69d9cef0e7deb468031686287d7f321314b01d30cJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT1qdW5pb3IrYmFja2VuZCtkZXZlbG9wZXIrdCVlMSViYiViNW5nK2QlZTElYmIlYjMrJTIycXUlZTElYmElYTNuK2wlYzMlYmQrbmclYzYlYjAlZTElYmIlOWJpK2QlYzMlYjluZyUyMislMjJxdSVlMSViYSVhM24rbCVjMyViZCtkJWUxJWJiJThiY2grdiVlMSViYiVhNSUyMitwaCVjMyVhMm4rcXV5JWUxJWJiJTgxbitqd3QrdmllYy1sYW0mc2VuZHF1ZXJ5PTEmZm9ybT1IRUNPRFg&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f412e44]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f412e46]:
+      - link "Đăng nhập" [ref=f412e47] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f412e49] [cursor=pointer]
+    - navigation "Bộ lọc Tìm kiếm" [ref=f412e50]:
+      - list [ref=f412e51]:
+        - listitem [ref=f412e52]:
+          - link "Tất cả" [ref=f412e53] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f412e55]:
+          - link "Web" [ref=f412e56] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9a35de0be9e90e1de7a4301499481ecad56611ee16621e0ccb9a0d5ca1fbdb92JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPWp1bmlvcitiYWNrZW5kK2RldmVsb3Blcit0JWUxJWJiJWI1bmcrZCVlMSViYiViMyslMjJxdSVlMSViYSVhM24rbCVjMyViZCtuZyVjNiViMCVlMSViYiU5YmkrZCVjMyViOW5nJTIyKyUyMnF1JWUxJWJhJWEzbitsJWMzJWJkK2QlZTElYmIlOGJjaCt2JWUxJWJiJWE1JTIyK3BoJWMzJWEybitxdXklZTElYmIlODFuK2p3dCt2aWVjLWxhbSZ3ZWJzY3A9MSZGT1JNPUhEUldTQw&ntb=1
+        - listitem [ref=f412e57]:
+          - link "Tìm kiếm" [ref=f412e58] [cursor=pointer]:
+            - /url: /copilotsearch?q=junior+backend+developer+t%e1%bb%b5ng+d%e1%bb%b3+%22qu%e1%ba%a3n+l%c3%bd+ng%c6%b0%e1%bb%9bi+d%c3%b9ng%22+%22qu%e1%ba%a3n+l%c3%bd+d%e1%bb%8bch+v%e1%bb%a5%22+ph%c3%a2n+quy%e1%bb%81n+jwt+viec-lam&FORM=CSSCOP
+        - listitem [ref=f412e61]:
+          - link "Hình ảnh" [ref=f412e62] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=d9edcac2cb07fc758b157615e142a35b35658c2f0254df676ee0bc6065bf295bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1qdW5pb3IrYmFja2VuZCtkZXZlbG9wZXIrdCVlMSViYiViNW5nK2QlZTElYmIlYjMrJTIycXUlZTElYmElYTNuK2wlYzMlYmQrbmclYzYlYjAlZTElYmIlOWJpK2QlYzMlYjluZyUyMislMjJxdSVlMSViYSVhM24rbCVjMyViZCtkJWUxJWJiJThiY2grdiVlMSViYiVhNSUyMitwaCVjMyVhMm4rcXV5JWUxJWJiJTgxbitqd3QrdmllYy1sYW0mRk9STT1IRFJTQzM&ntb=1
+        - listitem [ref=f412e63]:
+          - link "Video" [ref=f412e64] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=44d95ef593fcf4c81496dd52cf7f2f10c40beb388438f13aac471fa6738642cfJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT1qdW5pb3IrYmFja2VuZCtkZXZlbG9wZXIrdCVlMSViYiViNW5nK2QlZTElYmIlYjMrJTIycXUlZTElYmElYTNuK2wlYzMlYmQrbmclYzYlYjAlZTElYmIlOWJpK2QlYzMlYjluZyUyMislMjJxdSVlMSViYSVhM24rbCVjMyViZCtkJWUxJWJiJThiY2grdiVlMSViYiVhNSUyMitwaCVjMyVhMm4rcXV5JWUxJWJiJTgxbitqd3QrdmllYy1sYW0mRk9STT1IRFJTQzQ&ntb=1
+        - listitem [ref=f412e65]:
+          - link "Bản đồ" [ref=f412e66] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=57b15ea63b3014317434a1f173dfdaa5bff069f1cdbb4d1dbab4dee42da5fa65JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT1qdW5pb3IrYmFja2VuZCtkZXZlbG9wZXIrdCVlMSViYiViNW5nK2QlZTElYmIlYjMrJTIycXUlZTElYmElYTNuK2wlYzMlYmQrbmclYzYlYjAlZTElYmIlOWJpK2QlYzMlYjluZyUyMislMjJxdSVlMSViYSVhM24rbCVjMyViZCtkJWUxJWJiJThiY2grdiVlMSViYiVhNSUyMitwaCVjMyVhMm4rcXV5JWUxJWJiJTgxbitqd3QrdmllYy1sYW0mRk9STT1IRFJTQzY&ntb=1
+        - listitem [ref=f412e67]:
+          - button [ref=f412e68] [cursor=pointer]
+  - generic [ref=f412e72]:
+    - main "Kết quả Tìm kiếm" [ref=f412e73]:
+      - list [ref=f412e74]:
+        - listitem [ref=f412e75]:
+          - generic [ref=f412e77]:
+            - heading [level=2] [ref=f412e79]:
+              - link "Video của Junior Backend Developer Tỵng Dỳ Quản Lý Ngưới Dùng Q…" [ref=f412e80] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=6b1d9e0a69dad21e506640eecd9d07d0f74d57b12331331185b718213d13f7e1JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT1qdW5pb3IrYmFja2VuZCtkZXZlbG9wZXIrdCVlMSViYiViNW5nK2QlZTElYmIlYjMrJTIycXUlZTElYmElYTNuK2wlYzMlYmQrbmclYzYlYjAlZTElYmIlOWJpK2QlYzMlYjluZyUyMislMjJxdSVlMSViYSVhM24rbCVjMyViZCtkJWUxJWJiJThiY2grdiVlMSViYiVhNSUyMitwaCVjMyVhMm4rcXV5JWUxJWJiJTgxbitKV1QrdmllYy1sYW0mcXB2dD1qdW5pb3IrYmFja2VuZCtkZXZlbG9wZXIrdCVlMSViYiViNW5nK2QlZTElYmIlYjMrJTIycXUlZTElYmElYTNuK2wlYzMlYmQrbmclYzYlYjAlZTElYmIlOWJpK2QlYzMlYjluZyUyMislMjJxdSVlMSViYSVhM24rbCVjMyViZCtkJWUxJWJiJThiY2grdiVlMSViYiVhNSUyMitwaCVjMyVhMm4rcXV5JWUxJWJiJTgxbitqd3QrdmllYy1sYW0mRk9STT1WRFJF&ntb=1
+            - generic [ref=f412e86]:
+              - 'link "JWT - Coding Registration, Login, Authentication, and Authorization (Final) từ YouTube · Thời lượng: 1 giờ 48 phút 21 giây · 53,6Ng lượt xem · tải lên vào 20 thg 12, 2021 · tải lên bởi Daniel Truong Dev · Bấm để phát. · 😎 Mình là Duy (Daniel), qua video này chúng ta sẽ tìm hiểu về cách sử dụng JWT ở phía front-end cụ thể là với React 😎 Đây là phần cuối trong series về JSON Web Token nhé 👉 Phần 1: https://youtu.be/7i3v76JZPfY 👉 Phần 2 : https://youtu.be/NQMBEfTIO1Y 😻 Github repo: https://github.com ..." [ref=f412e89] [cursor=pointer]':
+                - /url: https://www.bing.com/ck/a?!&&p=add75f06001b2fc51ea61bb05cf0fe9a3b4316245b63750e8eb9d1a208ccb0d0JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9anVuaW9yK2JhY2tlbmQrZGV2ZWxvcGVyK3QlZTElYmIlYjVuZytkJWUxJWJiJWIzKyUyMnF1JWUxJWJhJWEzbitsJWMzJWJkK25nJWM2JWIwJWUxJWJiJTliaStkJWMzJWI5bmclMjIrJTIycXUlZTElYmElYTNuK2wlYzMlYmQrZCVlMSViYiU4YmNoK3YlZTElYmIlYTUlMjIrcGglYzMlYTJuK3F1eSVlMSViYiU4MW4rand0K3ZpZWMtbGFtJm1pZD1CRkE3QjNFNkZBM0VEREVBNjM5NEJGQTdCM0U2RkEzRURERUE2Mzk0JmNodXJsPWh0dHBzJTNhJTJmJTJmd3d3LnlvdXR1YmUuY29tJTJmY2hhbm5lbCUyZlVDS2FnQWNlX3g2ZFZLZVlIdk5leElPQSZGT1JNPVZJUkU&ntb=1
+                - generic [ref=f412e90]:
+                  - generic [ref=f412e91]: 1:48:21
+                  - generic [ref=f412e100]:
+                    - generic "JWT - Coding Registration, Login, Authentication, and Authorization (Final)" [ref=f412e101]:
+                      - strong [ref=f412e102]: JWT
+                      - text: "- Coding Registration, Login, Authentication, and Authorization (Final)"
+                    - generic [ref=f412e103]:
+                      - generic [ref=f412e104]:
+                        - img "Trang web nguồn video" [ref=f412e105]
+                        - text: YouTube · Daniel Truong Dev
+                      - generic [ref=f412e106]: 53,6Ng lượt xem · 20 thg 12, 2021
+              - 'link "032-Phân quyền cho từng Request với JWT middleware từ YouTube · Thời lượng: 45 phút 46 giây · 854 lượt xem · tải lên vào 2 thg 10, 2024 · tải lên bởi Nguyen Duc Hoang · Bấm để phát. · Khám phá series video hướng dẫn chi tiết cách xây dựng Backend (Restful API) cho ứng dụng bán hàng online với NodeJS. Triển khai các tính năng thiết yếu như đăng nhập, đăng ký, và xác thực người dùng qua JWT. Thiết kế cơ sở dữ liệu chuyên nghiệp với DB Diagram và MySQL, giúp ứng ..." [ref=f412e109] [cursor=pointer]':
+                - /url: https://www.bing.com/ck/a?!&&p=46c6f236a23d8eee2078e40146969d3f21ce3314653fd5fa396e3ded699cbb63JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1iV0pRVnJxdmV1bw&ntb=1
+                - generic [ref=f412e110]:
+                  - generic [ref=f412e111]: 45:46
+                  - generic [ref=f412e120]:
+                    - generic "032-Phân quyền cho từng Request với JWT middleware" [ref=f412e121]:
+                      - text: 032-
+                      - strong [ref=f412e122]: Phân
+                      - strong [ref=f412e123]: quyền
+                      - text: cho từng Request với
+                      - strong [ref=f412e124]: JWT
+                      - text: middleware
+                    - generic [ref=f412e125]:
+                      - generic [ref=f412e126]:
+                        - img "Trang web nguồn video" [ref=f412e127]
+                        - text: YouTube · Nguyen Duc Hoang
+                      - generic [ref=f412e128]: 854 lượt xem · 2 thg 10, 2024
+              - 'link "JWT - Hướng dẫn code chức năng đăng ký, đăng nhập, xác thực, phân quyền ( Phần 1/3 ) từ YouTube · Thời lượng: 39 phút 33 giây · 60,4Ng lượt xem · tải lên vào 13 thg 12, 2021 · tải lên bởi Daniel Truong Dev · Bấm để phát. · 😎 Mình là Duy (Daniel), qua video này chúng ta sẽ tìm hiểu cách connect với MongoDB, áp dụng mô hình MVC để quản lý folder, cũng như tạo chức năng đăng ký, đăng nhập đơn giản thông qua MongoDB. 😎 Đây chỉ là phần 1/3 trong series về JSON Web Token thôi nhé :D 👉 Phần 2 : https ..." [ref=f412e131] [cursor=pointer]':
+                - /url: https://www.bing.com/ck/a?!&&p=46dc90b3d8b23738e44843ed07c987059d70b44febe7b1830c245427b8d3b79cJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9anVuaW9yK2JhY2tlbmQrZGV2ZWxvcGVyK3QlZTElYmIlYjVuZytkJWUxJWJiJWIzKyUyMnF1JWUxJWJhJWEzbitsJWMzJWJkK25nJWM2JWIwJWUxJWJiJTliaStkJWMzJWI5bmclMjIrJTIycXUlZTElYmElYTNuK2wlYzMlYmQrZCVlMSViYiU4YmNoK3YlZTElYmIlYTUlMjIrcGglYzMlYTJuK3F1eSVlMSViYiU4MW4rand0K3ZpZWMtbGFtJm1pZD1GQzg0NkYwMzczNkIzRDQ4MjY0REZDODQ2RjAzNzM2QjNENDgyNjREJmNodXJsPWh0dHBzJTNhJTJmJTJmd3d3LnlvdXR1YmUuY29tJTJmY2hhbm5lbCUyZlVDS2FnQWNlX3g2ZFZLZVlIdk5leElPQSZGT1JNPVZJUkU&ntb=1
+                - generic [ref=f412e132]:
+                  - generic [ref=f412e133]: 39:33
+                  - generic [ref=f412e142]:
+                    - generic "JWT - Hướng dẫn code chức năng đăng ký, đăng nhập, xác thực, phân quyền ( Phần 1/3 )" [ref=f412e143]:
+                      - strong [ref=f412e144]: JWT
+                      - text: "- Hướng dẫn code chức năng đăng ký, đăng nhập, xác thực,"
+                      - strong [ref=f412e145]: phân
+                      - strong [ref=f412e146]: quyền
+                      - text: ( Phần 1/3 )
+                    - generic [ref=f412e147]:
+                      - generic [ref=f412e148]:
+                        - img "Trang web nguồn video" [ref=f412e149]
+                        - text: YouTube · Daniel Truong Dev
+                      - generic [ref=f412e150]: 60,4Ng lượt xem · 13 thg 12, 2021
+    - complementary "Kết quả bổ sung" [ref=f412e151]:
+      - list
+  - contentinfo [ref=f412e152]:
+    - generic [ref=f412e153]:
+      - list:
+        - listitem [ref=f412e154]:
+          - link "Quyền riêng tư" [ref=f412e155] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f412e156]:
+          - link "Điều khoản" [ref=f412e157] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

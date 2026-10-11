@@ -1,0 +1,498 @@
+- name: /ck:analyze_flaky_tests
+  path: analyze_flaky_tests.md
+  description: Phân tích automation tests không ổn định (flaky), xác định root cause
+    và tự động khắc phục. Hỗ trợ 2 mode — ANALYZE (chỉ báo cáo) và FIX (báo cáo +
+    tự sửa code).
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:analyze_requirement_document
+  path: analyze_requirement_document.md
+  description: Phân tích requirement document (Jira ticket, .doc, user story) — sinh
+    tài liệu phân tích chi tiết, KHÔNG sinh test cases.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:ask
+  path: ask.md
+  description: Answer technical and architectural questions.
+  argument_hint:
+  - technical-question
+  power_level: 1
+  category: core
+- name: /ck:bootstrap:auto:fast
+  path: bootstrap/auto/fast.md
+  description: Quickly bootstrap a new project automatically
+  argument_hint:
+  - user-requirements
+  power_level: 3
+  category: bootstrap
+- name: /ck:bootstrap:auto
+  path: bootstrap/auto.md
+  description: Bootstrap a new project automatically
+  argument_hint:
+  - user-requirements
+  power_level: 4
+  category: bootstrap
+- name: /ck:bootstrap
+  path: bootstrap.md
+  description: Bootstrap a new project step by step
+  argument_hint:
+  - user-requirements
+  power_level: 5
+  category: core
+- name: /ck:brainstorm
+  path: brainstorm.md
+  description: Brainstorm a feature
+  argument_hint:
+  - question
+  power_level: 2
+  category: core
+- name: /ck:code
+  path: code.md
+  description: Start coding & testing an existing plan
+  argument_hint:
+  - plan
+  power_level: 1
+  category: core
+- name: /ck:content:cro
+  path: content/cro.md
+  description: Analyze the current content and optimize for conversion
+  argument_hint:
+  - issues
+  power_level: 0
+  category: content
+- name: /ck:content:enhance
+  path: content/enhance.md
+  description: Analyze the current copy issues and enhance it
+  argument_hint:
+  - issues
+  power_level: 0
+  category: content
+- name: /ck:content:fast
+  path: content/fast.md
+  description: Write creative & smart copy [FAST]
+  argument_hint:
+  - user-request
+  power_level: 0
+  category: content
+- name: /ck:content:good
+  path: content/good.md
+  description: Write good creative & smart copy [GOOD]
+  argument_hint:
+  - user-request
+  power_level: 0
+  category: content
+- name: /ck:cook:auto:fast
+  path: cook/auto/fast.md
+  description: No research. Only scout, plan & implement ["trust me bro"]
+  argument_hint:
+  - tasks-or-prompt
+  power_level: 1
+  category: cook
+- name: /ck:cook:auto
+  path: cook/auto.md
+  description: Implement a feature automatically ("trust me bro")
+  argument_hint:
+  - tasks
+  power_level: 2
+  category: cook
+- name: /ck:cook
+  path: cook.md
+  description: Implement a feature [step by step]
+  argument_hint:
+  - tasks
+  power_level: 3
+  category: core
+- name: /ck:debug
+  path: debug.md
+  description: Debugging technical issues and providing solutions.
+  argument_hint:
+  - issues
+  power_level: 2
+  category: core
+- name: /ck:design:3d
+  path: design/3d.md
+  description: Create immersive interactive 3D designs with Three.js
+  argument_hint:
+  - tasks
+  power_level: 0
+  category: design
+- name: /ck:design:describe
+  path: design/describe.md
+  description: Describe a design based on screenshot/video
+  argument_hint:
+  - screenshot
+  power_level: 0
+  category: design
+- name: /ck:design:fast
+  path: design/fast.md
+  description: Create a quick design
+  argument_hint:
+  - tasks
+  power_level: 0
+  category: design
+- name: /ck:design:good
+  path: design/good.md
+  description: Create an immersive design
+  argument_hint:
+  - tasks
+  power_level: 0
+  category: design
+- name: /ck:design:screenshot
+  path: design/screenshot.md
+  description: Create a design based on screenshot
+  argument_hint:
+  - screenshot
+  power_level: 0
+  category: design
+- name: /ck:design:video
+  path: design/video.md
+  description: Create a design based on video
+  argument_hint:
+  - video
+  power_level: 0
+  category: design
+- name: /ck:docs:init
+  path: docs/init.md
+  description: Analyze the codebase and create initial documentation
+  argument_hint: ''
+  power_level: 4
+  category: docs
+- name: /ck:docs:summarize
+  path: docs/summarize.md
+  description: ''
+  argument_hint: ''
+  power_level: 0
+  category: docs
+- name: /ck:docs:update
+  path: docs/update.md
+  description: Analyze the codebase and update documentation
+  argument_hint: ''
+  power_level: 3
+  category: docs
+- name: /ck:fetch_jira_requirements
+  path: fetch_jira_requirements.md
+  description: Lấy Requirements / User Stories từ Jira ticket và lưu thành file markdown
+    hoặc JSON.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:fix:ci
+  path: fix/ci.md
+  description: Analyze Github Actions logs and fix issues
+  argument_hint:
+  - github-actions-url
+  power_level: 1
+  category: fix
+- name: /ck:fix:fast
+  path: fix/fast.md
+  description: Analyze and fix small issues [FAST]
+  argument_hint:
+  - issues
+  power_level: 1
+  category: fix
+- name: /ck:fix:hard
+  path: fix/hard.md
+  description: Use subagents to plan and fix hard issues
+  argument_hint:
+  - issues
+  power_level: 3
+  category: fix
+- name: /ck:fix:logs
+  path: fix/logs.md
+  description: Analyze logs and fix issues
+  argument_hint:
+  - issue
+  power_level: 1
+  category: fix
+- name: /ck:fix:test
+  path: fix/test.md
+  description: Run test suite and fix issues
+  argument_hint:
+  - issues
+  power_level: 2
+  category: fix
+- name: /ck:fix:types
+  path: fix/types.md
+  description: Fix type errors
+  argument_hint: ''
+  power_level: 1
+  category: fix
+- name: /ck:fix:ui
+  path: fix/ui.md
+  description: Analyze and fix UI issues
+  argument_hint:
+  - issue
+  power_level: 2
+  category: fix
+- name: /ck:fix
+  path: fix.md
+  description: Analyze and fix small issues [AUTO DETECT COMPLEXITY]
+  argument_hint:
+  - issues
+  power_level: 2
+  category: core
+- name: /ck:generate_api_tests_from_swagger
+  path: generate_api_tests_from_swagger.md
+  description: Sinh API test cases và automation scripts từ Swagger/OpenAPI specification.
+    Hỗ trợ 2 mode — SPEC (chỉ test cases) và FULL (test cases + automation scripts).
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_application_test_plan
+  path: generate_application_test_plan.md
+  description: Khám phá ứng dụng web, sinh test plan và test scenarios. Hỗ trợ 2 mode
+    — PLAN (chỉ test plan) và FULL (test plan + automation skeleton).
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_automation_framework
+  path: generate_automation_framework.md
+  description: Thiết kế và scaffold automation framework hoàn chỉnh. Hỗ trợ Playwright,
+    Selenium, Appium — Web, Mobile, API.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_automation_from_testcases
+  path: generate_automation_from_testcases.md
+  description: Convert manual test cases into automation scripts autonomously using
+    the 6-step AI-RBT Framework via Antigravity Capabilities.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_automation_from_ui_flow
+  path: generate_automation_from_ui_flow.md
+  description: Thực thi UI flow trực tiếp trên browser, thu thập locators từ DOM thực
+    tế, và sinh automation scripts. Hỗ trợ Playwright, Selenium, Appium.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_combinatorial_test_data
+  path: generate_combinatorial_test_data.md
+  description: Sinh test data cho ma trận kết hợp đa chiều bằng pipeline chạy thật
+    qua nhiều modules. Input từ /generate_cross_module_test_plan.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_cross_module_test_plan
+  path: generate_cross_module_test_plan.md
+  description: Phân tích tính năng đi qua nhiều modules nối tiếp, xây dựng Module
+    Map + Dimension Catalog, và sinh ma trận kết hợp (Pairwise/Business-critical/Full
+    Cartesian). Hỗ trợ 2 modes — DOCUMENT (từ tài liệu) và BROWSER (inspect DOM thực
+    tế).
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_locator
+  path: generate_locator.md
+  description: Sinh locator ổn định cho UI element. Hỗ trợ Playwright, Selenium, Appium.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_manual_testcases_rbt
+  path: generate_manual_testcases_rbt.md
+  description: Sinh manual test cases chất lượng cao theo quy trình AI-RBT 6 bước
+    (Risk-Based Testing) từ requirements.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_requirements_from_website
+  path: generate_requirements_from_website.md
+  description: Generate Requirements content from a provided website module
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_test_data
+  path: generate_test_data.md
+  description: Sinh test data có cấu trúc, unique, traceable cho test cases. Hỗ trợ
+    UI forms, API payloads, data-driven tests.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:generate_testcases_from_requirements
+  path: generate_testcases_from_requirements.md
+  description: Sinh manual test cases nhanh từ requirements (QUICK mode — không qua
+    quy trình 6 bước).
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:git:cm
+  path: git/cm.md
+  description: Stage all files and create a commit.
+  argument_hint: ''
+  power_level: 0
+  category: git
+- name: /ck:git:cp
+  path: git/cp.md
+  description: Stage, commit and push all code in the current branch
+  argument_hint: ''
+  power_level: 0
+  category: git
+- name: /ck:git:pr
+  path: git/pr.md
+  description: ''
+  argument_hint: ''
+  power_level: 0
+  category: git
+- name: /ck:import_test_results_xray
+  path: import_test_results_xray.md
+  description: Đẩy kết quả test automation (Playwright/JUnit/Allure) lên Xray Test
+    Management.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:integrate:polar
+  path: integrate/polar.md
+  description: Implement payment integration with Polar.sh
+  argument_hint:
+  - tasks
+  power_level: 2
+  category: integrate
+- name: /ck:integrate:sepay
+  path: integrate/sepay.md
+  description: Implement payment integration with SePay.vn
+  argument_hint:
+  - tasks
+  power_level: 2
+  category: integrate
+- name: /ck:journal
+  path: journal.md
+  description: Write some journal entries.
+  argument_hint: ''
+  power_level: 1
+  category: core
+- name: /ck:plan:ci
+  path: plan/ci.md
+  description: Analyze Github Actions logs and provide a plan to fix the issues
+  argument_hint:
+  - github-actions-url
+  power_level: 0
+  category: plan
+- name: /ck:plan:cro
+  path: plan/cro.md
+  description: Create a CRO plan for the given content
+  argument_hint:
+  - issues
+  power_level: 0
+  category: plan
+- name: /ck:plan:fast
+  path: plan/fast.md
+  description: No research. Only analyze and create an implementation plan
+  argument_hint:
+  - task
+  power_level: 2
+  category: plan
+- name: /ck:plan:hard
+  path: plan/hard.md
+  description: Research, analyze, and create an implementation plan
+  argument_hint:
+  - task
+  power_level: 3
+  category: plan
+- name: /ck:plan:two
+  path: plan/two.md
+  description: Research & create an implementation plan with 2 approaches
+  argument_hint:
+  - task
+  power_level: 4
+  category: plan
+- name: /ck:plan
+  path: plan.md
+  description: Intelligent plan creation with prompt enhancement
+  argument_hint:
+  - task
+  power_level: 3
+  category: core
+- name: /ck:qa-flow
+  path: qa-flow.md
+  description: Điều phối toàn bộ flow QA/QC 6 phase (Strategy → Plan/Design → Execution
+    → Bug Lifecycle → Metrics → Release Gate) — hybrid manual + Playwright, project-agnostic.
+    Dùng `--one-shot` để chạy hết không dừng.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:qa-full
+  path: qa-full.md
+  description: ''
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:report-bug
+  path: report-bug.md
+  description: Tạo bug report chuẩn "good bug report" (repro steps, error nguyên văn,
+    version/env, evidence). Dùng khi phát hiện bug trong manual testing, exploratory
+    testing, automation fail, hoặc bất kỳ lúc nào cần log defect.
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:review:codebase
+  path: review/codebase.md
+  description: Scan & analyze the codebase.
+  argument_hint:
+  - tasks-or-prompt
+  power_level: 3
+  category: review
+- name: /ck:scout:ext
+  path: scout/ext.md
+  description: ''
+  argument_hint: ''
+  power_level: 0
+  category: scout
+- name: /ck:scout
+  path: scout.md
+  description: ''
+  argument_hint: ''
+  power_level: 0
+  category: core
+- name: /ck:skill:add
+  path: skill/add.md
+  description: ''
+  argument_hint: ''
+  power_level: 0
+  category: skill
+- name: /ck:skill:create
+  path: skill/create.md
+  description: Create a new agent skill
+  argument_hint:
+  - prompt-or-llms-or-github-url
+  power_level: 0
+  category: skill
+- name: /ck:skill:fix-logs
+  path: skill/fix-logs.md
+  description: Fix the agent skill based on `logs.txt` file.
+  argument_hint:
+  - prompt-or-path-to-skill
+  power_level: 0
+  category: skill
+- name: /ck:skill:optimize:auto
+  path: skill/optimize/auto.md
+  description: ''
+  argument_hint: ''
+  power_level: 0
+  category: skill
+- name: /ck:skill:optimize
+  path: skill/optimize.md
+  description: ''
+  argument_hint: ''
+  power_level: 0
+  category: skill
+- name: /ck:test
+  path: test.md
+  description: Run tests locally and analyze the summary report.
+  argument_hint: ''
+  power_level: 1
+  category: core
+- name: /ck:use-mcp
+  path: use-mcp.md
+  description: Utilize tools of Model Context Protocol (MCP) servers
+  argument_hint:
+  - task
+  power_level: 0
+  category: core
+- name: /ck:watzup
+  path: watzup.md
+  description: Review recent changes and wrap up the work
+  argument_hint: ''
+  power_level: 1
+  category: core

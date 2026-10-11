@@ -1,0 +1,235 @@
+{
+  "entries": [
+    {
+      "term": "Redis lock (SET NX PX)",
+      "aliases": [
+        "SET NX PX",
+        "Redis distributed lock",
+        "khóa Redis"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Nhiều instance cùng chạy một job định kỳ (cron quét đơn hàng, worker gửi email) thì mỗi chu kỳ có thể chạy 3 lần. Lấy lock trên Redis là cách rẻ nhất, nhưng bẫy dễ rơi vào: tách SET rồi EXPIRE thành hai lệnh, client chết giữa hai lệnh thì lock treo cho tới lúc Redis xóa key; process chết sau khi SET cũng y như vậy. Gộp thành một lệnh SET NX PX thì an toàn hơn, nhưng TTL vẫn hữu hạn: TTL hết giữa lúc critical section đang chạy thì instance khác acquire được ngay, hai bên cùng ghi.",
+      "origin": "",
+      "how": "Một lệnh atomic: `SET lock:job <token> NX PX 30000`, token là UUID sinh riêng cho từng lần giữ lock. Giải phóng bằng script Lua so token rồi DEL, để không xóa nhầm lock của người khác. Holder còn sống thì watchdog timer tự gia hạn TTL ở khoảng 1/3 giá trị (Redisson làm thế). Đổi lại, nếu TTL hết thật giữa chừng thì exclusivity mất, nên section nào bắt buộc không bị ghi chồng vẫn cần fencing token ở tầng storage.",
+      "related": [
+        "Distributed lock & fencing token",
+        "Redis",
+        "Race condition"
+      ]
+    },
+    {
+      "term": "Advisory lock (Postgres)",
+      "aliases": [
+        "pg_advisory_lock",
+        "advisory lock",
+        "khóa tư vấn"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Trong cluster nhiều pod, chỉ một instance được chạy migration hoặc job định kỳ. Tạo bảng riêng chỉ để giữ chỗ thì lock bảng giả có thể deadlock với DML thật; còn đặt cờ trong bảng rồi ai cũng đọc-ghi thì hai pod cùng đọc thấy cờ xong cùng chạy, đúng cái race condition mà lock cần giải.",
+      "origin": "",
+      "how": "`pg_advisory_lock(key)` / `pg_try_advisory_lock(key)` khóa theo một key số nguyên trong database, tách hẳn khỏi mọi bảng dữ liệu nên không thể deadlock với DML thường. Session-level giữ tới khi session đóng, process chết thì PostgreSQL tự giải; transaction-level tự giải khi transaction kết thúc. Đổi lại, pooler ở transaction pooling (pgbouncer) cắt session giữa chừng sẽ làm mất lock âm thầm, trường hợp đó phải dùng transaction-level; muốn biết chờ bao lâu thì phải tự thử `pg_try_` rồi lặp lại.",
+      "related": [
+        "Lock & deadlock",
+        "Connection pool",
+        "Leader election"
+      ]
+    },
+    {
+      "term": "Gap lock & next-key lock (InnoDB)",
+      "aliases": [
+        "gap lock",
+        "next-key lock",
+        "khóa khoảng",
+        "phantom protection InnoDB"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Dưới Repeatable Read, hai transaction cùng INSERT khách hàng mới có email trùng trong một khoảng index: dòng chưa tồn tại nên row lock không chặn được. Hoặc transaction A đếm `WHERE age BETWEEN 20 AND 30` trong khi B chèn row mới vào khoảng đó, sinh ra phantom read. InnoDB khóa luôn khoảng trống giữa hai khóa index, và chính khoảng đó gây ra deadlock trông vô lý: hai transaction chèn hai giá trị khác nhau nhưng nằm cùng khoảng vẫn chết nhau.",
+      "origin": "",
+      "how": "Next-key lock = record lock + gap (mở bên trái, đóng bên phải theo mặt phẳng index), chỉ bật ở Repeatable Read trở lên; READ COMMITTED thì InnoDB không giữ gap. Debug thì xem phần gap wait trong `SHOW ENGINE INNODB STATUS`. Cần chèn song song dày đặc thì hạ isolation xuống RC hoặc tránh insert cùng khoảng.",
+      "related": [
+        "Isolation level",
+        "Deadlock detection",
+        "Lock & deadlock"
+      ]
+    },
+    {
+      "term": "SKIP LOCKED & NOWAIT",
+      "aliases": [
+        "FOR UPDATE SKIP LOCKED",
+        "FOR UPDATE NOWAIT",
+        "hàng đợi trong DB"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Dùng bảng Postgres làm hàng đợi: 50 worker cùng `SELECT ... FOR UPDATE` dòng đầu tiên, 49 người block chỉ vì một người giữ lock, throughput rơi về gần 0. Hoặc job khẩn cấp phải xếp sau job chậm đang giữ lock, chờ tới deadlock timeout mới biết tình hình. Một lock treo là cả hàng không ai lấy được.",
+      "origin": "",
+      "how": "`FOR UPDATE SKIP LOCKED` bỏ qua dòng đang bị khóa để mỗi worker lấy được dòng riêng, bảng tự thành work queue mà không cần broker. `FOR UPDATE NOWAIT` fail ngay lỗi 55P03 thay vì chờ, để worker lấy job khác hoặc retry. Cả hai chỉ ý nghĩa khi có lock thật (FOR UPDATE, không phải FOR SHARE đọc snapshot); khi join nhiều bảng phải chỉ rõ `OF <bảng>` để lock đúng bảng.",
+      "related": [
+        "Lock & deadlock",
+        "Competing consumers",
+        "Row lock vs Table lock"
+      ]
+    },
+    {
+      "term": "Reader-Writer lock",
+      "aliases": [
+        "RWLock",
+        "shared-exclusive lock",
+        "khóa đọc-ghi"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Config chỉ để đọc mà mỗi lần đọc cũng exclusive-lock thì 1000 request đọc xếp hàng vào nhau, an toàn nhưng throughput không hơn lock độc quyền. Server database cũng thế: 200 session chỉ SELECT mà mỗi cái cũng phải xin lock ghi thì chẳng ai hơn ai.",
+      "origin": "",
+      "how": "RWLock cho nhiều reader giữ đồng thời (shared) XOR đúng một writer (exclusive): reader vào được khi không có writer, writer đợi hết reader. Đổi lại writer có thể bị đói khi reader vào liên tục, nên cần biến thể ưu tiên writer hoặc hàng đợi writer; nâng cấp từ read sang write khi đang giữ shared thì dễ deadlock, pattern an toàn là thả read rồi xin lại exclusive.",
+      "related": [
+        "Mutex & Semaphore",
+        "Starvation & livelock",
+        "Row lock vs Table lock"
+      ]
+    },
+    {
+      "term": "Intent lock (IS/IX)",
+      "aliases": [
+        "intent lock",
+        "IS IX lock",
+        "SIX",
+        "khóa chủ đích"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Transaction A khóa vài dòng của bảng Orders, transaction B muốn khóa cả bảng. Nếu B phải quét mọi dòng để xem dòng nào đang khóa thì chi phí O(rows); không quét thì vô tình ghi đè lên A. Cần một cơ chế báo trước ý định để kiểm tra xung đột ở cấp bảng mà không đụng tới từng dòng.",
+      "origin": "",
+      "how": "Trước khi khóa hàng hoặc bảng con, transaction xin intent lock cấp cao hơn: IS (sắp đọc), IX (sắp ghi), SIX (đọc và ghi). Bảng conflict giữa các mức lock là O(1), biết ngay có xung đột mà không quét row. Đổi lại lock table phình to thêm vài dòng lock record mỗi transaction, và phải giữ đúng thứ tự cấp bậc khi nâng cấp để không deadlock với chính intent lock của mình.",
+      "related": [
+        "Lock & deadlock",
+        "Two-phase locking (2PL)",
+        "Isolation level"
+      ]
+    },
+    {
+      "term": "TIME_WAIT & ephemeral port",
+      "aliases": [
+        "2MSL",
+        "port exhaustion",
+        "cổng tạm"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Server kết nối outbound hàng nghìn lần mỗi giây (gọi payment gateway qua IP cố định, không keep-alive), mỗi connection đóng chủ động rơi vào TIME_WAIT 60 giây, pool cổng tạm local khoảng 28 nghìn cổng cạn dần, service từ chối mở kết nối mới với lỗi `Cannot assign requested address` dù CPU vẫn còn 90%.",
+      "origin": "",
+      "how": "TIME_WAIT giữ 2MSL (thường 60s) để segment đóng cuối không lẫn vào connection tái sử dụng cùng tuple. Tránh bằng cách giữ kết nối thay vì dựng mới mỗi lần (HTTP keep-alive, connection pool), hoặc cho process bind lại được cổng cũ qua SO_REUSEADDR (không áp dụng cho cổng đang nằm trong TIME_WAIT của connection khác), hoặc để client linh hoạt đổi source port. `tcp_tw_reuse` chỉ an toàn khi NAT/routing không lẫn traffic.",
+      "related": [
+        "HTTP keep-alive",
+        "Connection pool",
+        "Non-blocking I/O"
+      ]
+    },
+    {
+      "term": "Anycast",
+      "aliases": [
+        "anycast routing",
+        "DNS anycast"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Muốn user ở ba châu đều chạm datacenter gần nhất với cùng một địa chỉ IP. Phân vùng theo region rồi đổi IP khi failover thì DNS cache TTL cao kéo user hàng giờ vẫn trỏ vào site đã chết.",
+      "origin": "",
+      "how": "Phát cùng một IP (kiểu 1.1.1.1) từ nhiều location, BGP tự chọn đường ngắn nhất; site ngừng announce thì traffic chuyển trong vài giây, không cần đổi DNS. CDN và DNS root dùng cách này. Đổi lại, route flap của BGP làm traffic nhảy cóc, load phân theo topology chứ không theo capacity, và failover chớp nhoáng cũng giống hệt một partition.",
+      "related": [
+        "CDN",
+        "Load Balancer (L4/L7)",
+        "Geo-Replication"
+      ]
+    },
+    {
+      "term": "Bloom filter",
+      "aliases": [
+        "bộ lọc Bloom",
+        "probabilistic set"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Hỏi \"key có tồn tại trong tập một tỷ phần tử không\" bằng hash table ngốn hàng GB RAM. Đằng sau cache, mọi request miss đều kéo tới database dù key chưa từng tồn tại (cache penetration), cần một lớp nói chắc chắn \"không có\" trước khi chạm storage.",
+      "origin": "Burton H. Bloom, 1970 (Communications of the ACM)",
+      "how": "m bit + k hàm hash: thêm = set bit, test = AND các bit. Bất kỳ bit nào 0 thì chắc chắn không tồn tại (false negative bằng 0); tất cả bit 1 thì \"có thể tồn tại\", xác suất sai tính được, khoảng 10 bit mỗi phần tử cho tỉ lệ sai khoảng 1% ở cấu hình thường dùng. RocksDB, Scylla dùng để trả lời existence test ngay khỏi SSTable. Đổi lại, không xóa được từng phần tử (cần counting bloom), và false positive vẫn buộc phải kiểm chứng lại tầng sau.",
+      "related": [
+        "Cache penetration / breakdown / thundering herd",
+        "LSM tree",
+        "Index"
+      ]
+    },
+    {
+      "term": "Heartbeat & watchdog",
+      "aliases": [
+        "heartbeat",
+        "watchdog timer",
+        "failure detector"
+      ],
+      "level": "intermediate",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Process vẫn giữ port nhưng treo trong vòng lặp vô hạn; health check gọi từ ngoài cũng phải đợi timeout của chính nó nên hệ thống chậm mới biết. Trong cluster, một node chết và một node chỉ chậm thì không phân biệt được nếu chỉ thử một lần.",
+      "origin": "",
+      "how": "Heartbeat: bên sống định kỳ gửi tín hiệu, bên theo dõi đếm lỡ nhịp quá ngưỡng thì tuyên bố fail, ngưỡng đặt để một lần lag không kích hoạt false positive. Watchdog timer: process tự hẹn giờ, mỗi vòng lặp phải dập lửa trước khi hết giờ, hết giờ mà chưa dập thì watchdog kill và khởi động lại (systemd có WatchdogSec). Đổi lại, ngưỡng quá ngắn thì restart chập chờn vì GC/network jitter, quá dài thì failover chậm; mất một nhịp chưa đủ để kết luận chết.",
+      "related": [
+        "Health Check",
+        "Leader election",
+        "Graceful Shutdown"
+      ]
+    },
+    {
+      "term": "Page cache",
+      "aliases": [
+        "OS page cache",
+        "file cache",
+        "bộ đệm trang"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Đọc cùng một file hai lần vẫn tốn đĩa nếu không biết kernel đã giữ trang trong RAM. Server RAM 4GB báo `free` còn 0 vì page cache chiếm phần lớn, người vận hành kết luận \"hết RAM, phải tăng máy\" trong khi cache của file log đang giữ hơn một nửa RAM. Database tự cache trang trong buffer pool, OS lại cache cùng bytes một lần nữa, double caching.",
+      "origin": "",
+      "how": "Kernel giữ trang file trong RAM, đọc lặp trả lời từ RAM, ghi đi trễ (write-behind) ra đĩa; áp dụng cho mọi read()/mmap chứ không riêng database. Cách dùng: xem cột buff/cache trong `free` thay vì cột free; tầng storage cần tự kiểm soát RAM thì bypass page cache qua O_DIRECT; muốn đo I/O thật thì drop cache trước benchmark. Đổi lại, drop cache bừa sẽ làm lạnh cache cho mọi process khác trên máy.",
+      "related": [
+        "Buffer pool",
+        "WAL (Write-Ahead Log)"
+      ]
+    },
+    {
+      "term": "Checksum & silent corruption",
+      "aliases": [
+        "bit rot",
+        "silent data corruption",
+        "hỏng dữ liệu thầm lặng"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Đĩa trả về bytes đã hỏng mà vẫn báo I/O thành công: ECC RAM tật 1 bit, cáp SATA lỗi, firmware SSD sai lệch. File hay dòng dữ liệu đọc ra sai mà không lỗi nào được ném ra. Replica được rebuild từ nguồn đã hỏng thì lỗi lan sang bản sao, và không còn nguồn nào đúng nữa.",
+      "origin": "",
+      "how": "Ghi kèm checksum theo page/block: Postgres có data checksums, ZFS/btrfs checksum từng block, TCP checksum ở tầng mạng. Đọc ra tính lại và so, sai thì báo lỗi và lấy lại từ replica. Chiến lược: bật checksum ngay từ lúc tạo dữ liệu (DB cũ thường không bật được nếu chưa migrate), replica đi qua path checksum độc lập, scrub định kỳ. Đổi lại là CPU tính checksum cho mọi block đọc/ghi; checksum chỉ phát hiện, không tự sửa khi không còn nguồn đúng, erasure coding mới thêm redundancy.",
+      "related": [
+        "Replication (master-slave / read replica)",
+        "WAL (Write-Ahead Log)"
+      ]
+    },
+    {
+      "term": "Copy-on-write",
+      "aliases": [
+        "COW",
+        "ghi sao khi ghi"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Chụp backup của bảng 500GB mà copy nguyên khối thì vừa lâu vừa tốn dung lượng; fork() process mà sao toàn bộ heap thì con chỉ dùng một phần. Mọi snapshot, embedded database, version control đều chậm và đắt nếu mỗi lần chụp đều copy thật.",
+      "origin": "",
+      "how": "Trỏ chung vùng nhớ/đĩa, chỉ tạo bản sao khi bên nào đó thực sự ghi (fault trang, nhánh COW). Snapshot gần như tức thì vì chỉ tốn phần chênh lệch từ lúc chụp. Unix fork(), snapshot ZFS/btrfs, object store của git đều theo cách này. Đổi lại, COW làm phân mảnh (file system phải compact, ZFS có write amplification), và churn cao thì dung lượng tích lũy vẫn lớn.",
+      "related": [
+        "Snapshot isolation",
+        "LSM tree",
+        "WAL (Write-Ahead Log)"
+      ]
+    }
+  ]
+}

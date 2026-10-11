@@ -1,0 +1,346 @@
+- generic [active] [ref=f24e1]:
+  - generic [ref=f24e2]:
+    - generic [ref=f24e4]:
+      - generic [ref=f24e6]:
+        - link "DuckDuckGo home" [ref=f24e7] [cursor=pointer]:
+          - /url: /?t=h_
+          - generic [ref=f24e8]: DuckDuckGo
+        - generic [ref=f24e15]:
+          - combobox "Search privately" [ref=f24e17]: intermediate OR mid-level frontend developer portfolio projects build 2025
+          - button "Search" [ref=f24e19] [cursor=pointer]
+      - navigation [ref=f24e26]:
+        - list [ref=f24e27]:
+          - listitem [ref=f24e28]:
+            - link [ref=f24e29] [cursor=pointer]:
+              - /url: /?q=intermediate+OR+mid-level+frontend+developer+portfolio+projects+build+2025&t=h_&ia=web
+              - strong [ref=f24e30]: All
+          - listitem [ref=f24e33]:
+            - link [ref=f24e34] [cursor=pointer]:
+              - /url: /?q=intermediate+OR+mid-level+frontend+developer+portfolio+projects+build+2025&t=h_&ia=images&iax=images
+              - strong [ref=f24e35]: Images
+          - listitem [ref=f24e36]:
+            - link [ref=f24e37] [cursor=pointer]:
+              - /url: /?q=intermediate+OR+mid-level+frontend+developer+portfolio+projects+build+2025&t=h_&ia=videos&iax=videos
+              - strong [ref=f24e38]: Videos
+          - listitem [ref=f24e39]:
+            - link [ref=f24e40] [cursor=pointer]:
+              - /url: /?q=intermediate+OR+mid-level+frontend+developer+portfolio+projects+build+2025&t=h_&iaxm=maps
+              - strong [ref=f24e41]: Maps
+        - list [ref=f24e42]:
+          - listitem [ref=f24e43]:
+            - link "Duck.ai" [ref=f24e45] [cursor=pointer]:
+              - /url: /?q=intermediate+OR+mid-level+frontend+developer+portfolio+projects+build+2025&t=h_&ia=chat&entry=serp
+          - listitem [ref=f24e49]:
+            - button "Search Settings ✀" [ref=f24e51] [cursor=pointer]:
+              - generic [ref=f24e54]: Search Settings
+              - generic [ref=f24e55]: ✀
+    - generic [ref=f24e62]:
+      - navigation [ref=f24e64]:
+        - button [ref=f24e66] [cursor=pointer]:
+          - strong [ref=f24e73]: Private
+        - generic [ref=f24e77]:
+          - switch "Filter by the selected region" [ref=f24e81]
+          - button "Vietnam (en)" [ref=f24e83] [cursor=pointer]
+        - button [ref=f24e88] [cursor=pointer]:
+          - strong [ref=f24e90]: "Safe search: moderate"
+        - button [ref=f24e94] [cursor=pointer]:
+          - strong [ref=f24e96]: Any time
+      - generic [ref=f24e100]:
+        - list [ref=f24e101]:
+          - listitem [ref=f24e102]:
+            - article [ref=f24e103] [cursor=pointer]:
+              - button [ref=f24e105]
+              - generic [ref=f24e109]:
+                - link "Search domain dev.to" [ref=f24e111]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:dev.to&t=h_
+                - generic [ref=f24e114]:
+                  - paragraph [ref=f24e115]: DEV Community
+                  - link "https://dev.to › _d7eb1c1703182e3ce1782 › best-developer-portfolio-examples-2026-2d8m" [ref=f24e116]:
+                    - /url: https://dev.to/_d7eb1c1703182e3ce1782/best-developer-portfolio-examples-2026-2d8m
+                    - paragraph [ref=f24e118]:
+                      - generic [ref=f24e119]: https://dev.to
+                      - generic [ref=f24e120]: › _d7eb1c1703182e3ce1782 › best-developer-portfolio-examples-2026-2d8m
+              - heading [level=2] [ref=f24e122]:
+                - link "Best Developer Portfolio Examples (2026) - DEV Community" [ref=f24e123]:
+                  - /url: https://dev.to/_d7eb1c1703182e3ce1782/best-developer-portfolio-examples-2026-2d8m
+              - generic [ref=f24e128]:
+                - text: Mar 25, 2026·
+                - generic [ref=f24e129]: See what makes a great developer portfolio in 2026 — real examples, what tools they used, and exactly what to copy for your own GitHub pages and personal site.
+          - listitem [ref=f24e130]:
+            - article [ref=f24e131] [cursor=pointer]:
+              - button [ref=f24e133]
+              - generic [ref=f24e137]:
+                - link "Search domain github.com" [ref=f24e139]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:github.com&t=h_
+                - generic [ref=f24e142]:
+                  - paragraph [ref=f24e143]: Github
+                  - link "https://github.com › topics › intermediate-projects" [ref=f24e144]:
+                    - /url: https://github.com/topics/intermediate-projects
+                    - paragraph [ref=f24e146]:
+                      - generic [ref=f24e147]: https://github.com
+                      - generic [ref=f24e148]: › topics › intermediate-projects
+              - heading [level=2] [ref=f24e150]:
+                - link "intermediate-projects · GitHub Topics · GitHub" [ref=f24e151]:
+                  - /url: https://github.com/topics/intermediate-projects
+              - generic [ref=f24e153]: GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+          - listitem [ref=f24e158]:
+            - article [ref=f24e159] [cursor=pointer]:
+              - button [ref=f24e161]
+              - generic [ref=f24e165]:
+                - link "Search domain roadmap.sh" [ref=f24e167]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:roadmap.sh&t=h_
+                - generic [ref=f24e170]:
+                  - paragraph [ref=f24e171]: roadmap.sh
+                  - link "https://roadmap.sh › frontend › projects" [ref=f24e172]:
+                    - /url: https://roadmap.sh/frontend/projects
+                    - paragraph [ref=f24e174]:
+                      - generic [ref=f24e175]: https://roadmap.sh
+                      - generic [ref=f24e176]: › frontend › projects
+              - heading [level=2] [ref=f24e178]:
+                - link "Frontend Projects - Roadmap" [ref=f24e179]:
+                  - /url: https://roadmap.sh/frontend/projects
+              - generic [ref=f24e181]: Seeking frontend projects to enhance your skills? Explore our top 20 project ideas, from simple apps to complex systems. Start building today!
+          - listitem [ref=f24e186]:
+            - article [ref=f24e187] [cursor=pointer]:
+              - button [ref=f24e189]
+              - generic [ref=f24e193]:
+                - link "Search domain colorlib.com" [ref=f24e195]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:colorlib.com&t=h_
+                - generic [ref=f24e198]:
+                  - paragraph [ref=f24e199]: Colorlib
+                  - link "https://colorlib.com › wp › developer-portfolios" [ref=f24e200]:
+                    - /url: https://colorlib.com/wp/developer-portfolios/
+                    - paragraph [ref=f24e202]:
+                      - generic [ref=f24e203]: https://colorlib.com
+                      - generic [ref=f24e204]: › wp › developer-portfolios
+              - heading [level=2] [ref=f24e206]:
+                - link "21 Best Developer & Software Engineer Portfolio Websites (2026 ..." [ref=f24e207]:
+                  - /url: https://colorlib.com/wp/developer-portfolios/
+              - generic [ref=f24e212]:
+                - text: Sep 29, 2026·
+                - generic [ref=f24e213]: Real developer and software engineer portfolio sites from front-end, full-stack, backend and mobile engineers, with each site's platform and what to copy.
+          - listitem [ref=f24e214]:
+            - article [ref=f24e215] [cursor=pointer]:
+              - button [ref=f24e217]
+              - generic [ref=f24e221]:
+                - link "Search domain linkfolio.cv" [ref=f24e223]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:linkfolio.cv&t=h_
+                - generic [ref=f24e226]:
+                  - paragraph [ref=f24e227]: linkfolio.cv
+                  - link "https://linkfolio.cv › blog › developer-portfolio-examples-that-got-hired-2026" [ref=f24e228]:
+                    - /url: https://linkfolio.cv/blog/developer-portfolio-examples-that-got-hired-2026
+                    - paragraph [ref=f24e230]:
+                      - generic [ref=f24e231]: https://linkfolio.cv
+                      - generic [ref=f24e232]: › blog › developer-portfolio-examples-that-got-hired-2026
+              - heading [level=2] [ref=f24e234]:
+                - link "18 Developer Portfolio Examples That Actually Got People Hired (2026)" [ref=f24e235]:
+                  - /url: https://linkfolio.cv/blog/developer-portfolio-examples-that-got-hired-2026
+              - generic [ref=f24e237]: Real-world developer portfolio examples for 2026 — what made each one work, the patterns top engineers share, and how to copy them for your own portfolio.
+          - listitem [ref=f24e242]:
+            - article [ref=f24e243] [cursor=pointer]:
+              - button [ref=f24e245]
+              - generic [ref=f24e249]:
+                - link "Search domain portfoliostudio.dev" [ref=f24e251]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:portfoliostudio.dev&t=h_
+                - generic [ref=f24e254]:
+                  - paragraph [ref=f24e255]: portfoliostudio.dev
+                  - link "https://portfoliostudio.dev › blog › best-developer-portfolio-examples" [ref=f24e256]:
+                    - /url: https://portfoliostudio.dev/blog/best-developer-portfolio-examples/
+                    - paragraph [ref=f24e258]:
+                      - generic [ref=f24e259]: https://portfoliostudio.dev
+                      - generic [ref=f24e260]: › blog › best-developer-portfolio-examples
+              - heading [level=2] [ref=f24e262]:
+                - link "10 Best Developer Portfolio Examples | Portfolio Studio" [ref=f24e263]:
+                  - /url: https://portfoliostudio.dev/blog/best-developer-portfolio-examples/
+              - generic [ref=f24e268]:
+                - text: Mar 25, 2026·
+                - generic [ref=f24e269]: Browse the 10 best developer portfolio examples that get hired in 2026 — with a full breakdown of what makes each portfolio stand out to recruiters.
+          - listitem [ref=f24e270]:
+            - article [ref=f24e271] [cursor=pointer]:
+              - button [ref=f24e273]
+              - generic [ref=f24e277]:
+                - link "Search domain frontendpractice.com" [ref=f24e279]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:www.frontendpractice.com&t=h_
+                - generic [ref=f24e282]:
+                  - paragraph [ref=f24e283]: Frontend Practice
+                  - link "https://www.frontendpractice.com › projects" [ref=f24e284]:
+                    - /url: https://www.frontendpractice.com/projects
+                    - paragraph [ref=f24e286]:
+                      - generic [ref=f24e287]: https://www.frontendpractice.com
+                      - generic [ref=f24e288]: › projects
+              - heading [level=2] [ref=f24e290]:
+                - link "Frontend Practice | Project Library" [ref=f24e291]:
+                  - /url: https://www.frontendpractice.com/projects
+              - generic [ref=f24e293]: "Project Library How to get started: → Choose one of our projects below. → Recreate all or parts of the page. → Improve and test your skills. Become a better frontend developer."
+          - listitem [ref=f24e298]:
+            - article [ref=f24e299] [cursor=pointer]:
+              - button [ref=f24e301]
+              - generic [ref=f24e305]:
+                - link "Search domain webflow.com" [ref=f24e307]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:webflow.com&t=h_
+                - generic [ref=f24e310]:
+                  - paragraph [ref=f24e311]: Webflow
+                  - link "https://webflow.com › made-in-webflow › intermediate" [ref=f24e312]:
+                    - /url: https://webflow.com/made-in-webflow/intermediate
+                    - paragraph [ref=f24e314]:
+                      - generic [ref=f24e315]: https://webflow.com
+                      - generic [ref=f24e316]: › made-in-webflow › intermediate
+              - heading [level=2] [ref=f24e318]:
+                - link "Best Intermediate Websites | Free Examples & Designs - Webflow" [ref=f24e319]:
+                  - /url: https://webflow.com/made-in-webflow/intermediate
+              - generic [ref=f24e321]: Discover the best intermediate websites created by professional designers. Get inspired and start planning your perfect intermediate web design today!
+          - listitem [ref=f24e326]:
+            - article [ref=f24e327] [cursor=pointer]:
+              - button [ref=f24e329]
+              - generic [ref=f24e333]:
+                - link "Search domain vercel.com" [ref=f24e335]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:vercel.com&t=h_
+                - generic [ref=f24e338]:
+                  - paragraph [ref=f24e339]: Vercel
+                  - link "https://vercel.com › templates › portfolio" [ref=f24e340]:
+                    - /url: https://vercel.com/templates/portfolio
+                    - paragraph [ref=f24e342]:
+                      - generic [ref=f24e343]: https://vercel.com
+                      - generic [ref=f24e344]: › templates › portfolio
+              - heading [level=2] [ref=f24e346]:
+                - link "Portfolio Templates - Vercel" [ref=f24e347]:
+                  - /url: https://vercel.com/templates/portfolio
+              - generic [ref=f24e349]: Creative portfolio boilerplate built with Next.js. SEO-optimized, accessible, responsive. Includes projects, blog and gallery.
+          - listitem [ref=f24e354]:
+            - article [ref=f24e355] [cursor=pointer]:
+              - button [ref=f24e357]
+              - generic [ref=f24e361]:
+                - link "Search domain frontendmentor.io" [ref=f24e363]:
+                  - /url: /?q=intermediate%20OR%20mid%2Dlevel%20frontend%20developer%20portfolio%20projects%20build%202025+site:www.frontendmentor.io&t=h_
+                - generic [ref=f24e366]:
+                  - paragraph [ref=f24e367]: Frontend Mentor
+                  - link "https://www.frontendmentor.io › solutions" [ref=f24e368]:
+                    - /url: https://www.frontendmentor.io/solutions
+                    - paragraph [ref=f24e370]:
+                      - generic [ref=f24e371]: https://www.frontendmentor.io
+                      - generic [ref=f24e372]: › solutions
+              - heading [level=2] [ref=f24e374]:
+                - link "Code Solutions & Examples | Frontend & Full-Stack Projects" [ref=f24e375]:
+                  - /url: https://www.frontendmentor.io/solutions
+              - generic [ref=f24e377]: Explore thousands of frontend and full-stack solutions from 1M+ developers. See real code, compare approaches, and learn for free.
+          - listitem [ref=f24e382]:
+            - generic [ref=f24e384]:
+              - paragraph [ref=f24e385]: Searches related to intermediate OR mid-level frontend developer portfolio projects build 2025
+              - generic [ref=f24e386]:
+                - list [ref=f24e387]:
+                  - listitem [ref=f24e388]:
+                    - link "software developer portfolio examples" [ref=f24e389] [cursor=pointer]:
+                      - /url: "?q=software%20developer%20portfolio%20examples&origin=related&t=h_"
+                  - listitem [ref=f24e392]:
+                    - link "web developer portfolio examples" [ref=f24e393] [cursor=pointer]:
+                      - /url: "?q=web%20developer%20portfolio%20examples&origin=related&t=h_"
+                - list [ref=f24e396]:
+                  - listitem [ref=f24e397]:
+                    - link "examples of developer portfolio" [ref=f24e398] [cursor=pointer]:
+                      - /url: "?q=examples%20of%20developer%20portfolio&origin=related&t=h_"
+              - generic [ref=f24e406]:
+                - text: Was this helpful?
+                - button "Positive feedback" [ref=f24e407] [cursor=pointer]
+                - button "Negative feedback" [ref=f24e411] [cursor=pointer]
+        - button "More results" [ref=f24e417] [cursor=pointer]
+    - list [ref=f24e420]:
+      - button "Close menu" [ref=f24e421] [cursor=pointer]
+      - list [ref=f24e425]:
+        - listitem [ref=f24e426]: Search
+        - listitem [ref=f24e427]:
+          - link "Homepage" [ref=f24e428] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f24e429]:
+          - link "Themes" [ref=f24e430] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f24e431]:
+          - link "Settings" [ref=f24e432] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f24e433]:
+        - listitem [ref=f24e434]: Share Feedback
+        - listitem [ref=f24e435]:
+          - generic [ref=f24e438]:
+            - button "Positive feedback" [ref=f24e439] [cursor=pointer]
+            - button "Negative feedback" [ref=f24e443] [cursor=pointer]
+      - list [ref=f24e447]:
+        - listitem [ref=f24e448]: Downloads
+        - listitem [ref=f24e449]:
+          - link "iOS Browser" [ref=f24e450] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f24e451]:
+          - link "Android Browser" [ref=f24e452] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f24e453]:
+          - link "Mac Browser" [ref=f24e454] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f24e455]:
+          - link "Windows Browser" [ref=f24e456] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f24e457]:
+          - link "Browser Extensions" [ref=f24e458] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f24e459]:
+        - listitem [ref=f24e460]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f24e461]:
+          - link "Duck.ai" [ref=f24e462] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f24e463]:
+          - link "Email Protection" [ref=f24e464] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f24e465]:
+          - link "Newsletter" [ref=f24e466] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f24e467]:
+          - link "Blog" [ref=f24e468] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f24e469]:
+          - link "Podcast" [ref=f24e470] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f24e471]:
+          - link "Collaborations" [ref=f24e472] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f24e473]:
+        - listitem [ref=f24e474]: Learn More
+        - listitem [ref=f24e475]:
+          - link "What’s New" [ref=f24e476] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f24e477]:
+          - link "Compare Privacy" [ref=f24e478] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f24e479]:
+          - link "About Our Browser" [ref=f24e480] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f24e481]:
+          - link "About DuckDuckGo" [ref=f24e482] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f24e483]:
+        - listitem [ref=f24e484]: Other Resources
+        - listitem [ref=f24e485]:
+          - link "Help" [ref=f24e486] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f24e487]:
+          - link "Community" [ref=f24e488] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f24e489]:
+          - link "Careers" [ref=f24e490] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f24e491]:
+          - link "Privacy Policy" [ref=f24e492] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f24e493]:
+          - link "Terms of Service" [ref=f24e494] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f24e495]:
+          - link "Press Kit" [ref=f24e496] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f24e497]:
+          - link "Advertise on Search" [ref=f24e498] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f24e504]:
+    - generic [ref=f24e515]:
+      - heading "See What’s DuckDuckNew" [level=3] [ref=f24e516]
+      - paragraph [ref=f24e517]: Explore DuckDuckGo’s latest product updates.
+    - link "Learn More" [ref=f24e518] [cursor=pointer]:
+      - /url: https://duckduckgo.com/updates
+  - button "Share Feedback" [ref=f24e523] [cursor=pointer]

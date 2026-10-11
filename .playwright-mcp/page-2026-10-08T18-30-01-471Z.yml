@@ -1,0 +1,320 @@
+- generic [active] [ref=f254e1]:
+  - generic [ref=f254e2]:
+    - generic [ref=f254e7]:
+      - banner [ref=f254e8]:
+        - generic [ref=f254e10]:
+          - img "CÔNG AN THÀNH PHỐ CẦN THƠ" [ref=f254e12]
+          - link [ref=f254e14] [cursor=pointer]:
+            - /url: /
+            - img "CÔNG AN THÀNH PHỐ CẦN THƠ" [ref=f254e15]
+          - generic [ref=f254e17]:
+            - generic [ref=f254e18]: Trang thông tin điện tử
+            - generic [ref=f254e19]: CÔNG AN THÀNH PHỐ CẦN THƠ
+      - navigation [ref=f254e20]:
+        - navigation [ref=f254e23]:
+          - generic [ref=f254e24]:
+            - list [ref=f254e25]:
+              - listitem [ref=f254e26]:
+                - link [ref=f254e27] [cursor=pointer]:
+                  - /url: /
+                  - emphasis [ref=f254e28]: 
+              - listitem [ref=f254e29]:
+                - button [ref=f254e30] [cursor=pointer]:
+                  - text: Giới thiệu
+                  - strong [ref=f254e31]
+              - listitem [ref=f254e32]:
+                - button [ref=f254e33] [cursor=pointer]:
+                  - text: Tin Tức Sự Kiện
+                  - strong [ref=f254e34]
+              - listitem [ref=f254e35]:
+                - button [ref=f254e36] [cursor=pointer]:
+                  - text: Thông tin chuyên đề
+                  - strong [ref=f254e37]
+              - listitem [ref=f254e38]:
+                - button [ref=f254e39] [cursor=pointer]:
+                  - text: Văn bản
+                  - strong [ref=f254e40]
+              - listitem [ref=f254e41]:
+                - button [ref=f254e42] [cursor=pointer]:
+                  - text: Cải cách hành chính
+                  - strong [ref=f254e43]
+              - listitem [ref=f254e44]:
+                - button "Thống kê" [ref=f254e45] [cursor=pointer]
+              - listitem [ref=f254e46]:
+                - button "Đấu tranh, phản bác" [ref=f254e47] [cursor=pointer]
+              - listitem [ref=f254e48]:
+                - button "Tin nội bộ" [ref=f254e49] [cursor=pointer]
+            - link "" [ref=f254e51] [cursor=pointer]:
+              - /url: "#toggleearch"
+            - text: 
+      - navigation [ref=f254e55]:
+        - list [ref=f254e59]:
+          - listitem [ref=f254e60]:
+            - link "Thành viên" [ref=f254e61] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f254e63]:
+            - link "RSS" [ref=f254e64] [cursor=pointer]:
+              - /url: /feeds/
+          - listitem [ref=f254e66]:
+            - link "Sơ đồ trang" [ref=f254e67] [cursor=pointer]:
+              - /url: /feeds/
+          - listitem [ref=f254e68]:
+            - link "Liên hệ" [ref=f254e69] [cursor=pointer]:
+              - /url: /contact/
+      - generic [ref=f254e71]:
+        - navigation [ref=f254e72]:
+          - generic [ref=f254e78]:
+            - text: 
+            - list [ref=f254e80]:
+              - listitem:
+                - link "":
+                  - /url: /
+              - listitem [ref=f254e81]:
+                - link "Thông tin chuyên đề" [ref=f254e82] [cursor=pointer]:
+                  - /url: /thong-tin-chuyen-de/
+        - generic [ref=f254e83]:
+          - generic [ref=f254e85]:
+            - generic [ref=f254e87]:
+              - 'heading "“Giật hụi” không chỉ là tranh chấp dân sự: Ranh giới mong manh giữa nợ và tội" [level=1] [ref=f254e88]'
+              - generic [ref=f254e89]:
+                - generic [ref=f254e90]:
+                  - generic [ref=f254e91]:
+                    - generic [aria-hidden] [ref=f254e92]: 
+                    - text: Thứ bảy - 04/04/2026 18:45
+                  - generic [ref=f254e93]:
+                    - generic [aria-hidden] [ref=f254e94]: 
+                    - text: "2.819"
+                  - generic [ref=f254e95]:
+                    - generic [aria-hidden] [ref=f254e96]: 
+                    - text: "0"
+                - list [ref=f254e98]:
+                  - listitem [ref=f254e99]:
+                    - link [ref=f254e100] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                      - emphasis [ref=f254e101]: 
+                  - listitem [ref=f254e102]:
+                    - link [ref=f254e103] [cursor=pointer]:
+                      - /url: "javascript: void(0)"
+                      - emphasis [ref=f254e104]: 
+                  - listitem [ref=f254e105]:
+                    - link [ref=f254e106] [cursor=pointer]:
+                      - /url: /savefile/thong-tin-chuyen-de/giat-hui-khong-chi-la-tranh-chap-dan-su-ranh-gioi-mong-manh-giua-no-va-toi-6404.html
+                      - emphasis [ref=f254e107]: 
+                  - listitem [ref=f254e108]:
+                    - link [ref=f254e109] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                      - emphasis [ref=f254e110]: 
+                    - link [ref=f254e111] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                      - strong [ref=f254e112]: A
+                    - link [ref=f254e113] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                      - emphasis [ref=f254e114]: 
+              - generic [ref=f254e115]: Chơi hụi (họ, biêu, phường) vốn là hình thức huy động vốn truyền thống dựa trên sự tin tưởng. Tuy nhiên, khi những dây hụi hàng tỷ đồng bị “đứt”, nhiều người vẫn lầm tưởng đây chỉ là tranh chấp dân sự “vay - trả”. Thực tế, hành vi giật hụi có thể dẫn thẳng tới cửa nhà lao nếu hội đủ các yếu tố cấu thành tội phạm hình sự.
+              - generic [ref=f254e118]:
+                - generic [ref=f254e119]: 1. Lòng tin đặt sai chỗ và những “cú sốc” tiền tỷ
+                - generic [ref=f254e125]: Tính riêng trong 02 năm gần đây (2024 đến 2025), tình trạng vỡ hụi, giật hụi tiếp tục diễn biến phức tạp tại nhiều địa phương từ nông thôn đến thành thị. Nhiều vụ vỡ hụi quy mô lớn lên đến hàng chục, hàng trăm tỷ đồng tại thành phố Cần Thơ, TP.HCM, Thanh Hóa, Cà Mau đã gây rúng động dư luận. Theo Công an phường Đại Thành, riêng trong năm 2025, đã tiếp nhận, xử lý 02 vụ việc/02 đối tượng, với hơn 300 bị hại, tổng số tiền bị chiếm đoạt trên 2 tỷ đồng.
+                - generic [ref=f254e130]: Điểm chung của các vụ việc này là chủ hụi thường đưa ra mức lãi suất hấp dẫn (cao gấp 3-5 lần ngân hàng) để chiêu dụ người chơi. Khi không còn khả năng xoay vòng vốn hoặc có ý định chiếm đoạt, chủ hụi “tuyên bố vỡ” hoặc âm thầm bỏ trốn, để lại hàng trăm nạn nhân rơi vào cảnh trắng tay.
+                - generic [ref=f254e135]: 2. Hụi hợp pháp và hụi “biến tướng”
+                - generic [ref=f254e141]: Theo pháp luật Việt Nam, chơi hụi là giao dịch dân sự hợp pháp nếu tuân thủ Điều 471 Bộ luật Dân sự năm 2015 và Nghị định số 19/2019/NĐ-CP ngày 19/02/2019 của Chính phủ về họ, hụi, biêu, phường, với lãi suất không vượt quá 20%/năm. Chủ hụi phải thông báo Ủy ban nhân dân cấp xã khi dây hụi có giá trị từ 100 triệu đồng trở lên.
+                - generic [ref=f254e146]: Tranh chấp chỉ mang tính dân sự khi các bên vi phạm nghĩa vụ thanh toán do khó khăn khách quan, không có yếu tố gian dối hay tẩu tán tài sản. Theo Điều 25 Nghị định số 19/2019/NĐ-CP, các tranh chấp này có thể giải quyết qua thương lượng, hòa giải hoặc khởi kiện tại Tòa án.
+                - generic [ref=f254e151]: 3. Khi nào “giật hụi” sẽ bị truy cứu trách nhiệm hình sự?
+                - generic [ref=f254e157]: Hành vi giật hụi sẽ bị truy cứu trách nhiệm hình sự nếu có dấu hiệu chiếm đoạt tài sản. Tùy vào thủ đoạn, người phạm tội có thể bị xử lý về các tội danh sau theo Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017)
+                - generic [ref=f254e162]: "- Tội Lừa đảo chiếm đoạt tài sản (Điều 174): Áp dụng khi chủ hụi dùng thủ đoạn gian dối ngay từ đầu như lập danh sách “hụi ma” (tên giả), tự ý hốt hụi của thành viên mà không được đồng ý để chiếm đoạt tiền."
+                - generic [ref=f254e167]: "- Tội Lạm dụng tín nhiệm chiếm đoạt tài sản (Điều 175): Áp dụng khi việc chơi hụi ban đầu là thật, nhưng sau khi nhận tiền, người này dùng thủ đoạn gian dối hoặc bỏ trốn để không trả tiền, hoặc có tiền nhưng cố tình không trả."
+                - generic [ref=f254e172]: Pháp luật cũng quy định rõ, mức hình phạt cao nhất cho các tội danh này có thể lên đến tù chung thân nếu số tiền chiếm đoạt từ 500 triệu đồng trở lên.
+                - generic [ref=f254e177]: "4. Cơ quan Công an khuyến cáo, mọi người cần chú ý một số vấn đề sau để tránh “tiền mất tật mang”:"
+                - generic [ref=f254e184]: "- Tìm hiểu, kiểm tra kỹ nhân thân, điều kiện kinh tế của chủ hụi và các thành viên khác trong dây hụi."
+                - generic [ref=f254e190]: "- Chỉ chơi hụi đúng pháp luật, tham gia các dây hụi đã được đăng ký và thông báo tại Ủy ban nhân dân xã/phường theo Nghị định số 19/2019/NĐ-CP."
+                - generic [ref=f254e195]: "- Minh bạch giấy tờ, mọi giao dịch góp, nhận hụi phải có giấy tờ, ký nhận đầy đủ; khuyến khích công chứng, chứng thực thỏa thuận hụi. Tránh giao dịch bằng niềm tin qua lời nói."
+                - generic [ref=f254e200]: "- Tuyệt đối không tham gia các dây hụi có lãi suất cao bất thường vì đây thường là dấu hiệu của lừa đảo hoặc tín dụng đen biến tướng."
+                - generic [ref=f254e205]: "- Khi bị giật hụi, người dân cần báo ngay với chính quyền địa phương và chuẩn bị đầy đủ bằng chứng như: văn bản thỏa thuận hụi, biên lai thu tiền, sao kê giao dịch, tin nhắn, ghi âm hoặc ghi hình, sổ sách ghi chép để cung cấp cho cơ quan chức năng."
+                - generic [ref=f254e210]: "- Khi chủ hụi có dấu hiệu tẩu tán tài sản, bỏ trốn khỏi địa phương, không thể liên lạc, và vụ việc có số lượng bị hại lớn với số tiền bị chiếm đoạt lớn, đó là lúc người dân cần tố giác hình sự chứ không chỉ khởi kiện dân sự."
+                - generic [ref=f254e217]:
+                  - generic [ref=f254e218]: "- Mọi"
+                  - generic [ref=f254e220]: thông tin tố giác liên quan đến hành vi giật hụi có dấu hiệu tội phạm, người dân có thể liên hệ trực tiếp Cơ quan Công an nơi cư trú để được hướng dẫn giải quyết theo quy định pháp luật.
+                - figure "Tòa án Nhân dân khu vực 5 - Cần Thơ xét xử vụ liên quan đến hụi, vào tháng 8-2025." [ref=f254e222]
+                - generic [ref=f254e224]: “Giật hụi” không phải chỉ là chuyện mất tiền giữa hàng xóm với nhau. Khi có hành vi gian dối, khi ý thức chiếm đoạt được chứng minh, ranh giới giữa một vụ tranh chấp dân sự và một tội danh hình sự với mức phạt hàng chục năm tù có thể rất mỏng manh - và hoàn toàn có thể vượt qua.
+                - generic [ref=f254e229]: "Những vụ việc xảy ra là lời nhắc nhở rõ ràng: tin tưởng nhau là tốt, nhưng giao dịch tiền bạc cần phải có chứng từ chứng minh, và khi có dấu hiệu bất thường, cần thông báo ngay cho cơ quan chức năng, đừng chờ đến khi trắng tay mới tìm đến pháp luật. Pháp luật luôn bảo vệ người dân, nhưng người dân cũng cần chủ động bảo vệ chính mình."
+              - paragraph [ref=f254e235]:
+                - strong [ref=f254e236]: "Tác giả bài viết:"
+                - text: Thanh Phong, Hằng Ni
+            - generic [ref=f254e240]:
+              - paragraph [ref=f254e241]: "Tổng số điểm của bài viết là: 0 trong 0 đánh giá"
+              - generic [ref=f254e242]:
+                - generic:
+                  - generic "Cancel Rating" [ref=f254e244] [cursor=pointer]
+                  - generic "Bài viết rất kém" [ref=f254e245] [cursor=pointer]:
+                    - generic "Bài viết rất kém" [ref=f254e246]: "1"
+                  - generic "Bài viết kém" [ref=f254e247] [cursor=pointer]:
+                    - generic "Bài viết kém" [ref=f254e248]: "2"
+                  - generic "Bài viết đạt" [ref=f254e249] [cursor=pointer]:
+                    - generic "Bài viết đạt" [ref=f254e250]: "3"
+                  - generic "Bài viết tốt" [ref=f254e251] [cursor=pointer]:
+                    - generic "Bài viết tốt" [ref=f254e252]: "4"
+                  - generic "Bài viết rất tốt" [ref=f254e253] [cursor=pointer]:
+                    - generic "Bài viết rất tốt" [ref=f254e254]: "5"
+                - text: Click để đánh giá bài viết
+            - link "Tweet" [ref=f254e259] [cursor=pointer]:
+              - /url: http://twitter.com/share
+            - generic [ref=f254e262]:
+              - list [ref=f254e264]:
+                - listitem [ref=f254e265]:
+                  - link "Những tin mới hơn" [ref=f254e266] [cursor=pointer]:
+                    - /url: "#news-relatednew"
+                - listitem [ref=f254e267]:
+                  - link "Những tin cũ hơn" [ref=f254e268] [cursor=pointer]:
+                    - /url: "#news-related"
+              - generic [ref=f254e269]:
+                - list [ref=f254e271]:
+                  - listitem [ref=f254e272]:
+                    - emphasis [ref=f254e273]: 
+                    - link [ref=f254e274] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/can-tho-tang-cuong-phong-chong-toi-pham-trong-thanh-thieu-nien-nguoi-duoi-18-tuoi-6442.html
+                      - 'heading "Cần Thơ: Tăng cường phòng, chống tội phạm trong thanh thiếu niên, người dưới 18 tuổi" [level=4] [ref=f254e275]'
+                    - emphasis [ref=f254e276]: (07/04/2026)
+                  - listitem [ref=f254e277]:
+                    - emphasis [ref=f254e278]: 
+                    - link [ref=f254e279] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/nang-nong-gay-gat-nguoi-dan-can-tho-can-nang-cao-canh-giac-voi-giac-lua-6444.html
+                      - 'heading "Nắng nóng gay gắt: Người dân Cần Thơ cần nâng cao cảnh giác với “giặc lửa”" [level=4] [ref=f254e280]'
+                    - emphasis [ref=f254e281]: (07/04/2026)
+                  - listitem [ref=f254e282]:
+                    - emphasis [ref=f254e283]: 
+                    - link [ref=f254e284] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/cong-an-thanh-pho-can-tho-thong-bao-duong-day-nong-tiep-nhan-tin-phan-anh-ve-hien-tuong-tieu-cuc-tham-nhung-cua-can-bo-chien-si-6445.html
+                      - heading "Công an thành phố Cần Thơ thông báo đường dây nóng tiếp nhận tin phản ánh về hiện tượng tiêu cực, tham nhũng của cán bộ, chiến sĩ" [level=4] [ref=f254e285]
+                    - emphasis [ref=f254e286]: (07/04/2026)
+                  - listitem [ref=f254e287]:
+                    - emphasis [ref=f254e288]: 
+                    - link [ref=f254e289] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/lan-toa-viec-tot-trao-tra-tai-san-cho-nguoi-bi-mat-tai-xa-an-ninh-6469.html
+                      - 'heading "Lan tỏa việc tốt: Trao trả tài sản cho người bị mất tại xã An Ninh" [level=4] [ref=f254e290]'
+                    - emphasis [ref=f254e291]: (08/04/2026)
+                  - listitem [ref=f254e292]:
+                    - emphasis [ref=f254e293]: 
+                    - link [ref=f254e294] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/cong-tac-phoi-hop-tuyen-truyen-lap-dat-he-thong-bao-chay-6477.html
+                      - heading "CÔNG TÁC PHỐI HỢP TUYÊN TRUYỀN LẮP ĐẶT HỆ THỐNG BÁO CHÁY" [level=4] [ref=f254e295]
+                    - emphasis [ref=f254e296]: (09/04/2026)
+                  - listitem [ref=f254e297]:
+                    - emphasis [ref=f254e298]: 
+                    - link [ref=f254e299] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/to-198-cong-an-can-tho-lien-tiep-xu-ly-cac-nhom-doi-tuong-nhi-vi-pham-trong-dem-6498.html
+                      - 'heading "Tổ 198 Công an Cần Thơ: Liên tiếp xử lý các nhóm đối tượng \"nhí\" vi phạm trong đêm" [level=4] [ref=f254e300]'
+                    - emphasis [ref=f254e301]: (10/04/2026)
+                  - listitem [ref=f254e302]:
+                    - emphasis [ref=f254e303]: 
+                    - link [ref=f254e304] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/02-thanh-nien-lanh-an-tu-vi-giup-ban-bat-giu-nguoi-de-doi-no-6524.html
+                      - heading "02 thanh niên lãnh án tù vì giúp bạn bắt giữ người để đòi nợ" [level=4] [ref=f254e305]
+                    - emphasis [ref=f254e306]: (11/04/2026)
+                  - listitem [ref=f254e307]:
+                    - emphasis [ref=f254e308]: 
+                    - link [ref=f254e309] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/nguy-bien-khi-cho-rang-buon-gia-dinh-nen-tim-den-ma-tuy-6530.html
+                      - heading "NGỤY BIỆN KHI CHO RẰNG “BUỒN GIA ĐÌNH NÊN TÌM ĐẾN MA TÚY”" [level=4] [ref=f254e310]
+                    - emphasis [ref=f254e311]: (12/04/2026)
+                  - listitem [ref=f254e312]:
+                    - emphasis [ref=f254e313]: 
+                    - link [ref=f254e314] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/trai-nghiem-thuc-te-ky-nang-phong-chay-chua-chay-va-cuu-nan-cuu-ho-tai-truong-hoc-6532.html
+                      - heading "Trải nghiệm thực tế kỹ năng phòng cháy, chữa cháy và cứu nạn, cứu hộ tại trường học" [level=4] [ref=f254e315]
+                    - emphasis [ref=f254e316]: (12/04/2026)
+                  - listitem [ref=f254e317]:
+                    - emphasis [ref=f254e318]: 
+                    - link [ref=f254e319] [cursor=pointer]:
+                      - /url: /thong-tin-chuyen-de/nhu-gia-triet-xoa-diem-da-ga-an-tien-tam-giu-hon-20-trieu-dong-6535.html
+                      - 'heading "Nhu Gia: Triệt xóa điểm đá gà ăn tiền, tạm giữ hơn 20 triệu đồng" [level=4] [ref=f254e320]'
+                    - emphasis [ref=f254e321]: (12/04/2026)
+                - text:          
+          - generic [ref=f254e322]:
+            - img "hcm" [ref=f254e324]
+            - img "06DieuBacHodayCAND" [ref=f254e326]
+            - link [ref=f254e328] [cursor=pointer]:
+              - /url: https://congan.cantho.gov.vn/page/DUONG-DAY-NONG.html
+              - img "ĐƯỜNG DÂY NÓNG" [ref=f254e329]
+            - img "lichtiepcongdan" [ref=f254e331]
+            - link [ref=f254e333] [cursor=pointer]:
+              - /url: https://bando-congan.cantho.gov.vn
+              - img "bandoso" [ref=f254e334]
+            - link [ref=f254e336] [cursor=pointer]:
+              - /url: https://bocongan.gov.vn
+              - img "Cổng bộ CA" [ref=f254e337]
+            - link [ref=f254e339] [cursor=pointer]:
+              - /url: https://dichvucong.bocongan.gov.vn/?home=1
+              - img "congdvcbca" [ref=f254e340]
+            - link [ref=f254e342] [cursor=pointer]:
+              - /url: https://congan.cantho.gov.vn/tuyentruyen/
+              - img "trainghiemso" [ref=f254e343]
+            - link [ref=f254e345] [cursor=pointer]:
+              - /url: https://congan.haugiang.gov.vn/laws/
+              - img "van ban phap luat" [ref=f254e346]
+            - link [ref=f254e348] [cursor=pointer]:
+              - /url: https://congan.cantho.gov.vn/contact/
+              - img "hop thu" [ref=f254e349]
+            - link [ref=f254e351] [cursor=pointer]:
+              - /url: https://congan.haugiang.gov.vn/chuyen-doi-so/
+              - img "chuyển đổi số" [ref=f254e352]
+            - link [ref=f254e354] [cursor=pointer]:
+              - /url: https://phapdien.moj.gov.vn/Pages/chi-tiet-bo-phap-dien.aspx
+              - img "bộ pháp điển" [ref=f254e355]
+            - link [ref=f254e357] [cursor=pointer]:
+              - /url: https://congan.cantho.gov.vn/doi-tuong-truy-na
+              - img "Doi tuong truy na" [ref=f254e358]
+            - link [ref=f254e360] [cursor=pointer]:
+              - /url: https://congan.cantho.gov.vn/thu-vien-dien-tu/
+              - img "thuviendientu" [ref=f254e361]
+            - generic [ref=f254e362]:
+              - generic [ref=f254e363]: Thống kê truy cập
+              - list [ref=f254e366]:
+                - listitem [ref=f254e367]:
+                  - generic [ref=f254e368]:
+                    - emphasis [ref=f254e369]: 
+                    - text: Đang truy cập
+                  - generic [ref=f254e370]: "205"
+                - listitem [ref=f254e371]:
+                  - generic [ref=f254e372]:
+                    - emphasis [ref=f254e373]: 
+                    - text: Máy chủ tìm kiếm
+                  - generic [ref=f254e374]: "8"
+                - listitem [ref=f254e375]:
+                  - generic [ref=f254e376]:
+                    - emphasis [ref=f254e377]: 
+                    - text: Khách viếng thăm
+                  - generic [ref=f254e378]: "197"
+                - listitem [ref=f254e379]:
+                  - generic [ref=f254e380]:
+                    - emphasis [ref=f254e381]: 
+                    - text: Hôm nay
+                  - generic [ref=f254e382]: 3,778
+                - listitem [ref=f254e383]:
+                  - generic [ref=f254e384]:
+                    - emphasis [ref=f254e385]: 
+                    - text: Tháng hiện tại
+                  - generic [ref=f254e386]: 455,751
+                - listitem [ref=f254e387]:
+                  - generic [ref=f254e388]:
+                    - emphasis [ref=f254e389]: 
+                    - text: Tổng lượt truy cập
+                  - generic [ref=f254e390]: 151,594,883
+    - contentinfo [ref=f254e392]:
+      - generic [ref=f254e397]:
+        - strong [ref=f254e399]: TRANG THÔNG TIN ĐIỆN TỬ CÔNG AN THÀNH PHỐ CẦN THƠ
+        - text: "Địa chỉ: Số 9A, Trần Phú, Phường Cái Khế, Thành phố Cần Thơ Điện thoại: 0693.672010 - Fax: 0693.672031, Email: catp@cantho.gov.vn Chịu trách nhiệm chính: Thượng tá Trần Nguyễn Hòa Thơ, Trưởng Phòng Tham mưu"
+        - link [ref=f254e401] [cursor=pointer]:
+          - /url: https://tinnhiemmang.vn/danh-ba-tin-nhiem/congancanthogovvn-1698808463
+    - navigation [ref=f254e402]:
+      - generic [ref=f254e404]:
+        - generic [ref=f254e405]:
+          - link [ref=f254e406] [cursor=pointer]:
+            - /url: /?nvvithemever=r&nv_redirect=ydXFU37yLCQReWlzZLl_PooaeRQIIntT9rAxsMa6xj-rC6negv4gY8y4O_G6P3gaW3QjHfFpv1RGPVIL1NkvBa7Wid-wDP0HkWzArsaMFvVI7E4O8JOVm2Qp6MuQMziUgO7CsATSmMC9CAj_Bjra8iBlO7Anhfj_nxMhYqcccFtZSsSNT302RMXQqmBMOPRP
+            - emphasis [ref=f254e407]: 
+          - 'generic "Chế độ giao diện đang hiển thị: Máy Tính" [ref=f254e408]':
+            - emphasis [ref=f254e409]: 
+        - emphasis [ref=f254e412] [cursor=pointer]: 
+  - text:  
+  - link "EMC Đã kết nối EMC" [ref=f254e417] [cursor=pointer]:
+    - /url: javascript:void(0)
+    - img "EMC" [ref=f254e419]
+    - generic [ref=f254e420]: Đã kết nối EMC

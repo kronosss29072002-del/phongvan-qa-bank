@@ -1,0 +1,200 @@
+- generic [active] [ref=f250e1]:
+  - generic:
+    - dialog:
+      - generic [ref=f250e2]:
+        - generic [ref=f250e3]:
+          - paragraph
+        - generic [ref=f250e5]:
+          - generic [ref=f250e6]:
+            - generic [ref=f250e7]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+            - generic [ref=f250e8]:
+              - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+              - link "Điều khoản về quyền riêng tư" [ref=f250e9] [cursor=pointer]:
+                - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+          - generic [ref=f250e10]:
+            - link "Chấp nhận" [ref=f250e12] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+            - link "Từ chối" [ref=f250e14] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+            - link "Các lựa chọn khác" [ref=f250e15] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+  - banner [ref=f250e16]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f250e17] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f250e20] [cursor=pointer]
+    - generic [ref=f250e23]:
+      - link [ref=f250e24] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f250e25]
+      - search [ref=f250e26]:
+        - button "Tìm kiếm" [ref=f250e29] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f250e30]: "\"vổ hủi\" sổ ghi chép tranh chấp định giá"
+        - generic [ref=f250e31] [cursor=pointer]
+        - generic [ref=f250e33] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f250e38] [cursor=pointer]
+      - link [ref=f250e40] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=f00c1e192f4bcdb235a66b26b84bed797b8edb1397a8c936f942f90fa1e8d68dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT0lMjJ2JWUxJWJiJTk1K2glZTElYmIlYTdpJTIyK3MlZTElYmIlOTUrZ2hpK2NoJWMzJWE5cCt0cmFuaCtjaCVlMSViYSVhNXArJWM0JTkxJWUxJWJiJThibmgrZ2klYzMlYTEmc2VuZHF1ZXJ5PTEmZm9ybT1IRUNPRFg&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f250e41]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f250e43]:
+      - link "Đăng nhập" [ref=f250e44] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f250e46] [cursor=pointer]:
+        - generic [ref=f250e47]: Rewards
+    - navigation "Bộ lọc Tìm kiếm" [ref=f250e63]:
+      - list [ref=f250e64]:
+        - listitem [ref=f250e65]:
+          - link "Tất cả" [ref=f250e66] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f250e68]:
+          - link "Web" [ref=f250e69] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=089ebce73df8dca4bea6a407151774f45e8a273b5b43117098d3b6c1906bbc4eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPSUyMnYlZTElYmIlOTUraCVlMSViYiVhN2klMjIrcyVlMSViYiU5NStnaGkrY2glYzMlYTlwK3RyYW5oK2NoJWUxJWJhJWE1cCslYzQlOTElZTElYmIlOGJuaCtnaSVjMyVhMSZ3ZWJzY3A9MSZGT1JNPUhEUldTQw&ntb=1
+        - listitem [ref=f250e70]:
+          - link "Tìm kiếm" [ref=f250e71] [cursor=pointer]:
+            - /url: /copilotsearch?q=%22v%e1%bb%95+h%e1%bb%a7i%22+s%e1%bb%95+ghi+ch%c3%a9p+tranh+ch%e1%ba%a5p+%c4%91%e1%bb%8bnh+gi%c3%a1&FORM=CSSCOP
+        - listitem [ref=f250e74]:
+          - link "Hình ảnh" [ref=f250e75] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=f73cac5225a166ff8887d5b5ab372070243da7fd51c973305afa2aee4bf8a92cJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT0lMjJ2JWUxJWJiJTk1K2glZTElYmIlYTdpJTIyK3MlZTElYmIlOTUrZ2hpK2NoJWMzJWE5cCt0cmFuaCtjaCVlMSViYSVhNXArJWM0JTkxJWUxJWJiJThibmgrZ2klYzMlYTEmRk9STT1IRFJTQzM&ntb=1
+        - listitem [ref=f250e76]:
+          - link "Video" [ref=f250e77] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=150453e9ba56d181a57a4deec3a87ea7fb2bac8eb9676ec9f2ba12f7f5a97911JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT0lMjJ2JWUxJWJiJTk1K2glZTElYmIlYTdpJTIyK3MlZTElYmIlOTUrZ2hpK2NoJWMzJWE5cCt0cmFuaCtjaCVlMSViYSVhNXArJWM0JTkxJWUxJWJiJThibmgrZ2klYzMlYTEmRk9STT1IRFJTQzQ&ntb=1
+        - listitem [ref=f250e78]:
+          - link "Bản đồ" [ref=f250e79] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9e4f8e6f9982213e18712d7b05ceb9110e9f100a7503ed869f080e8c59a4e3b6JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT0lMjJ2JWUxJWJiJTk1K2glZTElYmIlYTdpJTIyK3MlZTElYmIlOTUrZ2hpK2NoJWMzJWE5cCt0cmFuaCtjaCVlMSViYSVhNXArJWM0JTkxJWUxJWJiJThibmgrZ2klYzMlYTEmRk9STT1IRFJTQzY&ntb=1
+        - listitem [ref=f250e80]:
+          - button [ref=f250e81] [cursor=pointer]
+  - generic [ref=f250e85]:
+    - main "Kết quả Tìm kiếm" [ref=f250e86]:
+      - generic [ref=f250e88]:
+        - generic [aria-hidden] [ref=f250e89]:
+          - generic [ref=f250e90] [cursor=pointer]
+          - generic [ref=f250e93] [cursor=pointer]
+          - generic [ref=f250e96] [cursor=pointer]
+        - text: Về 37.700 kết quả
+      - list [ref=f250e99]:
+        - listitem [ref=f250e100]:
+          - link "Luật Trí Nam" [ref=f250e102] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=27eed112e6dac7b8a6cb6fe45bc9e4662544080083397c4ae1e2c4f557fa55f2JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0MjQ3LnZuL2x1YXQtc3UtdmUtZGF0LWRhaS1naWFpLXF1eWV0LXRyYW5oLWNoYXAtdHUtdmFuLWxhbS1zby1kbw&ntb=1
+            - generic [ref=f250e107]:
+              - generic [ref=f250e108]: Luật Trí Nam
+              - generic [ref=f250e109]: https://luat247.vn › luat-su-ve-dat-dai-giai-quyet-tranh-chap-tu-van-lam-so-do
+          - heading [level=2] [ref=f250e112]:
+            - 'link "Luật sư về đất đai: Giải quyết tranh chấp, tư vấn làm sổ đỏ" [ref=f250e113] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=27eed112e6dac7b8a6cb6fe45bc9e4662544080083397c4ae1e2c4f557fa55f2JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0MjQ3LnZuL2x1YXQtc3UtdmUtZGF0LWRhaS1naWFpLXF1eWV0LXRyYW5oLWNoYXAtdHUtdmFuLWxhbS1zby1kbw&ntb=1
+          - paragraph [ref=f250e115]: 2 ngày trước · Thủ tục cấp sổ đỏ khó thực hiện, tranh chấp đất đai thường khó giải quyết. Nên vai trò của luật sư đất đai trở nên đặc …
+        - listitem [ref=f250e116]:
+          - link "hticlaw.vn" [ref=f250e118] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=2bc341e5257639673d41b59373c1acf6afc5c2cd04f057adfd56dd39f9edd55dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9odGljbGF3LnZuL3RpbnR1Yy9uaGF0LWt5LXRoaS1jb25nLWhvLXNvLWhvYW4tY29uZy1uZ2hpLWRpbmgtMjA3LTIwMjYtbmQtY3AtZ2lhLXRyaS1jaHVuZy1jdS8&ntb=1
+            - generic [ref=f250e123]:
+              - generic [ref=f250e124]: hticlaw.vn
+              - generic [ref=f250e125]: https://hticlaw.vn › tintuc
+          - heading [level=2] [ref=f250e128]:
+            - link "Nhật ký thi công và hồ sơ hoàn công theo Nghị định 207/2026/NĐ …" [ref=f250e129] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=2bc341e5257639673d41b59373c1acf6afc5c2cd04f057adfd56dd39f9edd55dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9odGljbGF3LnZuL3RpbnR1Yy9uaGF0LWt5LXRoaS1jb25nLWhvLXNvLWhvYW4tY29uZy1uZ2hpLWRpbmgtMjA3LTIwMjYtbmQtY3AtZ2lhLXRyaS1jaHVuZy1jdS8&ntb=1
+          - paragraph [ref=f250e131]: "Nghị định 207/2026/NĐ-CP hiệu lực 01/7/2026 thay Nghị định 06/2021: nhật ký thi công theo Phụ lục II, hồ sơ hoàn công theo Điều …"
+        - listitem [ref=f250e132]:
+          - link "nguoiduatin.vn" [ref=f250e134] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6fdd79b76380b988b999160130029550fe46d21e4958f7630929f6ee63061cdfJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9hbnR0Lm5ndW9pZHVhdGluLnZuL2NhbS1zby1kby10aGUtY2hhcC10cm9uZy10YXktbmdhbi1oYW5nLWtob2Mtcm9uZy1raG9uZy1kdW9jLXBoYXQtbWFpLWR1LWRpbmgtZ2lhLWhvbi0yNS10eS1kb25nLTIwNTI2MTAwNDExMTcxMzQ3My5odG0&ntb=1
+            - generic [ref=f250e139]:
+              - generic [ref=f250e140]: nguoiduatin.vn
+              - generic [ref=f250e141]: https://antt.nguoiduatin.vn › cam-so-do-the-chap...
+          - heading [level=2] [ref=f250e144]:
+            - link "Cầm sổ đỏ thế chấp trong tay, ngân hàng \"khóc ròng\" không được …" [ref=f250e145] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=6fdd79b76380b988b999160130029550fe46d21e4958f7630929f6ee63061cdfJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9hbnR0Lm5ndW9pZHVhdGluLnZuL2NhbS1zby1kby10aGUtY2hhcC10cm9uZy10YXktbmdhbi1oYW5nLWtob2Mtcm9uZy1raG9uZy1kdW9jLXBoYXQtbWFpLWR1LWRpbmgtZ2lhLWhvbi0yNS10eS1kb25nLTIwNTI2MTAwNDExMTcxMzQ3My5odG0&ntb=1
+          - paragraph [ref=f250e147]: 4 ngày trước · Một thửa đất hơn 2.100 m2 đã qua hai lần chuyển nhượng, được cấp giấy chứng nhận cho người đứng tên mới rồi …
+        - listitem [ref=f250e148]:
+          - link "luatthaiha.vn" [ref=f250e150] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=db786081388ecdf437414708835fdcd88f9dbed965f90bdc0f353dee380fc464JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0dGhhaWhhLnZuL211b24ta2hvaS1raWVuLXRyYW5oLWNoYXAtZGF0LWRhaS1jYW4tY2h1YW4tYmktbmh1bmctZ2lheS10by1naS8&ntb=1
+            - img "Biểu tượng mạng toàn cầu" [ref=f250e154]
+            - generic [ref=f250e155]:
+              - generic [ref=f250e156]: luatthaiha.vn
+              - generic [ref=f250e157]: https://luatthaiha.vn › muon-khoi-kien-tranh-chap...
+          - heading [level=2] [ref=f250e160]:
+            - link "Muốn khởi kiện tranh chấp đất đai cần chuẩn bị những giấy tờ gì?" [ref=f250e161] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=db786081388ecdf437414708835fdcd88f9dbed965f90bdc0f353dee380fc464JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0dGhhaWhhLnZuL211b24ta2hvaS1raWVuLXRyYW5oLWNoYXAtZGF0LWRhaS1jYW4tY2h1YW4tYmktbmh1bmctZ2lheS10by1naS8&ntb=1
+          - paragraph [ref=f250e163]: 18 giờ trước · Đây là những câu hỏi rất nhiều người gặp phải khi xảy ra tranh chấp quyền sử dụng đất, tranh chấp ranh giới, lấn …
+        - listitem [ref=f250e164]:
+          - link "moso.vn" [ref=f250e166] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4f7421de39fda3a56a1474d64da6d6cd2ee620c8fc903ec817362471ce626a15JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9tb3NvLnZuL2RhdC1jby12aS1waGFtLXRydW9jLTEtOC0yMDI0LXNlLWR1b2MteGVtLXhldC1jYXAtc28tZG8tcmEtc2Fv&ntb=1
+            - generic [ref=f250e171]:
+              - generic [ref=f250e172]: moso.vn
+              - generic [ref=f250e173]: https://moso.vn
+          - heading [level=2] [ref=f250e176]:
+            - link "Đất có vi phạm trước 1/8/2024 sẽ được xem xét cấp sổ đỏ ra sao" [ref=f250e177] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=4f7421de39fda3a56a1474d64da6d6cd2ee620c8fc903ec817362471ce626a15JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9tb3NvLnZuL2RhdC1jby12aS1waGFtLXRydW9jLTEtOC0yMDI0LXNlLWR1b2MteGVtLXhldC1jYXAtc28tZG8tcmEtc2Fv&ntb=1
+          - paragraph [ref=f250e179]: 18 giờ trước · Dự thảo Luật Đất đai 2026 đề xuất xem xét cấp sổ đỏ cho đất có vi phạm thủ tục trước 1/8/2024 nhưng phải đáp ứng …
+        - listitem [ref=f250e180]:
+          - link "BÁO ĐIỆN TỬ CHÍNH PHỦ NƯỚC CHXHCN VIỆT NAM" [ref=f250e182] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e27df00d9dc116bedeb720a9f8fc44a21a4b3ac67cee27ba6150b89c83e16160JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW9jaGluaHBodS52bi9jYXAtZG9pLXNvLWRvLWNvLXBoYWkteGFjLWRpbmgtbGFpLWRpZW4tdGljaC1kYXQtby0xMDIyNjEwMDgxNjA5MTQ3NjEuaHRt&ntb=1
+            - generic [ref=f250e187]:
+              - generic [ref=f250e188]: BÁO ĐIỆN TỬ CHÍNH PHỦ NƯỚC CHXHCN VIỆT NAM
+              - generic [ref=f250e189]: https://baochinhphu.vn › cap-doi-so-do-co-phai-xac-dinh-lai-dien-tich-dat-o...
+          - heading [level=2] [ref=f250e192]:
+            - link "Cấp đổi sổ đỏ có phải xác định lại diện tích đất ở?" [ref=f250e193] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=e27df00d9dc116bedeb720a9f8fc44a21a4b3ac67cee27ba6150b89c83e16160JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW9jaGluaHBodS52bi9jYXAtZG9pLXNvLWRvLWNvLXBoYWkteGFjLWRpbmgtbGFpLWRpZW4tdGljaC1kYXQtby0xMDIyNjEwMDgxNjA5MTQ3NjEuaHRt&ntb=1
+          - paragraph [ref=f250e195]: "9 giờ trước · Thông tin trên Giấy chứng nhận ghi \"diện tích 1.646 m 2 với loại đất: Đất ở và đất vườn, thời hạn sử dụng: Lâu dài\". Từ …"
+        - listitem [ref=f250e196]:
+          - link "tungbachland.vn" [ref=f250e198] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=bedcb68e695d2fdbcea4db1f7f462189c029e77ded8aee48c1d3d6dd604910a9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90dW5nYmFjaGxhbmQudm4vc28tZG8tdmEtc28taG9uZy1zdS1raGFjLWJpZXQtdmEteS1uZ2hpYS1waGFwLWx5Lw&ntb=1
+            - generic [ref=f250e203]:
+              - generic [ref=f250e204]: tungbachland.vn
+              - generic [ref=f250e205]: https://tungbachland.vn › so-do-va-so-hong-su-khac-biet-va-y-nghia-phap-ly
+          - heading [level=2] [ref=f250e208]:
+            - 'link "Sổ đỏ và sổ hồng: Sự khác biệt và ý nghĩa pháp lý - Tungbachland" [ref=f250e209] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=bedcb68e695d2fdbcea4db1f7f462189c029e77ded8aee48c1d3d6dd604910a9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90dW5nYmFjaGxhbmQudm4vc28tZG8tdmEtc28taG9uZy1zdS1raGFjLWJpZXQtdmEteS1uZ2hpYS1waGFwLWx5Lw&ntb=1
+          - paragraph [ref=f250e211]: 18 giờ trước · Thực tế, sổ đỏ và sổ hồng không được phân chia thành hai cấp độ giá trị pháp lý dựa trên màu sắc. Điều cần xem xét …
+        - listitem [ref=f250e212]:
+          - link "Báo Một thế giới" [ref=f250e214] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c9ffbd4a3e5e21b3a3efc0c4acbcf5613e6f663a471680f9a228e4ce76951109JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly8xdGhlZ2lvaS52bi9uZ3VvaS1kYW4taGEtbm9pLWNvLXRoZS1sZW4tb25saW5lLWRpbmgtY2hpbmgtdGhvbmctdGluLXRyZW4tc28tZG8tbmdheS10YWktbmhhLTI1OTQyMy5odG1s&ntb=1
+            - generic [ref=f250e219]:
+              - generic [ref=f250e220]: Báo Một thế giới
+              - generic [ref=f250e221]: https://1thegioi.vn › nguoi-dan-ha-noi-co-the-len...
+          - heading [level=2] [ref=f250e224]:
+            - link "Người dân Hà Nội có thể lên online, đính chính thông tin trên sổ đỏ ..." [ref=f250e225] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=c9ffbd4a3e5e21b3a3efc0c4acbcf5613e6f663a471680f9a228e4ce76951109JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly8xdGhlZ2lvaS52bi9uZ3VvaS1kYW4taGEtbm9pLWNvLXRoZS1sZW4tb25saW5lLWRpbmgtY2hpbmgtdGhvbmctdGluLXRyZW4tc28tZG8tbmdheS10YWktbmhhLTI1OTQyMy5odG1s&ntb=1
+          - paragraph [ref=f250e227]: 7 giờ trước · Người dân tại Hà Nội khi phát hiện sai lệch thông tin về họ tên, giấy tờ tùy thân hay thông tin thửa đất trên giấy chứng …
+        - listitem [ref=f250e228]:
+          - link "Bộ Tư pháp" [ref=f250e230] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=484d7854984e60dddecb7b4aed5dcea50918c182ff4244578d11101b34a84afeJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9tb2ouZ292LnZuL3BvcnRhbC90cmFuZy1jaHUuaHRtbA&ntb=1
+            - generic [ref=f250e235]:
+              - generic [ref=f250e236]: Bộ Tư pháp
+              - generic [ref=f250e237]: https://moj.gov.vn
+          - heading [level=2] [ref=f250e240]:
+            - link "Trang chủ - Cổng thông tin Bộ Tư Pháp" [ref=f250e241] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=484d7854984e60dddecb7b4aed5dcea50918c182ff4244578d11101b34a84afeJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9tb2ouZ292LnZuL3BvcnRhbC90cmFuZy1jaHUuaHRtbA&ntb=1
+          - paragraph [ref=f250e243]: 1 ngày trước · Tiếp tục nâng cao hiệu quả phòng ngừa, giải quyết tranh chấp đầu tư quốc tế Ký kết Biên bản ghi nhớ hợp tác giữa …
+        - listitem [ref=f250e244]:
+          - link "theNEXTvoz" [ref=f250e246] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6545082b74f27d347aef147ddec1e22fddc97c07098fe23b3c0e9f7420232265JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92b3oudm4vdC90cmEtMS01LXR5LWRvbmctbXVhLWRhdC1jaHVhLWtpcC1zYW5nLXRlbi1kYS1iaS1waG9uZy10b2EuMTI4NjcyNS9wYWdlLTI&ntb=1
+            - generic [ref=f250e251]:
+              - generic [ref=f250e252]: theNEXTvoz
+              - generic [ref=f250e253]: https://voz.vn
+          - heading [level=2] [ref=f250e256]:
+            - link "Trả 1,5 tỷ đồng mua đất, chưa kịp sang tên đã bị phong tỏa" [ref=f250e257] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=6545082b74f27d347aef147ddec1e22fddc97c07098fe23b3c0e9f7420232265JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92b3oudm4vdC90cmEtMS01LXR5LWRvbmctbXVhLWRhdC1jaHVhLWtpcC1zYW5nLXRlbi1kYS1iaS1waG9uZy10b2EuMTI4NjcyNS9wYWdlLTI&ntb=1
+          - paragraph [ref=f250e259]: 13 giờ trước · Chuẩn zòi anh, chủ nhà mà vay nợ ở ngoài không phải vay ngân hàng thì không thể check chính xác được. Vay ngân …
+        - listitem [ref=f250e260]:
+          - navigation "Thêm kết quả cho \"vổ hủi\" sổ ghi chép tranh chấp định giá":
+            - list:
+              - listitem [ref=f250e261]:
+                - generic "Trang 1" [ref=f250e262]: "1"
+              - listitem [ref=f250e263]:
+                - link "Trang 2" [ref=f250e264] [cursor=pointer]:
+                  - /url: /search?q=%22v%e1%bb%95+h%e1%bb%a7i%22+s%e1%bb%95+ghi+ch%c3%a9p+tranh+ch%e1%ba%a5p+%c4%91%e1%bb%8bnh+gi%c3%a1&setlang=vi&FPIG=6D84CE219898498D9C7D04672566B1B5&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=f250e265]:
+                - link "Trang 3" [ref=f250e266] [cursor=pointer]:
+                  - /url: /search?q=%22v%e1%bb%95+h%e1%bb%a7i%22+s%e1%bb%95+ghi+ch%c3%a9p+tranh+ch%e1%ba%a5p+%c4%91%e1%bb%8bnh+gi%c3%a1&setlang=vi&FPIG=6D84CE219898498D9C7D04672566B1B5&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=f250e267]:
+                - link "Trang tiếp theo" [ref=f250e268] [cursor=pointer]:
+                  - /url: /search?q=%22v%e1%bb%95+h%e1%bb%a7i%22+s%e1%bb%95+ghi+ch%c3%a9p+tranh+ch%e1%ba%a5p+%c4%91%e1%bb%8bnh+gi%c3%a1&setlang=vi&FPIG=6D84CE219898498D9C7D04672566B1B5&first=11&FORM=PORE
+    - complementary "Kết quả bổ sung" [ref=f250e269]:
+      - list
+  - contentinfo [ref=f250e270]:
+    - generic [ref=f250e271]:
+      - list:
+        - listitem [ref=f250e272]:
+          - link "Quyền riêng tư" [ref=f250e273] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f250e274]:
+          - link "Điều khoản" [ref=f250e275] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

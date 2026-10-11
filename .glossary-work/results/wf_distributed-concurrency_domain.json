@@ -1,0 +1,471 @@
+{
+  "domain": "DISTRIBUTED SYSTEMS & CONCURRENCY",
+  "entries": [
+    {
+      "term": "Process vs Thread",
+      "level": "basic",
+      "aliases": [
+        "process",
+        "thread",
+        "tiến trình",
+        "luồng"
+      ],
+      "problem": "Server xử lý nhiều request cùng lúc nhưng chạy tuần tự thì request sau phải đợi request trước, nhất là khi chờ đọc DB/network (I/O chậm) trong khi CPU thì rảnh. Người viết server phải tự chia chương trình thành các đơn vị chạy song song, và câu hỏi đầu tiên là: tách bộ nhớ (process) hay dùng chung heap (thread)?",
+      "how": "Process có không gian địa chỉ riêng, nặng, cách ly mạnh; thread chia sẻ bộ nhớ của process, nhẹ hơn nhưng phải tự xử lý race condition khi truy cập dữ liệu chung. Chọn theo mức cách ly và chi phí giao tiếp cần có.",
+      "origin": "không rõ",
+      "related": [
+        "Concurrency vs Parallelism",
+        "Mutex & Semaphore",
+        "Race condition"
+      ]
+    },
+    {
+      "term": "Concurrency vs Parallelism",
+      "level": "basic",
+      "aliases": [
+        "đồng thời",
+        "song song",
+        "concurrency",
+        "parallelism"
+      ],
+      "problem": "Team hay nhầm lẫn: thêm async/timer đã tưởng là 'có parallel', hoặc ngược lại máy 8 core nhưng code toàn chặn chờ I/O nên 1 core cũng không dùng hết. Hiểu sai dẫn đến tối ưu sai chỗ — thêm thread không cứu được bottleneck đang là network I/O.",
+      "how": "Concurrency là nhiều task chồng lên nhau trong cùng một khoảng thời gian (có thể lần lượt trên 1 core, phục vụ điều phối I/O); Parallelism là chạy thực sự đồng thời trên nhiều core (phục vụ tính toán). Mục tiêu khác nhau nên công cụ cũng khác.",
+      "origin": "Phân biệt được làm rành mạch trong talk của Rob Pike, 'Concurrency is not Parallelism' (Waza, 11/01/2012); học thuật về concurrent algorithm bắt đầu từ bài của Dijkstra 1965.",
+      "related": [
+        "Event loop",
+        "Process vs Thread"
+      ]
+    },
+    {
+      "term": "Event loop",
+      "level": "basic",
+      "aliases": [
+        "vòng lặp sự kiện",
+        "event loop",
+        "single-threaded event loop"
+      ],
+      "problem": "Mỗi kết nối HTTP mà một thread riêng thì 10.000 kết nối tốn cả GB RAM và kernel tốn công context switch; trong khi đo ra thì 99% thời gian request đang chờ socket/disk, không hề dùng CPU — block một thread chỉ vì chờ I/O là lãng phí.",
+      "how": "Một vòng lặp duy nhất poll sự kiện (socket có dữ liệu, timer hết giờ) rồi gọi handler tương ứng — không bao giờ chờ I/O blocking nên 1 thread vẫn phục vụ hàng vạn kết nối (mô hình Node.js, nginx worker).",
+      "origin": "không rõ (mẫu được tự phát minh ở nhiều nơi: select()/poll() của Unix, message loop của Windows).",
+      "related": [
+        "Async/await",
+        "Thread pool & pool exhaustion"
+      ]
+    },
+    {
+      "term": "Async/await",
+      "level": "basic",
+      "aliases": [
+        "callback hell",
+        "pyramid of doom",
+        "lồng callback",
+        "async/await"
+      ],
+      "problem": "Code Node.js lồng 5 cấp callback (đọc file → duyệt danh sách → xử lý → ghi → báo lỗi) thành kim tự tháp — lỗi phải bắt riêng ở từng tầng, muốn retry/điều phối gần như không viết nổi; developer gọi là callback hell.",
+      "how": "Khai báo hàm async rồi 'await' kết quả; trình biên dịch chuyển thành state machine/continuation, code đọc tuyến tính như đồng bộ nhưng không block thread. Khi await, trạng thái dùng chung vẫn có thể đổi — vẫn phải phòng race.",
+      "origin": "F# 2007 → C# 5.0 (2012) → Python 3.5/PEP 492 (2015) → JavaScript (ES2017).",
+      "related": [
+        "Event loop",
+        "Race condition"
+      ]
+    },
+    {
+      "term": "Race condition",
+      "level": "basic",
+      "aliases": [
+        "điều kiện tranh chấp",
+        "data race",
+        "race"
+      ],
+      "problem": "Hai request đồng thời đọc số dư 100k, mỗi bên cộng thêm 50k rồi ghi — kết quả là 150k thay vì 200k; hoặc hai thread cùng sửa linked list làm hỏng cấu trúc. Đáng sợ hơn: lỗi chỉ xuất hiện tùy timing nên 'test local vẫn pass, production thi thoảng mất tiền'.",
+      "how": "Loại bỏ sự bất định thứ tự thực thi: đưa thao tác đọc-ghi vào critical section bằng mutex, dùng biến nguyên tử/CAS, hoặc thiết kế để mỗi dữ liệu chỉ có một chủ sở hữu (actor/message queue).",
+      "origin": "không rõ (khái niệm đi cùng văn học hệ điều hành đầu thập niên 1960).",
+      "related": [
+        "Mutex & Semaphore",
+        "Atomic operation & CAS",
+        "Deadlock",
+        "Memory model & happens-before (memory visibility)"
+      ]
+    },
+    {
+      "term": "Deadlock",
+      "level": "basic",
+      "aliases": [
+        "chết lock",
+        "treo",
+        "bế tắc"
+      ],
+      "problem": "Hai thread giữ hai mutex theo thứ tự ngược nhau (A→B và B→A) rồi cùng chờ vô hạn; hoặc DB: T1 lock dòng 1 rồi chờ dòng 2, T2 lock dòng 2 rồi chờ dòng 1 — toàn bộ request kẹt cứng, service treo mà không crash để báo lỗi.",
+      "how": "Phá ít nhất một trong 4 điều kiện Coffman: thứ tự khóa thống nhất toàn hệ thống, hoặc cho phép chiếm lại khóa qua timeout (nhưng timeout phải có thiết kế compensating).",
+      "origin": "Bốn điều kiện cần (mutual exclusion, hold-and-wait, no preemption, circular wait) do Coffman, Elphick & Shoshani mô tả năm 1971 ('System Deadlocks', ACM Computing Surveys).",
+      "related": [
+        "Mutex & Semaphore",
+        "Starvation & livelock",
+        "Race condition",
+        "Lock & deadlock"
+      ]
+    },
+    {
+      "term": "Mutex & Semaphore",
+      "level": "basic",
+      "aliases": [
+        "khóa tương hỗ",
+        "mutual exclusion",
+        "semaphore",
+        "P/V"
+      ],
+      "problem": "Nhiều thread cùng ghi biến đếm/đẩy phần tử vào mảng chung làm mất dữ liệu (race condition); song có lúc cần cho phép tối đa N thread cùng vào một resource (pool kết nối) chứ không phải chỉ đúng 1 — spinlock busy-wait thì phung phí CPU.",
+      "how": "Mutex cho chỉ một thread sở hữu critical section tại một thời điểm; semaphore đếm số lượt vào — thao tác P/trừ chặn khi hết lượt, V/cộng giải thread đang chờ. OS chuyển thread sang chờ thay vì quay vòng.",
+      "origin": "Semaphore do Dijkstra phát minh 1962-1963 với thao tác P/V trên máy Electrologica X8; bài 'Solution of a problem in concurrent programming control' của Dijkstra (1965) đặt nền cho mutual exclusion.",
+      "related": [
+        "Race condition",
+        "Deadlock",
+        "Atomic operation & CAS"
+      ]
+    },
+    {
+      "term": "Thread pool & pool exhaustion",
+      "level": "intermediate",
+      "aliases": [
+        "thread pool",
+        "hàng đợi luồng",
+        "pool exhaustion",
+        "cạn kiệt thread",
+        "thread pool exhaustion"
+      ],
+      "problem": "Mỗi request tạo một thread mới: 10k request đồng thời thì RAM cạn vì mỗi thread chiếm stack, kernel tay trắng với context switch. Nhưng set pool quá nhỏ thì request xếp hàng timeout; tệ hơn — pool cạn kiệt khi mọi thread cùng mắc trên I/O chậm (DB treo), không còn thread nào cho request mới, toàn service đứng im dù CPU còn rảnh.",
+      "how": "Giữ cố định N thread làm việc từ hàng đợi task; hàng đợi có giới hạn (bounded) + backpressure để từ chối/đẩy chậm khi quá tải thay vì nhận vô hạn và OOM.",
+      "origin": "không rõ",
+      "related": [
+        "Event loop",
+        "Concurrency vs Parallelism",
+        "Deadlock",
+        "Connection leak & pool exhaustion"
+      ]
+    },
+    {
+      "term": "Atomic operation & CAS",
+      "level": "intermediate",
+      "aliases": [
+        "atomic",
+        "compare-and-swap",
+        "CMPXCHG",
+        "vận động nguyên tử"
+      ],
+      "problem": "Muốn tăng biến đếm không cần mutex (mutex quá nặng hoặc muốn lock-free): đọc → +1 → ghi ba bước này bị ngắt giữa chừng thì hai thread đọc cùng giá trị cũ rồi ghi đè, mất lần tăng. Cần một thao tác mà CPU đảm bảo đọc-so sánh-ghi là một bước không thể chen ngang.",
+      "how": "CAS đọc giá trị hiện tại, nếu còn bằng giá trị mong đợi thì ghi giá trị mới, ngược lại báo thất bại để thread đọc lại và thử tiếp — mọi thao đổi luôn tính trên dữ liệu 'mới nhất', từ đó dựng được cấu trúc dữ liệu lock-free.",
+      "origin": "Có sẵn trong kiến trúc IBM 370 từ 1970; trên x86 là lệnh CMPXCHG; Maurice Herlihy (1991) chứng minh CAS mạnh hơn read/write/fetch-and-add đơn thuần.",
+      "related": [
+        "Lock & deadlock",
+        "Race condition"
+      ]
+    },
+    {
+      "term": "Starvation & livelock",
+      "level": "intermediate",
+      "aliases": [
+        "starvation",
+        "livelock",
+        "đói",
+        "treo động"
+      ],
+      "problem": "Lock không fair: thread cũ bị thread mới liên tục giành mất nên không bao giờ được chạy (starvation) — ví dụ worker mãi không nhận được job. Livelock thì ngược lại: hai thread liên tục nhường nhau, cùng thả lock rồi retry cùng lúc, đổi trạng thái mãi nhưng không ai tiến — giống hai người tránh nhau cùng nghiêng cùng hướng.",
+      "how": "Starvation: hàng đợi fair/fifo, chia đều tài nguyên, aging ưu tiên dần; livelock: thêm ngẫu nhiên hoặc backoff (exponential + jitter) khi retry để phá nhịp đồng bộ.",
+      "origin": "không rõ",
+      "related": [
+        "Deadlock",
+        "Race condition",
+        "Distributed lock & fencing token"
+      ]
+    },
+    {
+      "term": "Saga",
+      "level": "intermediate",
+      "aliases": [
+        "saga pattern",
+        "compensating transaction",
+        "giao dịch bù trừ"
+      ],
+      "problem": "Microservices mỗi service một database riêng nên không dùng ACID xuyên services; mà giữ lock kiểu 2PC suốt một business flow dài (đặt vé → thanh toán → xuất vé) thì lock giữ hàng giây-phút, block dữ liệu khác, và coordinator chết là cả flow treo chờ.",
+      "how": "Chia transaction thành chuỗi local transaction, bước sau chạy khi bước trước phát event báo thành công; nếu bước nào fail thì chạy compensating transaction (hoàn tiền, hủy chỗ) để bù trừ về trạng thái nhất quán — thay vì rollback. Trao đổi: không có isolation, phải chống xung đột giữa các saga chạy song song.",
+      "origin": "Hector Garcia-Molina & Kenneth Salem, 'Sagas', SIGMOD 1987 (Princeton, 1/1987).",
+      "related": [
+        "2PC/3PC & distributed transaction",
+        "Exactly-once semantics",
+        "Eventual consistency"
+      ]
+    },
+    {
+      "term": "Gossip protocol",
+      "level": "intermediate",
+      "aliases": [
+        "gossip",
+        "epidemic protocol",
+        "anti-entropy",
+        "phân phối lan truyền"
+      ],
+      "problem": "Cluster vài trăm node cần lan truyền membership/tình trạng: mỗi node broadcast O(n) tin nhắn thì tổng O(n²), một node chết làm cả push gãy; còn đặt coordinator trung tâm thì nó thành điểm lỗi đơn (SPOF) và bottleneck.",
+      "how": "Mỗi vòng, node chọn ngẫu nhiên vài peer để trao đổi/chênh lệch state — thông tin lan như dịch bệnh, đến mọi node trong O(log n) lượt, chấp nhận packet loss và membership thay đổi (AWS S3, Cassandra, Serf).",
+      "origin": "Demers, Greene, Hauser, Irish & Larson, 'Epidemic algorithms for replicated database maintenance', PODC 1987.",
+      "related": [
+        "Consistent hashing",
+        "Eventual consistency",
+        "Leader election"
+      ]
+    },
+    {
+      "term": "Distributed lock & fencing token",
+      "level": "intermediate",
+      "aliases": [
+        "distributed lock",
+        "fencing token",
+        "Redlock",
+        "lease"
+      ],
+      "problem": "Lock trong process local vô ích khi có nhiều instance cùng chạy job định kỳ. Đặt distributed lock vẫn chưa đủ: client giữ lock rồi bị GC pause hàng chục giây (trường hợp GitHub thực tế, packet delay ~90s), lease hết hạn, client khác acquire — hai bên cùng tin mình giữ lock và cùng ghi. Kiểm tra lease ngay trước khi ghi cũng vô dụng vì pause có thể xảy ra đúng thời điểm đó.",
+      "how": "Lock service cấp fencing token tăng dần theo mỗi lần acquire; storage từ chối mọi ghi có token nhỏ hơn token đã xử lý — client 'đông băng' cũ thức dậy cũng không thể ghi đè. ZooKeeper dùng zxid làm token; Redlock không có cơ chế này nên không an toàn cho critical section.",
+      "origin": "Martin Kleppmann, 'How to do distributed locking' (2016); lease phân tán do Cary Gray & David Cheriton đặt tên, paper SOSP 1989 về cache coherence.",
+      "related": [
+        "Mutex & Semaphore",
+        "Starvation & livelock",
+        "Split brain"
+      ]
+    },
+    {
+      "term": "CAP theorem",
+      "level": "intermediate",
+      "aliases": [
+        "CAP",
+        "Brewer's conjecture",
+        "nguyên lý CAP"
+      ],
+      "problem": "Deploy đa vùng: mạng giữa hai vùng đứt thì partition không tránh được — khi đó hệ thống phải chọn: tiếp tục trả lời (availability) với dữ liệu cũ, hay từ chối để giữ nhất quán (consistency)? Trước CAP, người ta tưởng lấy được cả ba cùng lúc, rồi production vấp partition là dữ liệu hai bên ghi lẫn nhau không kiểm soát.",
+      "how": "CAP nói khi partition xảy ra phải đánh đổi C với A: chọn CP (etcd, ZooKeeper — đúng cho leader/config) hay AP (Cassandra, Dynamo — đúng cho giỏ hàng/registry); ngoài lúc partition thì cả ba vẫn có. Phân vùng không xảy ra liên tục nên đánh giá theo use case, không theo khẩu hiệu.",
+      "origin": "Eric Brewer đặt giả thuyết tại PODC 2000 (ý tưởng xuất bản 1998-1999); Seth Gilbert & Nancy Lynch (MIT) chứng minh năm 2002 trong 'Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services'.",
+      "related": [
+        "Eventual consistency",
+        "Split brain",
+        "Linearizability"
+      ]
+    },
+    {
+      "term": "Leader election",
+      "level": "intermediate",
+      "aliases": [
+        "bầu lãnh đạo",
+        "leader election",
+        "single master"
+      ],
+      "problem": "Cluster cần một coordinator duy nhất (ghi log, điều phối job) nhưng không node nào biết leader hiện tại còn sống hay đã chết — nếu hai node cùng tự nhận là leader thì write đi hai hướng, duplication job; không ai nhận thì cluster bất động.",
+      "how": "Thuật toán bầu chọn đảm bảo hai điều kiện: uniqueness (đúng một node tự nhận là leader) và agreement (các node còn lại đều biết leader là ai) — qua token ring, hay lease-based (ZooKeeper ephemeral node, etcd lease) để leader chết thì lease hết hạn và bầu lại.",
+      "origin": "LeLann chuẩn hoá bài toán (mất token trong ring); Chang & Roberts 1979 (ring, highest-ID); GHS (Gallager, Humblet, Spira) 1983 — đoạt Dijkstra Prize.",
+      "related": [
+        "Consensus",
+        "Raft",
+        "Distributed lock & fencing token"
+      ]
+    },
+    {
+      "term": "Consensus",
+      "level": "advanced",
+      "aliases": [
+        "đồng thuận phân tán",
+        "distributed consensus",
+        "consensus"
+      ],
+      "problem": "N nodes đều cần kết luận cùng một giá trị ('giá trị config nào đúng', 'log entry thứ 5 là gì') trong khi tin nhắn đến chậm, mất, hoặc node crash giữa chừng — tự quyết định riêng thì cluster phân mảnh, hai bên ghi log khác nhau và không bao giờ heal được. Bỏ phiếu không quy tắc (ad-hoc) để lại các corner case chết người không được chứng minh.",
+      "how": "Đề xuất → chấp thuận qua quorum: giá trị chỉ được chọn khi đủ số đông đồng ý, và mọi proposal sau phải tôn trọng giá trị đã chọn (safety); liveness phải chấp nhận đánh đổi vì FLP. Paxos và Raft là hai cách hiện thực hóa; consensus là nền của replicated state machine.",
+      "origin": "không rõ (nền gắn với state machine replication của Lamport; xem Paxos/Raft).",
+      "related": [
+        "Paxos",
+        "Raft",
+        "FLP impossibility"
+      ]
+    },
+    {
+      "term": "Paxos",
+      "level": "advanced",
+      "aliases": [
+        "Paxos",
+        "The Part-Time Parliament",
+        "Multi-Paxos"
+      ],
+      "problem": "Replicate state machine sang nhiều node để chịu lỗi crash: log thứ tự sai lệch giữa replica thì FSM phân kỳ (một node cộng tiền, node kia không) — cần thuật toán đồng thuận có chứng minh an toàn, thay vì tự nghĩ 'nhờ đa số confirm' rồi để lọt corner case khi acceptor chết giữa chừng.",
+      "how": "Qua hai phase (prepare/accept): đa số acceptor chấp nhận một giá trị cho mỗi slot log; khi một giá trị đã được chọn thì mọi round sau phải re-propose đúng giá trị đó — an toàn dưới mọi kiểu crash, nhưng không guarantee terminate (theo FLP), nên thực tế dựa vào tiến trình mới.",
+      "origin": "Leslie Lamport — nộp 1989, xuất bản 'The Part-Time Parliament', ACM Transactions on Computer Systems, 1998.",
+      "related": [
+        "Consensus",
+        "Raft",
+        "FLP impossibility"
+      ]
+    },
+    {
+      "term": "Raft",
+      "level": "advanced",
+      "aliases": [
+        "Raft",
+        "leader-based consensus"
+      ],
+      "problem": "Paxos khó hiểu đến mức không ai implement đúng: nhiều diễn giải/phép chứng minh khác nhau, debug cực xa, đội ngũ không nắm được thì consensus bí ẩn trở thành rủi ro production. Ongaro & Ousterhout muốn thuật toán consensus giảng được, sửa được, vẫn chứng minh được an toàn.",
+      "how": "Tách bài toán thành ba module độc lập — leader election, log replication, safety — chỉ một leader nhận write, replication cần đa số xác nhận, term number cắt leader cũ; thao đổi: chịu được failure pattern đơn giản hơn so với Paxos đầy đủ nhưng cùng mức an toàn cho use case phổ biến.",
+      "origin": "Diego Ongaro & John Ousterhout (Stanford), 'In Search of an Understandable Consensus Algorithm', 2013.",
+      "related": [
+        "Consensus",
+        "Paxos",
+        "Leader election"
+      ]
+    },
+    {
+      "term": "Lamport timestamp & Vector clock",
+      "level": "advanced",
+      "aliases": [
+        "Lamport clock",
+        "logical clock",
+        "vector clock",
+        "hệ thống logic",
+        "happened-before"
+      ],
+      "problem": "Hệ thống phân tán không có đồng hồ chung: sự kiện ở hai node đến theo thứ tự network khác với thứ tự thật, không biết sự kiện nào 'trước' sự kiện nào để đồng bộ hóa resource. Lamport scalar thì dùng được nhưng đánh đồng cả 'xảy ra trước thật' lẫn 'chỉ tình cờ đến trước' — không phân biệt được causality với coincidence.",
+      "how": "Lamport clock (1978): mỗi process tăng counter, gửi kèm message, nhận thì lấy max — được thứ tự nhân quả một chiều nhưng không phát hiện event đồng thời. Vector clock: mỗi process một đồng hồ, VC(a) < VC(b) nghĩa là a xảy ra trước b; hai vector không so sánh được thì là concurrent — cho phép phát hiện xung đột thật sự.",
+      "origin": "Lamport, 'Time, clocks, and the ordering of events in a distributed system', CACM 1978; vector clock do Colin Fidge và Friedemann Mattern độc lập công bố năm 1988.",
+      "related": [
+        "Linearizability",
+        "CRDT",
+        "Consensus"
+      ]
+    },
+    {
+      "term": "Linearizability",
+      "level": "advanced",
+      "aliases": [
+        "tính tuyến tính",
+        "atomic consistency",
+        "Herlihy-Wing"
+      ],
+      "problem": "Đọc một cache/DB trả kết quả xong, ngay sau đó client khác thấy giá trị 'cũ hơn' — hệ thống có vẻ atomic nhưng không tôn trọng thời gian thực; các định nghĩa atomicity cũ mờ hồ về 'operation bắt đầu và kết thúc lúc nào' nên tranh cãi 'đúng hay sai' không có tiêu chí chung, nhất là khi compose nhiều object.",
+      "how": "Đòi hỏi mỗi operation 'xảy ra tức thì' tại một điểm nào đó giữa invocation và response, đồng thời giữ thứ tự thực thời: nếu A hoàn tất trước khi B bắt đầu thì A luôn đứng trước B trong mọi linearization. Tính chất này đủ mạnh để suy luận trên nhiều object và là 'atomic' mà programmer thực sự cần khi compose các thao tác chạy song song.",
+      "origin": "Maurice Herlihy & Jeannette Wing — giới thiệu 1987 (POPL, 'Axioms for concurrent objects'), xử lý chặt 1990 (TOPLAS, 'Linearizability: A Correctness Condition for Concurrent Objects').",
+      "related": [
+        "Eventual consistency",
+        "Lamport timestamp & Vector clock",
+        "CAP theorem",
+        "Strict serializability (serializability vs linearizability)"
+      ]
+    },
+    {
+      "term": "FLP impossibility",
+      "level": "advanced",
+      "aliases": [
+        "FLP",
+        "impossibility of distributed consensus",
+        "bất khả thi FLP"
+      ],
+      "problem": "Kỹ sư tưởng thuật toán consensus deterministic có thể chống crash hoàn hảo — chạy thế nào cũng kết luận được. FLP chứng minh ngược lại: trong mô hình bất đồng bộ với chỉ một process crash, không thuật toán deterministic nào guarantee termination — giải thích vì sao Paxos có thể stall vô hạn và consensus thực tế luôn phải dựa vào timeout giả định về thời gian.",
+      "how": "Chứng minh: khi một fault mù mờ (không biết crash hay chỉ chậm), scheduler có thể trì hoãn message để mọi bước tiếp theo của algorithm không diễn ra. Thực tế lách bằng randomized algorithm (safety tuyệt đối, liveness với xác suất cao → gần như chắc chắn) hoặc timeout/heuristic phi lý thuyết.",
+      "origin": "Michael Fischer, Nancy Lynch, Michael Paterson, 'Impossibility of distributed consensus with one faulty process', JACM 1985 — đoạt Dijkstra Prize; proof đã được máy kiểm chứng.",
+      "related": [
+        "Consensus",
+        "Paxos",
+        "Byzantine fault & BFT"
+      ]
+    },
+    {
+      "term": "Byzantine fault & BFT",
+      "level": "advanced",
+      "aliases": [
+        "Byzantine fault",
+        "fault của Byzantine",
+        "BFT",
+        "Byzantine Generals Problem",
+        "lỗi quân bất lương"
+      ],
+      "problem": "Crash-based consensus giả định node 'chết thì im lặng' — nhưng node hỏng phần mềm hoặc bị tấn công có thể gửi thông tin sai, và sai khác nhau cho từng node khác (nói A cho nhóm này, nói B cho nhóm kia): với 3 node có 1 nói dối, hai nhóm còn lại quyết định trái chiều, cluster kết luận giá trị sai mà không hề crash.",
+      "how": "BFT cần n > 3f (không chữ ký) hoặc n > f+1 (có chữ ký số) để luôn chọn được giá trị đúng bất kể f node hành xử tùy tiện; broadcast consistency — chỉ chặn được node gửi nội dung khác nhau, không chặn node gửi cùng một giá trị sai cho tất cả.",
+      "origin": "Robert Shostak (SRI, dự án SIFT) 1978; Marshall Pease tổng quát hóa; Lamport, Pease & Shostak, 'Reaching Agreement in the Presence of Faults', JACM 1980; biểu tượng 'Byzantine Generals Problem' do Lamport đưa ra 1982 — đoạt Dijkstra Prize 2005.",
+      "related": [
+        "Consensus",
+        "FLP impossibility",
+        "Split brain"
+      ]
+    },
+    {
+      "term": "CRDT",
+      "level": "advanced",
+      "aliases": [
+        "conflict-free replicated data type",
+        "CRDT",
+        "delta CRDT",
+        "state-based / op-based CRDT"
+      ],
+      "problem": "Replicas ghi song song không cần coordination (offline app, multi-master, geo-replication) thì divergence là tất yếu: nếu conflict phải phân giải bằng cách hủy update của một bên thì user mất dữ liệu — trong khi chờ 'merge thủ công' thì hệ thống không bao giờ nhất quán được. Ngăn cản ghi đồng thời (như Paxos) thì triệt tiêu luôn lý do phân tán.",
+      "how": "Thiết kế cấu trúc dữ liệu sao cho phép ghi độc lập trên từng replica, merge là toán học đảm bảo hội tụ (CRDT counter, G-Counter/PN-Counter, OR-Set, LWW-register): mọi thao tác đồng thời đều được giữ, mâu thuẫn phân giải trong chính datatype — eventual consistency trở thành đảm bảo, không còn hy vọng.",
+      "origin": "Marc Shapiro, Nuno Preguiça, Carlos Baquero & Marek Zawirski, 'Conflict-Free Replicated Data Types', hội nghị SSS 2011.",
+      "related": [
+        "Eventual consistency",
+        "Lamport timestamp & Vector clock",
+        "Linearizability"
+      ]
+    },
+    {
+      "term": "Actor model, CSP & goroutine",
+      "aliases": [
+        "actor model",
+        "CSP",
+        "Communicating Sequential Processes",
+        "goroutine",
+        "channel",
+        "Go scheduler",
+        "Mailbox (actor model)",
+        "mailbox",
+        "hộp thư actor"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Shared-memory concurrency quá dễ sai: mutation ẩn sau mỗi lock, deadlock và starvation khó tìm, khó test; thêm lock để tránh race thì dễ deadlock và priority inversion, quên lock thì data corrupt, còn race condition khó reproduce trên máy dev. Các hệ thống lớn (Erlang/OTP, Go, Akka) cần mô hình để nhiều unit chạy song song mà không bao giờ đụng bộ nhớ chung, trong khi spawn một OS thread cho mỗi đơn vị concurrency quá đắt (stack ~MB, context switch nặng).",
+      "origin": "Actor: Carl Hewitt, Peter Bishop & Richard Steiger, 'A Universal Modular Actor Formalism for Artificial Intelligence', 1973. CSP: Tony Hoare, 1978. Goroutine: ngôn ngữ Go (Google, công bố 2009).",
+      "how": "Actor (Hewitt 1973): mỗi actor có mailbox riêng và state riêng tư, chỉ giao tiếp bằng message gửi theo địa chỉ; không có memory chung nên không cần lock, lỗi cách ly theo process (Erlang/OTP dùng supervision tree restart process hỏng). CSP (Hoare 1978): process trao đổi qua channel đồng bộ. Goroutine của Go hiện thực hóa hướng CSP theo M:N scheduling: hàng nghìn goroutine nhẹ (stack vài KB, grow on demand) multiplex lên số ít thread OS, runtime lo blocked I/O.",
+      "related": [
+        "Process vs Thread",
+        "Concurrency vs Parallelism",
+        "Race condition",
+        "Message queue",
+        "Event-driven architecture",
+        "Pub/Sub"
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/CAP_theorem",
+    "https://en.wikipedia.org/wiki/Paxos_(computer_science)",
+    "https://en.wikipedia.org/wiki/Raft_(algorithm)",
+    "https://en.wikipedia.org/wiki/Consensus_(computer_science)",
+    "https://en.wikipedia.org/wiki/Lamport_timestamp",
+    "https://en.wikipedia.org/wiki/Vector_clock",
+    "https://en.wikipedia.org/wiki/Consistent_hashing",
+    "https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type",
+    "https://en.wikipedia.org/wiki/Gossip_protocol",
+    "https://en.wikipedia.org/wiki/Communicating_sequential_processes",
+    "https://en.wikipedia.org/wiki/Actor_model",
+    "https://en.wikipedia.org/wiki/Idempotence",
+    "https://en.wikipedia.org/wiki/Event_loop",
+    "https://en.wikipedia.org/wiki/Async/await",
+    "https://en.wikipedia.org/wiki/Split-brain_(computing)",
+    "https://en.wikipedia.org/wiki/Quorum_(distributed_computing)",
+    "https://en.wikipedia.org/wiki/Compare-and-swap",
+    "https://en.wikipedia.org/wiki/Linearizability",
+    "https://en.wikipedia.org/wiki/Saga_pattern",
+    "https://en.wikipedia.org/wiki/Two-phase_commit_protocol",
+    "https://en.wikipedia.org/wiki/Byzantine_fault",
+    "https://en.wikipedia.org/wiki/Mutual_exclusion",
+    "https://en.wikipedia.org/wiki/Semaphore_(programming)",
+    "https://en.wikipedia.org/wiki/Deadlock_(computer_science)",
+    "https://en.wikipedia.org/wiki/Concurrency_(computer_science)",
+    "https://en.wikipedia.org/wiki/Thread_pool",
+    "https://en.wikipedia.org/wiki/Eventual_consistency",
+    "https://en.wikipedia.org/wiki/Leader_election",
+    "https://en.wikipedia.org/wiki/Lease_(computer_science)",
+    "https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html",
+    "https://microservices.io/patterns/data/saga.html",
+    "https://callbackhell.com/"
+  ]
+}

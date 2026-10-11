@@ -1,0 +1,644 @@
+- generic [active] [ref=f43e1]:
+  - link "Skip to main content link" [ref=f43e2] [cursor=pointer]:
+    - /url: "#aws-page-content-main"
+    - text: Skip to main content
+  - generic [ref=f43e10]:
+    - navigation "Global navigation" [ref=f43e11]:
+      - generic "Secondary global navigation" [ref=f43e13]:
+        - generic [ref=f43e14]:
+          - list [ref=f43e16]:
+            - listitem [ref=f43e17]:
+              - button "English" [ref=f43e18] [cursor=pointer]
+            - listitem [ref=f43e24]:
+              - link "Contact us" [ref=f43e25] [cursor=pointer]:
+                - /url: /contact-us/?nc2=h_ut_cu
+            - listitem [ref=f43e27]:
+              - link "AWS Marketplace" [ref=f43e28] [cursor=pointer]:
+                - /url: /marketplace?nc2=h_utmp
+            - listitem [ref=f43e30]:
+              - button "Support" [ref=f43e31] [cursor=pointer]
+            - listitem [ref=f43e35]:
+              - button "My account" [ref=f43e36] [cursor=pointer]
+          - button "AWS Profile" [ref=f43e42] [cursor=pointer]
+      - generic "Primary global navigation" [ref=f43e47]:
+        - list [ref=f43e48]:
+          - listitem [ref=f43e49]:
+            - link "Click here to return to Amazon Web Services homepage" [ref=f43e50] [cursor=pointer]:
+              - /url: /?nc2=h_home
+          - listitem [ref=f43e58]:
+            - link "re:Invent" [ref=f43e59] [cursor=pointer]:
+              - /url: /events/reinvent/?nc2=h_l1_f
+          - listitem [ref=f43e62]:
+            - button "Discover AWS" [ref=f43e63]
+          - listitem [ref=f43e66]:
+            - button "Products" [ref=f43e67]
+          - listitem [ref=f43e70]:
+            - button "Solutions" [ref=f43e71]
+          - listitem [ref=f43e74]:
+            - button "Pricing" [ref=f43e75]
+          - listitem [ref=f43e78]:
+            - button "Resources" [ref=f43e79]
+        - list [ref=f43e82]:
+          - listitem [ref=f43e83]:
+            - button "Toggle search" [ref=f43e85]:
+              - paragraph [ref=f43e86] [cursor=pointer]: Search
+          - listitem [ref=f43e89]:
+            - link "Sign in to console" [ref=f43e90] [cursor=pointer]:
+              - /url: https://console.aws.amazon.com/console/home/?nc2=h_si&src=header-signin
+          - listitem [ref=f43e92]:
+            - button "Create account" [ref=f43e93] [cursor=pointer]
+      - generic:
+        - link:
+          - /url: /data/resources/data-foundation-for-agentic-ai/?nc2=h_dsc_ex_s4
+          - generic:
+            - generic:
+              - generic:
+                - generic: Data for agentic AI
+                - generic: The 7 essential data capabilities to scale agentic AI
+      - generic:
+        - link:
+          - /url: /products/developer-tools/agent-toolkit-for-aws/?nc2=h_dsc_ex_s5
+          - generic:
+            - generic:
+              - generic:
+                - generic: Agent Toolkit
+                - generic: Give AI coding agents up-to-date docs and AWS resource access
+      - generic:
+        - link:
+          - /url: /quick/desktop/?nc2=h_dsc_ex_s6
+          - generic:
+            - generic:
+              - generic:
+                - generic: Amazon Quick
+                - generic: Answers grounded in your actual business data
+      - generic:
+        - link:
+          - /url: /quick/?nc2=h_prod_fs_q
+          - generic:
+            - generic:
+              - generic:
+                - generic: Amazon Quick
+                - generic: AI-powered assistant for work with research, business insights, automation, and no-code app building
+      - generic:
+        - link:
+          - /url: /transform/?nc2=h_prod_fs_trns
+          - generic:
+            - generic:
+              - generic:
+                - generic: Transform
+                - generic: Eliminate tech debt with agentic AI to modernize legacy systems and code
+      - generic:
+        - link:
+          - /url: /rds/aurora/?nc2=h_prod_fs_aa
+          - generic:
+            - generic:
+              - generic:
+                - generic: Aurora
+                - generic: Serverless relational database service for PostgreSQL, MySQL, and DSQL
+      - generic:
+        - link:
+          - /url: /bedrock/?nc2=h_prod_fs_br
+          - generic:
+            - generic:
+              - generic:
+                - generic: Amazon Bedrock
+                - generic: The end-to-end platform for building generative AI applications and agents
+      - generic:
+        - link:
+          - /url: /products/connect/customer/?nc2=h_prod_fs_cnct
+          - generic:
+            - generic:
+              - generic:
+                - generic: Amazon Connect Customer
+                - generic: AI-native solution for delivering exceptional experiences across customer interactions
+      - generic:
+        - link:
+          - /url: /ec2/?nc2=h_prod_fs_ec2
+          - generic:
+            - generic:
+              - generic:
+                - generic: EC2
+                - generic: Secure and resizable compute capacity for virtually any workload
+      - generic:
+        - link:
+          - /url: /nova/?nc2=h_prod_fs_nov
+          - generic:
+            - generic:
+              - generic:
+                - generic: Nova
+                - generic: Foundation models delivering frontier intelligence and top price performance
+      - generic:
+        - link:
+          - /url: /opensearch-service/?nc2=h_prod_fs_os
+          - generic:
+            - generic:
+              - generic:
+                - generic: OpenSearch Service
+                - generic: Real-time search, observability, and security analytics
+      - generic:
+        - link:
+          - /url: /s3/?nc2=h_prod_fs_s3
+          - generic:
+            - generic:
+              - generic:
+                - generic: S3
+                - generic: Virtually unlimited secure object storage for AI, analytics, and archives
+      - generic:
+        - link:
+          - /url: /new/?nc2=h_rc_new
+          - generic:
+            - generic:
+              - generic:
+                - generic: What’s new
+                - generic: Explore new capabilities and the latest technologies
+      - generic:
+        - link:
+          - /url: /solutions/case-studies/?nc2=h_rc_cs
+          - generic:
+            - generic:
+              - generic:
+                - generic: Customer success stories
+                - generic: Learn how customers around the world accelerate their cloud
+      - generic:
+        - link:
+          - /url: /advertising-marketing/?nc2=h_sol_ind_dm
+          - generic:
+            - generic:
+              - generic:
+                - generic: Advertising and Marketing
+                - generic: Turn data into customer-winning campaigns
+      - generic:
+        - link:
+          - /url: /aerospace-and-satellite/?nc2=h_sol_ind_sat
+          - generic:
+            - generic:
+              - generic:
+                - generic: Aerospace and Satellite
+                - generic: Cloud solutions to help customers build satellites, conduct space and launch operations, and reimagine space exploration
+      - generic:
+        - link:
+          - /url: /automotive/?nc2=h_sol_ind_aut
+          - generic:
+            - generic:
+              - generic:
+                - generic: Automotive
+                - generic: Build smarter vehicles and transform mobility with cloud solutions
+      - generic:
+        - link:
+          - /url: /education/?nc2=h_sol_ind_edu
+          - generic:
+            - generic:
+              - generic:
+                - generic: Education
+                - generic: Solutions to help facilitate teaching, learning, student engagement, better learning outcomes and modernize IT operations
+      - generic:
+        - link:
+          - /url: /energy-utilities/?nc2=h_sol_ind_enu
+          - generic:
+            - generic:
+              - generic:
+                - generic: Energy and Utilities
+                - generic: Revamp legacy operations and accelerate the development of innovative renewable energy business models
+      - generic:
+        - link:
+          - /url: /financial-services/?nc2=h_sol_ind_fin
+          - generic:
+            - generic:
+              - generic:
+                - generic: Financial Services
+                - generic: Develop innovative and secure solutions across banking, capital markets, insurance, and payments
+      - generic:
+        - link:
+          - /url: /gametech/?nc2=h_sol_ind_gt
+          - generic:
+            - generic:
+              - generic:
+                - generic: Games
+                - generic: Enable game development for every genre and platform, from AAA titles to indie studios
+      - generic:
+        - link:
+          - /url: /government-education/government/?nc2=h_sol_ind_gov
+          - generic:
+            - generic:
+              - generic:
+                - generic: Government
+                - generic: Solutions designed to help government agencies modernize, meet mandates, reduce costs, and deliver mission outcomes
+      - generic:
+        - link:
+          - /url: /health/?nc2=h_sol_ind_hcl
+          - generic:
+            - generic:
+              - generic:
+                - generic: Healthcare and Life Sciences
+                - generic: Accelerate innovation and improve patient care with healthcare data management and security
+      - generic:
+        - link:
+          - /url: /manufacturing/?nc2=h_sol_ind_man
+          - generic:
+            - generic:
+              - generic:
+                - generic: Manufacturing
+                - generic: Optimize production and speed time-to-market
+      - generic:
+        - link:
+          - /url: /media/?nc2=h_sol_ind_med
+          - generic:
+            - generic:
+              - generic:
+                - generic: Media and Entertainment
+                - generic: Transform media & entertainment with the most purpose-built capabilities and partner solutions of any cloud
+      - generic:
+        - link:
+          - /url: /government-education/nonprofits/?nc2=h_sol_ind_np
+          - generic:
+            - generic:
+              - generic:
+                - generic: Nonprofit
+                - generic: Cloud solutions to help nonprofits and NGOs maximize their mission impact and donor relationships
+      - generic:
+        - link:
+          - /url: /retail-consumer-goods/?nc2=h_sol_ind_cpg
+          - generic:
+            - generic:
+              - generic:
+                - generic: Retail and Consumer Goods
+                - generic: Empower brands to drive market differentiation and growth with cloud solutions
+      - generic:
+        - link:
+          - /url: /manufacturing/semiconductor-hi-tech/?nc2=h_sol_ind_sem
+          - generic:
+            - generic:
+              - generic:
+                - generic: Semiconductor
+                - generic: Design and deliver next-generation chip solutions with cloud technology
+      - generic:
+        - link:
+          - /url: /sports/?nc2=h_sol_ind_spt
+          - generic:
+            - generic:
+              - generic:
+                - generic: Sports
+                - generic: Fuel innovative fan, broadcast, and athlete experiences
+      - generic:
+        - link:
+          - /url: /sustainability/?nc2=h_sol_ind_sus
+          - generic:
+            - generic:
+              - generic:
+                - generic: Sustainability
+                - generic: Tools and resources to help organizations achieve their sustainability goals with AWS
+      - generic:
+        - link:
+          - /url: /telecom/?nc2=h_sol_ind_tel
+          - generic:
+            - generic:
+              - generic:
+                - generic: Telecommunications
+                - generic: Accelerate innovation, scale with confidence, and add agility with cloud-based telecom solutions
+      - generic:
+        - link:
+          - /url: /travel-and-hospitality/?nc2=h_sol_ind_trv
+          - generic:
+            - generic:
+              - generic:
+                - generic: Travel and Hospitality
+                - generic: Elevate travel and hospitality with solutions that boost customer experiences and operational efficiency
+      - generic:
+        - link:
+          - /url: /new/?nc2=h_rc_new
+          - generic:
+            - generic:
+              - generic:
+                - generic: What's new
+                - generic: Explore new capabilities and the latest technologies
+      - generic:
+        - link:
+          - /url: /solutions/case-studies/?nc2=h_rc_cs
+          - generic:
+            - generic:
+              - generic:
+                - generic: Customer success stories
+                - generic: Learn how customers around the world accelerate their cloud
+      - generic:
+        - link:
+          - /url: /pricing/?nc2=h_pr_hub
+          - generic:
+            - generic:
+              - generic:
+                - generic: AWS Pricing
+                - generic: Learn about pricing and plans in one place
+      - generic:
+        - link:
+          - /url: https://calculator.aws/?nc2=h_pr_calc
+          - generic:
+            - generic:
+              - generic:
+                - generic: AWS Pricing Calculator
+                - generic: Estimate the cost for your architecture solution
+      - generic:
+        - link:
+          - /url: /free/?nc2=h_pr_ft
+          - generic:
+            - generic:
+              - generic:
+                - generic: AWS Free Tier
+                - generic: Get free, hands-on experience with AWS products and services
+      - generic:
+        - link:
+          - /url: /free/offers/?nc2=h_pr_ofr
+          - generic:
+            - generic:
+              - generic:
+                - generic: AWS Offers
+                - generic: Explore different offer programs to gain hands-on experience
+      - generic:
+        - link:
+          - /url: /savingsplans/?nc2=h_pr_sp
+          - generic:
+            - generic:
+              - generic:
+                - generic: AWS Savings Plans
+                - generic: Flexible pricing model offering lower prices
+      - generic:
+        - link:
+          - /url: /s3/pricing/?nc2=h_pr_s3
+          - generic: Amazon S3
+      - generic:
+        - link:
+          - /url: /bedrock/pricing/?nc2=h_pr_br
+          - generic: Amazon Bedrock
+      - generic:
+        - link:
+          - /url: /rds/pricing/?nc2=h_pr_rds
+          - generic: Amazon RDS
+      - generic:
+        - link:
+          - /url: /ec2/pricing/?nc2=h_pr_ec2
+          - generic: Amazon EC2
+      - generic:
+        - link:
+          - /url: /sagemaker/pricing/?nc2=h_pr_sgm
+          - generic: Amazon SageMaker
+      - generic:
+        - link:
+          - /url: /pricing/?nc2=h_pr_pr
+          - generic: Browse all product pricing
+      - generic:
+        - link:
+          - /url: https://docs.aws.amazon.com/?nc2=h_rsc_lrn_docs
+          - generic:
+            - generic:
+              - generic:
+                - generic: Documentation
+                - generic: Get detailed technical guides and references for all AWS services and tools
+      - generic:
+        - link:
+          - /url: /training/?nc2=h_rsc_lrn_tc
+          - generic:
+            - generic:
+              - generic:
+                - generic: Training & Certification
+                - generic: Build and validate your AWS cloud skills and technical expertise
+      - generic:
+        - link:
+          - /url: /what-is/?nc2=h_rsc_lrn_ccc
+          - generic:
+            - generic:
+              - generic:
+                - generic: Cloud term glossary
+                - generic: Learn more about key cloud computing concepts
+      - generic:
+        - link:
+          - /url: /whitepapers/?nc2=h_rsc_lrn_wp
+          - generic:
+            - generic:
+              - generic:
+                - generic: Whitepapers
+                - generic: Expand your knowledge of the cloud with expert guides and diagrams
+      - generic:
+        - link:
+          - /url: /getting-started/cloud-essentials/?nc2=h_rsc_lrn_gs_e
+          - generic:
+            - generic:
+              - generic:
+                - generic: Cloud fundamentals
+                - generic: Step-by-step instructions for common AWS tasks
+      - generic:
+        - link:
+          - /url: /getting-started/hands-on/?nc2=h_rsc_lrn_gs_h
+          - generic:
+            - generic:
+              - generic:
+                - generic: Tutorials
+                - generic: Get started with step-by-step instructions
+      - generic:
+        - link:
+          - /url: https://builder.aws.com/?nc2=h_rsc_cs_bldr
+          - generic:
+            - generic:
+              - generic:
+                - generic: Builder Center
+                - generic: Learn, build, and connect with builders in the AWS community
+      - generic:
+        - link:
+          - /url: /events/?nc2=h_rsc_cs_ev
+          - generic:
+            - generic:
+              - generic:
+                - generic: Events and webinars
+                - generic: Connect, collaborate, and learn from AWS experts in the cloud computing community
+      - generic:
+        - link:
+          - /url: /partners/?nc2=h_rsc_cs_pa
+          - generic:
+            - generic:
+              - generic:
+                - generic: Partner Network
+                - generic: Collaborate with AWS partners to grow your business
+      - generic:
+        - link:
+          - /url: /marketplace?nc2=h_rsc_cs_mp
+          - generic:
+            - generic:
+              - generic:
+                - generic: Marketplace
+                - generic: Find, test, buy, and deploy third-party software
+      - generic:
+        - link:
+          - /url: /premiumsupport/?nc2=h_rsc_cs_ps
+          - generic:
+            - generic:
+              - generic:
+                - generic: Support
+                - generic: Access proactive guidance, issue resolution, and helpful tools
+      - generic:
+        - link:
+          - /url: /professional-services/?nc2=h_rsc_cs_pros
+          - generic:
+            - generic:
+              - generic:
+                - generic: Professional services
+                - generic: Accelerate business transformation with expert guidance and packaged solutions
+    - button "Open feedback" [ref=f43e97] [cursor=pointer]
+  - main [ref=f43e101]:
+    - generic [ref=f43e114]:
+      - navigation "Breadcrumb" [ref=f43e117]:
+        - list [ref=f43e118]:
+          - listitem [ref=f43e119]:
+            - link "AWS" [ref=f43e120] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f43e124]:
+            - generic [ref=f43e125]: "404"
+      - generic [ref=f43e130]:
+        - generic [ref=f43e131]:
+          - heading "404" [level=1] [ref=f43e132]
+          - paragraph [ref=f43e133]: You can build a lot with the cloud, but we couldn’t find this page.
+        - button "Go to homepage" [ref=f43e136] [cursor=pointer]
+  - contentinfo [ref=f43e143]:
+    - generic [ref=f43e150]:
+      - button "Create an AWS account" [ref=f43e152] [cursor=pointer]
+      - generic [ref=f43e154]:
+        - heading "Learn" [level=2] [ref=f43e155]
+        - list [ref=f43e156]:
+          - listitem [ref=f43e157]:
+            - link "What Is AWS?" [ref=f43e158] [cursor=pointer]:
+              - /url: /what-is-aws/?nc1=f_cc
+          - listitem [ref=f43e159]:
+            - link "What Is Cloud Computing?" [ref=f43e160] [cursor=pointer]:
+              - /url: /what-is-cloud-computing/?nc1=f_cc
+          - listitem [ref=f43e161]:
+            - link "What Is Agentic AI?" [ref=f43e162] [cursor=pointer]:
+              - /url: /what-is/agentic-ai/?nc1=f_cc
+          - listitem [ref=f43e163]:
+            - link "Cloud Computing Concepts Hub" [ref=f43e164] [cursor=pointer]:
+              - /url: /what-is/?nc1=f_cc
+          - listitem [ref=f43e165]:
+            - link "AWS Cloud Security" [ref=f43e166] [cursor=pointer]:
+              - /url: /security/?nc1=f_cc
+          - listitem [ref=f43e167]:
+            - link "What's New" [ref=f43e168] [cursor=pointer]:
+              - /url: /new/?nc1=f_cc
+          - listitem [ref=f43e169]:
+            - link "Blogs" [ref=f43e170] [cursor=pointer]:
+              - /url: /blogs/?nc1=f_cc
+          - listitem [ref=f43e171]:
+            - link "Press Releases" [ref=f43e172] [cursor=pointer]:
+              - /url: https://press.aboutamazon.com/aws
+      - generic [ref=f43e173]:
+        - heading "Resources" [level=2] [ref=f43e174]
+        - list [ref=f43e175]:
+          - listitem [ref=f43e176]:
+            - link "Getting Started" [ref=f43e177] [cursor=pointer]:
+              - /url: /getting-started/?nc1=f_cc
+          - listitem [ref=f43e178]:
+            - link "Training" [ref=f43e179] [cursor=pointer]:
+              - /url: /training/?nc1=f_cc
+          - listitem [ref=f43e180]:
+            - link "AWS Trust Center" [ref=f43e181] [cursor=pointer]:
+              - /url: /trust-center/?nc1=f_cc
+          - listitem [ref=f43e182]:
+            - link "AWS Solutions Library" [ref=f43e183] [cursor=pointer]:
+              - /url: /solutions/?nc1=f_cc
+          - listitem [ref=f43e184]:
+            - link "Architecture Center" [ref=f43e185] [cursor=pointer]:
+              - /url: /architecture/?nc1=f_cc
+          - listitem [ref=f43e186]:
+            - link "Product and Technical FAQs" [ref=f43e187] [cursor=pointer]:
+              - /url: /faqs/?nc1=f_dr
+          - listitem [ref=f43e188]:
+            - link "Analyst Reports" [ref=f43e189] [cursor=pointer]:
+              - /url: /resources/analyst-reports/?nc1=f_cc
+          - listitem [ref=f43e190]:
+            - link "AWS Partners" [ref=f43e191] [cursor=pointer]:
+              - /url: /partners/work-with-partners/?nc1=f_dr
+      - generic [ref=f43e192]:
+        - heading "Developers" [level=2] [ref=f43e193]
+        - list [ref=f43e194]:
+          - listitem [ref=f43e195]:
+            - link "Builder Center" [ref=f43e196] [cursor=pointer]:
+              - /url: https://builder.aws.com/?nc1=f_dr
+          - listitem [ref=f43e197]:
+            - link "SDKs & Tools" [ref=f43e198] [cursor=pointer]:
+              - /url: https://builder.aws.com/build/tools?nc1=f_dr
+          - listitem [ref=f43e199]:
+            - link ".NET on AWS" [ref=f43e200] [cursor=pointer]:
+              - /url: https://builder.aws.com/content/2zSx6gTiseJULEcqQFXqm3pzJoW/aws-tools-and-resources-net?nc1=f_dr
+          - listitem [ref=f43e201]:
+            - link "Python on AWS" [ref=f43e202] [cursor=pointer]:
+              - /url: https://builder.aws.com/content/2zYQkMbmrsxHPtT89s3teyKJh79/aws-tools-and-resources-python?nc1=f_dr
+          - listitem [ref=f43e203]:
+            - link "Java on AWS" [ref=f43e204] [cursor=pointer]:
+              - /url: https://builder.aws.com/content/2zZDrpGNFIOPAOT9PXifxnumRUC/aws-tools-and-resources-java?nc1=f_dr
+          - listitem [ref=f43e205]:
+            - link "PHP on AWS" [ref=f43e206] [cursor=pointer]:
+              - /url: https://builder.aws.com/content/2zYR2daUzavSaUwnAI9X92Q1tfd/aws-tools-and-resources-php?nc1=f_dr
+          - listitem [ref=f43e207]:
+            - link "JavaScript on AWS" [ref=f43e208] [cursor=pointer]:
+              - /url: https://builder.aws.com/content/2zYRIN2NxZTNLhwP9ZyaiJBEWrI/aws-tools-and-resources-javascript?nc1=f_dr
+      - generic [ref=f43e209]:
+        - heading "Help" [level=2] [ref=f43e210]
+        - list [ref=f43e211]:
+          - listitem [ref=f43e212]:
+            - link "Contact Us" [ref=f43e213] [cursor=pointer]:
+              - /url: /contact-us/?nc1=f_m
+          - listitem [ref=f43e214]:
+            - link "File a Support Ticket" [ref=f43e215] [cursor=pointer]:
+              - /url: https://console.aws.amazon.com/support/home/?nc1=f_dr
+          - listitem [ref=f43e216]:
+            - link "AWS re:Post" [ref=f43e217] [cursor=pointer]:
+              - /url: https://repost.aws/?nc1=f_dr
+          - listitem [ref=f43e218]:
+            - link "Knowledge Center" [ref=f43e219] [cursor=pointer]:
+              - /url: https://repost.aws/knowledge-center?nc1=f_dr
+          - listitem [ref=f43e220]:
+            - link "AWS Support Overview" [ref=f43e221] [cursor=pointer]:
+              - /url: /premiumsupport/?nc1=f_dr
+          - listitem [ref=f43e222]:
+            - link "AWS Accessibility" [ref=f43e223] [cursor=pointer]:
+              - /url: /accessibility/?nc1=f_cc
+          - listitem [ref=f43e224]:
+            - link "Legal" [ref=f43e225] [cursor=pointer]:
+              - /url: /legal/?nc1=f_cc
+          - listitem [ref=f43e226]:
+            - link "Event Code of Conduct" [ref=f43e227] [cursor=pointer]:
+              - /url: /codeofconduct/?nc1=f_cc
+          - listitem [ref=f43e228]:
+            - link "Event Terms & Conditions" [ref=f43e229] [cursor=pointer]:
+              - /url: /events/terms/?nc1=f_cc
+      - button "English" [ref=f43e231] [cursor=pointer]
+      - button [ref=f43e234] [cursor=pointer]
+      - generic [ref=f43e237]: Amazon is an equal opportunity employer and does not discriminate on the basis of protected veteran status, disability or other legally protected status. Veterans, military spouses, and people with disabilities are encouraged to apply.
+      - generic [ref=f43e240]:
+        - link "X" [ref=f43e241] [cursor=pointer]:
+          - /url: https://x.com/awscloud
+        - link "Facebook" [ref=f43e244] [cursor=pointer]:
+          - /url: https://www.facebook.com/amazonwebservices
+        - link "Linkedin" [ref=f43e247] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/amazon-web-services/
+        - link "Instagram" [ref=f43e250] [cursor=pointer]:
+          - /url: https://www.instagram.com/amazonwebservices/
+        - link "Twitch" [ref=f43e253] [cursor=pointer]:
+          - /url: https://www.twitch.tv/aws
+        - link "Youtube" [ref=f43e256] [cursor=pointer]:
+          - /url: https://www.youtube.com/user/AmazonWebServices/Cloud/
+        - link "Podcasts" [ref=f43e259] [cursor=pointer]:
+          - /url: /podcasts/?nc1=f_cc
+        - link "Email" [ref=f43e262] [cursor=pointer]:
+          - /url: /preferences/email/manage?nc1=f_icon
+      - generic [ref=f43e265]:
+        - list [ref=f43e266]:
+          - listitem [ref=f43e267]:
+            - link "Privacy" [ref=f43e268] [cursor=pointer]:
+              - /url: /privacy/?nc1=f_pr
+          - listitem [ref=f43e269]:
+            - link "Site terms" [ref=f43e270] [cursor=pointer]:
+              - /url: /terms/?nc1=f_pr
+          - listitem [ref=f43e271]:
+            - link "Your Privacy Choices California Consumer Privacy Act (CCPA) Opt-Out Icon" [ref=f43e272] [cursor=pointer]:
+              - /url: "#"
+              - text: Your Privacy Choices
+              - img "California Consumer Privacy Act (CCPA) Opt-Out Icon" [ref=f43e273]
+          - listitem [ref=f43e282]:
+            - link "Cookie Preferences" [ref=f43e283] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f43e284]: © 2026, Amazon Web Services, Inc. or its affiliates. All rights reserved.

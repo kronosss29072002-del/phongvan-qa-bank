@@ -1,0 +1,364 @@
+- generic [active] [ref=f28e1]:
+  - generic:
+    - generic:
+      - link "Bỏ qua để đến phần nội dung chính" [ref=f28e2] [cursor=pointer]
+      - link "Hỗ trợ truy cập" [ref=f28e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=vi
+  - generic [ref=f28e8]:
+    - search [ref=f28e9]:
+      - generic [ref=f28e12]:
+        - link [ref=f28e13] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=vi&ictx=0&sa=X&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQpYkNegQIBhAG
+          - img "Truy cập trang chủ Google" [ref=f28e14]
+        - generic [ref=f28e15]:
+          - combobox "Tìm kiếm" [ref=f28e18]: hiring manager "portfolio" "real world" project versus clone OR tutorial junior developer impressed hiring manager "portfolio" "real world" project versus clone OR tutorial junior developer impressed
+          - generic [ref=f28e19]:
+            - button "Xóa" [ref=f28e21] [cursor=pointer]
+            - generic [ref=f28e26]:
+              - button "Công cụ nhập" [ref=f28e27] [cursor=pointer]
+              - button "Tìm kiếm bằng giọng nói" [ref=f28e31] [cursor=pointer]
+              - button "Tìm kiếm bằng hình ảnh" [ref=f28e34] [cursor=pointer]
+        - button "Tìm kiếm" [ref=f28e37] [cursor=pointer]
+    - generic [ref=f28e42]:
+      - button "Cài đặt" [ref=f28e44] [cursor=pointer]
+      - button "Chia sẻ" [ref=f28e49] [cursor=pointer]
+      - generic [ref=f28e55]:
+        - button "Các ứng dụng của Google" [ref=f28e57] [cursor=pointer]
+        - link "Đăng nhập" [ref=f28e62] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=vi&passive=true&continue=https://www.google.com/search%3Fq%3Dhiring%2Bmanager%2B%2522portfolio%2522%2B%2522real%2Bworld%2522%2Bproject%2Bversus%2Bclone%2BOR%2Btutorial%2Bjunior%2Bdeveloper%2Bimpressed&ec=futura_srp_og_si_72236_p
+  - generic [ref=f28e65]:
+    - navigation [ref=f28e71]:
+      - generic [ref=f28e77]:
+        - list [ref=f28e78]:
+          - listitem [ref=f28e79]:
+            - link "Tất cả" [disabled] [ref=f28e80]
+          - listitem [ref=f28e83]:
+            - link "Video" [ref=f28e84] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&udm=vids&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMa9Sug1jBTovNXJdv-fdKL-n26-OJDSsmy002-l1AMM7OvVDY0ny2l8qMGdOQluTFpN9BFiijRK8iqs0c3rTI79RIWEz9ivF5b-XPoMmxbcQ02xq5pvP8Q0L2uTYrim3FYo1UiY0nuHQrtrNQbq0kk1fdLcTjgrf72AVDZZ2asoOarEN1lQE6O4YaEqjY6qLslmkJtkG0jR0HD1r9jXs83bM3d9G&q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sa=X&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQtKgLegQIGhAB
+          - listitem [ref=f28e87]:
+            - link "Video ngắn" [ref=f28e88] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&udm=39&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMa9Sug1jBTovNXJdv-fdKL-n26-OJDSsmy002-l1AMM7OvVDY0ny2l8qMGdOQluTFpN9BFiijRK8iqs0c3rTI79RIWEz9ivF5b-XPoMmxbcQ02xq5pvP8Q0L2uTYrim3FYo1UiY0nuHQrtrNQbq0kk1fdLcTjgrf72AVDZZ2asoOarEN1lQE6O4YaEqjY6qLslmkJtkG0jR0HD1r9jXs83bM3d9G&q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sa=X&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQs6gLegQIGRAB
+          - listitem [ref=f28e91]:
+            - link "Hình ảnh" [ref=f28e92] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&udm=2&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMa9Sug1jBTovNXJdv-fdKL-n26-OJDSsmy002-l1AMM7OvVDY0ny2l8qMGdOQluTFpN9BFiijRK8iqs0c3rTI79RIWEz9ivF5b-XPoMmxbcQ02xq5pvP8Q0L2uTYrim3FYo1UiY0nuHQrtrNQbq0kk1fdLcTjgrf72AVDZZ2asoOarEN1lQE6O4YaEqjY6qLslmkJtkG0jR0HD1r9jXs83bM3d9G&q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sa=X&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQtKgLegQIGBAB
+          - listitem [ref=f28e95]:
+            - link "Mua sắm" [ref=f28e96] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&udm=28&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMa9Sug1jBTovNXJdv-fdKL-n26-OJDSsmy002-l1AMM7OvVDY0ny2l8qMGdOQluTFpN9BFiijRK8iqs0c3rTI79RIWEz9ivF5b-XPoMmxbcQ02xq5pvP8Q0L2uTYrim3FYo1UiY0nuHQrtrNQbq0kk1fdLcTjgrf72AVDZZ2asoOarEN1lQE6O4YaEqjY6qLslmkJtkG0jR0HD1r9jXs83bM3d9G&q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&ved=1t:220175&ictx=111
+          - listitem [ref=f28e99]:
+            - link "Tin tức" [ref=f28e100] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&tbm=nws&source=lnms&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMa9Sug1jBTovNXJdv-fdKL-n26-OJDSsmy002-l1AMM7OvVDY0ny2l8qMGdOQluTFpN9BFiijRK8iqs0c3rTI79RIWEz9ivF5b-XPoMmxbcQ02xq5pvP8Q0L2uTYrim3FYo1UiY0nuHQrtrNQbq0kk1fdLcTjgrf72AVDZZ2asoOarEN1lQE6O4YaEqjY6qLslmkJtkG0jR0HD1r9jXs83bM3d9G&sa=X&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ0pQJegQIFxAB
+          - listitem [ref=f28e103]:
+            - button [ref=f28e104] [cursor=pointer]:
+              - generic "Các bộ lọc khác" [ref=f28e105]: Thêm
+        - button "Công cụ" [ref=f28e112] [cursor=pointer]
+    - heading "Kết quả tìm kiếm" [level=1] [ref=f28e119]
+    - generic [ref=f28e125]:
+      - generic [ref=f28e126]: Looking for results in English?
+      - link [ref=f28e127] [cursor=pointer]:
+        - /url: "#"
+      - link "Change to English" [ref=f28e131] [cursor=pointer]:
+        - /url: /setprefs?sig=0_t5UDDH1-zCax__9uIpTmwchHM3M%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dhiring%2Bmanager%2B%2522portfolio%2522%2B%2522real%2Bworld%2522%2Bproject%2Bversus%2Bclone%2BOR%2Btutorial%2Bjunior%2Bdeveloper%2Bimpressed&hl=en&sa=X&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQhoQCKAF6BAgSEAQ
+      - link "Tiếp tục sử dụng Tiếng Việt" [ref=f28e132] [cursor=pointer]:
+        - /url: "#"
+      - link "Cài đặt ngôn ngữ" [ref=f28e134] [cursor=pointer]:
+        - /url: /preferences?lang=1&hl=vi&sa=X&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQiIQCKAN6BAgSEAY#languages
+    - generic [ref=f28e135]:
+      - generic [ref=f28e154]:
+        - heading "Đang suy nghĩ" [level=2] [ref=f28e158]
+        - progressbar "Đang tạo" [ref=f28e161]
+      - main [ref=f28e163]:
+        - generic [ref=f28e167]:
+          - generic [ref=f28e170]:
+            - heading "Web results" [level=2] [ref=f28e171]
+            - generic [ref=f28e172]:
+              - generic [ref=f28e175]:
+                - link "Developer Portfolio Projects That Impress Hiring Managers Refactor Talent https://refactortalent.com › developer-..." [ref=f28e177] [cursor=pointer]:
+                  - /url: /goto?url=CAESgAEB6zswFZlNJubExVLdCiiwSYru9VJhLRYP63IqU2lbmWVfLzSBhgU-NsDYmY10_RlA144lIeAy2KxWV2eZE5XcCVxsz7IP6Z0BXnBq-V8EznvrXYdjbguLAD629G8zRAVaq4Jk0OQnHhy2VpUusFXxtWSnIpSLszLaIK0jTo5sxg
+                  - heading "Developer Portfolio Projects That Impress Hiring Managers" [level=3] [ref=f28e178]
+                  - generic [ref=f28e184]:
+                    - generic [ref=f28e185]: Refactor Talent
+                    - generic [ref=f28e187]: https://refactortalent.com › developer-...
+                - generic [ref=f28e189]:
+                  - generic [ref=f28e190]: ·
+                  - link "Dịch trang này" [ref=f28e191] [cursor=pointer]:
+                    - /url: /goto?url=CAESygEB6zswFcczDngXzOoDE4HVKLYVqk9BMyuH1AeSKSNl9e2twY-Tp7Luh3iPkIq3YiGNT51928jCFDfwQhynNI87FrHVRUelLkzOxqcWsz21j2KBTkDrCjxtXgrKi5XBayhLEy4p22r2AKeDZRXpBTroGLwrYVK1zbbgS5IffBgS2cE1pQhMANBIDEjbMmOACtdoNrvWRcSVnSfPSu8r7MEAF5V4jTROedecrL_6Ftf0XbFAfwd6EQH0Cevg0tBJy4ESKhT4ttKw9-_F
+                - button "Thông tin về kết quả này" [ref=f28e196] [cursor=pointer]
+              - generic [ref=f28e202]:
+                - generic [ref=f28e203]: 6 thg 5, 2026 —
+                - generic [ref=f28e204]:
+                  - text: What This Looks Like on a Resume
+                  - emphasis [ref=f28e205]: or Portfolio
+                  - text: ... Even candidates who are building relevant,
+                  - emphasis [ref=f28e206]: real-world projects
+                  - text: can undermine themselves in a few ...
+              - generic [ref=f28e208]:
+                - text: "Bị thiếu: junior ‎| Phải có:"
+                - link "junior" [ref=f28e209] [cursor=pointer]:
+                  - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+%22junior%22+developer+impressed&sa=X&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ5t4CegQIIBAB
+          - generic [ref=f28e213]:
+            - generic [ref=f28e215]:
+              - heading "Video" [level=2] [ref=f28e216]
+              - button "Thông tin về kết quả này" [ref=f28e221] [cursor=pointer]
+            - generic [ref=f28e227]:
+              - generic [ref=f28e232]:
+                - generic [ref=f28e233]:
+                  - link [ref=f28e235] [cursor=pointer]:
+                    - /url: /goto?url=CAESyQEB6zswFbt03912gpE1NcB7fKgcK6uFDE26FAn68wFE6Wmn6M0Mu4J517todRnRyJ8kV90-wGafFSGtyq-0CGdV2x0gklNtjutr4k8lPcnjPqmXEdNcmIwhHeeKpNwU_jmhStfMuUnIVYmuK2yQStKgAl-eoZcLNZqYyqPMkE7_yuhtHC5VdJmi_1-5tO3QSr4fU8-69aNqScF8-1NLYaJrpUn8vDycB_1liVPC1lJVWQIvMp9JaDkAKHS4XV4RiTOZ6-tNskQNgEU
+                    - heading "Mastering Real-Time Projects for Tech Success! Theory ... Facebook SumanTV Live 1 tháng trước" [level=3] [ref=f28e236]:
+                      - generic [ref=f28e237]: Mastering Real-Time Projects for Tech Success! Theory ...
+                      - generic [ref=f28e241]:
+                        - generic [ref=f28e242]:
+                          - text: Facebook
+                          - generic [ref=f28e243]: · SumanTV Live
+                        - generic [ref=f28e244]: 1 tháng trước
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic [aria-hidden]:
+                            - text: Facebook
+                            - generic: · SumanTV Live
+                      - button "Thông tin về kết quả này" [ref=f28e248] [cursor=pointer]
+                - link "Mastering Real-Time Projects for Tech Success! Theory ... của SumanTV Live trên Facebook. Phát trên Facebook. 0:53" [ref=f28e253] [cursor=pointer]:
+                  - /url: /goto?url=CAESyQEB6zswFbt03912gpE1NcB7fKgcK6uFDE26FAn68wFE6Wmn6M0Mu4J517todRnRyJ8kV90-wGafFSGtyq-0CGdV2x0gklNtjutr4k8lPcnjPqmXEdNcmIwhHeeKpNwU_jmhStfMuUnIVYmuK2yQStKgAl-eoZcLNZqYyqPMkE7_yuhtHC5VdJmi_1-5tO3QSr4fU8-69aNqScF8-1NLYaJrpUn8vDycB_1liVPC1lJVWQIvMp9JaDkAKHS4XV4RiTOZ6-tNskQNgEU
+                  - generic [ref=f28e260]: 0:53
+              - generic [ref=f28e266]:
+                - generic [ref=f28e267]:
+                  - link [ref=f28e269] [cursor=pointer]:
+                    - /url: /goto?url=CAESwAEB6zswFaVri7NTnYCU35JLip_oLPJMsAs9HzR17FMwJqLgGpMaI2sfloX9Dk5NsAesMoCV3RtnCMY2T4baQTHFBvbVdGgG-tEcKYagMp4TdUY9qT5vYB6EAx0xqHk7Aw8fLKV8XOXFIO5mY35mP4rpw3NmJJ2jOYHAg5RUcDiRg3rrbO6dPxbztOroYae7lOPxytRdlHiRhmUw7gT3Ol_XtDl_bvhMlWusWlewjy6gqezZqMgAGgcEjLQTBtPyNGU
+                    - heading "Stand out to recruiters with real engineering judgment LinkedIn Soleyman Shahir 3 thg 2, 2026" [level=3] [ref=f28e270]:
+                      - generic [ref=f28e271]: Stand out to recruiters with real engineering judgment
+                      - generic [ref=f28e275]:
+                        - generic [ref=f28e276]:
+                          - text: LinkedIn
+                          - generic [ref=f28e277]: · Soleyman Shahir
+                        - generic [ref=f28e278]: 3 thg 2, 2026
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic [aria-hidden]:
+                            - text: LinkedIn
+                            - generic: · Soleyman Shahir
+                      - button "Thông tin về kết quả này" [ref=f28e282] [cursor=pointer]
+                - link "Stand out to recruiters with real engineering judgment của Soleyman Shahir trên LinkedIn. Phát trên LinkedIn. 1:24" [ref=f28e287] [cursor=pointer]:
+                  - /url: /goto?url=CAESwAEB6zswFaVri7NTnYCU35JLip_oLPJMsAs9HzR17FMwJqLgGpMaI2sfloX9Dk5NsAesMoCV3RtnCMY2T4baQTHFBvbVdGgG-tEcKYagMp4TdUY9qT5vYB6EAx0xqHk7Aw8fLKV8XOXFIO5mY35mP4rpw3NmJJ2jOYHAg5RUcDiRg3rrbO6dPxbztOroYae7lOPxytRdlHiRhmUw7gT3Ol_XtDl_bvhMlWusWlewjy6gqezZqMgAGgcEjLQTBtPyNGU
+                  - generic [ref=f28e294]: 1:24
+              - generic [ref=f28e300]:
+                - generic [ref=f28e301]:
+                  - link [ref=f28e303] [cursor=pointer]:
+                    - /url: /goto?url=CAES0QEB6zswFU7deAbICmXsd3qrgslOP8_5usY8u3y_IMyUT6DeoXzqvBH4zG4YA3S_vhuXuHtacmDt835smQNG-6tENZ4GA3iBOR9PgMkGqNO6JJLBUFLdvsAjsuq_eJCTUJKXSnlSRa8st1t-a35-yz2Vs1jj3y5hmsRKE-ZX1a-Ek5ovmtTM2eoruUUrrHZMMB96FyqK7sStsejNaaLdXKt0d2vbK8pcZwpQ3vrvM1eK1bwQesrbQxkmqb1qb0HLk8G-GNCwMhEbIJqRPcODzRZCpw
+                    - heading "I wrote the case study like I'd been hired to solve it. Real ... Facebook Jabez Ivan J 2 thg 8, 2026" [level=3] [ref=f28e304]:
+                      - generic [ref=f28e305]: I wrote the case study like I'd been hired to solve it. Real ...
+                      - generic [ref=f28e309]:
+                        - generic [ref=f28e310]:
+                          - text: Facebook
+                          - generic [ref=f28e311]: · Jabez Ivan J
+                        - generic [ref=f28e312]: 2 thg 8, 2026
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic [aria-hidden]:
+                            - text: Facebook
+                            - generic: · Jabez Ivan J
+                      - button "Thông tin về kết quả này" [ref=f28e316] [cursor=pointer]
+                - link "I wrote the case study like I'd been hired to solve it. Real ... của Jabez Ivan J trên Facebook. Phát trên Facebook. 0:10" [ref=f28e321] [cursor=pointer]:
+                  - /url: /goto?url=CAES0QEB6zswFU7deAbICmXsd3qrgslOP8_5usY8u3y_IMyUT6DeoXzqvBH4zG4YA3S_vhuXuHtacmDt835smQNG-6tENZ4GA3iBOR9PgMkGqNO6JJLBUFLdvsAjsuq_eJCTUJKXSnlSRa8st1t-a35-yz2Vs1jj3y5hmsRKE-ZX1a-Ek5ovmtTM2eoruUUrrHZMMB96FyqK7sStsejNaaLdXKt0d2vbK8pcZwpQ3vrvM1eK1bwQesrbQxkmqb1qb0HLk8G-GNCwMhEbIJqRPcODzRZCpw
+                  - generic [ref=f28e328]: 0:10
+            - link "Xem tất cả video" [ref=f28e332] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&udm=vids&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sa=X&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8ccDKAJ6BAgeEAU
+              - separator [aria-hidden] [ref=f28e333]
+              - generic [ref=f28e334]: Xem tất cả
+          - generic [ref=f28e341]:
+            - heading "Web results" [level=2] [ref=f28e342]
+            - generic [ref=f28e343]:
+              - generic [ref=f28e346]:
+                - 'link "Resume is DEAD: Let Real-World Projects Speak for You Archi''s Academy https://archisacademy.com › ... › Blog" [ref=f28e348] [cursor=pointer]':
+                  - /url: /goto?url=CAESfgHrOzAVE9lCiUEc_dlM3ceGHF6zAQuw1wdWWfx5_oa1i3-dTXhWa2Uk3eg7KgxBHSajWzPJsW57tYZ3Ewi4KQpDRsWqNDWuAwl7AvxoeNgv1Nvx4sW2GvDvBh0nEDSjelrcRh2bBj1VAH_wEDdyzpMZXdgoohcrkFw7fHtQug
+                  - 'heading "Resume is DEAD: Let Real-World Projects Speak for You" [level=3] [ref=f28e349]'
+                  - generic [ref=f28e355]:
+                    - generic [ref=f28e356]: Archi's Academy
+                    - generic [ref=f28e358]: https://archisacademy.com › ... › Blog
+                - generic [ref=f28e360]:
+                  - generic [ref=f28e361]: ·
+                  - link "Dịch trang này" [ref=f28e362] [cursor=pointer]:
+                    - /url: /goto?url=CAESyAEB6zswFQrjb3E7i2Y2HW47NdWM72ahcFCsMe02DGRXEi3ielhiWZipLcbb8CXtNwmKWU4hIXYW2t9hMTOJzMwWpccXs5leH7AlJrd9oCZJJTZ1A9rcwp28-lIaWudAkC05q_UqI0XzVQdu2mI6vkU8sQgDxodwrLKuJ0UkW2N7u16I7W66wRIAslWYR7NTNTxAfc01uJj0Sb1d9NMQeOoin-M57Ieb1ZsBoxgNbVMztAUcVtKsRZGJSR9G8w7vIh6pSzwDl3TM6Q
+                - button "Thông tin về kết quả này" [ref=f28e367] [cursor=pointer]
+              - generic [ref=f28e374]:
+                - text: Recruiters spend an average of seven seconds on a resume. They'll spend seven minutes on a
+                - emphasis [ref=f28e375]: portfolio
+                - text: that shows real code, real
+                - emphasis [ref=f28e376]: projects
+                - text: ", and real results."
+          - generic [ref=f28e380]:
+            - generic [ref=f28e383]:
+              - 'link "Group Projects vs Solo Projects: What Hiring Managers Trust McTaba Labs https://www.mctaba.com › bootcamps" [ref=f28e385] [cursor=pointer]':
+                - /url: /goto?url=CAESeAHrOzAVDWQVEp_hSROPgGOzGxLPrb8gMfzqwYHlCnm_gMHlUUdIFZk9LjDivhPkB2MlThEOws04HhGzxrwMqa9J1HorvWL7Oyk512l1APMOM4E1WRRx7ltTq7qWS2Qmp0vBjF55CB1J-TxJsErQAVPFN9wgInmHeQ
+                - 'heading "Group Projects vs Solo Projects: What Hiring Managers Trust" [level=3] [ref=f28e386]'
+                - generic [ref=f28e392]:
+                  - generic [ref=f28e393]: McTaba Labs
+                  - generic [ref=f28e395]: https://www.mctaba.com › bootcamps
+              - generic [ref=f28e397]:
+                - generic [ref=f28e398]: ·
+                - link "Dịch trang này" [ref=f28e399] [cursor=pointer]:
+                  - /url: /goto?url=CAESwgEB6zswFZO9Rwi1Bi4CwV0VZwCAJsfGUHqCYt6MLtoOidtebvhAFHwioRHACTXd16mS1pIwzubi3uytSsMeJprV22463uO-iVao5H-Qiv1r5s_OBTTBSIego3kShlsp80oAdi9tSQTrJpXkBx6Jv2rt01LJK1k8SuLACRD0ghH1ikbOoMZJDhgHphIbcoIua5GU_FzNicQmwAbYgsOOt0iGQXWdmPBGFZ4XzTtArg37N9oMo2aFURU8zfR2xJt-Orf7Jw
+              - button "Thông tin về kết quả này" [ref=f28e404] [cursor=pointer]
+            - generic [ref=f28e411]:
+              - text: Here is what a strong
+              - emphasis [ref=f28e412]: junior developer portfolio
+              - text: "looks like: One complete solo full-stack"
+              - emphasis [ref=f28e413]: project
+              - text: . This is your flagship. Something that solves a real ...
+          - generic [ref=f28e417]:
+            - generic [ref=f28e420]:
+              - link "Build Real-World Systems to Impress Recruiters LinkedIn · Amit Kumar >60 lượt thể hiện cảm xúc · 5 tháng trước" [ref=f28e422] [cursor=pointer]:
+                - /url: /goto?url=CAESugEB6zswFZYsvTxqYEJa0jMG-znBDqp7OWFhZf0MbvSQEEUeG6vKS4DP_Q2c80oHOXi2F65_BTSM0bB-0d65PXz0fxuFFBiNTtnzKDY6aMgQ5LOyAG_wfOnpHQThJJOJr-vWgFJKQG7iIx7D6TaK7TPt85JH0dNiaJHzv452cVbB8ZlQwJUMFM9yhH9uZHSmbXmOKM922PT7bPx31OFt1TGv6b6KAS6yh8lTrA2mSa1879PyxEektY09suc
+                - heading "Build Real-World Systems to Impress Recruiters" [level=3] [ref=f28e423]
+                - generic [ref=f28e429]:
+                  - generic [ref=f28e430]: LinkedIn · Amit Kumar
+                  - generic [ref=f28e432]: ">60 lượt thể hiện cảm xúc · 5 tháng trước"
+              - button "Thông tin về kết quả này" [ref=f28e438] [cursor=pointer]
+            - generic [ref=f28e445]:
+              - text: Build
+              - emphasis [ref=f28e446]: Real-World
+              - text: Systems to Impress Recruiters ... Your GitHub shows what you can code, but a
+              - emphasis [ref=f28e447]: portfolio
+              - text: shows who you are as a
+              - emphasis [ref=f28e448]: developer
+              - text: .
+          - generic [ref=f28e452]:
+            - generic [ref=f28e455]:
+              - link "6 Real-World Frontend Projects to Get Hired (2026) - Rishi Ray great-site.net https://dev-rishi.great-site.net › blog-p..." [ref=f28e457] [cursor=pointer]:
+                - /url: /goto?url=CAESlgEB6zswFWHon-hBGAcBtsXz8BSBL6FG0qwm4hKqGi7WhArNoEMkTYWBM39AbF51ZAggIQQ7WuTT14anQZbY_Y91b80UrDym8m68s9Ecl7qSnsX8UtrLHaeDYHBHT_zpT18RUUbOicLM6Torc6vGGDkYmvfn02OnyinLpDUvp6MMYKgxBJ0c2BCigty4e-qVszdzcaRStDk
+                - heading "6 Real-World Frontend Projects to Get Hired (2026) - Rishi Ray" [level=3] [ref=f28e458]
+                - generic [ref=f28e464]:
+                  - generic [ref=f28e465]: great-site.net
+                  - generic [ref=f28e467]: https://dev-rishi.great-site.net › blog-p...
+              - generic [ref=f28e469]:
+                - generic [ref=f28e470]: ·
+                - link "Dịch trang này" [ref=f28e471] [cursor=pointer]:
+                  - /url: /goto?url=CAES4gEB6zswFQLDz4q2mPIn-YkiD551wwUr6c1tlAhsBuCFLd2xCmuKtqgte2gU3SzgM3GilnCJZRXncOQDRLV449UvDmFcucazu3fiM7x_XDQZ-zejGsvrqocxhFTUJdoXilnZynY6cJku2ejaVVmOc0iN01qeTAHmFnFWO55D3Tw82Of676GmIRUwzATLZYZc_lIsGZm0g7kMURa3Yrj7TLCwew5ta83K5VSAWRQc_ay3IQLGtSt0yf1TQt6YsS7ZgHbVqB5pdAbKU93zpeBzL60zuroZb9Ql0R1KQ2O2_W5prhlE
+              - button "Thông tin về kết quả này" [ref=f28e476] [cursor=pointer]
+            - generic [ref=f28e483]:
+              - text: Build 6 production-ready frontend
+              - emphasis [ref=f28e484]: portfolio projects
+              - text: to get hired. Ditch to-do apps for dashboards, auth apps, and e-commerce platforms that impress ...
+          - generic [ref=f28e488]:
+            - generic [ref=f28e491]:
+              - link "\"The Portfolio Projects That Actually Get You Hired in 2026\" DEV Community https://dev.to › devraj_singh7 › the-p..." [ref=f28e493] [cursor=pointer]:
+                - /url: /goto?url=CAESlwEB6zswFeYBJsJTKQP4rFHKxiiHiicqpq_jtaNFSA52-wLbWi-0YauS1mMbNhh2O9hCrnm6jtVZlHK-NYAKl0NNpENixHymQMutAy_h5hV0rxPMrDiJ3swPQZrnki9zutRHTqja4yG84yuC0E_uLw3S8_IjXt7NAQ_TCIdlnXYXWgweHWIy_kxH067EArvM_Ue9hApSYNde
+                - heading "\"The Portfolio Projects That Actually Get You Hired in 2026\"" [level=3] [ref=f28e494]
+                - generic [ref=f28e500]:
+                  - generic [ref=f28e501]: DEV Community
+                  - generic [ref=f28e503]: https://dev.to › devraj_singh7 › the-p...
+              - generic [ref=f28e505]:
+                - generic [ref=f28e506]: ·
+                - link "Dịch trang này" [ref=f28e507] [cursor=pointer]:
+                  - /url: /goto?url=CAES4QEB6zswFd1EZgLghWE7GMkjyz-qc_Hpv0b8_Tj0Xk1ypGGHASjbfjwNcBox01OHEvdireuvbOCDHMZf9h6U1qpJgiryOAuQ0aOR0xTC2Jue-lldE8G6LZmC7ypt_Oeamm1paPq6NU7fQgCxZ_H-sVdCKK2MJw4dDu2CwzQ7arLbaGAKzWTwfArhOBLLbBbfbMlH_4JqkUk8uQZV2biH9CBkc_PNku7ncJxBd1C28Hqu2xLGBXzivVkCCIulCtcf82H550y0IbULpbFKJHpl-f0Di3pcJEd3MTEAcnIkAI0Jk6g
+              - button "Thông tin về kết quả này" [ref=f28e512] [cursor=pointer]
+            - generic [ref=f28e518]:
+              - generic [ref=f28e519]: 9 thg 4, 2026 —
+              - generic [ref=f28e520]:
+                - text: At least an empty
+                - emphasis [ref=f28e521]: portfolio
+                - text: doesn't actively tell the
+                - emphasis [ref=f28e522]: recruiter
+                - text: "\"I have no original ideas. ... Interview Prep Platform."
+                - emphasis [ref=f28e523]: Real-world
+                - text: impact ...
+          - generic [ref=f28e527]:
+            - generic [ref=f28e530]:
+              - link "What are some example of impressive projects that ... Reddit · r/cscareerquestions >110 bình luận · 2 năm trước" [ref=f28e532] [cursor=pointer]:
+                - /url: /goto?url=CAESqQEB6zswFVq9x4LDWWxvjTB9aORVa7v1zWP7_vvxxT4iJJVWGMBaDhq5GMHukuW4bdgt9PU8XnJknwCBKGBfnPD9LtlpGNVhx2HmKZXdn1V2ib9pCiV6abgRqUl5K2O8rCmim07xrkV1CvVhI3NeuyOvq22t_QlKIr3kNaPamQ6CvE_XDEnqvJ3mXEZ3viBvjFRrCiUvYrEqQiwDiDaC4sjAK1_wX1S9ZBSk
+                - heading "What are some example of impressive projects that ..." [level=3] [ref=f28e533]
+                - generic [ref=f28e539]:
+                  - generic [ref=f28e540]: Reddit · r/cscareerquestions
+                  - generic [ref=f28e542]: ">110 bình luận · 2 năm trước"
+              - button "Thông tin về kết quả này" [ref=f28e548] [cursor=pointer]
+            - generic [ref=f28e553]: So far I've built a weather app, a chess game, and I'm working on a Twitter clone. Are any of these good? To be honest I chose these projects because ...
+            - generic [ref=f28e559]:
+              - link "111 câu trả lời" [ref=f28e560] [cursor=pointer]:
+                - /url: /goto?url=CAESsQEB6zswFYR5pCpCkhXmWGuhzQ49xZ4Vqh5b7BupH3maHwKvQnkdBJ3sXA3AP_AD3glZ-WkjLlImJ-lo3wDY118pU4CM_pDf5P5PSw7rioH-Om83F4meb-gK2J5nyMtzaJzQl7V_H32onE0w0jF7LbQIH2nyTTEVhTG_ZfNgF3ZB37zeSIhLRi0wPcFaBeZpip000FtmFAHNKtfLvddNQSitCfnv1kw6DJhlSALJb4jwpbo
+              - generic [ref=f28e561]: ·
+              - generic [ref=f28e562]: "Câu trả lời hàng đầu:"
+              - generic [ref=f28e563]: This sub seems to disagree, but as someone who's seen hiring managers review resumes for 3 different ...
+          - generic [ref=f28e567]:
+            - generic [ref=f28e570]:
+              - link "How College Students Can Build Real-World Projects While ... Modern Age Coders https://learn.modernagecoders.com › ..." [ref=f28e572] [cursor=pointer]:
+                - /url: /goto?url=CAESnwEB6zswFc4DITbcD0oDoqw-cGkPp3KGoJ6hxfSJtnDwyolsZw5jI4IfqVZjnM2vrAwIeS3Em_XZ4PGHh27K7EjXAZ4WEiyZt_OmAncSD1ExCvX2YTDF6C8AN9K5ScZXL_jvgaBOJni9oHuaOkboZb9V1kC8jmQC25Z5HPwyaxC0Sp3uub-1SLmdZY2cnLXBL6zF_T_bDXWbHiSGJsve84Y
+                - heading "How College Students Can Build Real-World Projects While ..." [level=3] [ref=f28e573]
+                - generic [ref=f28e579]:
+                  - generic [ref=f28e580]: Modern Age Coders
+                  - generic [ref=f28e582]: https://learn.modernagecoders.com › ...
+              - generic [ref=f28e584]:
+                - generic [ref=f28e585]: ·
+                - link "Dịch trang này" [ref=f28e586] [cursor=pointer]:
+                  - /url: /goto?url=CAES6QEB6zswFcvAncBVGCWoSzFyDyQz3fLuCaVYY8fAW3r-vqDWlfddNuksN8RVvbZpoqkn0-ujk-lGfMelKUB5H-GpYZLZAEjW_7yxYNaHVluKjIxQofOQztg0T114mAKGgmWyXGhn2BKuXrLvERaRbRgcW8FPsy8PaCF0lVKAG5sXsnwBElA1vqLmnCN3hre57VZwqajsVTwbeBTsbgwvR83M88KGq9TKRrM0buMo6BguOsMPhz4gSDg7pvWTiHpdWos1cFHNXjbKX5KoU6vDY_90eQjsv9vp4I2awrLtpTVYXHVnx1Uikcvwgw
+              - button "Thông tin về kết quả này" [ref=f28e591] [cursor=pointer]
+            - generic [ref=f28e597]:
+              - generic [ref=f28e598]: 20 thg 3, 2025 —
+              - generic [ref=f28e599]:
+                - text: These demonstrate deeper skills and
+                - emphasis [ref=f28e600]: real-world
+                - text: applicability. Ideal for second and third-year students building their core
+                - emphasis [ref=f28e601]: portfolio
+                - text: .
+                - emphasis [ref=f28e602]: Project
+                - text: ...
+        - navigation [ref=f28e605]:
+          - heading "Điều hướng trang" [level=1] [ref=f28e606]
+          - text: "1"
+          - link "Page 2" [ref=f28e609] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=10&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8tMDegQIIxAE
+            - text: "2"
+          - link "Page 3" [ref=f28e611] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=20&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8tMDegQIIxAG
+            - text: "3"
+          - link "Page 4" [ref=f28e613] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=30&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8tMDegQIIxAI
+            - text: "4"
+          - link "Page 5" [ref=f28e615] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=40&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8tMDegQIIxAK
+            - text: "5"
+          - link "Page 6" [ref=f28e617] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=50&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8tMDegQIIxAM
+            - text: "6"
+          - link "Page 7" [ref=f28e619] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=60&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8tMDegQIIxAO
+            - text: "7"
+          - link "Page 8" [ref=f28e621] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=70&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8tMDegQIIxAQ
+            - text: "8"
+          - link "Page 9" [ref=f28e623] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=80&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8tMDegQIIxAS
+            - text: "9"
+          - link "Page 10" [ref=f28e625] [cursor=pointer]:
+            - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=90&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8tMDegQIIxAU
+            - text: "10"
+          - heading [level=2] [ref=f28e627]:
+            - link "Tiếp" [ref=f28e628] [cursor=pointer]:
+              - /url: /search?q=hiring+manager+%22portfolio%22+%22real+world%22+project+versus+clone+OR+tutorial+junior+developer+impressed&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQntSGlXmqM6Aj13nwxr-yZWnGdArtQ:1791457781641&ei=9XnHaqHeJu-kvr0PqrOrKA&start=10&sa=N&sstk=AS6-VmKm9JEBseaGKrfkR2LgcWO9GpClyaGdpBwnQtf5iiEbTLPkBNnbpH7LcpRzMKfornplPIgiwSNLpLEr35R-JmfMVARdToCeuA&ved=2ahUKEwjhrNGlpKqXAxVvkq8BHarZCgUQ8NMDegQIIxAW
+        - navigation
+    - contentinfo [ref=f28e631]:
+      - heading "Đường liên kết ở chân trang" [level=1] [ref=f28e632]
+      - generic [ref=f28e636]:
+        - generic [ref=f28e638]:
+          - text: Việt Nam
+          - generic [ref=f28e640]:
+            - button "Thủ Đức, Hồ Chí Minh - Dựa trên địa chỉ IP của bạn" [ref=f28e642] [cursor=pointer]:
+              - generic [ref=f28e643]: Thủ Đức, Hồ Chí Minh
+              - generic [ref=f28e645]:
+                - text: "-"
+                - generic [ref=f28e646]: Dựa trên địa chỉ IP của bạn
+            - text: "-"
+            - button "Cập nhật vị trí" [ref=f28e648] [cursor=pointer]
+        - generic [ref=f28e651]:
+          - link "Trợ giúp" [ref=f28e652] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=vi&fg=1
+          - link "Gửi phản hồi" [ref=f28e653] [cursor=pointer]:
+            - /url: "#"
+          - link "Quyền riêng tư" [ref=f28e654] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=vi&fg=1
+          - link "Điều khoản" [ref=f28e655] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=vi&fg=1

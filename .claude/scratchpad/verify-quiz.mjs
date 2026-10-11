@@ -1,0 +1,12 @@
+import fs from 'fs';
+const out = JSON.parse(fs.readFileSync('/home/kronosss2002/project/medium-clone/backend/prisma/translations/en-quiz/security-mastery/00.s0.json', 'utf8'));
+const src = JSON.parse(fs.readFileSync('/home/kronosss2002/project/medium-clone/backend/prisma/translations/tmp-quiz-slices/security-mastery/00-s0.json', 'utf8'));
+console.log('out rows:', out.length, '| src rows:', src.length);
+console.log('first id out:', out[0].id, '| first id src:', src[0].id);
+console.log('last id out:', out[out.length-1].id, '| last id src:', src[src.length-1].id);
+const idsMatch = out.every((r, i) => r.id === src[i].id);
+console.log('ids identical in order:', idsMatch);
+const optsMatch = out.every((r, i) => Array.isArray(r.optionsEn) && r.optionsEn.length === src[i].options.length);
+console.log('optionsEn length matches src for all rows:', optsMatch);
+const fieldsPresent = out.every(r => typeof r.id === 'number' && typeof r.questionEn === 'string' && Array.isArray(r.optionsEn) && r.optionsEn.length > 0 && (typeof r.explanationEn === 'string' || r.explanationEn === null));
+console.log('all fields present and valid:', fieldsPresent);

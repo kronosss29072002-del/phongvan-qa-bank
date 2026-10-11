@@ -1,0 +1,1693 @@
+- generic [active] [ref=f295e1]:
+  - link "Skip to main content" [ref=f295e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - region "Official website of the United States government" [ref=f295e3]:
+    - generic [ref=f295e6]:
+      - paragraph [ref=f295e10]: An official website of the United States government
+      - button "Here's how you know" [ref=f295e11] [cursor=pointer]
+  - banner [ref=f295e12]:
+    - generic [ref=f295e14]:
+      - link [ref=f295e15] [cursor=pointer]:
+        - /url: https://www.ncbi.nlm.nih.gov/
+        - img "NCBI home page" [ref=f295e16]
+      - generic [ref=f295e17]:
+        - button "Show search overlay" [ref=f295e18] [cursor=pointer]: Search
+        - button "Show login menu" [ref=f295e20] [cursor=pointer]:
+          - generic [ref=f295e21]: Log in
+    - navigation "Primary navigation" [ref=f295e22]:
+      - paragraph [ref=f295e23]: Primary site navigation
+  - region "PMC Header with search box" [ref=f295e24]:
+    - generic [ref=f295e25]:
+      - link "PMC Home" [ref=f295e28] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f295e29]:
+        - search [ref=f295e30]:
+          - generic [ref=f295e31]: Search PMC Full-Text Archive
+          - combobox "Search PMC Full-Text Archive" [ref=f295e33]:
+            - listbox "Suggestions"
+          - button "Search in PMC" [ref=f295e34] [cursor=pointer]
+        - list [ref=f295e37]:
+          - listitem [ref=f295e38]:
+            - link "Journal List" [ref=f295e39] [cursor=pointer]:
+              - /url: /journals/
+            - text: "|"
+          - listitem [ref=f295e40]:
+            - link "User Guide" [ref=f295e41] [cursor=pointer]:
+              - /url: /about/userguide/
+  - generic [ref=f295e44]:
+    - generic [ref=f295e46]:
+      - complementary "Disclaimer note" [ref=f295e49]:
+        - text: "As a library, NLM provides access to scientific literature. Inclusion in an NLM database does not imply endorsement of, or agreement with, the contents by NLM or the National Institutes of Health. Learn more:"
+        - link "PMC Disclaimer" [ref=f295e50] [cursor=pointer]:
+          - /url: /about/disclaimer/
+        - text: "|"
+        - link "PMC Copyright Notice" [ref=f295e51] [cursor=pointer]:
+          - /url: /about/copyright/
+      - main [ref=f295e53]:
+        - region "Journal banner" [ref=f295e54]:
+          - img "NIHPA Author Manuscripts logo" [ref=f295e55]
+        - article [ref=f295e56]:
+          - region "Article citation and metadata" [ref=f295e57]:
+            - generic [ref=f295e58]:
+              - generic [ref=f295e59]:
+                - button "▸ Acad Pediatr" [ref=f295e61] [cursor=pointer]
+                - text: ". Author manuscript; available in PMC: 2015 May 1."
+              - generic [ref=f295e62]:
+                - emphasis [ref=f295e63]: "Published in final edited form as:"
+                - text: "Acad Pediatr. 2014 May-Jun;14(3):262–270. doi:"
+                - link "External, opens in a new tab. 10.1016/j.acap.2014.01.003" [ref=f295e64] [cursor=pointer]:
+                  - /url: https://doi.org/10.1016/j.acap.2014.01.003
+            - generic [ref=f295e66]:
+              - 'heading "Liquid Medication Dosing Errors in Children: Role of Provider Counseling Strategies" [level=1] [ref=f295e68]'
+              - generic [ref=f295e69]:
+                - link "H Shonna Yin" [ref=f295e70] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/?term="Yin%20HS"[Author]
+                - superscript [ref=f295e71]: "1"
+                - text: ","
+                - link "Benard P Dreyer" [ref=f295e72] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/?term="Dreyer%20BP"[Author]
+                - superscript [ref=f295e73]: "1"
+                - text: ","
+                - link "Hannah A Moreira" [ref=f295e74] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/?term="Moreira%20HA"[Author]
+                - superscript [ref=f295e75]: "1"
+                - text: ","
+                - link "Linda van Schaick" [ref=f295e76] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/?term="van%20Schaick%20L"[Author]
+                - superscript [ref=f295e77]: "1"
+                - text: ","
+                - link "Luis Rodriguez" [ref=f295e78] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/?term="Rodriguez%20L"[Author]
+                - superscript [ref=f295e79]: "2"
+                - text: ","
+                - link "Susanne Boettger" [ref=f295e80] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/?term="Boettger%20S"[Author]
+                - superscript [ref=f295e81]: "1"
+                - text: ","
+                - link "Alan L Mendelsohn" [ref=f295e82] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/?term="Mendelsohn%20AL"[Author]
+                - superscript [ref=f295e83]: "1"
+              - list [ref=f295e84]:
+                - listitem [ref=f295e85]:
+                  - button "▸ Author information" [ref=f295e86] [cursor=pointer]
+                - listitem [ref=f295e87]:
+                  - button "▸ Copyright and License information" [ref=f295e88] [cursor=pointer]
+              - generic [ref=f295e89]:
+                - text: "PMCID: PMC4034520 NIHMSID: NIHMS554626 PMID:"
+                - link "24767779" [ref=f295e90] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/24767779/
+              - complementary "Related or updated information about this article" [ref=f295e91]:
+                - generic [ref=f295e92]:
+                  - text: The publisher's version of this article is available at
+                  - link "External, opens in a new tab. Acad Pediatr" [ref=f295e93] [cursor=pointer]:
+                    - /url: https://doi.org/10.1016/j.acap.2014.01.003
+          - region "Article content" [ref=f295e94]:
+            - generic [ref=f295e95]:
+              - generic [ref=f295e96]:
+                - heading "Abstract" [level=2] [ref=f295e97]
+                - generic [ref=f295e98]:
+                  - heading "Objective" [level=3] [ref=f295e99]
+                  - paragraph [ref=f295e100]: To examine the degree to which recommended provider counseling strategies, including advanced communication techniques and dosing instrument provision, are associated with reductions in parent liquid medication dosing errors.
+                - generic [ref=f295e101]:
+                  - heading "Methods" [level=3] [ref=f295e102]
+                  - paragraph [ref=f295e103]: "Cross-sectional analysis of baseline data on provider communication and dosing instrument provision from a study of a health literacy intervention to reduce medication errors. Parents whose children (<9 years) were seen in two urban public hospital pediatric emergency departments (EDs) and were prescribed daily dose liquid medications self-reported whether they received counseling about their child’s medication, including advanced strategies (teachback, drawings/pictures, demonstration, showback) and receipt of a dosing instrument. Primary dependent variable: observed dosing error (>20% deviation from prescribed). Multivariate logistic regression analyses performed, controlling for: parent age, language, country, ethnicity, socioeconomic status, education, health literacy (Short Test of Functional Health Literacy in Adults); child age, chronic disease status; site."
+                - generic [ref=f295e104]:
+                  - heading "Results" [level=3] [ref=f295e105]
+                  - paragraph [ref=f295e106]: Of 287 parents, 41.1% made dosing errors. Advanced counseling and instrument provision in the ED were reported by 33.1% and 19.2%, respectively; 15.0% reported both. Advanced counseling and instrument provision in the ED were associated with decreased errors (30.5 vs. 46.4%, p=0.01; 21.8 vs. 45.7%, p=0.001). In adjusted analyses, ED advanced counseling in combination with instrument provision was associated with a decreased odds of error compared to receiving neither (AOR 0.3; 95% CI 0.1–0.7); advanced counseling alone and instrument alone were not significantly associated with odds of error.
+                - generic [ref=f295e107]:
+                  - heading "Conclusion" [level=3] [ref=f295e108]
+                  - paragraph [ref=f295e109]: Provider use of advanced counseling strategies and dosing instrument provision may be especially effective in reducing errors when used together.
+                - paragraph [ref=f295e111]:
+                  - strong [ref=f295e112]: "Keywords:"
+                  - text: medication error, adherence, health literacy, patient education, parents, ambulatory care, patient communication
+              - generic [ref=f295e113]:
+                - heading "INTRODUCTION" [level=2] [ref=f295e114]
+                - paragraph [ref=f295e115]:
+                  - text: Studies suggest that parents frequently misunderstand instructions regarding how to administer medication to their children correctly, with over 40% of caregivers making errors in dosing liquid medications;
+                  - superscript [ref=f295e116]:
+                    - link "1" [ref=f295e117] [cursor=pointer]:
+                      - /url: "#R1"
+                    - text: –
+                    - link "4" [ref=f295e118] [cursor=pointer]:
+                      - /url: "#R4"
+                  - text: those with low health literacy, as well as those with limited English proficiency, are at particular risk for medication administration errors.
+                  - superscript [ref=f295e119]:
+                    - link "5" [ref=f295e120] [cursor=pointer]:
+                      - /url: "#R5"
+                    - text: ","
+                    - link "6" [ref=f295e121] [cursor=pointer]:
+                      - /url: "#R6"
+                    - text: ","
+                    - link "7" [ref=f295e122] [cursor=pointer]:
+                      - /url: "#R7"
+                  - text: Potential strategies to reduce errors include the use of a health literacy-informed approach to improving provider communication of medication instructions to parents through a)the use of advanced counseling strategies, and b)the provision of standardized dosing instruments.
+                  - superscript [ref=f295e123]:
+                    - link "3" [ref=f295e124] [cursor=pointer]:
+                      - /url: "#R3"
+                    - text: ","
+                    - link "8" [ref=f295e125] [cursor=pointer]:
+                      - /url: "#R8"
+                - paragraph [ref=f295e126]:
+                  - text: Parent administration of medications to young children can be complex. Oral liquid formulations are typically prescribed to young children, and many parents find that accurate measurement is challenging.
+                  - superscript [ref=f295e127]:
+                    - link "9" [ref=f295e128] [cursor=pointer]:
+                      - /url: "#R9"
+                    - text: ","
+                    - link "10" [ref=f295e129] [cursor=pointer]:
+                      - /url: "#R10"
+                  - text: The ability to understand the importance and correct use of standardized dosing instruments (eg. oral syringe, dropper, dosing cup), as well as the ability to interpret measurement units (eg. milliliter, teaspoon, tablespoon), are among the key skills that help parents avoid making errors.
+                  - superscript [ref=f295e130]:
+                    - link "6" [ref=f295e131] [cursor=pointer]:
+                      - /url: "#R6"
+                    - text: ","
+                    - link "11" [ref=f295e132] [cursor=pointer]:
+                      - /url: "#R11"
+                    - text: ","
+                    - link "12" [ref=f295e133] [cursor=pointer]:
+                      - /url: "#R12"
+                - paragraph [ref=f295e134]:
+                  - text: Provider use of health literacy-informed communication strategies is generally recommended as part of a universal precautions approach, and may be especially helpful for medication counseling.
+                  - superscript [ref=f295e135]:
+                    - link "13" [ref=f295e136] [cursor=pointer]:
+                      - /url: "#R13"
+                  - text: Advanced counseling strategies, including the use of verbal teachback, where patients are asked to describe in their own words what they learned, provider demonstration, patient “showback”, and provider use of pictures or drawings, have been recommended,
+                  - superscript [ref=f295e137]:
+                    - link "10" [ref=f295e138] [cursor=pointer]:
+                      - /url: "#R10"
+                    - text: ","
+                    - link "13" [ref=f295e139] [cursor=pointer]:
+                      - /url: "#R13"
+                    - text: –
+                    - link "19" [ref=f295e140] [cursor=pointer]:
+                      - /url: "#R19"
+                  - text: but are underutilized.
+                  - superscript [ref=f295e141]:
+                    - link "20" [ref=f295e142] [cursor=pointer]:
+                      - /url: "#R20"
+                    - text: ","
+                    - link "21" [ref=f295e143] [cursor=pointer]:
+                      - /url: "#R21"
+                  - text: To date, there is limited study of the use of advanced counseling strategies for the reduction of pediatric medication dosing errors.
+                - paragraph [ref=f295e144]:
+                  - text: Provider provision of a standardized dosing instrument is also thought to be effective in reducing errors. Despite recommendations that standardized instruments be used, many parents continue to use kitchen spoons,
+                  - superscript [ref=f295e145]:
+                    - link "9" [ref=f295e146] [cursor=pointer]:
+                      - /url: "#R9"
+                    - text: ","
+                    - link "10" [ref=f295e147] [cursor=pointer]:
+                      - /url: "#R10"
+                    - text: ","
+                    - link "22" [ref=f295e148] [cursor=pointer]:
+                      - /url: "#R22"
+                  - text: and standardized instruments are not universally distributed in EDs or pharmacies.
+                  - superscript [ref=f295e149]:
+                    - link "3" [ref=f295e150] [cursor=pointer]:
+                      - /url: "#R3"
+                    - text: ","
+                    - link "23" [ref=f295e151] [cursor=pointer]:
+                      - /url: "#R23"
+                  - text: Incorporating standardized instruments as part of the demonstration and teachback portions of advanced counseling, in concert with providing instruments for parents to take home, may be especially effective.
+                  - superscript [ref=f295e152]:
+                    - link "3" [ref=f295e153] [cursor=pointer]:
+                      - /url: "#R3"
+                    - text: ","
+                    - link "10" [ref=f295e154] [cursor=pointer]:
+                      - /url: "#R10"
+                - paragraph [ref=f295e155]: Overall, few studies have examined health literacy-informed medication counseling strategies, and the value of provision of a dosing instrument as part of counseling. We have previously shown in the context of an intervention, that advanced counseling strategies which incorporated use of a standardized dosing instrument, is associated with a reduction in dosing errors. To date, there has been limited study of this issue in the setting of routine medication counseling, including the role of advanced counseling with and without provision of a dosing instrument. We therefore sought to assess the association between health provider counseling approach and dosing errors.
+              - generic [ref=f295e156]:
+                - heading "METHODS" [level=2] [ref=f295e157]
+                - generic [ref=f295e158]:
+                  - heading "Participants and Setting" [level=3] [ref=f295e159]
+                  - paragraph [ref=f295e160]: This was a cross-sectional analysis of data collected from parents of children seen in the pediatric ED of two urban public hospitals in New York City (Bellevue Hospital Center, Woodhull Medical Center), between May 31, 2010 and September 10, 2011. The EDs of both hospitals serve predominantly low SES, immigrant families, including a large percentage of Latino families. Data from this study was collected as part of baseline assessments performed within a pre/post-implementation study of a low literacy intervention to reduce parent medication administration errors, which includes the institution of a program to train health providers in low literacy medication counseling strategies. At the time the baseline data was collected, neither ED site had a standard approach or policy with respect to the use of advanced counseling strategies or the provision of dosing instruments, even though dosing instruments were available at each site. In addition, as families were recruited by phone, few providers were aware that a study on baseline medication counseling practices was being conducted.
+                  - paragraph [ref=f295e161]: "Research assistants systematically assessed families to determine eligibility. Chart reviews were performed to assess initial eligibility; families were then screened for additional criteria by telephone. Inclusion criteria was primary caregiver of a child <9 years who was prescribed a daily dose short course (≤14 day) liquid medication in the pediatric ED. Exclusion criteria at initial chart review were: caregiver not legal guardian of child, caregiver not English or Spanish-speaking, residency outside of NYC, hospital admission, child with psychiatric or child protection-related issue, no listed phone number. Exclusion criteria at telephone screening included verification of initial exclusion criteria and additional assessment of the following exclusion criteria: person reached by phone not the person counseled in the ED, no eligible medication prescribed."
+                  - paragraph [ref=f295e162]:
+                    - text: For the purposes of this paper, we refer to both parents and caregivers/legal guardians as parents. At Bellevue, consecutive eligible parents were contacted by phone starting 4 days after the end date of the prescribed medication, with a plan to reach parents within 2 weeks of the end date. While consecutive parents were initially assessed for eligibility at Woodhull, given the higher number of patients at this site, every 4
+                    - superscript [ref=f295e163]: th
+                    - text: parent was systematically contacted beginning in October 2010.
+                  - paragraph [ref=f295e164]: Assessments were completed by phone; an in-person follow-up time was also arranged to occur within 8 weeks of the end date of the prescribed medication to allow for the in-person assessment of dosing as well as performance of the health literacy assessment.
+                  - paragraph [ref=f295e165]: Verbal and written informed consent was obtained from participants. Study information was provided in English or Spanish, based on parent preference. Trained bilingual English/ Spanish research assistants performed Spanish-language assessments. A modest incentive was provided to parents for their participation ($20 gift card). This study was approved by NYU School of Medicine’s Institutional Review Board, and the Bellevue and Woodhull Facility Research Review Committees.
+                - generic [ref=f295e166]:
+                  - heading "Measures" [level=3] [ref=f295e167]
+                  - paragraph [ref=f295e168]: Data included both interview and observational measures. The primary outcome variable was observed dosing error. The primary predictor variables were provider counseling strategies and provider dosing instrument provision.
+                  - generic [ref=f295e169]:
+                    - heading "Dosing error" [level=4] [ref=f295e170]
+                    - paragraph [ref=f295e171]:
+                      - text: Parent dosing error was assessed by direct observation. The primary criterion used was whether the amount measured was within 20% of the prescribed dose.
+                      - superscript [ref=f295e172]:
+                        - link "3" [ref=f295e173] [cursor=pointer]:
+                          - /url: "#R3"
+                        - text: ","
+                        - link "24" [ref=f295e174] [cursor=pointer]:
+                          - /url: "#R24"
+                        - text: ","
+                        - link "25" [ref=f295e175] [cursor=pointer]:
+                          - /url: "#R25"
+                      - text: The dose prescribed by the provider was obtained by chart review. Raters who determined whether or not an error had occurred were blinded to health literacy results.
+                    - paragraph [ref=f295e176]:
+                      - text: To assess dosing accuracy via direct observation, a structured interview was conducted using a previously established protocol, with each parent demonstrating the dose of medication using a standard medication bottle containing over-the-counter Tylenol.
+                      - superscript [ref=f295e177]:
+                        - link "3" [ref=f295e178] [cursor=pointer]:
+                          - /url: "#R3"
+                      - text: Interrater reliability, measured by having 2 raters assess accuracy using the 20% criterion for a subsample of 150 parents, was high (kappa>0.9). For the limited number of patients who received more than 1 daily dose medication (7 patients), only the first documented medication was included in analyses. For patients who received a medication prescription involving tapered dosing, the most frequently administered dose was used for analyses.
+                  - generic [ref=f295e179]:
+                    - heading "Provider Counseling Strategies" [level=4] [ref=f295e180]
+                    - paragraph [ref=f295e181]: Any provider counseling was assessed by asking parents to report whether they had spoken to anyone about how to give the prescribed medication(s) in the ED and/or pharmacy.
+                    - paragraph [ref=f295e182]:
+                      - text: "Advanced counseling strategies were assessed for the ED only. Verbal teachback and provider use of pictures/drawings was assessed with the questions: “Did your doctor or nurse ask you to describe to him/her how you were going to follow the medication instructions?” and “Did your doctor or nurse use pictures or drawings to help you understand how to give your child’s medicine correctly?” These questions were adapted from the Agency for Healthcare Research and Quality’s (AHRQ) Consumer Assessment of Healthcare Providers and Systems surveys (CAHPS)."
+                      - superscript [ref=f295e183]:
+                        - link "26" [ref=f295e184] [cursor=pointer]:
+                          - /url: "#R26"
+                    - paragraph [ref=f295e185]: "Demonstration and showback were assessed by first asking parents if anyone had shown them how to give the correct dose of medicine (“Did anyone show you how to give the correct dose of medicine?”). If they responded affirmatively, they were asked who showed them (eg. doctor, nurse), and the following questions: “When the [PROVIDER TYPE] showed you how to dose, did he/she demonstrate the dose using a dosing instrument?” and “Did you use a dosing instrument to show the [PROVIDER TYPE] the dose you planned to give your child?” Prior to this question, parents had been asked about which dosing instrument they had used. Parents who did not understand the term “dosing instrument” were provided with a brief verbal explanation which included naming examples of dosing instruments (eg. dosing cup, oral syringe)."
+                    - paragraph [ref=f295e186]: Advanced counseling strategies in the pharmacy was not assessed, as this was a cross-sectional analysis of baseline data on provider communication and dosing instrument provision from an ED-focused pre-/post-implementation study of a health literacy intervention to reduce medication errors.
+                    - paragraph [ref=f295e187]: Parents were also asked about the language used in the ED encounter. Language concordance was determined based on whether or not the parent language of preference matched the language used in the ED encounter.
+                  - generic [ref=f295e188]:
+                    - heading "Provision of a Standardized Dosing Instrument" [level=4] [ref=f295e189]
+                    - paragraph [ref=f295e190]: Parents were asked to report whether they received a dosing instrument from the pediatric ED and/or pharmacy, as well as the type(s) of instrument (eg. oral syringe, dosing cup, dosing spoon, measuring spoon) they received.
+                  - generic [ref=f295e191]:
+                    - heading "Advanced Counseling Strategies with and without Provision of a Standardized Dosing Instrument (ED only)" [level=4] [ref=f295e192]
+                    - paragraph [ref=f295e193]: "Medication counseling which employs advanced communication strategies, such as demonstration and showback, often involve the use of a dosing instrument, which increases the likelihood that a dosing instrument will also be provided for a parent to take home. In order to examine the combined and separate effects of each strategy, parents were categorized into 4 groups based on receipt of the following in the ED: 1) advanced counseling only, 2) instrument only, 3) advanced counseling with instrument, and 4) neither."
+                  - generic [ref=f295e194]:
+                    - heading "Sociodemographic Data, Parent Health Literacy, and Child Health Status" [level=4] [ref=f295e195]
+                    - paragraph [ref=f295e196]:
+                      - text: Sociodemographic data, obtained using a structured questionnaire, included child’s age and gender, as well as parent age and gender, relationship to the child, preferred language, ethnicity, country of birth, socioeconomic status (SES), and level of education. Relationship to the child was categorized as mother or other. Language was characterized based on the language of the interview (English or Spanish). Ethnicity was categorized as Latino or non-Latino. Latinos represent the majority of families in our sample and no other ethnic group was large enough to allow us to define a separate category. Country of origin was categorized as US-born or not. SES was dichotomized as Hollingshead Index of 4 or 5 (lowest resource levels) versus all others.
+                      - superscript [ref=f295e197]:
+                        - link "27" [ref=f295e198] [cursor=pointer]:
+                          - /url: "#R27"
+                      - text: Level of education was categorized based on graduation from high school. Parent health literacy level was assessed as part of the in-person assessment (after dosing assessment) using the Short Test of Functional Health Literacy (S-TOFHLA).
+                      - superscript [ref=f295e199]:
+                        - link "28" [ref=f295e200] [cursor=pointer]:
+                          - /url: "#R28"
+                      - text: Parents who were categorized as having inadequate or marginal health literacy were combined into one low literacy category, and compared to those with adequate literacy.
+                      - superscript [ref=f295e201]:
+                        - link "29" [ref=f295e202] [cursor=pointer]:
+                          - /url: "#R29"
+                        - text: ","
+                        - link "30" [ref=f295e203] [cursor=pointer]:
+                          - /url: "#R30"
+                        - text: ","
+                        - link "31" [ref=f295e204] [cursor=pointer]:
+                          - /url: "#R31"
+                      - text: Child chronic disease status was assessed using the Children with Special Health Care Needs screener.
+                      - superscript [ref=f295e205]:
+                        - link "32" [ref=f295e206] [cursor=pointer]:
+                          - /url: "#R32"
+                - generic [ref=f295e207]:
+                  - heading "Statistical Analyses" [level=3] [ref=f295e208]
+                  - paragraph [ref=f295e209]:
+                    - text: Data was analyzed using SPSS 20.0 (SPSS Inc., Chicago, IL). For all analyses, a 2 tailed pvalue <0.05 was considered to be statistically significant. We assessed unadjusted associations between dosing error and independent variables of interest (provider counseling, dosing instrument provision) using bivariate analyses (χ
+                    - superscript [ref=f295e210]: "2"
+                    - text: or Fisher’s Exact test). Those independent variables (i.e. advanced counseling in the ED, instrument provision in the ED) found to be significantly related to dosing errors in bivariate analyses were examined in adjusted analyses (multiple logistic regression analyses), with a priori inclusion of potential confounders, including parent age, race/ethnicity, language, country of birth, SES, education, health literacy, as well as child age and chronic disease status, and site. To examine health literacy and language as potential moderators of the relationship between provider counseling strategies and dosing errors, we performed exploratory subgroup analyses by health literacy and language. We also tested whether there was an interaction between health literacy and language. To explore the role of language concordance, additional analyses were performed which included this variable in the model; exploratory subgroup analyses by language concordance was also conducted.
+              - generic [ref=f295e211]:
+                - heading "RESULTS" [level=2] [ref=f295e212]
+                - paragraph [ref=f295e213]:
+                  - text: Enrollment took place from June 23, 2010 through September 26, 2011, during the patient recruitment periods at each of the 2 ED sites (
+                  - link "Figure 1" [ref=f295e214] [cursor=pointer]:
+                    - /url: "#F1"
+                  - text: ). Of eligible parents reached by telephone, 400 (70.4%) were enrolled by phone, while 168 (29.6%) refused to participate. There were no statistically significant differences between parents who did and did not enroll with respect to child’s age and sex. There was no difference in the rate of refusal to participate by site. Of 400 enrolled parents (200 per site), 113 did not return for in-person follow-up (28.3%). Therefore, 287 parents comprised the sample included in these analyses. There was no difference in those who did and did not follow-up by parent characteristics or site.
+                - figure [ref=f295e215]:
+                  - heading "Figure 1." [level=3] [ref=f295e216]
+                  - paragraph [ref=f295e217]:
+                    - link [ref=f295e218] [cursor=pointer]:
+                      - /url: https://www.ncbi.nlm.nih.gov/core/lw/2.0/html/tileshop_pmc/tileshop_pmc_inline.html?title=Click%20on%20image%20to%20zoom&p=PMC3&id=4034520_nihms554626f1.jpg
+                      - img "Figure 1" [ref=f295e219]
+                      - text: 🔍
+                  - link "Open in a new tab" [ref=f295e221] [cursor=pointer]:
+                    - /url: figure/F1/
+                  - generic [ref=f295e222]:
+                    - paragraph [ref=f295e223]: Study Enrollment
+                    - paragraph [ref=f295e224]:
+                      - superscript [ref=f295e225]: a
+                      - text: While eligibility was initially assessed for all patients at both sites, given the higher number of patients at one site, a plan was subsequently made to contact every 4
+                      - superscript [ref=f295e226]: th
+                      - text: patient at that site
+                - paragraph [ref=f295e227]:
+                  - text: Study subjects were primarily mothers (90.2%), from low SES backgrounds (82.6%) (
+                  - link "Table 1" [ref=f295e228] [cursor=pointer]:
+                    - /url: "#T1"
+                  - text: "). Of medications prescribed, the majority were antibiotics (80.5%) and corticosteroids (17.4%). The most common diagnoses were: otitis media (36.9%), skin infection (13.9%), reactive airway disease (13.9%)."
+                - generic [ref=f295e229]:
+                  - heading "TABLE 1." [level=3] [ref=f295e230]
+                  - paragraph [ref=f295e232]:
+                    - text: Characteristics of study population (n=287)
+                    - link [ref=f295e233] [cursor=pointer]:
+                      - /url: "#TFN2"
+                      - superscript [ref=f295e234]: a
+                  - table [ref=f295e236]:
+                    - rowgroup [ref=f295e237]:
+                      - row [ref=f295e238]:
+                        - cell [ref=f295e239]:
+                          - strong [ref=f295e240]: Child Characteristics
+                        - cell [ref=f295e241]
+                      - row [ref=f295e242]:
+                        - cell [ref=f295e243]:
+                          - separator [ref=f295e244]
+                      - row [ref=f295e245]:
+                        - cell "Age, mean (SD), y" [ref=f295e246]
+                        - cell "3.5 (2.4)" [ref=f295e247]
+                      - row [ref=f295e248]:
+                        - cell [ref=f295e249]:
+                          - separator [ref=f295e250]
+                      - row [ref=f295e251]:
+                        - cell "Chronic medical problem, n (%)" [ref=f295e252]
+                        - cell "67 (23.3)" [ref=f295e253]
+                      - row [ref=f295e254]:
+                        - cell [ref=f295e255]:
+                          - separator [ref=f295e256]
+                      - row [ref=f295e257]:
+                        - cell [ref=f295e258]:
+                          - strong [ref=f295e259]: Parent Characteristics
+                        - cell [ref=f295e260]
+                      - row [ref=f295e261]:
+                        - cell [ref=f295e262]:
+                          - separator [ref=f295e263]
+                      - row [ref=f295e264]:
+                        - cell [ref=f295e265]:
+                          - text: Age, mean (SD), y
+                          - link [ref=f295e266] [cursor=pointer]:
+                            - /url: "#TFN3"
+                            - superscript [ref=f295e267]: b
+                        - cell "32.3 (8.0)" [ref=f295e268]
+                      - row [ref=f295e269]:
+                        - cell [ref=f295e270]:
+                          - separator [ref=f295e271]
+                      - row [ref=f295e272]:
+                        - cell "Relationship to Child, n (%)" [ref=f295e273]
+                        - cell [ref=f295e274]
+                      - row [ref=f295e275]:
+                        - cell "Mother" [ref=f295e276]
+                        - cell "259 (90.2)" [ref=f295e277]
+                      - row [ref=f295e278]:
+                        - cell [ref=f295e279]:
+                          - separator [ref=f295e280]
+                      - row [ref=f295e281]:
+                        - cell "Marital Status Single, n (%)" [ref=f295e282]
+                        - cell "119 (41.5)" [ref=f295e283]
+                      - row [ref=f295e284]:
+                        - cell [ref=f295e285]:
+                          - separator [ref=f295e286]
+                      - row [ref=f295e287]:
+                        - cell [ref=f295e288]:
+                          - text: Hollingshead SES Level 4 or 5, n (%)
+                          - link [ref=f295e289] [cursor=pointer]:
+                            - /url: "#TFN4"
+                            - superscript [ref=f295e290]: c
+                        - cell "237 (82.6)" [ref=f295e291]
+                      - row [ref=f295e292]:
+                        - cell [ref=f295e293]:
+                          - separator [ref=f295e294]
+                      - row [ref=f295e295]:
+                        - 'cell "Country of birth: Non-US Born, n (%)" [ref=f295e296]'
+                        - cell "176 (61.3)" [ref=f295e297]
+                      - row [ref=f295e298]:
+                        - cell [ref=f295e299]:
+                          - separator [ref=f295e300]
+                      - row [ref=f295e301]:
+                        - cell "Race/Ethnicity, n (%)" [ref=f295e302]
+                        - cell [ref=f295e303]
+                      - row [ref=f295e304]:
+                        - cell "Hispanic" [ref=f295e305]
+                        - cell "212 (73.9)" [ref=f295e306]
+                      - row [ref=f295e307]:
+                        - cell "Non-Hispanic" [ref=f295e308]
+                        - cell [ref=f295e309]
+                      - row [ref=f295e310]:
+                        - cell "White, non-Hispanic" [ref=f295e311]
+                        - cell "8 (2.8)" [ref=f295e312]
+                      - row [ref=f295e313]:
+                        - cell "Black, non-Hispanic" [ref=f295e314]
+                        - cell "52 (18.1)" [ref=f295e315]
+                      - row [ref=f295e316]:
+                        - cell "Asian, non-Hispanic" [ref=f295e317]
+                        - cell "11 (3.8)" [ref=f295e318]
+                      - row [ref=f295e319]:
+                        - cell "Other, non-Hispanic" [ref=f295e320]
+                        - cell "4 (1.4)" [ref=f295e321]
+                      - row [ref=f295e322]:
+                        - cell [ref=f295e323]:
+                          - separator [ref=f295e324]
+                      - row [ref=f295e325]:
+                        - cell [ref=f295e326]:
+                          - text: Language Spanish, n (%)
+                          - link [ref=f295e327] [cursor=pointer]:
+                            - /url: "#TFN5"
+                            - superscript [ref=f295e328]: d
+                        - cell "134 (46.7)" [ref=f295e329]
+                      - row [ref=f295e330]:
+                        - cell [ref=f295e331]:
+                          - separator [ref=f295e332]
+                      - row [ref=f295e333]:
+                        - cell "Education, n (%)" [ref=f295e334]
+                        - cell [ref=f295e335]
+                      - row [ref=f295e336]:
+                        - cell "Less than HS Graduate" [ref=f295e337]
+                        - cell "138 (48.1)" [ref=f295e338]
+                      - row [ref=f295e339]:
+                        - cell "HS Graduate or Equivalent" [ref=f295e340]
+                        - cell "72 (25.1)" [ref=f295e341]
+                      - row [ref=f295e342]:
+                        - cell "Higher than HS Graduate" [ref=f295e343]
+                        - cell "77 (26.8)" [ref=f295e344]
+                      - row [ref=f295e345]:
+                        - cell [ref=f295e346]:
+                          - separator [ref=f295e347]
+                      - row [ref=f295e348]:
+                        - cell [ref=f295e349]:
+                          - text: Health Literacy, n (%)
+                          - link [ref=f295e350] [cursor=pointer]:
+                            - /url: "#TFN6"
+                            - superscript [ref=f295e351]: e
+                        - cell [ref=f295e352]
+                      - row [ref=f295e353]:
+                        - cell "Inadequate Literacy" [ref=f295e354]
+                        - cell "71 (24.9)" [ref=f295e355]
+                      - row [ref=f295e356]:
+                        - cell "Marginal Literacy" [ref=f295e357]
+                        - cell "34 (11.9)" [ref=f295e358]
+                      - row [ref=f295e359]:
+                        - cell "Adequate Literacy" [ref=f295e360]
+                        - cell "180 (63.2)" [ref=f295e361]
+                  - link "Open in a new tab" [ref=f295e363] [cursor=pointer]:
+                    - /url: table/T1/
+                  - generic [ref=f295e364]:
+                    - paragraph [ref=f295e366]: "Abbreviations: SES, socioeconomic status; TOFHLA, Test of Functional Health Literacy in Adults."
+                    - generic [ref=f295e367]:
+                      - superscript [ref=f295e368]: a
+                      - paragraph [ref=f295e369]: Data are mean (SD) or n (%).
+                    - generic [ref=f295e370]:
+                      - superscript [ref=f295e371]: b
+                      - paragraph [ref=f295e372]: Missing for 4 subjects.
+                    - generic [ref=f295e373]:
+                      - superscript [ref=f295e374]: c
+                      - paragraph [ref=f295e375]: Lower number represents higher SES and greater family resources.
+                    - generic [ref=f295e376]:
+                      - superscript [ref=f295e377]: d
+                      - paragraph [ref=f295e378]: Language of survey administration.
+                    - generic [ref=f295e379]:
+                      - superscript [ref=f295e380]: e
+                      - paragraph [ref=f295e381]: Health literacy measured using STOFHLA. Data missing for 2 subjects who did not complete the STOFHLA. Mean(SD) STOFHLA score was 75.5(22.1) (range 0–100).
+                - generic [ref=f295e382]:
+                  - heading "Dosing Errors" [level=3] [ref=f295e383]
+                  - paragraph [ref=f295e384]:
+                    - text: Overall, 41.1% made a dosing error (
+                    - link "Table 3" [ref=f295e385] [cursor=pointer]:
+                      - /url: "#T3"
+                    - text: ); mean(SD) % dose measured = 0.9(0.3) (range 0.08–2.67). Of dosing errors, 81.4% involved dosing under the prescribed amount, while 18.6% involved dosing above the recommended amount.
+                  - generic [ref=f295e386]:
+                    - heading "TABLE 3." [level=4] [ref=f295e387]
+                    - paragraph [ref=f295e389]: Parent dosing errors by provider counseling strategies and dosing instrument provision
+                    - table [ref=f295e391]:
+                      - rowgroup [ref=f295e392]:
+                        - row [ref=f295e393]:
+                          - columnheader [ref=f295e394]
+                          - columnheader [ref=f295e395]
+                          - columnheader [ref=f295e396]
+                          - columnheader "Dosing Error" [ref=f295e397]: DosingError
+                        - row [ref=f295e398]:
+                          - columnheader [ref=f295e399]
+                          - columnheader [ref=f295e400]
+                          - columnheader "n" [ref=f295e401]
+                          - columnheader "n(%)" [ref=f295e402]
+                          - columnheader "p-value" [ref=f295e403]
+                      - rowgroup [ref=f295e404]:
+                        - row [ref=f295e405]:
+                          - cell "Overall" [ref=f295e406]
+                          - cell "287" [ref=f295e407]
+                          - cell "118 (41.1)" [ref=f295e408]
+                          - cell "--" [ref=f295e409]
+                        - row [ref=f295e410]:
+                          - cell [ref=f295e411]:
+                            - text: Provider counseling
+                            - link [ref=f295e412] [cursor=pointer]:
+                              - /url: "#TFN15"
+                              - superscript [ref=f295e413]: a
+                          - cell "Any" [ref=f295e414]
+                          - cell "280" [ref=f295e415]
+                          - cell "113 (40.4)" [ref=f295e416]
+                          - cell [ref=f295e417]:
+                            - text: "0.1"
+                            - link [ref=f295e418] [cursor=pointer]:
+                              - /url: "#TFN16"
+                              - superscript [ref=f295e419]: b
+                        - row [ref=f295e420]:
+                          - cell "None" [ref=f295e421]
+                          - cell "7" [ref=f295e422]
+                          - cell "5 (71.4)" [ref=f295e423]
+                        - row [ref=f295e424]:
+                          - cell "Provider instrument provision" [ref=f295e425]
+                          - cell "Any" [ref=f295e426]
+                          - cell "214" [ref=f295e427]
+                          - cell "81 (37.9)" [ref=f295e428]
+                          - cell "0.07" [ref=f295e429]
+                        - row [ref=f295e430]:
+                          - cell "None" [ref=f295e431]
+                          - cell "73" [ref=f295e432]
+                          - cell "37 (50.7)" [ref=f295e433]
+                        - row [ref=f295e434]:
+                          - cell "Emergency department" [ref=f295e435]
+                        - row [ref=f295e436]:
+                          - cell [ref=f295e437]:
+                            - text: Provider counseling
+                            - link [ref=f295e438] [cursor=pointer]:
+                              - /url: "#TFN15"
+                              - superscript [ref=f295e439]: a
+                          - cell "Any" [ref=f295e440]
+                          - cell "274" [ref=f295e441]
+                          - cell "110 (40.1)" [ref=f295e442]
+                          - cell "0.2" [ref=f295e443]
+                        - row [ref=f295e444]:
+                          - cell "None" [ref=f295e445]
+                          - cell "13" [ref=f295e446]
+                          - cell "8 (61.5)" [ref=f295e447]
+                        - row [ref=f295e448]:
+                          - cell [ref=f295e449]:
+                            - text: Advanced counseling
+                            - link [ref=f295e450] [cursor=pointer]:
+                              - /url: "#TFN17"
+                              - superscript [ref=f295e451]: c
+                          - cell "Any" [ref=f295e452]
+                          - cell "95" [ref=f295e453]
+                          - cell "29 (30.5)" [ref=f295e454]
+                          - cell "0.01" [ref=f295e455]
+                        - row [ref=f295e456]:
+                          - cell "None" [ref=f295e457]
+                          - cell "192" [ref=f295e458]
+                          - cell "89 (46.4)" [ref=f295e459]
+                        - row [ref=f295e460]:
+                          - cell [ref=f295e461]:
+                            - text: "Advanced counseling: # of strategies used"
+                            - link [ref=f295e462] [cursor=pointer]:
+                              - /url: "#TFN17"
+                              - superscript [ref=f295e463]: c
+                          - cell "0" [ref=f295e464]
+                          - cell "192" [ref=f295e465]
+                          - cell "89 (46.4)" [ref=f295e466]
+                          - cell "0.08" [ref=f295e467]
+                        - row [ref=f295e468]:
+                          - cell "1" [ref=f295e469]
+                          - cell "62" [ref=f295e470]
+                          - cell "20 (32.3)" [ref=f295e471]
+                        - row [ref=f295e472]:
+                          - cell "2" [ref=f295e473]
+                          - cell "25" [ref=f295e474]
+                          - cell "7 (28.0)" [ref=f295e475]
+                        - row [ref=f295e476]:
+                          - cell "3" [ref=f295e477]
+                          - cell "8" [ref=f295e478]
+                          - cell "2 (25.0)" [ref=f295e479]
+                        - row [ref=f295e480]:
+                          - cell "Instrument provision" [ref=f295e481]
+                          - cell "Any" [ref=f295e482]
+                          - cell "55" [ref=f295e483]
+                          - cell "12 (21.8)" [ref=f295e484]
+                          - cell "0.001" [ref=f295e485]
+                        - row [ref=f295e486]:
+                          - cell "None" [ref=f295e487]
+                          - cell "232" [ref=f295e488]
+                          - cell "106 (45.7)" [ref=f295e489]
+                        - row [ref=f295e490]:
+                          - cell "Combination" [ref=f295e491]
+                          - cell "Advanced counseling only" [ref=f295e492]
+                          - cell "52" [ref=f295e493]
+                          - cell "20 (38.5)" [ref=f295e494]
+                          - cell [ref=f295e495]:
+                            - text: "0.007"
+                            - link [ref=f295e496] [cursor=pointer]:
+                              - /url: "#TFN18"
+                              - superscript [ref=f295e497]: d
+                        - row [ref=f295e498]:
+                          - cell "Instrument provision only" [ref=f295e499]
+                          - cell "12" [ref=f295e500]
+                          - cell "3 (25.0)" [ref=f295e501]
+                        - row [ref=f295e502]:
+                          - cell "Both" [ref=f295e503]
+                          - cell "43" [ref=f295e504]
+                          - cell "9 (20.9)" [ref=f295e505]
+                        - row [ref=f295e506]:
+                          - cell "None" [ref=f295e507]
+                          - cell "180" [ref=f295e508]
+                          - cell "86 (47.8)" [ref=f295e509]
+                        - row [ref=f295e510]:
+                          - cell "Pharmacy" [ref=f295e511]
+                        - row [ref=f295e512]:
+                          - cell [ref=f295e513]:
+                            - text: Provider counseling
+                            - link [ref=f295e514] [cursor=pointer]:
+                              - /url: "#TFN15"
+                              - superscript [ref=f295e515]: a
+                          - cell "Any" [ref=f295e516]
+                          - cell "155" [ref=f295e517]
+                          - cell "61 (39.4)" [ref=f295e518]
+                          - cell "0.6" [ref=f295e519]
+                        - row [ref=f295e520]:
+                          - cell "None" [ref=f295e521]
+                          - cell "132" [ref=f295e522]
+                          - cell "57 (43.2)" [ref=f295e523]
+                        - row [ref=f295e524]:
+                          - cell "Provider instrument provision" [ref=f295e525]
+                          - cell "Any" [ref=f295e526]
+                          - cell "186" [ref=f295e527]
+                          - cell "73 (39.2)" [ref=f295e528]
+                          - cell "0.5" [ref=f295e529]
+                        - row [ref=f295e530]:
+                          - cell "None" [ref=f295e531]
+                          - cell "101" [ref=f295e532]
+                          - cell "45 (44.6)" [ref=f295e533]
+                    - link "Open in a new tab" [ref=f295e535] [cursor=pointer]:
+                      - /url: table/T3/
+                    - generic [ref=f295e536]:
+                      - generic [ref=f295e537]:
+                        - superscript [ref=f295e538]: a
+                        - paragraph [ref=f295e539]: Provider counseling refers to all counseling, including advanced counseling
+                      - generic [ref=f295e540]:
+                        - superscript [ref=f295e541]: b
+                        - paragraph [ref=f295e542]: Chi square also not significant when looking at 4 categories (ED only, pharmacy only, ED and pharmacy, none) (p=0.4).
+                      - generic [ref=f295e543]:
+                        - superscript [ref=f295e544]: c
+                        - paragraph [ref=f295e545]: Advanced counseling strategies assessed in the ED only
+                      - generic [ref=f295e546]:
+                        - superscript [ref=f295e547]: d
+                        - paragraph [ref=f295e548]: "Partition chi square: advanced counseling only vs. none (p=0.3), instrument only vs. none (p=0.15), both vs. none (p=0.002), advanced counseling only vs. both (p=0.08), instrument only vs. both (p=0.7)."
+                - generic [ref=f295e549]:
+                  - heading "Provider Counseling Strategies and Dosing Errors" [level=3] [ref=f295e550]
+                  - paragraph [ref=f295e551]:
+                    - text: Almost all parents (97.6%) reported receiving any counseling in the ED or pharmacy (
+                    - link "Table 2" [ref=f295e552] [cursor=pointer]:
+                      - /url: "#T2"
+                    - text: ). One-third (33.1%) reported receipt of advanced counseling in the ED. The majority of ED encounters had language concordance (78.7%) (73.5% visits conducted in English, 24.4% Spanish, 2.1% combination). Receipt of any counseling provider counseling was not statistically significantly related to dosing error (
+                    - link "Table 3" [ref=f295e553] [cursor=pointer]:
+                      - /url: "#T3"
+                    - text: ). Parents who reported that they received at least 1 advanced counseling strategy in the ED were less likely to make a dosing error compared to those who did not report receiving advanced counseling (30.5% vs. 46.4%; p=0.01).
+                  - generic [ref=f295e554]:
+                    - heading "TABLE 2." [level=4] [ref=f295e555]
+                    - paragraph [ref=f295e557]: Use of counseling strategies and provision of dosing instruments
+                    - table [ref=f295e559]:
+                      - rowgroup [ref=f295e560]:
+                        - row [ref=f295e561]:
+                          - columnheader [ref=f295e562]
+                          - columnheader "N (%)" [ref=f295e563]
+                        - row [ref=f295e564]:
+                          - columnheader [ref=f295e565]:
+                            - separator [ref=f295e566]
+                      - rowgroup [ref=f295e567]:
+                        - row [ref=f295e568]:
+                          - cell [ref=f295e569]:
+                            - strong [ref=f295e570]: Counseling Strategies
+                          - cell [ref=f295e571]
+                        - row [ref=f295e572]:
+                          - cell [ref=f295e573]:
+                            - separator [ref=f295e574]
+                        - row [ref=f295e575]:
+                          - cell [ref=f295e576]:
+                            - text: Provider counseling
+                            - link [ref=f295e577] [cursor=pointer]:
+                              - /url: "#TFN7"
+                              - superscript [ref=f295e578]: a
+                          - cell [ref=f295e579]
+                        - row [ref=f295e580]:
+                          - cell "In ED" [ref=f295e581]
+                          - cell "274 (95.5)" [ref=f295e582]
+                        - row [ref=f295e583]:
+                          - cell "In pharmacy" [ref=f295e584]
+                          - cell "155 (54.0)" [ref=f295e585]
+                        - row [ref=f295e586]:
+                          - cell "None" [ref=f295e587]
+                          - cell "7 (2.4)" [ref=f295e588]
+                        - row [ref=f295e589]:
+                          - cell [ref=f295e590]:
+                            - separator [ref=f295e591]
+                        - row [ref=f295e592]:
+                          - cell [ref=f295e593]:
+                            - text: Advanced counseling strategies
+                            - link [ref=f295e594] [cursor=pointer]:
+                              - /url: "#TFN8"
+                              - superscript [ref=f295e595]: b
+                          - cell [ref=f295e596]
+                        - row [ref=f295e597]:
+                          - cell "Provider use of verbal teachback" [ref=f295e598]
+                          - cell "26 (9.1)" [ref=f295e599]
+                        - row [ref=f295e600]:
+                          - cell "Provider use of pictures / drawings as part of medication counseling" [ref=f295e601]
+                          - cell "3 (1.0)" [ref=f295e602]
+                        - row [ref=f295e603]:
+                          - cell [ref=f295e604]:
+                            - text: Provider demonstration using dosing instrument
+                            - link [ref=f295e605] [cursor=pointer]:
+                              - /url: "#TFN9"
+                              - superscript [ref=f295e606]: c
+                          - cell "75 (26.1)" [ref=f295e607]
+                        - row [ref=f295e608]:
+                          - cell [ref=f295e609]:
+                            - text: Parent “showback” of dose using instrument
+                            - link [ref=f295e610] [cursor=pointer]:
+                              - /url: "#TFN9"
+                              - superscript [ref=f295e611]: c
+                          - cell "32 (11.1)" [ref=f295e612]
+                        - row [ref=f295e613]:
+                          - cell [ref=f295e614]:
+                            - text: Any advanced counseling strategy
+                            - link [ref=f295e615] [cursor=pointer]:
+                              - /url: "#TFN8"
+                              - superscript [ref=f295e616]: b
+                          - cell "95 (33.1)" [ref=f295e617]
+                        - row [ref=f295e618]:
+                          - cell [ref=f295e619]:
+                            - separator [ref=f295e620]
+                        - row [ref=f295e621]:
+                          - cell [ref=f295e622]:
+                            - text: Number of advanced strategies used
+                            - link [ref=f295e623] [cursor=pointer]:
+                              - /url: "#TFN8"
+                              - superscript [ref=f295e624]: b
+                            - text: ","
+                            - link [ref=f295e625] [cursor=pointer]:
+                              - /url: "#TFN10"
+                              - superscript [ref=f295e626]: d
+                          - cell [ref=f295e627]
+                        - row [ref=f295e628]:
+                          - cell "0" [ref=f295e629]
+                          - cell "192 (66.9)" [ref=f295e630]
+                        - row [ref=f295e631]:
+                          - cell "1" [ref=f295e632]
+                          - cell "62 (21.6)" [ref=f295e633]
+                        - row [ref=f295e634]:
+                          - cell "2" [ref=f295e635]
+                          - cell "25 (8.7)" [ref=f295e636]
+                        - row [ref=f295e637]:
+                          - cell "3" [ref=f295e638]
+                          - cell "8 (2.8)" [ref=f295e639]
+                        - row [ref=f295e640]:
+                          - cell [ref=f295e641]:
+                            - separator [ref=f295e642]
+                        - row [ref=f295e643]:
+                          - cell [ref=f295e644]:
+                            - strong [ref=f295e645]: Provision of Standardized Dosing Instrument
+                          - cell [ref=f295e646]
+                        - row [ref=f295e647]:
+                          - cell [ref=f295e648]:
+                            - separator [ref=f295e649]
+                        - row [ref=f295e650]:
+                          - cell [ref=f295e651]:
+                            - text: Provision of standardized dosing instrument
+                            - link [ref=f295e652] [cursor=pointer]:
+                              - /url: "#TFN11"
+                              - superscript [ref=f295e653]: e
+                          - cell [ref=f295e654]
+                        - row [ref=f295e655]:
+                          - cell "In ED" [ref=f295e656]
+                          - cell "55 (19.2)" [ref=f295e657]
+                        - row [ref=f295e658]:
+                          - cell "In pharmacy" [ref=f295e659]
+                          - cell "186 (64.8)" [ref=f295e660]
+                        - row [ref=f295e661]:
+                          - cell "None" [ref=f295e662]
+                          - cell "73 (25.4)" [ref=f295e663]
+                        - row [ref=f295e664]:
+                          - cell [ref=f295e665]:
+                            - separator [ref=f295e666]
+                        - row [ref=f295e667]:
+                          - cell [ref=f295e668]:
+                            - text: Type of instrument provided in ED
+                            - link [ref=f295e669] [cursor=pointer]:
+                              - /url: "#TFN12"
+                              - superscript [ref=f295e670]: f
+                          - cell [ref=f295e671]
+                        - row [ref=f295e672]:
+                          - cell "Oral syringe" [ref=f295e673]
+                          - cell "47 (85.5)" [ref=f295e674]
+                        - row [ref=f295e675]:
+                          - cell "Dropper" [ref=f295e676]
+                          - cell "5 (9.1)" [ref=f295e677]
+                        - row [ref=f295e678]:
+                          - cell "Dosing cup" [ref=f295e679]
+                          - cell "2 (3.6)" [ref=f295e680]
+                        - row [ref=f295e681]:
+                          - cell "Dosing spoon" [ref=f295e682]
+                          - cell "0 (0)" [ref=f295e683]
+                        - row [ref=f295e684]:
+                          - cell "Measuring spoon" [ref=f295e685]
+                          - cell "1 (1.8)" [ref=f295e686]
+                        - row [ref=f295e687]:
+                          - cell [ref=f295e688]:
+                            - separator [ref=f295e689]
+                        - row [ref=f295e690]:
+                          - cell [ref=f295e691]:
+                            - text: Type of instrument provided in pharmacy
+                            - link [ref=f295e692] [cursor=pointer]:
+                              - /url: "#TFN13"
+                              - superscript [ref=f295e693]: g
+                          - cell [ref=f295e694]
+                        - row [ref=f295e695]:
+                          - cell "Oral syringe" [ref=f295e696]
+                          - cell "64 (34.4)" [ref=f295e697]
+                        - row [ref=f295e698]:
+                          - cell "Dropper" [ref=f295e699]
+                          - cell "51 (27.4)" [ref=f295e700]
+                        - row [ref=f295e701]:
+                          - cell "Dosing cup" [ref=f295e702]
+                          - cell "46 (24.7)" [ref=f295e703]
+                        - row [ref=f295e704]:
+                          - cell "Dosing spoon" [ref=f295e705]
+                          - cell "17 (9.1)" [ref=f295e706]
+                        - row [ref=f295e707]:
+                          - cell "Measuring spoon" [ref=f295e708]
+                          - cell "9 (4.8)" [ref=f295e709]
+                        - row [ref=f295e710]:
+                          - cell [ref=f295e711]:
+                            - separator [ref=f295e712]
+                        - row [ref=f295e713]:
+                          - cell "Reported use of instrument at home" [ref=f295e714]
+                          - cell [ref=f295e715]
+                        - row [ref=f295e716]:
+                          - cell [ref=f295e717]:
+                            - text: When instrument provided in ED
+                            - link [ref=f295e718] [cursor=pointer]:
+                              - /url: "#TFN12"
+                              - superscript [ref=f295e719]: f
+                          - cell "46 (83.6)" [ref=f295e720]
+                        - row [ref=f295e721]:
+                          - cell [ref=f295e722]:
+                            - text: When instrument provided in pharmacy
+                            - link [ref=f295e723] [cursor=pointer]:
+                              - /url: "#TFN13"
+                              - superscript [ref=f295e724]: g
+                          - cell "160 (86.0)" [ref=f295e725]
+                        - row [ref=f295e726]:
+                          - cell [ref=f295e727]:
+                            - separator [ref=f295e728]
+                        - row [ref=f295e729]:
+                          - cell [ref=f295e730]:
+                            - strong [ref=f295e731]: Combination
+                            - text: (ED only)
+                            - link [ref=f295e732] [cursor=pointer]:
+                              - /url: "#TFN14"
+                              - superscript [ref=f295e733]: h
+                          - cell [ref=f295e734]
+                        - row [ref=f295e735]:
+                          - cell [ref=f295e736]:
+                            - separator [ref=f295e737]
+                        - row [ref=f295e738]:
+                          - cell "Counseling approach" [ref=f295e739]
+                          - cell [ref=f295e740]
+                        - row [ref=f295e741]:
+                          - cell "Advanced counseling strategy only" [ref=f295e742]
+                          - cell "52 (18.1)" [ref=f295e743]
+                        - row [ref=f295e744]:
+                          - cell "Provision of standardized instrument only" [ref=f295e745]
+                          - cell "12 (4.2)" [ref=f295e746]
+                        - row [ref=f295e747]:
+                          - cell "Advanced counseling with provision of dosing instrument" [ref=f295e748]
+                          - cell "43 (15.0)" [ref=f295e749]
+                        - row [ref=f295e750]:
+                          - cell "None" [ref=f295e751]
+                          - cell "180 (62.7)" [ref=f295e752]
+                    - link "Open in a new tab" [ref=f295e754] [cursor=pointer]:
+                      - /url: table/T2/
+                    - generic [ref=f295e755]:
+                      - generic [ref=f295e756]:
+                        - superscript [ref=f295e757]: a
+                        - paragraph [ref=f295e758]: Any report of getting counseling about medication instructions in the ED or pharmacy, nearly half of parents reported receiving counseling in both the ED and pharmacy (149 (51.9%))
+                      - generic [ref=f295e759]:
+                        - superscript [ref=f295e760]: b
+                        - paragraph [ref=f295e761]: Advanced counseling strategies used in the ED only; specific counseling strategies not assessed in pharmacy
+                      - generic [ref=f295e762]:
+                        - superscript [ref=f295e763]: c
+                        - paragraph [ref=f295e764]: Demonstration/showback from doctor (26.8%), nurse (54.9%); remainder did not remember
+                      - generic [ref=f295e765]:
+                        - superscript [ref=f295e766]: d
+                        - paragraph [ref=f295e767]: Mean (SD) number of advanced counseling strategies used = 0.5 (0.8)
+                      - generic [ref=f295e768]:
+                        - superscript [ref=f295e769]: e
+                        - paragraph [ref=f295e770]: Some parents reported receiving instruments from both the ED and pharmacy (27 (9.4%))
+                      - generic [ref=f295e771]:
+                        - superscript [ref=f295e772]: f
+                        - paragraph [ref=f295e773]: Of parents who reported receipt of an instrument in the ED
+                      - generic [ref=f295e774]:
+                        - superscript [ref=f295e775]: g
+                        - paragraph [ref=f295e776]: Of parents who reported receipt of an instrument in the pharmacy; some subjects reported receiving more than 1 dosing instrument; 1 parent did not remember the type of instrument received
+                      - generic [ref=f295e777]:
+                        - superscript [ref=f295e778]: h
+                        - paragraph [ref=f295e779]: Of those who reported advanced counseling, 45.3% also reported receiving an instrument; of those who reported receipt of an instrument, 78.2% also reported advanced counseling
+                - generic [ref=f295e780]:
+                  - heading "Provision of a Standardized Dosing Instrument and Dosing Errors" [level=3] [ref=f295e781]
+                  - paragraph [ref=f295e782]:
+                    - text: Nearly three quarters (74.6%) reported receipt of a dosing instrument (19.2% ED; 64.8% pharmacy) (
+                    - link "Table 2" [ref=f295e783] [cursor=pointer]:
+                      - /url: "#T2"
+                    - text: ). Those who received an instrument were less likely to use a nonstandard spoon (7.5% vs. 43.8%; p<0.001). ED instruments were primarily oral syringes (85.5%). Pharmacy instruments included oral syringes (34.4%), droppers (27.4%), and dosing cups (24.7%). While receipt of a dosing instrument in the pharmacy was not statistically significantly related to dosing error (p=0.5), parents who reported receiving an instrument in the ED made fewer dosing errors (21.8% vs. 45.7%; p=0.001).
+                - generic [ref=f295e784]:
+                  - 'heading "Advanced Counseling Strategies with and without Provision of a Standardized Dosing Instrument (ED only): Associations with Dosing Error" [level=3] [ref=f295e785]'
+                  - paragraph [ref=f295e786]:
+                    - text: Fifteen percent of parents reported receiving advanced counseling along with an instrument (4.2% instrument only, 18.1% advanced counseling only; 62.7% neither) (
+                    - link "Table 2" [ref=f295e787] [cursor=pointer]:
+                      - /url: "#T2"
+                    - text: ). Those who received both advanced counseling and an instrument made fewer errors than those who received neither (20.9% vs. 47.8%; p=0.002); there was no statistically significant difference in error rate between those who received advanced counseling only and those who received neither (p=0.3), or instrument only and those who received neither (p=0.15) (
+                    - link "Table 3" [ref=f295e788] [cursor=pointer]:
+                      - /url: "#T3"
+                    - text: ).
+                - generic [ref=f295e789]:
+                  - 'heading "Adjusted Analyses Predicting Parent Dosing Errors: Role of Advanced Counseling Strategies with and without Provision of a Standardized Dosing Instrument" [level=3] [ref=f295e790]'
+                  - paragraph [ref=f295e791]:
+                    - text: In adjusted analyses, report of advanced counseling strategies in combination with an instrument was associated with a decreased odds of error compared to receiving neither (AOR 0.3; 95% CI 0.1–0.7); advanced counseling only and instrument only were not associated with decreased odds of error (
+                    - link "Table 4" [ref=f295e792] [cursor=pointer]:
+                      - /url: "#T4"
+                    - text: ).
+                  - generic [ref=f295e793]:
+                    - heading "TABLE 4." [level=4] [ref=f295e794]
+                    - paragraph [ref=f295e796]:
+                      - text: "Multivariate logistic regression analyses predicting parent dosing error: Role of advanced counseling strategies and provision of dosing instrument"
+                      - link [ref=f295e797] [cursor=pointer]:
+                        - /url: "#TFN19"
+                        - superscript [ref=f295e798]: a
+                    - table [ref=f295e800]:
+                      - rowgroup [ref=f295e801]:
+                        - row [ref=f295e802]:
+                          - columnheader [ref=f295e803]
+                          - columnheader [ref=f295e804]
+                          - columnheader "Dosing Error" [ref=f295e805]
+                        - row [ref=f295e806]:
+                          - columnheader [ref=f295e807]
+                          - columnheader [ref=f295e808]
+                          - columnheader "AOR" [ref=f295e809]
+                          - columnheader "95% CI" [ref=f295e810]
+                          - columnheader "p-value" [ref=f295e811]
+                      - rowgroup [ref=f295e812]:
+                        - row [ref=f295e813]:
+                          - cell "Overall strategy taken in ED" [ref=f295e814]
+                          - cell "Advanced counseling only" [ref=f295e815]
+                          - cell "0.6" [ref=f295e816]
+                          - cell "0.3–1.2" [ref=f295e817]
+                          - cell "0.1" [ref=f295e818]
+                        - row [ref=f295e819]:
+                          - cell "Instrument only" [ref=f295e820]
+                          - cell "0.5" [ref=f295e821]
+                          - cell "0.1–1.9" [ref=f295e822]
+                          - cell "0.3" [ref=f295e823]
+                        - row [ref=f295e824]:
+                          - cell "Both" [ref=f295e825]
+                          - cell "0.3" [ref=f295e826]
+                          - cell "0.1–0.7" [ref=f295e827]
+                          - cell "0.004" [ref=f295e828]
+                        - row [ref=f295e829]:
+                          - cell "None" [ref=f295e830]
+                          - cell "1.0" [ref=f295e831]
+                          - cell "Ref" [ref=f295e832]
+                          - cell "Ref" [ref=f295e833]
+                    - link "Open in a new tab" [ref=f295e835] [cursor=pointer]:
+                      - /url: table/T4/
+                    - generic [ref=f295e837]:
+                      - superscript [ref=f295e838]: a
+                      - paragraph [ref=f295e839]: "Controlling for: parent age, race/ethnicity, language, country of birth, socioeconomic status, education, health literacy; child age, child chronic disease; site; in addition to counseling strategy"
+                  - paragraph [ref=f295e840]: "Exploratory subgroup analyses by literacy level revealed that receipt of advanced counseling in combination with instrument provision was statistically significantly associated with fewer errors for those with adequate (AOR 0.2; 95% CI 0.1–0.6), but not low literacy (AOR 0.3; 95% CI 0.1–1.4). Exploratory subgroup analyses by language revealed that receipt of advanced counseling in combination with instrument provision was statistically significantly associated with fewer errors for English speakers (AOR 0.2; 95% CI 0.07–0.9), but not for Spanish speakers (AOR 0.4; 95% CI: 0.1–1.2). No statistically significant interaction between health literacy and language was found."
+                  - paragraph [ref=f295e841]: Inclusion of language concordance in the model did not substantively alter study findings. Exploratory subgroup analyses by concordance revealed that there was a similar magnitude of association between counseling strategies and dosing errors in the language concordant group compared to the overall group; analyses for the discordant group were limited due to small sample size.
+              - generic [ref=f295e842]:
+                - heading "DISCUSSION" [level=2] [ref=f295e843]
+                - paragraph [ref=f295e844]: To our knowledge, this is the first study to examine existing pediatric provider medication counseling practices related to the use of advanced communication strategies with and without dosing instrument provision, and their association with parent liquid medication dosing errors. While a prior intervention-based study we performed revealed that use of advanced counseling strategies, which incorporated provision of a dosing instrument, was associated with reduced dosing errors, the current analyses assess real-world practices. We found that >40% of parents misdosed the liquid medication prescribed to their children. Only one in three parents in our study reported receipt of advanced counseling strategies from their ED provider. Use of advanced counseling strategies in concert with provision of a dosing instrument may be especially effective in reducing errors, compared to advanced counseling or instrument provision alone.
+                - paragraph [ref=f295e845]:
+                  - text: The prevalence of dosing errors in our study indicates that a significant level of parent confusion regarding medication instructions exists, consistent with prior studies.
+                  - superscript [ref=f295e846]:
+                    - link "1" [ref=f295e847] [cursor=pointer]:
+                      - /url: "#R1"
+                    - text: –
+                    - link "3" [ref=f295e848] [cursor=pointer]:
+                      - /url: "#R3"
+                    - text: ","
+                    - link "10" [ref=f295e849] [cursor=pointer]:
+                      - /url: "#R10"
+                  - text: This high rate of error is concerning; >50% of US children are exposed to one or more medications in a given week.
+                  - superscript [ref=f295e850]:
+                    - link "33" [ref=f295e851] [cursor=pointer]:
+                      - /url: "#R33"
+                  - text: Medication administration errors place children at risk for adverse events, may contribute to therapeutic failure, and can result in avoidable health care costs.
+                  - superscript [ref=f295e852]:
+                    - link "34" [ref=f295e853] [cursor=pointer]:
+                      - /url: "#R34"
+                    - text: ","
+                    - link "35" [ref=f295e854] [cursor=pointer]:
+                      - /url: "#R35"
+                - paragraph [ref=f295e855]:
+                  - text: Despite evidence to support the use of advanced counseling strategies such as dose demonstration, teachback/showback, and the use of pictograms,
+                  - superscript [ref=f295e856]:
+                    - link "16" [ref=f295e857] [cursor=pointer]:
+                      - /url: "#R16"
+                    - text: –
+                    - link "18" [ref=f295e858] [cursor=pointer]:
+                      - /url: "#R18"
+                    - text: ","
+                    - link "36" [ref=f295e859] [cursor=pointer]:
+                      - /url: "#R36"
+                    - text: –
+                    - link "38" [ref=f295e860] [cursor=pointer]:
+                      - /url: "#R38"
+                  - text: and support for the use of more effective counseling strategies by the American Medical Association,
+                  - superscript [ref=f295e861]:
+                    - link "14" [ref=f295e862] [cursor=pointer]:
+                      - /url: "#R14"
+                  - text: we found that only 1 in 3 parents reported use of these strategies by their provider in the pediatric ED. Prior studies have similarly found low rates; an American Academy of Pediatrics survey found that use of enhanced communication techniques like teachback was uncommon, with only 1 in 4 describing use of teachback most or all of the time.
+                  - superscript [ref=f295e863]:
+                    - link "20" [ref=f295e864] [cursor=pointer]:
+                      - /url: "#R20"
+                  - text: Use of advanced counseling strategies is considered to be more effective than standard recommended counseling practices, such as plain, or simple, language, repetition, and limitation of concepts to 2–3 key points.
+                  - superscript [ref=f295e865]:
+                    - link "20" [ref=f295e866] [cursor=pointer]:
+                      - /url: "#R20"
+                  - text: In the context of medication counseling, advanced counseling can be provided by physicians, nurses, and other providers at the time of discharge. Instructions can be further reinforced at the time a medication is dispensed in the pharmacy.
+                - paragraph [ref=f295e867]:
+                  - text: Provision of a standardized instrument, recognized as another effective strategy for reducing parent dosing errors, varied in our study. Only 1 in 5 parents reported receiving an instrument from the ED, while a little over half reported receiving one from the pharmacy. Those who did not receive an instrument were 6 times more likely to use a nonstandard spoon. Interestingly, ED instrument provision was statistically significantly associated with fewer errors, but pharmacy provision was not; further study to explore this issue is indicated. One possible issue that may contribute to this difference is that oral syringes were most commonly distributed in the ED, while instruments distributed from the pharmacy were more heterogeneous. Several studies have recently found that parent dosing accuracy varies by instrument type, with dosing cups, in particular, associated with overdoses.
+                  - superscript [ref=f295e868]:
+                    - link "6" [ref=f295e869] [cursor=pointer]:
+                      - /url: "#R6"
+                    - text: ","
+                    - link "22" [ref=f295e870] [cursor=pointer]:
+                      - /url: "#R22"
+                  - text: Oral syringes are generally considered to be the most accurate.
+                  - superscript [ref=f295e871]:
+                    - link "6" [ref=f295e872] [cursor=pointer]:
+                      - /url: "#R6"
+                    - text: ","
+                    - link "9" [ref=f295e873] [cursor=pointer]:
+                      - /url: "#R9"
+                  - text: Unfortunately, sample size limited our ability to examine errors by instrument type.
+                - paragraph [ref=f295e874]: It is not clear why some parents reported receipt of counseling or dosing instruments, while others did not. There was no variability by diagnosis, or by provider type. Further study is needed to further explore other potential factors related to rates of counseling and dosing instrument provision, such differences by literacy level and English proficiency.
+                - paragraph [ref=f295e875]: Interestingly, in adjusted analyses, use of advanced counseling strategies in the ED alone was not associated with decreased error rates, while ED advanced counseling with provision of a standardized instrument was associated with a 3-fold decrease in dosing errors. Unfortunately, as the majority of parents who received an instrument also received advanced counseling, it was difficult for us to examine the impact of instrument alone with no associated provider advanced counseling.
+                - paragraph [ref=f295e876]: Notably, rates of error was significant across counseling approaches, suggesting that additional strategies are likely to be needed to ensure parent understanding of medication instructions, or that the quality of the advanced counseling strategies used by providers could be further improved through a standardized training approach.
+                - paragraph [ref=f295e877]: While we found in exploratory analyses that the association between counseling strategies and dosing errors was statistically significant among those with adequate literacy and English speakers, but not among those with low literacy and those who spoke Spanish, our analyses were limited by sample size. Additional studies are needed to examine whether other approaches are needed to reduce the likelihood of dosing error in these at-risk groups.
+                - paragraph [ref=f295e878]:
+                  - text: Our study has several limitations. This was a cross-sectional study in which we examined the association between dosing errors and health communication strategies; no conclusions regarding causation can be drawn. We relied on parent self-report of receipt of advanced counseling and instruments, which may not have reflected what actually occurred during provider-parent encounters. We conducted assessments by phone, which prevented us from clarifying our questions about dosing instruments with visual aids, although we did give examples of instruments verbally. Future study to validate questions on counseling strategies and instrument provision would be beneficial, including examining audio- or videotaped provider-parent encounters. While we did collect information regarding the language the ED visit was conducted in, we did not collect detailed information regarding the language used for counseling about medication instructions specifically, or the quality of the verbal or written Spanish language used. Dosing accuracy was assessed as part of an in-person hospital-based encounter within 8 weeks of the projected end date of their prescribed medication, and may not have reflected how the parent dosed at home during the prescribed medication course; our dosing error findings may be subject to recall bias. In addition, we did not have the power to examine the relationship between individual types of advanced counseling or instruments and dosing errors, or the role of instrument provision without advanced counseling. Advanced counseling strategies within the pharmacy setting was also not assessed, which deserves further study, however it is unlikely that advanced counseling strategies are frequently used in the pharmacy.
+                  - superscript [ref=f295e879]:
+                    - link "21" [ref=f295e880] [cursor=pointer]:
+                      - /url: "#R21"
+                  - text: Further study of multidisciplinary approaches to medication counseling is needed, including examining the benefits of having medication instructions reinforced by different members of the care team (e.g. nurse, physician, pharmacist), as well as the potential for increased confusion when inconsistent instructions are provided. Finally, the majority of our participants were Hispanic mothers from low SES backgrounds, recruited from an urban setting, which may limit our ability to generalize our findings to other populations.
+                - paragraph [ref=f295e881]: In summary, we found that use of advanced counseling strategies along with provision of a standardized dosing instrument is associated with decreased dosing errors. Additional research is needed to determine how to best incorporate advanced counseling strategies into routine practice, including experimental studies to identify which advanced counseling strategies are most effective, and how to best encourage adoption of these strategies by clinicians and pharmacists. Policy and regulatory approaches may be needed to maximize the adoption of best practices in provider counseling in order to promote the safe use of pediatric medications.
+              - generic [ref=f295e883]:
+                - heading "WHAT’S NEW." [level=2] [ref=f295e884]
+                - paragraph [ref=f295e885]: Provider use of advanced counseling strategies (teachback, drawings/pictures, dose demonstration, showback) in combination with provision of a dosing instrument, may be more effective in reducing parent liquid medication dosing errors than advanced counseling or instrument provision alone.
+              - generic [ref=f295e886]:
+                - heading "Acknowledgments" [level=2] [ref=f295e887]
+                - paragraph [ref=f295e888]:
+                  - strong [ref=f295e889]: "FUNDING:"
+                  - text: Dr. Yin is supported in part by the Robert Wood Johnson Physician Faculty Scholars Program. The Robert Wood Johnson Foundation had no role in the design and conduct of the study, in the collection, management, analysis, or interpretation of the data, or in the preparation, review, or approval of the manuscript. Dr. Yin is also supported by HRSA Grant 12-191-1077- Academic Administrative Units in Primary Care, and the National Institute of Health Loan Repayment Program (L40HD062191). This project was supported in part by the United Hospital Fund, as well as grant 5UL1RR029893 from the National Center for Research Resources, NIH.
+                - paragraph [ref=f295e890]:
+                  - strong [ref=f295e891]: ADDITIONAL CONTRIBUTIONS
+                - paragraph [ref=f295e892]: We extend our thanks to Donna Ugboaja for her careful review of this paper. We also thank our research staff, as well as the staff of the Department of Pediatrics at Bellevue Hospital Center and Woodhull Medical Center, for their support.
+              - generic [ref=f295e893]:
+                - heading "Footnotes" [level=2] [ref=f295e894]
+                - generic [ref=f295e895]:
+                  - paragraph [ref=f295e897]:
+                    - strong [ref=f295e898]: "Publisher's Disclaimer:"
+                    - text: This is a PDF file of an unedited manuscript that has been accepted for publication. As a service to our customers we are providing this early version of the manuscript. The manuscript will undergo copyediting, typesetting, and review of the resulting proof before it is published in its final citable form. Please note that during the production process errors may be discovered which could affect the content, and all legal disclaimers that apply to the journal pertain.
+                  - paragraph [ref=f295e900]:
+                    - strong [ref=f295e901]: "CONFLICTS OF INTEREST:"
+                    - text: The authors have no conflicts of interest to disclose.
+                  - paragraph [ref=f295e903]:
+                    - strong [ref=f295e904]: "PREVIOUS PRESENTATION:"
+                    - text: Findings from this study were presented in part at the 2011 Health Literacy Annual Research Conference (HARC) co-sponsored by NIH; October 18, 2011; Chicago, IL.
+                  - generic [ref=f295e905]:
+                    - paragraph [ref=f295e906]:
+                      - strong [ref=f295e907]: AUTHOR CONTRIBUTIONS
+                    - paragraph [ref=f295e908]: Dr. Yin had full access to all of the data in the study and takes responsibility for the integrity of the data and the accuracy of the data analysis.
+                    - paragraph [ref=f295e909]:
+                      - emphasis [ref=f295e910]: "Study concept and design:"
+                      - text: Yin, Mendelsohn, Dreyer, van Schaick.
+                    - paragraph [ref=f295e911]:
+                      - emphasis [ref=f295e912]: "Acquisition of data:"
+                      - text: Yin, Moreira.
+                    - paragraph [ref=f295e913]:
+                      - emphasis [ref=f295e914]: "Analysis and interpretation of data:"
+                      - text: Yin, Mendelsohn, Dreyer, van Schaick, Moreira, Rodriguez Boettger.
+                    - paragraph [ref=f295e915]:
+                      - emphasis [ref=f295e916]: "Drafting of the manuscript:"
+                      - text: Yin, Moreira, Boettger.
+                    - paragraph [ref=f295e917]:
+                      - emphasis [ref=f295e918]: "Critical revision of the manuscript for important intellectual content:"
+                      - text: Yin, Mendelsohn, Dreyer, van Schaick, Rodriguez.
+                    - paragraph [ref=f295e919]:
+                      - emphasis [ref=f295e920]: "Statistical analysis:"
+                      - text: Yin, Mendelsohn, Dreyer.
+                    - paragraph [ref=f295e921]:
+                      - emphasis [ref=f295e922]: "Obtained funding:"
+                      - text: Yin, Mendelsohn, Dreyer.
+                    - paragraph [ref=f295e923]:
+                      - emphasis [ref=f295e924]: "Administrative, technical, or material support:"
+                      - text: Yin, Mendelsohn, Dreyer, Moreira, van Schaick, Moreira, Rodriguez, Boettger.
+                    - paragraph [ref=f295e925]:
+                      - emphasis [ref=f295e926]: "Study supervision:"
+                      - text: Yin, Mendelsohn, Dreyer.
+              - generic [ref=f295e927]:
+                - heading "REFERENCES" [level=2] [ref=f295e928]
+                - list [ref=f295e930]:
+                  - listitem [ref=f295e931]:
+                    - generic [ref=f295e932]: "1."
+                    - text: "Goldman RD, Scolnik D. Underdosing of acetaminophen by parents and emergency department utilization. Pediatric Emergency Care. 2004;20(2):89–93. doi: 10.1097/01.pec.0000113877.10140.d2. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e933] [cursor=pointer]:
+                      - /url: https://doi.org/10.1097/01.pec.0000113877.10140.d2
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e934] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/14758305/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e935] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Pediatric%20Emergency%20Care&title=Underdosing%20of%20acetaminophen%20by%20parents%20and%20emergency%20department%20utilization&author=RD%20Goldman&author=D%20Scolnik&volume=20&issue=2&publication_year=2004&pages=89-93&pmid=14758305&doi=10.1097/01.pec.0000113877.10140.d2&
+                    - text: "]"
+                  - listitem [ref=f295e936]:
+                    - generic [ref=f295e937]: "2."
+                    - text: "Li SF, Lacher B, Crain EF. Acetaminophen and Ibuprofen dosing by parents. Pediatric Emergency Care. 2000;16(6):394–397. doi: 10.1097/00006565-200012000-00003. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e938] [cursor=pointer]:
+                      - /url: https://doi.org/10.1097/00006565-200012000-00003
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e939] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/11138879/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e940] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Pediatric%20Emergency%20Care&title=Acetaminophen%20and%20Ibuprofen%20dosing%20by%20parents&author=SF%20Li&author=B%20Lacher&author=EF%20Crain&volume=16&issue=6&publication_year=2000&pages=394-397&pmid=11138879&doi=10.1097/00006565-200012000-00003&
+                    - text: "]"
+                  - listitem [ref=f295e941]:
+                    - generic [ref=f295e942]: "3."
+                    - text: "Yin HS, Dreyer BP, van Schaick L, Foltin GL, Dinglas C, Mendelsohn AL. Randomized controlled trial of a pictogram-based intervention to reduce liquid medication dosing errors and improve adherence among caregivers of young children. Archives of Pediatrics & Adolescent Medicine. 2008;162(9):814–822. doi: 10.1001/archpedi.162.9.814. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e943] [cursor=pointer]:
+                      - /url: https://doi.org/10.1001/archpedi.162.9.814
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e944] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/18762597/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e945] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Archives%20of%20Pediatrics%20&%20Adolescent%20Medicine&title=Randomized%20controlled%20trial%20of%20a%20pictogram-based%20intervention%20to%20reduce%20liquid%20medication%20dosing%20errors%20and%20improve%20adherence%20among%20caregivers%20of%20young%20children&author=HS%20Yin&author=BP%20Dreyer&author=L%20van%20Schaick&author=GL%20Foltin&author=C%20Dinglas&volume=162&issue=9&publication_year=2008&pages=814-822&pmid=18762597&doi=10.1001/archpedi.162.9.814&
+                    - text: "]"
+                  - listitem [ref=f295e946]:
+                    - generic [ref=f295e947]: "4."
+                    - text: "Miller MR, Robinson KA, Lubomski LH, Rinke ML, Pronovost PJ. Medication errors in paediatric care: a systematic review of epidemiology and an evaluation of evidence supporting reduction strategy recommendations. Quality and Safety in Health Care. 2007;16(2):116–126. doi: 10.1136/qshc.2006.019950. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e948] [cursor=pointer]:
+                      - /url: https://doi.org/10.1136/qshc.2006.019950
+                    - text: "] ["
+                    - link "PMC free article" [ref=f295e949] [cursor=pointer]:
+                      - /url: /articles/PMC2653149/
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e950] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/17403758/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e951] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Quality%20and%20Safety%20in%20Health%20Care&title=Medication%20errors%20in%20paediatric%20care:%20a%20systematic%20review%20of%20epidemiology%20and%20an%20evaluation%20of%20evidence%20supporting%20reduction%20strategy%20recommendations&author=MR%20Miller&author=KA%20Robinson&author=LH%20Lubomski&author=ML%20Rinke&author=PJ%20Pronovost&volume=16&issue=2&publication_year=2007&pages=116-126&pmid=17403758&doi=10.1136/qshc.2006.019950&
+                    - text: "]"
+                  - listitem [ref=f295e952]:
+                    - generic [ref=f295e953]: "5."
+                    - text: Bailey SC, Pandit AU, Yin S, et al. Predictors of misunderstanding pediatric liquid medication instructions. Family Medicine. 2009;41(10):715–721. [
+                    - link "PubMed" [ref=f295e954] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/19882395/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e955] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Family%20Medicine&title=Predictors%20of%20misunderstanding%20pediatric%20liquid%20medication%20instructions&author=SC%20Bailey&author=AU%20Pandit&author=S%20Yin&volume=41&issue=10&publication_year=2009&pages=715-721&pmid=19882395&
+                    - text: "]"
+                  - listitem [ref=f295e956]:
+                    - generic [ref=f295e957]: "6."
+                    - text: "Yin HS, Mendelsohn A, Wolf M, et al. Parents' medication administration errors: role of dosing instruments and health literacy. Archives of Pediatrics & Adolescent Medicine. 2010;164(2):181–186. doi: 10.1001/archpediatrics.2009.269. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e958] [cursor=pointer]:
+                      - /url: https://doi.org/10.1001/archpediatrics.2009.269
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e959] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/20124148/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e960] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Archives%20of%20Pediatrics%20&%20Adolescent%20Medicine&title=Parents'%20medication%20administration%20errors:%20role%20of%20dosing%20instruments%20and%20health%20literacy&author=HS%20Yin&author=A%20Mendelsohn&author=M%20Wolf&volume=164&issue=2&publication_year=2010&pages=181-186&pmid=20124148&doi=10.1001/archpediatrics.2009.269&
+                    - text: "]"
+                  - listitem [ref=f295e961]:
+                    - generic [ref=f295e962]: "7."
+                    - text: "Bailey SC, Agarwal N, Sleath B, Gumusoglu S. Improving Drug Labeling and Counseling for Limited English Proficient Adults. Journal of Health Care for the Poor and Underserved. 2011;22(4):1131–1143. doi: 10.1353/hpu.2011.0145. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e963] [cursor=pointer]:
+                      - /url: https://doi.org/10.1353/hpu.2011.0145
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e964] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/22080698/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e965] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Journal%20of%20Health%20Care%20for%20the%20Poor%20and%20Underserved&title=Improving%20Drug%20Labeling%20and%20Counseling%20for%20Limited%20English%20Proficient%20Adults&author=SC%20Bailey&author=N%20Agarwal&author=B%20Sleath&author=S%20Gumusoglu&volume=22&issue=4&publication_year=2011&pages=1131-1143&pmid=22080698&doi=10.1353/hpu.2011.0145&
+                    - text: "]"
+                  - listitem [ref=f295e966]:
+                    - generic [ref=f295e967]: "8."
+                    - text: Paul IM, Yin HS. Out with teaspoons, in with metric units. AAP News. 2012 Mar 1;33(3):10. 2012. [
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e968] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=AAP%20News&title=Out%20with%20teaspoons,%20in%20with%20metric%20units&author=IM%20Paul&author=HS%20Yin&volume=33&issue=3&publication_year=2012&pages=10&
+                    - text: "]"
+                  - listitem [ref=f295e969]:
+                    - generic [ref=f295e970]: "9."
+                    - text: Madlon-Kay DJ, Mosch FS. Liquid medication dosing errors. Journal of Family Practice. 2000;49(8):741–744. [
+                    - link "PubMed" [ref=f295e971] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/10947142/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e972] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Journal%20of%20Family%20Practice&title=Liquid%20medication%20dosing%20errors&author=DJ%20Madlon-Kay&author=FS%20Mosch&volume=49&issue=8&publication_year=2000&pages=741-744&pmid=10947142&
+                    - text: "]"
+                  - listitem [ref=f295e973]:
+                    - generic [ref=f295e974]: "10."
+                    - text: "McMahon SR, Rimsza ME, Bay RC. Parents can dose liquid medication accurately. Pediatrics. 1997;100(3 Pt 1):330–333. doi: 10.1542/peds.100.3.330. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e975] [cursor=pointer]:
+                      - /url: https://doi.org/10.1542/peds.100.3.330
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e976] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/9282701/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e977] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Pediatrics&title=Parents%20can%20dose%20liquid%20medication%20accurately&author=SR%20McMahon&author=ME%20Rimsza&author=RC%20Bay&volume=100&issue=3%20Pt%201&publication_year=1997&pages=330-333&pmid=9282701&doi=10.1542/peds.100.3.330&
+                    - text: "]"
+                  - listitem [ref=f295e978]:
+                    - generic [ref=f295e979]: "11."
+                    - text: "Rothman RL, Yin HS, Mulvaney S, Co JPT, Homer C, Lannon C. Health Literacy and Quality: Focus on Chronic Illness Care and Patient Safety. Pediatrics. 2009 Nov;124(Supplement 3):S315–S326. doi: 10.1542/peds.2009-1163H. 2009. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e980] [cursor=pointer]:
+                      - /url: https://doi.org/10.1542/peds.2009-1163H
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e981] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/19861486/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e982] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Pediatrics&title=Health%20Literacy%20and%20Quality:%20Focus%20on%20Chronic%20Illness%20Care%20and%20Patient%20Safety&author=RL%20Rothman&author=HS%20Yin&author=S%20Mulvaney&author=JPT%20Co&author=C%20Homer&volume=124&issue=Supplement%203&publication_year=2009&pages=S315-S326&pmid=19861486&doi=10.1542/peds.2009-1163H&
+                    - text: "]"
+                  - listitem [ref=f295e983]:
+                    - generic [ref=f295e984]: "12."
+                    - text: "Yin HS, Wolf MS, Dreyer BP, Sanders LM, Parker RM. Evaluation of consistency in dosing directions and measuring devices for pediatric nonprescription liquid medications. JAMA. 2010;304(23):2595–2602. doi: 10.1001/jama.2010.1797. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e985] [cursor=pointer]:
+                      - /url: https://doi.org/10.1001/jama.2010.1797
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e986] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/21119074/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e987] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=JAMA&title=Evaluation%20of%20consistency%20in%20dosing%20directions%20and%20measuring%20devices%20for%20pediatric%20nonprescription%20liquid%20medications&author=HS%20Yin&author=MS%20Wolf&author=BP%20Dreyer&author=LM%20Sanders&author=RM%20Parker&volume=304&issue=23&publication_year=2010&pages=2595-2602&pmid=21119074&doi=10.1001/jama.2010.1797&
+                    - text: "]"
+                  - listitem [ref=f295e988]:
+                    - generic [ref=f295e989]: "13."
+                    - text: "Paasche-Orlow MK, Schillinger D, Greene SM, Wagner EH. How health care systems can begin to address the challenge of limited literacy. Journal of General Internal Medicine. 2006;21(8):884–887. doi: 10.1111/j.1525-1497.2006.00544.x. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e990] [cursor=pointer]:
+                      - /url: https://doi.org/10.1111/j.1525-1497.2006.00544.x
+                    - text: "] ["
+                    - link "PMC free article" [ref=f295e991] [cursor=pointer]:
+                      - /url: /articles/PMC1831564/
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e992] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/16881952/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e993] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Journal%20of%20General%20Internal%20Medicine&title=How%20health%20care%20systems%20can%20begin%20to%20address%20the%20challenge%20of%20limited%20literacy&author=MK%20Paasche-Orlow&author=D%20Schillinger&author=SM%20Greene&author=EH%20Wagner&volume=21&issue=8&publication_year=2006&pages=884-887&pmid=16881952&doi=10.1111/j.1525-1497.2006.00544.x&
+                    - text: "]"
+                  - listitem [ref=f295e994]:
+                    - generic [ref=f295e995]: "14."
+                    - text: "Weiss BD. Health literacy: A manual for clinicians. Second ed. Chicago: American Medical Association Foundation; 2007. ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e996] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?title=Health%20literacy:%20A%20manual%20for%20clinicians&author=BD%20Weiss&publication_year=2007&
+                    - text: "]"
+                  - listitem [ref=f295e997]:
+                    - generic [ref=f295e998]: "15."
+                    - text: “What Did the Doctor Say?:” Improving Health Literacy to Protect Patient Safety. The Joint Commission; 2007. The Joint Commission Public Policy Initiative. [
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e999] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?title=%E2%80%9CWhat%20Did%20the%20Doctor%20Say?:%E2%80%9D%20Improving%20Health%20Literacy%20to%20Protect%20Patient%20Safety&publication_year=2007&
+                    - text: "]"
+                  - listitem [ref=f295e1000]:
+                    - generic [ref=f295e1001]: "16."
+                    - text: "Dowse R, Ehlers M. Medicine labels incorporating pictograms: do they influence understanding and adherence? Patient Education & Counseling. 2005;58(1):63–70. doi: 10.1016/j.pec.2004.06.012. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1002] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016/j.pec.2004.06.012
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1003] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/15950838/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1004] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Patient%20Education%20&%20Counseling&title=Medicine%20labels%20incorporating%20pictograms:%20do%20they%20influence%20understanding%20and%20adherence?&author=R%20Dowse&author=M%20Ehlers&volume=58&issue=1&publication_year=2005&pages=63-70&pmid=15950838&doi=10.1016/j.pec.2004.06.012&
+                    - text: "]"
+                  - listitem [ref=f295e1005]:
+                    - generic [ref=f295e1006]: "17."
+                    - text: "Katz MG, Kripalani S, Weiss BD. Use of pictorial aids in medication instructions: a review of the literature. Am J Health Syst Pharm. 2006;63(23):2391–2397. doi: 10.2146/ajhp060162. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1007] [cursor=pointer]:
+                      - /url: https://doi.org/10.2146/ajhp060162
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1008] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/17106013/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1009] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Am%20J%20Health%20Syst%20Pharm&title=Use%20of%20pictorial%20aids%20in%20medication%20instructions:%20a%20review%20of%20the%20literature&author=MG%20Katz&author=S%20Kripalani&author=BD%20Weiss&volume=63&issue=23&publication_year=2006&pages=2391-2397&pmid=17106013&doi=10.2146/ajhp060162&
+                    - text: "]"
+                  - listitem [ref=f295e1010]:
+                    - generic [ref=f295e1011]: "18."
+                    - text: "Schillinger D, Piette J, Grumbach K, et al. Closing the loop: physician communication with diabetic patients who have low health literacy. Archives of Internal Medicine. 2003;163(1):83–90. doi: 10.1001/archinte.163.1.83. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1012] [cursor=pointer]:
+                      - /url: https://doi.org/10.1001/archinte.163.1.83
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1013] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/12523921/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1014] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Archives%20of%20Internal%20Medicine&title=Closing%20the%20loop:%20physician%20communication%20with%20diabetic%20patients%20who%20have%20low%20health%20literacy&author=D%20Schillinger&author=J%20Piette&author=K%20Grumbach&volume=163&issue=1&publication_year=2003&pages=83-90&pmid=12523921&doi=10.1001/archinte.163.1.83&
+                    - text: "]"
+                  - listitem [ref=f295e1015]:
+                    - generic [ref=f295e1016]: "19."
+                    - text: "Kountz DS. Strategies for improving low health literacy. Postgraduate Medicine. 2009;121(5):171–177. doi: 10.3810/pgm.2009.09.2065. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1017] [cursor=pointer]:
+                      - /url: https://doi.org/10.3810/pgm.2009.09.2065
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1018] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/19820287/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1019] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Postgraduate%20Medicine&title=Strategies%20for%20improving%20low%20health%20literacy&author=DS%20Kountz&volume=121&issue=5&publication_year=2009&pages=171-177&pmid=19820287&doi=10.3810/pgm.2009.09.2065&
+                    - text: "]"
+                  - listitem [ref=f295e1020]:
+                    - generic [ref=f295e1021]: "20."
+                    - text: "Turner T, Cull WL, Bayldon B, et al. Pediatricians and health literacy: descriptive results from a national survey. Pediatrics. 2009;124(Suppl 3):S299–S305. doi: 10.1542/peds.2009-1162F. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1022] [cursor=pointer]:
+                      - /url: https://doi.org/10.1542/peds.2009-1162F
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1023] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/19861484/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1024] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Pediatrics&title=Pediatricians%20and%20health%20literacy:%20descriptive%20results%20from%20a%20national%20survey&author=T%20Turner&author=WL%20Cull&author=B%20Bayldon&volume=124&issue=Suppl%203&publication_year=2009&pages=S299-S305&pmid=19861484&doi=10.1542/peds.2009-1162F&
+                    - text: "]"
+                  - listitem [ref=f295e1025]:
+                    - generic [ref=f295e1026]: "21."
+                    - text: "Schwartzberg JG, Cowett A, VanGeest J, Wolf MS. Communication techniques for patients with low health literacy: a survey of physicians, nurses, and pharmacists. American Journal of Health Behavior. 2007;31(Suppl 1):S96–S104. doi: 10.5555/ajhb.2007.31.supp.S96. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1027] [cursor=pointer]:
+                      - /url: https://doi.org/10.5555/ajhb.2007.31.supp.S96
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1028] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/17931143/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1029] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=American%20Journal%20of%20Health%20Behavior&title=Communication%20techniques%20for%20patients%20with%20low%20health%20literacy:%20a%20survey%20of%20physicians,%20nurses,%20and%20pharmacists&author=JG%20Schwartzberg&author=A%20Cowett&author=J%20VanGeest&author=MS%20Wolf&volume=31&issue=Suppl%201&publication_year=2007&pages=S96-S104&pmid=17931143&doi=10.5555/ajhb.2007.31.supp.S96&
+                    - text: "]"
+                  - listitem [ref=f295e1030]:
+                    - generic [ref=f295e1031]: "22."
+                    - text: "Sobhani P, Christopherson J, Ambrose PJ, Corelli RL. Accuracy of oral liquid measuring devices: comparison of dosing cup and oral dosing syringe. Annals of Pharmacotherapy. 2008;42(1):46–52. doi: 10.1345/aph.1K420. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1032] [cursor=pointer]:
+                      - /url: https://doi.org/10.1345/aph.1K420
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1033] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/18056832/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1034] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Annals%20of%20Pharmacotherapy&title=Accuracy%20of%20oral%20liquid%20measuring%20devices:%20comparison%20of%20dosing%20cup%20and%20oral%20dosing%20syringe&author=P%20Sobhani&author=J%20Christopherson&author=PJ%20Ambrose&author=RL%20Corelli&volume=42&issue=1&publication_year=2008&pages=46-52&pmid=18056832&doi=10.1345/aph.1K420&
+                    - text: "]"
+                  - listitem [ref=f295e1035]:
+                    - generic [ref=f295e1036]: "23."
+                    - text: "Wallace LS, Keenum AJ, DeVoe JE. Evaluation of consumer medical information and oral liquid measuring devices accompanying pediatric prescriptions. Academic Pediatrics. 2010;10(4):224–227. doi: 10.1016/j.acap.2010.04.001. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1037] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016/j.acap.2010.04.001
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1038] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/20605545/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1039] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Academic%20Pediatrics&title=Evaluation%20of%20consumer%20medical%20information%20and%20oral%20liquid%20measuring%20devices%20accompanying%20pediatric%20prescriptions&author=LS%20Wallace&author=AJ%20Keenum&author=JE%20DeVoe&volume=10&issue=4&publication_year=2010&pages=224-227&pmid=20605545&doi=10.1016/j.acap.2010.04.001&
+                    - text: "]"
+                  - listitem [ref=f295e1040]:
+                    - generic [ref=f295e1041]: "24."
+                    - text: "Simon HK, Weinkle DA. Over-the-counter medications. Do parents give what they intend to give? Archives of Pediatrics & Adolescent Medicine. 1997;151(7):654–656. doi: 10.1001/archpedi.1997.02170440016003. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1042] [cursor=pointer]:
+                      - /url: https://doi.org/10.1001/archpedi.1997.02170440016003
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1043] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/9232037/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1044] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Archives%20of%20Pediatrics%20&%20Adolescent%20Medicine&title=Over-the-counter%20medications.%20Do%20parents%20give%20what%20they%20intend%20to%20give?&author=HK%20Simon&author=DA%20Weinkle&volume=151&issue=7&publication_year=1997&pages=654-656&pmid=9232037&doi=10.1001/archpedi.1997.02170440016003&
+                    - text: "]"
+                  - listitem [ref=f295e1045]:
+                    - generic [ref=f295e1046]: "25."
+                    - text: "Kozer E, Scolnik D, Macpherson A, et al. Variables Associated With Medication Errors in Pediatric Emergency Medicine. Pediatrics. 2002;110(4):737–742. doi: 10.1542/peds.110.4.737. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1047] [cursor=pointer]:
+                      - /url: https://doi.org/10.1542/peds.110.4.737
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1048] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/12359787/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1049] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Pediatrics&title=Variables%20Associated%20With%20Medication%20Errors%20in%20Pediatric%20Emergency%20Medicine&author=E%20Kozer&author=D%20Scolnik&author=A%20Macpherson&volume=110&issue=4&publication_year=2002&pages=737-742&pmid=12359787&doi=10.1542/peds.110.4.737&
+                    - text: "]"
+                  - listitem [ref=f295e1050]:
+                    - generic [ref=f295e1051]: "26."
+                    - generic [ref=f295e1052]:
+                      - text: "Agency for Healthcare Research and Quality. CAHPS Clinician & group survey: child primary care questionnaire. [Accessed February 11, 2010];"
+                      - link "External, opens in a new tab. https://cahps.ahrq.gov/clinician_group/cgsurvey/aboutitemsetaddressinghealthliteracy.pdf" [ref=f295e1053] [cursor=pointer]:
+                        - /url: https://cahps.ahrq.gov/clinician_group/cgsurvey/aboutitemsetaddressinghealthliteracy.pdf
+                      - text: .
+                  - listitem [ref=f295e1054]:
+                    - generic [ref=f295e1055]: "27."
+                    - text: "Hollingshead A. Four Factor Index of Social Status. New Haven, CT: Yale University; 1975. ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1056] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?title=Four%20Factor%20Index%20of%20Social%20Status&author=A%20Hollingshead&publication_year=1975&
+                    - text: "]"
+                  - listitem [ref=f295e1057]:
+                    - generic [ref=f295e1058]: "28."
+                    - text: "Baker DW, Williams MV, Parker RM, Gazmararian JA, Nurss J. Development of a brief test to measure functional health literacy. Patient Educ Couns. 1999;38(1):33–42. doi: 10.1016/s0738-3991(98)00116-5. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1059] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016/s0738-3991(98)00116-5
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1060] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/14528569/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1061] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Patient%20Educ%20Couns&title=Development%20of%20a%20brief%20test%20to%20measure%20functional%20health%20literacy&author=DW%20Baker&author=MV%20Williams&author=RM%20Parker&author=JA%20Gazmararian&author=J%20Nurss&volume=38&issue=1&publication_year=1999&pages=33-42&pmid=14528569&doi=10.1016/s0738-3991(98)00116-5&
+                    - text: "]"
+                  - listitem [ref=f295e1062]:
+                    - generic [ref=f295e1063]: "29."
+                    - text: "Macabasco-O'Connell A, DeWalt D, Broucksou KA, et al. Relationship between literacy, knowledge, self-care behaviors, and heart failure-related quality of life among patients with heart failure. Journal of General Internal Medicine. 2011;26(9):979–986. doi: 10.1007/s11606-011-1668-y. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1064] [cursor=pointer]:
+                      - /url: https://doi.org/10.1007/s11606-011-1668-y
+                    - text: "] ["
+                    - link "PMC free article" [ref=f295e1065] [cursor=pointer]:
+                      - /url: /articles/PMC3157534/
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1066] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/21369770/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1067] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Journal%20of%20General%20Internal%20Medicine&title=Relationship%20between%20literacy,%20knowledge,%20self-care%20behaviors,%20and%20heart%20failure-related%20quality%20of%20life%20among%20patients%20with%20heart%20failure&author=A%20Macabasco-O'Connell&author=D%20DeWalt&author=KA%20Broucksou&volume=26&issue=9&publication_year=2011&pages=979-986&pmid=21369770&doi=10.1007/s11606-011-1668-y&
+                    - text: "]"
+                  - listitem [ref=f295e1068]:
+                    - generic [ref=f295e1069]: "30."
+                    - text: "Hironaka LK, Paasche Orlow MK, Young RL, Bauchner H, PL G. Caregiver health literacy and adherence to a daily multi-vitamin with iron regimen in infants. Patient education and counseling. 2009;75(3):376–380. doi: 10.1016/j.pec.2009.03.016. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1070] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016/j.pec.2009.03.016
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1071] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/19395227/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1072] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Patient%20education%20and%20counseling&title=Caregiver%20health%20literacy%20and%20adherence%20to%20a%20daily%20multi-vitamin%20with%20iron%20regimen%20in%20infants&author=LK%20Hironaka&author=MK%20Paasche%20Orlow&author=RL%20Young&author=H%20Bauchner&author=G%20PL&volume=75&issue=3&publication_year=2009&pages=376-380&pmid=19395227&doi=10.1016/j.pec.2009.03.016&
+                    - text: "]"
+                  - listitem [ref=f295e1073]:
+                    - generic [ref=f295e1074]: "31."
+                    - text: "Guerra CE, Dominguez F, JA S. Literacy and knowledge, attitudes, and behavior about colorectal cancer screening. Journal of Health Communication. 2005;10(7):651–663. doi: 10.1080/10810730500267720. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1075] [cursor=pointer]:
+                      - /url: https://doi.org/10.1080/10810730500267720
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1076] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/16278201/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1077] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Journal%20of%20Health%20Communication&title=Literacy%20and%20knowledge,%20attitudes,%20and%20behavior%20about%20colorectal%20cancer%20screening&author=CE%20Guerra&author=F%20Dominguez&author=S%20JA&volume=10&issue=7&publication_year=2005&pages=651-663&pmid=16278201&doi=10.1080/10810730500267720&
+                    - text: "]"
+                  - listitem [ref=f295e1078]:
+                    - generic [ref=f295e1079]: "32."
+                    - text: "Bethell CD, Read D, Stein RE, Blumberg SJ, Wells N, Newacheck PW. Identifying children with special health care needs: development and evaluation of a short screening instrument. Ambul Pediatr. 2002;2(1):38–48. doi: 10.1367/1539-4409(2002)002<0038:icwshc>2.0.co;2. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1080] [cursor=pointer]:
+                      - /url: https://doi.org/10.1367/1539-4409(2002)002<0038:icwshc>2.0.co;2
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1081] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/11888437/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1082] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Ambul%20Pediatr&title=Identifying%20children%20with%20special%20health%20care%20needs:%20development%20and%20evaluation%20of%20a%20short%20screening%20instrument&author=CD%20Bethell&author=D%20Read&author=RE%20Stein&author=SJ%20Blumberg&author=N%20Wells&volume=2&issue=1&publication_year=2002&pages=38-48&pmid=11888437&doi=10.1367/1539-4409(2002)002<0038:icwshc>2.0.co;2&
+                    - text: "]"
+                  - listitem [ref=f295e1083]:
+                    - generic [ref=f295e1084]: "33."
+                    - text: "Vernacchio L, Kelly JP, Kaufman DW, Mitchell AA. Medication use among children <12 years of age in the United States: results from the Slone Survey. Pediatrics. 2009;124(2):446–454. doi: 10.1542/peds.2008-2869. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1085] [cursor=pointer]:
+                      - /url: https://doi.org/10.1542/peds.2008-2869
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1086] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/19651573/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1087] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Pediatrics&title=Medication%20use%20among%20children%20<12%20years%20of%20age%20in%20the%20United%20States:%20results%20from%20the%20Slone%20Survey&author=L%20Vernacchio&author=JP%20Kelly&author=DW%20Kaufman&author=AA%20Mitchell&volume=124&issue=2&publication_year=2009&pages=446-454&pmid=19651573&doi=10.1542/peds.2008-2869&
+                    - text: "]"
+                  - listitem [ref=f295e1088]:
+                    - generic [ref=f295e1089]: "34."
+                    - text: "Kaushal R, Goldmann DA, Keohane CA, et al. Adverse Drug Events in Pediatric Outpatients. Ambulatory Pediatrics. 2007;7(5):383–389. doi: 10.1016/j.ambp.2007.05.005. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1090] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016/j.ambp.2007.05.005
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1091] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/17870647/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1092] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Ambulatory%20Pediatrics&title=Adverse%20Drug%20Events%20in%20Pediatric%20Outpatients&author=R%20Kaushal&author=DA%20Goldmann&author=CA%20Keohane&volume=7&issue=5&publication_year=2007&pages=383-389&pmid=17870647&doi=10.1016/j.ambp.2007.05.005&
+                    - text: "]"
+                  - listitem [ref=f295e1093]:
+                    - generic [ref=f295e1094]: "35."
+                    - text: "Winnick S, Lucas DO, Hartman AL, Toll D. How Do You Improve Compliance? Pediatrics. 2005;115(6):e718–e724. doi: 10.1542/peds.2004-1133. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1095] [cursor=pointer]:
+                      - /url: https://doi.org/10.1542/peds.2004-1133
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1096] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/15930200/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1097] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Pediatrics&title=How%20Do%20You%20Improve%20Compliance?&author=S%20Winnick&author=DO%20Lucas&author=AL%20Hartman&author=D%20Toll&volume=115&issue=6&publication_year=2005&pages=e718-e724&pmid=15930200&doi=10.1542/peds.2004-1133&
+                    - text: "]"
+                  - listitem [ref=f295e1098]:
+                    - generic [ref=f295e1099]: "36."
+                    - text: "Houts PS, Doak CC, Doak LG, Loscalzo MJ. The role of pictures in improving health communication: a review of research on attention, comprehension, recall, and adherence. Patient Education & Counseling. 2006;61(2):173–190. doi: 10.1016/j.pec.2005.05.004. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1100] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016/j.pec.2005.05.004
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1101] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/16122896/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1102] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Patient%20Education%20&%20Counseling&title=The%20role%20of%20pictures%20in%20improving%20health%20communication:%20a%20review%20of%20research%20on%20attention,%20comprehension,%20recall,%20and%20adherence&author=PS%20Houts&author=CC%20Doak&author=LG%20Doak&author=MJ%20Loscalzo&volume=61&issue=2&publication_year=2006&pages=173-190&pmid=16122896&doi=10.1016/j.pec.2005.05.004&
+                    - text: "]"
+                  - listitem [ref=f295e1103]:
+                    - generic [ref=f295e1104]: "37."
+                    - text: "Mansoor LE, Dowse R. Effect of pictograms on readability of patient information materials. Ann Pharmacother. 2003;37(7–8):1003–1009. doi: 10.1345/aph.1C449. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1105] [cursor=pointer]:
+                      - /url: https://doi.org/10.1345/aph.1C449
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1106] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/12841808/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1107] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=Ann%20Pharmacother&title=Effect%20of%20pictograms%20on%20readability%20of%20patient%20information%20materials&author=LE%20Mansoor&author=R%20Dowse&volume=37&issue=7%E2%80%938&publication_year=2003&pages=1003-1009&pmid=12841808&doi=10.1345/aph.1C449&
+                    - text: "]"
+                  - listitem [ref=f295e1108]:
+                    - generic [ref=f295e1109]: "38."
+                    - text: "DeWalt DA, Malone RM, Bryant ME, et al. A heart failure self-management program for patients of all literacy levels: a randomized, controlled trial [ISRCTN11535170] BMC Health Services Research. 2006;6:30. doi: 10.1186/1472-6963-6-30. ["
+                    - link "External, opens in a new tab. DOI" [ref=f295e1110] [cursor=pointer]:
+                      - /url: https://doi.org/10.1186/1472-6963-6-30
+                    - text: "] ["
+                    - link "PMC free article" [ref=f295e1111] [cursor=pointer]:
+                      - /url: /articles/PMC1475568/
+                    - text: "] ["
+                    - link "PubMed" [ref=f295e1112] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/16533388/
+                    - text: "] ["
+                    - link "External, opens in a new tab. Google Scholar" [ref=f295e1113] [cursor=pointer]:
+                      - /url: https://scholar.google.com/scholar_lookup?journal=BMC%20Health%20Services%20Research&title=A%20heart%20failure%20self-management%20program%20for%20patients%20of%20all%20literacy%20levels:%20a%20randomized,%20controlled%20trial%20[ISRCTN11535170]&author=DA%20DeWalt&author=RM%20Malone&author=ME%20Bryant&volume=6&publication_year=2006&pages=30&pmid=16533388&doi=10.1186/1472-6963-6-30&
+                    - text: "]"
+    - region "Article resources and navigation" [ref=f295e1115]:
+      - generic [ref=f295e1117]:
+        - heading "ACTIONS" [level=2] [ref=f295e1118]
+        - list [ref=f295e1119]:
+          - listitem [ref=f295e1120]:
+            - link "View on publisher site icon View on publisher site" [ref=f295e1121] [cursor=pointer]:
+              - /url: https://doi.org/10.1016/j.acap.2014.01.003
+              - img "View on publisher site icon"
+              - generic [ref=f295e1122]: View on publisher site
+          - listitem [ref=f295e1123]:
+            - link "Download PDF icon PDF (931.2 KB)" [ref=f295e1124] [cursor=pointer]:
+              - /url: pdf/nihms554626.pdf
+              - img "Download PDF icon"
+              - generic [ref=f295e1125]: PDF (931.2 KB)
+          - listitem [ref=f295e1126]:
+            - button "Open dialog with citation text in different styles" [ref=f295e1127] [cursor=pointer]:
+              - img "Cite icon"
+              - generic [ref=f295e1128]: Cite
+          - listitem [ref=f295e1129]:
+            - button "Save article in MyNCBI collections." [ref=f295e1130] [cursor=pointer]:
+              - img "Collections icon"
+              - generic [ref=f295e1131]: Collections
+          - listitem [ref=f295e1132]:
+            - button "Show article permalink" [ref=f295e1133] [cursor=pointer]:
+              - img "Permalink icon"
+              - generic [ref=f295e1134]: Permalink
+      - generic [ref=f295e1135]:
+        - heading "RESOURCES" [level=2] [ref=f295e1136]
+        - generic [ref=f295e1137]:
+          - heading [level=3] [ref=f295e1138]:
+            - button "Similar articles" [ref=f295e1139] [cursor=pointer]
+          - heading [level=3] [ref=f295e1140]:
+            - button "Cited by other articles" [ref=f295e1141] [cursor=pointer]
+          - heading [level=3] [ref=f295e1142]:
+            - button "Links to NCBI Databases" [ref=f295e1143] [cursor=pointer]
+      - navigation "On this page" [ref=f295e1145]:
+        - heading "On this page" [level=2] [ref=f295e1146]
+        - list [ref=f295e1147]:
+          - listitem [ref=f295e1148]:
+            - link "Abstract" [ref=f295e1149] [cursor=pointer]:
+              - /url: "#abstract1"
+          - listitem [ref=f295e1150]:
+            - link "INTRODUCTION" [ref=f295e1151] [cursor=pointer]:
+              - /url: "#S5"
+          - listitem [ref=f295e1152]:
+            - link "METHODS" [ref=f295e1153] [cursor=pointer]:
+              - /url: "#S6"
+          - listitem [ref=f295e1154]:
+            - link "RESULTS" [ref=f295e1155] [cursor=pointer]:
+              - /url: "#S15"
+          - listitem [ref=f295e1156]:
+            - link "DISCUSSION" [ref=f295e1157] [cursor=pointer]:
+              - /url: "#S21"
+          - listitem [ref=f295e1158]:
+            - link "Acknowledgments" [ref=f295e1159] [cursor=pointer]:
+              - /url: "#S22"
+          - listitem [ref=f295e1160]:
+            - link "Footnotes" [ref=f295e1161] [cursor=pointer]:
+              - /url: "#fn-group1"
+          - listitem [ref=f295e1162]:
+            - link "REFERENCES" [ref=f295e1163] [cursor=pointer]:
+              - /url: "#ref-list1"
+  - contentinfo [ref=f295e1164]:
+    - generic [ref=f295e1165]:
+      - generic [ref=f295e1166]: Follow NCBI
+      - generic [ref=f295e1167]:
+        - link "NCBI on X (formerly known as Twitter)" [ref=f295e1168] [cursor=pointer]:
+          - /url: https://twitter.com/ncbi
+        - link "NCBI on Facebook" [ref=f295e1171] [cursor=pointer]:
+          - /url: https://www.facebook.com/ncbi.nlm
+        - link "NCBI on LinkedIn" [ref=f295e1174] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/ncbinlm
+        - link "NCBI on GitHub" [ref=f295e1177] [cursor=pointer]:
+          - /url: https://github.com/ncbi
+        - link "NCBI RSS feed" [ref=f295e1180] [cursor=pointer]:
+          - /url: https://ncbiinsights.ncbi.nlm.nih.gov/
+    - generic [ref=f295e1183]:
+      - generic [ref=f295e1184]:
+        - generic [ref=f295e1185]:
+          - paragraph [ref=f295e1186]: Connect with NLM
+          - generic [ref=f295e1187]:
+            - link "NLM on X (formerly known as Twitter)" [ref=f295e1188] [cursor=pointer]:
+              - /url: https://twitter.com/nlm_nih
+            - link "NLM on Facebook" [ref=f295e1191] [cursor=pointer]:
+              - /url: https://www.facebook.com/nationallibraryofmedicine
+            - link "NLM on YouTube" [ref=f295e1194] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/NLMNIH
+        - paragraph [ref=f295e1199]:
+          - link "External, opens in a new tab. National Library of Medicine 8600 Rockville Pike Bethesda, MD 20894" [ref=f295e1200] [cursor=pointer]:
+            - /url: "https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/%4038.9959508,\n            -77.101021,17z/data%3D!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb%3A0x19156f88b27635b8!8m2!3d38.9959508!\n            4d-77.0988323"
+        - list [ref=f295e1201]:
+          - listitem [ref=f295e1202]:
+            - link "Web Policies" [ref=f295e1203] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/web_policies.html
+          - listitem [ref=f295e1204]:
+            - link "FOIA" [ref=f295e1205] [cursor=pointer]:
+              - /url: https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office
+          - listitem [ref=f295e1206]:
+            - link "External, opens in a new tab. HHS Vulnerability Disclosure" [ref=f295e1207] [cursor=pointer]:
+              - /url: https://www.hhs.gov/vulnerability-disclosure-policy/index.html
+        - list [ref=f295e1208]:
+          - listitem [ref=f295e1209]:
+            - link "Help" [ref=f295e1210] [cursor=pointer]:
+              - /url: https://support.nlm.nih.gov/?pagename=cloudpmc-viewer%3Apmc%3Aarticle%3Amanuscript
+          - listitem [ref=f295e1211]:
+            - link "Accessibility" [ref=f295e1212] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/accessibility.html
+          - listitem [ref=f295e1213]:
+            - link "Careers" [ref=f295e1214] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/careers/careers.html
+      - list [ref=f295e1216]:
+        - listitem [ref=f295e1217]:
+          - link "NLM" [ref=f295e1218] [cursor=pointer]:
+            - /url: https://www.nlm.nih.gov/
+        - listitem [ref=f295e1219]:
+          - link "NIH" [ref=f295e1220] [cursor=pointer]:
+            - /url: https://www.nih.gov/
+        - listitem [ref=f295e1221]:
+          - link "External, opens in a new tab. HHS" [ref=f295e1222] [cursor=pointer]:
+            - /url: https://www.hhs.gov/
+        - listitem [ref=f295e1223]:
+          - link "External, opens in a new tab. USA.gov" [ref=f295e1224] [cursor=pointer]:
+            - /url: https://www.usa.gov/

@@ -1,0 +1,675 @@
+{
+  "domain": "TESTING & CODE QUALITY",
+  "entries": [
+    {
+      "term": "unit test",
+      "aliases": [
+        "unit testing",
+        "unit test case"
+      ],
+      "level": "basic",
+      "problem": "Khi sửa một hàm nhỏ, lập trình viên phải mất nhiều thời gian chạy toàn bộ hệ thống thủ công để chắc chắn không ảnh hưởng. Việc đó chậm và dễ bỏ sót.",
+      "origin": "Kent Beck (xUnit, Smalltalk)",
+      "how": "Chạy nhanh, cô lập hàm/class nhỏ bằng cách mock phụ thuộc. Giúp phát hiện lỗi ngay tại chỗ sửa.",
+      "related": [
+        "test isolation",
+        "mocking/stub/fake/spy",
+        "assertion",
+        "arrange-act-assert"
+      ]
+    },
+    {
+      "term": "integration test",
+      "aliases": [
+        "integration testing"
+      ],
+      "level": "basic",
+      "problem": "Unit test pass nhưng ứng dụng vẫn lỗi vì các thành phần (DB, service, module) không tương thích nhau khi ghép lại. Cần test quy trình liên kết giữa chúng.",
+      "origin": "Kent Beck / xUnit context",
+      "how": "Test tương tác thật giữa vài thành phần (vd. service + DB in-memory/test DB) thay vì mock toàn bộ.",
+      "related": [
+        "unit test",
+        "e2e test",
+        "test pyramid",
+        "Contract testing"
+      ]
+    },
+    {
+      "term": "e2e test",
+      "aliases": [
+        "End-to-end test",
+        "end to end testing",
+        "E2E",
+        "E2E test"
+      ],
+      "level": "basic",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Các unit test và integration test đều pass nhưng khi deploy người dùng vẫn gặp lỗi ở toàn bộ luồng: frontend gọi API, API truy vấn database, xác thực và mạng đều có thể sai tại điểm tích hợp cuối cùng. Từng thành phần được kiểm tra riêng lẻ không phát hiện được lỗi chỉ lộ ra khi chạy hệ thống thật với đầy đủ các tầng kết nối với nhau.",
+      "origin": "Agile/acceptance testing practice (Glenford Myers influenced)",
+      "how": "Viết kịch bản chạy trên hệ thống đã dựng đầy đủ (frontend + backend + database + API), mô phỏng thao tác thật của người dùng qua UI hoặc HTTP đi từ đầu đến cuối một luồng nghiệp vụ, để xác minh các tầng kết nối với nhau đúng trong môi trường thật thay vì chỉ kiểm tra từng phần.",
+      "related": [
+        "integration test",
+        "smoke test",
+        "test pyramid",
+        "acceptance test",
+        "flaky test"
+      ]
+    },
+    {
+      "term": "test pyramid",
+      "aliases": [
+        "testing pyramid"
+      ],
+      "level": "basic",
+      "problem": "Nếu chỉ viết e2e, test chạy chậm, dễ flaky, khó maintain. Nếu chỉ viết unit, dễ bỏ sót tương tác. Cần cân bằng số lượng test theo tốc độ/độ tin cậy.",
+      "origin": "Martin Fowler (Test Pyramid) referencing Cohn/Beck ideas; popularized 2012",
+      "how": "Ưu tiên nhiều unit (nhanh), vừa phải integration, ít e2e (chậm) để tối ưu feedback loop.",
+      "related": [
+        "unit test",
+        "integration test",
+        "e2e test",
+        "TDD"
+      ]
+    },
+    {
+      "term": "TDD",
+      "aliases": [
+        "Test-Driven Development"
+      ],
+      "level": "basic",
+      "problem": "Khi code trước test, dễ viết code quá phức, khó test, hoặc bỏ sót yêu cầu. Thiếu ràng buộc để đảm bảo code đúng theo kỳ vọng.",
+      "origin": "Kent Beck (Extreme Programming)",
+      "how": "Viết test fail trước, rồi implement tối thiểu để pass, sau đó refactor. Quy trình red-green-refactor.",
+      "related": [
+        "red-green-refactor",
+        "BDD",
+        "unit test",
+        "refactoring"
+      ]
+    },
+    {
+      "term": "BDD",
+      "aliases": [
+        "Behavior-Driven Development"
+      ],
+      "level": "intermediate",
+      "problem": "Team kỹ thuật và nghiệp vụ nói khác ngôn ngữ, dẫn đến hiểu sai yêu cầu. Cần diễn đạt hành vi bằng ngôn ngữ gần business.",
+      "origin": "Dan North",
+      "how": "Viết kịch bản hành vi Given-When-Then để cả PO/dev/QA cùng hiểu, sau đó mapping sang test code.",
+      "related": [
+        "TDD",
+        "acceptance test",
+        "Contract testing"
+      ]
+    },
+    {
+      "term": "red-green-refactor",
+      "aliases": [
+        "red-green-refactor cycle"
+      ],
+      "level": "basic",
+      "problem": "Khi sửa code mà không có vòng lặp ngắn, dễ mất định hướng: implement thừa hoặc không biết khi nào xong.",
+      "origin": "Kent Beck (TDD)",
+      "how": "Red: test fail. Green: làm tối thiểu để pass. Refactor: dọn code mà vẫn giữ test pass.",
+      "related": [
+        "TDD",
+        "refactoring"
+      ]
+    },
+    {
+      "term": "regression test",
+      "aliases": [
+        "regression testing"
+      ],
+      "level": "basic",
+      "problem": "Sau khi sửa bug hoặc refactor, chức năng cũ bị hỏng mà không ai phát hiện (regression) vì không có test cho nhánh đó.",
+      "origin": "Software engineering practice (Myers)",
+      "how": "Giữ lại test cho bug đã fix hoặc chức năng quan trọng; chạy lại để đảm bảo không tái xuất hiện.",
+      "related": [
+        "unit test",
+        "integration test",
+        "smoke test"
+      ]
+    },
+    {
+      "term": "flaky test",
+      "aliases": [
+        "flaky",
+        "non-deterministic test"
+      ],
+      "level": "intermediate",
+      "problem": "Test đôi khi pass, đôi khi fail trên cùng code. Gây mất niềm tin vào CI, team dễ bỏ qua fail thật.",
+      "origin": "Google Testing Blog (flakiness research)",
+      "how": "Xác định nguyên nhân: race condition, timeouts, shared state, order dependency. Cần làm test deterministic (test isolation).",
+      "related": [
+        "test isolation",
+        "deterministic test",
+        "parallel test execution"
+      ]
+    },
+    {
+      "term": "test isolation",
+      "aliases": [
+        "isolated test"
+      ],
+      "level": "intermediate",
+      "problem": "Test A làm thay đổi state (DB, cache, file) ảnh hưởng test B chạy sau hoặc song song → kết quả không lặp lại được.",
+      "origin": "xUnit/test design (Kent Beck, Gerard Meszaros)",
+      "how": "Mỗi test tự khởi tạo/dọn dẹp state, không phụ thuộc order. Dùng fixture, transaction rollback, in-memory, hoặc mock.",
+      "related": [
+        "flaky test",
+        "deterministic test",
+        "fixture",
+        "test data management"
+      ]
+    },
+    {
+      "term": "mocking/stub/fake/spy",
+      "aliases": [
+        "mock",
+        "stub",
+        "fake",
+        "spy",
+        "test doubles",
+        "test double"
+      ],
+      "level": "intermediate",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Test đơn vị phụ thuộc database, HTTP API, đồng hồ hay filesystem khiến bài test chạy chậm, dễ hỏng theo môi trường và khó tái lập khi lỗi xảy ra; nhóm kỹ thuật test double ra đời để thay những phụ thuộc đó bằng vật thay thế control được.",
+      "origin": "Gerard Meszaros (Test Doubles)",
+      "how": "Chọn theo điều cần kiểm chứng: stub trả dữ liệu cứng để đi đúng nhánh, mock đặt kỳ vọng tương tác và fail ngay nếu sai, fake thay bằng triển khai nhẹ cùng interface, spy ghi lại lời gọi để assert sau phần thực thi. Cột bốn đều thuộc nhóm test double của Meszaros.",
+      "related": [
+        "unit test",
+        "test isolation",
+        "Contract testing"
+      ]
+    },
+    {
+      "term": "fixture",
+      "aliases": [
+        "fixture",
+        "Test fixture",
+        "setup/teardown"
+      ],
+      "level": "basic",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Nhiều test cùng cần một khối dữ liệu và trạng thái khởi tạo giống nhau; nếu mỗi test tự viết lại phần chuẩn bị thì code bị lặp, khó bảo trì, và các test vô tình chạy trên trạng thái khác nhau khiến kết quả không đáng tin.",
+      "origin": "xUnit",
+      "how": "Gom phần chuẩn bị vào một chỗ: thiết lập dữ liệu, đối tượng và kết nối trong bước setup chạy trước mỗi test (beforeEach hoặc fixture factory), rồi dọn dẹp trong teardown chạy sau mỗi test, để mọi test khởi đầu từ cùng một trạng thái sạch mà không lặp lại code.",
+      "related": [
+        "test isolation",
+        "arrange-act-assert",
+        "xUnit",
+        "test data management"
+      ]
+    },
+    {
+      "term": "Code coverage",
+      "aliases": [
+        "Test coverage",
+        "Statement coverage",
+        "Line coverage",
+        "test coverage (line vs branch)",
+        "code coverage",
+        "branch coverage",
+        "coverage",
+        "Decision coverage"
+      ],
+      "level": "intermediate",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Công cụ coverage thường chỉ báo phần trăm dòng lệnh đã thực thi nên team tin rằng test đã đủ, nhưng một nhánh else không bao giờ được chạy vẫn chứa lỗi và không hiện lên trong con số đó. Branch coverage (decision coverage) bổ sung bằng chứng về các nhánh true/false, chỉ ra đoạn điều kiện chưa được test dù statement coverage đã cao. Cả hai chỉ nên dùng làm chỉ báo gợi ý, không phải mục tiêu tuyệt đối.",
+      "origin": "Miller & Maloney (1963)",
+      "how": "Statement coverage (line coverage) tính số dòng đã chạy trên tổng dòng có thể thực thi; branch coverage tính số nhánh rẽ true/false đã đi qua trên tổng số nhánh, nên nhánh bị bỏ sót hiện rõ trong số phần trăm. CI chạy công cụ đo coverage như gcov, Istanbul hay JaCoCo sau mỗi lượt test và gắn ngưỡng vào báo cáo, rồi team dùng chênh lệch để bổ sung test case cho nhánh thiếu thay vì coi con số là mục tiêu hoàn thành.",
+      "related": [
+        "mutation testing",
+        "cyclomatic complexity",
+        "static analysis"
+      ]
+    },
+    {
+      "term": "assertion",
+      "aliases": [
+        "assert"
+      ],
+      "level": "basic",
+      "problem": "Sau khi chạy code, cần xác định \"đúng hay sai\" một cách tự động. Nếu chỉ in kết quả, dễ bỏ sót.",
+      "origin": "xUnit",
+      "how": "So sánh kết quả kỳ vọng vs thực tế; nếu sai, test fail ngay với thông báo rõ ràng.",
+      "related": [
+        "arrange-act-assert",
+        "unit test"
+      ]
+    },
+    {
+      "term": "arrange-act-assert",
+      "aliases": [
+        "AAA",
+        "3A pattern"
+      ],
+      "level": "basic",
+      "problem": "Test viết lộn xộn, khó đọc, khó biết đâu là setup, đâu là hành động, đâu là kiểm chứng.",
+      "origin": "William C. Wake / Bill Wake popularized",
+      "how": "Arrange: chuẩn bị. Act: thực thi. Assert: kiểm chứng. Giúp test rõ ràng, dễ review.",
+      "related": [
+        "assertion",
+        "fixture",
+        "unit test"
+      ]
+    },
+    {
+      "term": "snapshot test",
+      "aliases": [
+        "snapshot testing"
+      ],
+      "level": "intermediate",
+      "problem": "Khi output lớn (UI, JSON) thay đổi, khó viết assertion thủ công cho từng field. Cần phát hiện thay đổi không mong muốn nhanh.",
+      "origin": "Jest popularized snapshot testing",
+      "how": "Lưu output mẫu (snapshot) lần đầu, so sánh với output hiện tại. Chỉ update snapshot khi thay đổi có chủ đích.",
+      "related": [
+        "regression test",
+        "Characterization test"
+      ]
+    },
+    {
+      "term": "Contract testing",
+      "aliases": [
+        "contract test (Pact)",
+        "contract testing",
+        "Pact"
+      ],
+      "level": "advanced",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Trong kiến trúc microservices, service consumer và provider thường được triển khai độc lập nên integration test toàn hệ thống chậm, đắt và dễ vỡ; consumer test pass rồi provider thay đổi hợp đồng giao tiếp khiến tích hợp fail ở môi trường thật. Contract testing ra đời để bắt breaking change trước khi deploy.",
+      "origin": "Matt Fellows / Pact (Pact.io)",
+      "how": "Consumer định nghĩa kỳ vọng (contract) dựa trên những gì nó thực sự dùng và sinh ra file contract; provider xác minh (verify) có đáp ứng đúng contract đó, thường chạy trong CI. Cách này phát hiện breaking change sớm mà không cần deploy cả hai service cùng lúc.",
+      "related": [
+        "consumer-driven contract",
+        "Pact",
+        "integration test",
+        "e2e test"
+      ]
+    },
+    {
+      "term": "consumer-driven contract",
+      "aliases": [
+        "CDC"
+      ],
+      "level": "advanced",
+      "problem": "Provider sửa API theo kiểu break change (bỏ field, đổi kiểu dữ liệu, đổi mã trạng thái) mà không biết service khác đang phụ thuộc. Hai bên thống nhất contract muộn, thường chỉ phát hiện khi tích hợp giữa môi trường, nên lỗi lộ ra muộn, rollback kéo theo và test tích hợp giữa hai hệ thống thật vừa chậm vừa đắt.",
+      "origin": "Ian Robinson (Consumer-Driven Contracts)",
+      "how": "Consumer viết expectation cho từng luồng gọi (đường dẫn, header, schema body, mã trạng thái mong đợi) rồi check file contract vào CI. Provider chạy các contract đó trước mỗi lần deploy, nếu không đáp ứng thì build fail ngay ở đoạn sớm nhất. Công cụ như Pact lưu contract qua broker để hai bên không cần khởi chạy hệ thống thật; khi consumer thay đổi expectation, provider nhận thông báo để điều chỉnh kịp thời.",
+      "related": [
+        "Contract testing",
+        "integration test"
+      ]
+    },
+    {
+      "term": "smoke test",
+      "aliases": [
+        "sanity test",
+        "smoke testing"
+      ],
+      "level": "basic",
+      "problem": "Sau build/deploy, mất nhiều thời gian chạy full suite. Cần nhanh chóng biết \"có lỗi nghiêm trọng không\" trước khi chạy sâu hơn.",
+      "origin": "Hardware testing origin (circuit smoke) adopted in software",
+      "how": "Chọn tập nhỏ kịch bản then chốt (login, healthcheck, endpoint quan trọng) chạy trong vài phút.",
+      "related": [
+        "regression test",
+        "e2e test"
+      ]
+    },
+    {
+      "term": "A/B test",
+      "aliases": [
+        "split test",
+        "A/B testing"
+      ],
+      "level": "intermediate",
+      "problem": "Không biết thay đổi UI/logic có thực sự cải thiện metric kinh doanh (conversion, click) hay chỉ ngẫu nhiên.",
+      "origin": "Ronald Fisher statistics applied; web A/B popularized",
+      "how": "Chia user ngẫu nhiên thành A/B, so sánh metric với ý nghĩa thống kê trước khi quyết định roll out.",
+      "related": [
+        "Canary deploy",
+        "feature flag testing"
+      ]
+    },
+    {
+      "term": "Canary deploy",
+      "aliases": [
+        "canary analysis",
+        "canary testing",
+        "canary release",
+        "canary rollout",
+        "phát hành dần",
+        "chim hoàng yến"
+      ],
+      "level": "advanced",
+      "domain": "DevOps & Triển khai",
+      "problem": "Deploy toàn bộ user cùng lúc gây outage lớn; bug chỉ lộ với một phần nhỏ traffic thật (dữ liệu thật, khu vực thật, timezone thật) nên phát hiện muộn và rollback cũng đau. Blue-green chỉ test được môi trường trống, không trả lời được câu hỏi bản mới có chịu nổi user thật không. Vì vậy cần phát hiện vấn đề sớm với một tập nhỏ user trước khi lan rộng.",
+      "origin": "Coal mining canary + modern CD (Google/SRE practices); Cái tên lấy từ metaphor 'chim hoàng yến trong mỏ than' (canary in the coal mine) — con nhạy với khí độc hơn người nên chết trước để cảnh báo; kỹ thuật được Google/Facebook dùng rộng và phổ biến qua cộng đồng continuous delivery.",
+      "how": "Phát hành version mới cho một phần rất nhỏ lưu lượng (1-5% user hoặc một node), theo dõi metric quan trọng (error rate, latency) so với baseline; nếu ổn định thì tăng dần tới 100%, nếu bất ổn thì dừng và rollback chỉ phần đó, 99% user không biết chuyện gì xảy ra.",
+      "related": [
+        "A/B test",
+        "feature flag testing",
+        "Chaos Engineering",
+        "Blue-green deploy",
+        "Feature flag",
+        "Zero-downtime deploy (rolling deploy)",
+        "Rollback",
+        "smoke test"
+      ]
+    },
+    {
+      "term": "lint",
+      "aliases": [
+        "linter",
+        "linting"
+      ],
+      "level": "basic",
+      "problem": "Code style không nhất quán, dễ gây tranh cãi trong review. Nhiều lỗi đơn giản (unused import, typo) lặp lại.",
+      "origin": "Stephen C. Johnson (lint for C)",
+      "how": "Tự động kiểm tra style/rule (format, convention) trước commit/CI để bắt lỗi sớm, giữ codebase nhất quán.",
+      "related": [
+        "static analysis",
+        "type check"
+      ]
+    },
+    {
+      "term": "static analysis",
+      "aliases": [
+        "static code analysis"
+      ],
+      "level": "intermediate",
+      "problem": "Nhiều bug (null deref, resource leak) khó phát hiện bằng test chạy, nhưng có thể phát hiện từ mã nguồn không chạy.",
+      "origin": "Compiler theory + modern tools",
+      "how": "Phân tích AST/source mà không thực thi để tìm bug pattern, smell, security issue tiềm ẩn.",
+      "related": [
+        "SAST/DAST",
+        "lint",
+        "cyclomatic complexity"
+      ]
+    },
+    {
+      "term": "type check",
+      "aliases": [
+        "type checking",
+        "static typing"
+      ],
+      "level": "basic",
+      "problem": "Lỗi kiểu dữ liệu (string truyền nhầm number) chỉ phát hiện runtime, gây bug khó debug sau deploy.",
+      "origin": "Type theory (Milner) applied to PLs",
+      "how": "Kiểm tra kiểu tại compile-time (TS, flow) để bắt lỗi trước khi chạy, cải thiện refactor an toàn.",
+      "related": [
+        "lint",
+        "static analysis"
+      ]
+    },
+    {
+      "term": "SAST/DAST",
+      "aliases": [
+        "SAST",
+        "DAST",
+        "Static Application Security Testing",
+        "Dynamic Application Security Testing"
+      ],
+      "level": "advanced",
+      "problem": "Lỗ hổng bảo mật (SQLi, XSS) thường phát hiện muộn. Cần quét cả mã nguồn và ứng dụng đang chạy.",
+      "origin": "OWASP-aligned tooling",
+      "how": "SAST: quét source không chạy. DAST: quét ứng dụng đang chạy (black-box) để tìm lỗ hổng thực tế.",
+      "related": [
+        "static analysis",
+        "Chaos Engineering",
+        "lint"
+      ]
+    },
+    {
+      "term": "code review",
+      "aliases": [
+        "peer review",
+        "pull request review"
+      ],
+      "level": "basic",
+      "problem": "Lỗi logic, design kém, hoặc hiểu sai chỉ có 1 người biết trước merge. Thiếu cơ chế bắt lỗi đa góc nhìn.",
+      "origin": "Fagan Inspection (Michael Fagan) → modern PR review",
+      "how": "Peer review trước merge: kiểm tra logic, readability, test coverage, security, tránh knowledge silo.",
+      "related": [
+        "technical debt",
+        "refactoring"
+      ]
+    },
+    {
+      "term": "technical debt",
+      "aliases": [
+        "tech debt"
+      ],
+      "level": "intermediate",
+      "problem": "Chọn shortcut để release nhanh hôm nay → chi phí bảo trì tăng theo thời gian (khó sửa, khó mở rộng).",
+      "origin": "Ward Cunningham",
+      "how": "Ghi nhận nợ có chủ đích (intentional) vs vô tình. Ưu tiên trả nợ theo tác động (critical path).",
+      "related": [
+        "refactoring",
+        "cyclomatic complexity",
+        "dead code"
+      ]
+    },
+    {
+      "term": "refactoring",
+      "aliases": [
+        "code refactoring"
+      ],
+      "level": "intermediate",
+      "problem": "Code hoạt động nhưng khó đọc/sửa. Nếu sửa mà không có test, nguy cơ regression cao.",
+      "origin": "Martin Fowler (Refactoring book)",
+      "how": "Thay đổi cấu trúc nội bộ mà giữ hành vi ngoài. Luôn có test bảo vệ, refactor nhỏ từng bước.",
+      "related": [
+        "TDD",
+        "red-green-refactor",
+        "technical debt",
+        "regression test"
+      ]
+    },
+    {
+      "term": "SOLID",
+      "aliases": [
+        "SOLID principles"
+      ],
+      "level": "intermediate",
+      "problem": "Class/module phụ thuộc chặt chẽ → thay đổi nhỏ gây ripple effect, khó test, khó mở rộng.",
+      "origin": "Robert C. Martin (Uncle Bob)",
+      "how": "5 nguyên tắc: SRP, OCP, LSP, ISP, DIP giúp giảm coupling, tăng cohesion, dễ test.",
+      "related": [
+        "refactoring",
+        "technical debt",
+        "test isolation"
+      ]
+    },
+    {
+      "term": "cyclomatic complexity",
+      "aliases": [
+        "McCabe complexity"
+      ],
+      "level": "intermediate",
+      "problem": "Hàm có quá nhiều nhánh if/switch/loop → khó hiểu, khó test đủ nhánh, dễ ẩn lỗi.",
+      "origin": "Thomas J. McCabe (1976)",
+      "how": "Đếm số đường thực thi độc lập. Thường giữ thấp (< 10) để dễ test và maintain.",
+      "related": [
+        "static analysis",
+        "Code coverage",
+        "technical debt"
+      ]
+    },
+    {
+      "term": "dead code",
+      "aliases": [
+        "unused code"
+      ],
+      "level": "intermediate",
+      "problem": "Code không còn dùng vẫn tồn tại → gây nhầm lẫn, tăng độ phức tạp, khó bảo trì, tiềm ẩn rủi ro bảo mật.",
+      "origin": "Compiler/linting practice",
+      "how": "Xác định và xóa code không gọi đến, không khả thi. Cần cẩn trọng với feature flag hoặc dynamic call.",
+      "related": [
+        "technical debt",
+        "static analysis",
+        "lint"
+      ]
+    },
+    {
+      "term": "feature flag testing",
+      "aliases": [
+        "feature toggle testing",
+        "feature flag"
+      ],
+      "level": "intermediate",
+      "problem": "Suite test chỉ mô phỏng trạng thái flag bật nên nhánh tắt chưa từng chạy trước khi lên production; tới lúc phải tắt cờ khẩn cấp vì sự cố, đường tắt lỗi mất backward compatible với API hoặc schema cũ và không ai phát hiện trước.",
+      "origin": "Martin Fowler (Feature Toggles)",
+      "how": "Chạy cả hai trạng thái on và off của mỗi toggle trong CI theo matrix cờ; thêm integration test dựng cờ ở hai giá trị để nhánh tắt được kiểm chứng trước rollout, và gộp regression test phủ đường tắt khi dọn cờ.",
+      "related": [
+        "Canary deploy",
+        "A/B test",
+        "regression test",
+        "Feature flag"
+      ]
+    },
+    {
+      "term": "hermetic test",
+      "aliases": [
+        "hermetic testing"
+      ],
+      "level": "advanced",
+      "problem": "Test phụ thuộc external (network, service bên ngoài) → không chạy được offline, không ổn định trong CI.",
+      "origin": "Google Testing Blog (hermetic servers/tests)",
+      "how": "Test chạy hoàn toàn độc lập: dùng fake/in-memory, mock network, không gọi external service. Đảm bảo reproducible.",
+      "related": [
+        "test isolation",
+        "deterministic test",
+        "mocking/stub/fake/spy"
+      ]
+    },
+    {
+      "term": "deterministic test",
+      "aliases": [
+        "deterministic"
+      ],
+      "level": "intermediate",
+      "problem": "Kết quả test phụ thuộc thời gian, random, order → flaky, không tin cậy.",
+      "origin": "Test design principles",
+      "how": "Loại bỏ non-determinism: cố định time, seed random, không dùng wall clock, đảm bảo order-independent.",
+      "related": [
+        "flaky test",
+        "test isolation",
+        "hermetic test"
+      ]
+    },
+    {
+      "term": "test data management",
+      "aliases": [
+        "test data",
+        "TDM"
+      ],
+      "level": "intermediate",
+      "problem": "Dùng dữ liệu cố định gây xung đột khi chạy song song, khó tái tạo lỗi, khó maintain.",
+      "origin": "Enterprise testing practice",
+      "how": "Quản lý dữ liệu test: factory, builder, fixtures, data seeding per test. Ưu tiên dữ liệu per-test thay vì shared.",
+      "related": [
+        "fixture",
+        "test isolation",
+        "parallel test execution"
+      ]
+    },
+    {
+      "term": "parallel test execution",
+      "aliases": [
+        "parallel testing"
+      ],
+      "level": "intermediate",
+      "problem": "Suite test ngày càng lớn → thời gian CI kéo dài, chậm feedback. Cần chạy song song để rút ngắn.",
+      "origin": "CI/CD scaling",
+      "how": "Chia test chạy đồng thời trên nhiều worker. Yêu cầu test hoàn toàn độc lập (no shared state) để tránh race/flaky.",
+      "related": [
+        "test isolation",
+        "flaky test",
+        "deterministic test"
+      ]
+    },
+    {
+      "term": "mutation testing",
+      "aliases": [
+        "mutation analysis"
+      ],
+      "level": "advanced",
+      "problem": "Test coverage cao nhưng vẫn không bắt lỗi: test có thể pass dù logic đã bị thay đổi sai (mutant sống).",
+      "origin": "Richard Lipton (1971), DeMillo et al.",
+      "how": "Tạo mutant (thay đổi nhỏ code), chạy test. Nếu tất cả test pass → mutant sống (test yếu). Mục tiêu giết mutant.",
+      "related": [
+        "Code coverage",
+        "regression test"
+      ]
+    },
+    {
+      "term": "Characterization test",
+      "aliases": [
+        "Golden master test",
+        "golden master",
+        "characterization test",
+        "golden file"
+      ],
+      "level": "advanced",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Legacy code không có test, không có tài liệu rõ ràng — không thể biết hành vi hiện tại là đúng hay sai, nhưng cần bảo vệ hành vi đó khi refactor. Chỉ cần một lần thay đổi ngầm trong output là hành vi cũ mất đi mà không ai phát hiện.",
+      "origin": "Michael Feathers (Working Effectively with Legacy Code)",
+      "how": "Chạy code với input cụ thể, quan sát và lưu output thực tế dưới dạng golden master (golden file), rồi viết test so sánh output sau mỗi lần sửa với bản đã lưu. Test này chỉ phát hiện thay đổi hành vi, không khẳng định output đó đã đúng; khi hành vi cố ý đổi thì cập nhật bản master.",
+      "related": [
+        "regression test",
+        "Legacy code",
+        "snapshot test",
+        "refactoring"
+      ]
+    },
+    {
+      "term": "Property-based testing",
+      "aliases": [
+        "property-based test",
+        "property-based testing",
+        "PBT"
+      ],
+      "level": "advanced",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Example-based test chỉ kiểm tra vài trường hợp do người viết tự chọn nên dễ bỏ sót edge case như input rỗng, giá trị biên, số âm hay chuỗi lạ; không có cách nào chứng minh một thuộc tính đúng với mọi input hợp lệ.",
+      "origin": "Koen Claessen & John Hughes (QuickCheck, 1999)",
+      "how": "Người viết định nghĩa một thuộc tính phải luôn đúng, chẳng hạn reverse(reverse(xs)) == xs; công cụ sinh ngẫu nhiên hàng trăm input khác nhau để tìm counterexample, rồi dùng shrinking rút gọn về trường hợp đơn giản nhất gây fail.",
+      "related": [
+        "unit test",
+        "TDD",
+        "deterministic test",
+        "Example-based testing",
+        "QuickCheck",
+        "Shrinking"
+      ]
+    }
+  ],
+  "sources": [
+    "https://martinfowler.com/bliki/TestPyramid.html",
+    "https://martinfowler.com/articles/practical-test-pyramid.html",
+    "https://martinfowler.com/bliki/TestDrivenDevelopment.html",
+    "https://martinfowler.com/bliki/TechnicalDebt.html",
+    "https://martinfowler.com/bliki/Refactoring.html",
+    "https://martinfowler.com/articles/microservice-testing/",
+    "https://martinfowler.com/bliki/FeatureToggle.html",
+    "https://martinfowler.com/articles/consumerDrivenContracts.html",
+    "https://www.kentbeck.com/",
+    "https://testing.googleblog.com/",
+    "https://learn.microsoft.com/",
+    "https://en.wikipedia.org/wiki/Test_double",
+    "https://en.wikipedia.org/wiki/Mutation_testing",
+    "https://en.wikipedia.org/wiki/Software_testing",
+    "https://en.wikipedia.org/wiki/Unit_testing",
+    "https://en.wikipedia.org/wiki/Regression_testing",
+    "https://en.wikipedia.org/wiki/Code_review",
+    "https://en.wikipedia.org/wiki/Cyclomatic_complexity",
+    "https://en.wikipedia.org/wiki/SOLID",
+    "https://en.wikipedia.org/wiki/Chaos_engineering",
+    "https://en.wikipedia.org/wiki/A/B_testing",
+    "https://en.wikipedia.org/wiki/Canary_release",
+    "https://pact.io/"
+  ]
+}

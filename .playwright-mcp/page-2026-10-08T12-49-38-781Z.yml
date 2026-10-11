@@ -1,0 +1,250 @@
+- generic [ref=f49e4]:
+  - banner "AWS Documentation site header" [ref=f49e5]:
+    - link "Skip to main content" [ref=f49e6] [cursor=pointer]:
+      - /url: "#skip-link"
+    - generic [ref=f49e10]:
+      - 'link "Language Selector. Currently set to: English" [ref=f49e14] [cursor=pointer]':
+        - /url: "#"
+        - generic [ref=f49e15]: English
+      - link "preferences" [ref=f49e20]:
+        - /url: "#"
+        - generic [ref=f49e21]: Preferences
+      - link "Contact Us" [ref=f49e25]:
+        - /url: https://aws.amazon.com/contact-us/?cmpid=docs_headercta_contactus
+      - link "Feedback" [ref=f49e28]:
+        - /url: https://docs.aws.amazon.com/feedback/doc-feedback.html?feedback_destination_id=a0d18259-7974-4e8f-8382-0a4be53f4374&topic_url=https%3A%2F%2Fdocs.aws.amazon.com%2Fwhitepapers%2Flatest%2Fdisaster-recovery-of-on-premises-applications-to-aws%2Fabstract-and-introduction.html
+    - generic [ref=f49e30]:
+      - link [ref=f49e33] [cursor=pointer]:
+        - /url: https://docs.aws.amazon.com
+        - img "AWS Documentation" [ref=f49e34]
+      - generic [ref=f49e36]:
+        - button "Scroll left" [disabled] [ref=f49e38]
+        - generic [ref=f49e39]:
+          - link "Get started" [ref=f49e43] [cursor=pointer]:
+            - /url: "#"
+          - link "Service guides" [ref=f49e49] [cursor=pointer]:
+            - /url: "#"
+          - link "Developer tools" [ref=f49e55] [cursor=pointer]:
+            - /url: "#"
+          - link "AI resources" [ref=f49e61] [cursor=pointer]:
+            - /url: "#"
+        - button "Scroll right" [disabled] [ref=f49e65]
+      - button "Open search" [ref=f49e68] [cursor=pointer]
+  - main [ref=f49e71]:
+    - generic:
+      - navigation "Side navigation":
+        - button "Open side navigation" [ref=f49e74] [cursor=pointer]
+    - generic [ref=f49e79]:
+      - navigation "Breadcrumbs-vr" [ref=f49e83]:
+        - list [ref=f49e84]:
+          - listitem [ref=f49e85]:
+            - link "Documentation" [ref=f49e87] [cursor=pointer]:
+              - /url: https://docs.aws.amazon.com/index.html
+          - listitem [ref=f49e91]:
+            - link "AWS Whitepapers" [ref=f49e93] [cursor=pointer]:
+              - /url: https://docs.aws.amazon.com/whitepapers/index.html
+          - listitem [ref=f49e97]:
+            - link "AWS Whitepaper" [disabled] [ref=f49e99]
+        - list [aria-hidden] [ref=f49e101]:
+          - listitem [ref=f49e102]:
+            - link [ref=f49e104] [cursor=pointer]:
+              - /url: https://docs.aws.amazon.com/index.html
+              - generic [ref=f49e105]: Documentation
+          - listitem [ref=f49e108]:
+            - link [ref=f49e110] [cursor=pointer]:
+              - /url: https://docs.aws.amazon.com/whitepapers/index.html
+              - generic [ref=f49e111]: AWS Whitepapers
+          - listitem [ref=f49e114]:
+            - generic [ref=f49e115]: AWS Whitepaper
+      - generic [ref=f49e119]:
+        - generic:
+          - heading "Disaster Recovery of On-Premises Applications to AWS" [level=1] [ref=f49e121]
+          - generic [ref=f49e124]:
+            - link "PDF" [ref=f49e126] [cursor=pointer]:
+              - /url: /pdfs/whitepapers/latest/disaster-recovery-of-on-premises-applications-to-aws/disaster-recovery-of-on-premises-applications-to-aws.pdf#abstract-and-introduction
+            - link "Download Markdown" [ref=f49e130] [cursor=pointer]:
+              - /url: abstract-and-introduction.md
+              - generic [ref=f49e131]: Markdown
+            - button "Agent Setup" [ref=f49e135] [cursor=pointer]
+            - generic [ref=f49e143]:
+              - checkbox "Focus mode" [ref=f49e146]
+              - generic [ref=f49e147]: Focus mode
+      - generic [ref=f49e155]:
+        - heading [level=3] [ref=f49e161] [cursor=pointer]:
+          - button "On this page" [ref=f49e162]
+        - list [ref=f49e166]:
+          - listitem [ref=f49e167]:
+            - generic [ref=f49e174]:
+              - group [ref=f49e180]:
+                - img "Info" [ref=f49e182]
+                - paragraph [ref=f49e187]: This whitepaper is for historical reference only. Some content might be outdated and some links might not be available.
+              - paragraph [ref=f49e188]:
+                - text: "Publication date: January 19, 2022 ("
+                - link "Document history" [ref=f49e189] [cursor=pointer]:
+                  - /url: ./document-history.html
+                - text: )
+              - heading [level=2] [ref=f49e190]:
+                - text: Abstract
+                - button "Copy link to the section" [ref=f49e198] [cursor=pointer]
+              - paragraph [ref=f49e200]: This whitepaper outlines the best practices for planning, implementing, and maintaining disaster recovery for on-premises applications using AWS. It lays out the differences between disaster recovery and other resilience strategies, and describes the steps of building a disaster recovery plan. It also offers different approaches for mitigating risks and meeting recovery time objectives (RTO), and meeting recovery point objectives (RPO) by using AWS as the disaster recovery site. This whitepaper covers how to use AWS as a disaster recovery site for on-premises applications.
+              - paragraph [ref=f49e201]:
+                - text: Refer to
+                - 'link "Disaster Recovery of Workloads on AWS: Recovery in the Cloud" [ref=f49e202] [cursor=pointer]':
+                  - /url: https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.html
+                - text: for information about disaster recovery for AWS-hosted workloads.
+              - heading [level=2] [ref=f49e203]:
+                - text: Are you Well-Architected?
+                - button "Copy link to the section" [ref=f49e211] [cursor=pointer]
+              - paragraph [ref=f49e213]:
+                - text: The
+                - link [ref=f49e214] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/architecture/well-architected/
+                  - text: AWS Well-Architected Framework
+                  - generic "Opens in a new tab" [ref=f49e216]
+                - text: helps you understand the pros and cons of the decisions you make when building systems in the cloud. The six pillars of the Framework allow you to learn architectural best practices for designing and operating reliable, secure, efficient, cost-effective, and sustainable systems. Using the
+                - link [ref=f49e218] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/well-architected-tool/
+                  - text: AWS Well-Architected Tool
+                  - generic "Opens in a new tab" [ref=f49e220]
+                - text: ", available at no charge in the"
+                - link [ref=f49e222] [cursor=pointer]:
+                  - /url: https://console.aws.amazon.com/wellarchitected
+                  - text: AWS Management Console
+                  - generic "Opens in a new tab" [ref=f49e224]
+                - text: ", you can review your workloads against these best practices by answering a set of questions for each pillar."
+              - paragraph [ref=f49e226]:
+                - text: For more expert guidance and best practices for your cloud architecture—reference architecture deployments, diagrams, and whitepapers—refer to the
+                - link [ref=f49e227] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/architecture/
+                  - text: AWS Architecture Center
+                  - generic "Opens in a new tab" [ref=f49e229]
+                - text: .
+              - heading [level=2] [ref=f49e231]:
+                - text: Introduction
+                - button "Copy link to the section" [ref=f49e239] [cursor=pointer]
+              - heading "What is disaster recovery?" [level=3] [ref=f49e241]
+              - paragraph [ref=f49e242]: Disaster recovery is the process of preparing for and recovering from a disruptive event.
+              - heading "What is a disaster?" [level=3] [ref=f49e243]
+              - paragraph [ref=f49e244]:
+                - text: In the context of a company’s IT environment, a disaster is an event that partially or completely disrupts the operations of one or more applications. A disaster normally requires human intervention to
+                - emphasis [ref=f49e245]: fail over
+                - text: to secondary copies of applications in order to maintain their functionality.
+              - paragraph [ref=f49e246]: "The four main categories of a disaster:"
+              - list [ref=f49e248]:
+                - listitem [ref=f49e249]:
+                  - paragraph [ref=f49e250]: Human errors – Unintentional actions leading to a security breach such as inadvertent misconfiguration of the software or a database
+                - listitem [ref=f49e251]:
+                  - paragraph [ref=f49e252]: Malicious attacks – Unauthorized actions that affect a victim’s system such as a denial-of-service (DoS) or ransomware attack
+                - listitem [ref=f49e253]:
+                  - paragraph [ref=f49e254]: Natural disasters – Environmental factors that cause a system failure such as earthquakes or floods
+                - listitem [ref=f49e255]:
+                  - paragraph [ref=f49e256]: Technical failures – A malfunction of software, hardware, or a facility such as a power failure or a network connectivity failure
+              - paragraph [ref=f49e257]: "There are several factors to consider when planning your response to a specific disaster:"
+              - list [ref=f49e259]:
+                - listitem [ref=f49e260]:
+                  - paragraph [ref=f49e261]: Expected duration of the disaster – How soon will the application recover and how likely is the disaster to resolve on its own?
+                - listitem [ref=f49e262]:
+                  - paragraph [ref=f49e263]: Size of impact (also known as blast radius) – Which applications are affected and to what extent is their functionality impaired?
+                - listitem [ref=f49e264]:
+                  - paragraph [ref=f49e265]: Geographic impact – May be regional, national, continental, or global.
+                - listitem [ref=f49e266]:
+                  - paragraph [ref=f49e267]: Tolerance of downtime – How significant is the impact of the application not functioning?
+              - heading "Why disaster recovery?" [level=3] [ref=f49e268]
+              - paragraph [ref=f49e269]: "A properly planned and implemented disaster recovery solution helps mitigate the following issues that can be caused by a disaster:"
+              - list [ref=f49e271]:
+                - listitem [ref=f49e272]:
+                  - paragraph [ref=f49e273]: Direct and indirect financial loss – The impact of direct financial loss is mostly relevant for applications that are critical for any revenue-generating processes. For example, external-facing IT systems that are provided to customers for a fee or internal IT systems that process data relevant for revenue generation. Indirect financial loss includes, for example, customers switching to a competing product and the cost of work needed to resume normal operation after the disaster is over.
+                - listitem [ref=f49e274]:
+                  - paragraph [ref=f49e275]: Reputational damage – In addition to financial loss, downtime caused by unexpected incidents can significantly harm a company’s reputation. A short recovery period aided by a disaster recovery solution can help avoid irreversible damage to the corporate image.
+                - listitem [ref=f49e276]:
+                  - paragraph [ref=f49e277]: Failure to abide by compliance standards – Multiple compliance standards, including System and Organization Controls (SOC), the Payment Card Industry (PCI) Data Security Standard, and the Health Insurance Portability and Accountability Act (HIPAA), require a disaster recovery plan. Some standards even add very specific requirements, such as minimal physical distance between the source site and the disaster recovery site.
+          - listitem [ref=f49e278]:
+            - generic [ref=f49e281]:
+              - generic [ref=f49e283]:
+                - generic [ref=f49e284]: Did this page help you?
+                - generic [ref=f49e288]:
+                  - button "Yes-This page is helpful." [ref=f49e290] [cursor=pointer]: "Yes"
+                  - button "No-This page is not helpful." [ref=f49e293] [cursor=pointer]: "No"
+              - link "Provide feedback" [ref=f49e298]:
+                - /url: https://docs.aws.amazon.com/feedback/doc-feedback.html?feedback_destination_id=a0d18259-7974-4e8f-8382-0a4be53f4374&topic_url=https%3A%2F%2Fdocs.aws.amazon.com%2Fwhitepapers%2Flatest%2Fdisaster-recovery-of-on-premises-applications-to-aws%2Fabstract-and-introduction.html
+        - generic [ref=f49e302]:
+          - heading "Next topic:" [level=4] [ref=f49e303]
+          - link "How does disaster recovery help business continuity?" [ref=f49e305]:
+            - /url: ./how-does-disaster-recovery-help-business-continuity.html
+  - contentinfo [ref=f49e306]:
+    - generic [ref=f49e308]:
+      - generic [ref=f49e309]:
+        - generic [ref=f49e310]:
+          - generic:
+            - generic [ref=f49e312]:
+              - heading "Get Started" [level=2] [ref=f49e313]
+              - generic [ref=f49e315]:
+                - link [ref=f49e318]:
+                  - /url: https://aws.amazon.com/getting-started/hands-on/
+                  - text: AWS Hands-On Tutorials
+                  - img "Opens in a new tab" [ref=f49e320]
+                - link [ref=f49e324]:
+                  - /url: https://aws.amazon.com/solutions/
+                  - text: AWS Solutions Library
+                  - img "Opens in a new tab" [ref=f49e326]
+                - link "AWS Decision Guides" [ref=f49e330]:
+                  - /url: https://docs.aws.amazon.com/decision-guides/
+            - generic [ref=f49e332]:
+              - heading "Service Guides" [level=2] [ref=f49e333]
+              - generic [ref=f49e335]:
+                - link "Choosing a generative AI service" [ref=f49e338]:
+                  - /url: https://docs.aws.amazon.com/decision-guides/latest/decision-guides/genai-guide.html
+                - link "AWS service guides" [ref=f49e341]:
+                  - /url: https://docs.aws.amazon.com/#products
+                - link [ref=f49e344]:
+                  - /url: https://github.com/aws-samples/sample-developer-tutorials
+                  - text: AWS CLI Tutorials on GitHub
+                  - img "Opens in a new tab" [ref=f49e346]
+            - generic [ref=f49e349]:
+              - heading "Developer Tools" [level=2] [ref=f49e350]
+              - generic [ref=f49e352]:
+                - link "AWS Code Example Library" [ref=f49e355]:
+                  - /url: https://docs.aws.amazon.com/code-library/latest/ug/what-is-code-library.html
+                - link "AWS CLI" [ref=f49e358]:
+                  - /url: https://docs.aws.amazon.com/cli/
+                - link [ref=f49e361]:
+                  - /url: https://builder.aws.com/
+                  - text: AWS Builder Center
+                  - img "Opens in a new tab" [ref=f49e363]
+                - link [ref=f49e367]:
+                  - /url: https://aws.amazon.com/blogs/developer/
+                  - text: AWS Developer Tools Blog
+                  - img "Opens in a new tab" [ref=f49e369]
+            - generic [ref=f49e372]:
+              - heading "Helpful Links" [level=2] [ref=f49e373]
+              - generic [ref=f49e375]:
+                - link [ref=f49e378]:
+                  - /url: https://github.com/awslabs/mcp/tree/main/src/aws-documentation-mcp-server
+                  - text: Download the AWS Docs MCP Server
+                  - img "Opens in a new tab" [ref=f49e380]
+                - link [ref=f49e384]:
+                  - /url: https://console.aws.amazon.com/
+                  - text: Sign into the AWS Console
+                  - img "Opens in a new tab" [ref=f49e386]
+                - link [ref=f49e390]:
+                  - /url: https://repost.aws/
+                  - text: AWS re:Post
+                  - img "Opens in a new tab" [ref=f49e392]
+        - generic [ref=f49e394]:
+          - generic [ref=f49e395]:
+            - generic [ref=f49e396]:
+              - link "Privacy" [ref=f49e398]:
+                - /url: https://aws.amazon.com/privacy
+              - text: "|"
+            - generic [ref=f49e399]:
+              - link "Site terms" [ref=f49e401]:
+                - /url: https://aws.amazon.com/terms
+              - text: "|"
+            - generic [ref=f49e402]:
+              - link "Cookie preferences" [ref=f49e404]:
+                - /url: "#"
+              - text: "|"
+            - text: © 2026, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+          - button "Language selector English" [ref=f49e409]:
+            - generic "English" [ref=f49e410]
+      - button "Top" [ref=f49e417] [cursor=pointer]

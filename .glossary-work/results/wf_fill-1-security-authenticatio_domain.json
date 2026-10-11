@@ -1,0 +1,446 @@
+{
+  "domain": "Security & Authentication/Authorization",
+  "entries": [
+    {
+      "term": "Authentication vs Authorization (Authn vs AuthZ)",
+      "aliases": [
+        "xác thực vs phân quyền",
+        "định danh và truy cập"
+      ],
+      "level": "basic",
+      "problem": "Người mới xây API thường gộp 'đăng nhập' và 'được phép làm gì' thành một khái niệm login. Hệ quả thực tế: endpoint kiểm tra 'user đã đăng nhập' rồi cho mọi user đọc/xóa dữ liệu của user khác, hoặc khi sửa code auth không biết mình đang sửa khâu nào vì code lẫn lộn. Hai câu hỏi khác nhau — 'bạn là ai' vs 'bạn được làm gì' — cần tách bạch từ đầu.",
+      "how": "Authentication xác minh danh tính (password, token, MFA) và trả về identity; Authorization diễn ra sau đó, quyết định identity đó được thực hiện hành động nào trên tài nguyên nào (policy/permission check).",
+      "origin": "không rõ",
+      "related": [
+        "RBAC",
+        "OSI model (7 tầng)",
+        "OAuth 2.0"
+      ]
+    },
+    {
+      "term": "Password hashing",
+      "aliases": [
+        "băm mật khẩu",
+        "password hash"
+      ],
+      "level": "basic",
+      "problem": "Đội ngũ lưu mật khẩu dưới dạng plain text hoặc hash nhanh kiểu MD5/SHA-1. Khi database bị dump (SQL injection, backup rò rỉ), toàn bộ tài khoản lộ ngay vì hash nhanh (SHA-256) GPU đập được hàng tỷ hash/giây — attacker băm thử offline là khôi phục mật khẩu.",
+      "how": "Dùng thuật ngữ băm chậm, có chủ đích (bcrypt/Argon2) với chi phí tính toán cao và configurable, biến mỗi lần đoán mất nhiều tài nguyên tính toán thay vì 1 nanogiây.",
+      "origin": "không rõ",
+      "related": [
+        "bcrypt",
+        "Argon2",
+        "Salt",
+        "Rainbow table"
+      ]
+    },
+    {
+      "term": "bcrypt",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Trước bcrypt, web dùng MD5/SHA-1 để hash mật khẩu — chúng là hash nhanh, thiết kế để tính toán nhiều lần trên giây, hoàn toàn ngược với nhu cầu hash mật khẩu. Attacker với GPU đập được hàng tỷ hash mỗi giây nên mật khẩu yếu chỉ sống sót vài giây khi database lộ.",
+      "how": "Dựa trên Blowfish, hàm adaptive: tham số cost (2^cost vòng lặp) tăng được theo thời gian, kèm salt ngẫu nhiên 16 byte — mỗi lần verify cố ý chậm lại để brute-force offline trở nên đắt đỏ.",
+      "origin": "Niels Provos và David Mazières, USENIX 1999",
+      "related": [
+        "Password hashing",
+        "Salt",
+        "Argon2"
+      ]
+    },
+    {
+      "term": "Rainbow table",
+      "aliases": [
+        "bảng cầu vồng",
+        "precomputed hash table"
+      ],
+      "level": "basic",
+      "problem": "Brute-force thuần quá chậm khi không gian mật khẩu lớn, nên attacker cần cách đổi thời gian lấy không gian: precompute trước chuỗi hash rồi tra cứu ngược. Với database bị đánh cắp không salt, một bảng có sẵn trả về mật khẩu gốc tức thì, không cần băm thử lần nào.",
+      "how": "Precompute chuỗi hash (hash + reduction function) chỉ lưu điểm cuối, khi có hash nạn nhân thì dựng chuỗi ngược tìm plaintext — đánh đổi dung lượng lưu trữ lấy thời gian tra cực nhanh; salt vô hiệu hóa vì phải precompute riêng cho từng salt.",
+      "origin": "Philippe Oechslin, xây trên thuật toán tradeoff thời gian-bộ nhớ của Martin Hellman",
+      "related": [
+        "Salt",
+        "Password hashing"
+      ]
+    },
+    {
+      "term": "SQL injection (SQLi)",
+      "aliases": [
+        "tiêm SQL",
+        "chèn lệnh SQL"
+      ],
+      "level": "basic",
+      "problem": "Ứng dụng nối chuỗi user input thẳng vào câu SQL (`\"SELECT * FROM users WHERE name='\" + input + \"'`), nên input `' OR 1=1--` viết lại cả logic truy vấn. Hậu quả gặp thật hàng ngày: đăng nhập bypass bằng `admin'--`, dump toàn bảng user, thậm chí OS command qua INTO OUTFILE — OWASP xếp đầu Top 10 suốt nhiều năm vì nguồn gốc là thói quen nối chuỗi có từ thời CGI.",
+      "how": "Parameterized query/prepared statement tách query structure khỏi data: input chỉ được bind vào placeholder, không bao giờparse thành SQL; phần không parameterize được (tên bảng/cột, ORDER BY) thì whitelist.",
+      "origin": "không rõ",
+      "related": [
+        "Command injection",
+        "Input validation / Data validation (kiểm tra đầu vào)",
+        "Output encoding / HTML escaping (mã hóa đầu ra)",
+        "Parameterized queries / Prepared statements"
+      ]
+    },
+    {
+      "term": "Cross-Site Scripting (XSS)",
+      "aliases": [
+        "chèn script chéo trang"
+      ],
+      "level": "basic",
+      "problem": "Server render user input (tên hiển thị, comment) vào HTML mà không encode, trình duyệt giao đoạn script của attacker chạy trong phiên của nạn nhân. Kẻ tấn công ăn cắp cookie/session, giả mạo nạn nhân, keylog ngay trong trang 'tin tưởng' — mức nghiêm trọng ngang SQLi nhưng nhắm vào trình duyệt thay vì database.",
+      "how": "Encode theo từng ngữ cảnh (HTML/JS/URL/CSS) tại điểm render, sanitize HTML do user tạo bằng thư viện như DOMPurify, và dùng Content Security Policy làm lớp phòng thủ thứ hai.",
+      "origin": "không rõ",
+      "related": [
+        "Cross-Site Request Forgery (CSRF)",
+        "CSP (Content Security Policy)"
+      ]
+    },
+    {
+      "term": "Cross-Site Request Forgery (CSRF)",
+      "aliases": [
+        "giả mạo yêu cầu chéo trang",
+        "CSRF"
+      ],
+      "level": "basic",
+      "problem": "Trình duyệt tự gắn cookie phiên khi gửi request sang site khác, nên site xấu chèn `<img src=\"bank.com/transfer?to=attacker\">` vẫn chạy với quyền của nạn nhân đang đăng nhập bank.com — server thấy cookie hợp lệ và không phân biệt được request thật do user bấm vs request bị site khác ép gửi.",
+      "how": "Token đồng bộ (server phát token ẩn trong form/header, đối chiếu khi nhận), double-submit cookie, và SameSite cookie attr — mỗi lớp chặn một phần đường gửi cookie ngầm.",
+      "origin": "không rõ",
+      "related": [
+        "SameSite cookie",
+        "CORS",
+        "XSS"
+      ]
+    },
+    {
+      "term": "SameSite cookie",
+      "aliases": [
+        "SameSite=Strict/Lax/None"
+      ],
+      "level": "basic",
+      "problem": "Cookie mặc định được gửi trong mọi request kể cả request từ site khác — chính là lỗ hổng cho CSRF. Trước khi có SameSite, developer phải tự gắn anti-CSRF token vào từng form/API,site nào quên là bị giả mạo ngay.",
+      "how": "Attribute của Set-Cookie: Strict chặn toàn bộ cross-site, Lax chỉ cho navigation GET an toàn, None (bắt buộc kèm Secure) cho phép cross-site có chủ đích; giảm đáng kể CSRF nhưng OWASP cảnh báo không đủ một mình.",
+      "origin": "không rõ",
+      "related": [
+        "Cross-Site Request Forgery (CSRF)",
+        "OSI model (7 tầng)"
+      ]
+    },
+    {
+      "term": "Cross-Origin Resource Sharing (CORS)",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Same-origin policy chặn JS đọc response từ domain khác, nhưng SPA frontend ở `app.example.com` lại cần gọi API `api.example.com` — không có cơ chế cho phép có kiểm soát thì developer buộc phải đặt chung origin hoặc mở proxy chết người. Thiếu CORS đúng thì tính năng 'gọi API chéo origin' không hoạt động; CORS sai (`*` + credentials) thì lộ data cho site lạ.",
+      "how": "Server trả header `Access-Control-Allow-Origin` (và Allow-Methods/Headers/Credentials) như consent có chủ đích; request 'độc' (POST, custom header) kích hoạt preflight OPTIONS trước. CORS enforced bởi trình duyệt, bảo người dùng chứ không bảo server khỏi CSRF.",
+      "origin": "không rõ",
+      "related": [
+        "Cross-Site Request Forgery (CSRF)",
+        "OSI model (7 tầng)"
+      ]
+    },
+    {
+      "term": "Rate limiting / login throttling",
+      "aliases": [
+        "giới hạn tần suất đăng nhập",
+        "brute force protection"
+      ],
+      "level": "basic",
+      "problem": "Không giới hạn số lần thử mật khẩu thì attacker chạy dictionary/brute-force thoải mái; tệ hơn là credential stuffing (danh sách user/pass rò rỉ từ site khác) và password spraying (1 mật khẩu yếu thử hàng nghìn account) — cả hai tấn công hàng loạt mà không site nào chặn vì mỗi IP/account chỉ thử vài lần.",
+      "how": "Chốt số lần thử thất bại theo account (không theo IP để né distributed attack), khóa theo bậc thang/exponential backoff, MFA và blocklist mật khẩu đã rò rỉ như lớp bổ sung; OWASP khuyến nghị defense-in-depth thay vì một biện pháp đơn lẻ.",
+      "origin": "không rõ",
+      "related": [
+        "MFA/TOTP",
+        "Password hashing"
+      ]
+    },
+    {
+      "term": "Multi-Factor Authentication (MFA)",
+      "aliases": [
+        "xác thực đa yếu tố",
+        "2FA"
+      ],
+      "level": "basic",
+      "problem": "Mật khẩu một mình đã thất bại ở quy mô lớn: phishing, credential stuffing từ database site khác, mật khẩu yếu — Microsoft phân tích cho thấy MFA chặn được 99,9% các vụ account compromise. Cần thứ gì đó 'attacker không có' ngoài mật khẩu đã bị đánh cắp.",
+      "how": "Yêu cầu kết hợp 2 trong 3 loại yếu tố (biết — mật khẩu/PIN; có — phone/hardware key; là — sinh trắc) trước khi vào tài khoản, nên chiếm được mật khẩu vẫn không đăng nhập được.",
+      "origin": "không rõ",
+      "related": [
+        "Password hashing",
+        "Rate Limiting (Adaptive)"
+      ]
+    },
+    {
+      "term": "Principle of Least Privilege (PoLP)",
+      "aliases": [
+        "nguyên tắc đặc quyền tối thiểu"
+      ],
+      "level": "basic",
+      "problem": "Cho mọi service/user quyền admin 'cho đỡ phải sửa quyền sau này' — khi một tài khoản bị xâm phạm, attacker hưởng trọn toàn bộ quyền đó (database read-write cả bảng, xóa production...). Thiếu nguyên tắc này thì mọi sự cố nhỏ đều leo thang thành sự cố toàn hệ thống.",
+      "how": "Mỗi chương trình/user chỉ nhận đúng đặc quyền cần cho công việc cụ thể, chia nhỏ service account theo endpoint, review định kỳ; giảm bề mặt tấn công và blast radius của mỗi sự cố.",
+      "origin": "Jerome Saltzer và Michael Schroeder, \"The protection of information in computer systems\", Proceedings of the IEEE, 1975",
+      "related": [
+        "RBAC",
+        "secrets management"
+      ]
+    },
+    {
+      "term": "Command injection",
+      "aliases": [
+        "tiêm lệnh shell",
+        "OS command injection",
+        "shell injection"
+      ],
+      "level": "intermediate",
+      "problem": "Ứng dựng ghép user input vào chuỗi lệnh hệ điều hành (vd: `ping ` + host`) — input `; rm -rf /` hoặc `$(...)` chạy thêm lệnh tùy ý. Khác SQLi chỉ damage database, command injection cho attacker quyền trên toàn server, pivot sang hệ thống nội bộ khác — thông tin đánh giá ở PortSwigger: 'typically leading to full compromise of the application'.",
+      "how": "Cách duy nhất an toàn là không gọi shell — dùng API/platform function thay thế; nếu bắt buộc thì whitelist input nghiêm ngặt và không bao giờ dựa vào escape ký tự shell (quá dễ bypass).",
+      "origin": "không rõ",
+      "related": [
+        "SQL injection",
+        "Input validation / Data validation (kiểm tra đầu vào)"
+      ]
+    },
+    {
+      "term": "RBAC (Role-Based Access Control)",
+      "aliases": [
+        "phân quyền theo vai trò"
+      ],
+      "level": "intermediate",
+      "problem": "Hàng trăm user, hàng nghìn quyền mà admin cấp từng quyền cho từng người bằng tay — onboard nhân viên mới phải tick 40 checkbox, chuyển phòng ban phải gỡ và gắn lại mọi permission, sót quyền cũ thành lỗ hổng. Đây là nỗi đau khiến RBAC thay ACL trong tổ chức lớn.",
+      "how": "Gắn permission vào role theo chức năng (editor, admin...), user chỉ được gán role — quản lý quyền thành 'gán/ghé role', hỗ trợ role hierarchy và separation of duties.",
+      "origin": "Ferraiolo & Kuhn 1992; Sandhu et al. 1996; chuẩn hóa ANSI/INCITS 359-2004 bởi NIST",
+      "related": [
+        "ABAC",
+        "Principle of Least Privilege (PoLP)"
+      ]
+    },
+    {
+      "term": "ABAC (Attribute-Based Access Control)",
+      "aliases": [
+        "phân quyền theo thuộc tính"
+      ],
+      "level": "intermediate",
+      "problem": "RBAC bế tắc khi quyền phụ thuộc ngữ cảnh động: 'chỉ sửa document của phòng mình VÀ đang là draft VÀ trong giờ hành chính VÀ từ IP công ty' — mỗi biến thể thêm một role, cuối cùng role nổ tung (role explosion) và không biểu diễn được điều kiện thời gian/địa điểm/giá trị số.",
+      "how": "Đánh giá policy trên tập thuộc tính của subject, object, action và environment (giờ, IP, mức độ rủi ro) thay vì role cố định — policy động, context-aware, biểu diễn được rule phức tạp mà không tạo role mới.",
+      "origin": "Khái niệm cũ nhưng được NIST Systematized qua dự án ABAC (NIST SP 800-162); chuẩn XACML của OASIS",
+      "related": [
+        "RBAC",
+        "Principle of Least Privilege (PoLP)"
+      ]
+    },
+    {
+      "term": "JWT (JSON Web Token)",
+      "aliases": [
+        "JSON Web Token",
+        "signed token"
+      ],
+      "level": "intermediate",
+      "problem": "Session lưu server-side khiến mỗi request phải tra DB/Redis, và khi phân tán nhiều service thì chia sẻ state session rất khó — service A không biết session do service B tạo. Cần cách mang claims (user id, scope, exp) xuyên services mà không tra store trung tâm.",
+      "how": "Payload JSON được ký (JWS) hoặc mã hóa (JWE), cấu trúc `header.payload.signature` base64url — receiver xác minh chữ ký là tin được mà không cần query; đánh đổi: không tự revoke được, nên phải quản lý expiry ngắn và xử lý revocation riêng.",
+      "origin": "IETF RFC 7519",
+      "related": [
+        "Opaque token vs JWT (revocation trade-off)",
+        "OIDC",
+        "refresh token rotation"
+      ]
+    },
+    {
+      "term": "Opaque token vs JWT (revocation trade-off)",
+      "aliases": [
+        "token đục",
+        "token tự xác minh vs token tra cứu"
+      ],
+      "level": "intermediate",
+      "problem": "JWT tự xác minh nhưng không thu hồi được khi user logout/đổi quyền — token đánh cắp sống hết hạn (có thể vài giờ/ngày). Ngược lại, opaque token (chuỗi ngẫu nhiên) revocable nhưng mỗi request phải gọi introspection/tra DB, tốn thêm round-trip. Đây là trade-off mọi team phải chọn khi làm auth, sai là gặp sự cố 'đã logout nhưng token vẫn hoạt động'.",
+      "how": "Opaque token + endpoint introspection (RFC 7662) để resource server hỏi 'token này còn active không' theo thời gian thực; hoặc JWT ngắn hạn + refresh token rotation/blacklist để thu hồi. Lựa chọn theo yêu cầu: cần revocation tức thì → opaque hoặc short-TTL JWT.",
+      "origin": "RFC 7662 (token introspection)",
+      "related": [
+        "JWT",
+        "refresh token rotation",
+        "OAuth 2.0"
+      ]
+    },
+    {
+      "term": "OAuth 2.0 (authorization framework)",
+      "aliases": [
+        "OAuth2"
+      ],
+      "level": "intermediate",
+      "problem": "Trước OAuth, app bên thứ ba muốn truy cập dữ liệu người dùng thì buộc user đưa password thật — app lưu password plain-text, user không giới hạn scope/thời hạn, muốn thu hồi một app phải đổi mật khẩu (mất quyền mọi app), một app bị breach là password của mọi thứ chết theo. Đây là đúng chuỗi vấn đề RFC 6749 liệt kê.",
+      "how": "Tách authorization layer: user đồng ý tại authorization server, client nhận access token giới hạn scope/thời hạn thay vì mật khẩu. Authorization code flow: redirect user sang server cấp code ngắn hạn, client đổi code → token tại backend (token không đi qua trình duyệt); implicit flow cũ bị loại dần vì token lộ trong URL.",
+      "origin": "IETF RFC 6749 (thay OAuth 1.0 RFC 5849)",
+      "related": [
+        "PKCE",
+        "OIDC",
+        "OAuth 2.1 & Security BCP"
+      ]
+    },
+    {
+      "term": "PKCE (Proof Key for Code Exchange)",
+      "aliases": [
+        "code_challenge/code_verifier",
+        "bằng chứng trao đổi mã"
+      ],
+      "level": "intermediate",
+      "problem": "Native app đăng ký custom URI scheme chung (`myapp://callback`) — app độc hại cũng đăng ký cùng scheme và 'ăn cắp' authorization code từ redirect (authorization code interception attack). Public client không có client_secret để chứng minh mình là người đổi code, nên attacker lấy code là đổi được token ngay.",
+      "how": "Client tạo random `code_verifier`, gửi bản hash (`code_challenge`) kèm request; đổi code thì gửi lại verifier — attacker intercept code nhưng không có verifier nên không đổi được token. RFC 7636 thiết kế cho public client, OAuth 2.1 bắt buộc cho mọi client.",
+      "origin": "IETF RFC 7636",
+      "related": [
+        "OAuth 2.0",
+        "OAuth 2.1 & Security BCP",
+        "authorization code"
+      ]
+    },
+    {
+      "term": "OpenID Connect (OIDC)",
+      "aliases": [
+        "OIDC"
+      ],
+      "level": "intermediate",
+      "problem": "OAuth 2.0 thuần chỉ cho mượn quyền truy cập API, hoàn toàn không định nghĩa cách xác thực 'user này là ai' — developer tự bịa (gọi API /me rồi đoán) dẫn đến mỗi tích hợp login một kiểu, không standard. OAuth giải quyết authorization chứ không phải authentication.",
+      "how": "Lớp identity trên OAuth 2.0: thêm scope `openid`, authorization server trả ID Token (JWT ký về sự kiện xác thực: issuer, subject, nonce, exp) — client verify ID Token là biết user đã đăng nhập ở đâu, tách bạch với access token dùng cho API.",
+      "origin": "OpenID Connect Core 1.0 — bản cuối tháng 2/2014, errata set 2 ngày 15/12/2023",
+      "related": [
+        "OAuth 2.0",
+        "JWT"
+      ]
+    },
+    {
+      "term": "Refresh token rotation & revocation",
+      "aliases": [
+        "quay refresh token",
+        "token thu hồi"
+      ],
+      "level": "intermediate",
+      "problem": "Access token sống ngắn thì user phải đăng nhập lại liên tục; sống dài thì bị đánh cắp dùng được lâu. Refresh token giải quyết nhưng bị đánh cắp thì attacker tái tạo access token vô hạn — và nếu refresh token tĩnh (không đổi), server không phát hiện được token đã bị đánh cắp vì vẫn valid.",
+      "how": "Mỗi lần dùng refresh token để lấy access token mới, server cấp refresh token mới (rotation) — token cũ bị đánh cắp mà dùng lại sẽ lệch chuỗi, server phát hiện breach và thu hồi cả family; kết hợp binding scope/resource như OAuth Security BCP yêu cầu.",
+      "origin": "RFC 9700 (OAuth 2.0 Security Best Current Practice)",
+      "related": [
+        "OAuth 2.0",
+        "JWT",
+        "Opaque token vs JWT (revocation trade-off)"
+      ]
+    },
+    {
+      "term": "Argon2",
+      "aliases": [
+        "Argon2id",
+        "memory-hard hashing"
+      ],
+      "level": "intermediate",
+      "problem": "bcrypt chống được CPU brute-force nhưng là memory-light — GPU/ASIC hàng nghìn core song song đập hash vẫn rẻ hơn mong đợi, vì chúng mạnh về tính toán chứ không về bộ nhớ. Password Hashing Competition 2015 sinh ra để tìm thuật toán khiến phần cứng chuyên dụng (GPU miner) không còn lợi thế.",
+      "how": "KDF memory-hard: buộc cấp phát mảng bộ nhớ lớn khi băm, tăng chi phí RAM (không chỉ CPU) nên GPU/ASIC không song song được hàng nghìn hash; 3 variant — Argon2id (lai, RFC 9106 khuyến nghị mặc định) cân bằng side-channel resistance và chống GPU.",
+      "origin": "Alex Biryukov, Daniel Dinu, Dmitry Khovratovich (ĐH Luxembourg) — thắng Password Hashing Competition 2015, chuẩn hóa RFC 9106 (9/2021)",
+      "related": [
+        "bcrypt",
+        "Password hashing",
+        "Salt"
+      ]
+    },
+    {
+      "term": "Secrets management (Vault-style)",
+      "aliases": [
+        "quản lý bí mật tập trung",
+        "dynamic secrets"
+      ],
+      "level": "intermediate",
+      "problem": "API key/DB password nằm rải rác trong .env, config file, CI variable — xoay (rotate) key phải đổi hàng chục nơi, không ai biết ai đã đọc secret nào, và secret vẫn sống mãi sau khi employee nghỉ việc. Treasury/Security không audit được ai truy cập credential.",
+      "how": "Centralize secret vào vault riêng (HashiCorp Vault...): static + dynamic secrets (DB credentials tự sinh và tự hết hạn), mã hóa at-rest, audit log mọi truy cập bất kể thành công/thất bại, tích hợp rotation và identity-based auth.",
+      "origin": "không rõ (Vault — HashiCorp; năm phát hành không verify được từ nguồn đã fetch)",
+      "related": [
+        "Principle of Least Privilege (PoLP)",
+        "mTLS"
+      ]
+    },
+    {
+      "term": "OAuth 2.1 & Security BCP",
+      "aliases": [
+        "OAuth 2.1",
+        "sender-constrained tokens",
+        "DPoP"
+      ],
+      "level": "advanced",
+      "problem": "OAuth 2.0 (RFC 6749, 2012) còn để lại nhiều feature được chứng minh bất an toàn qua thực tế: implicit flow lộ token trong URL, không bắt PKCE (code injection), refresh token tĩnh bị replay. Các lỗ hổng này bị khai thác thật trong tích hợp mobile/SPA nên IETF phải gộp các bản security BCP thành một spec mới.",
+      "how": "OAuth 2.1 bỏ implicit + resource-owner-password grant, bắt buộc PKCE, siết redirect URI matching, refresh token rotation; RFC 9700 thêm sender-constrained tokens (DPoP/mTLS bind token vào client cụ thể để token đánh cắp không dùng được ở nơi khác).",
+      "origin": "draft-ietf-oauth-v2-1 (IETF, thay RFC 6749); RFC 9700 (Security BCP)",
+      "related": [
+        "OAuth 2.0",
+        "PKCE",
+        "mTLS",
+        "refresh token rotation"
+      ]
+    },
+    {
+      "term": "mTLS (mutual TLS)",
+      "aliases": [
+        "TLS hai chiều",
+        "mutual TLS"
+      ],
+      "level": "advanced",
+      "problem": "TLS một chiều chỉ server chứng minh danh tính với client — service A gọi service B qua HTTPS vẫn không biết ai đang gọi mình; trong service mesh/microservice, endpoint nội bộ không auth thì pod bị compromise là attacker gọi thoải mái mọi API nội bộ ('internal ≠ trusted'). API key header thì gửi plaintext trong header, steal được là dùng được ở máy khác.",
+      "how": "Client cũng phải presenting X.509 certificate và server verify nó trước khi handshake — cả hai bên xác thực qua PKI, token/cert bound với sender; dùng trong service mesh (Istio/Linkerd), API cấp doanh nghiệp, và trong OAuth làm sender-constrained token.",
+      "origin": "không rõ (kéo dài từ TLS + X.509 client certificate authentication)",
+      "related": [
+        "X.509 & PKI certificate management",
+        "OAuth 2.1 & Security BCP",
+        "secrets management"
+      ]
+    },
+    {
+      "term": "X.509 & PKI certificate management",
+      "aliases": [
+        "chứng chỉ số",
+        "PKI",
+        "certificate chain",
+        "CRL/OCSP",
+        "X.509",
+        "X.509 / PKI"
+      ],
+      "level": "advanced",
+      "problem": "Không có cách chuẩn để chứng minh 'public key này thuộc về domain này' — MITM tự sinh key thì attacker đứng giữa mọi kết nối. Và sau khi phát hiện cert bị compromise hoặc domain bị chiếm, cần cơ chế thu hồi trước khi hết hạn (cert 90 ngày mà attacker dùng được 90 ngày = tai nạn).",
+      "how": "X.509 bind identity ↔ public key qua chữ ký của CA, xác minh theo chain lên trust anchor; thu hồi qua CRL (danh sách đen ký) hoặc OCSP (hỏi real-time). Quản lý lifecycle: issuance, renewal, rotation, revocation — sai khâu nào cũng mở lỗ hổng.",
+      "origin": "ITU-T X.509 (chuẩn format public key certificate); PKIX profile của IETF (RFC 5280 cho CRL)",
+      "related": [
+        "mTLS",
+        "ACME (Automatic Certificate Management Environment)",
+        "Certificate pinning"
+      ]
+    },
+    {
+      "term": "ACME (Automatic Certificate Management Environment)",
+      "aliases": [
+        "giao thức cấp cert tự động",
+        "Let's Encrypt protocol"
+      ],
+      "level": "advanced",
+      "problem": "Trước ACME, gắn HTTPS là thủ công: generate CSR, paste vào web CA, chứng minh sở hữu domain qua email/HTTP, tải cert về cài tay — người làm web mất 1–3 giờ mỗi cert, và cert expire vì quên gia hạn khiến site sập. Hàng triệu site nhỏ không đủ resources nên web toàn cầu vẫn HTTP plaintext.",
+      "how": "Giao thức machine-to-machine: client đăng ký account, submit order, chứng minh quyền kiểm soát domain qua challenge (http-01/dns-01), finalize với CSR, tải cert — mọi bước tự động, kèm auto-renew; Let's Encrypt cấp cert miễn phí hàng triệu domain.",
+      "origin": "IETF RFC 8555 (3/2019) — R. Barnes (Cisco), J. Hoffman-Andrews (EFF), D. McCarney (Let's Encrypt), J. Kasten (UMich); phát triển qua IETF ACME WG",
+      "related": [
+        "X.509 & PKI certificate management",
+        "mTLS"
+      ]
+    }
+  ],
+  "sources": [
+    "https://datatracker.ietf.org/doc/html/rfc6749",
+    "https://datatracker.ietf.org/doc/html/rfc7636",
+    "https://openid.net/specs/openid-connect-core-1_0.html",
+    "https://datatracker.ietf.org/doc/html/rfc7519",
+    "https://datatracker.ietf.org/doc/html/rfc7662",
+    "https://datatracker.ietf.org/doc/html/rfc9700",
+    "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-12",
+    "https://datatracker.ietf.org/doc/html/rfc8555",
+    "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+    "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+    "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+    "https://portswigger.net/web-security/sql-injection",
+    "https://portswigger.net/web-security/os-command-injection",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie",
+    "https://en.wikipedia.org/wiki/Bcrypt",
+    "https://en.wikipedia.org/wiki/Argon2",
+    "https://en.wikipedia.org/wiki/Rainbow_table",
+    "https://en.wikipedia.org/wiki/Role-based_access_control",
+    "https://en.wikipedia.org/wiki/Attribute-based_access_control",
+    "https://en.wikipedia.org/wiki/X.509",
+    "https://en.wikipedia.org/wiki/Principle_of_least_privilege",
+    "https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/",
+    "https://developer.hashicorp.com/vault/docs/what-is-vault"
+  ]
+}

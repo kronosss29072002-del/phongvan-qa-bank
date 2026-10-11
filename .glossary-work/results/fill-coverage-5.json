@@ -1,0 +1,322 @@
+{
+  "entries": [
+    {
+      "term": "Traffic burst & burst capacity",
+      "aliases": [
+        "burst",
+        "traffic burst",
+        "burst capacity",
+        "flash crowd",
+        "retry storm"
+      ],
+      "level": "intermediate",
+      "domain": "Bền vững & Chị tải",
+      "problem": "Lưu lượng không tăng đều: flash crowd sau khi bài viết viral, retry storm khi dịch vụ hồi phục, bot flood đầu ngày. Autoscaling phản ứng sau vài phút, trong khi queue, connection pool và GC âm thầm quá tải. Hệ thống chỉ tính cho tải bền vững thường không trụ nổi đỉnh ngắn hạn.",
+      "origin": "",
+      "how": "Xử lý theo hai hướng: tăng công suất tức thời (buffer trong queue có giới hạn, burst instance hoặc reserve capacity trả trước theo dự báo) và bảo vệ bằng admission control (rate limit, shedding, backpressure, thêm jitter cho retry). Burst capacity được xác định bằng peak-to-mean ratio của traffic thật, hoặc mô hình token bucket cho phép vay tín dụng từ phút trước.",
+      "related": [
+        "Load Shedding",
+        "Exponential Backoff",
+        "Backpressure & rate shaping",
+        "Capacity Planning"
+      ]
+    },
+    {
+      "term": "Serialization/deserialization overhead",
+      "aliases": [
+        "serialization overhead",
+        "deserialization",
+        "JSON parse"
+      ],
+      "level": "advanced",
+      "domain": "Hiệu năng",
+      "problem": "Chi phí CPU để parse và serialize payload thường bị bỏ qua khi lập kế hoạch hiệu năng. Với Node.js hoặc Python xử lý hàng nghìn request mỗi giây, riêng JSON có thể ngốn phần lớn CPU trong hot path; đo gộp cả encode lẫn decode sẽ che mất phần chi phí thật này.",
+      "origin": "",
+      "how": "JSON parse tạo object tree cùng nhiều allocation string; các format nhị phân như protobuf (schema-driven, bỏ qua field lạ theo wire type), MessagePack và Cap'n Proto giảm kích thước payload lẫn số lần copy. Muốn đo đúng phải tách encode/decode khỏi logic và profile từng phần; chọn format theo kích thước payload, throughput cần thiết và chi phí phát triển, vì protobuf kéo theo việc version schema.",
+      "related": [
+        "gRPC",
+        "Microbenchmark & bẫy của nó",
+        "Profiling: CPU/heap, flame graph",
+        "HTTP/2"
+      ]
+    },
+    {
+      "term": "Apdex",
+      "aliases": [
+        "Apdex",
+        "Application Performance Index",
+        "T threshold",
+        "apdex score"
+      ],
+      "level": "intermediate",
+      "domain": "Hiệu năng",
+      "problem": "Latency trung bình không cho biết tỉ lệ người dùng hài lòng: con số trung bình thấp vẫn có thể đi cùng tỉ lệ request chậm cao. Chỉ có p95/p99 thì khó theo dõi xu hướng trải nghiệm qua nhiều tuần bằng một chỉ số duy nhất.",
+      "origin": "Apdex Alliance công bố năm 2005 (đề xuất bởi Peter Sevcik) với bản đặc tả \"Apdex Technical Specification\".",
+      "how": "Mỗi giao dịch được xếp vào một trong ba nhóm theo ngưỡng T (ví dụ T = 500 ms): thỏa mãn (≤ T), dung thứ (≤ 4T), bực bội (> 4T). Điểm Apdex = (đếm thỏa mãn + đếm dung thứ / 2) chia tổng số giao dịch, cho ra giá trị 0 đến 1 với mục tiêu phổ biến từ 0.94 trở lên. Apdex bổ sung chứ không thay thế percentile: mọi giao dịch chậm hơn 4T bị coi là bực bội như nhau, phần đuôi phân phối mất chi tiết.",
+      "related": [
+        "Latency SLO",
+        "Tail latency (độ trễ đuôi, tail latency at scale, p99 latency, latency tail)",
+        "Phân vị trung vị và phần trăm (p50/p95/p99)",
+        "SLO/SLI"
+      ]
+    },
+    {
+      "term": "Runbook",
+      "aliases": [
+        "runbook",
+        "playbook vận hành",
+        "SOP"
+      ],
+      "level": "basic",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Khi alert nổ lúc 2 giờ sáng, người trực phải tự đoán nên xem dashboard nào, chạy lệnh gì trước, khi nào leo thang. Nếu quy trình chỉ nằm trong đầu người đi trước, mỗi ca on-call là một lần phát minh lại cách xử lý, chậm và dễ sót bước.",
+      "origin": "",
+      "how": "Runbook là tài liệu từng bước cho một tình huống cụ thể: alert X nghĩa là gì, kiểm tra bằng lệnh gì, rẽ nhánh quyết định ra sao, ai là đầu mối leo thang. Nó được viết trước sự cố và cập nhật sau mỗi lần dùng thật, gắn link trực tiếp vào alert để bước đầu tiên khi xử lý là mở đúng tài liệu, biến on-call từ hoảng loạn thành quy trình.",
+      "related": [
+        "Incident Management",
+        "Blameless Postmortem",
+        "On-call rotation",
+        "Toil"
+      ]
+    },
+    {
+      "term": "Restore drill / backup restore testing (tập dượt khôi phục, backup validation)",
+      "aliases": [
+        "tập dượt khôi phục",
+        "backup validation",
+        "restore testing",
+        "diễn tập khôi phục"
+      ],
+      "level": "advanced",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Backup chạy xanh mỗi đêm tạo cảm giác an toàn, tới lúc mất dữ liệu thật mới phát hiện dump rỗng, thiếu bảng, hoặc restore chưa ai từng chạy nên loay hoay sáu tiếng đồng hồ. RPO và RTO ghi trong tài liệu chỉ là con số mong muốn cho đến khi có một lần khôi phục thật đo được.",
+      "origin": "",
+      "how": "Định kỳ khôi phục backup vào môi trường tách biệt, chạy kiểm tra toàn vẹn (row count, checksum, vài query nghiệp vụ trên bảng then chốt), đo thời gian từ lúc bắt đầu tới lúc ứng dụng chạy được, rồi bổ sung các bước runbook còn thiếu. Drill thất bại mở incident cho backup pipeline ngay. Tần suất tối thiểu mỗi quý, bắt buộc sau mỗi lần đổi schema hoặc hạ tầng lưu trữ.",
+      "related": [
+        "Backup & point-in-time recovery (WAL archive, incremental)",
+        "RPO",
+        "RTO",
+        "Chaos Engineering"
+      ]
+    },
+    {
+      "term": "Continuous profiling (always-on profiling, production profiler, Parca/Pyroscope)",
+      "aliases": [
+        "always-on profiling",
+        "production profiler",
+        "Parca",
+        "Pyroscope"
+      ],
+      "level": "advanced",
+      "domain": "Hiệu năng",
+      "problem": "Profile chụp thủ công thường bỏ lỡ đúng lúc CPU vọt lên, và kết luận trên máy dev ít giá trị vì traffic shape lẫn dữ liệu khác production. Regression hiệu năng vài phần trăm mỗi release không ai thấy cho tới khi cộng dồn thành sự cố, lúc đó việc truy ngược về commit nào gây ra gần như bất khả thi.",
+      "origin": "Từ nghiên cứu Google-Wide Profiling (Ren và cộng sự, IEEE Micro 2010); Parca và Pyroscope đưa vào mã nguồn mở đầu thập niên 2020",
+      "how": "Thu thập mẫu stack trace liên tục trên mọi instance với tần suất lấy mẫu thấp (1-10% thời gian CPU, overhead vài phần trăm), gắn nhãn service/version/pod rồi lưu vào store dạng cây để query. So sánh flame graph giữa hai lần deploy chỉ ra hàm mới chậm đi; cùng hạ tầng này xem được CPU, heap và lock contention. Công cụ tiêu biểu: Parca, Pyroscope, Google Cloud Profiler.",
+      "related": [
+        "Profiling: CPU/heap, flame graph",
+        "Profiling",
+        "Sampling vs instrumentation"
+      ]
+    },
+    {
+      "term": "JVM production diagnostics (jstack, jmap, heap dump)",
+      "aliases": [
+        "jstack",
+        "jmap",
+        "heap dump",
+        "thread dump",
+        "jcmd",
+        "JVM diagnostics"
+      ],
+      "level": "advanced",
+      "domain": "Hiệu năng",
+      "problem": "Service Java treo ở production: request dồn hàng, CPU thấp, không exception trong log. Không dump được trạng thái JVM thì chỉ còn cách restart rồi hy vọng. Chẩn đoán cần hai thứ metrics không có: thread nào đang giữ lock nào, và object nào đang chiếm heap khiến GC chạy liên tục.",
+      "origin": "jstack và jmap có từ JDK 5 (2004), thay dần cách lấy thread dump thủ công qua tín hiệu SIGQUIT (kill -3).",
+      "how": "jstack (hoặc jcmd Thread.print) in toàn bộ thread stack kèm trạng thái lock, deadlock hiện thành vòng lock chờ nhau. jmap -histo đếm object theo class để thấy cái gì phình; heap dump (-dump hoặc HeapDumpOnOutOfMemoryError) phân tích bằng Eclipse MAT để tìm GC root giữ object đáng lẽ đã chết. Dump heap làm JVM khựng stop-the-world, chạy trên instance đã rút khỏi load balancer.",
+      "related": [
+        "Stop-the-world & GC pause",
+        "Garbage collection cơ bản (mark & sweep, reference counting)",
+        "Profiling: CPU/heap, flame graph"
+      ]
+    },
+    {
+      "term": "Disk full & ENOSPC (hết dung lượng đĩa)",
+      "aliases": [
+        "ENOSPC",
+        "disk full",
+        "no space left on device",
+        "hết dung lượng đĩa",
+        "df -h",
+        "deleted but open file"
+      ],
+      "level": "intermediate",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Ổ đĩa báo đầy theo dung lượng: df -h chạm 100% trong khi du -sh chỉ thấy một phần, service ghi log liên tục nhận ENOSPC rồi chết dần. Hai nguyên nhân chiếm phần lớn ca thật: file đã xóa nhưng process còn giữ file descriptor (dung lượng chỉ được trả khi fd đóng), và log hoặc temp file phình lên không có rotation hay retention. Cả hai đều không tự hồi phục vì mọi ghi mới tiếp tục thất bại.",
+      "origin": "",
+      "how": "Chẩn đoán theo thứ tự: df -h xác nhận mức đầy, du -sh * khoanh vùng thư mục; chênh lệch giữa hai con số chỉ ra deleted-but-open file, lsof +L1 liệt kê chúng để restart hoặc reload process giải phóng dung lượng. Với log phình, tìm process ghi nhiều nhất rồi thêm logrotate và retention trước khi dọn tay. Phòng ngừa: alert theo ngưỡng dung lượng thay vì đợi 100%, tách volume log khỏi volume data, đặt quota hoặc sizeLimit cho ephemeral storage, và kiểm tra reserved blocks khi filesystem báo đầy sớm hơn dự kiến.",
+      "related": [
+        "inode & inode exhaustion (df -i, file metadata)",
+        "Log rotation & retention (logrotate)",
+        "File descriptor exhaustion & lsof (Too many open files)"
+      ]
+    },
+    {
+      "term": "Coordination service (ZooKeeper, etcd)",
+      "aliases": [
+        "ZooKeeper",
+        "etcd",
+        "coordination service"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Leader election, distributed lock và config distribution đều chạy trên một service ngoài: Kafka, Solr và HBase bầu leader qua ZooKeeper; Kubernetes ghi cấu hình cluster vào etcd. Tự viết lại các cơ chế này bằng DB thường hoặc bằng chính application node sẽ tái phát minh consensus, split-brain và lease expiry.",
+      "origin": "ZooKeeper ra mắt 2008 tại Yahoo (Hadoop ecosystem); etcd được CoreOS giới thiệu 2013, dùng Raft.",
+      "how": "Coordination service là khoá có thứ tự tuyến tính (ZooKeeper znode / etcd revision): node nào ghi thành công một key đặc biệt thì thắng election, lock là ephemeral key tự xoá khi holder chết, cấu hình là key được watch để mọi client nhận thay đổi qua callback. Thuật toán nền là Zab (ZooKeeper) hoặc Raft (etcd); client phải xử lý session expiry và fencing token như với mọi distributed lock.",
+      "related": [
+        "Distributed lock & fencing token",
+        "Leader election",
+        "Raft",
+        "Split brain"
+      ]
+    },
+    {
+      "term": "Hybrid logical clock (HLC) & TrueTime",
+      "aliases": [
+        "HLC",
+        "TrueTime",
+        "hybrid logical clock",
+        "physical time"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Clock thật trên máy lệch nhau (drift, NTP sync) nên timestamp không xếp được thứ tự sự kiện; còn Lamport/vector clock thì chỉ ra thứ tự tương đối, không gắn với thời gian thực để snapshot hay retry theo deadline.",
+      "origin": "HLC do Kulkarni et al. đề xuất 2014 (arXiv:1404.5561); TrueTime là phần thiết kế Spanner công bố năm 2012 (Google).",
+      "how": "HLC ghép physical time với counter: khi giao tiếp, node lấy max(clock mình, clock node kia) rồi tăng phần logical, nhờ đó vừa bám thời gian thực vừa bảo toàn happened-before. TrueTime trả về khoảng không chắc chắn [earliest, latest] do GPS và atomic clock ước lượng; Spanner chờ khoảng này trôi qua trước khi commit để sự kiện có thứ tự real-time gần như chắc chắn.",
+      "related": [
+        "Lamport timestamp & Vector clock",
+        "Monotonic clock vs wall clock (NTP drift)",
+        "Snapshot isolation",
+        "Multi-master replication"
+      ]
+    },
+    {
+      "term": "Strict serializability (serializability vs linearizability)",
+      "aliases": [
+        "strict serializability",
+        "serializability",
+        "linearizability",
+        "external consistency"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Serializability chỉ bảo đảm tồn tại một thứ tự hợp lệ nào đó của các transaction, không cấm kết quả ngược thời gian thực: transaction A commit xong rồi B mới chạy vẫn có thể thấy trạng thái cũ. Giao dịch tài chính hoặc spec distributed DB coi thiếu thứ tự real-time là lỗi quan sát được.",
+      "origin": "Thuật ngữ gắn với nghiên cứu linearizability (Herlihy & Wing, 1990); Google Spanner (2012) phổ biến dưới tên external consistency.",
+      "how": "Strict serializability = serializability + linearizability: mọi thao tác có điểm linearize nằm giữa lúc bắt đầu và lúc kết thúc, và nếu thao tác A hoàn tất trước khi B bắt đầu thì A đứng trước B trong thứ tự. Spanner ép bằng TrueTime (commit wait), CockroachDB bằng hybrid clock và transaction timestamp; chi phí là độ trễ thêm theo khoảng không chắc chắn của clock.",
+      "related": [
+        "Linearizability",
+        "Hybrid logical clock (HLC) & TrueTime",
+        "Isolation level",
+        "Multi-master replication"
+      ]
+    },
+    {
+      "term": "Causal consistency",
+      "aliases": [
+        "causal consistency",
+        "causal",
+        "read-your-writes",
+        "happens-before"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Eventual consistency cho phép các replica đọc lệch nhau vô thời hạn: user gửi tin nhắn xong tải lại không thấy nó, comment hiện trước bài gốc. Consistency mạnh kiểu linearizability thì đắt vì mỗi ghi phải chờ quorum toàn cục; phần lớn thao tác thực tế chỉ cần thứ tự nhân quả.",
+      "origin": "Khái niệm có từ Ahamad et al., \"Causal Memory\" (1995); phổ biến qua hệ COPS (SOSP 2011).",
+      "how": "Hệ thống tự nhận diện quan hệ happened-before giữa các thao tác (qua vector clock hoặc dependency metadata) và chỉ bắt buộc xếp đúng thứ tự cho cặp có quan hệ nhân quả; thao tác độc lập có thể tới theo thứ tự bất kỳ. MongoDB, Redis Enterprise và các bản Cassandra tùy chỉnh dùng biến thể này để đổi ít chi phí hơn linearizability lấy read-your-writes.",
+      "related": [
+        "Eventual consistency",
+        "Lamport timestamp & Vector clock",
+        "CRDT",
+        "Replication Lag Tolerance"
+      ]
+    },
+    {
+      "term": "Read repair & hinted handoff",
+      "aliases": [
+        "read repair",
+        "hinted handoff",
+        "anti-entropy",
+        "stale replica"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Quorum write (r + w > n) trả về thành công trong khi một số replica chưa được cập nhật; đọc cũng có thể trúng replica stale. Nếu không có cơ chế sửa sai, dữ liệu lệch tích tụ và DB vẫn trả dữ liệu cũ rất lâu sau khi ghi thành công.",
+      "origin": "Cả hai cơ chế xuất hiện trong paper Dynamo (Amazon, 2007) của DeCandia et al.",
+      "how": "Read repair: khi thỏa mãn một read, node so version giữa các replica, trả bản mới nhất cho client rồi ghi đè replica stale ở background, kèm anti-entropy định kỳ quét vùng ít được đọc. Hinted handoff: node không gửi được ghi vì replica đích tạm down sẽ giữ bản ghi kèm địa chỉ đích dưới dạng hint và chuyển lại khi node sống; hai cơ chế bù nhau nhưng vẫn để hở cửa sổ đọc không nhất quán.",
+      "related": [
+        "Quorum Read/Write",
+        "Eventual consistency",
+        "Multi-master replication",
+        "Gossip protocol"
+      ]
+    },
+    {
+      "term": "Last-write-wins (LWW) & version vectors",
+      "aliases": [
+        "LWW",
+        "last write wins",
+        "version vector",
+        "conflict resolution"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Khi hai node ghi cùng một key song song, phải chọn kết quả nào sống sót. LWW chọn bản có timestamp ghi lớn nhất; nếu clock giữa các node lệch nhau, ghi cũ hơn vẫn có thể thắng và dữ liệu biến mất âm thầm. Không rõ khi nào cần merge thay vì bỏ.",
+      "origin": "LWW và version vector phổ biến qua Dynamo (Amazon, 2007); version vector có nguồn gốc từ nghiên cứu hệ phân tán thập niên 1980 (Parker et al.).",
+      "how": "Với LWW, timestamp phải lấy từ nguồn có thứ tự toàn cục, thường là clock của coordinator, để giảm thiểu chứ không khử hết nghịch lý clock. Version vector đếm mỗi node đã thấy bao nhiêu ghi, phân biệt thao tác độc lập (concurrent) với thao tác kế thừa nhau; cặp concurrent giữ cả hai nhánh cho tầng ứng dụng merge, thao tác có thứ tự thì bản sau thắng. Cassandra để LWW ở level cột, DynamoDB trên toàn item.",
+      "related": [
+        "Multi-master replication",
+        "CRDT",
+        "Lamport timestamp & Vector clock",
+        "Eventual consistency"
+      ]
+    },
+    {
+      "term": "Distributed ID generation (Snowflake, UUIDv7, ULID)",
+      "aliases": [
+        "Snowflake",
+        "UUIDv7",
+        "ULID",
+        "distributed ID generator"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "AUTO_INCREMENT chỉ đúng trong một node và tạo điểm tranh chấp khi hợp nhất shard hay import dữ liệu cũ; UUID v4 ngẫu nhiên không sắp xếp được nên phá locality của B-tree. Hệ thống multi-node vẫn cần ID duy nhất toàn cục lại gần thời gian thực.",
+      "origin": "Snowflake là ID generator nội bộ của Twitter, open source năm 2010; UUIDv7 nằm trong RFC 9562 (2024); ULID do Alizain Feerasta đề xuất 2016.",
+      "how": "Snowflake ghép 41 bit timestamp + 10 bit machine id + 12 bit sequence quanh một epoch riêng, sinh ID 64-bit không cần phối hợp mỗi lần gọi; UUIDv7 đặt timestamp 48 bit ở đầu rồi random padding, ULID dùng base32 cho 48 bit timestamp + 80 bit entropy, cả ba đều sortable theo thời gian vì millisecond nằm ở prefix, hợp với chỉ mục B-tree và phân trang theo thời gian.",
+      "related": [
+        "Sharding",
+        "Index (B-tree, hash, composite)",
+        "Primary key & Foreign key",
+        "Monotonic clock vs wall clock (NTP drift)"
+      ]
+    },
+    {
+      "term": "Python GIL (Global Interpreter Lock)",
+      "aliases": [
+        "GIL",
+        "Global Interpreter Lock",
+        "CPython GIL",
+        "free-threaded Python"
+      ],
+      "level": "basic",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Service Python nhận tăng tải, kỹ sư thêm thread pool để tận dụng nhiều CPU nhưng throughput không nhích. CPython chỉ cho một thread chạy bytecode tại một thời điểm, nên thread tính toán nặng vẫn bị serial hóa, cộng thêm chi phí context switch. Chọn sai mô hình scale từ điểm này dẫn tới thread cho CPU-bound, process cho I/O-bound, đúng cái ngược lại.",
+      "origin": "CPython giữ GIL từ những bản đầu (1994); PEP 703 (2023) được chấp thuận để mở đường cho free-threaded build, thử nghiệm từ Python 3.13 (2024).",
+      "how": "GIL tồn tại vì quản lý reference count không đổi chỉ với một lock toàn cục. Hệ quả thực tế: thread chỉ hữu ích cho I/O-bound vì GIL được nhả lúc chờ syscall; CPU-bound phải dùng multiprocessing, thư viện C (numpy nhả GIL khi tính), hoặc asyncio gộp I/O. Python 3.13 có free-threaded build thử nghiệm nhưng chưa phải mặc định.",
+      "related": [
+        "Process vs Thread",
+        "Concurrency vs Parallelism",
+        "Event loop"
+      ]
+    }
+  ]
+}

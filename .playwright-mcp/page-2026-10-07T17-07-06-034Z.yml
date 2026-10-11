@@ -1,0 +1,356 @@
+- generic [active] [ref=f20e1]:
+  - generic [ref=f20e2]:
+    - generic [ref=f20e4]:
+      - generic [ref=f20e6]:
+        - link "DuckDuckGo home" [ref=f20e7] [cursor=pointer]:
+          - /url: /?t=h_
+          - generic [ref=f20e8]: DuckDuckGo
+        - generic [ref=f20e15]:
+          - combobox "Search privately" [ref=f20e17]: site:topcv.vn fresher fullstack OR backend developer tuyen dung
+          - button "Search" [ref=f20e19] [cursor=pointer]
+      - navigation [ref=f20e26]:
+        - list [ref=f20e27]:
+          - listitem [ref=f20e28]:
+            - link [ref=f20e29] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+fullstack+OR+backend+developer+tuyen+dung&t=h_&ia=web
+              - strong [ref=f20e30]: All
+          - listitem [ref=f20e33]:
+            - link [ref=f20e34] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+fullstack+OR+backend+developer+tuyen+dung&t=h_&ia=images&iax=images
+              - strong [ref=f20e35]: Images
+          - listitem [ref=f20e36]:
+            - link [ref=f20e37] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+fullstack+OR+backend+developer+tuyen+dung&t=h_&ia=videos&iax=videos
+              - strong [ref=f20e38]: Videos
+          - listitem [ref=f20e39]:
+            - link [ref=f20e40] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+fullstack+OR+backend+developer+tuyen+dung&t=h_&ia=news&iar=news
+              - strong [ref=f20e41]: News
+          - listitem [ref=f20e42]:
+            - link [ref=f20e43] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+fullstack+OR+backend+developer+tuyen+dung&t=h_&iaxm=maps
+              - strong [ref=f20e44]: Maps
+        - list [ref=f20e45]:
+          - listitem [ref=f20e46]:
+            - link "Duck.ai" [ref=f20e48] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+fullstack+OR+backend+developer+tuyen+dung&t=h_&ia=chat&entry=serp
+          - listitem [ref=f20e52]:
+            - button "Search Settings ✀" [ref=f20e54] [cursor=pointer]:
+              - generic [ref=f20e57]: Search Settings
+              - generic [ref=f20e58]: ✀
+    - generic [ref=f20e65]:
+      - navigation [ref=f20e67]:
+        - button [ref=f20e69] [cursor=pointer]:
+          - strong [ref=f20e76]: Private
+        - generic [ref=f20e80]:
+          - switch "Filter by the selected region" [ref=f20e84]
+          - button "Vietnam (en)" [ref=f20e86] [cursor=pointer]
+        - button [ref=f20e91] [cursor=pointer]:
+          - strong [ref=f20e93]: "Safe search: moderate"
+        - button [ref=f20e97] [cursor=pointer]:
+          - strong [ref=f20e99]: Any time
+      - generic [ref=f20e103]:
+        - list [ref=f20e104]:
+          - listitem [ref=f20e105]:
+            - generic [ref=f20e106]:
+              - generic [ref=f20e109]:
+                - text: Only showing results from
+                - generic [ref=f20e110]: topcv.vn
+              - button "Show all results" [ref=f20e112] [cursor=pointer]
+          - listitem [ref=f20e113]:
+            - article [ref=f20e114] [cursor=pointer]:
+              - button [ref=f20e116]
+              - generic [ref=f20e120]:
+                - link "Search domain topcv.vn" [ref=f20e122]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e125]:
+                  - paragraph [ref=f20e126]: TopCV
+                  - link "https://www.topcv.vn › tim-viec-lam-full-stack-developer" [ref=f20e127]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-full-stack-developer
+                    - paragraph [ref=f20e129]:
+                      - generic [ref=f20e130]: https://www.topcv.vn
+                      - generic [ref=f20e131]: › tim-viec-lam-full-stack-developer
+              - heading [level=2] [ref=f20e133]:
+                - link "Tuyển dụng 155 việc làm Full Stack Developer [Update 07 ... - TopCV" [ref=f20e134]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-full-stack-developer
+              - generic [ref=f20e136]: Khám phá 155 việc làm Full Stack Developer từ những Nhà tuyển dụng uy tín cùng TopCV ngay hôm nay.
+          - listitem [ref=f20e141]:
+            - article [ref=f20e142] [cursor=pointer]:
+              - button [ref=f20e144]
+              - generic [ref=f20e148]:
+                - link "Search domain topcv.vn" [ref=f20e150]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e153]:
+                  - paragraph [ref=f20e154]: TopCV
+                  - link "https://www.topcv.vn › tim-viec-lam-fullstack-developer-tai-ho-chi-minh-kl2" [ref=f20e155]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-fullstack-developer-tai-ho-chi-minh-kl2
+                    - paragraph [ref=f20e157]:
+                      - generic [ref=f20e158]: https://www.topcv.vn
+                      - generic [ref=f20e159]: › tim-viec-lam-fullstack-developer-tai-ho-chi-minh-kl2
+              - heading [level=2] [ref=f20e161]:
+                - link "Tuyển dụng 35 việc làm Fullstack Developer tại Hồ ... - TopCV" [ref=f20e162]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-fullstack-developer-tai-ho-chi-minh-kl2
+              - generic [ref=f20e164]: Khám phá 35 việc làm Fullstack Developer tại Hồ Chí Minh từ những Nhà tuyển dụng uy tín cùng TopCV ngay hôm nay.
+          - listitem [ref=f20e169]:
+            - article [ref=f20e170] [cursor=pointer]:
+              - button [ref=f20e172]
+              - generic [ref=f20e176]:
+                - link "Search domain vn.joboko.com" [ref=f20e178]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e181]:
+                  - paragraph [ref=f20e182]: Joboko
+                  - link "https://vn.joboko.com › viec-lam-tuyen-junior-fullstack-backend-developer-toi-thieu-1-nam-kinh-nghiem-tro-len-xvi6749144" [ref=f20e183]:
+                    - /url: https://vn.joboko.com/viec-lam-tuyen-junior-fullstack-backend-developer-toi-thieu-1-nam-kinh-nghiem-tro-len-xvi6749144
+                    - paragraph [ref=f20e185]:
+                      - generic [ref=f20e186]: https://vn.joboko.com
+                      - generic [ref=f20e187]: › viec-lam-tuyen-junior-fullstack-backend-developer-toi-thieu-1-nam-kinh-nghiem-tro-len-xvi6749144
+              - heading [level=2] [ref=f20e189]:
+                - link "Tuyển Junior Fullstack Backend Developer - (Tối thiểu 1 ... - Joboko" [ref=f20e190]:
+                  - /url: https://vn.joboko.com/viec-lam-tuyen-junior-fullstack-backend-developer-toi-thieu-1-nam-kinh-nghiem-tro-len-xvi6749144
+              - generic [ref=f20e192]: "Tuyển Junior Fullstack Backend Developer - (Tối thiểu 1 năm kinh nghiệm trở lên) Hồ Chí Minh Thỏa thuận 1 năm kinh nghiệm Hạn nộp hồ sơ: 06/12/2026 (Còn 60 ngày) Ứng tuyển sớm để được ưu tiên"
+          - listitem [ref=f20e197]:
+            - article [ref=f20e198] [cursor=pointer]:
+              - button [ref=f20e200]
+              - generic [ref=f20e204]:
+                - link "Search domain foxsoft.vn" [ref=f20e206]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e209]:
+                  - paragraph [ref=f20e210]: foxsoft.vn
+                  - link "https://foxsoft.vn › tuyen-dung" [ref=f20e211]:
+                    - /url: https://foxsoft.vn/tuyen-dung
+                    - paragraph [ref=f20e213]:
+                      - generic [ref=f20e214]: https://foxsoft.vn
+                      - generic [ref=f20e215]: › tuyen-dung
+              - heading [level=2] [ref=f20e217]:
+                - link "Tuyển dụng Dev, BA Lead, BA, Tester phần mềm Viễn thông — FOXSOFT" [ref=f20e218]:
+                  - /url: https://foxsoft.vn/tuyen-dung
+              - generic [ref=f20e220]: FOXSOFT tuyển dụng Software Developer (Java Backend/Web/Mobile), Project Manager, BA Lead (Trưởng nhóm BA), Business Analyst và Software Tester cho hệ sinh thái phần mềm viễn thông.
+          - listitem [ref=f20e225]:
+            - article [ref=f20e226] [cursor=pointer]:
+              - button [ref=f20e228]
+              - generic [ref=f20e232]:
+                - link "Search domain careerviet.vn" [ref=f20e234]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e237]:
+                  - paragraph [ref=f20e238]: careerviet.vn
+                  - link "https://careerviet.vn › viec-lam › Angular-k-vi.html" [ref=f20e239]:
+                    - /url: https://careerviet.vn/viec-lam/Angular-k-vi.html
+                    - paragraph [ref=f20e241]:
+                      - generic [ref=f20e242]: https://careerviet.vn
+                      - generic [ref=f20e243]: › viec-lam › Angular-k-vi.html
+              - heading [level=2] [ref=f20e245]:
+                - link "Tuyển dụng 17 việc làm Angular MỚI 07/10/2026 - CareerViet.vn" [ref=f20e246]:
+                  - /url: https://careerviet.vn/viec-lam/Angular-k-vi.html
+              - generic [ref=f20e251]:
+                - text: Sep 28, 2026·
+                - generic [ref=f20e252]: Tuyển dụng 17 việc làm Angular cập nhập mới nhất 07/10/2026 từ các doanh nghiệp uy tín, lương cao, phúc lợi tốt. Ứng tuyển ngay tại CareerViet
+          - listitem [ref=f20e253]:
+            - article [ref=f20e254] [cursor=pointer]:
+              - button [ref=f20e256]
+              - generic [ref=f20e260]:
+                - link "Search domain ybox.vn" [ref=f20e262]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e265]:
+                  - paragraph [ref=f20e266]: YBOX
+                  - link "https://ybox.vn › tuyen-dung › hcm-cong-ty-cong-nghe-thuong-mai-truc-tuyen-f5-tuyen-dung-thuc-tap-sinh-frontend-developer-backend-developer-part-time-full-time-2026-6a462a8bf00ac77c7a28378e" [ref=f20e267]:
+                    - /url: https://ybox.vn/tuyen-dung/hcm-cong-ty-cong-nghe-thuong-mai-truc-tuyen-f5-tuyen-dung-thuc-tap-sinh-frontend-developer-backend-developer-part-time-full-time-2026-6a462a8bf00ac77c7a28378e
+                    - paragraph [ref=f20e269]:
+                      - generic [ref=f20e270]: https://ybox.vn
+                      - generic [ref=f20e271]: › tuyen-dung › hcm-cong-ty-cong-nghe-thuong-mai-truc-tuyen-f5-tuyen-dung-thuc-tap-sinh-frontend-developer-backend-developer-part-time-full-time-2026-6a462a8bf00ac77c7a28378e
+              - heading [level=2] [ref=f20e273]:
+                - link "[HCM] Công Ty Công Nghệ Thương Mại Trực Tuyến F5 Tuyển Dụng Thực Tập ..." [ref=f20e274]:
+                  - /url: https://ybox.vn/tuyen-dung/hcm-cong-ty-cong-nghe-thuong-mai-truc-tuyen-f5-tuyen-dung-thuc-tap-sinh-frontend-developer-backend-developer-part-time-full-time-2026-6a462a8bf00ac77c7a28378e
+              - generic [ref=f20e276]: "[HCM] Công Ty Công Nghệ Thương Mại Trực Tuyến F5 Tuyển Dụng Thực Tập Sinh Frontend Developer/Backend Developer Part-time/Full-time 2026, Loại hình công ty: Côn"
+          - listitem [ref=f20e281]:
+            - article [ref=f20e282] [cursor=pointer]:
+              - button [ref=f20e284]
+              - generic [ref=f20e288]:
+                - link "Search domain ybox.vn" [ref=f20e290]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e293]:
+                  - paragraph [ref=f20e294]: YBOX
+                  - link "https://ybox.vn › tuyen-dung › remote-job-developer-jetomax-is-looking-for-fullstack-engineer-net-angular-n8n-mcp-server-flutter-mobile-app-6a4751d7ce7902156df119c3" [ref=f20e295]:
+                    - /url: https://ybox.vn/tuyen-dung/remote-job-developer-jetomax-is-looking-for-fullstack-engineer-net-angular-n8n-mcp-server-flutter-mobile-app-6a4751d7ce7902156df119c3
+                    - paragraph [ref=f20e297]:
+                      - generic [ref=f20e298]: https://ybox.vn
+                      - generic [ref=f20e299]: › tuyen-dung › remote-job-developer-jetomax-is-looking-for-fullstack-engineer-net-angular-n8n-mcp-server-flutter-mobile-app-6a4751d7ce7902156df119c3
+              - heading [level=2] [ref=f20e301]:
+                - link "[Online] Công Ty JETOSTACK Tuyển Dụng Nhân Viên Fullstack Developer ..." [ref=f20e302]:
+                  - /url: https://ybox.vn/tuyen-dung/remote-job-developer-jetomax-is-looking-for-fullstack-engineer-net-angular-n8n-mcp-server-flutter-mobile-app-6a4751d7ce7902156df119c3
+              - generic [ref=f20e304]: "[Online] Công Ty JETOSTACK Tuyển Dụng Nhân Viên Fullstack Developer (.NET, Angular, N8n, MCP Server, Flutter - Mobile App) Full-time 2026, Loại hình công ty: Cô"
+          - listitem [ref=f20e309]:
+            - article [ref=f20e310] [cursor=pointer]:
+              - button [ref=f20e312]
+              - generic [ref=f20e316]:
+                - link "Search domain sepay.vn" [ref=f20e318]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e321]:
+                  - paragraph [ref=f20e322]: sepay.vn
+                  - link "https://sepay.vn › blog › tuyen-dung-fintech-fullstack-developer-php-laravel-ai-2026" [ref=f20e323]:
+                    - /url: https://sepay.vn/blog/tuyen-dung-fintech-fullstack-developer-php-laravel-ai-2026/
+                    - paragraph [ref=f20e325]:
+                      - generic [ref=f20e326]: https://sepay.vn
+                      - generic [ref=f20e327]: › blog › tuyen-dung-fintech-fullstack-developer-php-laravel-ai-2026
+              - heading [level=2] [ref=f20e329]:
+                - link "Tuyển dụng Fintech - FullStack Developer 2026 - SePay Blog" [ref=f20e330]:
+                  - /url: https://sepay.vn/blog/tuyen-dung-fintech-fullstack-developer-php-laravel-ai-2026/
+              - generic [ref=f20e335]:
+                - text: Aug 6, 2026·
+                - generic [ref=f20e336]: SePay cần tuyển dụng Fullstack Developer có kinh nghiệm, thành thạo AI coding và sẵn sàng tham gia phát triển hạ tầng Open Banking đang phục vụ hơn 66.000 doanh nghiệp, hộ kinh doanh và cá nhân trên cả nước. Đây là vị trí đảm nhận cả backend lẫn frontend, làm việc trực tiếp với API của các ngân hàng lớn và NAPAS, theo ...
+          - listitem [ref=f20e337]:
+            - article [ref=f20e338] [cursor=pointer]:
+              - button [ref=f20e340]
+              - generic [ref=f20e344]:
+                - link "Search domain 9pay.vn" [ref=f20e346]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e349]:
+                  - paragraph [ref=f20e350]: 9Pay
+                  - link "https://9pay.vn › tuyen-dung › 1841346629-2137" [ref=f20e351]:
+                    - /url: https://9pay.vn/tuyen-dung/1841346629-2137
+                    - paragraph [ref=f20e353]:
+                      - generic [ref=f20e354]: https://9pay.vn
+                      - generic [ref=f20e355]: › tuyen-dung › 1841346629-2137
+              - heading [level=2] [ref=f20e357]:
+                - link "Backend Developer (PHP/Golang) - 9pay.vn" [ref=f20e358]:
+                  - /url: https://9pay.vn/tuyen-dung/1841346629-2137
+              - generic [ref=f20e360]: Có tối thiểu 4 năm kinh nghiệm phát triển phần mềm backend. Thành thạo ít nhất một ngôn ngữ backend như PHP (Laravel), Golang, Node.js, Java, Python hoặc tương đương.
+          - listitem [ref=f20e365]:
+            - article [ref=f20e366] [cursor=pointer]:
+              - button [ref=f20e368]
+              - generic [ref=f20e372]:
+                - link "Search domain vega.com.vn" [ref=f20e374]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20fullstack%20OR%20backend%20developer%20tuyen%20dung&t=h_
+                - generic [ref=f20e377]:
+                  - paragraph [ref=f20e378]: Vega Corporation
+                  - link "https://www.vega.com.vn › vi › tuyen-dung › dang-tuyen-dung › Fresher-backend" [ref=f20e379]:
+                    - /url: https://www.vega.com.vn/vi/tuyen-dung/dang-tuyen-dung/Fresher-backend
+                    - paragraph [ref=f20e381]:
+                      - generic [ref=f20e382]: https://www.vega.com.vn
+                      - generic [ref=f20e383]: › vi › tuyen-dung › dang-tuyen-dung › Fresher-backend
+              - heading [level=2] [ref=f20e385]:
+                - link "Fresher Backend ( Java, PHP, .Net ) | Vega Corporation" [ref=f20e386]:
+                  - /url: https://www.vega.com.vn/vi/tuyen-dung/dang-tuyen-dung/Fresher-backend
+              - generic [ref=f20e391]:
+                - text: Apr 15, 2026·
+                - generic [ref=f20e392]: Lập trình viên hệ thống .NET Core (.NET Core Developer) Phát triển, nâng cấp các dịch vụ nền tảng (Backend Services) và tích hợp hệ thống cho hệ sinh thái công nghệ tài chính
+          - listitem [ref=f20e393]:
+            - generic [ref=f20e395]:
+              - paragraph [ref=f20e396]: Searches related to site:topcv.vn fresher fullstack OR backend developer tuyen dung
+              - generic [ref=f20e397]:
+                - list [ref=f20e398]:
+                  - listitem [ref=f20e399]:
+                    - link "topcv fullstack" [ref=f20e400] [cursor=pointer]:
+                      - /url: "?q=topcv%20fullstack&origin=related&t=h_"
+                  - listitem [ref=f20e403]:
+                    - link "công ty full stack developer" [ref=f20e404] [cursor=pointer]:
+                      - /url: "?q=c%C3%B4ng%20ty%20full%20stack%20developer&origin=related&t=h_"
+                - list [ref=f20e407]:
+                  - listitem [ref=f20e408]:
+                    - link "công ty it fullstack" [ref=f20e409] [cursor=pointer]:
+                      - /url: "?q=c%C3%B4ng%20ty%20it%20fullstack&origin=related&t=h_"
+              - generic [ref=f20e417]:
+                - text: Was this helpful?
+                - button "Positive feedback" [ref=f20e418] [cursor=pointer]
+                - button "Negative feedback" [ref=f20e422] [cursor=pointer]
+        - button "More results" [ref=f20e428] [cursor=pointer]
+    - list [ref=f20e431]:
+      - button "Close menu" [ref=f20e432] [cursor=pointer]
+      - list [ref=f20e436]:
+        - listitem [ref=f20e437]: Search
+        - listitem [ref=f20e438]:
+          - link "Homepage" [ref=f20e439] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f20e440]:
+          - link "Themes" [ref=f20e441] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f20e442]:
+          - link "Settings" [ref=f20e443] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f20e444]:
+        - listitem [ref=f20e445]: Share Feedback
+        - listitem [ref=f20e446]:
+          - generic [ref=f20e449]:
+            - button "Positive feedback" [ref=f20e450] [cursor=pointer]
+            - button "Negative feedback" [ref=f20e454] [cursor=pointer]
+      - list [ref=f20e458]:
+        - listitem [ref=f20e459]: Downloads
+        - listitem [ref=f20e460]:
+          - link "iOS Browser" [ref=f20e461] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f20e462]:
+          - link "Android Browser" [ref=f20e463] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f20e464]:
+          - link "Mac Browser" [ref=f20e465] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f20e466]:
+          - link "Windows Browser" [ref=f20e467] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f20e468]:
+          - link "Browser Extensions" [ref=f20e469] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f20e470]:
+        - listitem [ref=f20e471]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f20e472]:
+          - link "Duck.ai" [ref=f20e473] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f20e474]:
+          - link "Email Protection" [ref=f20e475] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f20e476]:
+          - link "Newsletter" [ref=f20e477] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f20e478]:
+          - link "Blog" [ref=f20e479] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f20e480]:
+          - link "Podcast" [ref=f20e481] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f20e482]:
+          - link "Collaborations" [ref=f20e483] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f20e484]:
+        - listitem [ref=f20e485]: Learn More
+        - listitem [ref=f20e486]:
+          - link "What’s New" [ref=f20e487] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f20e488]:
+          - link "Compare Privacy" [ref=f20e489] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f20e490]:
+          - link "About Our Browser" [ref=f20e491] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f20e492]:
+          - link "About DuckDuckGo" [ref=f20e493] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f20e494]:
+        - listitem [ref=f20e495]: Other Resources
+        - listitem [ref=f20e496]:
+          - link "Help" [ref=f20e497] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f20e498]:
+          - link "Community" [ref=f20e499] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f20e500]:
+          - link "Careers" [ref=f20e501] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f20e502]:
+          - link "Privacy Policy" [ref=f20e503] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f20e504]:
+          - link "Terms of Service" [ref=f20e505] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f20e506]:
+          - link "Press Kit" [ref=f20e507] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f20e508]:
+          - link "Advertise on Search" [ref=f20e509] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f20e515]:
+    - generic [ref=f20e526]:
+      - heading "See What’s DuckDuckNew" [level=3] [ref=f20e527]
+      - paragraph [ref=f20e528]: Explore DuckDuckGo’s latest product updates.
+    - link "Learn More" [ref=f20e529] [cursor=pointer]:
+      - /url: https://duckduckgo.com/updates
+  - button "Share Feedback" [ref=f20e534] [cursor=pointer]

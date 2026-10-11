@@ -1,0 +1,218 @@
+- generic [active] [ref=f46e1]:
+  - link "Skip to main content link" [ref=f46e2] [cursor=pointer]:
+    - /url: "#aws-page-content-main"
+    - text: Skip to main content
+  - generic [ref=f46e6]:
+    - generic [ref=f46e10]:
+      - navigation "Global navigation" [ref=f46e11]:
+        - generic "Secondary global navigation" [ref=f46e13]:
+          - generic [ref=f46e14]:
+            - list [ref=f46e16]:
+              - listitem [ref=f46e17]:
+                - button "English" [ref=f46e18] [cursor=pointer]
+              - listitem [ref=f46e24]:
+                - link "Contact us" [ref=f46e25] [cursor=pointer]:
+                  - /url: /contact-us/?nc2=h_ut_cu
+              - listitem [ref=f46e27]:
+                - link "AWS Marketplace" [ref=f46e28] [cursor=pointer]:
+                  - /url: /marketplace?nc2=h_utmp
+              - listitem [ref=f46e30]:
+                - button "Support" [ref=f46e31] [cursor=pointer]
+              - listitem [ref=f46e35]:
+                - button "My account" [ref=f46e36] [cursor=pointer]
+            - button "AWS Profile" [ref=f46e42] [cursor=pointer]
+        - generic "Primary global navigation" [ref=f46e45]:
+          - list [ref=f46e46]:
+            - listitem [ref=f46e47]:
+              - link "Click here to return to Amazon Web Services homepage" [ref=f46e48] [cursor=pointer]:
+                - /url: /?nc2=h_home
+            - listitem [ref=f46e56]:
+              - button "Menu" [ref=f46e57] [cursor=pointer]
+          - list [ref=f46e61]:
+            - listitem [ref=f46e62]:
+              - button "Toggle search" [ref=f46e64]:
+                - paragraph [ref=f46e65] [cursor=pointer]: Search
+            - listitem [ref=f46e68]:
+              - link "Sign in to console" [ref=f46e69] [cursor=pointer]:
+                - /url: https://console.aws.amazon.com/console/home/?nc2=h_si&src=header-signin
+            - listitem [ref=f46e71]:
+              - button "Create account" [ref=f46e72] [cursor=pointer]
+      - button "Open feedback" [ref=f46e76] [cursor=pointer]
+    - tooltip "Feedback" [ref=f46e79]
+  - main [ref=f46e83]:
+    - generic [ref=f46e85]:
+      - generic [ref=f46e88]:
+        - paragraph [ref=f46e89]: AWS Elastic Disaster Recovery
+        - list [ref=f46e91]:
+          - listitem [ref=f46e92]:
+            - link "Overview" [ref=f46e93] [cursor=pointer]:
+              - /url: /disaster-recovery/?nc=sn&loc=1
+          - listitem [ref=f46e95]:
+            - link "Features" [ref=f46e96] [cursor=pointer]:
+              - /url: /disaster-recovery/features/?nc=sn&loc=2
+          - listitem [ref=f46e98]:
+            - link "Pricing" [ref=f46e99] [cursor=pointer]:
+              - /url: /disaster-recovery/pricing/?nc=sn&loc=2
+          - button "Resources submenu" [ref=f46e101] [cursor=pointer]:
+            - generic [ref=f46e102]: Resources
+          - listitem [ref=f46e107]:
+            - link "FAQs" [ref=f46e108] [cursor=pointer]:
+              - /url: /disaster-recovery/faqs/?nc=sn&loc=4
+      - generic [ref=f46e120]:
+        - navigation "Breadcrumb" [ref=f46e123]:
+          - list [ref=f46e124]:
+            - listitem [ref=f46e125]:
+              - link "Products" [ref=f46e126] [cursor=pointer]:
+                - /url: /products/
+            - listitem [ref=f46e130]:
+              - link "Storage" [ref=f46e131] [cursor=pointer]:
+                - /url: /products/storage/
+            - listitem [ref=f46e135]:
+              - generic [ref=f46e136]: Elastic Disaster Recovery
+        - generic [ref=f46e141]:
+          - generic [ref=f46e142]:
+            - heading "AWS Elastic Disaster Recovery" [level=1] [ref=f46e143]
+            - paragraph [ref=f46e144]: Scalable, cost-effective application recovery to AWS
+          - generic [ref=f46e145]:
+            - button "Get started with Elastic Disaster Recovery" [ref=f46e147] [cursor=pointer]
+            - button "Take free online technical training" [ref=f46e150] [cursor=pointer]
+      - generic [ref=f46e161]:
+        - heading "Benefits" [level=2] [ref=f46e164]
+        - generic [ref=f46e166]:
+          - heading [level=3] [ref=f46e168] [cursor=pointer]:
+            - button "Save costs" [ref=f46e169]
+          - heading [level=3] [ref=f46e173] [cursor=pointer]:
+            - button "Recover in minutes" [ref=f46e174]
+          - heading [level=3] [ref=f46e178] [cursor=pointer]:
+            - button "Unified process" [ref=f46e179]
+          - heading [level=3] [ref=f46e183] [cursor=pointer]:
+            - button "Automate actions" [ref=f46e184]
+      - generic [ref=f46e196]:
+        - heading "How it works" [level=2] [ref=f46e198]
+        - generic [ref=f46e201]:
+          - paragraph [ref=f46e202]: AWS Elastic Disaster Recovery (AWS DRS) minimizes downtime and data loss with fast, reliable recovery of on-premises and cloud-based applications using affordable storage, minimal compute, and point-in-time recovery.
+          - paragraph [ref=f46e203]: Set up AWS Elastic Disaster Recovery on your source servers to initiate secure data replication. Your data is replicated to a staging area subnet in your AWS account, in the AWS Region you select. The staging area design reduces costs by using affordable storage and minimal compute resources to maintain ongoing replication. You can perform non-disruptive tests to confirm that implementation is complete. During normal operation, maintain readiness by monitoring replication and periodically performing non-disruptive recovery and failback drills. If you need to recover applications, you can launch recovery instances on AWS within minutes, using the most up-to-date server state or a previous point in time. After your applications are running on AWS, you can choose to keep them there, or you can initiate data replication back to your primary site when the issue is resolved. You can fail back to your primary site whenever you’re ready.
+      - generic [ref=f46e213]:
+        - heading "Use cases" [level=2] [ref=f46e216]
+        - generic [ref=f46e218]:
+          - heading [level=3] [ref=f46e220] [cursor=pointer]:
+            - button "On-premises to AWS" [ref=f46e221]
+          - heading [level=3] [ref=f46e225] [cursor=pointer]:
+            - button "Cloud to AWS" [ref=f46e226]
+          - heading [level=3] [ref=f46e230] [cursor=pointer]:
+            - button "AWS Region to AWS Region" [ref=f46e231]
+      - generic [ref=f46e243]:
+        - generic [ref=f46e244]:
+          - heading "VP Bank protects their banking systems with AWS DRS" [level=2] [ref=f46e245]
+          - paragraph [ref=f46e247]: VP Bank is harnessing the power of AWS to improve the resilience of their banking systems. They use AWS Elastic Disaster Recovery to protect 78 of their critical workloads and aim to scale to 500 as they grow. With AWS they have already achieved 48% cost savings.
+        - generic [ref=f46e253] [cursor=pointer]:
+          - button "Play:" [disabled] [ref=f46e258]
+          - img "Missing alt text value" [ref=f46e260]
+      - generic [ref=f46e269]:
+        - heading "Customers" [level=2] [ref=f46e275]
+        - generic [ref=f46e277]:
+          - link "Missing alt text value Thomson Reuters Thomson Reuters Implements Disaster Recovery for 300 Servers in Less than 10 Months on AWS" [ref=f46e281] [cursor=pointer]:
+            - /url: https://aws.amazon.com/solutions/case-studies/thomson-reuters-disaster-recovery/
+            - generic [ref=f46e284]:
+              - generic [ref=f46e286]:
+                - img "Missing alt text value" [ref=f46e288]
+                - heading "Thomson Reuters" [level=3] [ref=f46e289]
+              - generic [ref=f46e290]: Thomson Reuters Implements Disaster Recovery for 300 Servers in Less than 10 Months on AWS
+          - link "Missing alt text value Tyler Technologies Tyler Technologies Recovers Mission-Critical Workloads 12x Faster Using AWS Elastic Disaster Recovery" [ref=f46e300] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=4hELMVNG1kY
+            - generic [ref=f46e303]:
+              - generic [ref=f46e305]:
+                - img "Missing alt text value" [ref=f46e307]
+                - heading "Tyler Technologies" [level=3] [ref=f46e308]
+              - generic [ref=f46e309]: Tyler Technologies Recovers Mission-Critical Workloads 12x Faster Using AWS Elastic Disaster Recovery
+          - link "Missing alt text value Olli Salumeria Olli Salumeria Saves 80% on Disaster Recovery for SAP ERP Infrastructure Using AWS" [ref=f46e319] [cursor=pointer]:
+            - /url: https://d1.awsstatic.com/product-marketing/elastic-disaster-recovery/Case-Study-Olli%20Salumeria-RSystems-AWS-DRS.pdf
+            - generic [ref=f46e322]:
+              - generic [ref=f46e324]:
+                - img "Missing alt text value" [ref=f46e326]
+                - heading "Olli Salumeria" [level=3] [ref=f46e327]
+              - generic [ref=f46e328]: Olli Salumeria Saves 80% on Disaster Recovery for SAP ERP Infrastructure Using AWS
+          - link "Missing alt text value Southeast Iowa Regional Medical Center Southeast Iowa Regional Medical Center Uses AWS to Improve Recovery Times by 67%" [ref=f46e338] [cursor=pointer]:
+            - /url: https://d1.awsstatic.com/southeast-iowa-regional-medical-center-case-study.pdf
+            - generic [ref=f46e341]:
+              - generic [ref=f46e343]:
+                - img "Missing alt text value" [ref=f46e345]
+                - heading "Southeast Iowa Regional Medical Center" [level=3] [ref=f46e346]
+              - generic [ref=f46e347]: Southeast Iowa Regional Medical Center Uses AWS to Improve Recovery Times by 67%
+      - generic [ref=f46e361]:
+        - heading "Next steps" [level=2] [ref=f46e367]
+        - generic [ref=f46e368]:
+          - link "Start replicating your servers to AWS Sign in to your account" [ref=f46e371] [cursor=pointer]:
+            - /url: https://console.aws.amazon.com/drs/home
+            - generic [ref=f46e374]:
+              - heading "Start replicating your servers to AWS" [level=3] [ref=f46e376]
+              - generic [ref=f46e377]: Sign in to your account
+          - link "Discover how to reduce costs with AWS as your recovery site Visit the pricing page" [ref=f46e385] [cursor=pointer]:
+            - /url: /disaster-recovery/pricing/
+            - generic [ref=f46e388]:
+              - heading "Discover how to reduce costs with AWS as your recovery site" [level=3] [ref=f46e390]
+              - generic [ref=f46e391]: Visit the pricing page
+          - link "Learn how to set up and operate AWS Elastic Disaster Recovery Take the free training" [ref=f46e399] [cursor=pointer]:
+            - /url: https://explore.skillbuilder.aws/learn/course/external/view/elearning/11123/aws-elastic-disaster-recovery-a-technical-introduction
+            - generic [ref=f46e402]:
+              - heading "Learn how to set up and operate AWS Elastic Disaster Recovery" [level=3] [ref=f46e404]
+              - generic [ref=f46e405]: Take the free training
+  - contentinfo [ref=f46e416]:
+    - generic [ref=f46e423]:
+      - button "Create an AWS account" [ref=f46e425] [cursor=pointer]
+      - generic [ref=f46e427]:
+        - heading [level=3] [ref=f46e429] [cursor=pointer]:
+          - button "Learn" [ref=f46e430]
+        - heading [level=3] [ref=f46e434] [cursor=pointer]:
+          - button "Resources" [ref=f46e435]
+        - heading [level=3] [ref=f46e439] [cursor=pointer]:
+          - button "Developers" [ref=f46e440]
+        - heading [level=3] [ref=f46e444] [cursor=pointer]:
+          - button "Help" [ref=f46e445]
+      - button "English" [ref=f46e449] [cursor=pointer]
+      - button [ref=f46e452] [cursor=pointer]
+      - generic [ref=f46e455]: Amazon is an equal opportunity employer and does not discriminate on the basis of protected veteran status, disability or other legally protected status. Veterans, military spouses, and people with disabilities are encouraged to apply.
+      - generic [ref=f46e458]:
+        - link "X" [ref=f46e459] [cursor=pointer]:
+          - /url: https://x.com/awscloud
+        - link "Facebook" [ref=f46e462] [cursor=pointer]:
+          - /url: https://www.facebook.com/amazonwebservices
+        - link "Linkedin" [ref=f46e465] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/amazon-web-services/
+        - link "Instagram" [ref=f46e468] [cursor=pointer]:
+          - /url: https://www.instagram.com/amazonwebservices/
+        - link "Twitch" [ref=f46e471] [cursor=pointer]:
+          - /url: https://www.twitch.tv/aws
+        - link "Youtube" [ref=f46e474] [cursor=pointer]:
+          - /url: https://www.youtube.com/user/AmazonWebServices/Cloud/
+        - link "Podcasts" [ref=f46e477] [cursor=pointer]:
+          - /url: /podcasts/?nc1=f_cc
+        - link "Email" [ref=f46e480] [cursor=pointer]:
+          - /url: /preferences/email/manage?nc1=f_icon
+      - generic [ref=f46e483]:
+        - list [ref=f46e484]:
+          - listitem [ref=f46e485]:
+            - link "Privacy" [ref=f46e486] [cursor=pointer]:
+              - /url: /privacy/?nc1=f_pr
+          - listitem [ref=f46e487]:
+            - link "Site terms" [ref=f46e488] [cursor=pointer]:
+              - /url: /terms/?nc1=f_pr
+          - listitem [ref=f46e489]:
+            - link "Cookie Preferences" [ref=f46e490] [cursor=pointer]:
+              - /url: /disaster-recovery/
+        - generic [ref=f46e491]: © 2026, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+  - generic:
+    - group "Page tools" [ref=f46e493]:
+      - generic "Explainer" [ref=f46e496] [cursor=pointer]:
+        - checkbox "Explainer"
+    - region:
+      - generic [ref=f46e500]:
+        - button "Hi, I can connect you with an AWS representative or answer questions you have on AWS. Close notification" [ref=f46e501] [cursor=pointer]:
+          - generic [ref=f46e506]: Hi, I can connect you with an AWS representative or answer questions you have on AWS.
+          - button "Close notification" [ref=f46e507]
+        - button "Need more info? Highlight any text to get an explanation generated with AWS generative AI. Close notification" [ref=f46e511] [cursor=pointer]:
+          - generic [ref=f46e516]: Need more info? Highlight any text to get an explanation generated with AWS generative AI.
+          - button "Close notification" [ref=f46e517]
+      - button "Ask a Question" [ref=f46e521] [cursor=pointer]:
+        - img "Ask a Question" [ref=f46e522]
+        - generic "2 messages" [ref=f46e523]: "2"

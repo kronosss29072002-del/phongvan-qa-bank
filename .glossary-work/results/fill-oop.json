@@ -1,0 +1,385 @@
+{
+  "entries": [
+    {
+      "term": "Factory Method (factory pattern)",
+      "aliases": [
+        "Factory Method",
+        "simple factory"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Code mới vay trực tiếp `new PaypalGateway()` rải khắp service; đổi sang Stripe là sửa từng chỗ, vài tháng sau còn hai nhà cung cấp song song thì mỗi nơi phải tự quyết định dùng loại nào.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Interpose một method/class nhận tham số hoặc config, trả về instance interface; nơi gọi chỉ biết interface. Việc chọn class cụ thể dồn về một điểm, thêm loại mới không đụng code client.",
+      "related": [
+        "SOLID",
+        "Singleton",
+        "DTO (Data Transfer Object) & mapping",
+        "Abstract Factory pattern"
+      ]
+    },
+    {
+      "term": "Builder pattern (fluent builder)",
+      "aliases": [
+        "fluent builder",
+        "builder"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Constructor nhận 8-12 tham số positional: gọi sai thứ tự không lỗi biên dịch, mỗi lần thêm field phải mở lại mọi call site; hai đối tượng chỉ khác vài field thì phải viết hai constructor.",
+      "origin": "Không rõ tác giả; form hiện đại phổ biến từ Joshua Bloch, 'Effective Java' (2001).",
+      "how": "Builder giữ từng trường qua method riêng trả về this, method build() check ràng buộc rồi tạo đối tượng bất biến; chuỗi gọi đọc như câu khai báo. Cách tham số theo tên, thêm field chỉ sửa builder.",
+      "related": [
+        "Factory Method (factory pattern)",
+        "Singleton",
+        "SOLID"
+      ]
+    },
+    {
+      "term": "Adapter pattern (wrapper interface)",
+      "aliases": [
+        "adapter",
+        "wrapper",
+        "adapter pattern",
+        "interface adapter"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Service của bạn gọi interface `PaymentGateway` nhưng SDK bên thứ ba expose API khác hẳn; viết code gọi SDK trực tiếp lẫn vào domain, đổi nhà cung cấp lại phải dọn đống logic cũ.",
+      "origin": "Gang of Four, 'Design Patterns' (1994); tên gọi bắt nguồn từ adapter điện tử.",
+      "how": "Adapter bọc đối tượng ngoài, implement interface mong muốn và dịch lời gọi sang API thật; client chỉ biết interface của mình. Đổi SDK chỉ thay một adapter, phần còn lại bất động.",
+      "related": [
+        "SOLID",
+        "Hexagonal Architecture / Ports & Adapters",
+        "Factory Method (factory pattern)"
+      ]
+    },
+    {
+      "term": "Decorator pattern (wrapper, thêm hành vi)",
+      "aliases": [
+        "decorator",
+        "wrapper",
+        "decorator pattern",
+        "wrapper pattern"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Muốn thêm logging, gzip, rate limit cho từng handler mà không sửa code gốc; kế thừa tạo ra lớp `GzipLoggingRateLimitedHandler` mỗi lần tổ hợp tính năng, vài tính năng là một rừng subclass.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Decorator giữ một tham chiếu cùng interface, chèn xử lý trước/sau rồi delegate cho đối tượng bên trong; các decorator xếp tầng, thứ tự quyết định luồng. Tổ hợp tính năng bằng cách bọc, không sinh lớp mới.",
+      "related": [
+        "Proxy pattern (lazy/remote/protection)",
+        "Chain of Responsibility",
+        "SOLID"
+      ]
+    },
+    {
+      "term": "Facade pattern (mặt tiền)",
+      "aliases": [
+        "facade",
+        "mặt tiền"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Một nghiệp vụ kéo theo 5-6 đối tượng phải gọi đúng thứ tự: mở file, đọc header, decode, validate, ghi log; trình tự này nằm rải ở nhiều call site, đổi thứ bước là sửa khắp nơi.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Facade gom chuỗi tương tác với hệ con vào một method duy nhất; call site gọi đúng một chỗ. Hệ con vẫn dùng trực tiếp được khi cần, facade chỉ là lối vào rút gọn cho thao tác phổ biến.",
+      "related": [
+        "Composition over Inheritance & Law of Demeter",
+        "Tight vs Loose Coupling",
+        "Repository & DAO pattern"
+      ]
+    },
+    {
+      "term": "Observer pattern (event listener)",
+      "aliases": [
+        "observer",
+        "event listener",
+        "publish-subscribe (trong process)"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Sau khi order được tạo, service phải email, đếm metric, sync CRM; thêm hành động nữa là sửa luôn code tạo order, service ngày càng ôm thêm trách nhiệm không liên quan.",
+      "origin": "Gang of Four, 'Design Patterns' (1994); cơ chế listener có gốc từ mô hình MVC những năm 1980.",
+      "how": "Subject (OrderService) expose subscribe(event, handler), khi sự kiện xảy ra notify danh sách listener đã đăng ký; subject không biết listener làm gì. Thêm tác dụng phụ bằng cách đăng ký thêm listener, không sửa code gốc.",
+      "related": [
+        "Event-driven architecture",
+        "Event Bus",
+        "Pub/Sub",
+        "Tight vs Loose Coupling"
+      ]
+    },
+    {
+      "term": "Strategy pattern",
+      "aliases": [
+        "strategy"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "if/else về thuật toán (nén, mã hóa, xếp hàng, giảm giá) lan tràn trong method: thêm thuật toán phải sửa mọi nhánh, test từng nhánh cần dựng full object, đổi chiến lược lúc runtime bất khả thi.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Mỗi thuật toán thành class implement một interface; context nhận strategy qua constructor hoặc setter và delegate. Chọn lúc runtime nhờ config hoặc factory, thêm thuật toán là thêm class, không đụng context.",
+      "related": [
+        "Factory Method (factory pattern)",
+        "Chain of Responsibility",
+        "State pattern"
+      ]
+    },
+    {
+      "term": "State pattern",
+      "aliases": [
+        "state",
+        "máy trạng thái"
+      ],
+      "level": "advanced",
+      "domain": "OOP & Design Patterns",
+      "problem": "Đối tượng (đơn hàng, pipeline, connection) đổi hành vi theo trạng thái; code if/else theo status phình to mỗi lần thêm trạng thái, chuyển trạng thái vô hiệu (đã hủy mà vẫn ship) không có chỗ bắt.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Mỗi trạng thái thành class implement interface chung; context giữ con trỏ state hiện tại và delegate mọi hành vi, transition làm thay state. Luật chuyển trạng thái nằm trong từng class state thay vì rải trong method.",
+      "related": [
+        "Strategy pattern",
+        "Deadlock",
+        "CQRS"
+      ]
+    },
+    {
+      "term": "Command pattern (command object)",
+      "aliases": [
+        "command"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Thao tác (disable user, cancel order) cần chạy lại sau, hoãn, xếp hàng hoặc undo; gọi method trực tiếp thì không có gì để lưu lại, vài chỗ cần thực thi chung một logic nhưng phải copy code.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Đóng gói thao tác thành object có execute() (và undo() nếu cần), invoke thông qua executor; command có thể được queue, serialize, log, retry như dữ liệu thường.",
+      "related": [
+        "Message queue",
+        "Transactional outbox",
+        "Retry"
+      ]
+    },
+    {
+      "term": "Template Method pattern",
+      "aliases": [
+        "template method"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Nhiều flow (import CSV/JSON, build query khác nhau) giống nhau về khung: mở, từng dòng, đóng; mỗi nơi viết lại toàn bộ khung, sửa bước chung phải sửa N bản copy.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Base class định nghĩa skeleton trong method final, các bước biến thiên là hook method; subclass override từng hook mà không đụng khung. Khung được giữ một chỗ, thay đổi cấu trúc flow không phá code con.",
+      "related": [
+        "Strategy pattern",
+        "SOLID",
+        "Factory Method (factory pattern)"
+      ]
+    },
+    {
+      "term": "Mediator pattern",
+      "aliases": [
+        "mediator"
+      ],
+      "level": "advanced",
+      "domain": "OOP & Design Patterns",
+      "problem": "Các bean gọi trực tiếp lẫn nhau: A đổi status phải gọi B, B gọi C, C gọi A trở lại; 6 đối tượng tạo tới 15 cạnh phụ thuộc, thêm đối tượng không biết phải nối vào ai.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Mọi giao tiếp đi qua một mediator duy nhất; các colleague chỉ biết mediator, không biết nhau. Đồ thị phụ thuộc N² co lại còn N+1, thêm đối tượng chỉ cần khai báo với mediator.",
+      "related": [
+        "Tight vs Loose Coupling",
+        "Observer pattern (event listener)",
+        "Event-driven architecture"
+      ]
+    },
+    {
+      "term": "Composite pattern (cây đối tượng)",
+      "aliases": [
+        "composite"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Cấu trúc cây (menu, category, phòng ban, biểu mẫu lồng nhau) mà leaf và nhánh phải xử lý đồng nhất (render, tính tổng, tìm kiếm); code if leaf else branch rải khắp, thêm loại nút phải sửa mọi nơi duyệt cây.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Leaf và composite cùng implement một interface cho phép thao tác; composite chứa list con và delegate, có thể hỗ trợ parent pointer để duyệt ngược. Client gọi một interface cho cả hai, không phân biệt nút.",
+      "related": [
+        "Facade pattern (mặt tiền)",
+        "Command pattern (command object)"
+      ]
+    },
+    {
+      "term": "Proxy pattern (lazy/remote/protection)",
+      "aliases": [
+        "proxy"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Đối tượng nặng (connection thật, model lớn, service remote) được dựng sớm lãng phí, hoặc một số caller không đủ quyền nhưng vẫn truy cập method; rải check quyền và lazy-load vào code nghiệp vụ làm nó dày lên.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Proxy giữ cùng interface như đối tượng đích, quyết định khi nào dựng (lazy), ủy quyền qua mạng (remote) hoặc chặn trước khi gọi (protection); client không biết mình đang nói với proxy.",
+      "related": [
+        "Decorator pattern (wrapper, thêm hành vi)",
+        "Proxy (forward/reverse)",
+        "RBAC"
+      ]
+    },
+    {
+      "term": "Null Object pattern",
+      "aliases": [
+        "nil object"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Hàm trả về null khi không tìm thấy kết quả; từng người gọi phải `if (x == null)` trước khi gọi method, quên một chỗ là NullPointerException vào đúng giờ cao điểm, exception không nói rõ nghiệp vụ nào thiếu.",
+      "origin": "Bobby Woolf đặt tên trong 'Pattern Languages of Program Design 3' (1997).",
+      "how": "Định nghĩa một object no-op implement cùng interface, trả về nó thay vì null; client gọi method bình thường, hành vi mặc định (rỗng, không làm gì) chạy âm thầm. Chỗ nào null thực sự là lỗi cần fail nhanh thì giữ null.",
+      "related": [
+        "Strategy pattern",
+        "Proxy pattern (lazy/remote/protection)"
+      ]
+    },
+    {
+      "term": "Chain of Responsibility",
+      "aliases": [
+        "chain of responsibility",
+        "middleware pipeline",
+        "interceptor chain"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Auth, log, rate limit, parse, validate chất đống trong từng handler hoặc một method khổng lồ; thêm bước lọc phải sửa mọi endpoint, tắt một bước theo environment phải viết if rải khắp.",
+      "origin": "Gang of Four, 'Design Patterns' (1994); hình thái pipeline phổ biến trong middleware web.",
+      "how": "Mỗi bước là một handler giữ tham chiếu handler kế tiếp; request đi qua chuỗi, handler xử lý phần của nó rồi quyết định chuyển tiếp (hoặc chặn ở giữa pipeline). Thêm, bỏ, đổi thứ tự bước không đụng endpoint.",
+      "related": [
+        "Strategy pattern",
+        "Decorator pattern (wrapper, thêm hành vi)"
+      ]
+    },
+    {
+      "term": "Repository & DAO pattern",
+      "aliases": [
+        "repository",
+        "DAO",
+        "data access object"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Query SQL rải trong service, đổi ORM hay đổi schema là sửa từng chỗ; test service phải dựng DB thật, vì logic lưu trữ không tách khỏi logic nghiệp vụ.",
+      "origin": "Repository phổ biến qua Eric Evans 'Domain-Driven Design' (2003) và Martin Fowler 'P of EAA' (2002); DAO xuất hiện sớm hơn trong Core J2EE Patterns (2001).",
+      "how": "Repository tập trung toàn bộ truy cập dữ liệu của một aggregate vào một lớp, expose method theo ngôn ngữ nghiệp vụ (findByEmail thay vì SELECT...WHERE); service gọi repository, test thay repository bằng in-memory hoặc mock.",
+      "related": [
+        "ORM",
+        "Unit of Work",
+        "N+1 query",
+        "test isolation"
+      ]
+    },
+    {
+      "term": "Unit of Work",
+      "aliases": [
+        "unit of work",
+        "đơn vị công việc"
+      ],
+      "level": "advanced",
+      "domain": "OOP & Design Patterns",
+      "problem": "Một request sửa 5 entity, mỗi chỗ tự flush/create một transaction riêng; request giữa chừng fail thì vài thay đổi đã commit, vài cái chưa, DB rơi vào trạng thái lai không ai tái hiện được.",
+      "origin": "Martin Fowler, 'Patterns of Enterprise Application Architecture' (2002); ý tưởng có từ Unit of Work của Unit-of-Work trong Smalltalk (và chuẩn hóa bởi Fowler)",
+      "how": "Unit of Work gom mọi thay đổi vào một scope, commit tất cả trong một transaction khi kết thúc; thay đổi ghi nhận dưới dạng dirty list để flush đúng phần thực sự đổi. Toàn bộ request hoặc thành công hoặc rollback sạch.",
+      "related": [
+        "Repository & DAO pattern",
+        "Transaction",
+        "BEGIN/COMMIT/ROLLBACK"
+      ]
+    },
+    {
+      "term": "Dependency Injection (DI) & IoC container",
+      "aliases": [
+        "dependency injection",
+        "Dependency Injection",
+        "inversion of control",
+        "IoC container",
+        "DI"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Service tự `new` dependency bên trong constructor, muốn đổi implementation hay thêm mock phải sửa chính service; 60 class phụ thuộc chồng nhau thì việc lắp ráp object thành một mớ code thủ công ở mọi nơi.",
+      "origin": "Khái niệm IoC xuất hiện trong cộng đồng Java những năm 1990; Martin Fowler đặt tên 'Inversion of Control' và phân biệt với DI trong bài 'Inversion of Control Containers and the Dependency Injection pattern' (2004).",
+      "how": "DI đảo chiều: dependency được truyền từ ngoài vào (constructor hoặc setter), class không tự kiếm; IoC container giữ registry và lắp ráp object theo khai báo, có thể cấu hình singleton hay scope theo request.",
+      "related": [
+        "Tight vs Loose Coupling",
+        "test isolation",
+        "SOLID"
+      ]
+    },
+    {
+      "term": "Active Record vs Data Mapper",
+      "aliases": [
+        "active record",
+        "data mapper"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Mỗi ORM chọn một chiều trộn logic: để object tự lưu mình thì code nghiệp vụ dính lưu trữ; tách mapper riêng thì thao tác đơn giản phải viết dài. Không hiểu mình đang dùng loại nào dẫn tới lạm dụng sai chỗ.",
+      "origin": "Martin Fowler, 'Patterns of Enterprise Application Architecture' (2002); thuật ngữ Active Record lấy từ phần Active Record trong Rails.",
+      "how": "Active Record: class vừa là entity vừa tự biết cách CRUD (`user.save()`), nhanh cho CRUD đơn giản, domain model phụ thuộc schema. Data Mapper: entity thuần, lớp mapper riêng chuyển đổi sang/từ DB; domain độc lập schema, đổi lưu trữ không đụng model.",
+      "related": [
+        "ORM",
+        "Repository & DAO pattern",
+        "DDD (Domain-Driven Design)"
+      ]
+    },
+    {
+      "term": "DTO (Data Transfer Object) & mapping",
+      "aliases": [
+        "Data Transfer Object",
+        "DTO",
+        "mapping layer"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Entity trực tiếp làm body response: lộ password/hash và field nội bộ, tên field của DB lộ ra API, thay đổi schema lập tức làm vỡ client; mỗi endpoint tự shape response thì mỗi nơi một kiểu.",
+      "origin": "Martin Fowler, 'Patterns of Enterprise Application Architecture' (2002); khái niệm có từ lâu trong J2EE để giảm số lần gọi remote.",
+      "how": "DTO là object thuần data, tách khỏi entity, mang đúng field cần thiết cho từng contract (request/response); mapper chuyển đổi entity↔DTO tập trung ở một lớp. Đổi schema chỉ sửa mapper, API ổn định.",
+      "related": [
+        "Envelope pattern",
+        "mass assignment",
+        "API versioning (URL/header/media type)"
+      ]
+    },
+    {
+      "term": "Hexagonal Architecture / Ports & Adapters",
+      "aliases": [
+        "hexagonal architecture",
+        "ports and adapters",
+        "cổng và bộ chuyển đổi"
+      ],
+      "level": "advanced",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "App HTTP dính chặt framework: controller gọi thẳng service, service gọi thẳng repository; chạy test phải dựng cả stack web và DB, thay framework hay đổi DB là rung toàn bộ codebase.",
+      "origin": "Alistair Cockburn đề xuất 'hexagonal' khoảng 2005, mô tả trong bài Ports and Adapters.",
+      "how": "Core (domain + use case) ở giữa, giao tiếp với thế giới ngoài qua port là interface; mỗi adapter (HTTP, CLI, DB, message) implement một port tương ứng. Core không import framework, test drive use case bằng adapter giả.",
+      "related": [
+        "Bounded Context",
+        "DDD (Domain-Driven Design)",
+        "test isolation",
+        "Tight vs Loose Coupling"
+      ]
+    },
+    {
+      "term": "Composition over Inheritance & Law of Demeter",
+      "aliases": [
+        "composition over inheritance",
+        "Law of Demeter",
+        "luật Demeter"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Kế thừa sâu để tái dùng: Motorcycle kế thừa Vehicle kế thừa EngineBase, đổi một class là cả cây chịu ảnh hưởng; chuỗi gọi `a.getB().getC().doX()` làm class biết cấu trúc nội bộ của lớp khác, đổi cấu trúc vỡ hàng loạt call site.",
+      "origin": "Law of Demeter do Ian Holland và nhóm Demeter (Northeastern University) đề xuất năm 1987; 'composition over inheritance' là quy tắc lâu đời hơn trong thiết kế OO.",
+      "how": "Composition: đối tượng giữ instance của thứ mình cần (has-a) và chỉ expose hành vi riêng, thay kế thừa bằng delegate qua interface. Law of Demeter: method chỉ gọi object của nó, tham số, kết quả trả về và field của nó; chuỗi gọi xa được cắt bằng cách thêm method có ngữ nghĩa ở đúng lớp sở hữu dữ liệu.",
+      "related": [
+        "SOLID",
+        "Facade pattern (mặt tiền)",
+        "Adapter pattern (wrapper interface)"
+      ]
+    }
+  ]
+}

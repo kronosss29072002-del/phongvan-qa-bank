@@ -1,0 +1,45 @@
+- generic [active] [ref=f19e1]:
+  - banner [ref=f19e2]:
+    - button "Skip to content" [ref=f19e3] [cursor=pointer]
+    - button "Accessibility Feedback" [ref=f19e6] [cursor=pointer]
+    - generic [ref=f19e9]:
+      - link [ref=f19e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Back to Bing search" [level=1] [ref=f19e11]
+      - search [ref=f19e12]:
+        - button "Search" [ref=f19e15] [cursor=pointer]
+        - searchbox "Enter your search here - Search suggestions will show as you type" [ref=f19e16]: salon no-show rate statistics booking software 2025
+        - button "Search using an image" [ref=f19e19] [cursor=pointer]
+    - complementary "Account Rewards and Preferences" [ref=f19e21]:
+      - link "Sign in" [ref=f19e22] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f19e24] [cursor=pointer]
+      - button "Mobile" [ref=f19e25] [cursor=pointer]
+    - navigation "Search Filter" [ref=f19e28]:
+      - list [ref=f19e29]:
+        - listitem [ref=f19e30]:
+          - link "All" [ref=f19e31] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f19e32]:
+          - link "Web" [ref=f19e33] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=1525a6c05cdcda5e59e25f5805c246d256e90bce213209192836e340f3e3d4c1JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXNhbG9uK25vLXNob3crcmF0ZStzdGF0aXN0aWNzK2Jvb2tpbmcrc29mdHdhcmUrMjAyNSZ3ZWJzY3A9MSZGT1JNPUhEUldTQw&ntb=1
+        - listitem [ref=f19e34]:
+          - link "Search" [ref=f19e35] [cursor=pointer]:
+            - /url: /copilotsearch?q=salon+no-show+rate+statistics+booking+software+2025&FORM=CSSCOP
+        - listitem [ref=f19e38]:
+          - link "Images" [ref=f19e39] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c8a2ef6dbea1bceaec970ef8867ae354085308a28f10d146d65e44c407b245aaJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1zYWxvbituby1zaG93K3JhdGUrc3RhdGlzdGljcytib29raW5nK3NvZnR3YXJlKzIwMjUmRk9STT1IRFJTQzI&ntb=1
+        - listitem [ref=f19e40]:
+          - link "Videos" [ref=f19e41] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=3b6b61d7ec8047a382334f6f0c60165e43500722888f1cc49885a7ad21e8d366JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT1zYWxvbituby1zaG93K3JhdGUrc3RhdGlzdGljcytib29raW5nK3NvZnR3YXJlKzIwMjUmRk9STT1IRFJTQzM&ntb=1
+        - listitem [ref=f19e42]:
+          - button [ref=f19e43] [cursor=pointer]
+  - contentinfo [ref=f19e47]:
+    - generic [ref=f19e48]:
+      - list:
+        - listitem [ref=f19e49]:
+          - link "Privacy" [ref=f19e50] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f19e51]:
+          - link "Terms" [ref=f19e52] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

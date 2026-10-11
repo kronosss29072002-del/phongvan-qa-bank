@@ -1,0 +1,561 @@
+{
+  "domain": "DEVOPS, DEPLOY & DELIVERY",
+  "entries": [
+    {
+      "term": "Continuous Integration (CI)",
+      "aliases": [
+        "CI",
+        "tích hợp liên tục",
+        "CI pipeline",
+        "continuous integration"
+      ],
+      "level": "basic",
+      "problem": "Đội 5-10 người backend mỗi người code trên nhánh riêng, vài ngày mới gộp một lần: đến lúc merge, conflict kéo dài hàng giờ, không ai biết commit nào làm hỏng build. Trước đó họ chỉ chạy test tay trên máy trước khi release, nên lỗi chỉ lộ khi đã gộp xong và đã sát ngày phát hành.",
+      "how": "Mỗi lần push, máy trung tâm tự build + chạy test trong vài phút; code không xanh thì bị chặn merge. Gộp nhỏ liên tục thay vì gộp lớn định kỳ, lỗi tìm được ngay tại commit gây ra.",
+      "origin": "Xuất xứ từ Extreme Programming (thập niên 1990); được hệ thống hóa bởi Martin Fowler (bliki Continuous Integration) và cộng đồng ThoughtWorks.",
+      "related": [
+        "CD (continuous delivery / continuous deployment)",
+        "Build artifact",
+        "trunk-based vs git flow",
+        "smoke test"
+      ]
+    },
+    {
+      "term": "CD (continuous delivery / continuous deployment)",
+      "aliases": [
+        "continuous delivery",
+        "continuous deployment",
+        "phát hành liên tục",
+        "CD pipeline"
+      ],
+      "level": "basic",
+      "problem": "Sau khi có CI, team vẫn build tay, copy file lên server, chạy migration tay trước mỗi lần phát hành; mỗi release là một sự kiện căng thẳng cuối tuần. Vì deploy khó nên họ chỉ release vài tuần một lần, gom cả đống thay đổi rủi ro vào cùng lúc.",
+      "how": "CD tự động hóa mọi bước sau CI (test end-to-end, đóng gói, deploy) để build luôn ở trạng thái có thể phát hành bất kỳ lúc nào; continuous deployment còn push thẳng thay đổi pass test lên production, không cần người bấm nút.",
+      "origin": "Dave Farley & Jez Humble, cuốn Continuous Delivery (Addison-Wesley, 2010).",
+      "related": [
+        "Continuous Integration (CI)",
+        "Release vs deploy",
+        "Build artifact",
+        "smoke test",
+        "Zero-downtime deploy (rolling deploy)"
+      ]
+    },
+    {
+      "term": "Build artifact",
+      "aliases": [
+        "artifact",
+        "tệp đóng gói build",
+        "bản build"
+      ],
+      "level": "basic",
+      "problem": "Mỗi môi trường tự build lại từ source: dev build với dependency bản mới, prod build với dependency bản cũ nên 'chạy được trên dev, lỗi trên prod'. Không có thứ gì để truy vết 'commit nào, build nào đang chạy trên production'.",
+      "how": "Build đúng 1 lần, đóng gói thành artifact bất biến (jar, npm tarball, docker image) kèm version + hash; mọi môi trường dùng đúng artifact đó, chỉ khác config. Muốn biết prod chạy gì thì xem version artifact.",
+      "origin": "không rõ",
+      "related": [
+        "CD (continuous delivery / continuous deployment)",
+        "Container (Docker, container image)",
+        "Immutable infrastructure",
+        "Rollback"
+      ]
+    },
+    {
+      "term": "Environment (dev / staging / prod)",
+      "aliases": [
+        "môi trường",
+        "dev/staging/prod",
+        "pre-prod"
+      ],
+      "level": "basic",
+      "problem": "Nhóm nhỏ lúc đầu cấu hình và test thẳng trên môi trường dùng chung, thậm chí sửa trực tiếp production để fix nhanh; hậu quả là không ai tái lập được cấu hình, test vô tình làm hỏng hệ thống thật, và dev không bao giờ giống prod.",
+      "how": "Tách thành dev (chạy nhanh, data giả), staging (giống prod) và prod (user thật); thay đổi phải đi qua các tầng này, cấu hình mỗi tầng khai báo riêng và không sửa tay ngoài quy trình.",
+      "origin": "không rõ",
+      "related": [
+        "Config management",
+        "Release vs deploy",
+        "Secrets in runtime",
+        "Rollback"
+      ]
+    },
+    {
+      "term": "Release vs deploy",
+      "aliases": [
+        "phát hành khác triển khai",
+        "deploy ≠ release"
+      ],
+      "level": "basic",
+      "problem": "Quyền 'cho user thấy tính năng' bị gắn cứng với việc deploy: muốn bật cho 10% user hay tắt khi tính năng lỗi thì phải deploy lại toàn bộ hệ thống. Vì thế hoặc là không dám tung tính năng, hoặc là phải roll back cả build chỉ vì một toggle.",
+      "how": "Tách hai việc: deploy = đưa code lên môi trường (có thể nhiều lần mỗi ngày), release = quyết định hiển thị tính năng cho user (qua feature flag). Code deployed nhưng chưa released là bình thường.",
+      "origin": "không rõ (khái niệm được cộng đồng continuous delivery và feature-flag phổ biến)",
+      "related": [
+        "Feature flag",
+        "CD (continuous delivery / continuous deployment)",
+        "Environment (dev / staging / prod)"
+      ]
+    },
+    {
+      "term": "Smoke test",
+      "aliases": [
+        "kiểm thử khói",
+        "smoke check",
+        "post-deploy check"
+      ],
+      "level": "basic",
+      "problem": "Sau deploy không ai biết hệ thống còn sống không; nếu có lỗi thì phát hiện qua... user báo 500 hàng loạt. Test đầy đủ thì quá chậm để chặn ngay release, còn không test gì thì hang release nào cũng là canh bạc.",
+      "how": "Chạy một bộ test rất nhỏ ngay sau deploy (health check, đăng nhập, 1-2 API chính); fail thì dừng hoặc rollback trước khi user gặp, pass mới chuyển lưu lượng.",
+      "origin": "Thuật ngữ gốc từ điện tử/phần cứng: 'smoke test' là lần cấp điện đầu tiên cho board mạch — có khói là hỏng; được cộng đồng CD mượn lại cho kiểm thử sau deploy (bài 'Origin of Smoke Testing' của ThoughtWorks).",
+      "related": [
+        "CD (continuous delivery / continuous deployment)",
+        "Rollback",
+        "Canary deploy"
+      ]
+    },
+    {
+      "term": "Rollback",
+      "aliases": [
+        "quay lui phiên bản",
+        "rollback về bản cũ",
+        "revert deploy"
+      ],
+      "level": "basic",
+      "problem": "Release mới gây lỗi thanh toán lúc 2h sáng; trước đó server bị sửa in-place nên muốn quay lại phải build lại version cũ, copy lên, cấu hình tay — mất hàng giờ trong đêm, user đã bị ảnh hưởng từ phút đầu.",
+      "how": "Luôn giữ artifact/version trước đó còn chạy được và chuyển lưu lượng về nó như một thao tác (đổi tag, đổi load balancer, helm rollback) — phục hồi là nút bấm, không phải dự án.",
+      "origin": "không rõ",
+      "related": [
+        "Blue-green deploy",
+        "Canary deploy",
+        "Build artifact",
+        "smoke test"
+      ]
+    },
+    {
+      "term": "Container (Docker, container image)",
+      "aliases": [
+        "Docker",
+        "container",
+        "container image",
+        "image",
+        "OCI image"
+      ],
+      "level": "basic",
+      "problem": "Code chạy ngon trên máy dev nhưng lên server production lỗi vì version Java/Python/dependency khác nhau; mỗi server cài đặt tay nên 'cùng commit, hai môi trường, hai kết quả'. Dùng VM đầy đủ thì nặng — GB disk, khởi động hàng phút, không nhanh được khi scale hàng trăm instance.",
+      "how": "Docker đóng gói ứng dụng + dependency vào unit cách ly dùng chung kernel (namespaces/cgroups của Linux); container image là snapshot read-only nhiều lớp, kéo về đâu cũng chạy giống nhau, khởi động trong vài giây.",
+      "origin": "Docker trình diễn công khai lần đầu tại PyCon ngày 15/3/2013 (Solomon Hykes, khi đó ở dotCloud); nền tảng namespace/cgroups của Linux có trước đó nhiều năm.",
+      "related": [
+        "Build artifact",
+        "Kubernetes",
+        "Immutable infrastructure",
+        "Pod"
+      ]
+    },
+    {
+      "term": "Cron job & Scheduler",
+      "aliases": [
+        "crontab",
+        "cron",
+        "job scheduler",
+        "lập lịch công việc",
+        "batch scheduler"
+      ],
+      "level": "basic",
+      "problem": "Việc lặp theo lịch (đồng bộ dữ liệu 3h sáng, gửi báo cáo hàng ngày, dọn file hết hạn) bị làm tay hoặc code ngủ `sleep()` trong tiến trình: server restart là mất job, không ai biết job nào đã/chưa chạy, lỗi chạy âm thầm hàng tháng mới phát hiện.",
+      "how": "Tách 'lịch' ra khỏi 'việc': crontab 5 trường (phút/giờ/ngày/tháng/thứ) + daemon tự đánh thức đúng lúc; scheduler cấp cao hơn (Quartz, Celery beat, Kubernetes CronJob) thêm retry, chống chạy trùng, giám sát.",
+      "origin": "cron có từ Unix thập niên 1970 ở Bell Labs; định dạng crontab 5 trường chuẩn hóa quanh Unix Version 7 (1979).",
+      "related": [
+        "Process manager (systemd, PM2, Supervisor)",
+        "scheduler trong Kubernetes (CronJob)",
+        "SRE vs DevOps"
+      ]
+    },
+    {
+      "term": "Process manager (systemd, PM2, Supervisor)",
+      "aliases": [
+        "systemd",
+        "init system",
+        "PM2",
+        "Supervisor",
+        "upstart",
+        "quản lý tiến trình"
+      ],
+      "level": "basic",
+      "problem": "Ứng dụng chạy nền bằng `node app.js &` hay nohup: crash lúc 3h sáng thì im lặng, không tự khởi động lại, log rải rác, và server reboot xong thì cả hệ thống nằm im cho tới khi có người SSH vào vá lại từng tiến trình.",
+      "how": "Process manager giữ tiến trình sống (respawn khi crash), quản lý start/stop/restart, gom log, và đăng ký khởi động cùng hệ điều hành. systemd đảm nhận vai trò PID 1 cho services trên Linux; PM2/Supervisor làm việc tương tự ở cấp ứng dụng.",
+      "origin": "systemd do Lennart Poettering công bố năm 2010 để thay SysV init; Supervisor (Python) và PM2 (Node) ra đời cho cấp ứng dụng web.",
+      "related": [
+        "Cron job & Scheduler",
+        "Zero-downtime deploy (rolling deploy)",
+        "SRE vs DevOps"
+      ]
+    },
+    {
+      "term": "Kubernetes",
+      "aliases": [
+        "K8s",
+        "kubernetes cluster",
+        "orchestrator container",
+        "CronJob"
+      ],
+      "level": "intermediate",
+      "problem": "Sau khi có container, team deploy hàng chục service lên vài chục server bằng script tay: server chết thì service chết luôn, muốn thêm instance phải tự cấu hình load balancer, upgrade thì chạy script từng máy. Quy mô tăng từ 5 lên 50 service thì cách này vỡ hoàn toàn và chỉ vài người thuộc lòng server.",
+      "how": "Khai báo mong muốn ('cần 3 bản sao của service này') dưới dạng API; control plane tự đối chiếu hiện trạng với mong muốn — schedule pod lên node phù hợp, khởi động lại khi chết, scale — con người lo việc khai báo, máy lo việc giữ đúng.",
+      "origin": "Google công bố open-source tháng 8/2014, rút ra từ kinh nghiệm hệ thống nội bộ Borg; chuyển giao cho CNCF năm 2015.",
+      "related": [
+        "Pod",
+        "Deployment & Replica (ReplicaSet)",
+        "Service & Ingress (mạng Kubernetes)",
+        "HPA (Horizontal Pod Autoscaler)",
+        "Helm",
+        "Container (Docker, container image)"
+      ]
+    },
+    {
+      "term": "Pod",
+      "aliases": [
+        "kubernetes pod",
+        "đơn vị nhỏ nhất K8s"
+      ],
+      "level": "intermediate",
+      "problem": "Container thuần túy chỉ là 1 process cách ly — orchestrator không biết 'một bộ ứng dụng' gồm nhiều container (app + log agent + proxy) nào thì nên nằm cùng nhau, cũng không biết cấp IP ra sao khi chúng phải nói chuyện nội bộ qua localhost.",
+      "how": "Pod là đơn vị nhỏ nhất Kubernetes schedule: 1 container (thường) hoặc vài container chung network namespace, IP và volume, luôn sống cùng node; thay vì sửa đổi, ta kill và tạo pod mới.",
+      "origin": "Là primitive gốc của Kubernetes (Google, 2014).",
+      "related": [
+        "Kubernetes",
+        "Deployment & Replica (ReplicaSet)",
+        "Sidecar",
+        "Container (Docker, container image)"
+      ]
+    },
+    {
+      "term": "Deployment & Replica (ReplicaSet)",
+      "aliases": [
+        "Deployment",
+        "ReplicaSet",
+        "replicas",
+        "bản sao",
+        "replication"
+      ],
+      "level": "intermediate",
+      "problem": "Cần 3 bản sao service để chịu tải nên người ta tự nhân process trên 3 máy bằng script: khi 1 bản chết không ai khởi động lại, và mỗi lần upgrade là stop/start tay từng cái — có lúc traffic chạm cả version cũ lẫn mới cùng lúc, dữ liệu lẫn lộn.",
+      "how": "Deployment khai báo số replica mong muốn; ReplicaSet giữ đúng số đó (tạo pod mới khi có pod chết), Deployment thêm chiến lược rollout (tạo bản mới, health check, thay dần, giữ bản cũ để dừng khi fail) — upgrade không làm mất bản đang serve.",
+      "origin": "ReplicaSet (trước đó là ReplicationController) và Deployment là API gốc của Kubernetes từ các version đầu.",
+      "related": [
+        "Kubernetes",
+        "Pod",
+        "HPA (Horizontal Pod Autoscaler)",
+        "rolling deploy / zero-downtime",
+        "Blue-green deploy"
+      ]
+    },
+    {
+      "term": "Service & Ingress (mạng Kubernetes)",
+      "aliases": [
+        "Service (ClusterIP/NodePort/LoadBalancer)",
+        "Ingress",
+        "Ingress controller",
+        "mạng trong cluster"
+      ],
+      "level": "intermediate",
+      "problem": "Pod restart là đổi IP ngay nên client ghi IP cứng thì hỏng sau lần scale đầu tiên. Song song đó, mỗi service muốn ra internet lại phải mở port/load balancer riêng và khai báo domain tay — số service tăng thì việc quản lý đường vào rối không kiểm soát.",
+      "how": "Service tạo IP ảo ổn định và load balance tới nhóm pod theo label (qua kube-proxy/IPVS); Ingress là tầng L7 trước Service, route theo host/path, gom TLS một chỗ — một cổng vào duy nhất cho nhiều service.",
+      "origin": "Đều là API gốc của Kubernetes; Ingress controller phổ biến (nginx, Traefik) do cộng đồng triển khai.",
+      "related": [
+        "Kubernetes",
+        "Pod",
+        "Deployment & Replica (ReplicaSet)",
+        "HPA (Horizontal Pod Autoscaler)"
+      ]
+    },
+    {
+      "term": "Infrastructure as Code (Terraform, Pulumi)",
+      "aliases": [
+        "IaC",
+        "hạ tầng như mã",
+        "Terraform",
+        "Pulumi"
+      ],
+      "level": "intermediate",
+      "problem": "Nhấn 'tạo server' trên console cloud rồi quên ghi lại; 6 tháng sau dựng lại môi trường staging thì thiếu firewall rule, thiếu subnet, không ai giải thích được hạ tầng đang có gì. Hạ tầng không nằm trong git nên không diff được, không review được, không reproduce được.",
+      "how": "Mô tả hạ tầng bằng file code và thay đổi qua quy trình git: Terraform dùng HCL declarative với `plan` trước khi `apply`; Pulumi dùng TypeScript/Python/Golang thật. Môi trường dựng lại được từ 0, thay đổi ai sửa cũng trace được.",
+      "origin": "Terraform ra mắt bản 0.1 tháng 7/2014 (HashiCorp, Mitchell Hashimoto); Pulumi Corporation thành lập năm 2017 (Joe Duffy & Eric Rudder); gốc khái niệm đi từ configuration management.",
+      "related": [
+        "Config management",
+        "Immutable infrastructure",
+        "GitOps",
+        "Environment (dev / staging / prod)"
+      ]
+    },
+    {
+      "term": "Config management",
+      "aliases": [
+        "quản lý cấu hình",
+        "Puppet",
+        "Chef",
+        "Ansible",
+        "CFEngine",
+        "cấu hình như code"
+      ],
+      "level": "intermediate",
+      "problem": "Mỗi server cấu hình tay: đổi cấu hình nginx thì server A được cập nhật, server B quên; dần dần production và staging lệch nhau tới mức 'bug chỉ reproduce được trên staging'. Không ai trả lời được câu 'cấu hình nào đang thực sự chạy trên máy đó'.",
+      "how": "Đặt cấu hình thành code và áp dụng idempotent, đồng nhất lên mọi node (Puppet/Chef/Ansible/Salt): chạy lại không làm hỏng, cấu hình thay đổi đi qua git, server tự converge về trạng thái khai báo.",
+      "origin": "CFEngine (Mark Burgess) năm 1993 đi trước; Puppet của Luke Kanies ra mắt 2005; Chef năm 2009; Ansible của Michael DeHaan năm 2012.",
+      "related": [
+        "Infrastructure as Code (Terraform, Pulumi)",
+        "Environment (dev / staging / prod)",
+        "Secrets in runtime",
+        "Immutable infrastructure"
+      ]
+    },
+    {
+      "term": "Secrets in runtime",
+      "aliases": [
+        "quản lý secret",
+        "runtime secrets",
+        "Vault",
+        "secrets manager",
+        "bí mật khi chạy"
+      ],
+      "level": "intermediate",
+      "problem": "Đội để API key trong file .env và commit vào repo (hoặc hardcode trong code); key lộ thì không ai chắc key nào đang nằm ở server nào để thu hồi. Secret nằm trong git là secret đã chết, còn secret copy tay ra 10 server thì không rotate được.",
+      "how": "Secret tách khỏi code và khỏi cấu hình tĩnh: nạp lúc runtime từ nguồn tập trung (HashiCorp Vault, AWS Secrets Manager, Kubernetes Secret), phân quyền theo service, ghi log redaction, rotate được mà không cần deploy lại toàn bộ.",
+      "origin": "HashiCorp Vault ra mắt năm 2015; Kubernetes Secret có từ các version đầu; secret store quản lý của cloud (AWS Secrets Manager, Azure Key Vault) xuất hiện sau đó.",
+      "related": [
+        "Config management",
+        "Environment (dev / staging / prod)",
+        "GitOps",
+        "secrets không vào code"
+      ]
+    },
+    {
+      "term": "Helm",
+      "aliases": [
+        "Helm chart",
+        "chart",
+        "package manager cho Kubernetes"
+      ],
+      "level": "intermediate",
+      "problem": "Deploy một app lên Kubernetes phải chuyền tay 10 file YAML (Deployment, Service, ConfigMap, Ingress...); đổi port hay image tag là sửa 10 chỗ, và không có khái niệm 'bản 1.4.2 của bộ manifest này' để promote qua các môi trường hay rollback theo version.",
+      "how": "Helm đóng gói manifest thành chart có version, tham số hóa bằng values.yaml theo môi trường, rồi `install`/`upgrade`/`rollback` một lệnh — apt/npm cho Kubernetes, quản lý được vòng đời (values, history, rollback).",
+      "origin": "Bắt đầu năm 2015 tại Deis ('Helm Classic', ra mắt ở KubeCon đầu tiên); tháng 1/2016 sáp nhập với Kubernetes Deployment Manager của Google; hiện là dự án CNCF graduated.",
+      "related": [
+        "Kubernetes",
+        "GitOps",
+        "Deployment & Replica (ReplicaSet)",
+        "Rollback"
+      ]
+    },
+    {
+      "term": "Zero-downtime deploy (rolling deploy)",
+      "aliases": [
+        "rolling deploy",
+        "rolling update",
+        "triển khai không downtime",
+        "zero downtime"
+      ],
+      "level": "intermediate",
+      "problem": "Mỗi lần deploy là dừng process vài chục giây: request giữa chừng bị drop, user đang tải trang thấy 502. Đau như vậy nên team gom code và release vào cuối tuần — càng ít lần deploy thì càng nhiều thay đổi dồn vào một lần, rủi ro tăng theo.",
+      "how": "Không bao giờ dừng toàn bộ: rolling deploy giữ N bản cũ đang serve, khởi động bản mới bên cạnh, chuyển traffic dần sau khi health check xanh, lặp tới hết — request luôn có nơi trả lời, downtime về 0.",
+      "origin": "không rõ (khái niệm lan rộng cùng continuous delivery; trong Kubernetes, rolling update là chiến lược mặc định của Deployment)",
+      "related": [
+        "Deployment & Replica (ReplicaSet)",
+        "Blue-green deploy",
+        "Canary deploy",
+        "CD (continuous delivery / continuous deployment)"
+      ]
+    },
+    {
+      "term": "Blue-green deploy",
+      "aliases": [
+        "blue/green",
+        "hai môi trường xanh chín",
+        "swap môi trường"
+      ],
+      "level": "intermediate",
+      "problem": "Rolling để hai phiên bản cùng xử lý lưu lượng; với migration database hay cấu hình không tương thích hai chiều thì trộn phiên bản là rủi ro thật. Cần cách chuyển sang bản mới gần như tức thì và quay lại ngay được nếu hỏng, thay vì dừng service giữa chừng.",
+      "how": "Duy trì 2 môi trường sản xuất y hệt: blue đang live, green chứa bản mới được deploy + test khi trống; đổi router/load balancer sang green, blue giữ nguyên làm mục tiêu rollback tức thì.",
+      "origin": "Martin Fowler, bliki 'Blue Green Deployment' ngày 1/3/2010 — giới thiệu kỹ thuật lấy từ mục blue-green trong cuốn Continuous Delivery của Dave Farley & Jez Humble (2010).",
+      "related": [
+        "Zero-downtime deploy (rolling deploy)",
+        "Canary deploy",
+        "Rollback",
+        "Release vs deploy"
+      ]
+    },
+    {
+      "term": "Feature flag",
+      "aliases": [
+        "feature toggle",
+        "feature switch",
+        "cờ tính năng",
+        "toggle"
+      ],
+      "level": "intermediate",
+      "problem": "Nhánh tính năng sống 2-3 tuần rồi merge là conflict dày đặc; và ngay cả khi merge xong, muốn bật cho 1% user hay tắt ngay khi tính năng mới làm cháy CPU giờ cao điểm thì vẫn phải deploy lại cả build — không có đòn bẩy nào ngoài roll back.",
+      "how": "Bọc code mới sau điều kiện runtime (if flag_enabled): nhánh được gộp sớm, code đã lên production nhưng hành vi chưa bật; tung dần theo % user, tắt được không cần deploy — và phải dọn flag sau khi rollout xong.",
+      "origin": "không rõ người đặt ra đầu tiên; được hệ thống hóa bởi Pete Hodgson trên martinfowler.com năm 2017 (chia release/experiment/permissioning/operational toggles).",
+      "related": [
+        "Release vs deploy",
+        "trunk-based vs git flow",
+        "Canary deploy",
+        "Rollback"
+      ]
+    },
+    {
+      "term": "Trunk-based development vs Git flow",
+      "aliases": [
+        "trunk-based development",
+        "TBD",
+        "git flow",
+        "mainline development",
+        "chiến lược nhánh"
+      ],
+      "level": "intermediate",
+      "problem": "Git flow với develop/release/hotfix để nhánh sống vài tuần khiến merge conflict dày đặc, mỗi nhánh là một state không ai test chung; trong khi đội cần deploy hàng ngày thì 'gộp nhánh' trở thành sự kiện lớn, rủi ro, phải book lịch.",
+      "how": "Trunk-based: mọi người commit vào 1 trunk, nhánh sống dưới 1-2 ngày, luôn merge được, tính năng chưa xong che bằng feature flag. Git flow hợp với phần mềm đóng gói cần hỗ trợ nhiều version song song — chọn theo cách phát hành, không theo phong trào.",
+      "origin": "Git flow do Vincent Driessen xuất bản trên nvie.com (tháng 1/2010); trunk-based do Paul Hammant hệ thống hóa (trunkbaseddevelopment.com) và là thực hành chuẩn ở Google.",
+      "related": [
+        "Feature flag",
+        "Continuous Integration (CI)",
+        "Monorepo vs Polyrepo",
+        "CD (continuous delivery / continuous deployment)"
+      ]
+    },
+    {
+      "term": "Monorepo vs Polyrepo",
+      "aliases": [
+        "monorepo",
+        "polyrepo",
+        "đa repo",
+        "single repo"
+      ],
+      "level": "intermediate",
+      "problem": "100 repo riêng lẻ: đổi 1 interface dùng chung phải mở 100 PR, version dependency giữa các service lệch nhau, không thể atomic một thay đổi cross-service. Ngược lại, một repo khổng lồ không có tooling thì CI chậm, quyền truy cập thô, git operations ì ạch.",
+      "how": "Monorepo gom nhiều service/library vào 1 trunk: thay đổi cross-cutting atomic, code share và refactor toàn cục được (cần tool như Bazel/Nx/Turborepo). Polyrepo mỗi service 1 repo: ownership, quyền và deploy tách bạch rõ hơn. Chọn theo quy mô team và tooling, không theo trendy.",
+      "origin": "Monorepo là thực hành lâu đời của Google (mô tả trong bài 'Large-Scale Cluster Management at Google with Bazel', SoCC 2016); polyrepo là mặc định của kỷ nguyên GitHub.",
+      "related": [
+        "trunk-based vs git flow",
+        "Build artifact",
+        "Continuous Integration (CI)"
+      ]
+    },
+    {
+      "term": "SRE vs DevOps",
+      "aliases": [
+        "Site Reliability Engineering",
+        "SRE",
+        "DevOps",
+        "vận hành kiểu kỹ sư"
+      ],
+      "level": "intermediate",
+      "problem": "DevOps nói về văn hóa gộp dev và ops, nhưng khi hỏi 'ai chịu trách nhiệm hệ thống lúc 3h sáng, SLI/SLO là gì, được phép downtime bao nhiêu phần trăm' thì không ai trả lời được: ops vẫn là nhóm bị gọi trong đêm, dev vẫn ném code qua hàng rào, SLO không tồn tại nên mọi incident đều là khẩn cấp.",
+      "how": "SRE là cách Google vận hành DevOps bằng kỹ sư: viết automation thay việc tay, đặt SLI/SLO và error budget làm cơ chế quyết định (hết budget thì dừng release). DevOps là phong trào/cộng đồng rộng hơn; SRE là bộ phận + thực hành cụ thể kèm công cụ.",
+      "origin": "Google khởi xướng năm 2003; Ben Treynor Sloss là người đặt thuật ngữ 'Site Reliability Engineering'; sách Site Reliability Engineering của Google xuất bản 2016.",
+      "related": [
+        "GitOps",
+        "smoke test",
+        "Rollback",
+        "Continuous Integration (CI)"
+      ]
+    },
+    {
+      "term": "HPA (Horizontal Pod Autoscaler)",
+      "aliases": [
+        "Horizontal Pod Autoscaler",
+        "autoscaling",
+        "tự động scale ngang",
+        "HPA"
+      ],
+      "level": "advanced",
+      "problem": "Số pod cố định từ trước: đêm giao thừa hay Black Friday traffic x10, CPU chạm 95% và user thấy timeout; báo ops tăng replica thì mất 10-20 phút qua ticket, xong lại quên giảm khi traffic về — chi phí đội lên mà SLO vẫn vỡ.",
+      "how": "HPA quan sát metrics (CPU/memory, custom từ Prometheus, external) theo chu kỳ, tính số replica cần để chạm target rồi tự sửa replicas của workload — scale ngang nhiều bản, không chờ người; kết hợp với min/maxReplicas để không bao giờ scale vô hạn.",
+      "origin": "Là autoscaling API của Kubernetes, có từ các version đầu; về sau mở rộng cho custom/external metrics (metrics-server, Prometheus adapter).",
+      "related": [
+        "Deployment & Replica (ReplicaSet)",
+        "Kubernetes",
+        "Pod",
+        "CPU scheduling (CFS, preemption, priority inversion)"
+      ]
+    },
+    {
+      "term": "Immutable infrastructure",
+      "aliases": [
+        "hạ tầng bất biến",
+        "immutable server",
+        "cattle not pets",
+        "infrastructure bất biến"
+      ],
+      "level": "advanced",
+      "problem": "Server sống hàng tháng bị patch tay, cài package, sửa cấu hình trực tiếp: không server nào giống server nào, không thể reproduce lỗi ở môi trường khác, và mỗi lần vá là một mission có thể làm hỏng thứ đang chạy — vì server đã biến thành 'con thú cưng' không ai dám đụng.",
+      "how": "Không bao giờ sửa server đang sống: mọi thay đổi (code, config, patch) đều tạo image/version mới, rồi thay cả cụm bằng bản mới; rollback = quay về image trước đó. Máy hỏng thì thay bằng instance dựng từ image, không 'vá lại cái cũ'.",
+      "origin": "Thuật ngữ 'immutable infrastructure' do Chad Fowler đặt trong bài blog 'Trash Your Servers and Burn Your Code' năm 2013 (theo O'Reilly).",
+      "related": [
+        "Container (Docker, container image)",
+        "GitOps",
+        "Build artifact",
+        "Infrastructure as Code (Terraform, Pulumi)",
+        "Rollback"
+      ]
+    },
+    {
+      "term": "GitOps",
+      "aliases": [
+        "GitOps",
+        "Argo CD",
+        "Flux",
+        "reconcile từ git",
+        "deploy qua pull request"
+      ],
+      "level": "advanced",
+      "problem": "Đội apply YAML tay từ laptop lên cluster: ai apply cái gì, khi nào, trên cluster nào không ai biết; drift tích tụ vì có người sửa trực tiếp trên cluster, audit bằng... trí nhớ, rollback bằng cách... cố nhớ lại bản cũ. Ops thành điểm nghẽn cho mọi thay đổi hạ tầng.",
+      "how": "Git là single source of truth: mọi thay đổi hạ tầng/ứng dụng là PR vào git, agent trong cluster (Argo CD, Flux) tự đối chiếu trạng thái thực với trạng thái khai báo và reconcile; rollback = revert commit, mọi thứ có audit sẵn trong git history.",
+      "origin": "Thuật ngữ do Alexis Richardson (CEO Weaveworks) đặt trong bài blog ngày 2/3/2017.",
+      "related": [
+        "Infrastructure as Code (Terraform, Pulumi)",
+        "Immutable infrastructure",
+        "Kubernetes",
+        "Helm",
+        "Secrets in runtime"
+      ]
+    },
+    {
+      "term": "Sidecar",
+      "aliases": [
+        "sidecar container",
+        "pattern sidecar",
+        "container phụ"
+      ],
+      "level": "advanced",
+      "problem": "Muốn mọi service đều có log shipper, metrics proxy, TLS: mỗi team phải nhúng library vào code — đổi code, đổi dependency, va đủ version library giữa các đội. Tách hẳn thành service riêng thì không chia sẻ được network/volume với app và khó đồng bộ vòng đời.",
+      "how": "Chạy container phụ cùng pod, chia sẻ network namespace và volume với container chính: xử lý logging/mesh/proxy bên ngoài code ứng dụng, thêm hoặc gỡ mà không sửa app. Đây là nền của service mesh (Envoy/Istio) và log sidecar.",
+      "origin": "Pattern được tài liệu hóa trong Azure Architecture Center của Microsoft; Kubernetes cho phép container chung pod từ đầu, sau này bổ sung thêm sidecar container native (khởi tạo trước, giữ chạy xuyên suốt pod).",
+      "related": [
+        "Pod",
+        "Kubernetes",
+        "Service & Ingress (mạng Kubernetes)",
+        "Container (Docker, container image)"
+      ]
+    }
+  ],
+  "sources": [
+    "https://martinfowler.com/bliki/ParallelChange.html",
+    "https://martinfowler.com/bliki/BlueGreenDeployment.html",
+    "https://martinfowler.com/articles/feature-toggles.html",
+    "https://chadfowler.com/articles/trash-your-servers-and-burn-your-code.html",
+    "https://www.oreilly.com/radar/an-introduction-to-immutable-infrastructure/",
+    "https://sre.google/sre-book/introduction/",
+    "https://www.giantswarm.io/blog/what-is-gitops",
+    "https://www.docker.com/blog/docker-nine-years-young/",
+    "https://helm.sh/community/history/",
+    "https://www.cncf.io/reports/helm-project-journey-report/",
+    "https://www.hashicorp.com/en/resources/the-story-of-hashicorp-terraform-with-mitchell-hashimoto",
+    "https://en.wikipedia.org/wiki/Pulumi",
+    "https://nvie.com/posts/a-successful-git-branching-model/",
+    "https://trunkbaseddevelopment.com/",
+    "https://docs.percona.com/percona-toolkit/pt-online-schema-change.html",
+    "https://www.thoughtworks.com/insights/blog/origin-smoke-testing-and-confusion-it-can-cause",
+    "https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar",
+    "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/",
+    "https://www.infoq.com/presentations/history-infra-as-code/",
+    "https://en.wikipedia.org/wiki/Puppet_(software)",
+    "https://www.techtarget.com/whatis/definition/canary-canary-testing",
+    "https://illari.dev/blog/a-brief-history-of-cron"
+  ]
+}

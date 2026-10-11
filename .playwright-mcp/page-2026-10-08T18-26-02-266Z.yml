@@ -1,0 +1,654 @@
+- generic [active] [ref=f55e1]:
+  - generic [ref=f55e2]:
+    - banner [ref=f55e3]:
+      - generic [ref=f55e4]:
+        - link [ref=f55e7] [cursor=pointer]:
+          - /url: /
+          - img "VietNamNet" [ref=f55e8]
+        - generic [ref=f55e11]:
+          - list [ref=f55e12]:
+            - listitem [ref=f55e13]:
+              - link "Tuần Việt Nam" [ref=f55e14] [cursor=pointer]:
+                - /url: /tuan-viet-nam
+            - listitem [ref=f55e15]:
+              - link [ref=f55e16] [cursor=pointer]:
+                - /url: /en
+                - img "Vietnamnet global" [ref=f55e17]
+            - listitem [ref=f55e18]:
+              - button "Đăng nhập login vietnamnet" [ref=f55e19] [cursor=pointer]:
+                - generic [ref=f55e20]: Đăng nhập
+                - img "login vietnamnet" [ref=f55e21]
+          - button "Tìm kiếm" [ref=f55e23] [cursor=pointer]
+    - navigation [ref=f55e26]:
+      - list [ref=f55e27]:
+        - listitem [ref=f55e28]:
+          - link "VietNamNet" [ref=f55e29] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f55e31]:
+          - link "Chính trị" [ref=f55e32] [cursor=pointer]:
+            - /url: /chinh-tri
+        - listitem [ref=f55e33]:
+          - link "Thời sự" [ref=f55e34] [cursor=pointer]:
+            - /url: /thoi-su
+        - listitem [ref=f55e35]:
+          - link "Kinh doanh" [ref=f55e36] [cursor=pointer]:
+            - /url: /kinh-doanh
+        - listitem [ref=f55e37]:
+          - link "Dân tộc và Tôn giáo" [ref=f55e38] [cursor=pointer]:
+            - /url: /dan-toc-ton-giao
+        - listitem [ref=f55e39]:
+          - link "Giáo dục" [ref=f55e40] [cursor=pointer]:
+            - /url: /giao-duc
+        - listitem [ref=f55e41]:
+          - link "Thế giới" [ref=f55e42] [cursor=pointer]:
+            - /url: /the-gioi
+        - listitem [ref=f55e43]:
+          - link "Thể thao" [ref=f55e44] [cursor=pointer]:
+            - /url: /the-thao
+        - listitem [ref=f55e45]:
+          - link "Văn hóa - Giải trí" [ref=f55e46] [cursor=pointer]:
+            - /url: /van-hoa-giai-tri
+        - listitem [ref=f55e47]:
+          - link "Đời sống" [ref=f55e48] [cursor=pointer]:
+            - /url: /doi-song
+        - listitem [ref=f55e49]:
+          - link "Sức khỏe" [ref=f55e50] [cursor=pointer]:
+            - /url: /suc-khoe
+        - listitem [ref=f55e51]:
+          - link "Công nghệ" [ref=f55e52] [cursor=pointer]:
+            - /url: /cong-nghe
+        - listitem [ref=f55e53]:
+          - link "Xe" [ref=f55e54] [cursor=pointer]:
+            - /url: /oto-xe-may
+        - listitem [ref=f55e55]:
+          - link "Bất động sản" [ref=f55e56] [cursor=pointer]:
+            - /url: /bat-dong-san
+        - listitem [ref=f55e57]:
+          - link "Du lịch" [ref=f55e58] [cursor=pointer]:
+            - /url: /du-lich
+        - listitem [ref=f55e59]:
+          - link "Bạn đọc" [ref=f55e60] [cursor=pointer]:
+            - /url: /ban-doc
+        - listitem [ref=f55e61]:
+          - link "Hamburger menu" [ref=f55e62] [cursor=pointer]:
+            - /url: javascript:;
+    - link "Vads" [ref=f55e65] [cursor=pointer]:
+      - /url: https://vads.vn
+      - img "vads-Quảng cáo truyền thông" [ref=f55e66]
+    - generic [ref=f55e67]:
+      - generic [ref=f55e68]:
+        - generic [ref=f55e69]:
+          - generic [ref=f55e70]:
+            - list [ref=f55e71]:
+              - listitem [ref=f55e72]:
+                - link "Giáo dục" [ref=f55e73] [cursor=pointer]:
+                  - /url: /giao-duc
+            - generic [ref=f55e74]: Thứ Năm, 30/05/2024 - 05:30
+          - generic [ref=f55e75]:
+            - 'heading "Vụ bé trai tử vong do bị bỏ quên trên xe: Phát hiện vắng trẻ nhưng không kiểm tra" [level=1] [ref=f55e76]'
+            - generic [ref=f55e80]:
+              - generic [ref=f55e81]:
+                - link "Hoài Anh" [ref=f55e83] [cursor=pointer]:
+                  - /url: /tac-gia/hoai-anh-0008IU.html
+                - link "Hoài Anh" [ref=f55e86] [cursor=pointer]:
+                  - /url: /tac-gia/hoai-anh-0008IU.html
+              - generic [ref=f55e87]:
+                - link "Trọng Tùng" [ref=f55e89] [cursor=pointer]:
+                  - /url: /tac-gia/trong-tung-0009IG.html
+                - link "Trọng Tùng" [ref=f55e92] [cursor=pointer]:
+                  - /url: /tac-gia/trong-tung-0009IG.html
+            - generic [ref=f55e93]:
+              - text: "Sự kiện:"
+              - link "Bé trai tử vong do bị bỏ quên trên xe đưa đón ở Thái Bình" [ref=f55e94] [cursor=pointer]:
+                - /url: /su-kien/be-trai-tu-vong-do-bi-bo-quen-tren-xe-dua-don-o-thai-binh-0008FC.html
+            - generic [ref=f55e95]:
+              - link "Chia sẻ bài viết lên facebook" [ref=f55e96] [cursor=pointer]:
+                - /url: javasctip:void(0);
+              - link "Chia sẻ bài viết lên zalo" [ref=f55e98] [cursor=pointer]:
+                - /url: javasctip:void(0);
+              - link "Chia sẻ bài viết lên email" [ref=f55e100] [cursor=pointer]:
+                - /url: javasctip:void(0);
+              - link "Sao chép liên kết" [ref=f55e102] [cursor=pointer]:
+                - /url: javasctip:void(0);
+              - link "Lưu bài viết" [ref=f55e104] [cursor=pointer]:
+                - /url: javasctip:void(0);
+              - link "Comment" [ref=f55e106] [cursor=pointer]:
+                - /url: "#comment_count"
+              - link [ref=f55e108] [cursor=pointer]:
+                - /url: https://www.google.com/preferences/source?q=vietnamnet.vn
+                - img "Thêm VietNamNet trên Google" [ref=f55e109]
+            - generic [ref=f55e110]: Giáo viên điểm danh, phát hiện trẻ không có mặt ở lớp nhưng không thông báo với gia đình. Trẻ bị bỏ quên nhiều giờ trên xe đưa đón, dẫn đến tử vong.
+            - generic [ref=f55e111]:
+              - paragraph [ref=f55e112]:
+                - text: Liên quan vụ
+                - link "trẻ mầm non bị bỏ quên trên xe đưa đón" [ref=f55e113] [cursor=pointer]:
+                  - /url: https://vietnamnet.vn/tre-mam-non-tu-vong-do-bi-bo-quen-tren-xe-dua-don-o-thai-binh-2285808.html
+                - text: của trường dẫn đến tử vong, cơ quan Công an tỉnh Thái Bình thông tin, khi vào lớp, giáo viên có chụp ảnh điểm danh học sinh gửi lên phần mềm của nhà trường để theo dõi.
+              - paragraph [ref=f55e114]: Quản lý phát hiện vắng bé T.G.H (SN 20/9/2019), là học sinh lớp 4 tuổi của Trường Mầm non Hồng Nhung 2. Tuy nhiên, cả người quản lý lẫn cô giáo đứng lớp đã không kiểm tra và không thông báo cho gia đình.
+              - figure "Chiếc xe đưa đón học sinh đến trường" [ref=f55e115]:
+                - img "W-trẻ 5 tuổi 3.jpeg" [ref=f55e117]
+              - paragraph [ref=f55e119]: Đến khoảng 17h cùng ngày, anh T.Đ.A (SN 2004, trú tại xã Dũng Nghĩa, huyện Vũ Thư) - là cậu ruột của bé H., đến đón và không thấy bé H. Anh và mọi người đi tìm, phát hiện H. bị bỏ quên trên xe đưa đón của trường. Cháu bé đã tử vong, sau nhiều giờ bị bỏ quên trên xe, trong thời tiết nắng nóng.
+              - paragraph [ref=f55e120]: Khoảng 18h cùng ngày, Công an TP Thái Bình tiếp nhận tin báo của anh T.Đ.A về việc cháu H. tử vong do bị bỏ quên trên xe đưa đón.
+              - paragraph [ref=f55e121]: Ngay sau khi xảy ra vụ việc, lãnh đạo Tỉnh ủy, UBND tỉnh, UBND TP, lãnh đạo Công an tỉnh đã trực tiếp chỉ đạo các đơn vị nghiệp vụ, Công an TP Thái Bình phối hợp Viện KSND tiến hành điều tra. Bước đầu cơ quan chức năng xác định, khoảng 6h20 ngày 29/5, anh N.V.L (SN 1965, trú tại phường Quang Trung, TP Thái Bình), điều khiển xe ô tô 29 chỗ cùng 1 giáo viên Trường Mầm non Hồng Nhung đón cháu H. và 9 học sinh khác đến trường.
+              - paragraph [ref=f55e122]: Khi đến trường, anh L. mở cửa xe ô tô cho giáo viên và các học sinh tự đi vào lớp. Sau đó, người này điều khiển xe đỗ ở cổng trường rồi khoá cửa ra về. Khi vào lớp, giáo viên có chụp ảnh điểm danh học sinh gửi lên phần mềm của nhà trường và phát hiện vắng bé H.
+              - figure "Trường Mầm non Hồng Nhung 2, nơi cháu bé theo học." [ref=f55e123]:
+                - img "Tử vong 2.jpeg" [ref=f55e125]
+              - paragraph [ref=f55e127]: Tuy nhiên, giáo viên này không thông báo cho gia đình để kiểm tra việc trẻ có đến lớp hay không. Bộ phận đưa đón học sinh và lái xe cũng đã không kiểm tra chéo, bàn giao để đảm bảo trẻ đã đến trường an toàn.
+              - paragraph [ref=f55e128]: Đến khoảng 17h cùng ngày, anh T.Đ.A đến đón và phát hiện ra sự việc. Lúc này, H. đã bị bỏ quên trên xe đưa đón đã quá lâu, dẫn đến tử vong. Ngay trong đêm, Cơ quan Cảnh sát điều tra Công an TP Thái Bình đã ra quyết định khởi tố vụ án “Vô ý làm chết người”.
+              - paragraph [ref=f55e129]: Lãnh đạo Tỉnh ủy, UBND tỉnh và các ngành chức năng đã phối hợp với cấp ủy, chính quyền cơ sở tổ chức thăm hỏi, động viên gia đình nạn nhân. Tỉnh Thái Bình cũng đã yêu cầu đơn vị chuyên môn sớm ban hành văn bản chỉ đạo, chấn chỉnh hoạt động đưa, đón, quản lý trẻ của các trường mầm non trên địa bàn.
+              - figure "Thi thể cháu bé được đưa về Nhà tang lễ TP Thái Bình trong đêm." [ref=f55e130]:
+                - img "W-xe llx.jpeg" [ref=f55e132]
+              - paragraph [ref=f55e134]: Đến 23h đêm qua, công tác khám nghiệm hiện trường đã hoàn tất. Thi thể cháu bé đã được đưa từ Bệnh viện Đa khoa tỉnh Thái Bình về Nhà tang lễ TP Thái Bình để tổ chức tang lễ theo quy định.
+              - paragraph [ref=f55e135]: Có mặt tại nhà tang lễ TP Thái Bình đêm muộn, một người thân của nạn nhân chia sẻ, hoàn cảnh của bé H. rất đáng thương khi không ở cùng bố mẹ. Bé sống với bà ở huyện Vũ Thư. "Sáng bé đi học còn vui vẻ. Chiều cậu đến đón, bé đã gặp nạn. Giá như cô giáo không thấy trẻ vào lớp, gọi báo cho gia đình để kịp thời phát hiện vụ việc thì nào đâu đến nỗi", người này nói.
+              - generic [ref=f55e136]:
+                - article [ref=f55e137]:
+                  - link [ref=f55e138] [cursor=pointer]:
+                    - /url: /khoi-to-vu-an-tre-mam-non-tu-vong-tren-xe-dua-don-o-thai-binh-2285846.html
+                    - img "Khởi tố vụ án liên quan trẻ mầm non tử vong trên xe đưa đón ở Thái Bình" [ref=f55e139]
+                  - generic [ref=f55e140]:
+                    - heading [level=3] [ref=f55e141]:
+                      - link "Khởi tố vụ án liên quan trẻ mầm non tử vong trên xe đưa đón ở Thái Bình" [ref=f55e142] [cursor=pointer]:
+                        - /url: /khoi-to-vu-an-tre-mam-non-tu-vong-tren-xe-dua-don-o-thai-binh-2285846.html
+                    - generic [ref=f55e143]: Liên quan đến việc trẻ mầm non tử vong do bị bỏ quên trên xe đưa đón, Công an tỉnh Thái Bình đã quyết định khởi tố vụ án hình sự “Vô ý làm chết người”.
+                - article [ref=f55e144]:
+                  - link [ref=f55e145] [cursor=pointer]:
+                    - /url: /chu-tich-tinh-thai-binh-xu-ly-nghiem-truong-de-tre-tu-vong-tren-xe-dua-don-2285839.html
+                    - img "Chủ tịch tỉnh Thái Bình chỉ đạo 'nóng' vụ trẻ tử vong do bị bỏ quên trên xe đưa đón" [ref=f55e146]
+                  - generic [ref=f55e147]:
+                    - heading [level=3] [ref=f55e148]:
+                      - link "Chủ tịch tỉnh Thái Bình chỉ đạo 'nóng' vụ trẻ tử vong do bị bỏ quên trên xe đưa đón" [ref=f55e149] [cursor=pointer]:
+                        - /url: /chu-tich-tinh-thai-binh-xu-ly-nghiem-truong-de-tre-tu-vong-tren-xe-dua-don-2285839.html
+                    - generic [ref=f55e150]: Chủ tịch UBND tỉnh Thái Bình yêu cầu công an khẩn trương điều tra, xem xét khởi tố vụ án trẻ mầm non bị bỏ quên trên xe đưa đón tại Trường Mầm non Hồng Nhung.
+        - generic [ref=f55e155]:
+          - heading "Có thể bạn quan tâm" [level=2] [ref=f55e156]
+          - generic [ref=f55e157]:
+            - generic [ref=f55e158]:
+              - link [ref=f55e160] [cursor=pointer]:
+                - /url: /bo-gd-dt-cam-thu-tien-cua-nguoi-hoc-voi-hoat-dong-giao-duc-tang-cuong-2562917.html
+                - img "Bộ GD-ĐT cấm thu tiền của người học với hoạt động giáo dục tăng cường" [ref=f55e161]
+              - heading [level=3] [ref=f55e163]:
+                - link "Bộ GD-ĐT cấm thu tiền của người học với hoạt động giáo dục tăng cường" [ref=f55e164] [cursor=pointer]:
+                  - /url: /bo-gd-dt-cam-thu-tien-cua-nguoi-hoc-voi-hoat-dong-giao-duc-tang-cuong-2562917.html#vnn_source=chitiet&vnn_medium=box_duocquantam1
+            - generic [ref=f55e165]:
+              - link [ref=f55e167] [cursor=pointer]:
+                - /url: /ai-viet-code-lap-trinh-vien-se-lam-gi-2561645.html
+                - img "AI viết code, lập trình viên sẽ làm gì?" [ref=f55e168]
+              - heading [level=3] [ref=f55e170]:
+                - link "AI viết code, lập trình viên sẽ làm gì?" [ref=f55e171] [cursor=pointer]:
+                  - /url: /ai-viet-code-lap-trinh-vien-se-lam-gi-2561645.html#vnn_source=chitiet&vnn_medium=box_duocquantam2
+            - generic [ref=f55e172]:
+              - link [ref=f55e174] [cursor=pointer]:
+                - /url: /cau-thu-arsenal-duoc-vinh-danh-3-ky-luc-guinness-2562315.html
+                - img "Cầu thủ Arsenal được vinh danh 3 kỷ lục Guinness" [ref=f55e175]
+              - heading [level=3] [ref=f55e177]:
+                - link "Cầu thủ Arsenal được vinh danh 3 kỷ lục Guinness" [ref=f55e178] [cursor=pointer]:
+                  - /url: /cau-thu-arsenal-duoc-vinh-danh-3-ky-luc-guinness-2562315.html#vnn_source=chitiet&vnn_medium=box_duocquantam3
+            - generic [ref=f55e179]:
+              - link [ref=f55e181] [cursor=pointer]:
+                - /url: /benh-vien-cho-ray-103-va-loat-benh-vien-co-gia-kham-chua-benh-moi-2562607.html
+                - img "Bệnh viện Chợ Rẫy, 103 và loạt bệnh viện có giá khám chữa bệnh mới" [ref=f55e182]
+              - heading [level=3] [ref=f55e184]:
+                - link "Bệnh viện Chợ Rẫy, 103 và loạt bệnh viện có giá khám chữa bệnh mới" [ref=f55e185] [cursor=pointer]:
+                  - /url: /benh-vien-cho-ray-103-va-loat-benh-vien-co-gia-kham-chua-benh-moi-2562607.html#vnn_source=chitiet&vnn_medium=box_duocquantam4
+          - link "QUAY LẠI TRANG CHỦ" [ref=f55e187] [cursor=pointer]:
+            - /url: /
+      - generic [ref=f55e189]:
+        - generic [ref=f55e190]:
+          - list [ref=f55e192]:
+            - listitem [ref=f55e193]:
+              - heading [level=3] [ref=f55e194]:
+                - 'link "Sau vụ trẻ tử vong trên xe đưa đón: Nhiều trường siết quy trình đưa đón học sinh" [ref=f55e195] [cursor=pointer]':
+                  - /url: /sau-vu-be-bi-bo-quen-tren-xe-o-thai-binh-nhieu-truong-siet-quy-trinh-dua-don-2286115.html
+            - listitem [ref=f55e196]:
+              - heading [level=3] [ref=f55e197]:
+                - 'link "Vụ bé trai tử vong do bị bỏ quên trên xe: Tài xế mới đi làm được 1 tuần" [ref=f55e198] [cursor=pointer]':
+                  - /url: /tai-xe-trong-vu-be-trai-tu-vong-do-bi-bo-quen-tren-xe-moi-di-lam-duoc-1-tuan-2285989.html
+            - listitem [ref=f55e199]:
+              - heading [level=3] [ref=f55e200]:
+                - link "Thái Bình khẳng định việc đưa đón trẻ ở trường Mầm non Hồng Nhung 2 là hợp pháp" [ref=f55e201] [cursor=pointer]:
+                  - /url: /thai-binh-khang-dinh-viec-dua-don-tre-o-truong-mam-non-hong-nhung-2-la-hop-phap-2285915.html
+          - generic [ref=f55e202]:
+            - button "Bình luận" [ref=f55e204] [cursor=pointer]
+            - link "Chia sẻ bài viết lên facebook" [ref=f55e206] [cursor=pointer]:
+              - /url: javasctip:void(0);
+            - link "Chia sẻ bài viết lên zalo" [ref=f55e208] [cursor=pointer]:
+              - /url: javasctip:void(0);
+            - link "Chia sẻ bài viết lên email" [ref=f55e210] [cursor=pointer]:
+              - /url: javasctip:void(0);
+            - link "Sao chép liên kết" [ref=f55e212] [cursor=pointer]:
+              - /url: javasctip:void(0);
+            - link "Lưu bài viết" [ref=f55e214] [cursor=pointer]:
+              - /url: javasctip:void(0);
+          - list [ref=f55e217]:
+            - listitem [ref=f55e218]:
+              - paragraph [ref=f55e219]: "Xem thêm về:"
+            - listitem [ref=f55e220]:
+              - heading [level=3] [ref=f55e221]:
+                - link "trẻ mầm non" [ref=f55e222] [cursor=pointer]:
+                  - /url: /tre-mam-non-tag2505292755190129290.html
+            - listitem [ref=f55e223]:
+              - heading [level=3] [ref=f55e224]:
+                - link "Thái Bình" [ref=f55e225] [cursor=pointer]:
+                  - /url: /thai-binh-tag5235692816989925221.html
+          - iframe [ref=f55e229]:
+            - generic [ref=f58e4]:
+              - generic [ref=f58e5]: Bình luận
+              - textbox "Chia sẻ ý kiến của bạn...." [ref=f58e9]
+              - generic [ref=f58e10]:
+                - img "Hình ảnh khi không có bình luận" [ref=f58e12]
+                - generic [ref=f58e13]: Hãy là người đầu tiên bình luận trong bài.
+          - generic [ref=f55e231]:
+            - generic [ref=f55e232]:
+              - heading [level=2] [ref=f55e233]:
+                - link "Tuyến bài" [ref=f55e235] [cursor=pointer]:
+                  - /url: /tuyen-bai
+              - generic [ref=f55e237]:
+                - group "1 / 3" [ref=f55e238]:
+                  - 'link "Sắp xếp trường học: Tinh gọn bộ máy, giải bài toán thừa thiếu giáo viên" [ref=f55e239] [cursor=pointer]':
+                    - /url: /giao-duc/sap-xep-truong-hoc-to-chuc-lai-de-nang-chat-luong-giao-duc-tb0000JH.html
+                - group "2 / 3" [ref=f55e240]:
+                  - 'link "Một kỳ thi, hai mục tiêu: Mô hình còn phù hợp?" [ref=f55e241] [cursor=pointer]':
+                    - /url: /giao-duc/mot-ky-thi-hai-muc-tieu-mo-hinh-con-phu-hop-tb0000J9.html
+                - group "3 / 3" [ref=f55e242]:
+                  - link "Các nhà khoa học, nhà giáo tiêu biểu ứng cử Đại biểu Quốc hội" [ref=f55e243] [cursor=pointer]:
+                    - /url: /giao-duc/cac-nha-khoa-hoc-nha-giao-tieu-bieu-ung-cu-dai-bieu-quoc-hoi-tb0000G8.html
+                - group "1 / 3" [ref=f55e244]:
+                  - 'link "Sắp xếp trường học: Tinh gọn bộ máy, giải bài toán thừa thiếu giáo viên" [ref=f55e245] [cursor=pointer]':
+                    - /url: /giao-duc/sap-xep-truong-hoc-to-chuc-lai-de-nang-chat-luong-giao-duc-tb0000JH.html
+                - group "2 / 3" [ref=f55e246]:
+                  - 'link "Một kỳ thi, hai mục tiêu: Mô hình còn phù hợp?" [ref=f55e247] [cursor=pointer]':
+                    - /url: /giao-duc/mot-ky-thi-hai-muc-tieu-mo-hinh-con-phu-hop-tb0000J9.html
+                - group "3 / 3" [ref=f55e248]:
+                  - link "Các nhà khoa học, nhà giáo tiêu biểu ứng cử Đại biểu Quốc hội" [ref=f55e249] [cursor=pointer]:
+                    - /url: /giao-duc/cac-nha-khoa-hoc-nha-giao-tieu-bieu-ung-cu-dai-bieu-quoc-hoi-tb0000G8.html
+                - group "1 / 3" [ref=f55e250]:
+                  - 'link "Sắp xếp trường học: Tinh gọn bộ máy, giải bài toán thừa thiếu giáo viên" [ref=f55e251] [cursor=pointer]':
+                    - /url: /giao-duc/sap-xep-truong-hoc-to-chuc-lai-de-nang-chat-luong-giao-duc-tb0000JH.html
+                - group "2 / 3" [ref=f55e252]:
+                  - 'link "Một kỳ thi, hai mục tiêu: Mô hình còn phù hợp?" [ref=f55e253] [cursor=pointer]':
+                    - /url: /giao-duc/mot-ky-thi-hai-muc-tieu-mo-hinh-con-phu-hop-tb0000J9.html
+                - group "3 / 3" [ref=f55e254]:
+                  - link "Các nhà khoa học, nhà giáo tiêu biểu ứng cử Đại biểu Quốc hội" [ref=f55e255] [cursor=pointer]:
+                    - /url: /giao-duc/cac-nha-khoa-hoc-nha-giao-tieu-bieu-ung-cu-dai-bieu-quoc-hoi-tb0000G8.html
+              - generic [ref=f55e256]:
+                - button "Previous slide" [ref=f55e257] [cursor=pointer]
+                - button "Next slide" [ref=f55e258] [cursor=pointer]
+            - generic [ref=f55e261]:
+              - heading [level=3] [ref=f55e263]:
+                - link "Sắp xếp các trường là cuộc cách mạng tinh gọn bộ máy, chọn cán bộ quản lý xuất sắc" [ref=f55e264] [cursor=pointer]:
+                  - /url: /sap-xep-truong-la-cuoc-cach-mang-tinh-gon-bo-may-chon-can-bo-quan-ly-xuat-sac-2542500.html
+              - heading [level=3] [ref=f55e266]:
+                - 'link "Sắp xếp các trường: Hiệu trưởng, hiệu phó làm giáo viên là việc bình thường" [ref=f55e267] [cursor=pointer]':
+                  - /url: /tran-tro-cua-hieu-truong-giao-vien-truoc-cong-cuoc-sap-xep-truong-hoc-2541660.html
+              - heading [level=3] [ref=f55e269]:
+                - link "Mô hình quản trị mới sau giảm 11.000 hiệu trưởng, hiệu phó khi sắp xếp các trường" [ref=f55e270] [cursor=pointer]:
+                  - /url: /mo-hinh-quan-tri-moi-sau-giam-11000-hieu-truong-hieu-pho-khi-sap-xep-cac-truong-2541658.html
+          - heading "Tin cùng chuyên mục" [level=2] [ref=f55e271]
+          - generic [ref=f55e272]:
+            - generic [ref=f55e275]:
+              - paragraph [ref=f55e276]
+              - paragraph [ref=f55e277]
+              - paragraph [ref=f55e278]
+              - paragraph [ref=f55e279]
+            - generic [ref=f55e282]:
+              - paragraph [ref=f55e283]
+              - paragraph [ref=f55e284]
+              - paragraph [ref=f55e285]
+              - paragraph [ref=f55e286]
+            - generic [ref=f55e289]:
+              - paragraph [ref=f55e290]
+              - paragraph [ref=f55e291]
+              - paragraph [ref=f55e292]
+              - paragraph [ref=f55e293]
+            - generic [ref=f55e296]:
+              - paragraph [ref=f55e297]
+              - paragraph [ref=f55e298]
+              - paragraph [ref=f55e299]
+              - paragraph [ref=f55e300]
+            - generic [ref=f55e303]:
+              - paragraph [ref=f55e304]
+              - paragraph [ref=f55e305]
+              - paragraph [ref=f55e306]
+              - paragraph [ref=f55e307]
+          - generic [ref=f55e308]:
+            - generic [ref=f55e311]:
+              - paragraph [ref=f55e312]
+              - paragraph [ref=f55e313]
+              - paragraph [ref=f55e314]
+              - paragraph [ref=f55e315]
+            - generic [ref=f55e318]:
+              - paragraph [ref=f55e319]
+              - paragraph [ref=f55e320]
+              - paragraph [ref=f55e321]
+              - paragraph [ref=f55e322]
+            - generic [ref=f55e325]:
+              - paragraph [ref=f55e326]
+              - paragraph [ref=f55e327]
+              - paragraph [ref=f55e328]
+              - paragraph [ref=f55e329]
+            - generic [ref=f55e332]:
+              - paragraph [ref=f55e333]
+              - paragraph [ref=f55e334]
+              - paragraph [ref=f55e335]
+              - paragraph [ref=f55e336]
+            - generic [ref=f55e339]:
+              - paragraph [ref=f55e340]
+              - paragraph [ref=f55e341]
+              - paragraph [ref=f55e342]
+              - paragraph [ref=f55e343]
+        - generic [ref=f55e346]:
+          - generic [ref=f55e347]:
+            - heading [level=2] [ref=f55e348]:
+              - link "Sự kiện" [ref=f55e349] [cursor=pointer]:
+                - /url: /su-kien
+            - generic [ref=f55e350]:
+              - button "Previous slide" [disabled] [ref=f55e351] [cursor=pointer]
+              - button "Next slide" [ref=f55e352] [cursor=pointer]
+          - generic [ref=f55e354]:
+            - group "1 / 3" [ref=f55e355]:
+              - heading [level=3] [ref=f55e356]:
+                - link "Diễn biến vụ 147 điểm 10 Toán tốt nghiệp ở Trường THPT Chuyên Tuyên Quang" [ref=f55e357] [cursor=pointer]:
+                  - /url: /giao-duc/dien-bien-vu-147-diem-10-toan-tot-nghiep-o-truong-thpt-chuyen-tuyen-quang-sk0008BG.html
+              - generic [ref=f55e359]:
+                - generic [ref=f55e360]:
+                  - link [ref=f55e362] [cursor=pointer]:
+                    - /url: /khoi-to-giam-doc-so-gd-dt-tuyen-quang-cung-40-bi-can-trong-vu-gian-lan-thi-cu-2560773.html
+                    - img "Khởi tố Giám đốc Sở GD&ĐT Tuyên Quang cùng 40 bị can trong vụ gian lận thi cử" [ref=f55e363]
+                  - heading [level=3] [ref=f55e364]:
+                    - link "Khởi tố Giám đốc Sở GD&ĐT Tuyên Quang cùng 40 bị can trong vụ gian lận thi cử" [ref=f55e365] [cursor=pointer]:
+                      - /url: /khoi-to-giam-doc-so-gd-dt-tuyen-quang-cung-40-bi-can-trong-vu-gian-lan-thi-cu-2560773.html
+                    - link [ref=f55e366] [cursor=pointer]:
+                      - /url: https://vietnamnet.vn/khoi-to-giam-doc-so-gd-dt-tuyen-quang-cung-40-bi-can-trong-vu-gian-lan-thi-cu-2560773.html#comment
+                      - img "icon binh luan" [ref=f55e367]
+                      - text: "3"
+                - heading [level=3] [ref=f55e369]:
+                  - link "Loạt thí sinh chuyên Tuyên Quang đỗ Bách khoa, Kinh tế Quốc dân, Y Hà Nội" [ref=f55e370] [cursor=pointer]:
+                    - /url: /loat-thi-sinh-chuyen-tuyen-quang-do-bach-khoa-kinh-te-quoc-dan-y-ha-noi-2548245.html
+                - heading [level=3] [ref=f55e372]:
+                  - link "Thí sinh Trường THPT Chuyên Tuyên Quang đạt bao nhiêu điểm ở các khối?" [ref=f55e373] [cursor=pointer]:
+                    - /url: /thi-sinh-truong-thpt-chuyen-tuyen-quang-dat-bao-nhieu-diem-o-cac-khoi-2546781.html
+            - group "2 / 3" [ref=f55e374]:
+              - heading [level=3] [ref=f55e375]:
+                - link "Cuộc thi viết thư UPU lần thứ 55 năm 2026" [ref=f55e376] [cursor=pointer]:
+                  - /url: /su-kien/cuoc-thi-viet-thu-upu-lan-thu-55-nam-2026-0008CJ.html
+              - generic [ref=f55e378]:
+                - generic [ref=f55e379]:
+                  - link [ref=f55e381] [cursor=pointer]:
+                    - /url: /bai-mau-viet-thu-upu-lan-thu-55-thu-gui-nguoi-ban-trong-thanh-pho-toan-robot-2494944.html
+                    - 'img "Bài mẫu viết thư UPU lần thứ 55: Thư gửi người bạn trong thành phố toàn robot" [ref=f55e382]'
+                  - heading [level=3] [ref=f55e383]:
+                    - 'link "Bài mẫu viết thư UPU lần thứ 55: Thư gửi người bạn trong thành phố toàn robot" [ref=f55e384] [cursor=pointer]':
+                      - /url: /bai-mau-viet-thu-upu-lan-thu-55-thu-gui-nguoi-ban-trong-thanh-pho-toan-robot-2494944.html
+                - heading [level=3] [ref=f55e386]:
+                  - 'link "Bài mẫu viết thư UPU lần thứ 55: Khi Wi-Fi tắt và kết nối thật được bật lên" [ref=f55e387] [cursor=pointer]':
+                    - /url: /bai-mau-viet-thu-upu-lan-thu-55-khi-wifi-tat-va-ket-noi-that-bat-len-2494187.html
+                - heading [level=3] [ref=f55e389]:
+                  - 'link "Bài mẫu viết thư UPU lần thứ 55: Lớp học năm 2040 và khát khao kết nối thật" [ref=f55e390] [cursor=pointer]':
+                    - /url: /bai-mau-viet-thu-upu-lan-thu-55-lop-hoc-nam-2040-va-khat-khao-ket-noi-that-2493975.html
+            - group "3 / 3" [ref=f55e391]:
+              - heading [level=3] [ref=f55e392]:
+                - link "Cuộc thi viết thư UPU lần thứ 54 năm 2025" [ref=f55e393] [cursor=pointer]:
+                  - /url: /giao-duc/cuoc-thi-viet-thu-upu-lan-thu-54-nam-2025-sk0008JH.html
+              - generic [ref=f55e395]:
+                - generic [ref=f55e396]:
+                  - link [ref=f55e398] [cursor=pointer]:
+                    - /url: /cuoc-thi-viet-thu-upu-nhan-1-5-trieu-bai-thi-nu-sinh-da-nang-gianh-giai-nhat-2401594.html
+                    - img "Cuộc thi viết thư UPU nhận 1,5 triệu bài thi, nữ sinh Đà Nẵng giành giải Nhất" [ref=f55e399]
+                  - heading [level=3] [ref=f55e400]:
+                    - link "Cuộc thi viết thư UPU nhận 1,5 triệu bài thi, nữ sinh Đà Nẵng giành giải Nhất" [ref=f55e401] [cursor=pointer]:
+                      - /url: /cuoc-thi-viet-thu-upu-nhan-1-5-trieu-bai-thi-nu-sinh-da-nang-gianh-giai-nhat-2401594.html
+                - heading [level=3] [ref=f55e403]:
+                  - 'link "Bài mẫu viết thư UPU lần thứ 54 năm 2025: Đóng vai đại dương" [ref=f55e404] [cursor=pointer]':
+                    - /url: /bai-mau-viet-thu-upu-lan-thu-54-nam-2025-dong-vai-dai-duong-2377078.html
+                - heading [level=3] [ref=f55e406]:
+                  - link "Nữ sinh 16 tuổi tại Đà Nẵng giành giải nhất cuộc thi viết thư UPU" [ref=f55e407] [cursor=pointer]:
+                    - /url: /nu-sinh-16-tuoi-tai-da-nang-gianh-giai-nhat-cuoc-thi-viet-thu-upu-2393186.html
+      - generic [ref=f55e409]:
+        - heading "Tin mới" [level=2] [ref=f55e410]
+        - generic [ref=f55e412]:
+          - generic [ref=f55e413]:
+            - paragraph [ref=f55e415]
+            - generic [ref=f55e416]:
+              - generic [ref=f55e419]:
+                - paragraph [ref=f55e420]
+                - paragraph [ref=f55e421]
+                - paragraph [ref=f55e422]
+                - paragraph [ref=f55e423]
+              - generic [ref=f55e424]:
+                - paragraph [ref=f55e425]
+                - paragraph [ref=f55e426]
+                - paragraph [ref=f55e427]
+              - generic [ref=f55e428]:
+                - paragraph [ref=f55e429]
+                - paragraph [ref=f55e430]
+                - paragraph [ref=f55e431]
+              - generic [ref=f55e432]:
+                - paragraph [ref=f55e433]
+                - paragraph [ref=f55e434]
+                - paragraph [ref=f55e435]
+              - generic [ref=f55e436]:
+                - paragraph [ref=f55e437]
+                - paragraph [ref=f55e438]
+                - paragraph [ref=f55e439]
+          - generic [ref=f55e440]:
+            - paragraph [ref=f55e442]
+            - generic [ref=f55e443]:
+              - generic [ref=f55e446]:
+                - paragraph [ref=f55e447]
+                - paragraph [ref=f55e448]
+                - paragraph [ref=f55e449]
+                - paragraph [ref=f55e450]
+              - generic [ref=f55e451]:
+                - paragraph [ref=f55e452]
+                - paragraph [ref=f55e453]
+                - paragraph [ref=f55e454]
+              - generic [ref=f55e455]:
+                - paragraph [ref=f55e456]
+                - paragraph [ref=f55e457]
+                - paragraph [ref=f55e458]
+              - generic [ref=f55e459]:
+                - paragraph [ref=f55e460]
+                - paragraph [ref=f55e461]
+                - paragraph [ref=f55e462]
+              - generic [ref=f55e463]:
+                - paragraph [ref=f55e464]
+                - paragraph [ref=f55e465]
+                - paragraph [ref=f55e466]
+          - generic [ref=f55e467]:
+            - paragraph [ref=f55e469]
+            - generic [ref=f55e470]:
+              - generic [ref=f55e473]:
+                - paragraph [ref=f55e474]
+                - paragraph [ref=f55e475]
+                - paragraph [ref=f55e476]
+                - paragraph [ref=f55e477]
+              - generic [ref=f55e478]:
+                - paragraph [ref=f55e479]
+                - paragraph [ref=f55e480]
+                - paragraph [ref=f55e481]
+              - generic [ref=f55e482]:
+                - paragraph [ref=f55e483]
+                - paragraph [ref=f55e484]
+                - paragraph [ref=f55e485]
+              - generic [ref=f55e486]:
+                - paragraph [ref=f55e487]
+                - paragraph [ref=f55e488]
+                - paragraph [ref=f55e489]
+              - generic [ref=f55e490]:
+                - paragraph [ref=f55e491]
+                - paragraph [ref=f55e492]
+                - paragraph [ref=f55e493]
+          - generic [ref=f55e494]:
+            - paragraph [ref=f55e496]
+            - generic [ref=f55e497]:
+              - generic [ref=f55e500]:
+                - paragraph [ref=f55e501]
+                - paragraph [ref=f55e502]
+                - paragraph [ref=f55e503]
+                - paragraph [ref=f55e504]
+              - generic [ref=f55e505]:
+                - paragraph [ref=f55e506]
+                - paragraph [ref=f55e507]
+                - paragraph [ref=f55e508]
+              - generic [ref=f55e509]:
+                - paragraph [ref=f55e510]
+                - paragraph [ref=f55e511]
+                - paragraph [ref=f55e512]
+              - generic [ref=f55e513]:
+                - paragraph [ref=f55e514]
+                - paragraph [ref=f55e515]
+                - paragraph [ref=f55e516]
+              - generic [ref=f55e517]:
+                - paragraph [ref=f55e518]
+                - paragraph [ref=f55e519]
+                - paragraph [ref=f55e520]
+    - contentinfo [ref=f55e522]:
+      - generic [ref=f55e523]:
+        - list [ref=f55e525]:
+          - listitem [ref=f55e526]:
+            - link "Chính trị" [ref=f55e527] [cursor=pointer]:
+              - /url: /chinh-tri
+          - listitem [ref=f55e528]:
+            - link "Thời sự" [ref=f55e529] [cursor=pointer]:
+              - /url: /thoi-su
+          - listitem [ref=f55e530]:
+            - link "Kinh doanh" [ref=f55e531] [cursor=pointer]:
+              - /url: /kinh-doanh
+          - listitem [ref=f55e532]:
+            - link "Dân tộc và Tôn giáo" [ref=f55e533] [cursor=pointer]:
+              - /url: /dan-toc-ton-giao
+          - listitem [ref=f55e534]:
+            - link "Thể thao" [ref=f55e535] [cursor=pointer]:
+              - /url: /the-thao
+          - listitem [ref=f55e536]:
+            - link "Giáo dục" [ref=f55e537] [cursor=pointer]:
+              - /url: /giao-duc
+          - listitem [ref=f55e538]:
+            - link "Thế giới" [ref=f55e539] [cursor=pointer]:
+              - /url: /the-gioi
+          - listitem [ref=f55e540]:
+            - link "Đời sống" [ref=f55e541] [cursor=pointer]:
+              - /url: /doi-song
+          - listitem [ref=f55e542]:
+            - link "Văn hóa - Giải trí" [ref=f55e543] [cursor=pointer]:
+              - /url: /van-hoa-giai-tri
+          - listitem [ref=f55e544]:
+            - link "Sức khỏe" [ref=f55e545] [cursor=pointer]:
+              - /url: /suc-khoe
+          - listitem [ref=f55e546]:
+            - link "Công nghệ" [ref=f55e547] [cursor=pointer]:
+              - /url: /cong-nghe
+          - listitem [ref=f55e548]:
+            - link "Ô tô xe máy" [ref=f55e549] [cursor=pointer]:
+              - /url: /oto-xe-may
+          - listitem [ref=f55e550]:
+            - link "Du lịch" [ref=f55e551] [cursor=pointer]:
+              - /url: /du-lich
+          - listitem [ref=f55e552]:
+            - link "Bất động sản" [ref=f55e553] [cursor=pointer]:
+              - /url: /bat-dong-san
+          - listitem [ref=f55e554]:
+            - link "Bạn đọc" [ref=f55e555] [cursor=pointer]:
+              - /url: /ban-doc
+          - listitem [ref=f55e556]:
+            - link "Tuần Việt Nam" [ref=f55e557] [cursor=pointer]:
+              - /url: /tuan-viet-nam
+          - listitem [ref=f55e558]:
+            - link "Công nghiệp hỗ trợ" [ref=f55e559] [cursor=pointer]:
+              - /url: /hop-tac/cong-nghiep-ho-tro
+          - listitem [ref=f55e560]:
+            - link "Giảm nghèo bền vững" [ref=f55e561] [cursor=pointer]:
+              - /url: https://giamngheobenvung.vietnamnet.vn
+          - listitem [ref=f55e562]:
+            - link "Nông thôn mới" [ref=f55e563] [cursor=pointer]:
+              - /url: /nong-thon-moi
+          - listitem [ref=f55e564]:
+            - link "Dân tộc thiểu số và miền núi" [ref=f55e565] [cursor=pointer]:
+              - /url: /dan-toc-thieu-so-va-mien-nui
+          - listitem [ref=f55e566]:
+            - link "Nội dung chuyên đề" [ref=f55e567] [cursor=pointer]:
+              - /url: /noi-dung-chuyen-de
+          - listitem [ref=f55e568]:
+            - link "English" [ref=f55e569] [cursor=pointer]:
+              - /url: /en
+          - listitem [ref=f55e570]:
+            - link "Hồ sơ" [ref=f55e571] [cursor=pointer]:
+              - /url: /ho-so
+          - listitem [ref=f55e572]:
+            - link "Ảnh" [ref=f55e573] [cursor=pointer]:
+              - /url: /anh
+          - listitem [ref=f55e574]:
+            - link "Video" [ref=f55e575] [cursor=pointer]:
+              - /url: /video
+          - listitem [ref=f55e576]:
+            - link "Multimedia" [ref=f55e577] [cursor=pointer]:
+              - /url: /multimedia
+          - listitem [ref=f55e578]:
+            - link "Podcast" [ref=f55e579] [cursor=pointer]:
+              - /url: /podcast
+          - listitem [ref=f55e580]:
+            - link [ref=f55e581] [cursor=pointer]:
+              - /url: /premium
+              - img "Tin tức VietNamNet" [ref=f55e582]
+          - listitem [ref=f55e583]:
+            - link "24h qua" [ref=f55e584] [cursor=pointer]:
+              - /url: /tin-tuc-24h
+        - generic [ref=f55e585]:
+          - link [ref=f55e587] [cursor=pointer]:
+            - /url: /
+            - img "Tin tức VietNamNet" [ref=f55e588]
+          - list [ref=f55e590]:
+            - listitem [ref=f55e591]: "Cơ quan chủ quản: Bộ Dân tộc và Tôn giáo"
+            - listitem [ref=f55e592]: "Số giấy phép: 146/GP-BVHTTDL, cấp ngày 17/10/2025"
+            - listitem [ref=f55e593]: "Tổng biên tập: Nguyễn Văn Bá"
+            - listitem [ref=f55e594]:
+              - link "Liên hệ tòa soạn" [ref=f55e595] [cursor=pointer]:
+                - /url: https://vietnamnet.vn/thong-tin-toa-soan
+            - listitem [ref=f55e596]: "Địa chỉ: Tầng 6 và Tầng 7, số 347 Đội Cấn, phường Ngọc Hà, TP. Hà Nội."
+            - listitem [ref=f55e597]: "Điện thoại: 02437722729 - Hotline: 0923457788"
+            - listitem [ref=f55e598]: "Email: vietnamnet@vietnamnet.vn"
+            - listitem [ref=f55e599]: © 1997 Báo VietNamNet. All rights reserved. Chỉ được phát hành lại thông tin từ website này khi có sự đồng ý bằng văn bản của báo VietNamNet.
+          - generic [ref=f55e600]:
+            - list [ref=f55e602]:
+              - listitem [ref=f55e603]:
+                - link "Liên hệ quảng cáo" [ref=f55e604] [cursor=pointer]:
+                  - /url: https://vads.vn/#vnn_source=trangchu&vnn_medium=menu-bottom
+              - listitem [ref=f55e605]: Công ty Cổ phần Truyền thông VietNamNet
+              - listitem [ref=f55e606]: "Hotline: 0919405885 (Hà Nội) - 0919435885 (Tp.HCM)"
+              - listitem [ref=f55e607]: "Email: contact@vietnamnet.vn"
+              - listitem [ref=f55e608]:
+                - text: "Báo giá:"
+                - link "http://vads.vn" [ref=f55e609] [cursor=pointer]:
+                  - /url: http://vads.vn
+              - listitem [ref=f55e610]: "Hỗ trợ kỹ thuật: support@tech.vietnamnet.vn"
+            - generic [ref=f55e611]:
+              - list [ref=f55e612]:
+                - listitem [ref=f55e613]: Theo dõi VietNamNet trên
+              - list [ref=f55e614]:
+                - listitem [ref=f55e615]:
+                  - link [ref=f55e616] [cursor=pointer]:
+                    - /url: https://www.facebook.com/vietnamnet.vn
+                    - img "VietNamNet Facebook" [ref=f55e617]
+                - listitem [ref=f55e618]:
+                  - link [ref=f55e619] [cursor=pointer]:
+                    - /url: https://www.youtube.com/c/B%C3%A1oVietNamNetTV
+                    - img "VietNamNet Youtube" [ref=f55e620]
+                - listitem [ref=f55e621]:
+                  - link [ref=f55e622] [cursor=pointer]:
+                    - /url: https://www.tiktok.com/@vietnamnet.vn
+                    - img "VietNamNet Tiktok" [ref=f55e623]
+                - listitem [ref=f55e624]:
+                  - link [ref=f55e625] [cursor=pointer]:
+                    - /url: http://zalo.me/660139855964186242?src=qr
+                    - img "VietNamNet Zalo" [ref=f55e626]
+              - generic [ref=f55e627]:
+                - link "Tải ứng dụng" [ref=f55e628] [cursor=pointer]:
+                  - /url: /download-app
+                - link "Độc giả gửi bài" [ref=f55e629] [cursor=pointer]:
+                  - /url: /doc-gia-gui-bai
+                - link "Tuyển dụng" [ref=f55e630] [cursor=pointer]:
+                  - /url: /tuyen-dung
+  - text:     
+  - iframe
+  - iframe
+  - iframe

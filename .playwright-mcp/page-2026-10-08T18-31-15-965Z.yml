@@ -1,0 +1,254 @@
+- generic [active] [ref=f275e1]:
+  - dialog [ref=f275e2]:
+    - generic [ref=f275e7]:
+      - generic [ref=f275e8]:
+        - paragraph [ref=f275e9]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+        - paragraph [ref=f275e10]:
+          - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+          - link "Điều khoản về quyền riêng tư" [ref=f275e11] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+      - generic [ref=f275e12]:
+        - link "Chấp nhận" [ref=f275e14] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+        - link "Từ chối" [ref=f275e16] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+      - link "Các lựa chọn khác" [ref=f275e18] [cursor=pointer]:
+        - /url: "javascript: void(0)"
+  - banner [ref=f275e19]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f275e20] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f275e23] [cursor=pointer]
+    - generic [ref=f275e26]:
+      - link [ref=f275e27] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f275e28]
+      - search [ref=f275e29]:
+        - button "Tìm kiếm" [ref=f275e32] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f275e33]: liquid paracetamol dosing errors parents mg ml confusion study children
+        - generic [ref=f275e34] [cursor=pointer]
+        - generic [ref=f275e36] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f275e41] [cursor=pointer]
+      - link [ref=f275e43] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=f13a70a8a679f0f01325b5cf22ab664d8fee9a4d98ab7bedee54c79c30afc601JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT1saXF1aWQrcGFyYWNldGFtb2wrZG9zaW5nK2Vycm9ycytwYXJlbnRzK21nK21sK2NvbmZ1c2lvbitzdHVkeStjaGlsZHJlbiZzZW5kcXVlcnk9MSZmb3JtPUhFQ09EWA&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f275e44]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f275e46]:
+      - link "Đăng nhập" [ref=f275e47] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f275e49] [cursor=pointer]
+    - navigation "Bộ lọc Tìm kiếm" [ref=f275e50]:
+      - list [ref=f275e51]:
+        - listitem [ref=f275e52]:
+          - link "Tất cả" [ref=f275e53] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f275e55]:
+          - link "Web" [ref=f275e56] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c60a6f1edd2bb62122c3d84957e8446162a99ea12f3216647ccdf7a194c3d87bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPWxpcXVpZCtwYXJhY2V0YW1vbCtkb3NpbmcrZXJyb3JzK3BhcmVudHMrbWcrbWwrY29uZnVzaW9uK3N0dWR5K2NoaWxkcmVuJndlYnNjcD0xJkZPUk09SERSV1ND&ntb=1
+        - listitem [ref=f275e57]:
+          - link "Tìm kiếm" [ref=f275e58] [cursor=pointer]:
+            - /url: /copilotsearch?q=liquid+paracetamol+dosing+errors+parents+mg+ml+confusion+study+children&FORM=CSSCOP
+        - listitem [ref=f275e61]:
+          - link "Hình ảnh" [ref=f275e62] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ba725aeb1540f57b3f872113ae5c3386bbce32ee1c8041a49a77ef7d84c85245JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1saXF1aWQrcGFyYWNldGFtb2wrZG9zaW5nK2Vycm9ycytwYXJlbnRzK21nK21sK2NvbmZ1c2lvbitzdHVkeStjaGlsZHJlbiZGT1JNPUhEUlNDMw&ntb=1
+        - listitem [ref=f275e63]:
+          - link "Video" [ref=f275e64] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7354e8ba2500322929e979276ce56aa31260c7e7e9fd974790650bf1aa0a5ce5JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT1saXF1aWQrcGFyYWNldGFtb2wrZG9zaW5nK2Vycm9ycytwYXJlbnRzK21nK21sK2NvbmZ1c2lvbitzdHVkeStjaGlsZHJlbiZGT1JNPUhEUlNDNA&ntb=1
+        - listitem [ref=f275e65]:
+          - link "Bản đồ" [ref=f275e66] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=8caf7d4f1d3a83db2dea4b1ec7e3fba08342fc26d98238b094bd7c2373a0ea66JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT1saXF1aWQrcGFyYWNldGFtb2wrZG9zaW5nK2Vycm9ycytwYXJlbnRzK21nK21sK2NvbmZ1c2lvbitzdHVkeStjaGlsZHJlbiZGT1JNPUhEUlNDNg&ntb=1
+        - listitem [ref=f275e67]:
+          - button [ref=f275e68] [cursor=pointer]
+  - generic [ref=f275e72]:
+    - main "Kết quả Tìm kiếm" [ref=f275e73]:
+      - generic [ref=f275e75]:
+        - generic [aria-hidden] [ref=f275e76]:
+          - generic [ref=f275e77] [cursor=pointer]
+          - generic [ref=f275e80] [cursor=pointer]
+          - generic [ref=f275e83] [cursor=pointer]
+        - text: Về 34.800 kết quả
+      - list [ref=f275e86]:
+        - listitem [ref=f275e87]:
+          - generic [ref=f275e95]:
+            - generic [ref=f275e98]:
+              - generic [ref=f275e100]:
+                - button "Thích" [ref=f275e101]
+                - button "Không thích" [ref=f275e104]
+              - generic [ref=f275e111]:
+                - strong [ref=f275e112]: Studies
+                - text: suggest that
+                - strong [ref=f275e113]: parents
+                - text: frequently
+                - strong [ref=f275e114]: misunderstand
+                - text: instructions regarding how to administer medication to their
+                - strong [ref=f275e115]: children
+                - text: correctly, with over 40% of caregivers making
+                - strong [ref=f275e116]: errors
+                - text: in
+                - strong [ref=f275e117]: dosing liquid medications
+                - text: ; 1 – 4 those with low health literacy, as well as those with limited English proficiency, are at particular risk for medication administration
+                - strong [ref=f275e118]: errors
+                - text: . 5, 6, 7 Potential strategies to reduce
+                - strong [ref=f275e119]: errors
+                - text: include the use of a health literacy-informed approach to improving provider communication of medication instructions to
+                - strong [ref=f275e120]: parents
+                - text: through a)the use of advanced counseling strategies, and b)the provision of standardized
+                - strong [ref=f275e121]: dosing
+                - text: instruments. 3, 8
+              - 'link "National Institutes of Health (NIH) Liquid Medication Dosing Errors in Children: Role of Provider ... Studies suggest that parents frequently misunderstand instructions regarding how to administer medication to their children correctly, with over 40% of caregivers making errors in …" [ref=f275e125] [cursor=pointer]':
+                - /url: https://www.bing.com/ck/a?!&&p=9a979cccb3e8c1fa05539bae5869767861847adb0a29364b569b5243e557f67eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9wbWMubmNiaS5ubG0ubmloLmdvdi9hcnRpY2xlcy9QTUM0MDM0NTIwLyM6fjp0ZXh0PVN0dWRpZXMlMjBzdWdnZXN0JTIwdGhhdCUyMHBhcmVudHMlMjBmcmVxdWVudGx5JTIwbWlzdW5kZXJzdGFuZCUyMGluc3RydWN0aW9ucyUyMHJlZ2FyZGluZyxiJTI5dGhlJTIwcHJvdmlzaW9uJTIwb2YlMjBzdGFuZGFyZGl6ZWQlMjBkb3NpbmclMjBpbnN0cnVtZW50cy4lMjAzJTJDJTIwOA&ntb=1
+                - generic [ref=f275e126]:
+                  - generic [ref=f275e127]: National Institutes of Health (NIH)
+                  - generic [ref=f275e131]: "Liquid Medication Dosing Errors in Children: Role of Provider ..."
+                  - generic: Studies suggest that parents frequently misunderstand instructions regarding how to administer medication to their children correctly, with over 40% of caregivers making errors in …
+            - status
+        - listitem [ref=f275e134]:
+          - link "nih.gov" [ref=f275e136] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=a8ebfc8fa6469a694965fbe0955585aa56f09c77e1913294652d2a4cad0de84bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9wbWMubmNiaS5ubG0ubmloLmdvdi9hcnRpY2xlcy9QTUM0MDM0NTIwLw&ntb=1
+            - generic [ref=f275e141]:
+              - generic [ref=f275e142]: nih.gov
+              - generic [ref=f275e144]:
+                - generic [ref=f275e145]: https://pmc.ncbi.nlm.nih.gov › articles
+                - generic [ref=f275e146]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e147]:
+            - 'link "Liquid Medication Dosing Errors in Children: Role of Provider ..." [ref=f275e148] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=a8ebfc8fa6469a694965fbe0955585aa56f09c77e1913294652d2a4cad0de84bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9wbWMubmNiaS5ubG0ubmloLmdvdi9hcnRpY2xlcy9QTUM0MDM0NTIwLw&ntb=1
+          - paragraph [ref=f275e150]: To examine the degree to which recommended provider counseling strategies, including advanced communication techniques and …
+        - listitem [ref=f275e151]:
+          - link "ScienceDirect" [ref=f275e153] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b271fb212c17fd756d2149a01c9551bfc097a1e52ba0082ef66bdcfafb1c431fJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL3BpaS9TMTg3NjI4NTkxODMwMTIxOQ&ntb=1
+            - generic [ref=f275e158]:
+              - generic [ref=f275e159]: ScienceDirect
+              - generic [ref=f275e161]:
+                - generic [ref=f275e162]: https://www.sciencedirect.com › science › article › pii
+                - generic [ref=f275e163]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e164]:
+            - link "Medication Errors With Pediatric Liquid Acetaminophen After ..." [ref=f275e165] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=b271fb212c17fd756d2149a01c9551bfc097a1e52ba0082ef66bdcfafb1c431fJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL3BpaS9TMTg3NjI4NTkxODMwMTIxOQ&ntb=1
+          - paragraph [ref=f275e167]: 1 thg 7, 2018 · Dosing of pediatric liquid medicines poses challenges to caregivers. The caregiver must determine the correct dose …
+        - listitem [ref=f275e168]:
+          - link "Springer" [ref=f275e170] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=81d11fd019c7ad5e9b63b1382e9ce430d5c8fba6b875a689b33530e5c69754feJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9saW5rLnNwcmluZ2VyLmNvbS9hcnRpY2xlLzEwLjEwMDcvczQwMjY3LTAyNi0wMTIyOS13&ntb=1
+            - generic [ref=f275e175]:
+              - generic [ref=f275e176]: Springer
+              - generic [ref=f275e178]:
+                - generic [ref=f275e179]: https://link.springer.com › article
+                - generic [ref=f275e180]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e181]:
+            - 'link "Paracetamol dosing errors at two tertiary paediatric hospitals: a ..." [ref=f275e182] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=81d11fd019c7ad5e9b63b1382e9ce430d5c8fba6b875a689b33530e5c69754feJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9saW5rLnNwcmluZ2VyLmNvbS9hcnRpY2xlLzEwLjEwMDcvczQwMjY3LTAyNi0wMTIyOS13&ntb=1
+          - paragraph [ref=f275e184]: 2 thg 4, 2026 · Paracetamol is commonly prescribed in paediatric hospitals and frequently associated with medication errors. This …
+        - listitem [ref=f275e185]:
+          - link "ScienceDirect" [ref=f275e187] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6653d02bdc16d338ba57372d5c92149877270b80034b36823f9538c9abec41a4JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL3BpaS9TMTg3NjI4NTkxNDAwMDA1OQ&ntb=1
+            - generic [ref=f275e192]:
+              - generic [ref=f275e193]: ScienceDirect
+              - generic [ref=f275e195]:
+                - generic [ref=f275e196]: https://www.sciencedirect.com › science › article › pii
+                - generic [ref=f275e197]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e198]:
+            - 'link "Liquid Medication Dosing Errors in Children: Role of Provider ..." [ref=f275e199] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=6653d02bdc16d338ba57372d5c92149877270b80034b36823f9538c9abec41a4JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuc2NpZW5jZWRpcmVjdC5jb20vc2NpZW5jZS9hcnRpY2xlL3BpaS9TMTg3NjI4NTkxNDAwMDA1OQ&ntb=1
+          - paragraph [ref=f275e201]: 1 thg 5, 2014 · To examine the degree to which recommended provider counseling strategies, including advanced communication …
+        - listitem [ref=f275e202]:
+          - link "nih.gov" [ref=f275e204] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4dfd315644b16d4a5c4822cd0918e81af6625f871985f3aae2fa175cbdfdb060JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9wbWMubmNiaS5ubG0ubmloLmdvdi9hcnRpY2xlcy9QTUM3NjkyOTkwLw&ntb=1
+            - generic [ref=f275e209]:
+              - generic [ref=f275e210]: nih.gov
+              - generic [ref=f275e212]:
+                - generic [ref=f275e213]: https://pmc.ncbi.nlm.nih.gov › articles
+                - generic [ref=f275e214]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e215]:
+            - link "Literature review of medication administration problems in paediatrics ..." [ref=f275e216] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=4dfd315644b16d4a5c4822cd0918e81af6625f871985f3aae2fa175cbdfdb060JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9wbWMubmNiaS5ubG0ubmloLmdvdi9hcnRpY2xlcy9QTUM3NjkyOTkwLw&ntb=1
+          - paragraph [ref=f275e218]: In this systematic review, the common medication administration problems occurring at home as well as the potential causalities and …
+        - listitem [ref=f275e219]:
+          - link "semanticscholar.org" [ref=f275e221] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ebd6c6e46cc482aaf23e71e5fcbecab106cc36835000a2d42c196318b11cbd4cJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9wZGZzLnNlbWFudGljc2Nob2xhci5vcmcvMjYwNS8xYzNlYzZlNWE1ZDlmYTY4MzA3OWQ2NWFmZjQ3MmZmOTZmZTQucGRm&ntb=1
+            - generic [ref=f275e226]:
+              - generic [ref=f275e227]: semanticscholar.org
+              - generic [ref=f275e229]:
+                - generic [ref=f275e230]: https://pdfs.semanticscholar.org
+                - text: · PDF tệp
+                - generic [ref=f275e231]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e232]:
+            - link "Assessment of Paracetamol Dosing Accuracy among Caregivers in …" [ref=f275e233] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=ebd6c6e46cc482aaf23e71e5fcbecab106cc36835000a2d42c196318b11cbd4cJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9wZGZzLnNlbWFudGljc2Nob2xhci5vcmcvMjYwNS8xYzNlYzZlNWE1ZDlmYTY4MzA3OWQ2NWFmZjQ3MmZmOTZmZTQucGRm&ntb=1
+          - paragraph [ref=f275e235]: liquid formulations of paracetamol falls uopn caregivers, most often parents. Numerous studies across variou. settings have …
+        - listitem [ref=f275e236]:
+          - link "ResearchGate" [ref=f275e238] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6ebf8d6c7c967495240b98b765acfd4794af1e4431de8239a2c5647dd8523831JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zNzMxOTI0OThfVEhFX0NBUkVHSVZFUidTX0FCSUxJVFlfVE9fRE9TRV9MSVFVSURfQUNFVEFNSU5PUEhFTl9GT1JNVUxBVElPTlNfRk9SX1BFRElBVFJJQ1M&ntb=1
+            - generic [ref=f275e243]:
+              - generic [ref=f275e244]: ResearchGate
+              - generic [ref=f275e246]:
+                - generic [ref=f275e247]: https://www.researchgate.net › publication
+                - generic [ref=f275e248]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e249]:
+            - link "(PDF) THE CAREGIVER’S ABILITY TO DOSE LIQUID" [ref=f275e250] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=6ebf8d6c7c967495240b98b765acfd4794af1e4431de8239a2c5647dd8523831JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zNzMxOTI0OThfVEhFX0NBUkVHSVZFUidTX0FCSUxJVFlfVE9fRE9TRV9MSVFVSURfQUNFVEFNSU5PUEhFTl9GT1JNVUxBVElPTlNfRk9SX1BFRElBVFJJQ1M&ntb=1
+          - paragraph [ref=f275e252]: Despite the safety, overdose leads to liver damage. The liquid dosing is most challenging due to the using incorrect measuring …
+        - listitem [ref=f275e253]:
+          - link "Springer" [ref=f275e255] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6d0deb6824e758065077fd0af1c8c05aec8c33612e258314acde246f355a1339JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9saW5rLnNwcmluZ2VyLmNvbS9jb250ZW50L3BkZi8xMC4xMDA3L3M0MDI2Ny0wMjYtMDEyMjktdy5wZGY&ntb=1
+            - generic [ref=f275e260]:
+              - generic [ref=f275e261]: Springer
+              - generic [ref=f275e263]:
+                - generic [ref=f275e264]: https://link.springer.com › content › pdf
+                - text: · PDF tệp
+                - generic [ref=f275e265]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e266]:
+            - 'link "Paracetamol dosing errors at two tertiary paediatric hospitals: a ..." [ref=f275e267] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=6d0deb6824e758065077fd0af1c8c05aec8c33612e258314acde246f355a1339JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9saW5rLnNwcmluZ2VyLmNvbS9jb250ZW50L3BkZi8xMC4xMDA3L3M0MDI2Ny0wMjYtMDEyMjktdy5wZGY&ntb=1
+          - paragraph [ref=f275e269]: This study highlights that paracetamol dosing errors remain common in specialist paediatric hospitals, with distinct patterns across …
+        - listitem [ref=f275e270]:
+          - link "ijopp.org" [ref=f275e272] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=098d17229f505d29cdd00511d0793005e522cc2edf0f129df35432f1526ca41dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuaWpvcHAub3JnL2FydGljbGUvMTUvMy8yMzUucGRm&ntb=1
+            - generic [ref=f275e277]:
+              - generic [ref=f275e278]: ijopp.org
+              - generic [ref=f275e280]:
+                - generic [ref=f275e281]: https://www.ijopp.org › article
+                - text: · PDF tệp
+                - generic [ref=f275e282]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e283]:
+            - link "Liquid Medication Dosing Error amongst Parents/ Caregivers at ..." [ref=f275e284] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=098d17229f505d29cdd00511d0793005e522cc2edf0f129df35432f1526ca41dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuaWpvcHAub3JnL2FydGljbGUvMTUvMy8yMzUucGRm&ntb=1
+          - paragraph [ref=f275e286]: Strategies for decreasing dosing errors in pediatric patients involve increasing awareness and health literacy among parents and …
+        - listitem [ref=f275e287]:
+          - link "ResearchGate" [ref=f275e289] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=d672b573f4f0bee6be135446900abd7820b6900f4a7ae6a4a9ffda625498e013JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMjM2MTI0MTRfTWVkaWNhdGlvbl9FcnJvcnNfV2l0aF9QZWRpYXRyaWNfTGlxdWlkX0FjZXRhbWlub3BoZW5fQWZ0ZXJfU3RhbmRhcmRpemF0aW9uX29mX0NvbmNlbnRyYXRpb25fYW5kX1BhY2thZ2luZ19JbXByb3ZlbWVudHM&ntb=1
+            - generic [ref=f275e294]:
+              - generic [ref=f275e295]: ResearchGate
+              - generic [ref=f275e297]:
+                - generic [ref=f275e298]: https://www.researchgate.net › publication
+                - generic [ref=f275e299]: Dịch Kết quả này
+          - heading [level=2] [ref=f275e300]:
+            - link "Medication Errors With Pediatric Liquid Acetaminophen After ..." [ref=f275e301] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=d672b573f4f0bee6be135446900abd7820b6900f4a7ae6a4a9ffda625498e013JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zMjM2MTI0MTRfTWVkaWNhdGlvbl9FcnJvcnNfV2l0aF9QZWRpYXRyaWNfTGlxdWlkX0FjZXRhbWlub3BoZW5fQWZ0ZXJfU3RhbmRhcmRpemF0aW9uX29mX0NvbmNlbnRyYXRpb25fYW5kX1BhY2thZ2luZ19JbXByb3ZlbWVudHM&ntb=1
+          - paragraph [ref=f275e303]: 1 thg 3, 2018 · We found significantly more dosing errors with the infant concentration (200 mg/5 mL) as opposed to the children's …
+        - listitem [ref=f275e304]:
+          - link "Một số kết quả đã bị xóa" [ref=f275e306] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e7e0e4b27a77d08e3ba8e737568a767ff44dde3e84c17c7ede3301285b6ea292JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+        - listitem [ref=f275e307]:
+          - navigation "Thêm kết quả cho liquid paracetamol dosing errors parents mg ml confusion study children":
+            - list:
+              - listitem [ref=f275e308]:
+                - generic "Trang 1" [ref=f275e309]: "1"
+              - listitem [ref=f275e310]:
+                - link "Trang 2" [ref=f275e311] [cursor=pointer]:
+                  - /url: /search?q=liquid+paracetamol+dosing+errors+parents+mg+ml+confusion+study+children&FPIG=8D22E4DDEEAF461AB6565E07490A5D78&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=f275e312]:
+                - link "Trang 3" [ref=f275e313] [cursor=pointer]:
+                  - /url: /search?q=liquid+paracetamol+dosing+errors+parents+mg+ml+confusion+study+children&FPIG=8D22E4DDEEAF461AB6565E07490A5D78&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=f275e314]:
+                - link "Trang tiếp theo" [ref=f275e315] [cursor=pointer]:
+                  - /url: /search?q=liquid+paracetamol+dosing+errors+parents+mg+ml+confusion+study+children&FPIG=8D22E4DDEEAF461AB6565E07490A5D78&first=11&FORM=PORE
+    - complementary "Kết quả bổ sung" [ref=f275e316]:
+      - list
+  - contentinfo [ref=f275e317]:
+    - generic [ref=f275e318]:
+      - list:
+        - listitem [ref=f275e319]:
+          - link "Quyền riêng tư" [ref=f275e320] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f275e321]:
+          - link "Điều khoản" [ref=f275e322] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

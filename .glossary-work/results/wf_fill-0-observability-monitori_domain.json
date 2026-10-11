@@ -1,0 +1,388 @@
+{
+  "domain": "Observability & monitoring",
+  "entries": [
+    {
+      "term": "Structured logging",
+      "aliases": [
+        "JSON logging",
+        "nhật ký có cấu trúc"
+      ],
+      "level": "basic",
+      "problem": "Service ghi log dạng text tự do ('ERROR: timeout when calling...') chạy trên vài chục container, dev phải ssh từng máy để grep chuỗi; khi cần lọc 'lỗi theo user_id' hay đếm 'số lỗi mỗi phút' thì không làm được vì thông tin nằm lẫn trong câu chữ. Sau sự cố 2h sáng, container đã restart và file log bị xoay vòng thì bằng chứng biến mất hoàn toàn.",
+      "how": "Ép mỗi dòng log thành record JSON có trường cố định (timestamp, level, msg, request_id...) để filter/group-by/index ngay ở tầng thu thập, đồng thời app chỉ ghi ra stdout để log shipper tự kéo đi — không tự quản lý file.",
+      "origin": "Mô hình 12-factor (Heroku, Adam Wiggins), Factor XI 'Treat logs as event streams'",
+      "related": [
+        "Log aggregation & ELK Stack",
+        "Trace Context Propagation",
+        "Structured event"
+      ]
+    },
+    {
+      "term": "Log aggregation & ELK Stack",
+      "aliases": [
+        "log aggregation",
+        "ELK",
+        "Elasticsearch-Logstash-Kibana",
+        "xây dựng trung tâm log"
+      ],
+      "level": "basic",
+      "problem": "Một request đi qua 8 service, mỗi service ghi log vào file của máy mình; user báo lỗi nhưng dev không thể ssh hàng trăm node để đọc file, và mỗi kiểu lỗi nằm ở một nơi nên không soi chéo được. Không có nơi tập trung thì điều tra incident = chạy khắp nơi.",
+      "how": "Logstash/Beats gom log từ mọi node, Elasticsearch lưu index cho phép search full-text + filter theo field, Kibana để tra cứu và vẽ; toàn hệ thống có một chỗ hỏi 'về request này đã xảy ra gì'.",
+      "origin": "Elasticsearch (Shay Banon) mở nguồn năm 2010; stack ELK hình thành từ đó",
+      "related": [
+        "Structured logging",
+        "Grafana Loki",
+        "Distributed tracing"
+      ]
+    },
+    {
+      "term": "Grafana Loki",
+      "aliases": [
+        "Loki",
+        "log aggregation kiểu Prometheus"
+      ],
+      "level": "intermediate",
+      "problem": "ELK index full-text rất mạnh nhưng chi phí lưu trữ/cluster Elasticsearch phình khi log chạm hàng TB/ngày; nhiều team chỉ cần tra log theo service/pod trong vài ngày gần, không cần full-text search mọi thứ.",
+      "how": "Loki chỉ index metadata (labels) chứ không index nội dung log, giữ log nén thô trong object storage và filter khi query — chi phí thấp hơn đáng kể, mô hình nhãn + query language (LogQL) giống Prometheus.",
+      "origin": "Grafana Labs (năm ra mắt không verify được)",
+      "related": [
+        "Log aggregation & ELK Stack",
+        "Prometheus Pull Model",
+        "Metric cardinality"
+      ]
+    },
+    {
+      "term": "Metrics (time-series)",
+      "aliases": [
+        "metric",
+        "số liệu",
+        "thời gian series",
+        "time_series"
+      ],
+      "level": "basic",
+      "problem": "Log text không trả lời được 'p99 latency 5 phút qua là bao nhiêu, so với hôm qua thế nào' — parse từng dòng quá chậm và đắt đỏ; dashboard và alert cần dữ liệu liên tục, dạng số để aggregate và so ngưỡng.",
+      "how": "Ghi dữ liệu dạng (timestamp, tên metric, value, labels) — time series — cho phép sum/avg/percentile theo khoảng thời gian với chi phí lưu trữ và truy vấn thấp hơn log rất nhiều.",
+      "origin": "không rõ",
+      "related": [
+        "Prometheus Pull Model",
+        "Monitoring",
+        "Metric cardinality"
+      ]
+    },
+    {
+      "term": "Monitoring",
+      "aliases": [
+        "giám sát",
+        "monitoring dashboard"
+      ],
+      "level": "basic",
+      "problem": "Không ai ngồi nhìn console 24/7; sự cố lúc 3h sáng chỉ được phát hiện khi customer support mở ticket. Team cần lớp liên tục đo những câu hỏi ĐÃ biết trước (CPU bao nhiêu, lỗi bao nhiêu phần trăm) và tự báo khi sai lệch.",
+      "how": "Thu thập số liệu định kỳ, vẽ dashboard và đặt ngưỡng; khi metric vượt ngưỡng thì hệ thống cảnh báo, con người chỉ can thiệp khi có việc thật.",
+      "origin": "không rõ",
+      "related": [
+        "Alerting (threshold alert)",
+        "Metrics (time-series)",
+        "Observability"
+      ]
+    },
+    {
+      "term": "Health check (/health, /ready)",
+      "aliases": [
+        "health probe",
+        "liveness/readiness probe",
+        "kiểm tra sức khỏe service"
+      ],
+      "level": "basic",
+      "problem": "Process vẫn sống nhưng treo hoặc không kết nối được DB: load balancer/Kubernetes không biết, request vẫn route đến node hỏng và user thấy timeout trong khi node khác vẫn khỏe.",
+      "how": "Endpoint HTTP được probe định kỳ; liveness để orchestrator restart, readiness để LB ngừng gửi traffic cho tới khi service thật sự sẵn sàng.",
+      "origin": "không rõ (quy dıktan phổ biến trong Kubernetes/ECS)",
+      "related": [
+        "Black-box monitoring",
+        "Alerting (threshold alert)",
+        "Black-box vs white-box monitoring"
+      ]
+    },
+    {
+      "term": "Alerting (threshold alert)",
+      "aliases": [
+        "cảnh báo theo ngưỡng",
+        "threshold alert"
+      ],
+      "level": "basic",
+      "problem": "Dashboard chỉ có ích khi có người nhìn; incident lúc đêm khuya nếu không có gì đánh thức ai thì downtime kéo dài cho tới sáng. Cần hệ thống tự kết nối 'sai lệch' với 'con người có trách nhiệm'.",
+      "how": "Rule so sánh metric với ngưỡng (error rate > 5% trong 5 phút...) → gửi notification/pager tới on-call; alertmanager gộp (group) và dedup các alert trùng.",
+      "origin": "không rõ",
+      "related": [
+        "On-call rotation",
+        "Alert Fatigue",
+        "Monitoring"
+      ]
+    },
+    {
+      "term": "Alert fatigue",
+      "aliases": [
+        "mệt mỏi vì cảnh báo",
+        "alarm fatigue",
+        "cảnh báo nhiễu"
+      ],
+      "level": "basic",
+      "problem": "Team đặt alert cho mọi thứ → mỗi tuần vài trăm cảnh báo, phần lớn là noise (deploy restart, spike vô hại). On-call bắt đầu mute và bỏ qua, đến lúc incident thật cũng lờ đi → mất hàng giờ mới phát hiện sự cố.",
+      "how": "Chỉ alert theo symptom/actionable (không alert nguyên nhân vặt), group/dedup theo ngưỡng có ý nghĩa, đo tỷ lệ alert thật sự cần người và liên tục giảm nhiễu — cảnh báo phải xứng đáng để đánh thức người.",
+      "origin": "Thuật ngữ gốc từ y khoa (alarm fatigue): FDA ghi nhận 566 ca tử vong do cảnh báo bị bỏ qua giai đoạn 2005-2008; Joint Commission ra sentinel event alert tháng 4/2013",
+      "related": [
+        "Alerting (threshold alert)",
+        "On-call rotation",
+        "Four Golden Signals"
+      ]
+    },
+    {
+      "term": "Metric cardinality",
+      "aliases": [
+        "high-cardinality label",
+        "độ lớn số label",
+        "cardinality"
+      ],
+      "level": "intermediate",
+      "problem": "Dev gắn user_id/email làm label cho metric 'HTTP requests' → mỗi user một time series riêng; hệ thống 100k user sinh 100k series cho mỗi metric, Prometheus RAM/disk phình, query chậm, thậm chí OOM. Cardinality không kiểm soát là nguyên nhân kinh điển làm sập monitoring stack.",
+      "how": "Chỉ dùng label có tập giá trị hữu hạn và nhỏ (method, status, stage, service); giá trị không biên (user_id, email, request_id) phải để sang log/trace hoặc exemplar — mỗi tổ hợp label = một series mới nên mọi thứ vô hạn đều cấm.",
+      "origin": "không rõ (hướng dẫn thực hành trong tài liệu Prometheus về naming/labels)",
+      "related": [
+        "Prometheus Pull Model",
+        "Observability",
+        "Metrics (time-series)"
+      ]
+    },
+    {
+      "term": "OpenTelemetry (OTel)",
+      "aliases": [
+        "OTel",
+        "OTLP",
+        "OpenTelemetry SDK"
+      ],
+      "level": "intermediate",
+      "problem": "Mỗi vendor (Datadog, Jaeger, Zipkin, New Relic) có API instrumentation riêng; team phải viết lại code mỗi lần đổi công cụ, mỗi ngôn ngữ một kiểu hook, instrumentation rải rác và đủ thứ bị kẹp vào một backend duy nhất (lock-in).",
+      "how": "Framework trung gian chuẩn hóa: app instrument một lần theo API/SDK OTel, export qua giao thức OTLP → collector/router chuyển tiếp tới backend bất kỳ; sinh ra từ việc sáp nhập hai dự án cùng giải quyết một vách ngăn chuẩn hóa.",
+      "origin": "CNCF — công bố sáp nhập OpenTracing + OpenCensus ngày 21/5/2019",
+      "related": [
+        "Distributed tracing",
+        "Trace Context Propagation",
+        "OpenTelemetry Collector / observability pipeline"
+      ]
+    },
+    {
+      "term": "RED method",
+      "aliases": [
+        "Rate-Errors-Duration",
+        "phương pháp RED"
+      ],
+      "level": "intermediate",
+      "problem": "USE nói về tài nguyên phần cứng nhưng team làm product không biết 'một API nên đo gì'; mỗi service tự chế dashboard khác nhau, không so sánh được, và metric infra không phản ánh user đang thấy gì.",
+      "how": "Mọi service đo đúng 3 thứ: Rate (req/s), Errors (tỷ lệ lỗi), Duration (phân vị thời gian) — gần với trải nghiệm người dùng nên hợp để alert và đo SLA cho service kiểu request-driven.",
+      "origin": "Tom Wilkie, 2015 (trình bày tại GrafanaCon EU 2018)",
+      "related": [
+        "Profiling: CPU/heap, flame graph",
+        "Four Golden Signals",
+        "SLO/SLI"
+      ]
+    },
+    {
+      "term": "USE method",
+      "aliases": [
+        "Utilization-Saturation-Errors",
+        "phương pháp USE"
+      ],
+      "level": "intermediate",
+      "problem": "Khi hệ thống chậm hoặc tài nguyên cạn kiệt, đội vận hành thường tra metrics theo cảm tính: CPU trung bình, memory trung bình, các con số average che mất resource đang nghẽn. Thiếu một checklist cố định để rà từng resource CPU, memory, disk, network theo cùng bộ câu hỏi nên saturation và error bị bỏ sót, downtime kéo dài mà chưa xác định được bottleneck nằm ở đâu.",
+      "how": "Quét mọi resource theo đúng thứ tự ba câu hỏi: Utilization là % thời gian resource bận xử lý work; Saturation là lượng công việc đang chờ trong queue vượt capacity; Errors là số sự kiện lỗi của chính resource đó. Mỗi ô số gắn vào dashboard và alert resource-level, nhờ đó bottleneck hiện ra ở đúng resource thay vì bị average hóa.",
+      "origin": "Brendan Gregg — ACM Queue 2012 ('Thinking Methodically about Performance'), Communications of the ACM 2013",
+      "related": [
+        "RED method",
+        "Four Golden Signals",
+        "Metrics (time-series)"
+      ]
+    },
+    {
+      "term": "Four golden signals",
+      "aliases": [
+        "bốn tín hiệu vàng",
+        "latency-traffic-errors-saturation"
+      ],
+      "level": "intermediate",
+      "problem": "Alert theo nguyên nhân (disk 90%, queue dài) khiến on-call bị đánh thức cho việc có thể tự động hóa, và không phân biệt được cái nào thật sự gây hại cho user; cần bộ tín hiệu tập trung vào symptom để alert ít mà chất.",
+      "how": "Latency (phân biệt thành công/thất bại), Traffic, Errors, Saturation — đo từ ngoài vào để trả lời 'cái gì đang hỏng'; alert theo symptom, dùng tín hiệu nguyên nhân làm công cụ debug.",
+      "origin": "Google SRE book, chương 6 (2017, Rob Ewaschuk)",
+      "related": [
+        "RED method",
+        "Profiling: CPU/heap, flame graph",
+        "Black-box vs white-box monitoring"
+      ]
+    },
+    {
+      "term": "Black-box vs white-box monitoring",
+      "aliases": [
+        "giám sát đen hộp",
+        "giám sát trắng hộp",
+        "synthetic monitoring"
+      ],
+      "level": "intermediate",
+      "problem": "Chỉ watch metric nội bộ (white-box) thì không phát hiện được 'service vẫn alive nhưng user không đăng nhập được' vì sai config/response; chỉ probe từ ngoài (black-box) thì không thấy trước được failure sắp xảy ra và không có dữ liệu chẩn đoán.",
+      "how": "Dùng cả hai: white-box (metric/log/profile) cho early warning và chẩn đoán; black-box + synthetic probe (đăng nhập/tạo đơn định kỳ như user thật) để đo đúng symptom người dùng cảm nhận.",
+      "origin": "Google SRE book, chương 6 (2017)",
+      "related": [
+        "Health check (/health, /ready)",
+        "Four Golden Signals"
+      ]
+    },
+    {
+      "term": "Error budget",
+      "aliases": [
+        "ngân sách lỗi",
+        "ngân sách không ổn định"
+      ],
+      "level": "intermediate",
+      "problem": "Đặt mục tiêu 100% uptime thì team không dám deploy (mọi thay đổi đều gây sự cố), chỉ sống bằng cách phản ứng; đồng thời không có 'đơn vị tiền' để tiêu thì không biết khi nào phải dừng feature mà lo độ ổn định — tranh luận không có số để chốt.",
+      "how": "Error budget = 100% − SLO: 99.9%/30 ngày ≈ 43 phút downtime. Hết budget → freeze feature/đẩy việc reliability; còn budget → release tự do. Biến độ ổn định thành số lượng tài nguyên khách quan để ra quyết định.",
+      "origin": "Google SRE Workbook (2018)",
+      "related": [
+        "SLO/SLI",
+        "Burn Rate",
+        "Alerting (threshold alert)"
+      ]
+    },
+    {
+      "term": "Observability",
+      "aliases": [
+        "tính quan sát được",
+        "observability vs monitoring",
+        "unknown-unknowns"
+      ],
+      "level": "intermediate",
+      "problem": "Microservices + container + polyglot storage tạo ra trạng thái hệ thống chưa từng thấy (unknown-unknowns); dashboard chỉ trả lời câu hỏi đặt sẵn, gặp sự cố lạ dev phải đoán, redeploy thêm log rồi chờ chu kỳ mới — sửa lỗi chậm và mù tịt (developer mất >40% thời gian cho công việc không hiệu quả).",
+      "how": "Thu thập event giàu ngữ cảnh quanh path của request (mỗi service một event rộng, nhiều dimension) để tự do cắt lát/bắt chước mọi câu hỏi mà không cần đoán trước; metrics/logs/traces chỉ là loại dữ liệu — observability là khả năng trả lời câu hỏi chưa từng đặt ra, cần data high-cardinality/high-dimensionality.",
+      "origin": "Charity Majors (Honeycomb), 'Observability is a many-splendored thing' (3/3/2020); gốc từ lý thuyết điều khiển (control theory)",
+      "related": [
+        "Metric cardinality",
+        "Monitoring",
+        "Structured logging"
+      ]
+    },
+    {
+      "term": "APM",
+      "aliases": [
+        "application performance monitoring",
+        "giám sát hiệu năng ứng dụng"
+      ],
+      "level": "intermediate",
+      "problem": "Metric host (CPU, RAM) lên 100% không cho biết code nào chậm: team cần nhìn tới từng request lẻ — query SQL nào tốn time, call API ngoài nào treo, dòng code nào chiếm phần lớn latency — điều metric hạ tầng không bao giờ hiện.",
+      "how": "Instrument ở tầng ứng dụng (DB query, cache, external call, transaction) rồi gom dữ liệu theo transaction để drill-down từ symptom (endpoint chậm) xuống nguyên nhân (query N+1).",
+      "origin": "không rõ",
+      "related": [
+        "Distributed tracing",
+        "Four Golden Signals",
+        "Metrics (time-series)"
+      ]
+    },
+    {
+      "term": "Toil",
+      "aliases": [
+        "công việc vận hành thủ công",
+        "toil vận hành"
+      ],
+      "level": "intermediate",
+      "problem": "Team dành phần lớn thời gian cho việc lặp lại tay (dọn log, restart tay, xử lý ticket theo kịch bản) → không còn giờ làm dự án; người giỏi nghỉ vì toàn việc không tạo giá trị lâu dài, và việc này tăng tuyến tính theo quy mô hệ thống.",
+      "how": "Định nghĩa rõ 6 tiêu chí (manual, repetitive, automatable, tactical, không giá trị bền vững, O(n) theo tăng trưởng) để đo và giữ toil dưới 50% thời gian, phần còn lại dành cho kỹ thuật dài hạn và tự động hóa.",
+      "origin": "Google SRE book, chương 'Eliminating Toil' (2017, Vivek Rau)",
+      "related": [
+        "On-call rotation",
+        "Alert Fatigue",
+        "Blameless Postmortem"
+      ]
+    },
+    {
+      "term": "Exemplars",
+      "aliases": [
+        "mẫu chứng",
+        "metric gắn trace"
+      ],
+      "level": "advanced",
+      "problem": "Biểu đồ p99 latency nhảy vọt lúc 14:03 nhưng metric đã được aggregate theo thời gian, không còn giữ request cụ thể nào — không cách nào tìm ra 'request chậm lúc 14:03' để mở trace, hai thế giới metric và trace bị chia cắt.",
+      "how": "Gắn kèm mỗi mẫu metric một trace_id đại diện (exemplar) trong đúng time bucket; Grafana hiển thị exemplar trên graf, click là mở thẳng trace đó — nối số liệu tổng với chi tiết request.",
+      "origin": "không rõ (tính năng của Prometheus/Grafana)",
+      "related": [
+        "Distributed tracing",
+        "Prometheus Pull Model",
+        "Observability"
+      ]
+    },
+    {
+      "term": "OpenTelemetry Collector / observability pipeline",
+      "aliases": [
+        "OTel Collector",
+        "telemetry gateway",
+        "observability pipeline"
+      ],
+      "level": "advanced",
+      "problem": "Để app push thẳng vào từng backend thì đổi backend phải sửa hàng trăm service, mỗi app tự lo retry/batch; spike traffic metric/log đè thẳng vào backend khiến observability stack sập cùng lúc hệ thống đang có sự cố.",
+      "how": "Đặt agent/gateway tập trung nhận OTLP (push), xử lý batch/filter/redact/enrich/sampling ở giữa pipeline rồi fan-out sang nhiều backend; app chỉ biết một endpoint, backend thay bằng cách đổi config gateway.",
+      "origin": "OpenTelemetry (CNCF) — thành phần Collector",
+      "related": [
+        "OpenTelemetry (OTel)",
+        "Metric cardinality",
+        "Log sampling & rate limiting"
+      ]
+    },
+    {
+      "term": "Log sampling & rate limiting",
+      "aliases": [
+        "log sampling",
+        "rate limit log",
+        "giới hạn tần suất log",
+        "logs"
+      ],
+      "level": "advanced",
+      "problem": "Black Friday traffic ×100 kéo log ×100: full-text index không chịu nổi hoặc chi phí ingest phình đột biến, thậm chí log pipeline tự sập đúng lúc cần nó nhất; nhưng bỏ hết log thì mất dấu vết điều tra.",
+      "how": "Giữ 100% log mức ERROR/event bất thường, sampling log happy-path (VD 1/100 hoặc 1 dòng/giây/stream), rate limit theo label; ưu tiên giữ cái bất thường, loại cái dự đoán được.",
+      "origin": "không rõ",
+      "related": [
+        "Log aggregation & ELK Stack",
+        "Grafana Loki",
+        "Metric cardinality"
+      ]
+    },
+    {
+      "term": "Blameless postmortem",
+      "aliases": [
+        "báo cáo sau sự cố không đổ lỗi",
+        "postmortem",
+        "học hỏi từ sự cố"
+      ],
+      "level": "intermediate",
+      "problem": "Văn hóa đổ lỗi (blame) làm người tham gia che giấu sự thật và né tránh chia sẻ thông tin, khiến tổ chức lặp lại cùng một sự cố vì không ai dám nói nguyên nhân thật; biện pháp kỷ luật cá nhân càng thúc đẩy hành vi giấu lỗi.",
+      "how": "Viết postmortem không đổ lỗi: timeline khách quan, nguyên nhân gốc (5 whys / factor tree), action item cụ thể có người phụ trách và hạn; tập trung vào hệ thống đã cho phép sai sót xảy ra, không vào cá nhân.",
+      "origin": "Google SRE book (2017), chương về Postmortem Culture",
+      "related": [
+        "On-call rotation",
+        "Toil",
+        "Alert Fatigue"
+      ]
+    }
+  ],
+  "sources": [
+    "https://sre.google/workbook/implementing-slos/",
+    "https://sre.google/workbook/alerting-on-slos/",
+    "https://sre.google/sre-book/monitoring-distributed-systems/",
+    "https://sre.google/sre-book/eliminating-toil/",
+    "https://www.brendangregg.com/usemethod.html",
+    "https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/",
+    "https://prometheus.io/docs/introduction/overview/",
+    "https://prometheus.io/docs/practices/naming/#labels",
+    "https://grafana.com/docs/loki/latest/get-started/overview/",
+    "https://opentelemetry.io/docs/what-is-opentelemetry/",
+    "https://opentelemetry.io/docs/concepts/sampling/",
+    "https://research.google/pubs/pub36356/",
+    "https://grafana.com/docs/grafana/latest/fundamentals/exemplars/",
+    "https://en.wikipedia.org/wiki/Alert_fatigue",
+    "https://12factor.net/",
+    "https://charity.wtf/2016/05/01/observability-is-a-many-splendored-thing/"
+  ]
+}

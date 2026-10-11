@@ -1,0 +1,329 @@
+- generic [active] [ref=f45e1]:
+  - generic [ref=f45e2]:
+    - generic [ref=f45e4]:
+      - generic [ref=f45e5]:
+        - generic [ref=f45e6]:
+          - link "DuckDuckGo home" [ref=f45e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f45e8]: DuckDuckGo
+          - generic [ref=f45e15]:
+            - combobox "Search privately" [ref=f45e17]: spa nail salon online booking no-show statistics revenue lost
+            - button "Search" [ref=f45e19] [cursor=pointer]
+        - button "Open menu" [ref=f45e24] [cursor=pointer]
+      - navigation [ref=f45e32]:
+        - list [ref=f45e33]:
+          - listitem [ref=f45e34]:
+            - link [ref=f45e35] [cursor=pointer]:
+              - /url: /?q=spa+nail+salon+online+booking+no-show+statistics+revenue+lost&ia=web
+              - strong [ref=f45e36]: All
+          - listitem [ref=f45e39]:
+            - link [ref=f45e40] [cursor=pointer]:
+              - /url: /?q=spa+nail+salon+online+booking+no-show+statistics+revenue+lost&ia=images&iax=images
+              - strong [ref=f45e41]: Images
+          - listitem [ref=f45e42]:
+            - link [ref=f45e43] [cursor=pointer]:
+              - /url: /?q=spa+nail+salon+online+booking+no-show+statistics+revenue+lost&ia=videos&iax=videos
+              - strong [ref=f45e44]: Videos
+          - listitem [ref=f45e45]:
+            - link [ref=f45e46] [cursor=pointer]:
+              - /url: /?q=spa+nail+salon+online+booking+no-show+statistics+revenue+lost&iaxm=maps
+              - strong [ref=f45e47]: Maps
+        - list [ref=f45e48]:
+          - listitem [ref=f45e49]:
+            - link "Duck.ai" [ref=f45e51] [cursor=pointer]:
+              - /url: /?q=spa+nail+salon+online+booking+no-show+statistics+revenue+lost&ia=chat&entry=serp
+          - listitem [ref=f45e55]:
+            - button "Search Settings ✀" [ref=f45e57] [cursor=pointer]:
+              - generic [ref=f45e60]: Search Settings
+              - generic [ref=f45e61]: ✀
+    - generic [ref=f45e68]:
+      - navigation [ref=f45e70]:
+        - button [ref=f45e72] [cursor=pointer]:
+          - strong [ref=f45e79]: Private
+        - generic [ref=f45e83]:
+          - switch "Filter by the selected region" [ref=f45e87]
+          - button "Vietnam (en)" [ref=f45e89] [cursor=pointer]
+        - button [ref=f45e94] [cursor=pointer]:
+          - strong [ref=f45e96]: "Safe search: moderate"
+        - button [ref=f45e100] [cursor=pointer]:
+          - strong [ref=f45e102]: Any time
+      - generic [ref=f45e106]:
+        - list [ref=f45e107]:
+          - listitem [ref=f45e108]:
+            - article [ref=f45e109] [cursor=pointer]:
+              - button [ref=f45e111]
+              - generic [ref=f45e115]:
+                - link "Search domain pitchit.ai" [ref=f45e117]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:www.pitchit.ai
+                - generic [ref=f45e120]:
+                  - paragraph [ref=f45e121]: pitchit.ai
+                  - link "https://www.pitchit.ai › blog › nail-salon-no-show-statistics-2026" [ref=f45e122]:
+                    - /url: https://www.pitchit.ai/blog/nail-salon-no-show-statistics-2026
+                    - paragraph [ref=f45e124]:
+                      - generic [ref=f45e125]: https://www.pitchit.ai
+                      - generic [ref=f45e126]: › blog › nail-salon-no-show-statistics-2026
+              - heading [level=2] [ref=f45e128]:
+                - 'link "Nail Salon No-Show Statistics: 20 Numbers Every Salon Owner Should Know ..." [ref=f45e129]':
+                  - /url: https://www.pitchit.ai/blog/nail-salon-no-show-statistics-2026
+              - generic [ref=f45e131]: Discover 20 critical nail salon no-show statistics detailing lost revenue, empty chairs, cancellation rates, and how AI appointment reminders recover missed bookings.
+          - listitem [ref=f45e136]:
+            - article [ref=f45e137] [cursor=pointer]:
+              - button [ref=f45e139]
+              - generic [ref=f45e143]:
+                - link "Search domain bizflowtool.com" [ref=f45e145]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:bizflowtool.com
+                - generic [ref=f45e148]:
+                  - paragraph [ref=f45e149]: bizflowtool.com
+                  - link "https://bizflowtool.com › tools › salon-no-show-calculator" [ref=f45e150]:
+                    - /url: https://bizflowtool.com/tools/salon-no-show-calculator/
+                    - paragraph [ref=f45e152]:
+                      - generic [ref=f45e153]: https://bizflowtool.com
+                      - generic [ref=f45e154]: › tools › salon-no-show-calculator
+              - heading [level=2] [ref=f45e156]:
+                - 'link "2026 Salon No-Show Calculator: Estimate Missed Appointment Losses" [ref=f45e157]':
+                  - /url: https://bizflowtool.com/tools/salon-no-show-calculator/
+              - generic [ref=f45e159]: Use this free Salon No-Show Calculator to estimate missed appointment losses, track revenue impact, and understand how no-shows affect your salon business.
+          - listitem [ref=f45e164]:
+            - article [ref=f45e165] [cursor=pointer]:
+              - button [ref=f45e167]
+              - generic [ref=f45e171]:
+                - link "Search domain pitchit.ai" [ref=f45e173]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:www.pitchit.ai
+                - generic [ref=f45e176]:
+                  - paragraph [ref=f45e177]: pitchit.ai
+                  - link "https://www.pitchit.ai › blog › spa-appointment-no-show-statistics-2026" [ref=f45e178]:
+                    - /url: https://www.pitchit.ai/blog/spa-appointment-no-show-statistics-2026
+                    - paragraph [ref=f45e180]:
+                      - generic [ref=f45e181]: https://www.pitchit.ai
+                      - generic [ref=f45e182]: › blog › spa-appointment-no-show-statistics-2026
+              - heading [level=2] [ref=f45e184]:
+                - 'link "Spa Appointment No-Show Statistics: 20 Numbers Every Salon and Wellness ..." [ref=f45e185]':
+                  - /url: https://www.pitchit.ai/blog/spa-appointment-no-show-statistics-2026
+              - generic [ref=f45e187]: Discover 20 crucial statistics covering spa no-show rates, revenue leakage, empty treatment room costs, and automated multi-channel solutions.
+          - listitem [ref=f45e192]:
+            - article [ref=f45e193] [cursor=pointer]:
+              - button [ref=f45e195]
+              - generic [ref=f45e199]:
+                - link "Search domain noshowcalc.com" [ref=f45e201]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:noshowcalc.com
+                - generic [ref=f45e204]:
+                  - paragraph [ref=f45e205]: noshowcalc.com
+                  - link "https://noshowcalc.com › salon" [ref=f45e206]:
+                    - /url: https://noshowcalc.com/salon
+                    - paragraph [ref=f45e208]:
+                      - generic [ref=f45e209]: https://noshowcalc.com
+                      - generic [ref=f45e210]: › salon
+              - heading [level=2] [ref=f45e212]:
+                - link "Salon & Spa No-Show Calculator — What Missed Appointments Cost Your ..." [ref=f45e213]:
+                  - /url: https://noshowcalc.com/salon
+              - generic [ref=f45e215]: How much are no-show clients costing your salon or spa? Free calculator built for stylists, salon owners, and beauty professionals to see annual revenue lost.
+          - listitem [ref=f45e220]:
+            - article [ref=f45e221] [cursor=pointer]:
+              - button [ref=f45e223]
+              - generic [ref=f45e227]:
+                - link "Search domain cutiecure.app" [ref=f45e229]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:www.cutiecure.app
+                - generic [ref=f45e232]:
+                  - paragraph [ref=f45e233]: cutiecure.app
+                  - link "https://www.cutiecure.app › salon-revenue-calculator" [ref=f45e234]:
+                    - /url: https://www.cutiecure.app/salon-revenue-calculator
+                    - paragraph [ref=f45e236]:
+                      - generic [ref=f45e237]: https://www.cutiecure.app
+                      - generic [ref=f45e238]: › salon-revenue-calculator
+              - heading [level=2] [ref=f45e240]:
+                - 'link "Salon Revenue Calculator: What No-Shows Cost You" [ref=f45e241]':
+                  - /url: https://www.cutiecure.app/salon-revenue-calculator
+              - generic [ref=f45e243]: Free salon revenue calculator. See what no-shows and empty appointment slots cost your nail salon per month and per year, and how much you could recover.
+          - listitem [ref=f45e248]:
+            - article [ref=f45e249] [cursor=pointer]:
+              - button [ref=f45e251]
+              - generic [ref=f45e255]:
+                - link "Search domain zenoti.com" [ref=f45e257]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:www.zenoti.com
+                - generic [ref=f45e260]:
+                  - paragraph [ref=f45e261]: Zenoti
+                  - link "https://www.zenoti.com › thecheckin › no-show-revenue-calculator" [ref=f45e262]:
+                    - /url: https://www.zenoti.com/thecheckin/no-show-revenue-calculator
+                    - paragraph [ref=f45e264]:
+                      - generic [ref=f45e265]: https://www.zenoti.com
+                      - generic [ref=f45e266]: › thecheckin › no-show-revenue-calculator
+              - heading [level=2] [ref=f45e268]:
+                - link "Free No-Show Revenue Calculator for Salons & Spas | Zenoti" [ref=f45e269]:
+                  - /url: https://www.zenoti.com/thecheckin/no-show-revenue-calculator
+              - generic [ref=f45e271]: Find out exactly how much appointment no-shows are costing your business. Free calculator built on 2026 benchmark data for salons, spas, medspas, and more.
+          - listitem [ref=f45e276]:
+            - article [ref=f45e277] [cursor=pointer]:
+              - button [ref=f45e279]
+              - generic [ref=f45e283]:
+                - link "Search domain waitq.app" [ref=f45e285]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:waitq.app
+                - generic [ref=f45e288]:
+                  - paragraph [ref=f45e289]: waitq.app
+                  - link "https://waitq.app › blog › salon-statistics" [ref=f45e290]:
+                    - /url: https://waitq.app/blog/salon-statistics
+                    - paragraph [ref=f45e292]:
+                      - generic [ref=f45e293]: https://waitq.app
+                      - generic [ref=f45e294]: › blog › salon-statistics
+              - heading [level=2] [ref=f45e296]:
+                - 'link "Salon Statistics (2026): Wait Times, Bookings & No-Show Data | WaitQ" [ref=f45e297]':
+                  - /url: https://waitq.app/blog/salon-statistics
+              - generic [ref=f45e302]:
+                - text: Aug 5, 2026·
+                - generic [ref=f45e303]: Complete hair, nail, and beauty salon statistics on wait times, booking behavior, cancellations, and market size, drawn from platform and consumer survey data.
+          - listitem [ref=f45e304]:
+            - article [ref=f45e305] [cursor=pointer]:
+              - button [ref=f45e307]
+              - generic [ref=f45e311]:
+                - link "Search domain spasphere.ai" [ref=f45e313]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:spasphere.ai
+                - generic [ref=f45e316]:
+                  - paragraph [ref=f45e317]: spasphere.ai
+                  - link "https://spasphere.ai › ai-spa-report" [ref=f45e318]:
+                    - /url: https://spasphere.ai/ai-spa-report
+                    - paragraph [ref=f45e320]:
+                      - generic [ref=f45e321]: https://spasphere.ai
+                      - generic [ref=f45e322]: › ai-spa-report
+              - heading [level=2] [ref=f45e324]:
+                - link "Spa Revenue Calculator - A Free Report on Pricing and No-Shows" [ref=f45e325]:
+                  - /url: https://spasphere.ai/ai-spa-report
+              - generic [ref=f45e327]: How much revenue is your spa losing? Enter your real numbers - pricing, booking frequency, and no-show rate - and your report shows where revenue is slipping and what to look at first.
+          - listitem [ref=f45e332]:
+            - article [ref=f45e333] [cursor=pointer]:
+              - button [ref=f45e335]
+              - generic [ref=f45e339]:
+                - link "Search domain bnonews.com" [ref=f45e341]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:bnonews.com
+                - generic [ref=f45e344]:
+                  - paragraph [ref=f45e345]: BNO News
+                  - link "https://bnonews.com › index.php › 2026 › 04 › report-small-service-businesses-lose-thousands-annually-to-manual-scheduling-gaps" [ref=f45e346]:
+                    - /url: https://bnonews.com/index.php/2026/04/report-small-service-businesses-lose-thousands-annually-to-manual-scheduling-gaps/
+                    - paragraph [ref=f45e348]:
+                      - generic [ref=f45e349]: https://bnonews.com
+                      - generic [ref=f45e350]: › index.php › 2026 › 04 › report-small-service-businesses-lose-thousands-annually-to-manual-scheduling-gaps
+              - heading [level=2] [ref=f45e352]:
+                - 'link "Report: Small Service Businesses Lose Thousands Annually to Manual ..." [ref=f45e353]':
+                  - /url: https://bnonews.com/index.php/2026/04/report-small-service-businesses-lose-thousands-annually-to-manual-scheduling-gaps/
+              - generic [ref=f45e358]:
+                - text: Apr 29, 2026·
+                - generic [ref=f45e359]: Small service businesses lose thousands annually to manual scheduling gaps. This guide breaks down the real cost of no-shows, double bookings, and admin time — and what fixes it.
+          - listitem [ref=f45e360]:
+            - article [ref=f45e361] [cursor=pointer]:
+              - button [ref=f45e363]
+              - generic [ref=f45e367]:
+                - link "Search domain bookedin.com" [ref=f45e369]:
+                  - /url: /?q=spa%20nail%20salon%20online%20booking%20no%2Dshow%20statistics%20revenue%20lost+site:bookedin.com
+                - generic [ref=f45e372]:
+                  - paragraph [ref=f45e373]: Bookedin
+                  - link "https://bookedin.com › blog › appointment-no-show-statistics" [ref=f45e374]:
+                    - /url: https://bookedin.com/blog/appointment-no-show-statistics/
+                    - paragraph [ref=f45e376]:
+                      - generic [ref=f45e377]: https://bookedin.com
+                      - generic [ref=f45e378]: › blog › appointment-no-show-statistics
+              - heading [level=2] [ref=f45e380]:
+                - 'link "Appointment No-Show Statistics 2026: Rates & Fixes" [ref=f45e381]':
+                  - /url: https://bookedin.com/blog/appointment-no-show-statistics/
+              - generic [ref=f45e386]:
+                - text: Sep 27, 2026·
+                - generic [ref=f45e387]: There's no single official no-show rate for all businesses, because no government agency tracks missed salon, spa, or studio bookings. The closest thing to a benchmark comes from healthcare, where missed appointments have been studied for decades.
+        - button "More results" [ref=f45e390] [cursor=pointer]
+    - list [ref=f45e393]:
+      - button "Close menu" [ref=f45e394] [cursor=pointer]
+      - list [ref=f45e398]:
+        - listitem [ref=f45e399]: Search
+        - listitem [ref=f45e400]:
+          - link "Homepage" [ref=f45e401] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f45e402]:
+          - link "Themes" [ref=f45e403] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f45e404]:
+          - link "Settings" [ref=f45e405] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f45e406]:
+        - listitem [ref=f45e407]: Share Feedback
+        - listitem [ref=f45e408]:
+          - generic [ref=f45e411]:
+            - button "Positive feedback" [ref=f45e412] [cursor=pointer]
+            - button "Negative feedback" [ref=f45e416] [cursor=pointer]
+      - list [ref=f45e420]:
+        - listitem [ref=f45e421]: Downloads
+        - listitem [ref=f45e422]:
+          - link "iOS Browser" [ref=f45e423] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f45e424]:
+          - link "Android Browser" [ref=f45e425] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f45e426]:
+          - link "Mac Browser" [ref=f45e427] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f45e428]:
+          - link "Windows Browser" [ref=f45e429] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f45e430]:
+          - link "Browser Extensions" [ref=f45e431] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f45e432]:
+        - listitem [ref=f45e433]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f45e434]:
+          - link "Duck.ai" [ref=f45e435] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f45e436]:
+          - link "Email Protection" [ref=f45e437] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f45e438]:
+          - link "Newsletter" [ref=f45e439] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f45e440]:
+          - link "Blog" [ref=f45e441] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f45e442]:
+          - link "Podcast" [ref=f45e443] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f45e444]:
+          - link "Collaborations" [ref=f45e445] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f45e446]:
+        - listitem [ref=f45e447]: Learn More
+        - listitem [ref=f45e448]:
+          - link "What’s New" [ref=f45e449] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f45e450]:
+          - link "Compare Privacy" [ref=f45e451] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f45e452]:
+          - link "About Our Browser" [ref=f45e453] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f45e454]:
+          - link "About DuckDuckGo" [ref=f45e455] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f45e456]:
+        - listitem [ref=f45e457]: Other Resources
+        - listitem [ref=f45e458]:
+          - link "Help" [ref=f45e459] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f45e460]:
+          - link "Community" [ref=f45e461] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f45e462]:
+          - link "Careers" [ref=f45e463] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f45e464]:
+          - link "Privacy Policy" [ref=f45e465] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f45e466]:
+          - link "Terms of Service" [ref=f45e467] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f45e468]:
+          - link "Press Kit" [ref=f45e469] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f45e470]:
+          - link "Advertise on Search" [ref=f45e471] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f45e477]:
+    - generic [ref=f45e488]:
+      - heading "Introducing DuckDuckGo Collaborations" [level=3] [ref=f45e489]
+      - paragraph [ref=f45e490]: Expertly crafted products for people who give a duck about privacy.
+    - link "See More" [ref=f45e491] [cursor=pointer]:
+      - /url: https://duckduckgo.com/collaborations
+  - button "Share Feedback" [ref=f45e496] [cursor=pointer]

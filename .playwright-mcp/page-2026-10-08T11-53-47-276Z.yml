@@ -1,0 +1,14 @@
+- generic [ref=f12e2]:
+  - separator [ref=f12e3]
+  - iframe [ref=f12e8]:
+    - generic [ref=f13e2]:
+      - generic [ref=f13e3]:
+        - checkbox "I'm not a robot" [ref=f13e7]
+        - generic [aria-hidden] [ref=f13e11]: I'm not a robot
+      - generic [ref=f13e12]: reCAPTCHA
+  - separator [ref=f12e9]
+  - generic [ref=f12e10]:
+    - text: About this page Our systems have detected unusual traffic from your computer network. This page checks to see if it's really you sending the requests, and not a robot.
+    - link "Why did this happen?" [ref=f12e11] [cursor=pointer]:
+      - /url: "#"
+    - generic [ref=f12e12]: "IP address: 2001:ee0:4f88:ad70:8786:f35a:5a53:40adTime: 2026-10-08T11:53:45ZURL: https://www.google.com/search?q=salon+no-show+rate+statistics+booking+software&sei=SYTHapPhDZ_jrfcP6MiNqQQ"

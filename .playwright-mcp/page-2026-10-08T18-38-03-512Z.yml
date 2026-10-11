@@ -1,0 +1,529 @@
+- generic [active] [ref=f380e1]:
+  - generic [ref=f380e2]:
+    - generic [ref=f380e3]:
+      - generic [ref=f380e4]:
+        - button "Close menu" [ref=f380e5]:
+          - generic [ref=f380e6]: 
+        - link [ref=f380e8] [cursor=pointer]:
+          - /url: /en/
+          - img "Tieng Anh" [ref=f380e9]
+          - text: English version
+      - generic [ref=f380e12]:
+        - textbox "Từ khóa tìm kiếm" [ref=f380e13]
+        - button "Tìm bài viết" [ref=f380e14]:
+          - generic [ref=f380e15]: 
+      - list [ref=f380e16]:
+        - listitem [ref=f380e17]:
+          - link "Trang chủ" [ref=f380e18] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f380e19]:
+          - link " Giới thiệu" [ref=f380e20] [cursor=pointer]:
+            - /url: /gioi-thieu.aspx
+            - generic [ref=f380e21]: 
+            - text: Giới thiệu
+        - listitem [ref=f380e23]:
+          - link " Sở hữu trí tuệ" [ref=f380e24] [cursor=pointer]:
+            - /url: /dich-vu/dich-vu-dang-ky-so-huu-tri-tue.aspx
+            - generic [ref=f380e25]: 
+            - text: Sở hữu trí tuệ
+        - listitem [ref=f380e27]:
+          - link " Doanh nghiệp" [ref=f380e28] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f380e29]: 
+            - text: Doanh nghiệp
+        - listitem [ref=f380e31]:
+          - link " Đầu tư nước ngoài" [ref=f380e32] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f380e33]: 
+            - text: Đầu tư nước ngoài
+        - listitem [ref=f380e35]:
+          - link "Dịch vụ luật sư" [ref=f380e36] [cursor=pointer]:
+            - /url: /dich-vu-luat-su.aspx
+        - listitem [ref=f380e37]:
+          - link " Tư vấn pháp luật" [ref=f380e38] [cursor=pointer]:
+            - /url: /tu-van-phap-luat.aspx
+            - generic [ref=f380e39]: 
+            - text: Tư vấn pháp luật
+        - listitem [ref=f380e41]:
+          - link "Tra cứu văn bản" [ref=f380e42] [cursor=pointer]:
+            - /url: /van-ban/
+        - listitem [ref=f380e43]:
+          - link "Video" [ref=f380e44] [cursor=pointer]:
+            - /url: /video.aspx
+        - listitem [ref=f380e45]:
+          - link "Liên hệ" [ref=f380e46] [cursor=pointer]:
+            - /url: /list-contact/lien-he.aspx
+      - generic [ref=f380e47]:
+        - heading "Liên hệ" [level=4] [ref=f380e48]
+        - generic [ref=f380e49]:
+          - link " Gọi luật sư" [ref=f380e50] [cursor=pointer]:
+            - /url: tel:19006162
+            - generic [ref=f380e51]: 
+            - text: Gọi luật sư
+          - link " Báo giá vụ việc" [ref=f380e52] [cursor=pointer]:
+            - /url: tel:+84986386648
+            - generic [ref=f380e53]: 
+            - text: Báo giá vụ việc
+    - generic [ref=f380e54]:
+      - list [ref=f380e56]:
+        - listitem [ref=f380e57]:
+          - 'link " Hotline: 19006162" [ref=f380e58] [cursor=pointer]':
+            - /url: tel:19006162
+            - generic [ref=f380e59]: 
+            - text: "Hotline:"
+            - strong [ref=f380e60]: "19006162"
+        - listitem [ref=f380e61]:
+          - link "RSS" [ref=f380e62] [cursor=pointer]:
+            - /url: https://luatminhkhue.vn/rss/438
+        - listitem
+      - text:  
+      - generic [ref=f380e64]:
+        - link [ref=f380e65] [cursor=pointer]:
+          - /url: /
+          - img "Luat Minh Khue" [ref=f380e66]
+        - img "Liên hệ văn phòng luật sư tư vấn" [ref=f380e68]
+      - navigation [ref=f380e69]:
+        - list [ref=f380e71]:
+          - listitem [ref=f380e72]:
+            - link "Home" [ref=f380e73] [cursor=pointer]:
+              - /url: /
+              - generic [ref=f380e74]: 
+          - listitem [ref=f380e75]:
+            - link "Giới thiệu " [ref=f380e76] [cursor=pointer]:
+              - /url: /gioi-thieu.aspx
+              - text: Giới thiệu
+              - generic [ref=f380e77]: 
+          - listitem [ref=f380e78]:
+            - link "Sở hữu trí tuệ " [ref=f380e79] [cursor=pointer]:
+              - /url: /dich-vu/dich-vu-dang-ky-so-huu-tri-tue.aspx
+              - text: Sở hữu trí tuệ
+              - generic [ref=f380e80]: 
+          - listitem [ref=f380e81]:
+            - link "Doanh nghiệp " [ref=f380e82] [cursor=pointer]:
+              - /url: "#"
+              - text: Doanh nghiệp
+              - generic [ref=f380e83]: 
+          - listitem [ref=f380e84]:
+            - link "Đầu tư nước ngoài " [ref=f380e85] [cursor=pointer]:
+              - /url: "#"
+              - text: Đầu tư nước ngoài
+              - generic [ref=f380e86]: 
+          - listitem [ref=f380e87]:
+            - link "Dịch vụ luật sư" [ref=f380e88] [cursor=pointer]:
+              - /url: /dich-vu-luat-su.aspx
+          - listitem [ref=f380e89]:
+            - link "Tư vấn pháp luật " [ref=f380e90] [cursor=pointer]:
+              - /url: /tu-van-phap-luat.aspx
+              - text: Tư vấn pháp luật
+              - generic [ref=f380e91]: 
+          - listitem [ref=f380e92]:
+            - link "Liên hệ" [ref=f380e93] [cursor=pointer]:
+              - /url: /list-contact/lien-he.aspx
+      - generic [ref=f380e94]:
+        - generic [ref=f380e95]:
+          - link [ref=f380e98] [cursor=pointer]:
+            - /url: /en/
+            - img "Tiếng Anh" [ref=f380e99]
+            - text: English
+          - generic [ref=f380e100]: Quảng cáo
+          - generic [ref=f380e102]:
+            - main [ref=f380e103]:
+              - article [ref=f380e104]:
+                - generic [ref=f380e105]:
+                  - navigation [ref=f380e106]:
+                    - link " Trang chủ" [ref=f380e108] [cursor=pointer]:
+                      - /url: /
+                      - generic [ref=f380e109]:
+                        - generic [ref=f380e110]: 
+                        - text: Trang chủ
+                    - link "Tư vấn Pháp luật" [ref=f380e112] [cursor=pointer]:
+                      - /url: /tu-van-phap-luat.aspx
+                  - generic [ref=f380e113]:
+                    - generic [ref=f380e114]:
+                      - generic [ref=f380e115]: 
+                      - time [ref=f380e116]: Thứ Sáu, 17/05/2024 - 22:18
+                      - generic "17-05-2024T15:05:SSZ"
+                    - generic [ref=f380e117]:
+                      - text: "Tăng giảm cỡ chữ:"
+                      - link "Decrease font size" [ref=f380e118] [cursor=pointer]:
+                        - /url: javascript:fontZoomer(-1)
+                      - link "Increase fontsize" [ref=f380e123] [cursor=pointer]:
+                        - /url: javascript:fontZoomer(1)
+                  - link [ref=f380e129] [cursor=pointer]:
+                    - /url: https://news.google.com/publications/CAAqBwgKMPf5oAswj4S5Aw?hl=vi
+                    - text: Theo dõi Luật Minh Khuê trên
+                    - img "Google News" [ref=f380e130]
+                  - heading "Mẫu sổ kiểm thực 3 bước mới nhất và Cách viết sổ kiểm thực" [level=1] [ref=f380e131]
+                  - generic [ref=f380e132]:
+                    - list [ref=f380e133]:
+                      - listitem [ref=f380e134]:
+                        - link [ref=f380e135] [cursor=pointer]:
+                          - /url: /author/to-thi-phuong-dung.aspx
+                          - img "Xem thông tin tác giả Luật sư Tô Thị Phương Dung" [ref=f380e136]
+                          - text: Luật sư Tô Thị Phương Dung
+                    - list [ref=f380e137]:
+                      - listitem [ref=f380e138]:
+                        - link "" [ref=f380e139] [cursor=pointer]:
+                          - /url: javascript:window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(document.location)+'&t='+encodeURIComponent(document.title)+'&display=popup&ref=plugin', '_blank')
+                      - listitem [ref=f380e141]:
+                        - link "" [ref=f380e142] [cursor=pointer]:
+                          - /url: javascript:window.open('https://twitter.com/intent/tweet?original_referer='+encodeURIComponent(document.location), '_blank')
+                      - listitem [ref=f380e144]:
+                        - button "" [ref=f380e145] [cursor=pointer]
+                    - separator [ref=f380e147]
+                - generic [ref=f380e148]: Các cơ sở kinh doanh dịch vụ ăn uống cần nâng cao kiểm soát vấn đề an toàn, vệ sinh thực phẩm từ khâu nhập nguyên liệu, sơ chế, chế biến, phân chia, bảo quản, vận chuyển thức ăn cho đến khi ăn uống tại cơ sở. Bài viết dưới đây Luật Minh Khuê xin giới thiệu có bạn đọc mẫu và cách viết mẫu sổ kiểm thực ba bước.
+                - generic [ref=f380e149]:
+                  - text: Quảng cáo
+                  - insertion
+                - generic [ref=f380e150]:
+                  - generic [ref=f380e151]:
+                    - generic [ref=f380e152] [cursor=pointer]:
+                      - text: Mục lục bài viết
+                      - generic [ref=f380e153]: 
+                    - list [ref=f380e154]:
+                      - listitem [ref=f380e155]:
+                        - link "1. Kiểm thực ba bước là như thế nào?" [ref=f380e156] [cursor=pointer]:
+                          - /url: "#1-kiem-thuc-ba-buoc-la-nhu-the-nao"
+                      - listitem [ref=f380e157]:
+                        - link "2. Hướng dẫn kiểm thực ba bước" [ref=f380e158] [cursor=pointer]:
+                          - /url: "#2-huong-dan-kiem-thuc-ba-buoc"
+                      - listitem [ref=f380e159]:
+                        - link "3. Hướng dẫn cách viết sổ kiểm thực" [ref=f380e160] [cursor=pointer]:
+                          - /url: "#3-huong-dan-cach-viet-so-kiem-thuc"
+                      - listitem [ref=f380e161]:
+                        - link "4. Mẫu sổ kiểm thực ba bước mới nhất" [ref=f380e162] [cursor=pointer]:
+                          - /url: "#4-mau-so-kiem-thuc-ba-buoc-moi-nhat"
+                      - listitem [ref=f380e163]:
+                        - link "4.1. Mẫu biểu ghi chép kiểm thực trước khi chế biến thức ăn" [ref=f380e164] [cursor=pointer]:
+                          - /url: "#41-mau-bieu-ghi-chep-kiem-thuc-truoc-khi-che-bien-thuc-an"
+                      - listitem [ref=f380e165]:
+                        - link "4.2. Mẫu biểu ghi chép kiểm thực khi chế biến thức ăn" [ref=f380e166] [cursor=pointer]:
+                          - /url: "#42-mau-bieu-ghi-chep-kiem-thuc-khi-che-bien-thuc-an"
+                    - button "Xem thêm" [ref=f380e168] [cursor=pointer]
+                  - heading "1. Kiểm thực ba bước là như thế nào?" [level=2] [ref=f380e169]
+                  - paragraph [ref=f380e170]: "Kiểm thực ba bước là hoạt động được áp dụng đối với cơ sở kinh doanh dịch vụ ăn uống gồm: cơ sở chế biến suất ăn sẵn; căng tin kinh doanh ăn uống, bếp ăn tập thể; bếp ăn, nhà hàng ăn uống của khách sạn, khu nghỉ dưỡng; nhà hàng ăn uống. Việc kiểm tra ba bước giúp cho cơ sở kiểm soát được vấn đề an toàn, vệ sinh thực phẩm trong suốt quá trình từ khâu nhập nguyên liệu, thực phẩm; sơ chế; chế biến; phân chia; bảo quản; vận chuyển thức ăn cho đến khi ăn uống tại chỗ."
+                  - paragraph [ref=f380e171]: Căn cứ vào khoản 2 Điều 3 Luật An toàn, vệ sinh thực phẩm năm 2010 thì tổ chức, cá nhân sản xuất, kinh doanh thực phẩm phải chịu trách nhiệm về vấn đề an toàn, vệ sinh đối với thực phẩm do mình sản xuất, kinh doanh. Do đó, quá trình kiểm thực ba bước của cơ sở kinh doanh dịch vụ ăn uống là cần thiết và đảm bảo cho sức khỏe của người tiêu dùng.
+                  - paragraph [ref=f380e172]
+                  - heading "2. Hướng dẫn kiểm thực ba bước" [level=2] [ref=f380e173]
+                  - paragraph [ref=f380e174]:
+                    - strong [ref=f380e175]: "Bước 1: Kiểm tra trước khi chế biến thức ăn"
+                  - paragraph [ref=f380e176]: "* Kiểm tra nguyên liệu thực phẩm trước khi nhập vào cơ sở kinh doanh dịch vụ ăn uống:"
+                  - paragraph [ref=f380e177]: Các cơ sở kinh doanh dịch vụ ăn uống sử dụng các nguyên liệu đạt được những quy chuẩn, tiêu chuẩn và tuân thủ những quy định về giới hạn vi sinh vật gây bệnh, dư lượng thuốc bảo vệ thực vật, dư lượng thuốc thú y, kim loại nặng,.. trong thực phẩm mà có thể gây hại đến sức khỏe và tính mạng của con người. Các cơ sở nên chọn mua nguyên liệu, thực phẩm tại các cơ sở uy tín, đáng tin cậy, có cửa hàng cố định hay có các chứng nhận về an toàn thực phẩm mà cơ quan có thẩm quyền cấp hoặc thực phẩm đã được kiểm nghiệm chất lượng an toàn thực phẩm.
+                  - paragraph [ref=f380e178]: "Khi tiếp nhận nguồn cung ứng nguyên liệu thì cơ sở kinh doanh dịch vụ ăn uống phải tiến hành kiểm tra nguyên liệu và xác định xem: bên cung cấp có chứng chỉ gì không, kiểm tra (chất lượng, độ tươi nguyên, nhiệt độ phù hợp cho từng loại nguyên liệu,...) nguồn nguyên liệu khi nhập vào. Sau đó cơ sở kinh doanh sẽ ghi chép lại các thông tin vào sổ kiểm thực và lưu giữ lại."
+                  - generic [ref=f380e179]: Quảng cáo
+                  - paragraph [ref=f380e181]:
+                    - emphasis [ref=f380e182]: Thứ nhất,
+                    - text: kiểm tra về chủng loại và giấy tờ kèm theo đối với mỗi loại sản phẩm (giấy tờ, tài liệu chứng nhận về nguồn gốc, xuất xứ, hợp đồng mua bán, hóa đơn và các giấy tờ khác có liên quan)
+                  - paragraph [ref=f380e183]: "+ Loại thực phẩm tươi sống, thực phẩm đông lạnh: tên thực phẩm, khối lượng, giấy chứng nhận kiểm dịch động vật; thông tin trên nhãn các sản phẩm tươi sống, đông lạnh đảm bảo được những nội dung sau: tên sản phẩm, nhà sản xuất, địa chỉ sản xuất, ngày sản xuất, hạn dùng, quy cách đóng gói, khối lượng, yêu cầu bảo quản;...."
+                  - paragraph [ref=f380e184]: "+ Loại thực phẩm bao gói sẵn, phụ gia thực phẩm: tên sản phẩm khối lượng, kiểm tra nhãn sản phẩm (tên sản phẩm, cơ sở sản xuất, địa chỉ sản xuất, lô sản xuất, ngày sản xuất, thời hạn sử dụng, quy cách đóng gói, khối lượng, hướng dẫn sử dụng, yêu cầu bảo quản). Nếu cần thì có thể kiểm tra các giấy tờ liên quan đến sản phẩm như: Giấy chứng nhận đủ điều kiện an toàn thực phẩm, Giấy tiếp nhận công bố hợp quy hoặc Giấy xác nhận công bố phù hợp với quy định an toàn thực phẩm đối với sản phẩm,...."
+                  - paragraph [ref=f380e185]:
+                    - emphasis [ref=f380e186]: Thứ hai,
+                    - text: "cơ sở kinh doanh sẽ tiến hành kiểm tra, đánh giá tình trạng cảm quan về chất lượng, an toàn thực phẩm của từng loại thực phẩm nhập vào, bao gồm: màu sắc, mùi vị, tính nguyên vẹn của sản phẩm,...và điều kiện bảo quản thực tế nếu có yêu cầu."
+                  - paragraph [ref=f380e187]:
+                    - emphasis [ref=f380e188]: Thứ ba,
+                    - text: khuyến khích các cơ sở kinh doanh dịch vụ ăn uống kiểm tra một số nguyên liệu thực phẩm bằng xét nghiệm nhanh.
+                  - paragraph [ref=f380e189]: "Trường hợp nguyên liệu, thực phẩm đã được kiểm tra, đánh giá không đạt yêu cầu về chất lượng, an toàn thực phẩm thì cần ghi rõ biện pháp xử lý với sản phẩm đó như là: loại bỏ, trả lại, tiêu hủy,..."
+                  - paragraph [ref=f380e190]: "* Thực phẩm nhập vào để chế biến tại bếp ăn của cơ sở:"
+                  - paragraph [ref=f380e191]:
+                    - emphasis [ref=f380e192]: Thứ nhất,
+                    - text: "thực phẩm nhập vào để chế biến ngay:"
+                  - paragraph [ref=f380e193]: Thực phẩm nhập vào để chế biến ngay thì sẽ được kiểm tra về chủng loại, tình trạng cảm quan, một số chỉ tiêu về chất lượng, an toàn thực phẩm.
+                  - paragraph [ref=f380e194]:
+                    - emphasis [ref=f380e195]: Thứ hai,
+                    - text: "thực phẩm nhận từ kho của cơ sở:"
+                  - generic [ref=f380e196]: Quảng cáo
+                  - paragraph [ref=f380e198]: "Thực phẩm nhận từ kho của cơ sở sẽ cần kiểm tra, đánh giá tình trạng cảm quan về chất lượng, an toàn thực phẩm của từng loại thực phẩm nhập vào bao gồm: màu sắc, mùi vị, tính nguyên vẹn của sản phẩm,...và điều kiện bảo quản thực tế nếu có yêu cầu."
+                  - paragraph [ref=f380e199]: "* Thông tin kiểm tra trước khi chế biến sẽ được ghi chép theo Mẫu số 1 Phụ lục 1 về mẫu biểu ghi chép kiểm thực ba bước ban hành theo Quyết định về việc ban hành hướng dẫn thực hiện chế độ kiểm thực ba bước và lưu mẫu thức ăn đối với cơ sở kinh doanh dịch vụ ăn uống."
+                  - paragraph [ref=f380e200]:
+                    - strong [ref=f380e201]: "Bước 2: Kiểm tra trong quá trình chế biến thức ăn"
+                  - paragraph [ref=f380e202]: Cơ sở kinh doanh cần đảm bảo quy trình chế biến theo nguyên tắc một chiều từ khi nguyên liệu xuất kho, sơ chế rồi lúc chuyển vào phân xưởng sản xuất, chế biến và sau chuyển đến phòng thành phẩm, phân phối.
+                  - paragraph [ref=f380e203]: Trong quá trình chế biến thức ăn cần phải đảm bảo tốt khâu vệ sinh cá nhân, cơ sở, trang thiết bị, nguyên vật liệu chế biến. Lưu ý rằng cơ sở chỉ được sử dụng các chất phụ gia nằm trong danh mục được phép sử dụng và chú ý đến cả liều lượng và cách thức sử dụng.
+                  - paragraph [ref=f380e204]: "* Kiểm tra điều kiện vệ sinh tại cơ sở từ thời điểm bắt đầu sơ chế, chế biến cho đến khi thức ăn được chế biến xong:"
+                  - paragraph [ref=f380e205]:
+                    - emphasis [ref=f380e206]: Thứ nhất,
+                    - text: "người tham gia chế biến thức ăn cần đảm bảo về vấn đề vệ sinh cá nhân và bảo đảm an toàn thực phẩm:"
+                  - paragraph [ref=f380e207]: + Mặc trang phục bảo hộ riêng, có tạp dề, đeo khẩu trang, đội mũ che tóc khi chế biến
+                  - paragraph [ref=f380e208]: + Giữ móng tay luôn ngắn, được cắt sạch sẽ, đeo găng tay và không đeo đồ trang sức (nhẫn, đồng hồ,...) khi tiếp xúc trực tiếp với thực phẩm.
+                  - paragraph [ref=f380e209]: + Không ăn uống, hút thuốc trong khu vực chế biến thức ăn;.....
+                  - paragraph [ref=f380e210]: + Rửa tay trước khi chế biến thực phẩm và rửa tay sau khi đi vệ sinh, tiếp xúc với thực phẩm sống, gãi ngứa, ngoáy tay, ngoáy mũi,... bằng xà phòng và nước sạch.
+                  - paragraph [ref=f380e211]:
+                    - emphasis [ref=f380e212]: Thứ hai,
+                    - text: trang thiết bị, dụng cụ trong khu vực chế biến
+                  - paragraph [ref=f380e213]: + Trang thiết bị, dụng cụ tiếp xúc với thực phẩm phải được đảm bảo về vấn đề vệ sinh, an toàn thực phẩm.
+                  - generic [ref=f380e214]: Quảng cáo
+                  - paragraph [ref=f380e216]: + Trang thiết bị, dụng cụ được làm bằng vật liệu không gây độc, không gây ra mùi vị lạ cho thực phẩm, không thôi nhiễm vào thực phẩm, không bị ăn mòn,....
+                  - paragraph [ref=f380e217]: + Trang thiết bị, dụng cụ nên dễ dàng tháo lắp, di chuyển để làm sạch, tẩy trùng, giảm thiểu những mối nguy hại về vệ sinh, an toàn thực phẩm.
+                  - paragraph [ref=f380e218]: + Cần có dụng cụ, đồ chứa đựng riêng cho thực phẩm sống và thực phẩm chín.
+                  - paragraph [ref=f380e219]:
+                    - emphasis [ref=f380e220]: Thứ ba
+                    - text: ", vệ sinh khu vực chế biến và phụ trợ: sàn nhà, thoát nước, thùng rác,..."
+                  - paragraph [ref=f380e221]: "+ Kết cấu của nơi chế biến: (1) Trần nhà phải đảm bảo kín, không dột thấm nước, không rạn nứt, tránh ẩm mốc; (2) Sàn nhà phải dễ cọ rửa, không trơn, dễ lau chùi, khử trùng và thoát nước tốt; (3) Cửa ra vào không thấm nước, đóng kín, thuận tiện cho việc làm vệ sinh, bảo đảm tránh côn trùng, động vật xâm nhập; (4) Cửa sổ phải dễ lau chùi, làm sạch; (5) Các bề mặt tiếp xúc trực tiếp với thực phẩm phải bền, dễ lau chùi, dễ bảo dưỡng và tẩy trùng, không bị bào mòn bởi các chất tẩy rửa, tẩy trùng trong điều kiện bình thường,..."
+                  - paragraph [ref=f380e222]: "+ Đồ rửa và khử trùng tay: cần đặt ở những vị trí thuận tiện trong khu vực chế biến, nơi rửa tay phải cung cấp đầy đủ nước sạch, xà phòng, khăn lau tay sử dụng một lần hay máy sấy khô tay."
+                  - paragraph [ref=f380e223]: "+ Dụng cụ, thiết bị thu gom rác thải: dụng cụ thu gom, chứa đựng rác thải, chất thải cần đảm bảo vệ sinh."
+                  - paragraph [ref=f380e224]: + Phòng thay bảo hộ lao động tại cơ sở kinh doanh nhà hàng, bếp ăn tập thể cần có phòng thay riêng biệt cho nhân viên thay trang phục bảo hộ lao động.
+                  - paragraph [ref=f380e225]: + Hệ thống cung cấp nước phải đảm bảo kín, không bị rõ rỉ, ống dẫn và phương tiện chứa đựng nước phải bằng chất liệu, vật liệu an toàn, không gây ô nhiễm cho nguồn nước.
+                  - paragraph [ref=f380e226]: "+ Hệ thống nước và xử lý chất thải: cống rãnh ở khu vực cửa hàng, nhà bếp phải thông thoáng, không ứ đọng làm sinh sôi các mầm bệnh; hệ thống thoát nước và phương tiện đổ chất thảo cần phải thiết kế và bố trí hợp lý; dụng cụ thu gom chất thải, rác thải, dụng cụ làm bằng vật liệu ít bị hư hỏng, có nắp đậy;..."
+                  - generic [ref=f380e227]: Quảng cáo
+                  - paragraph [ref=f380e229]: + Nhà vệ sinh cần bố trí đủ cho nhân viên, vị trí nhà vệ sinh cần được bố trí sao cho cách biệt khu vực chế biến, nhà ăn và được trang bị đầy đủ thiết bị bảo đảm vệ sinh, có đủ nước sạch và đồ dùng rửa tay. Khu vực nhà vệ sinh phải đảm bảo đủ sáng, thông gió tốt, thoát nước dễ dàng,...
+                  - paragraph [ref=f380e230]: "* Kiểm tra, đánh giá cảm quan món ăn, thành phẩm sau khi được chế biến xong:"
+                  - paragraph [ref=f380e231]: Trong quá trình sơ chế, chế biến mà phát hiện nguyên liệu hay thức ăn có những biểu hiện khác lạ về màu sắc, mùi vị, hình dạng,.... thì cần tiến hành kiểm tra, đánh giá và loại bổ thực phẩm, thức ăn và ghi rõ biện pháp xử lý.
+                  - paragraph [ref=f380e232]: "* Ghi chép đầy đủ ngày giờ bắt đầu và kết thúc chế biến của từng món ăn"
+                  - paragraph [ref=f380e233]: "* Các thông tin kiểm tra trong quá trình chế biến thức ăn được ghi vào Mẫu số 2 Phụ lục 1 Mẫu biểu ghi chép kiểm tra ba bước ban hành kèm theo Quyết định số 1246/QĐ-BYT"
+                  - paragraph [ref=f380e234]:
+                    - strong [ref=f380e235]: "Bước 3: Kiểm tra trước khi ăn"
+                  - paragraph [ref=f380e236]: "* Kiểm tra việc chia thức ăn, khu vực bày thức ăn"
+                  - paragraph [ref=f380e237]: Sau khi đã chế biến thực phẩm xong thì sẽ được đưa đến phòng chia để phân chia, đóng gói thành phẩm. Cho nên phòng phân chia thực phẩn đã chế biến cũng cần phải được giữ sạch sẽ, diệt khuẩn để tránh ô nhiễm. Những dụng cụ gắp, chứa đựng thực phẩm đã chế biến phải hợp vệ sinh.
+                  - paragraph [ref=f380e238]: "* Kiểm tra các món ăn đối chiếu với thực đơn"
+                  - paragraph [ref=f380e239]: "* Kiểm tra vệ sinh bát, đĩa, dụng cụ ăn uống"
+                  - paragraph [ref=f380e240]: "* Kiểm tra dụng cụ che đậy, trang thiết bị phương tiện bảo quản thức ăn đối với thực phẩm không ăn ngay hoặc vận chuyển đến một địa điểm khác."
+                  - paragraph [ref=f380e241]: Bảo quản thức ăn giúp cho thức ăn không bị nhiễm bụi bẩn, hư hỏng, biến chất, không bị ô nhiễm bởi vi sinh vật, hóa chất hay những mỗi nguy hại khác trong một khoảng thời gian.
+                  - paragraph [ref=f380e242]: Cơ sở sử dụng các trang thiết bị phương tiện bảo quản để điều chỉnh, duy trì các yêu cầu về nhiệt độ, độ ẩm và các yếu tố trong quá trình bảo quản thực phẩm nhằm đảm bảo chất lượng, an toàn thực phẩm. Nên các trang thiết bị phương tiện bảo quản thức ăn cần đảm bảo sạch sẽ và thường xuyên được kiểm tra, bảo dưỡng.
+                  - generic [ref=f380e243]: Quảng cáo
+                  - paragraph [ref=f380e245]: Thức ăn được bày bán phải được để trong tủ kính hoặc thiết bị bảo quản hợp vệ sinh, chống bụi bám, sự xâm nhập của côn trùng và động vật,....
+                  - paragraph [ref=f380e246]: "* Các thông tin kiểm tra trước khi ăn được ghi vào Mẫu số 3 Phụ lục 1 Mẫu biểu ghi chép kiểm thực ba bước ban hành kèm theo Quyết định số 1246/QĐ-BYT."
+                  - paragraph [ref=f380e247]
+                  - heading "3. Hướng dẫn cách viết sổ kiểm thực" [level=2] [ref=f380e248]
+                  - paragraph [ref=f380e249]: "Người ghi chép vào sổ kiểm thực cần điền đầy đủ thông tin:"
+                  - paragraph [ref=f380e250]:
+                    - strong [ref=f380e251]: "Mẫu số 1: Kiểm tra trước khi chế biến thức ăn"
+                  - paragraph [ref=f380e252]: "Người ghi chép sẽ điền đầy đủ nội dung: tên cơ sở, tên người kiểm tra, thời gian kiểm vào ngày tháng năm nào, địa chỉ kiểm tra (tại cơ sở kinh doanh hay tại đơn vị cung cấp...)"
+                  - paragraph [ref=f380e253]: Người ghi chép, người kiểm tra hàng nào là thực phẩm tươi sống, đông lạnh (thịt, cá, rau, củ, quả,....) và hàng nào là thực phẩm khô và thực phẩm bao gói sẵn, phụ gia thực phẩm.
+                  - paragraph [ref=f380e254]: "Mục số I sẽ dành cho thực phẩm tươi sống, đông lạnh nên người ghi chép sẽ ghi đầy đủ những thông tin về loại thực phẩm đó, bao gồm: Tên thực phẩm; Thời gian nhập (ghi rõ ngày, giờ); Khối lượng (kg, g, lít,...); Nơi cung cấp thực phẩm (tên cơ sở, địa chỉ và số điện thoại, tên người giao hàng); Chứng từ, hóa đơn; Giấy đăng ký vệ sinh thú ý; Giấy kiểm dịch; Kiểm tra cảm quan về mùi vị, trạng thái, bảo quản,... (tích Đạt hoặc Không đạt); Xét nghiệm nhanh nếu có (tích Đạt hoặc Không đạt); Biện pháp xử lý/ Ghi chú."
+                  - paragraph [ref=f380e255]: "Mục số 2 dành cho thực phẩm khô và thực phẩm bao gói sẵn, phụ gia thực phẩm sẽ ghi chép đầy đủ những thông tin về mặt hàng thực phẩm, bao gồm: Tên thực phẩm; Tên cơ sở sản xuất, Địa chỉ sản xuất; Thời gian nhập (ghi rõ ngày giờ); Khối lượng (kg, g, lít,...); Nơi cung cấp mặt hàng (điền đầy đủ tên cơ sở, tên chủ giao hàng, địa chỉ, điện thoại); Hạn sử dụng (ghi rõ ngày tháng năm); Điều kiện bảo quản (T°thường/ lạnh....); Chứng từ, hóa đơn; Kiểm tra cảm quan (nhãn, bao bì, bảo quản, hạn sử dụng (nếu đạt thì tích vào ô Đạt hay không đạt thì tích vào ô Không đạt), Biện pháp xử lý/ Ghi chú."
+                  - generic [ref=f380e256]: Quảng cáo
+                  - paragraph [ref=f380e258]:
+                    - strong [ref=f380e259]: "Mẫu số 2: Kiểm tra khi chế biến thức ăn"
+                  - paragraph [ref=f380e260]: "Người ghi chép sẽ ghi đầy đủ những thông tin về ca/ bữa ăn (bữa ăn, giờ ăn..): Ca/ bữa ăn; Tên món ăn; Nguyên liệu chính để chế biến (ghi tên của nguyên liệu chính, số lượng,...); Số lượng hoặc số suất ăn; Thời gian sơ chế xong (ngày, giờ); Thời gian chế biến xong (ngày, giờ); Kiểm tra điều kiện vệ sinh từ thời điểm bắt đầu sơ chế, chế biến cho đến khi thức ăn được chế biến xong (ghi rõ tên người tham gia chế biến, trang thiết bị dụng cụ, khu vực chế biến và phụ trợ); Kiểm tra cảm quan thức ăn (kiểm tra về màu, mùi vị, trạng thái, bảo quản,.... nếu đạt thì tích vào ô Đạt còn nếu không đạt thì tích vào ô Không đạt); Biện pháp xử lý/ Ghi chú."
+                  - paragraph [ref=f380e261]:
+                    - strong [ref=f380e262]: "Mẫu số 3: Kiểm tra trước khi ăn"
+                  - paragraph [ref=f380e263]: "Người ghi chép điền đầy đủ thông tin về ca/ bữa ăn như sau: Ca/ bữa ăn; Tên món ăn; Số lượng suất ăn; Thời gian chia món ăn xong (ghi rõ ngày giờ); Thời gian bắt đầu ăn (ghi rõ ngày giờ); Dụng cụ chia, chứa đựng, che đậy, bảo quản thức ăn; Kiểm tra cảm quan món ăn về màu, mùi vị, trạng thái, bảo quản,.. (nếu đạt thì tích vào ô Đạt còn không đạt thì tích vào ô Không đạt); Biện pháp xử lý/ Ghi chú."
+                  - paragraph [ref=f380e264]
+                  - heading "4. Mẫu sổ kiểm thực ba bước mới nhất" [level=2] [ref=f380e265]
+                  - paragraph [ref=f380e266]: Bạn đọc có thể tham khảo mẫu sổ kiểm thực ba bước được quy định tại Mẫu số 1, Mẫu số 2, Mẫu 3 Phụ lục 1 ban hành kèm theo Quyết định số 1246/QĐ - BYT về việc ban hành "hướng dẫn thực hiện chế độ kiểm thực ba bước và lưu mẫu thức ăn đối với cơ sở kinh doanh ăn uống.
+                  - paragraph [ref=f380e267]
+                  - heading "4.1. Mẫu biểu ghi chép kiểm thực trước khi chế biến thức ăn" [level=3] [ref=f380e268]
+                  - paragraph [ref=f380e269]: Mẫu số 1 Phụ lục 1 ban hành kèm theo Quyết định số 1246/QĐ-BYT
+                  - paragraph [ref=f380e270]
+                  - heading "4.2. Mẫu biểu ghi chép kiểm thực khi chế biến thức ăn" [level=3] [ref=f380e271]
+                  - paragraph [ref=f380e272]: Mẫu số 2 Phụ lục 1 ban hành kèm theo Quyết định số 1246/QĐ-BYT
+                  - paragraph [ref=f380e273]
+                  - heading "4.3. Mẫu biểu ghi chép kiểm thực trước khi ăn" [level=3] [ref=f380e274]
+                  - paragraph [ref=f380e275]: Mẫu số 3 Phụ lục 1 ban hành kèm theo Quyết định số 1246/QĐ-BYT
+                  - generic [ref=f380e276]: Quảng cáo
+                  - paragraph [ref=f380e278]:
+                    - text: Trên đây là toàn bộ nội dung về bài viết
+                    - strong [ref=f380e279]:
+                      - emphasis [ref=f380e280]: "\"Mẫu sổ kiểm thực 3 bước mới nhất? Cách viết sổ kiểm thực\""
+                    - text: mà Luật Minh Khuê muốn gửi đến cho bạn đọc. Nếu bạn đọc có bất kỳ vướng mắc nào liên quan đến vấn đề này hay những vấn đề khác thì vui lòng liên hệ tới
+                    - link "bộ phận tư vấn pháp luật trực tuyến của Luật Minh Khuê" [ref=f380e281] [cursor=pointer]:
+                      - /url: /tu-van-luat-mien-phi-qua-dien-thoai.aspx
+                    - text: theo số
+                    - link "1900.6162" [ref=f380e282] [cursor=pointer]:
+                      - /url: tel:19006162
+                    - text: để được hỗ trợ kịp thời. Xin chân thành cảm ơn bạn đọc đã đón đọc!
+                - generic [ref=f380e284]:
+                  - generic [ref=f380e285]:
+                    - generic [ref=f380e286] [cursor=pointer]
+                    - generic [ref=f380e287] [cursor=pointer]
+                    - generic [ref=f380e288] [cursor=pointer]
+                    - generic [ref=f380e289] [cursor=pointer]
+                    - generic [ref=f380e290] [cursor=pointer]
+                  - generic [ref=f380e291]:
+                    - generic [ref=f380e292]: "4"
+                    - text: sao của 3 đánh giá
+                - generic [ref=f380e294]:
+                  - heading "Bạn thấy nội dung này thực sự hữu ích?" [level=4] [ref=f380e295]
+                  - generic [ref=f380e296]:
+                    - button "Có" [ref=f380e297] [cursor=pointer]
+                    - button "Không" [ref=f380e298] [cursor=pointer]
+                - link "# Vệ sinh an toàn thực phẩm" [ref=f380e300] [cursor=pointer]:
+                  - /url: /tags/ve-sinh-an-toan-thuc-pham
+              - heading "Bài viết cùng chủ đề" [level=3] [ref=f380e302]
+            - generic [ref=f380e306]:
+              - generic [ref=f380e308]:
+                - generic [ref=f380e309]: Tìm kiếm
+                - generic [ref=f380e312]:
+                  - textbox "Từ khóa tìm kiếm" [ref=f380e313]
+                  - button "Tìm kiếm" [ref=f380e314]
+              - generic [ref=f380e318]:
+                - link [ref=f380e321] [cursor=pointer]:
+                  - /url: /so-dien-thoai-luat-su-tu-van-phap-luat-truc-tuyen-qua-tong-dai--.aspx
+                  - img "Tư vấn pháp luật" [ref=f380e322]
+                - link [ref=f380e325] [cursor=pointer]:
+                  - /url: /so-dien-thoai-luat-su-tu-van-phap-luat-truc-tuyen-qua-tong-dai--.aspx
+                  - img "Tư vấn pháp luật" [ref=f380e326]
+                - link [ref=f380e329] [cursor=pointer]:
+                  - /url: /so-dien-thoai-luat-su-tu-van-phap-luat-truc-tuyen-qua-tong-dai--.aspx
+                  - img "Tư vấn pháp luật" [ref=f380e330]
+                - link [ref=f380e333] [cursor=pointer]:
+                  - /url: /so-dien-thoai-luat-su-tu-van-phap-luat-truc-tuyen-qua-tong-dai--.aspx
+                  - img "Tư vấn pháp luật" [ref=f380e334]
+                - link [ref=f380e337] [cursor=pointer]:
+                  - /url: /so-dien-thoai-luat-su-tu-van-phap-luat-truc-tuyen-qua-tong-dai--.aspx
+                  - img "Tư vấn pháp luật" [ref=f380e338]
+              - img "Tư vấn pháp luật 1-1 qua Zalo" [ref=f380e340]
+        - generic [ref=f380e341]:
+          - navigation [ref=f380e342]:
+            - navigation [ref=f380e343]:
+              - list [ref=f380e344]:
+                - listitem [ref=f380e345]:
+                  - link "Văn bản pháp luật" [ref=f380e346] [cursor=pointer]:
+                    - /url: /van-ban/
+                - listitem [ref=f380e347]:
+                  - link "Giáo dục" [ref=f380e348] [cursor=pointer]:
+                    - /url: /giao-duc.aspx
+                - listitem [ref=f380e349]:
+                  - link "Gửi câu hỏi trực tuyến" [ref=f380e350] [cursor=pointer]:
+                    - /url: /tu-van-luat-su.aspx
+                - listitem [ref=f380e351]:
+                  - link "Gửi yêu cầu dịch vụ" [ref=f380e352] [cursor=pointer]:
+                    - /url: /list-contact/lien-he.aspx
+                - listitem [ref=f380e353]:
+                  - link "RSS" [ref=f380e354] [cursor=pointer]:
+                    - /url: /rss
+                - listitem [ref=f380e355]:
+                  - link "Sitemap" [ref=f380e356] [cursor=pointer]:
+                    - /url: /sitemap.xml
+                - listitem [ref=f380e357]:
+                  - link "Liên hệ" [ref=f380e358] [cursor=pointer]:
+                    - /url: /list-contact/lien-he.aspx
+          - generic [ref=f380e360]:
+            - heading " Tư vấn luật doanh nghiệp" [level=2] [ref=f380e362]:
+              - generic [ref=f380e363]: 
+              - link "Tư vấn luật doanh nghiệp" [ref=f380e364] [cursor=pointer]:
+                - /url: /luat-su-tu-van-phap-luat-doanh-nghiep-truc-tuyen-qua-dien-thoai-.aspx
+            - heading " Tư vấn luật đầu tư" [level=2] [ref=f380e366]:
+              - generic [ref=f380e367]: 
+              - link "Tư vấn luật đầu tư" [ref=f380e368] [cursor=pointer]:
+                - /url: /dich-vu-tu-van-dau-tu-tai-viet-nam.aspx
+            - heading " Tư vấn luật lao động" [level=2] [ref=f380e370]:
+              - generic [ref=f380e371]: 
+              - link "Tư vấn luật lao động" [ref=f380e372] [cursor=pointer]:
+                - /url: /dich-vu-luat-su-tu-van-phap-luat-lao-dong-truc-tuyen-qua-tong-dai-dien-thoai-.aspx
+            - heading " Tư vấn luật thuế" [level=2] [ref=f380e374]:
+              - generic [ref=f380e375]: 
+              - link "Tư vấn luật thuế" [ref=f380e376] [cursor=pointer]:
+                - /url: /luat-su-tu-van-phap-luat-thue-truc-tuyen-qua-tong-dai-dien-thoai-.aspx
+            - heading " Tư vấn luật sở hữu trí tuệ" [level=2] [ref=f380e378]:
+              - generic [ref=f380e379]: 
+              - link "Tư vấn luật sở hữu trí tuệ" [ref=f380e380] [cursor=pointer]:
+                - /url: /tu-van-phap-luat-so-huu-tri-tue-truc-tuyen-qua-tong-dai-dien-thoai.aspx
+            - heading " Tư vấn luật hình sự" [level=2] [ref=f380e382]:
+              - generic [ref=f380e383]: 
+              - link "Tư vấn luật hình sự" [ref=f380e384] [cursor=pointer]:
+                - /url: /dich-vu-luat-su-tu-van-phap-luat-hinh-su-truc-tuyen-qua-tong-dai-dien-thoai-.aspx
+            - heading " Tư vấn luật dân sự" [level=2] [ref=f380e386]:
+              - generic [ref=f380e387]: 
+              - link "Tư vấn luật dân sự" [ref=f380e388] [cursor=pointer]:
+                - /url: /dich-vu-luat-su-tu-van-phap-luat-dan-su-truc-tuyen-qua-tong-dai-dien-thoai-.aspx
+            - heading " Tư vấn luật thừa kế" [level=2] [ref=f380e390]:
+              - generic [ref=f380e391]: 
+              - link "Tư vấn luật thừa kế" [ref=f380e392] [cursor=pointer]:
+                - /url: /dich-vu-luat-su-tu-van-phap-luat-thua-ke-truc-tuyen-qua-tong-dai-dien-thoai-.aspx
+            - heading " Tư vấn luật đất đai" [level=2] [ref=f380e394]:
+              - generic [ref=f380e395]: 
+              - link "Tư vấn luật đất đai" [ref=f380e396] [cursor=pointer]:
+                - /url: /luat-su-tu-van-phap-luat-dat-dai-truc-tuyen-qua-tong-dai-dien-thoai-.aspx
+            - heading " Tư vấn luật hôn nhân" [level=2] [ref=f380e398]:
+              - generic [ref=f380e399]: 
+              - link "Tư vấn luật hôn nhân" [ref=f380e400] [cursor=pointer]:
+                - /url: /luat-su-tu-van-phap-luat-hon-nhan-gia-dinh-truc-tuyen-qua-tong-dai-dien-thoai-.aspx
+            - heading " Tư vấn luật bảo hiểm xã hội" [level=2] [ref=f380e402]:
+              - generic [ref=f380e403]: 
+              - link "Tư vấn luật bảo hiểm xã hội" [ref=f380e404] [cursor=pointer]:
+                - /url: /luat-su-tu-van-phap-luat-bao-hiem-xa-hoi-truc-tuyen-qua-tong-dai-dien-thoai-.aspx
+            - heading " Tư vấn luật giao thông" [level=2] [ref=f380e406]:
+              - generic [ref=f380e407]: 
+              - link "Tư vấn luật giao thông" [ref=f380e408] [cursor=pointer]:
+                - /url: /luat-su-tu-van-phap-luat-giao-thong-truc-tuyen-qua-tong-dai-dien-thoai.aspx
+            - heading " Tư vấn luật hành chính" [level=2] [ref=f380e410]:
+              - generic [ref=f380e411]: 
+              - link "Tư vấn luật hành chính" [ref=f380e412] [cursor=pointer]:
+                - /url: /tu-van-luat-hanh-chinh-viet-nam.aspx
+            - heading " Tư vấn luật đấu thầu" [level=2] [ref=f380e414]:
+              - generic [ref=f380e415]: 
+              - link "Tư vấn luật đấu thầu" [ref=f380e416] [cursor=pointer]:
+                - /url: /luat-su-tu-van-phap-luat-dau-thau-truc-tuyen-qua-tong-dai-dien-thoai.aspx
+            - heading " Tư vấn luật nghĩa vụ quân sự" [level=2] [ref=f380e418]:
+              - generic [ref=f380e419]: 
+              - link "Tư vấn luật nghĩa vụ quân sự" [ref=f380e420] [cursor=pointer]:
+                - /url: /luat-su-tu-van-phap-luat-nghia-vu-quan-su-truc-tuyen-qua-tong-dai-dien-thoai-.aspx
+            - heading " Tư vấn luật ngân hàng" [level=2] [ref=f380e422]:
+              - generic [ref=f380e423]: 
+              - link "Tư vấn luật ngân hàng" [ref=f380e424] [cursor=pointer]:
+                - /url: /luat-su-tu-van-phap-luat-truc-tuyen-ve-tai-chinh-ngan-hang-qua-dien-thoai.aspx
+            - heading " Đăng ký thương hiệu độc quyền" [level=2] [ref=f380e426]:
+              - generic [ref=f380e427]: 
+              - link "Đăng ký thương hiệu độc quyền" [ref=f380e428] [cursor=pointer]:
+                - /url: /dang-ky-nhan-hieu--logo-cong-ty--thuong-hieu-doc-quyen.aspx
+            - heading " Đăng ký quyền tác giả" [level=2] [ref=f380e430]:
+              - generic [ref=f380e431]: 
+              - link "Đăng ký quyền tác giả" [ref=f380e432] [cursor=pointer]:
+                - /url: /dich-vu-dang-ky-ban-quyen-tac-gia.aspx
+    - contentinfo [ref=f380e433]:
+      - generic [ref=f380e435]:
+        - generic [ref=f380e436]:
+          - link [ref=f380e438] [cursor=pointer]:
+            - /url: /
+            - img "Minh Khuê" [ref=f380e439]
+          - paragraph [ref=f380e440]:
+            - text: "Hỗ trợ 24/7:"
+            - link "Gọi 1900.6162" [ref=f380e441] [cursor=pointer]:
+              - /url: tel:19006162
+              - text: "1900.6162"
+          - link "LUẬT SƯ TƯ VẤN TRỰC TUYẾN" [ref=f380e442] [cursor=pointer]:
+            - /url: /tu-van-luat-mien-phi-qua-dien-thoai.aspx
+          - link "ĐẶT LỊCH GẶP LUẬT SƯ TRỰC TIẾP" [ref=f380e443] [cursor=pointer]:
+            - /url: /page/dat-lich-tu-van-truc-tiep.aspx
+        - generic [ref=f380e444]:
+          - heading "Văn phòng Hà Nội:" [level=3] [ref=f380e445]
+          - paragraph [ref=f380e446]:
+            - generic [ref=f380e447]: 
+            - strong [ref=f380e448]: "Trụ sở chính:"
+            - text: Phòng 2007, Tòa nhà C2, D' Capitale (Vincom Trần Duy Hưng), Số 119, Đường Trần Duy Hưng, Phường Yên Hòa, Tp. Hà Nội.
+            - link "[  Chỉ đường" [ref=f380e449] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/g5b6YuXAAh1BbS9V8
+              - text: "["
+              - generic [ref=f380e450]: 
+              - text: Chỉ đường
+            - text: "]"
+          - paragraph [ref=f380e451]:
+            - generic [ref=f380e452]: 
+            - strong [ref=f380e453]: "Điện thoại:"
+            - link "0986.11.66.05" [ref=f380e454] [cursor=pointer]:
+              - /url: tel:0986116605
+          - paragraph [ref=f380e455]:
+            - generic [ref=f380e456]: 
+            - strong [ref=f380e457]: "Email:"
+            - link "lienhe@luatminhkhue.vn" [ref=f380e458] [cursor=pointer]:
+              - /url: mailto:lienhe@luatminhkhue.vn
+        - generic [ref=f380e459]:
+          - heading "Văn phòng TP Hồ Chí Minh:" [level=3] [ref=f380e460]
+          - paragraph [ref=f380e461]:
+            - generic [ref=f380e462]: 
+            - strong [ref=f380e463]: "Địa chỉ:"
+            - text: 72/2 Trường Chinh, Phường Tân Sơn Nhất, TP Hồ Chí Minh
+            - link "[  Chỉ đường" [ref=f380e464] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/uvz6MdYn6KDnGqN69
+              - text: "["
+              - generic [ref=f380e465]: 
+              - text: Chỉ đường
+            - text: "]"
+          - paragraph [ref=f380e466]:
+            - generic [ref=f380e467]: 
+            - strong [ref=f380e468]: "Điện thoại:"
+            - link "0981.89.6162" [ref=f380e469] [cursor=pointer]:
+              - /url: tel:0981896162
+          - paragraph [ref=f380e470]:
+            - generic [ref=f380e471]: 
+            - strong [ref=f380e472]: "Email:"
+            - link "dung@luatminhkhue.vn" [ref=f380e473] [cursor=pointer]:
+              - /url: mailto:dung@luatminhkhue.vn
+  - generic [ref=f380e476]:
+    - link [ref=f380e478] [cursor=pointer]:
+      - /url: tel:0986116605
+      - img "Call hotline" [ref=f380e479]
+    - link [ref=f380e481] [cursor=pointer]:
+      - /url: https://zalo.me/19006162
+      - img "Chat zalo" [ref=f380e482]
+  - iframe [ref=f380e483]

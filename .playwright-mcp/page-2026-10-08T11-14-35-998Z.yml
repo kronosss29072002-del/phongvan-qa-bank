@@ -1,0 +1,279 @@
+- generic [active] [ref=f38e1]:
+  - generic:
+    - generic:
+      - link "Bỏ qua để đến phần nội dung chính" [ref=f38e2] [cursor=pointer]
+      - link "Hỗ trợ truy cập" [ref=f38e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=vi
+  - generic [ref=f38e8]:
+    - search [ref=f38e9]:
+      - generic [ref=f38e12]:
+        - link [ref=f38e13] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=vi&ictx=0&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQpYkNegQIBhAG
+          - img "Truy cập trang chủ Google" [ref=f38e14]
+        - generic [ref=f38e15]:
+          - combobox "Tìm kiếm" [ref=f38e18]: dev.to "portfolio projects that actually get you hired in 2026" dev.to "portfolio projects that actually get you hired in 2026"
+          - generic [ref=f38e19]:
+            - button "Xóa" [ref=f38e21] [cursor=pointer]
+            - generic [ref=f38e26]:
+              - button "Công cụ nhập" [ref=f38e27] [cursor=pointer]
+              - button "Tìm kiếm bằng giọng nói" [ref=f38e31] [cursor=pointer]
+              - button "Tìm kiếm bằng hình ảnh" [ref=f38e34] [cursor=pointer]
+        - button "Tìm kiếm" [ref=f38e37] [cursor=pointer]
+    - generic [ref=f38e42]:
+      - button "Cài đặt" [ref=f38e44] [cursor=pointer]
+      - button "Chia sẻ" [ref=f38e49] [cursor=pointer]
+      - generic [ref=f38e55]:
+        - button "Các ứng dụng của Google" [ref=f38e57] [cursor=pointer]
+        - link "Đăng nhập" [ref=f38e62] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=vi&passive=true&continue=https://www.google.com/search%3Fq%3Ddev.to%2B%2522portfolio%2Bprojects%2Bthat%2Bactually%2Bget%2Byou%2Bhired%2Bin%2B2026%2522&ec=futura_srp_og_si_72236_p
+  - generic [ref=f38e65]:
+    - navigation [ref=f38e71]:
+      - generic [ref=f38e77]:
+        - list [ref=f38e78]:
+          - listitem [ref=f38e79]:
+            - link "Tất cả" [disabled] [ref=f38e80]
+          - listitem [ref=f38e83]:
+            - link "Video" [ref=f38e84] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&udm=vids&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMb4WZn99-TGKkTV1SS_1gnAikVBD0Ba1JVsY2vLHWF45BFO4fta3Vl3j1aXYp-JnNuOnCjkpd7l5DATlTe85dnf238I9AtXdk4j1_AfrxL-yzYdOM8OWZ7ryIawnG4cYNPGZ5UkR0cfiYBDFDjIfqgeC2vAK29AJygvc8qCme5gAXHe2sYdpVc6GxkUbymCA1iPn3IwN-TOjTkfDsQrOMeatq6hJ&q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQtKgLegQIGRAB
+          - listitem [ref=f38e87]:
+            - link "Tin tức" [ref=f38e88] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&tbm=nws&source=lnms&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMb4WZn99-TGKkTV1SS_1gnAikVBD0Ba1JVsY2vLHWF45BFO4fta3Vl3j1aXYp-JnNuOnCjkpd7l5DATlTe85dnf238I9AtXdk4j1_AfrxL-yzYdOM8OWZ7ryIawnG4cYNPGZ5UkR0cfiYBDFDjIfqgeC2vAK29AJygvc8qCme5gAXHe2sYdpVc6GxkUbymCA1iPn3IwN-TOjTkfDsQrOMeatq6hJ&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ0pQJegQIGBAB
+          - listitem [ref=f38e91]:
+            - link "Hình ảnh" [ref=f38e92] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&udm=2&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMb4WZn99-TGKkTV1SS_1gnAikVBD0Ba1JVsY2vLHWF45BFO4fta3Vl3j1aXYp-JnNuOnCjkpd7l5DATlTe85dnf238I9AtXdk4j1_AfrxL-yzYdOM8OWZ7ryIawnG4cYNPGZ5UkR0cfiYBDFDjIfqgeC2vAK29AJygvc8qCme5gAXHe2sYdpVc6GxkUbymCA1iPn3IwN-TOjTkfDsQrOMeatq6hJ&q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQtKgLegQIFxAB
+          - listitem [ref=f38e95]:
+            - link "Video ngắn" [ref=f38e96] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&udm=39&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMb4WZn99-TGKkTV1SS_1gnAikVBD0Ba1JVsY2vLHWF45BFO4fta3Vl3j1aXYp-JnNuOnCjkpd7l5DATlTe85dnf238I9AtXdk4j1_AfrxL-yzYdOM8OWZ7ryIawnG4cYNPGZ5UkR0cfiYBDFDjIfqgeC2vAK29AJygvc8qCme5gAXHe2sYdpVc6GxkUbymCA1iPn3IwN-TOjTkfDsQrOMeatq6hJ&q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQs6gLegQIFhAB
+          - listitem [ref=f38e99]:
+            - link "Mua sắm" [ref=f38e100] [cursor=pointer]:
+              - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&udm=28&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzNAeB5pZ4WyJCsUnT7fbmMb4WZn99-TGKkTV1SS_1gnAikVBD0Ba1JVsY2vLHWF45BFO4fta3Vl3j1aXYp-JnNuOnCjkpd7l5DATlTe85dnf238I9AtXdk4j1_AfrxL-yzYdOM8OWZ7ryIawnG4cYNPGZ5UkR0cfiYBDFDjIfqgeC2vAK29AJygvc8qCme5gAXHe2sYdpVc6GxkUbymCA1iPn3IwN-TOjTkfDsQrOMeatq6hJ&q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&ved=1t:220175&ictx=111
+          - listitem [ref=f38e103]:
+            - button [ref=f38e104] [cursor=pointer]:
+              - generic "Các bộ lọc khác" [ref=f38e105]: Thêm
+        - button "Công cụ" [ref=f38e112] [cursor=pointer]
+    - heading "Kết quả tìm kiếm" [level=1] [ref=f38e119]
+    - generic [ref=f38e125]:
+      - generic [ref=f38e126]: Looking for results in English?
+      - link [ref=f38e127] [cursor=pointer]:
+        - /url: "#"
+      - link "Change to English" [ref=f38e131] [cursor=pointer]:
+        - /url: /setprefs?sig=0_t5UDDH1-zCax__9uIpTmwchHM3M%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Ddev.to%2B%2522portfolio%2Bprojects%2Bthat%2Bactually%2Bget%2Byou%2Bhired%2Bin%2B2026%2522&hl=en&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQhoQCKAF6BAgREAQ
+      - link "Tiếp tục sử dụng Tiếng Việt" [ref=f38e132] [cursor=pointer]:
+        - /url: "#"
+      - link "Cài đặt ngôn ngữ" [ref=f38e134] [cursor=pointer]:
+        - /url: /preferences?lang=1&hl=vi&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQiIQCKAN6BAgREAY#languages
+    - generic [ref=f38e135]:
+      - generic [ref=f38e154]:
+        - heading "Đang suy nghĩ" [level=2] [ref=f38e158]
+        - progressbar "Đang tạo" [ref=f38e161]
+      - main [ref=f38e163]:
+        - generic [ref=f38e167]:
+          - generic [ref=f38e170]:
+            - heading "Web results" [level=2] [ref=f38e171]
+            - generic [ref=f38e172]:
+              - generic [ref=f38e175]:
+                - link "\"The Portfolio Projects That Actually Get You Hired in 2026\" DEV Community https://dev.to › devraj_singh7 › the-p..." [ref=f38e177] [cursor=pointer]:
+                  - /url: /goto?url=CAESlwEB6zswFQmqz2GSnDcy1I39ahCs2qBx1NwyyDnuV3Wd082psQgopgWyjVpjz5QJeEB4f-HpciTO0VwI61xaF-L_Eimv7zqMyAEBS-k_ysxrmzn_FBKUH1uZiaL2DmhPF2QPCcD1ZcjKqRNYZHyOzZkyj6fzdpSxKhj4iopuGJlStJt1VHYkTkLHDtoE5T81Vqjz9qE0v0HL
+                  - heading "\"The Portfolio Projects That Actually Get You Hired in 2026\"" [level=3] [ref=f38e178]
+                  - generic [ref=f38e184]:
+                    - generic [ref=f38e185]: DEV Community
+                    - generic [ref=f38e187]: https://dev.to › devraj_singh7 › the-p...
+                - generic [ref=f38e189]:
+                  - generic [ref=f38e190]: ·
+                  - link "Dịch trang này" [ref=f38e191] [cursor=pointer]:
+                    - /url: /goto?url=CAES4QEB6zswFez7ALJ7avCPHAWMkPdRFDFef4KH_Xe7_3sspDtqdXIHEhiWq1f1mAtn5rJyBsUVPCm8wKNwzSZScrWXTBCZScMUnslfbVxnFLdZfw2N5RCChvGEZPMFxgHp8eVGdP551lE1z3-AzQTrmE9QNZqZmi4nH3RaSRO9-eUk746xuakBwU3UnU8q1cF0HqBLb81Z5k20Eo2LwaNztu9QO2ydYyDpFO9VeHtBCQUrKNkJpCtF7UAhazL2wFso0KSFBJFxEw9evPikrFX34auEAH1bevcLCcRZgbZMU3I48-s
+                - button "Thông tin về kết quả này" [ref=f38e196] [cursor=pointer]
+              - generic [ref=f38e202]:
+                - generic [ref=f38e203]: 9 thg 4, 2026 —
+                - generic [ref=f38e204]:
+                  - text: "\"The"
+                  - emphasis [ref=f38e205]: Portfolio Projects That Actually Get You Hired in 2026
+                  - text: "\" · Why Most Portfolios Fail · Project 1: AI-Powered Study Buddy · Project 2: ..."
+          - generic [ref=f38e209]:
+            - generic [ref=f38e212]:
+              - link "5 AI Portfolio Projects That Actually Get You Hired in 2026 DEV Community https://dev.to › klement_gunndu › 5-a..." [ref=f38e214] [cursor=pointer]:
+                - /url: /goto?url=CAESmQEB6zswFd6y_HA4S8eMAziyUbIxp4n5XkU_lr3rKVvEb32tPEElHtBUnckHRvQ5Chg6tIq8pGUwmGhw75fswtBL64Mi3tg_iPDvKdgpfiiXWN2pS5FBw_svX26HDyG6cva_JXBhvhTIn0NZHEKqI59z5s8C1b-eW4vE3i7iHcpd1JvEHZEQdwucnzfauEeVir5YzSX6tqMcjt4
+                - heading "5 AI Portfolio Projects That Actually Get You Hired in 2026" [level=3] [ref=f38e215]
+                - generic [ref=f38e221]:
+                  - generic [ref=f38e222]: DEV Community
+                  - generic [ref=f38e224]: https://dev.to › klement_gunndu › 5-a...
+              - generic [ref=f38e226]:
+                - generic [ref=f38e227]: ·
+                - link "Dịch trang này" [ref=f38e228] [cursor=pointer]:
+                  - /url: /goto?url=CAES4wEB6zswFXfQJisDJW6ojNS0bQcgJpqH4YVk_mZQIwuM4GQE_QGv3X-VRNGF830n9lTqccqasg9Vqm-HTcaL147LXYoMe7NaBFGzKq0kLct4g30HPXL6JXHoNZlukWrXoqWWFSn3RBS2IHOCNU5vkWRjjswqPYEuHz8KXoQLtuDcbG5QLdFZypkmH4K0jCa4emLSQfQ84NTHrpamqdjekb8B48Egx1P0Z90lNWbKFFUhnqgij984CzUrzXRLKX8BrnsxO-w5vpsdnvP_newN0Qcszm1eso19NvIwMnYcOTYlwln3JQ
+              - button "Thông tin về kết quả này" [ref=f38e233] [cursor=pointer]
+            - generic [ref=f38e239]:
+              - generic [ref=f38e240]: 7 thg 3, 2026 —
+              - generic [ref=f38e241]:
+                - text: 5 AI
+                - emphasis [ref=f38e242]: Portfolio Projects That Actually Get You Hired in 2026
+                - text: "· Project 1: Document Q&A With RAG · Project 2: Structured Data Extraction · Project 3: ..."
+          - generic [ref=f38e246]:
+            - generic [ref=f38e249]:
+              - link "5 DevOps Portfolio Projects That Actually Get You Hired in 2026 DevOpsBoys https://devopsboys.com › blog › devo..." [ref=f38e251] [cursor=pointer]:
+                - /url: /goto?url=CAESggEB6zswFa3sHUrpikh9I4mgB17kqEen62Cm94ZribNCTT8fgs6Gx2MW5VEu0aQBPj98oiKWkMSIkL415NbURQcVmptK7k5TZfeqbzvHh7tZkz-aX97HzMvNEtbtHF-OHRxTHkEIifiVCdhle2sTrzGK0P_7ea57KjAW0Mg1jEn310BY
+                - heading "5 DevOps Portfolio Projects That Actually Get You Hired in 2026" [level=3] [ref=f38e252]
+                - generic [ref=f38e258]:
+                  - generic [ref=f38e259]: DevOpsBoys
+                  - generic [ref=f38e261]: https://devopsboys.com › blog › devo...
+              - generic [ref=f38e263]:
+                - generic [ref=f38e264]: ·
+                - link "Dịch trang này" [ref=f38e265] [cursor=pointer]:
+                  - /url: /goto?url=CAESzAEB6zswFaBcsgn4uOZ0p_GSyhVvrL5yIw8BAkUdyn3PVx7Yl66xh_qss9yvCjg6usBuaCRArcNKVp-CyCUXezVgJdV4NROa4Y9z-5I4BqhYXJo5zHGzMvyQzV5xWTRDEhkyIIHc6L9kNQ8FYca20yjqPF63de0gbAH4EaI4wUwzth1Iee8yD43XFCqWkH9hbGV5aEs8K4fjc8Fdiha6_ygUaj1EUX1kN7Ac7qx5zdUGxaQpfj6keuye2GkdD3EfAwVvf1pV6jPpBoCaHAo
+              - button "Thông tin về kết quả này" [ref=f38e270] [cursor=pointer]
+            - generic [ref=f38e277]:
+              - text: 5 DevOps
+              - emphasis [ref=f38e278]: Portfolio Projects That Actually Get You Hired in 2026
+              - text: "· What Hiring Managers Actually Want to See · Project 1: End-to-End CI/CD Pipeline with GitOps."
+          - generic [ref=f38e282]:
+            - generic [ref=f38e285]:
+              - link "5 Portfolio Projects That Actually Get You Hired in 2026 | Scrimba ... scrimbaguide.tech https://scrimbaguide.tech › blog › portf..." [ref=f38e287] [cursor=pointer]:
+                - /url: /goto?url=CAESfAHrOzAVXrkkBBZu7FCcQs4As6W7HUTL-ndcBbTOJWZ8KChu699OiDBQEJNaxIm-OpGYrB58R9HcKEXap8zuXHibEGAtD24aYNnh_CRECsNVuMYPSBbLnlzUqa0bzxBlPE3KZvqQ6pMFGKqC_sF8IXz_FZ925Qu7rL656FE
+                - heading "5 Portfolio Projects That Actually Get You Hired in 2026 | Scrimba ..." [level=3] [ref=f38e288]
+                - generic [ref=f38e294]:
+                  - generic [ref=f38e295]: scrimbaguide.tech
+                  - generic [ref=f38e297]: https://scrimbaguide.tech › blog › portf...
+              - generic [ref=f38e299]:
+                - generic [ref=f38e300]: ·
+                - link "Dịch trang này" [ref=f38e301] [cursor=pointer]:
+                  - /url: /goto?url=CAESxgEB6zswFUcv4wTejJeA9fE2j9cVkdFKOANLUhljR2yzaQTaNa0FpKG_3jr7UViyogxDdovF1GpC5XD1zbBRfw85NIydEbTzZj9OuXTl9CcCcjhBR3tq6V5h2gUTduvzzPDxEkEvHo7wnsyP_gpzGfu1ZXsybObeY8Yk44QjVFdg3zI0DbBbHTo2K08nZOu_bSaK_afL3UOx_5ahDmax6p5M4IrKhcyY4E2-e38_ZL3sVsG0GZyBeCDxaVDPTEAoGaBrwulkxm4
+              - button "Thông tin về kết quả này" [ref=f38e306] [cursor=pointer]
+            - generic [ref=f38e313]:
+              - text: "5"
+              - emphasis [ref=f38e314]: Portfolio Projects That Actually Get You Hired in 2026
+              - text: "... What they're looking for is evidence that you can think like a developer: ... Fullstack Developer Path, ..."
+          - generic [ref=f38e318]:
+            - generic [ref=f38e321]:
+              - link "klement Gunndu DEV Community https://dev.to › klement_gunndu" [ref=f38e323] [cursor=pointer]:
+                - /url: /goto?url=CAESWAHrOzAVXLbuN4xDp1GoIfI5oarMJXANMiEzlGIYG5s5jsRIuZV0yvw6WtbjAxDo7FbFK-VoKEHXLuGWOGUW_MrwlHbzeTCuPkfmZE8BWpCGQe0BBa10INQ
+                - heading "klement Gunndu" [level=3] [ref=f38e324]
+                - generic [ref=f38e330]:
+                  - generic [ref=f38e331]: DEV Community
+                  - generic [ref=f38e333]: https://dev.to › klement_gunndu
+              - generic [ref=f38e335]:
+                - generic [ref=f38e336]: ·
+                - link "Dịch trang này" [ref=f38e337] [cursor=pointer]:
+                  - /url: /goto?url=CAESoQEB6zswFaIl5GblVE3rbq1vjq6Odzo6-RpfAEdVtl6qQX7waMbOmoDs_Or0-jyIZbRpKt57fJ4W1SvLUyD3eO6KKW6qbK7bOiiLmgbkwMHcihUSurIbi9fRzSy-H7iCvXv6epIG8ucOziF18LYHV6WvwLxoDpZQdDQipQhwsCH80szdMRiPooFC3h_8l6_5XfD6gFMaGTXbUcZwN7XGJnHeNw
+              - button "Thông tin về kết quả này" [ref=f38e342] [cursor=pointer]
+            - generic [ref=f38e348]:
+              - generic [ref=f38e349]: 24 thg 4, 2026 —
+              - generic [ref=f38e350]:
+                - text: 5 AI
+                - emphasis [ref=f38e351]: Portfolio Projects That Actually Get You Hired in 2026
+                - text: "· #ai #career #python #beginners · 34 reactions · Add Comment. 7 min read. Build a ..."
+          - generic [ref=f38e355]:
+            - generic [ref=f38e358]:
+              - link "Open Source Is Replacing the Resume as JavaScript's ... Medium · JS Guru Jobs 6 tháng trước" [ref=f38e360] [cursor=pointer]:
+                - /url: /goto?url=CAESsgEB6zswFWr2lF-GLGUAI-z6dfe6jppNMdnzRfCJm9K7SVMh2J_r7SuKhNG1gx2m54fIw9S3vzcF-FinGlcOXG7xMlbmTxEPnuhrn0l03R3Q4tq7M_R_0OVZ5PPPmOSQy63ZWJFvsvLkv8ueupdpLwIZTVnjXgPHxYwduccKVXa3mo_hbq_uZ0n7n243K7VWK88a6QbVc-8fg06UyNSzOUXM9wHukEi-ZHgMHGRYntB6dc_0
+                - heading "Open Source Is Replacing the Resume as JavaScript's ..." [level=3] [ref=f38e361]
+                - generic [ref=f38e367]:
+                  - generic [ref=f38e368]: Medium · JS Guru Jobs
+                  - generic [ref=f38e370]: 6 tháng trước
+              - button "Thông tin về kết quả này" [ref=f38e376] [cursor=pointer]
+            - generic [ref=f38e383]:
+              - text: ...
+              - emphasis [ref=f38e384]: Portfolio Projects That Actually Get You Hired in 2026
+              - text: . The difference is simple. A portfolio says you can build. Open source shows you can ...
+          - generic [ref=f38e388]:
+            - generic [ref=f38e391]:
+              - link "Programming Page 1204 DEV Community https://dev.to › programming › page" [ref=f38e393] [cursor=pointer]:
+                - /url: /goto?url=CAESYQHrOzAV0urO9AafNAL_s0aMzLmlHdk8YXjXBJzOzAFZ0gLWNpBESJeXnBuylWe7SCsqw6xIZW24QQsNC56MGv5Nr79AMw7JBkbmwf77snbXrcN2be_PbDYk1q9j9vTZpdY
+                - heading "Programming Page 1204" [level=3] [ref=f38e394]
+                - generic [ref=f38e400]:
+                  - generic [ref=f38e401]: DEV Community
+                  - generic [ref=f38e403]: https://dev.to › programming › page
+              - generic [ref=f38e405]:
+                - generic [ref=f38e406]: ·
+                - link "Dịch trang này" [ref=f38e407] [cursor=pointer]:
+                  - /url: /goto?url=CAESqgEB6zswFeBnWHcYi8szF6QUnTVSO045VZlCQqRDvYjk6W6sqEgeox92IMs-JH7lcFK_QO5brDdPdfQ5Ex5MahO7NGPH8SkGFJ-hFmtJcPrnPiZLoSzyWd_q3Hb3aqgIRS1S9axHm_Oz3QbL20EjJAMF13sLr5qCx8d967zc5ntv4Mxtny6ZYp5dgjp_ngpKHs0TY9KbL7LrCR5cCjbG87KmDfLwVd2iK_zkNQ
+              - button "Thông tin về kết quả này" [ref=f38e412] [cursor=pointer]
+            - generic [ref=f38e419]:
+              - text: "\"The"
+              - emphasis [ref=f38e420]: Portfolio Projects That Actually Get You Hired in 2026
+              - text: "\" · #programming #javascript #webdev #beginners · 14 reactions · Add Comment. 8 min read. How ..."
+          - generic [ref=f38e424]:
+            - generic [ref=f38e427]:
+              - 'link "How to Build a Successful Career in AI: Step-by-Step Guide Careerera https://www.careerera.com › Blog" [ref=f38e429] [cursor=pointer]':
+                - /url: /goto?url=CAESkwEB6zswFRgG6eKdczEWBsjvdETMWkniAnUfRCV7cOfEByojBo28WkN6QsL9LCY4fwrdSYNIGpUpucWAieDzUP1MOka4G6PORdhsFyHI1OKaOwLwtwbXLG4iI0rR_WQmFJ6KAtoi_MiVBSdnrF1NV7EzBYSwUTYRIOIBFTZKkUuCKVOW5QkpgBEQl3dImGDj-Co0YhM
+                - 'heading "How to Build a Successful Career in AI: Step-by-Step Guide" [level=3] [ref=f38e430]'
+                - generic [ref=f38e436]:
+                  - generic [ref=f38e437]: Careerera
+                  - generic [ref=f38e439]: https://www.careerera.com › Blog
+              - generic [ref=f38e441]:
+                - generic [ref=f38e442]: ·
+                - link "Dịch trang này" [ref=f38e443] [cursor=pointer]:
+                  - /url: /goto?url=CAES3QEB6zswFQAd62pdAV0PZgC9XNYZxU-5IAQdd6OJ0u2PrEBTOs9v4Jn1lcG3-7MKG9zYMXVkLb3Io6qKNmJdRBYxu9A_1_ytxr7LX5vmsOWXI0EIO0L8d4SBm0TIWsEZaMlDu95g1ePqaQFbAVEm15acdxj2Itxg2uQ5lvq5nr35i728sAHxctKf0pHfwHp3-vO-GT3lXe0832JTUCfPUOxUKdCGy5TyXvtqW1YhHJtFlWoV-ml7j9IC-oqunUGLXljrNMKtKEmHX6byRW0_RjvFG4xCdOKOppAzr_g8mw
+              - button "Thông tin về kết quả này" [ref=f38e448] [cursor=pointer]
+            - generic [ref=f38e455]:
+              - emphasis [ref=f38e456]: Portfolio Projects That Actually Get You Hired in 2026
+              - text: · 1. A RAG System Built on a Real Document Collection (LLM / GenAI Specialization) · 2. Object Detection ...
+          - generic [ref=f38e460]:
+            - generic [ref=f38e463]:
+              - link "Comment “BETTER” and I'll dm you the exact framework + ... Instagram · bashi_fuirkashi >50 lượt thích · 7 tháng trước" [ref=f38e465] [cursor=pointer]:
+                - /url: /goto?url=CAESbAHrOzAVzer7hfwJvXBfJXrJc_Y-VRgK_QcDXLno2F8aUgW7_vuejUM4L1Xv0hv9AtXELLuNDKQ1Fp-_xeRe2ZzYvZ47HVtozbjgVDjQA_yznaCu3W3gbhHxwANDoleD3i_xlhnhN2yzPiolWQ
+                - heading "Comment “BETTER” and I'll dm you the exact framework + ..." [level=3] [ref=f38e466]
+                - generic [ref=f38e472]:
+                  - generic [ref=f38e473]: Instagram · bashi_fuirkashi
+                  - generic [ref=f38e475]: ">50 lượt thích · 7 tháng trước"
+              - button "Thông tin về kết quả này" [ref=f38e481] [cursor=pointer]
+            - generic [ref=f38e488]:
+              - text: ...
+              - emphasis [ref=f38e489]: portfolio projects that actually get you hired in 2026
+              - text: . Do this instead 1️⃣ Start with a real business bottleneck Pick something from ...
+        - generic [ref=f38e491]:
+          - generic [ref=f38e496]:
+            - heading "Mọi người cũng tìm kiếm" [level=2] [ref=f38e498]
+            - generic [ref=f38e500]:
+              - generic [ref=f38e501]:
+                - link "AI Engineer portfolio examples" [ref=f38e505] [cursor=pointer]:
+                  - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&q=AI+Engineer+portfolio+examples&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ1QJ6BAg5EAE
+                - link "Best AI Engineer portfolio website" [ref=f38e519] [cursor=pointer]:
+                  - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&q=Best+AI+Engineer+portfolio+website&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ1QJ6BAg9EAE
+                - link "AI engineer portfolio GitHub" [ref=f38e533] [cursor=pointer]:
+                  - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&q=AI+engineer+portfolio+GitHub&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ1QJ6BAg8EAE
+              - generic [ref=f38e544]:
+                - link "Software engineer portfolio website" [ref=f38e548] [cursor=pointer]:
+                  - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&q=Software+engineer+portfolio+website&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ1QJ6BAg6EAE
+                - link "AI Engineer portfolio template" [ref=f38e562] [cursor=pointer]:
+                  - /url: /search?sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&q=AI+Engineer+portfolio+template&sa=X&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ1QJ6BAg7EAE
+          - navigation [ref=f38e573]:
+            - heading "Điều hướng trang" [level=1] [ref=f38e574]
+            - text: "1"
+            - link "Page 2" [ref=f38e577] [cursor=pointer]:
+              - /url: /search?q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&ei=GnvHar-EOau5vr0PzfWrmQ8&start=10&sa=N&sstk=AS6-VmJLqN6rbBrZ3lrxopWLneLr4XelckaFvpJsUt2BEjBySOM9G4yB1rbMkoxz553YCtn_YD4BDUo6ZixoMwoqiROtvjAqSyUmfQ&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ8tMDegQINxAE
+              - text: "2"
+            - link "Page 3" [ref=f38e579] [cursor=pointer]:
+              - /url: /search?q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&ei=GnvHar-EOau5vr0PzfWrmQ8&start=20&sa=N&sstk=AS6-VmJLqN6rbBrZ3lrxopWLneLr4XelckaFvpJsUt2BEjBySOM9G4yB1rbMkoxz553YCtn_YD4BDUo6ZixoMwoqiROtvjAqSyUmfQ&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ8tMDegQINxAG
+              - text: "3"
+            - link "Page 4" [ref=f38e581] [cursor=pointer]:
+              - /url: /search?q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&ei=GnvHar-EOau5vr0PzfWrmQ8&start=30&sa=N&sstk=AS6-VmJLqN6rbBrZ3lrxopWLneLr4XelckaFvpJsUt2BEjBySOM9G4yB1rbMkoxz553YCtn_YD4BDUo6ZixoMwoqiROtvjAqSyUmfQ&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ8tMDegQINxAI
+              - text: "4"
+            - link "Page 5" [ref=f38e583] [cursor=pointer]:
+              - /url: /search?q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&ei=GnvHar-EOau5vr0PzfWrmQ8&start=40&sa=N&sstk=AS6-VmJLqN6rbBrZ3lrxopWLneLr4XelckaFvpJsUt2BEjBySOM9G4yB1rbMkoxz553YCtn_YD4BDUo6ZixoMwoqiROtvjAqSyUmfQ&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ8tMDegQINxAK
+              - text: "5"
+            - heading [level=2] [ref=f38e585]:
+              - link "Tiếp" [ref=f38e586] [cursor=pointer]:
+                - /url: /search?q=dev.to+%22portfolio+projects+that+actually+get+you+hired+in+2026%22&sca_esv=e2130cf16db8d2a2&sxsrf=APpeQnvXlDIDP9z7oCTvxtOzIVzxKHHoGw:1791458074942&ei=GnvHar-EOau5vr0PzfWrmQ8&start=10&sa=N&sstk=AS6-VmJLqN6rbBrZ3lrxopWLneLr4XelckaFvpJsUt2BEjBySOM9G4yB1rbMkoxz553YCtn_YD4BDUo6ZixoMwoqiROtvjAqSyUmfQ&ved=2ahUKEwi_-b6xpaqXAxWrnK8BHc36KvMQ8NMDegQINxAM
+        - navigation
+    - contentinfo [ref=f38e589]:
+      - heading "Đường liên kết ở chân trang" [level=1] [ref=f38e590]
+      - generic [ref=f38e594]:
+        - generic [ref=f38e596]:
+          - text: Việt Nam
+          - generic [ref=f38e598]:
+            - button "Thủ Đức, Hồ Chí Minh - Dựa trên địa chỉ IP của bạn" [ref=f38e600] [cursor=pointer]:
+              - generic [ref=f38e601]: Thủ Đức, Hồ Chí Minh
+              - generic [ref=f38e603]:
+                - text: "-"
+                - generic [ref=f38e604]: Dựa trên địa chỉ IP của bạn
+            - text: "-"
+            - button "Cập nhật vị trí" [ref=f38e606] [cursor=pointer]
+        - generic [ref=f38e609]:
+          - link "Trợ giúp" [ref=f38e610] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=vi&fg=1
+          - link "Gửi phản hồi" [ref=f38e611] [cursor=pointer]:
+            - /url: "#"
+          - link "Quyền riêng tư" [ref=f38e612] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=vi&fg=1
+          - link "Điều khoản" [ref=f38e613] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=vi&fg=1

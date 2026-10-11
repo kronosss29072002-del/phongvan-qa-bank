@@ -1,0 +1,842 @@
+- generic [active] [ref=f50e1]:
+  - link "Bỏ qua nội dung chính" [ref=f50e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f50e3]:
+    - generic [ref=f50e4]:
+      - generic [ref=f50e5]:
+        - paragraph [ref=f50e6]: Nghiên cứu dự án web · 08.10.2026 · 192 lượt agent
+        - heading "20 dự án web nên làm từ fresher đến middle, xếp theo đúng thứ tự học" [level=1] [ref=f50e7]
+        - paragraph [ref=f50e8]: "Thứ tự này đến từ hai workflow quét GitHub và web: 179 ứng viên gộp còn 123, 34 cái vượt xác minh đối kháng, 20 cái chốt lại. Đây là nghiên cứu lấy mẫu, không phải quét toàn bộ internet — mục Phương pháp nêu rõ chỗ nào còn hổng, và mọi repo mẫu đều ghi license kiểm ngày 08.10.2026."
+      - 'button "Giao diện: hệ thống" [ref=f50e10] [cursor=pointer]'
+      - list [ref=f50e11]:
+        - listitem [ref=f50e12]:
+          - generic [ref=f50e13]: "179"
+          - generic [ref=f50e14]: ứng viên thô
+        - listitem [ref=f50e15]:
+          - generic [ref=f50e16]: "34"
+          - generic [ref=f50e17]: vượt xác minh đối kháng
+        - listitem [ref=f50e18]:
+          - generic [ref=f50e19]: "192"
+          - generic [ref=f50e20]: lượt agent, 2 workflow
+        - listitem [ref=f50e21]:
+          - generic [ref=f50e22]: "28"
+          - generic [ref=f50e23]: repo sửa lại sau audit license
+  - navigation "Lọc dự án" [ref=f50e24]:
+    - group "Lọc theo bậc" [ref=f50e25]:
+      - button "Tất cả" [pressed] [ref=f50e26] [cursor=pointer]
+      - button "Fresher" [ref=f50e27] [cursor=pointer]
+      - button "Junior" [ref=f50e28] [cursor=pointer]
+      - button "Middle" [ref=f50e29] [cursor=pointer]
+    - searchbox "Tìm trong danh sách dự án" [ref=f50e30]
+    - status [ref=f50e31]: 20 / 20 dự án
+  - main [ref=f50e32]:
+    - region [ref=f50e33]:
+      - heading "Tóm tắt 20 dự án" [level=2] [ref=f50e34]
+      - paragraph [ref=f50e35]: Bấm tên dự án để nhảy tới thẻ chi tiết. Bộ lọc phía trên tác động cả bảng này lẫn danh sách chi tiết.
+      - region "Bảng tóm tắt 20 dự án, cuộn ngang được" [ref=f50e36]:
+        - table [ref=f50e37]:
+          - caption [ref=f50e38]: 20 dự án xếp theo thứ tự học, dữ liệu 08.10.2026
+          - rowgroup [ref=f50e39]:
+            - row [ref=f50e40]:
+              - columnheader "#" [ref=f50e41]
+              - columnheader "Dự án" [ref=f50e42]
+              - columnheader "Bậc" [ref=f50e43]
+              - columnheader "Vấn đề cần giải" [ref=f50e44]
+          - rowgroup [ref=f50e45]:
+            - row [ref=f50e46]:
+              - rowheader "01" [ref=f50e47]
+              - cell [ref=f50e48]:
+                - link "Portfolio cá nhân (Personal portfolio website)" [ref=f50e49] [cursor=pointer]:
+                  - /url: "#du-an-1"
+              - cell "Fresher" [ref=f50e50]
+              - cell "Fresher chưa có kinh nghiệm thì không có nơi nào gửi nhà tuyển dụng; site không deploy thì các project chỉ nằm yên trên máy người viết." [ref=f50e51]
+            - row [ref=f50e52]:
+              - rowheader "02" [ref=f50e53]
+              - cell [ref=f50e54]:
+                - link "To-do / task tracker" [ref=f50e55] [cursor=pointer]:
+                  - /url: "#du-an-2"
+              - cell "Fresher" [ref=f50e56]
+              - cell "Người mới chưa từng dựng add/edit/delete/complete có lưu trữ thì chưa thật sự quản lý được state — kỹ năng mà mọi project sau đều dùng lại." [ref=f50e57]
+            - row [ref=f50e58]:
+              - rowheader "03" [ref=f50e59]
+              - cell [ref=f50e60]:
+                - link "Website clone (design-to-code)" [ref=f50e61] [cursor=pointer]:
+                  - /url: "#du-an-3"
+              - cell "Fresher" [ref=f50e62]
+              - cell "Junior thường trượt khi chuyển design thành code responsive đúng pixel, và không có bậc nào khác trong lộ trình này luyện đúng kỹ năng đó." [ref=f50e63]
+            - row [ref=f50e64]:
+              - rowheader "04" [ref=f50e65]
+              - cell [ref=f50e66]:
+                - link "Weather app" [ref=f50e67] [cursor=pointer]:
+                  - /url: "#du-an-4"
+              - cell "Fresher" [ref=f50e68]
+              - cell "Người mới chưa từng gọi API bên thứ ba thì sau này không xử lý nổi tích hợp checkout hay các API AI." [ref=f50e69]
+            - row [ref=f50e70]:
+              - rowheader "05" [ref=f50e71]
+              - cell [ref=f50e72]:
+                - link "WordPress business site (agency deliverable)" [ref=f50e73] [cursor=pointer]:
+                  - /url: "#du-an-5"
+              - cell "Fresher" [ref=f50e74]
+              - cell "Agency Việt Nam vẫn tính tiền khách hàng cho site hồ sơ năng lực và WooCommerce; fresher không làm được build child-theme chuẩn thì không có kỹ năng billable để vào nghề." [ref=f50e75]
+            - row [ref=f50e76]:
+              - rowheader "06" [ref=f50e77]
+              - cell [ref=f50e78]:
+                - link "Air quality dashboard (AQI/PM2.5)" [ref=f50e79] [cursor=pointer]:
+                  - /url: "#du-an-6"
+              - cell "Fresher" [ref=f50e80]
+              - cell "Cha mẹ ở Hà Nội muốn biết chiều nay con có được ra ngoài phải tự đọc số PM2.5 rải rác trên các portal cơ quan, mỗi nơi một format." [ref=f50e81]
+            - row [ref=f50e82]:
+              - rowheader "07" [ref=f50e83]
+              - cell [ref=f50e84]:
+                - link "URL shortener" [ref=f50e85] [cursor=pointer]:
+                  - /url: "#du-an-7"
+              - cell "Junior" [ref=f50e86]
+              - cell "Ai đăng link trong SMS hay ấn phẩm giấy đều cần URL ngắn theo dõi được; tự xây buộc phải lo database, redirect, analytics và rate limiting mà không bị frontend đánh lạc." [ref=f50e87]
+            - row [ref=f50e88]:
+              - rowheader "08" [ref=f50e89]
+              - cell [ref=f50e90]:
+                - link "Room-rental management (quản lý nhà trọ)" [ref=f50e91] [cursor=pointer]:
+                  - /url: "#du-an-8"
+              - cell "Junior" [ref=f50e92]
+              - cell "Chủ trọ nuôi 5-50 phòng trọ ghi tình trạng thuê, CCCD, hợp đồng và chỉ số điện nước vào sổ tay hoặc Excel, nên quên ai đã trả và tính sai tiền điện." [ref=f50e93]
+            - row [ref=f50e94]:
+              - rowheader "09" [ref=f50e95]
+              - cell [ref=f50e96]:
+                - link "Clinic appointment booking" [ref=f50e97] [cursor=pointer]:
+                  - /url: "#du-an-9"
+              - cell "Junior" [ref=f50e98]
+              - cell "Bệnh nhân xếp hàng từ 2h sáng ở Chợ Rẫy trong khi nhân sự chìm trong giấy tờ; không có đặt lịch online thì phòng khám kín slot buổi sáng và mất giờ bác sĩ vì vắng không báo trước." [ref=f50e99]
+            - row [ref=f50e100]:
+              - rowheader "10" [ref=f50e101]
+              - cell [ref=f50e102]:
+                - link "Public-service dossier tracking (hồ sơ hành chính)" [ref=f50e103] [cursor=pointer]:
+                  - /url: "#du-an-10"
+              - cell "Junior" [ref=f50e104]
+              - cell "Công dân nộp hồ sơ giấy rồi gọi điện hoặc quay lại hỏi “hồ sơ tới đâu rồi”, trong khi nhân viên không theo dõi nổi bộ phận nào đang giữ file." [ref=f50e105]
+            - row [ref=f50e106]:
+              - rowheader "11" [ref=f50e107]
+              - cell [ref=f50e108]:
+                - link "Tutoring class manager (quản lý lớp học thêm)" [ref=f50e109] [cursor=pointer]:
+                  - /url: "#du-an-11"
+              - cell "Junior" [ref=f50e110]
+              - cell "Giáo viên dạy lớp thêm ghi danh sách, điểm danh và học phí theo buổi vào sổ tay hay thread Zalo, nên quên thu phí, vắng mặt tự nhiên làm mất tiền." [ref=f50e111]
+            - row [ref=f50e112]:
+              - rowheader "12" [ref=f50e113]
+              - cell [ref=f50e114]:
+                - link "Admin dashboard (role-based CRUD backoffice)" [ref=f50e115] [cursor=pointer]:
+                  - /url: "#du-an-12"
+              - cell "Junior" [ref=f50e116]
+              - cell "Công ty nào cũng có backoffice nội bộ cho đơn hàng, nội dung, nhân sự; junior chưa từng dựng form, bảng, RBAC, pagination thì chưa sẵn sàng cho task phổ biến nhất của nghề." [ref=f50e117]
+            - row [ref=f50e118]:
+              - rowheader "13" [ref=f50e119]
+              - cell [ref=f50e120]:
+                - link "Budget transparency visualizer" [ref=f50e121] [cursor=pointer]:
+                  - /url: "#du-an-13"
+              - cell "Junior" [ref=f50e122]
+              - cell "Ngân sách đô thị phần lớn đăng dạng PDF 300 trang — 83% theo khảo cứu của Harvard — resident muốn kiểm một con số đã bỏ cuộc trước khi tìm ra." [ref=f50e123]
+            - row [ref=f50e124]:
+              - rowheader "14" [ref=f50e125]
+              - cell [ref=f50e126]:
+                - link "Interactive map app (Leaflet/OSM routes & POI)" [ref=f50e127] [cursor=pointer]:
+                  - /url: "#du-an-14"
+              - cell "Junior" [ref=f50e128]
+              - cell "Người dùng thành phố cần route, POI, khoảng cách — trạm metro TP.HCM, guide đồ ăn — nhưng wiring Leaflet, GeoJSON và backend phục vụ dữ liệu là kỹ năng không clone CRUD nào dạy." [ref=f50e129]
+            - row [ref=f50e130]:
+              - rowheader "15" [ref=f50e131]
+              - cell [ref=f50e132]:
+                - link "Sales & inventory management (quản lý bán hàng/POS)" [ref=f50e133] [cursor=pointer]:
+                  - /url: "#du-an-15"
+              - cell "Middle" [ref=f50e134]
+              - cell "Quầy hàng nhỏ ghi nhập xuất tồn, bảng giá, hóa đơn và đơn B2B bằng spreadsheet, nên tồn kho trôi, doanh số không đối chiếu và đặt hàng lại luôn chậm." [ref=f50e135]
+            - row [ref=f50e136]:
+              - rowheader "16" [ref=f50e137]
+              - cell [ref=f50e138]:
+                - link "Real-time chat app" [ref=f50e139] [cursor=pointer]:
+                  - /url: "#du-an-16"
+              - cell "Middle" [ref=f50e140]
+              - cell "Hỗ trợ và team cần tin nhắn tới ngay với lịch sử và presence; không có websocket thì sản phẩm rơi về polling trông như hỏng." [ref=f50e141]
+            - row [ref=f50e142]:
+              - rowheader "17" [ref=f50e143]
+              - cell [ref=f50e144]:
+                - link "Intra-city delivery dispatch board" [ref=f50e145] [cursor=pointer]:
+                  - /url: "#du-an-17"
+              - cell "Middle" [ref=f50e146]
+              - 'cell "Shop tự giao bằng điện thoại hoặc Zalo: không routing, không trạng thái đơn, khách gọi hỏi đồ ăn ở đâu, và giao hỏng chỉ lộ ra quá muộn." [ref=f50e147]'
+            - row [ref=f50e148]:
+              - rowheader "18" [ref=f50e149]
+              - cell [ref=f50e150]:
+                - link "E-commerce store (cart, orders, payments)" [ref=f50e151] [cursor=pointer]:
+                  - /url: "#du-an-18"
+              - cell "Middle" [ref=f50e152]
+              - cell "Merchant bán online cần catalog, cart, checkout, thanh toán và vòng đời đơn cùng chạy; xây đủ là màn hình production-shaped rộng nhất mà hiring manager từng bấm xem." [ref=f50e153]
+            - row [ref=f50e154]:
+              - rowheader "19" [ref=f50e155]
+              - cell [ref=f50e156]:
+                - link "AI chatbot / RAG assistant (engineered, not bare wrapper)" [ref=f50e157] [cursor=pointer]:
+                  - /url: "#du-an-19"
+              - cell "Middle" [ref=f50e158]
+              - cell "Người dùng muốn câu trả lời lấy từ chính tài liệu của họ thay vì tự đào help center; employer giờ screen luôn phần streaming, retrieval và kỷ luật chi phí." [ref=f50e159]
+            - row [ref=f50e160]:
+              - rowheader "20" [ref=f50e161]
+              - cell [ref=f50e162]:
+                - link "Real-time collaborative editor" [ref=f50e163] [cursor=pointer]:
+                  - /url: "#du-an-20"
+              - cell "Middle" [ref=f50e164]
+              - cell "Team cùng sửa một tài liệu cần sync không xung đột và presence; bản mượt là demo hiring manager bấm chơi được 30 giây." [ref=f50e165]
+    - region [ref=f50e166]:
+      - heading "Chi tiết từng dự án" [level=2] [ref=f50e167]
+      - paragraph [ref=f50e168]: Thẻ đầu tiên là bậc fresher cỡ lớn; 2-4 là dải ngang; 5-10 xếp hai cột; 11-20 là hàng gọn. “Vấn đề” nói vì sao dự án tồn tại, “Vì sao đáng làm” nói tín hiệu nó tạo ra khi phỏng vấn.
+      - list [ref=f50e169]:
+        - listitem [ref=f50e170]:
+          - generic [aria-hidden] [ref=f50e172]: "01"
+          - generic [ref=f50e173]:
+            - generic [ref=f50e174]:
+              - heading "Portfolio cá nhân (Personal portfolio website)" [level=3] [ref=f50e175]
+              - generic [ref=f50e176]: Fresher
+            - generic [ref=f50e177]:
+              - paragraph [ref=f50e178]: Fresher chưa có kinh nghiệm thì không có nơi nào gửi nhà tuyển dụng; site không deploy thì các project chỉ nằm yên trên máy người viết.
+              - paragraph [ref=f50e179]: roadmap.sh xếp vào nhóm beginner với 4.870 star; danh sách portfolio của Emma Bostian đạt 27k star; một lời hiring trên HN gọi portfolio cộng to-do là “essential”. Khác biệt chỉ đến từ thiết kế gốc, điểm Lighthouse và demo thật.
+            - generic [ref=f50e180]:
+              - list [ref=f50e181]:
+                - listitem [ref=f50e182]: HTML/CSS + responsive layout
+                - listitem [ref=f50e183]: React or Next.js
+                - listitem [ref=f50e184]: Tailwind CSS
+                - listitem [ref=f50e185]: Deploy on Vercel/Netlify with custom domain
+                - listitem [ref=f50e186]: Lighthouse performance + a11y audit
+              - list [ref=f50e187]:
+                - listitem [ref=f50e188]:
+                  - link "arifszn/gitprofile" [ref=f50e189] [cursor=pointer]:
+                    - /url: https://github.com/arifszn%2Fgitprofile
+                  - generic [ref=f50e190]: MIT
+                  - generic [ref=f50e191]: 2.3k★
+                  - generic [ref=f50e192]: generator profile, pushed 2026-09-01
+                - listitem [ref=f50e193]:
+                  - link "emmabostian/developer-portfolios" [ref=f50e194] [cursor=pointer]:
+                    - /url: https://github.com/emmabostian%2Fdeveloper-portfolios
+                  - generic [ref=f50e195]: no license
+                  - generic [ref=f50e196]: 27k★
+                  - generic [ref=f50e197]: danh sách link — tham khảo, không fork
+        - listitem [ref=f50e198]:
+          - generic [aria-hidden] [ref=f50e200]: "02"
+          - generic [ref=f50e201]:
+            - generic [ref=f50e202]:
+              - heading "To-do / task tracker" [level=3] [ref=f50e203]
+              - generic [ref=f50e204]: Fresher
+            - generic [ref=f50e205]:
+              - paragraph [ref=f50e206]: Người mới chưa từng dựng add/edit/delete/complete có lưu trữ thì chưa thật sự quản lý được state — kỹ năng mà mọi project sau đều dùng lại.
+              - paragraph [ref=f50e207]: "Bậc CRUD/state cơ bản mà mọi build sau tái dùng; roadmap.sh xếp beginner. Điểm dừng trung thực: tín hiệu tuyển dụng yếu — “to-do apps, forget about them” (Maddy Zhang); phạm vi mới là thứ phân biệt."
+            - generic [ref=f50e208]:
+              - list [ref=f50e209]:
+                - listitem [ref=f50e210]: React + TypeScript
+                - listitem [ref=f50e211]: Vitest/Jest for CRUD logic
+                - listitem [ref=f50e212]: localStorage first, then REST API (Node/Express or Next.js API routes)
+                - listitem [ref=f50e213]: PostgreSQL + Prisma for persistence
+              - list [ref=f50e214]:
+                - listitem [ref=f50e215]:
+                  - link "tastejs/todomvc" [ref=f50e216] [cursor=pointer]:
+                    - /url: https://github.com/tastejs%2Ftodomvc
+                  - generic [ref=f50e217]: MIT
+                  - generic [ref=f50e218]: 29k★
+                  - generic [ref=f50e219]: bản chuẩn của pattern todo, pushed 2026-06-06
+        - listitem [ref=f50e220]:
+          - generic [aria-hidden] [ref=f50e222]: "03"
+          - generic [ref=f50e223]:
+            - generic [ref=f50e224]:
+              - heading "Website clone (design-to-code)" [level=3] [ref=f50e225]
+              - generic [ref=f50e226]: Fresher
+            - generic [ref=f50e227]:
+              - paragraph [ref=f50e228]: Junior thường trượt khi chuyển design thành code responsive đúng pixel, và không có bậc nào khác trong lộ trình này luyện đúng kỹ năng đó.
+              - paragraph [ref=f50e229]: "Project #2 của freeCodeCamp mức entry — “HTML and CSS only would work fine” — nhắm thẳng vào độ trung thực design-to-code mà junior thiếu; 5 bậc của Frontend Mentor cho đề bài có phạm vi; Clone-Wars 37k star."
+            - generic [ref=f50e230]:
+              - list [ref=f50e231]:
+                - listitem [ref=f50e232]: HTML + CSS (Flexbox/Grid)
+                - listitem [ref=f50e233]: Responsive breakpoints, 320-1920px
+                - listitem [ref=f50e234]: Figma or live-site reference, optional vanilla JS
+                - listitem [ref=f50e235]: Frontend Mentor challenges for scoped specs
+              - list [ref=f50e236]:
+                - listitem [ref=f50e237]:
+                  - link "GorvGoyl/Clone-Wars" [ref=f50e238] [cursor=pointer]:
+                    - /url: https://github.com/GorvGoyl%2FClone-Wars
+                  - generic [ref=f50e239]: AGPL-3.0
+                  - generic [ref=f50e240]: 37k★
+                  - generic [ref=f50e241]: thư mục index dự án — xem tham khảo, không clone xuất bản
+                - listitem [ref=f50e242]:
+                  - link "zuolizhu/frontendmentor_challenges" [ref=f50e243] [cursor=pointer]:
+                    - /url: https://github.com/zuolizhu%2Ffrontendmentor_challenges
+                  - generic [ref=f50e244]: no license
+                  - generic [ref=f50e245]: 249★
+                  - generic [ref=f50e246]: stale 2023-06 — tham khảo
+        - listitem [ref=f50e247]:
+          - generic [aria-hidden] [ref=f50e249]: "04"
+          - generic [ref=f50e250]:
+            - generic [ref=f50e251]:
+              - heading "Weather app" [level=3] [ref=f50e252]
+              - generic [ref=f50e253]: Fresher
+            - generic [ref=f50e254]:
+              - paragraph [ref=f50e255]: Người mới chưa từng gọi API bên thứ ba thì sau này không xử lý nổi tích hợp checkout hay các API AI.
+              - paragraph [ref=f50e256]: "Bậc fresher duy nhất phủ async fetch và trạng thái lỗi — tiền đề cho mọi work với API phía sau; florinpop Tier-1, roadmap.sh beginner. Điểm dừng trung thực: 559k repo weather trên GitHub, không employer nào khen."
+            - generic [ref=f50e257]:
+              - list [ref=f50e258]:
+                - listitem [ref=f50e259]: React + TypeScript
+                - listitem [ref=f50e260]: Open-Meteo API (no key required)
+                - listitem [ref=f50e261]: Async fetch with loading/error/empty states
+                - listitem [ref=f50e262]: "Optional: PWA offline caching via service worker"
+              - list [ref=f50e263]:
+                - listitem [ref=f50e264]:
+                  - link "adrianhajdin/project_weather_pwa" [ref=f50e265] [cursor=pointer]:
+                    - /url: https://github.com/adrianhajdin%2Fproject_weather_pwa
+                  - generic [ref=f50e266]: no license
+                  - generic [ref=f50e267]: 758★
+                  - generic [ref=f50e268]: chỉ học, không fork xuất bản
+        - listitem [ref=f50e269]:
+          - generic [aria-hidden] [ref=f50e271]: "05"
+          - generic [ref=f50e272]:
+            - generic [ref=f50e273]:
+              - heading "WordPress business site (agency deliverable)" [level=3] [ref=f50e274]
+              - generic [ref=f50e275]: Fresher
+            - generic [ref=f50e276]:
+              - paragraph [ref=f50e277]: Agency Việt Nam vẫn tính tiền khách hàng cho site hồ sơ năng lực và WooCommerce; fresher không làm được build child-theme chuẩn thì không có kỹ năng billable để vào nghề.
+              - paragraph [ref=f50e278]: Đúng deliverable tuần đầu ở agency Việt Nam — child theme, shortcode, chỉnh WooCommerce — nội dung Viblo chứng minh công việc tồn tại. Không hào nhoáng, nhưng đúng việc fresher làm trước tiên.
+            - generic [ref=f50e279]:
+              - list [ref=f50e280]:
+                - listitem [ref=f50e281]: WordPress + PHP child theme
+                - listitem [ref=f50e282]: ACF/custom fields and shortcodes
+                - listitem [ref=f50e283]: WooCommerce customization, basic JS/CSS
+                - listitem [ref=f50e284]: Shared-hosting deploy, maintenance workflow
+              - list [ref=f50e285]:
+                - listitem [ref=f50e286]:
+                  - link "ColorlibHQ/Sparkling" [ref=f50e287] [cursor=pointer]:
+                    - /url: https://github.com/ColorlibHQ%2FSparkling
+                  - generic [ref=f50e288]: GPL-2.0
+                  - generic [ref=f50e289]: 429★
+                  - generic [ref=f50e290]: child theme mẫu, pushed 2026-09-24
+                - listitem [ref=f50e291]:
+                  - link "siteorigin/siteorigin-corp" [ref=f50e292] [cursor=pointer]:
+                    - /url: https://github.com/siteorigin%2Fsiteorigin-corp
+                  - generic [ref=f50e293]: GPL-2.0
+                  - generic [ref=f50e294]: 21★
+                  - generic [ref=f50e295]: theme mẫu thứ hai, pushed 2026-09-15
+        - listitem [ref=f50e296]:
+          - generic [aria-hidden] [ref=f50e298]: "06"
+          - generic [ref=f50e299]:
+            - generic [ref=f50e300]:
+              - heading "Air quality dashboard (AQI/PM2.5)" [level=3] [ref=f50e301]
+              - generic [ref=f50e302]: Fresher
+            - generic [ref=f50e303]:
+              - paragraph [ref=f50e304]: Cha mẹ ở Hà Nội muốn biết chiều nay con có được ra ngoài phải tự đọc số PM2.5 rải rác trên các portal cơ quan, mỗi nơi một format.
+              - paragraph [ref=f50e305]: Quyết định sức khỏe thật cộng nguồn mở (OpenAQ, AQICN, cổng Hà Nội); phạm vi fresher được chứng minh bằng repo 101★ chỉ ba file; dạy chuẩn hóa API mà hầu hết clone beginner bỏ qua.
+            - generic [ref=f50e306]:
+              - list [ref=f50e307]:
+                - listitem [ref=f50e308]: React + TypeScript
+                - listitem [ref=f50e309]: OpenAQ / AQICN (WAQI) API
+                - listitem [ref=f50e310]: Leaflet map + Recharts trend charts
+                - listitem [ref=f50e311]: US EPA vs VN_AQI band conversion, error states
+              - list [ref=f50e312]:
+                - listitem [ref=f50e313]:
+                  - link "Baavanadhaz/Air-Quality-Analysis-and-Monitoring" [ref=f50e314] [cursor=pointer]:
+                    - /url: https://github.com/Baavanadhaz%2FAir-Quality-Analysis-and-Monitoring
+                  - generic [ref=f50e315]: không có file LICENSE
+                  - generic [ref=f50e316]: nói rõ là không có LICENSE — tham khảo
+                - listitem [ref=f50e317]:
+                  - link "codexanjan/atmosphere" [ref=f50e318] [cursor=pointer]:
+                    - /url: https://github.com/codexanjan%2Fatmosphere
+                  - generic [ref=f50e319]: MIT
+                  - generic [ref=f50e320]: demo Vercel, pushed 2026-10-03
+        - listitem [ref=f50e321]:
+          - generic [aria-hidden] [ref=f50e323]: "07"
+          - generic [ref=f50e324]:
+            - generic [ref=f50e325]:
+              - heading "URL shortener" [level=3] [ref=f50e326]
+              - generic [ref=f50e327]: Junior
+            - generic [ref=f50e328]:
+              - paragraph [ref=f50e329]: Ai đăng link trong SMS hay ấn phẩm giấy đều cần URL ngắn theo dõi được; tự xây buộc phải lo database, redirect, analytics và rate limiting mà không bị frontend đánh lạc.
+              - paragraph [ref=f50e330]: Ứng viên được nhắc nhiều nhất (8 lần); roadmap.sh Intermediate, Serkanbyx Level-3 backend fundamentals, chủ đề phỏng vấn system-design kinh điển — phổ biến đến mức chỉ bản hoàn chỉnh, chắc tay mới phân biệt được.
+            - generic [ref=f50e331]:
+              - list [ref=f50e332]:
+                - listitem [ref=f50e333]: Node.js + Express or NestJS
+                - listitem [ref=f50e334]: PostgreSQL with unique-code generation (hashing)
+                - listitem [ref=f50e335]: Redis for cache + rate limiting
+                - listitem [ref=f50e336]: Click analytics table, Docker deploy
+              - list [ref=f50e337]:
+                - listitem [ref=f50e338]:
+                  - link "bradtraversy/url_shortener_service" [ref=f50e339] [cursor=pointer]:
+                    - /url: https://github.com/bradtraversy%2Furl_shortener_service
+                  - generic [ref=f50e340]: no license
+                  - generic [ref=f50e341]: 245★
+                  - generic [ref=f50e342]: mục tiêu học — không fork xuất bản
+        - listitem [ref=f50e343]:
+          - generic [aria-hidden] [ref=f50e345]: "08"
+          - generic [ref=f50e346]:
+            - generic [ref=f50e347]:
+              - heading "Room-rental management (quản lý nhà trọ)" [level=3] [ref=f50e348]
+              - generic [ref=f50e349]: Junior
+            - generic [ref=f50e350]:
+              - paragraph [ref=f50e351]: Chủ trọ nuôi 5-50 phòng trọ ghi tình trạng thuê, CCCD, hợp đồng và chỉ số điện nước vào sổ tay hoặc Excel, nên quên ai đã trả và tính sai tiền điện.
+              - paragraph [ref=f50e352]: Hơn 14 app thương mại VN chứng minh có người trả tiền; OpenKos (108★) và 311 repo nhà trọ cho thấy scene xây dựng sôi động; thang depth CRUD → đồng hồ → hóa đơn → multi-tenant vượt junior.
+            - generic [ref=f50e353]:
+              - list [ref=f50e354]:
+                - listitem [ref=f50e355]: React/Vue + Laravel or NestJS
+                - listitem [ref=f50e356]: PostgreSQL (rooms, tenants, meter readings)
+                - listitem [ref=f50e357]: Monthly billing + PDF/VietQR invoice generation
+                - listitem [ref=f50e358]: Landlord/tenant roles, overdue reminders
+              - list [ref=f50e359]:
+                - listitem [ref=f50e360]:
+                  - link "PoalNinh/demo-phong-tro-master" [ref=f50e361] [cursor=pointer]:
+                    - /url: https://github.com/PoalNinh%2Fdemo-phong-tro-master
+                  - generic [ref=f50e362]: claim-only
+                  - generic [ref=f50e363]: 22★
+                  - generic [ref=f50e364]: README nói MIT nhưng không có file LICENSE — chỉ là claim
+                - listitem [ref=f50e365]:
+                  - link "NguyenDuy04/RentFlow" [ref=f50e366] [cursor=pointer]:
+                    - /url: https://github.com/NguyenDuy04%2FRentFlow
+                  - generic [ref=f50e367]: MIT
+                  - generic [ref=f50e368]: 2★
+                  - generic [ref=f50e369]: pushed 2026-10-02
+        - listitem [ref=f50e370]:
+          - generic [aria-hidden] [ref=f50e372]: "09"
+          - generic [ref=f50e373]:
+            - generic [ref=f50e374]:
+              - heading "Clinic appointment booking" [level=3] [ref=f50e375]
+              - generic [ref=f50e376]: Junior
+            - generic [ref=f50e377]:
+              - paragraph [ref=f50e378]: Bệnh nhân xếp hàng từ 2h sáng ở Chợ Rẫy trong khi nhân sự chìm trong giấy tờ; không có đặt lịch online thì phòng khám kín slot buổi sáng và mất giờ bác sĩ vì vắng không báo trước.
+              - paragraph [ref=f50e379]: Đau đớn được báo chí xác minh (xếp hàng từ 2g); availability suất khám và guard trùng lịch rèn auth, mô hình hóa dữ liệu, concurrency — đúng thứ JD health-tech tìm; ngành bão hòa nên correctness phải gánh.
+            - generic [ref=f50e380]:
+              - list [ref=f50e381]:
+                - listitem [ref=f50e382]: React + Node/NestJS or Laravel
+                - listitem [ref=f50e383]: PostgreSQL with slot-availability constraints
+                - listitem [ref=f50e384]: "JWT roles: patient / doctor / admin"
+                - listitem [ref=f50e385]: Booking lifecycle, confirm-cancel-reschedule notifications
+              - list [ref=f50e386]:
+                - listitem [ref=f50e387]:
+                  - link "pjborowiecki/ARKA-Veterinary-Clinic-Page-and-Appointment-Booking-System" [ref=f50e388] [cursor=pointer]:
+                    - /url: https://github.com/pjborowiecki%2FARKA-Veterinary-Clinic-Page-and-Appointment-Booking-System
+                  - generic [ref=f50e389]: MIT
+                  - generic [ref=f50e390]: 165★
+                  - generic [ref=f50e391]: Next.js 14
+                - listitem [ref=f50e392]:
+                  - link "mahallawy1/Clinico" [ref=f50e393] [cursor=pointer]:
+                    - /url: https://github.com/mahallawy1%2FClinico
+                  - generic [ref=f50e394]: no license
+                  - generic [ref=f50e395]: active 2026 — clone cẩn thận
+        - listitem [ref=f50e396]:
+          - generic [aria-hidden] [ref=f50e398]: "10"
+          - generic [ref=f50e399]:
+            - generic [ref=f50e400]:
+              - heading "Public-service dossier tracking (hồ sơ hành chính)" [level=3] [ref=f50e401]
+              - generic [ref=f50e402]: Junior
+            - generic [ref=f50e403]:
+              - paragraph [ref=f50e404]: Công dân nộp hồ sơ giấy rồi gọi điện hoặc quay lại hỏi “hồ sơ tới đâu rồi”, trong khi nhân viên không theo dõi nổi bộ phận nào đang giữ file.
+              - paragraph [ref=f50e405]: Chỉ 39,51% hồ sơ Việt Nam làm trực tuyến hoàn toàn so với mục tiêu 80% (đã xác minh); state machine, hai vai trò và notification map thẳng vào workflow mà vendor CNTT nhà nước tuyển người làm.
+            - generic [ref=f50e406]:
+              - list [ref=f50e407]:
+                - listitem [ref=f50e408]: React + NestJS or Laravel
+                - listitem [ref=f50e409]: PostgreSQL status machine per stage
+                - listitem [ref=f50e410]: Tracking codes + notify on transitions
+                - listitem [ref=f50e411]: Staff board grouped by department
+              - list [ref=f50e412]:
+                - listitem [ref=f50e413]:
+                  - link "hiendanang-ai/theodoihoso" [ref=f50e414] [cursor=pointer]:
+                    - /url: https://github.com/hiendanang-ai%2Ftheodoihoso
+                  - generic [ref=f50e415]: no license
+                  - generic [ref=f50e416]: hồ sơ kiểu PA-2026-XXXX — tham khảo
+                - listitem [ref=f50e417]:
+                  - link "chuyendoiso-ctump/dichvucong" [ref=f50e418] [cursor=pointer]:
+                    - /url: https://github.com/chuyendoiso-ctump%2Fdichvucong
+                  - generic [ref=f50e419]: chưa kiểm license
+                  - generic [ref=f50e420]: pushed 2026-06
+        - listitem [ref=f50e421]:
+          - generic [aria-hidden] [ref=f50e423]: "11"
+          - generic [ref=f50e424]:
+            - generic [ref=f50e425]:
+              - heading "Tutoring class manager (quản lý lớp học thêm)" [level=3] [ref=f50e426]
+              - generic [ref=f50e427]: Junior
+            - generic [ref=f50e428]:
+              - paragraph [ref=f50e429]: Giáo viên dạy lớp thêm ghi danh sách, điểm danh và học phí theo buổi vào sổ tay hay thread Zalo, nên quên thu phí, vắng mặt tự nhiên làm mất tiền.
+              - paragraph [ref=f50e430]: Điểm danh feed tính học phí theo buổi là derived-billing domain logic, không phải CRUD; mọi repo GitHub trích dẫn đều dưới 5★, niche chưa bị thống trị — hơn các clone quản lý sinh viên generic.
+            - generic [ref=f50e431]:
+              - list [ref=f50e432]:
+                - listitem [ref=f50e433]: React + Node/Express or Laravel
+                - listitem [ref=f50e434]: "PostgreSQL: class↔student↔session↔payment relations"
+                - listitem [ref=f50e435]: Attendance grid → automatic fee derivation
+                - listitem [ref=f50e436]: Parent role, payment reminders (email/SMS)
+              - list [ref=f50e437]:
+                - listitem [ref=f50e438]:
+                  - link "t1112000/tutor-management-app" [ref=f50e439] [cursor=pointer]:
+                    - /url: https://github.com/t1112000%2Ftutor-management-app
+                  - generic [ref=f50e440]: MIT
+                  - generic [ref=f50e441]: 109★
+                  - generic [ref=f50e442]: Next.js 15 + Postgres, pushed 2026-08-30
+        - listitem [ref=f50e443]:
+          - generic [aria-hidden] [ref=f50e445]: "12"
+          - generic [ref=f50e446]:
+            - generic [ref=f50e447]:
+              - heading "Admin dashboard (role-based CRUD backoffice)" [level=3] [ref=f50e448]
+              - generic [ref=f50e449]: Junior
+            - generic [ref=f50e450]:
+              - paragraph [ref=f50e451]: Công ty nào cũng có backoffice nội bộ cho đơn hàng, nội dung, nhân sự; junior chưa từng dựng form, bảng, RBAC, pagination thì chưa sẵn sàng cho task phổ biến nhất của nghề.
+              - paragraph [ref=f50e452]: Phủ đủ table-stakes backoffice mà không bậc nào khác phủ riêng — form, bảng, search, pagination, RBAC, biểu đồ; đã xác minh qua 5 nguồn, nhưng là hàng commodity, nên execution phân định.
+            - generic [ref=f50e453]:
+              - list [ref=f50e454]:
+                - listitem [ref=f50e455]: React or Vue + Ant Design/MUI
+                - listitem [ref=f50e456]: REST API against PostgreSQL
+                - listitem [ref=f50e457]: RBAC middleware + JWT
+                - listitem [ref=f50e458]: Charts (Recharts/ECharts), Laravel + Filament alternative
+              - list [ref=f50e459]:
+                - listitem [ref=f50e460]:
+                  - link "minhquan0802/QuanLyVuaCa" [ref=f50e461] [cursor=pointer]:
+                    - /url: https://github.com/minhquan0802%2FQuanLyVuaCa
+                  - generic [ref=f50e462]: no license
+                  - generic [ref=f50e463]: 0★
+                  - generic [ref=f50e464]: RBAC ADMIN/STAFF/CUSTOMER, pushed 2026-09-28 — tham khảo
+        - listitem [ref=f50e465]:
+          - generic [aria-hidden] [ref=f50e467]: "13"
+          - generic [ref=f50e468]:
+            - generic [ref=f50e469]:
+              - heading "Budget transparency visualizer" [level=3] [ref=f50e470]
+              - generic [ref=f50e471]: Junior
+            - generic [ref=f50e472]:
+              - paragraph [ref=f50e473]: Ngân sách đô thị phần lớn đăng dạng PDF 300 trang — 83% theo khảo cứu của Harvard — resident muốn kiểm một con số đã bỏ cuộc trước khi tìm ra.
+              - paragraph [ref=f50e474]: Pipeline open-data (SODA/OpenSpending) với treemap drill-down và chuẩn hóa year-over-year — data-viz và ETL vượt tutorial CRUD; bão hòa thấp hơn nhiều; mạnh nhất cho role data/frontend.
+            - generic [ref=f50e475]:
+              - list [ref=f50e476]:
+                - listitem [ref=f50e477]: React + TypeScript
+                - listitem [ref=f50e478]: D3 or ECharts treemap/sunburst
+                - listitem [ref=f50e479]: City open-data SODA API / OpenSpending CSVs
+                - listitem [ref=f50e480]: Year-over-year normalization, CSV export
+              - list [ref=f50e481]:
+                - listitem [ref=f50e482]:
+                  - link "CityOfPhiladelphia/open-budget" [ref=f50e483] [cursor=pointer]:
+                    - /url: https://github.com/CityOfPhiladelphia%2Fopen-budget
+                  - generic [ref=f50e484]: chưa kiểm license
+                  - generic [ref=f50e485]: ngân sách Philadelphia, open data
+                - listitem [ref=f50e486]:
+                  - link "BetaNYC/nyc-budget-viz" [ref=f50e487] [cursor=pointer]:
+                    - /url: https://github.com/BetaNYC%2Fnyc-budget-viz
+                  - generic [ref=f50e488]: chưa kiểm license
+                  - generic [ref=f50e489]: visualizer ngân sách NYC
+        - listitem [ref=f50e490]:
+          - generic [aria-hidden] [ref=f50e492]: "14"
+          - generic [ref=f50e493]:
+            - generic [ref=f50e494]:
+              - heading "Interactive map app (Leaflet/OSM routes & POI)" [level=3] [ref=f50e495]
+              - generic [ref=f50e496]: Junior
+            - generic [ref=f50e497]:
+              - paragraph [ref=f50e498]: Người dùng thành phố cần route, POI, khoảng cách — trạm metro TP.HCM, guide đồ ăn — nhưng wiring Leaflet, GeoJSON và backend phục vụ dữ liệu là kỹ năng không clone CRUD nào dạy.
+              - paragraph [ref=f50e499]: Đáy fresher (hai thẻ CDN, không API key) lớn dần lên backend phục vụ GeoJSON; taste-map và Lifelink chứng minh dev VN ship mấy cái này thành sản phẩm thật; skill geo hiếm trong portfolio.
+            - generic [ref=f50e500]:
+              - list [ref=f50e501]:
+                - listitem [ref=f50e502]: React + Leaflet/OpenLayers
+                - listitem [ref=f50e503]: GeoJSON + OpenStreetMap tiles
+                - listitem [ref=f50e504]: Backend serving GeoJSON (Node/Laravel), optional PostGIS
+                - listitem [ref=f50e505]: Search/filter, markers and drawn routes
+              - list [ref=f50e506]:
+                - listitem [ref=f50e507]:
+                  - link "dimartarmizi/map-to-poster" [ref=f50e508] [cursor=pointer]:
+                    - /url: https://github.com/dimartarmizi%2Fmap-to-poster
+                  - generic [ref=f50e509]: MIT
+                  - generic [ref=f50e510]: demo maptoposter.tarmizi.id
+        - listitem [ref=f50e511]:
+          - generic [aria-hidden] [ref=f50e513]: "15"
+          - generic [ref=f50e514]:
+            - generic [ref=f50e515]:
+              - heading "Sales & inventory management (quản lý bán hàng/POS)" [level=3] [ref=f50e516]
+              - generic [ref=f50e517]: Middle
+            - generic [ref=f50e518]:
+              - paragraph [ref=f50e519]: Quầy hàng nhỏ ghi nhập xuất tồn, bảng giá, hóa đơn và đơn B2B bằng spreadsheet, nên tồn kho trôi, doanh số không đối chiếu và đặt hàng lại luôn chậm.
+              - paragraph [ref=f50e520]: Điểm real-world cao nhất vòng 3 (90,5; judge VN số 1); mirror workflow KiotViet/MISA mà recruiter nhận ra; thao tác tồn kho transactional, atomic write và RBAC vượt ngưỡng middle — khác tutorial storefront.
+            - generic [ref=f50e521]:
+              - list [ref=f50e522]:
+                - listitem [ref=f50e523]: React + Ant Design
+                - listitem [ref=f50e524]: NestJS or Laravel REST API
+                - listitem [ref=f50e525]: PostgreSQL with transactional atomic stock ops
+                - listitem [ref=f50e526]: RBAC, PDF invoices, sales reports
+              - list [ref=f50e527]:
+                - listitem [ref=f50e528]:
+                  - link "munuhee/sales-and-inventory-management" [ref=f50e529] [cursor=pointer]:
+                    - /url: https://github.com/munuhee%2Fsales-and-inventory-management
+                  - generic [ref=f50e530]: MIT
+                  - generic [ref=f50e531]: 81★
+                  - generic [ref=f50e532]: Django, pushed 2026-08
+                - listitem [ref=f50e533]:
+                  - link "amirsanni/Mini-Inventory-and-Sales-Management-System" [ref=f50e534] [cursor=pointer]:
+                    - /url: https://github.com/amirsanni%2FMini-Inventory-and-Sales-Management-System
+                  - generic [ref=f50e535]: MIT
+                  - generic [ref=f50e536]: 560★
+                  - generic [ref=f50e537]: pushed 2026-06
+        - listitem [ref=f50e538]:
+          - generic [aria-hidden] [ref=f50e540]: "16"
+          - generic [ref=f50e541]:
+            - generic [ref=f50e542]:
+              - heading "Real-time chat app" [level=3] [ref=f50e543]
+              - generic [ref=f50e544]: Middle
+            - generic [ref=f50e545]:
+              - paragraph [ref=f50e546]: Hỗ trợ và team cần tin nhắn tới ngay với lịch sử và presence; không có websocket thì sản phẩm rơi về polling trông như hỏng.
+              - paragraph [ref=f50e547]: "Bậc concurrency đầu tiên — room, persistence, presence — cổng vào middle tier; dev.to và roadmap.sh xếp intermediate; chỉ vào ở middle scope: socket trần “không có độ phức tạp đáng kể”."
+            - generic [ref=f50e548]:
+              - list [ref=f50e549]:
+                - listitem [ref=f50e550]: Socket.IO + Node.js/NestJS
+                - listitem [ref=f50e551]: React client with optimistic UI
+                - listitem [ref=f50e552]: PostgreSQL for message history, Redis for pub/sub + presence
+                - listitem [ref=f50e553]: JWT auth, rooms, typing/receipt indicators
+              - list [ref=f50e554]:
+                - listitem [ref=f50e555]:
+                  - link "fuma-nama/shark-chat-js" [ref=f50e556] [cursor=pointer]:
+                    - /url: https://github.com/fuma-nama%2Fshark-chat-js
+                  - generic [ref=f50e557]: Apache-2.0
+                  - generic [ref=f50e558]: 172★
+                  - generic [ref=f50e559]: bản chính — Next.js/tRPC/Redis/Ably, pushed 2026-05
+                - listitem [ref=f50e560]:
+                  - link "adrianhajdin/project_chat_application" [ref=f50e561] [cursor=pointer]:
+                    - /url: https://github.com/adrianhajdin%2Fproject_chat_application
+                  - generic [ref=f50e562]: no license
+                  - generic [ref=f50e563]: 4.1k★
+                  - generic [ref=f50e564]: tutorial Socket.IO — chỉ học
+        - listitem [ref=f50e565]:
+          - generic [aria-hidden] [ref=f50e567]: "17"
+          - generic [ref=f50e568]:
+            - generic [ref=f50e569]:
+              - heading "Intra-city delivery dispatch board" [level=3] [ref=f50e570]
+              - generic [ref=f50e571]: Middle
+            - generic [ref=f50e572]:
+              - paragraph [ref=f50e573]: "Shop tự giao bằng điện thoại hoặc Zalo: không routing, không trạng thái đơn, khách gọi hỏi đồ ăn ở đâu, và giao hỏng chỉ lộ ra quá muộn."
+              - paragraph [ref=f50e574]: Mô hình workflow Đông Nam Á thật (Ahamove khoảng 60k đơn/ngày); concurrency gán đơn nhiều dispatcher, state machine và ETA nằm trên boilerplate CRUD — depth mới là tín hiệu, không phải clone.
+            - generic [ref=f50e575]:
+              - list [ref=f50e576]:
+                - listitem [ref=f50e577]: Next.js/React + NestJS
+                - listitem [ref=f50e578]: WebSocket/SSE live dispatch board
+                - listitem [ref=f50e579]: PostgreSQL order status machine + assignment rules
+                - listitem [ref=f50e580]: Zone lists, ETA, customer tracking link
+              - list [ref=f50e581]:
+                - listitem [ref=f50e582]:
+                  - link "kll-92/delivery-dispatch" [ref=f50e583] [cursor=pointer]:
+                    - /url: https://github.com/kll-92%2Fdelivery-dispatch
+                  - generic [ref=f50e584]: chưa kiểm license
+                  - generic [ref=f50e585]: Spring Boot, pushed 2026-10-08 — mới nhất
+                - listitem [ref=f50e586]:
+                  - link "Sayantan-Sinha-GIT/dispatch" [ref=f50e587] [cursor=pointer]:
+                    - /url: https://github.com/Sayantan-Sinha-GIT%2Fdispatch
+                  - generic [ref=f50e588]: MIT
+                  - generic [ref=f50e589]: demo Vercel
+        - listitem [ref=f50e590]:
+          - generic [aria-hidden] [ref=f50e592]: "18"
+          - generic [ref=f50e593]:
+            - generic [ref=f50e594]:
+              - heading "E-commerce store (cart, orders, payments)" [level=3] [ref=f50e595]
+              - generic [ref=f50e596]: Middle
+            - generic [ref=f50e597]:
+              - paragraph [ref=f50e598]: Merchant bán online cần catalog, cart, checkout, thanh toán và vòng đời đơn cùng chạy; xây đủ là màn hình production-shaped rộng nhất mà hiring manager từng bấm xem.
+              - paragraph [ref=f50e599]: "Điểm tổng hợp cao nhất (89,3, 6 lần nhắc): auth, modeling, checkout state, Stripe webhook và order lifecycle trong một product deploy được; bão hòa, nên admin panel hoặc niche scope phải phân định."
+            - generic [ref=f50e600]:
+              - list [ref=f50e601]:
+                - listitem [ref=f50e602]: Next.js + TypeScript
+                - listitem [ref=f50e603]: PostgreSQL + Prisma (catalog, orders)
+                - listitem [ref=f50e604]: Stripe test mode + webhook handling
+                - listitem [ref=f50e605]: Admin panel for products/orders, deployed with tests
+              - list [ref=f50e606]:
+                - listitem [ref=f50e607]:
+                  - link "saleor/storefront" [ref=f50e608] [cursor=pointer]:
+                    - /url: https://github.com/saleor%2Fstorefront
+                  - generic [ref=f50e609]: FSL-1.1-ALv2
+                  - generic [ref=f50e610]: 1.6k★
+                  - generic [ref=f50e611]: KHÔNG phải OSI — hết hạn tự chuyển Apache-2.0 sau 2 năm
+                - listitem [ref=f50e612]:
+                  - link "AlterClassIO/ecommerce-nextjs-stripe-checkout" [ref=f50e613] [cursor=pointer]:
+                    - /url: https://github.com/AlterClassIO%2Fecommerce-nextjs-stripe-checkout
+                  - generic [ref=f50e614]: MIT
+                  - generic [ref=f50e615]: cart + Stripe checkout, pushed 2022-09
+        - listitem [ref=f50e616]:
+          - generic [aria-hidden] [ref=f50e618]: "19"
+          - generic [ref=f50e619]:
+            - generic [ref=f50e620]:
+              - heading "AI chatbot / RAG assistant (engineered, not bare wrapper)" [level=3] [ref=f50e621]
+              - generic [ref=f50e622]: Middle
+            - generic [ref=f50e623]:
+              - paragraph [ref=f50e624]: Người dùng muốn câu trả lời lấy từ chính tài liệu của họ thay vì tự đào help center; employer giờ screen luôn phần streaming, retrieval và kỷ luật chi phí.
+              - paragraph [ref=f50e625]: "Điểm khác biệt 2025-26 khi được engineering đúng cách: RAG, streaming UX, token costing và eval chứng minh kỷ luật AI mà JD đòi hỏi; 7.773 repo “chatgpt clone” nghĩa là wrapper trần chìm vào bể."
+            - generic [ref=f50e626]:
+              - list [ref=f50e627]:
+                - listitem [ref=f50e628]: Next.js + Vercel AI SDK (streaming UI)
+                - listitem [ref=f50e629]: Anthropic/OpenAI API with token cost tracking
+                - listitem [ref=f50e630]: pgvector or Chroma for retrieval
+                - listitem [ref=f50e631]: Eval set + error handling, rate limiting
+              - list [ref=f50e632]:
+                - listitem [ref=f50e633]:
+                  - link "LibreChat-AI/LibreChat" [ref=f50e634] [cursor=pointer]:
+                    - /url: https://github.com/LibreChat-AI%2FLibreChat
+                  - generic [ref=f50e635]: MIT
+                  - generic [ref=f50e636]: 45.4k★
+                  - generic [ref=f50e637]: bản chuẩn (danny-avila/LibreChat redirect về đây)
+                - listitem [ref=f50e638]:
+                  - link "open-webui/open-webui" [ref=f50e639] [cursor=pointer]:
+                    - /url: https://github.com/open-webui%2Fopen-webui
+                  - generic [ref=f50e640]: license riêng
+                  - generic [ref=f50e641]: 154.2k★
+                  - generic [ref=f50e642]: không phải OSI — flag
+        - listitem [ref=f50e643]:
+          - generic [aria-hidden] [ref=f50e645]: "20"
+          - generic [ref=f50e646]:
+            - generic [ref=f50e647]:
+              - heading "Real-time collaborative editor" [level=3] [ref=f50e648]
+              - generic [ref=f50e649]: Middle
+            - generic [ref=f50e650]:
+              - paragraph [ref=f50e651]: Team cùng sửa một tài liệu cần sync không xung đột và presence; bản mượt là demo hiring manager bấm chơi được 30 giây.
+              - paragraph [ref=f50e652]: "Quote employer mạnh nhất tìm được (leif: chơi 30 phút “without finding obvious bugs, I'd be extremely impressed”); hệ sinh thái yjs 22.9k, AFFiNE 73.3k; caveat: chỉ một giọng 2010, clone tutorial đọc như boilerplate."
+            - generic [ref=f50e653]:
+              - list [ref=f50e654]:
+                - listitem [ref=f50e655]: Yjs CRDT + Tiptap/BlockNote editor
+                - listitem [ref=f50e656]: WebSocket provider (y-websocket or custom)
+                - listitem [ref=f50e657]: React + auth + presence/awareness
+                - listitem [ref=f50e658]: Optional WebRTC for cursor sync, deployed multi-user
+              - list [ref=f50e659]:
+                - listitem [ref=f50e660]:
+                  - link "adrianhajdin/collaborative-editor" [ref=f50e661] [cursor=pointer]:
+                    - /url: https://github.com/adrianhajdin%2Fcollaborative-editor
+                  - generic [ref=f50e662]: no license
+                  - generic [ref=f50e663]: 548★
+                  - generic [ref=f50e664]: bản chính — chỉ học
+                - listitem [ref=f50e665]:
+                  - link "conclave-team/conclave" [ref=f50e666] [cursor=pointer]:
+                    - /url: https://github.com/conclave-team%2Fconclave
+                  - generic [ref=f50e667]: MIT
+                  - generic [ref=f50e668]: 726★
+                  - generic [ref=f50e669]: "README: No Longer Maintained, push cuối 2022-12"
+    - region [ref=f50e670]:
+      - heading "Lộ trình fresher → middle" [level=2] [ref=f50e671]
+      - paragraph [ref=f50e672]: "Thứ tự trong bảng là thứ tự học: 6 fresher → 8 junior → 6 middle. Ba đợt dưới đây là cách nghiên cứu giải thích cáchleo đó."
+      - heading "Đợt 1 · Fresher — 6 dự án" [level=3] [ref=f50e673]
+      - paragraph [ref=f50e674]: "Container → CRUD → design-to-code → async API → deliverable agency → open-data viz (thứ 1-6). Phạm vi chung của đợt là lát cắt dọc deploy được: code chạy, README có hướng dẫn chạy, site live. Deploy-to-live là một phần của “done”, không phải phần sau."
+      - heading "Đợt 2 · Junior — 8 dự án" [level=3] [ref=f50e675]
+      - paragraph [ref=f50e676]: "Bậc backend systems cộng 5 workflow Việt Nam/thành phố đã xác minh (thứ 7-14). URL shortener giữ #7 vì là ứng viên được nhắc nhiều nhất vòng 1 (8 lần). Admin dashboard lùi xuống sau bốn workflow thật vì không có judge nào chấm nó ở vòng 1. Phòng khám, nhà trọ, hồ sơ, lớp thêm vào đúng bậc đã xác minh, không phải điểm thô."
+      - heading "Đợt 3 · Middle — 6 dự án" [level=3] [ref=f50e677]
+      - paragraph [ref=f50e678]: Concurrency → domain vận hành → thanh toán → AI → CRDT capstone (thứ 15-20). Chat đứng trước dispatch để bậc concurrency đầu tiên đến trước concurrency gán việc. Bán hàng dẫn đầu vì là điểm real-world cao nhất (90,5).
+      - heading "Quy mô fresher đã chốt cho 6/20 dự án" [level=3] [ref=f50e679]
+      - paragraph [ref=f50e680]: "Scope sizing chỉ có cho 6 dự án; 14 dự án còn lại chưa có delta phạm vi. Các con số dưới đây là lát cắt tối thiểu ở bậc fresher:"
+      - list [ref=f50e681]:
+        - listitem [ref=f50e682]:
+          - generic [ref=f50e683]: URL shortener — 5 REST endpoint sạch
+          - generic [ref=f50e684]: 2-3 tuần
+        - listitem [ref=f50e685]:
+          - generic [ref=f50e686]: Backoffice 2 role, admin seed sẵn
+          - generic [ref=f50e687]: 2 tuần
+        - listitem [ref=f50e688]:
+          - generic [ref=f50e689]: Chat Socket.IO 1 phòng, persist + deploy
+          - generic [ref=f50e690]: 3-4 tuần
+        - listitem [ref=f50e691]:
+          - generic [ref=f50e692]: E-commerce API-first, Stripe test-mode + webhook tạo đơn
+          - generic [ref=f50e693]: 6 tuần
+        - listitem [ref=f50e694]:
+          - generic [ref=f50e695]: RAG chatbot 1 thư mục tài liệu + vector store
+          - generic [ref=f50e696]: 3-4 tuần
+        - listitem [ref=f50e697]:
+          - generic [ref=f50e698]: Editor Yjs, undo theo người dùng + presence
+          - generic [ref=f50e699]: 4 tuần
+      - paragraph [ref=f50e700]: "Delta lên middle luôn là 1-2× thời gian đó và không bao giờ là thêm UI. Nó là reliability, chống lạm dụng và đo lường: audit log + soft delete trên dashboard; delivery ack + Redis pub/sub + smoke test load với chat; webhook signature verification + atomic stock decrement bằng row lock + state machine đơn hàng chặt với e-commerce; eval-as-code + A/B chunking với RAG; ACL + version snapshot với editor; custom slug + rate limit + cache hit-metric với shortener."
+      - paragraph [ref=f50e702]: "Pitfall lặp lại ở cả 6 scope: nhảy vào auth/workspace, search/Elasticsearch, microservices hay IaC trước khi MVP xong. Ranh giới là một cache cộng một queue — không bao giờ Kafka kèm sharding."
+    - region [ref=f50e703]:
+      - heading "Đọc portfolio theo cách nhà tuyển dụng Việt Nam" [level=2] [ref=f50e704]
+      - paragraph [ref=f50e705]: Ba hành vi lặp lại trong các cụm tín hiệu tiếng Việt mà enrichment đã đọc. Đây là tín hiệu định tính từ nội dung TopDev, ITviec, Viblo, CareerBuilder — không phải dữ liệu recruiter ẩn danh.
+      - heading "Bằng chứng nặng hơn số năm" [level=3] [ref=f50e706]
+      - paragraph [ref=f50e707]: "Recruiter chấm theo thứ tự tư duy giải quyết vấn đề → cách trình bày → chất lượng code → kết quả, thay cho “1 năm = junior, 3 năm = middle”. Định dạng được chấp nhận: case study 300-500 chữ (problem → constraints → solution → results → improve) cộng 1-3 repo sạch, README và commit đọc được. “Code demo không để khoe, mà để chứng minh bạn biết mình đang làm gì.”"
+      - heading "Title gắn với stack" [level=3] [ref=f50e708]
+      - paragraph [ref=f50e709]: "Mỗi title trên CareerBuilder đi kèm stack của nó: Java Backend = Java/SQL/Spring Boot, Web Developer = NodeJS/ReactJS, fullstack MBBank = Oracle/Java/MongoDB. TopDev cảnh báo dev PHP apply vào shop Java là bất lợi — “nhà tuyển dụng họ thường xem xét tuyển người phù hợp hơn là người giỏi”. Nhóm React mà TopDev nêu đang có nhu cầu: social, e-commerce ngách, video, messaging realtime, productivity."
+      - heading "Khác biệt bằng bài toán Việt" [level=3] [ref=f50e710]
+      - paragraph [ref=f50e711]: "Thay vì một CRUD/auth clone nữa, phần khác biệt đến từ vấn đề bản địa: bảng tìm phòng trọ, xác nhận đơn COD, tracking đa hãng GHN/GHTK/Viettel Post, hồ sơ hành chính kèm mã PA-2026-XXXX. Ở mấy chỗ này, copy tiếng Việt chính là moat — đối thủ quốc tế không thèm đánh."
+      - paragraph [ref=f50e712]: "Mốc lương các bạn junior hay cite (TopDev 2024): Frontend 10-15 triệu, Backend 10-25 triệu, Fullstack 12-30 triệu VND. Vòng phỏng vấn web còn probe IntersectionObserver, Beacon, Fetch, Service Workers và RUM — nên một tính năng offline-first PWA hoặc SSE đọc là platform depth, không phải framework-following."
+    - region [ref=f50e713]:
+      - heading "Ứng viên tiếp theo, chưa vào top 20" [level=2] [ref=f50e714]
+      - paragraph [ref=f50e715]: Vòng micro cuối sinh 35 ứng viên, 10 vượt xác minh. Đúng một cái nên có chỗ đứng, một cái có điều kiện.
+      - heading "ticket-refund-flow — nên vào" [level=3] [ref=f50e716]
+      - paragraph [ref=f50e717]: "Điểm 81, bậc middle, hiring signal STRONG. Idempotent refund webhook, state machine khung chính sách hoàn tiền và coupling refund → danh sách chờ giữ chỗ là bài probe backend mid-level chuẩn; tài liệu production của pretix nói thẳng (“isn't it sad if those seats stay empty?”, rollover danh sách chờ 2 ngày). Vị trí trong catalog: nối tiếp backend-depth sau e-commerce (#18), không phải bản song song — judge có trừ điểm trùng chủ đề nhẹ."
+      - heading "offline-qr-checkin-app — có điều kiện" [level=3] [ref=f50e718]
+      - paragraph [ref=f50e719]: Điểm 79, bậc junior. Hàng chờ quét offline + sync khi có mạng + chặn trùng + audit trail là thứ chưa dự án nào trong top 20 cover, và nỗi đau tiếng Việt trích nguyên văn trên eventos.vn. Chỉ thêm nếu catalog muốn một ca offline-first PWA; conflict đa thiết bị là mức stretch, và độ khó verify offline trong phỏng vấn là thật.
+      - paragraph [ref=f50e720]: "Các ứng viên sống sót còn lại bị đánh trượt có lý do cụ thể: multi-channel-order-inbox (75) trùng skill dashboard carrier; cafe-kds-ticket-screen (73) dạy cùng bài queue/DLQ như COD Confirm/ShipTrack; reserved-seat-ticketing (71) ngồi trong bể 19k repo “cinema seat booking” — chỉ bán được làm nâng depth cho dự án có sẵn; hawker-qr-kitchen-hybrid (67) — chính verifier phát hiện eatlah đã lấp khoảng trống; conference-workshop-pass (66) tín hiệu yếu; qr-table-ordering (62) — 84% trong 1.046 repo “qr menu” sinh sau 01/2025. meetup-registration-waitlist bị verifier 429 chứ không bị phản bác — cơ chế danh sách chờ gộp thẳng vào phạm vi ticket-refund-flow."
+    - region [ref=f50e721]:
+      - heading "Bị loại và vì sao" [level=2] [ref=f50e722]
+      - list [ref=f50e723]:
+        - listitem [ref=f50e724]: Social media clone — judge vòng real-world xếp thứ 31, không có đau người dùng cụ thể; Clone-Wars bão hòa.
+        - listitem [ref=f50e725]: Ba biến thể blog gộp thành một bậc CMS vì lặp nhau.
+        - listitem [ref=f50e726]: Expense tracker — 239k repo trên GitHub, tự đánh nhau từ đầu.
+        - listitem [ref=f50e727]: Browser game — tín hiệu toy.
+        - listitem [ref=f50e728]: Chia hóa đơn ở trọ — đau Việt Nam thật nhưng không đủ lớn để gánh một portfolio.
+        - listitem [ref=f50e729]: Tìm phòng trọ dạng listing — hấp thụ vào quản lý nhà trọ (#8).
+        - listitem [ref=f50e730]: Markdown notes — CRUD lặp lại bậc to-do.
+        - listitem [ref=f50e731]: PR OSS đầu tiên — meta-skill, không phải một build.
+        - listitem [ref=f50e732]: Quản lý nhà thờ — fit Việt Nam yếu, junior chứ không phải middle.
+        - listitem [ref=f50e733]: Pomodoro và quiz — trivial, tín hiệu yếu.
+    - region [ref=f50e734]:
+      - heading "Phương pháp và giới hạn" [level=2] [ref=f50e735]
+      - heading "Thứ tự đã chạy" [level=3] [ref=f50e736]
+      - paragraph [ref=f50e737]: "Workflow 1 (99 lượt agent): 12 góc quét → 24 xác minh đối kháng → panel judge; vòng real-world riêng 11 sweep + 25 xác minh + judge 2 người; một critic đọc lại toàn bộ. Workflow 2 (93 lượt agent): 45 lượt audit repo (chốt 28 bản sửa ví dụ), 6 cụm tin tiếng Việt, 6 brief phạm vi, 4 đề xuất thiết kế, micro-round 35 ứng viên → 10 xác minh, cộng bước package. Tổng 192 lượt agent, 167 lần trả StructuredOutput thành công. Kết quả: 179 ứng viên thô → 123 không trùng → 34 vượt xác minh (24 vòng 1 + 10 vòng real-world) → 20 vào danh sách."
+      - paragraph [ref=f50e738]: "Critic độc lập tái dựng khoảng 20 trích dẫn trong báo cáo — medusa 36.6k, saleor 23.4k, yjs 22.9k, open-webui 154.1k, realworld 84.3k, TodoMVC 29.0k, Clone-Wars 37.0k; các topic GitHub: chat-app 1.312, ecommerce 30.252, “chatgpt clone” 7.800; bậc roadmap.sh. 0 ứng viên bị phản bác toàn tập trong vòng xác minh."
+      - heading "Lỗ hổng đã biết" [level=3] [ref=f50e739]
+      - list [ref=f50e740]:
+        - listitem [ref=f50e741]: "JD Việt Nam làm ground truth còn mỏng: enrichment đọc đủ 1 cụm (vn-crud-ecom), 5 cụm còn lại chỉ sample — phần portfolio Việt Nam dựa nhiều vào cluster e-commerce."
+        - listitem [ref=f50e742]: Hình thức đóng góp OSS (issue/PR thật) không có trong danh sách — cả 20 đều là build riêng.
+        - listitem [ref=f50e743]: PWA/offline-first chưa có dự án nào trong top 20; ứng viên offline-qr-checkin chờ ở mục trước.
+        - listitem [ref=f50e744]: "Bằng chứng collab editor mạnh nhưng cũ: một quote 2010 (leif), clone tutorial đọc như boilerplate."
+        - listitem [ref=f50e745]: Số repo ở các mục bị loại (expense tracker 239k…) không reproduce được khi chạy lại.
+        - listitem [ref=f50e746]: Scope sizing fresher-vs-middle chỉ có cho 6/20 dự án.
+      - heading "Cảnh báo dữ liệu và giấy phép" [level=3] [ref=f50e747]
+      - list [ref=f50e748]:
+        - listitem [ref=f50e749]: Star và pushed_at là snapshot API 08.10.2026 — dữ liệu lúc đó, không phải hợp đồng.
+        - listitem [ref=f50e750]: Repo không license (adrianhajdin/*, bradtraversy/url_shortener_service, minhquan0802/QuanLyVuaCa, hiendanang-ai/theodoihoso, Baavanadhaz/Air-Quality-… và vài repo khác) = tham khảo/học, không fork-and-publish; license đọc từ field API, không đối chiếu SPDX từng file.
+        - listitem [ref=f50e751]: MIT-claimed nhưng không có file LICENSE (demo-phong-tro-master) = chỉ là claim.
+        - listitem [ref=f50e752]: FSL-1.1-ALv2 của saleor/storefront và license riêng của open-webui không phải OSI — không phải open-source chuẩn, đã flag ngay trên thẻ.
+        - listitem [ref=f50e753]: Tỷ lệ contrast đến từ contrast_calc.py chạy 08.10.2026 (32/32 PASS), không phải prose của agent thiết kế.
+        - listitem [ref=f50e754]: Lương TopDev 2024 và mức hoa hồng giao hàng 25-30% là mốc điểm thời gian.
+        - listitem [ref=f50e755]: Có 11 lượt agent lỗi trong hai workflow; enrich-result.json từng chết một lần vì Cloudflare 524 rồi retry — cấu trúc file vẫn nguyên khi đọc.
+    - region [ref=f50e756]:
+      - heading "Nguồn" [level=2] [ref=f50e757]
+      - paragraph [ref=f50e758]: URL theo từng ứng viên xác minh, do chính các verify agent trả về. Mở từng nhóm để xem.
+      - group [ref=f50e759]:
+        - generic "ai chatbot wrapper (3)" [ref=f50e760] [cursor=pointer]
+      - group [ref=f50e761]:
+        - generic "blog platform with cms (7)" [ref=f50e762] [cursor=pointer]
+      - group [ref=f50e763]:
+        - generic "blogging platform (1)" [ref=f50e764] [cursor=pointer]
+      - group [ref=f50e765]:
+        - generic "browser game (7)" [ref=f50e766] [cursor=pointer]
+      - group [ref=f50e767]:
+        - generic "e commerce storefront (5)" [ref=f50e768] [cursor=pointer]
+      - group [ref=f50e769]:
+        - generic "expense tracker (10)" [ref=f50e770] [cursor=pointer]
+      - group [ref=f50e771]:
+        - generic "markdown note taking app (9)" [ref=f50e772] [cursor=pointer]
+      - group [ref=f50e773]:
+        - generic "personal blog (2)" [ref=f50e774] [cursor=pointer]
+      - group [ref=f50e775]:
+        - generic "personal portfolio website (13)" [ref=f50e776] [cursor=pointer]
+      - group [ref=f50e777]:
+        - generic "pomodoro timer (3)" [ref=f50e778] [cursor=pointer]
+      - group [ref=f50e779]:
+        - generic "portfolio website (7)" [ref=f50e780] [cursor=pointer]
+      - group [ref=f50e781]:
+        - generic "real time chat app (3)" [ref=f50e782] [cursor=pointer]
+      - group [ref=f50e783]:
+        - generic "real time chat application (9)" [ref=f50e784] [cursor=pointer]
+      - group [ref=f50e785]:
+        - generic "real time collaborative editor (5)" [ref=f50e786] [cursor=pointer]
+      - group [ref=f50e787]:
+        - generic "to do list app (5)" [ref=f50e788] [cursor=pointer]
+      - group [ref=f50e789]:
+        - generic "todo list task tracker (7)" [ref=f50e790] [cursor=pointer]
+      - group [ref=f50e791]:
+        - generic "url shortener (7)" [ref=f50e792] [cursor=pointer]
+      - group [ref=f50e793]:
+        - generic "weather app (5)" [ref=f50e794] [cursor=pointer]
+      - group [ref=f50e795]:
+        - generic "weather dashboard (5)" [ref=f50e796] [cursor=pointer]
+      - group [ref=f50e797]:
+        - generic "weather web app (5)" [ref=f50e798] [cursor=pointer]
+      - group [ref=f50e799]:
+        - generic "website clone (7)" [ref=f50e800] [cursor=pointer]
+      - paragraph [ref=f50e801]: "Nguồn thị trường Việt Nam dùng trong mục Portfolio: topdev.vn (portfolio, fresher, lương 2024, React projects), itviec.com (báo cáo lương IT 2025-2026, tag framework), viblo.asia (WebSocket, phỏng vấn, RAG), careerbuilder.vn (bảng tin việc), datareportal.com (Digital 2025 Vietnam), careerviet.vn, coderschool.vn, pretix docs (refund/waitlist). Danh sách đầy đủ theo ứng viên nằm trong các nhóm phía trên."
+  - contentinfo [ref=f50e802]:
+    - generic [ref=f50e803]:
+      - paragraph [ref=f50e804]: Snapshot 08.10.2026 · nghiên cứu lấy mẫu có xác minh đối kháng — không phải quét toàn bộ internet · license từng repo ghi ngay trên thẻ · contrast kiểm bằng contrast_calc.py (32/32 PASS).
+      - paragraph [ref=f50e805]:
+        - text: Catalog 15 dự án Việt Nam đã audit nằm ở
+        - link "du-an-portfolio-web.html" [ref=f50e806] [cursor=pointer]:
+          - /url: du-an-portfolio-web.html
+        - text: — hai danh sách khác nhau, không thay thế nhau.

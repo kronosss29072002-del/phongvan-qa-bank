@@ -1,0 +1,13 @@
+{
+  "projectName": "skill",
+  "backendDetected": "—",
+  "frontendDetected": "—",
+  "pkgManager": "không phát hiện lockfile",
+  "composeServices": "không có docker-compose",
+  "ciJobs": "push, pull_request, lint-agent-configs, issue_comment, pull_request_review_comment, issues, pull_request_review, claude-response",
+  "backendSrcDirs": "—",
+  "migrationsCount": "0 (không có prisma/migrations)",
+  "corpusFiles": "không có (không phải repo content)",
+  "generatedAt": "2026-09-17T17:23:16.624Z",
+  "repoRoot": "/home/kronosss2002/Desktop/skill"
+}

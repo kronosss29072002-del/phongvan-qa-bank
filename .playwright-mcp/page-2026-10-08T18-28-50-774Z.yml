@@ -1,0 +1,210 @@
+- generic [active] [ref=f252e1]:
+  - dialog [ref=f252e2]:
+    - generic [ref=f252e7]:
+      - generic [ref=f252e8]:
+        - paragraph [ref=f252e9]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+        - paragraph [ref=f252e10]:
+          - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+          - link "Điều khoản về quyền riêng tư" [ref=f252e11] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+      - generic [ref=f252e12]:
+        - link "Chấp nhận" [ref=f252e14] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+        - link "Từ chối" [ref=f252e16] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+      - link "Các lựa chọn khác" [ref=f252e18] [cursor=pointer]:
+        - /url: "javascript: void(0)"
+  - banner [ref=f252e19]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f252e20] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f252e23] [cursor=pointer]
+    - generic [ref=f252e26]:
+      - link [ref=f252e27] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f252e28]
+      - search [ref=f252e29]:
+        - button "Tìm kiếm" [ref=f252e32] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f252e33]: chơi hủi vỡ bỏ chạy chủ hủi giấy tờ thiếu ghi chép tòa án
+        - generic [ref=f252e34] [cursor=pointer]
+        - generic [ref=f252e36] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f252e41] [cursor=pointer]
+      - link [ref=f252e43] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=c7a607acee5891269af40233c24f349a8b6e05a8fc897683fefab68c6926b1cfJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT1jaCVjNiVhMWkraCVlMSViYiVhN2krdiVlMSViYiVhMStiJWUxJWJiJThmK2NoJWUxJWJhJWExeStjaCVlMSViYiVhNytoJWUxJWJiJWE3aStnaSVlMSViYSVhNXkrdCVlMSViYiU5ZCt0aGklZTElYmElYmZ1K2doaStjaCVjMyVhOXArdCVjMyViMmErJWMzJWExbiZzZW5kcXVlcnk9MSZmb3JtPUhFQ09EWA&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f252e44]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f252e46]:
+      - link "Đăng nhập" [ref=f252e47] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f252e49] [cursor=pointer]:
+        - generic [ref=f252e50]: Rewards
+    - navigation "Bộ lọc Tìm kiếm" [ref=f252e66]:
+      - list [ref=f252e67]:
+        - listitem [ref=f252e68]:
+          - link "Tất cả" [ref=f252e69] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f252e71]:
+          - link "Web" [ref=f252e72] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=feb336d6d0b4a239474d593bf15f40752aa954c3bf576c44306cff9f4829d9adJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPWNoJWM2JWExaStoJWUxJWJiJWE3aSt2JWUxJWJiJWExK2IlZTElYmIlOGYrY2glZTElYmElYTF5K2NoJWUxJWJiJWE3K2glZTElYmIlYTdpK2dpJWUxJWJhJWE1eSt0JWUxJWJiJTlkK3RoaSVlMSViYSViZnUrZ2hpK2NoJWMzJWE5cCt0JWMzJWIyYSslYzMlYTFuJndlYnNjcD0xJkZPUk09SERSV1ND&ntb=1
+        - listitem [ref=f252e73]:
+          - link "Tìm kiếm" [ref=f252e74] [cursor=pointer]:
+            - /url: /copilotsearch?q=ch%c6%a1i+h%e1%bb%a7i+v%e1%bb%a1+b%e1%bb%8f+ch%e1%ba%a1y+ch%e1%bb%a7+h%e1%bb%a7i+gi%e1%ba%a5y+t%e1%bb%9d+thi%e1%ba%bfu+ghi+ch%c3%a9p+t%c3%b2a+%c3%a1n&FORM=CSSCOP
+        - listitem [ref=f252e77]:
+          - link "Hình ảnh" [ref=f252e78] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=5fd0dba8f38cc44f93350de37951e39c2249c13b09e6f4397914235971418ad0JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1jaCVjNiVhMWkraCVlMSViYiVhN2krdiVlMSViYiVhMStiJWUxJWJiJThmK2NoJWUxJWJhJWExeStjaCVlMSViYiVhNytoJWUxJWJiJWE3aStnaSVlMSViYSVhNXkrdCVlMSViYiU5ZCt0aGklZTElYmElYmZ1K2doaStjaCVjMyVhOXArdCVjMyViMmErJWMzJWExbiZGT1JNPUhEUlNDMw&ntb=1
+        - listitem [ref=f252e79]:
+          - link "Video" [ref=f252e80] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=394f911c570fcaed766c6b223bd93e7127c8b4882a4f67e3ebc0f5cd210cda31JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT1jaCVjNiVhMWkraCVlMSViYiVhN2krdiVlMSViYiVhMStiJWUxJWJiJThmK2NoJWUxJWJhJWExeStjaCVlMSViYiVhNytoJWUxJWJiJWE3aStnaSVlMSViYSVhNXkrdCVlMSViYiU5ZCt0aGklZTElYmElYmZ1K2doaStjaCVjMyVhOXArdCVjMyViMmErJWMzJWExbiZGT1JNPUhEUlNDNA&ntb=1
+        - listitem [ref=f252e81]:
+          - link "Bản đồ" [ref=f252e82] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=3a9951d8445eef812423bb47f60cfd488df93c990fea87ceae9007d23e291ac7JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT1jaCVjNiVhMWkraCVlMSViYiVhN2krdiVlMSViYiVhMStiJWUxJWJiJThmK2NoJWUxJWJhJWExeStjaCVlMSViYiVhNytoJWUxJWJiJWE3aStnaSVlMSViYSVhNXkrdCVlMSViYiU5ZCt0aGklZTElYmElYmZ1K2doaStjaCVjMyVhOXArdCVjMyViMmErJWMzJWExbiZGT1JNPUhEUlNDNg&ntb=1
+        - listitem [ref=f252e83]:
+          - button [ref=f252e84] [cursor=pointer]
+  - generic [ref=f252e88]:
+    - main "Kết quả Tìm kiếm" [ref=f252e89]:
+      - generic [ref=f252e91]:
+        - generic [aria-hidden] [ref=f252e92]:
+          - generic [ref=f252e93] [cursor=pointer]
+          - generic [ref=f252e96] [cursor=pointer]
+          - generic [ref=f252e99] [cursor=pointer]
+        - text: Về 642 kết quả
+      - list [ref=f252e102]:
+        - listitem [ref=f252e103]:
+          - generic [ref=f252e107]:
+            - generic [ref=f252e109]:
+              - button "Thích" [ref=f252e110]
+              - button "Không thích" [ref=f252e113]
+            - button "Tuyên bố miễn trừ trách nhiệm về AI" [ref=f252e116]
+        - listitem [ref=f252e141]:
+          - link "Báo Tuổi Trẻ" [ref=f252e143] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=5e3594c45b3c3812ca556764483f425f574d5b1bdf9788f8b0a3ff6629e58a90JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90dW9pdHJlLnZuL2JhdC10YW0tZ2lhbS1uZ2hpLXBoYW0tY2hheS1sYW0tZ2lheS10by1kYXQtY2hpZW0tZG9hdC0xNy10aS0xMDAyNjA5MjQxOTAxNTQxODcuaHRt&ntb=1
+            - generic [ref=f252e148]:
+              - generic [ref=f252e149]: Báo Tuổi Trẻ
+              - generic [ref=f252e150]: https://tuoitre.vn
+          - heading [level=2] [ref=f252e153]:
+            - link "Bắt tạm giam nghi phạm 'chạy' làm giấy tờ đất chiếm đoạt 17 tỉ" [ref=f252e154] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=5e3594c45b3c3812ca556764483f425f574d5b1bdf9788f8b0a3ff6629e58a90JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90dW9pdHJlLnZuL2JhdC10YW0tZ2lhbS1uZ2hpLXBoYW0tY2hheS1sYW0tZ2lheS10by1kYXQtY2hpZW0tZG9hdC0xNy10aS0xMDAyNjA5MjQxOTAxNTQxODcuaHRt&ntb=1
+          - paragraph [ref=f252e156]: 24 thg 9, 2026 · Dù biết là đất rừng do Nhà nước quản lý nhưng Vũ Đình Quang (54 tuổi, ở phường Rạch Giá, tỉnh An Giang) vẫn …
+        - listitem [ref=f252e157]:
+          - link "Báo Nhân Dân điện tử" [ref=f252e159] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=f5418594b059353cdcd2ace926dc634afdaba8fe3e0853d1f66b0ad257bcf710JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9uaGFuZGFuLnZuL2FuLWdpYW5nLWtob2ktdG8tZG9pLXR1b25nLWNoaWVtLWRvYXQtMTctdHktZG9uZy10dS1jaGF5LWxhbS1naWF5LXRvLWRhdC1wb3N0OTkwODQ5Lmh0bWw&ntb=1
+            - generic [ref=f252e164]:
+              - generic [ref=f252e165]: Báo Nhân Dân điện tử
+              - generic [ref=f252e166]: https://nhandan.vn
+          - heading [level=2] [ref=f252e169]:
+            - 'link "An Giang: Khởi tố đối tượng chiếm đoạt 17 tỷ đồng từ “chạy” làm giấy …" [ref=f252e170] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=f5418594b059353cdcd2ace926dc634afdaba8fe3e0853d1f66b0ad257bcf710JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9uaGFuZGFuLnZuL2FuLWdpYW5nLWtob2ktdG8tZG9pLXR1b25nLWNoaWVtLWRvYXQtMTctdHktZG9uZy10dS1jaGF5LWxhbS1naWF5LXRvLWRhdC1wb3N0OTkwODQ5Lmh0bWw&ntb=1
+          - paragraph [ref=f252e172]: 24 thg 9, 2026 · Thông qua việc nhận “chạy” làm giấy tờ đất, Quang đã nhận và chiếm đoạt tổng số tiền 17 tỷ đồng. Hiện Cơ quan …
+        - listitem [ref=f252e173]:
+          - link "THƯ VIỆN PHÁP LUẬT" [ref=f252e175] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9667911ef24b2b6d692849ba1707857129ac50acb2cbb148132fd6d0d7332cfcJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vcGhhcC1sdWF0L2NhYy12YW4tYmFuLXNvLXNhY2gtbmFvLXRyb25nLWtoaS1jaG9pLWh1aS1tYS1jaHUtaHVpLW5lbi1jby1kZS1sYW0tY2h1bmctY3Uta2hpLWNvLXRyYW5oLWNoYXAteGF5LS02NTA5Lmh0bWw&ntb=1
+            - generic [ref=f252e180]:
+              - generic [ref=f252e181]: THƯ VIỆN PHÁP LUẬT
+              - generic [ref=f252e182]: https://thuvienphapluat.vn › phap-luat › cac-van-ban...
+          - heading [level=2] [ref=f252e185]:
+            - link "Các văn bản, sổ sách nào trong khi chơi hụi mà chủ hụi nên có để làm ..." [ref=f252e186] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=9667911ef24b2b6d692849ba1707857129ac50acb2cbb148132fd6d0d7332cfcJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vcGhhcC1sdWF0L2NhYy12YW4tYmFuLXNvLXNhY2gtbmFvLXRyb25nLWtoaS1jaG9pLWh1aS1tYS1jaHUtaHVpLW5lbi1jby1kZS1sYW0tY2h1bmctY3Uta2hpLWNvLXRyYW5oLWNoYXAteGF5LS02NTA5Lmh0bWw&ntb=1
+          - paragraph [ref=f252e188]: 7 thg 11, 2022 · Chứng cứ để chứng minh việc chơi hụi bị giật có thể thu thập từ các nguồn nào? Các văn bản, sổ sách nào trong …
+        - listitem [ref=f252e189]:
+          - link "Báo Sức khỏe & Đời sống" [ref=f252e191] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e2a7b8c2bc9ea831caee62d3eea219ff59a4ce6289b4b0cde9bdb7a05cf4eb7dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9zdWNraG9lZG9pc29uZy52bi9jaGllbS1kb2F0LTE3LXR5LWRvbmctdHUtbG9pLWh1YS1jaGF5LWxhbS1naWF5LXRvLWRhdC0xNjkyNjA5MjQyMDQyMTQ3MjEuaHRt&ntb=1
+            - generic [ref=f252e196]:
+              - generic [ref=f252e197]: Báo Sức khỏe & Đời sống
+              - generic [ref=f252e198]: https://suckhoedoisong.vn
+          - heading [level=2] [ref=f252e201]:
+            - link "Chiếm đoạt 17 tỷ đồng từ lời hứa 'chạy' làm giấy tờ đất" [ref=f252e202] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=e2a7b8c2bc9ea831caee62d3eea219ff59a4ce6289b4b0cde9bdb7a05cf4eb7dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9zdWNraG9lZG9pc29uZy52bi9jaGllbS1kb2F0LTE3LXR5LWRvbmctdHUtbG9pLWh1YS1jaGF5LWxhbS1naWF5LXRvLWRhdC0xNjkyNjA5MjQyMDQyMTQ3MjEuaHRt&ntb=1
+          - paragraph [ref=f252e204]: 24 thg 9, 2026 · Thông qua việc nhận "chạy" làm giấy tờ đất, Quang đã nhận và chiếm đoạt tổng số tiền 17 tỷ đồng. Hiện Cơ quan …
+        - listitem [ref=f252e205]:
+          - link "luat24h.com.vn" [ref=f252e207] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b6726c64b98ee16049124fdf59dee161743c0401e966c1c2a460313926df0f98JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0MjRoLmNvbS52bi9jaG9pLWh1aS1iaS1naWF0LWNvLWtpZW4tZHVvYy1raG9uZw&ntb=1
+            - generic [ref=f252e212]:
+              - generic [ref=f252e213]: luat24h.com.vn
+              - generic [ref=f252e214]: https://luat24h.com.vn › choi-hui-bi-giat-co-kien-duoc-khong
+          - heading [level=2] [ref=f252e217]:
+            - link "Chơi hụi bị giật có kiện được không? Thủ tục khởi kiện đòi tiền hụi" [ref=f252e218] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=b6726c64b98ee16049124fdf59dee161743c0401e966c1c2a460313926df0f98JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0MjRoLmNvbS52bi9jaG9pLWh1aS1iaS1naWF0LWNvLWtpZW4tZHVvYy1raG9uZw&ntb=1
+          - generic [ref=f252e219]:
+            - paragraph [ref=f252e220]: Do đó, việc chơi hụi bị giật hoàn toàn có thể khởi kiện tại Tòa án nhân dân có thẩm quyền.
+            - generic [ref=f252e222]:
+              - list [ref=f252e223]:
+                - listitem [ref=f252e224]:
+                  - generic [ref=f252e225]: "Đánh giá: 50"
+              - list
+        - listitem [ref=f252e226]:
+          - link "cantho.gov.vn" [ref=f252e228] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=03f6558d9b81db131f3ff4f9070604e29633798cb8087c144308f6479630c224JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9jb25nYW4uY2FudGhvLmdvdi52bi90aG9uZy10aW4tY2h1eWVuLWRlL2dpYXQtaHVpLWtob25nLWNoaS1sYS10cmFuaC1jaGFwLWRhbi1zdS1yYW5oLWdpb2ktbW9uZy1tYW5oLWdpdWEtbm8tdmEtdG9pLTY0MDQuaHRtbA&ntb=1
+            - generic [ref=f252e233]:
+              - generic [ref=f252e234]: cantho.gov.vn
+              - generic [ref=f252e235]: https://congan.cantho.gov.vn › thong-tin-chuyen-de › ...
+          - heading [level=2] [ref=f252e238]:
+            - 'link "“Giật hụi” không chỉ là tranh chấp dân sự: Ranh giới mong manh giữa …" [ref=f252e239] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=03f6558d9b81db131f3ff4f9070604e29633798cb8087c144308f6479630c224JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9jb25nYW4uY2FudGhvLmdvdi52bi90aG9uZy10aW4tY2h1eWVuLWRlL2dpYXQtaHVpLWtob25nLWNoaS1sYS10cmFuaC1jaGFwLWRhbi1zdS1yYW5oLWdpb2ktbW9uZy1tYW5oLWdpdWEtbm8tdmEtdG9pLTY0MDQuaHRtbA&ntb=1
+          - paragraph [ref=f252e241]: 4 thg 4, 2026 · - Khi chủ hụi có dấu hiệu tẩu tán tài sản, bỏ trốn khỏi địa phương, không thể liên lạc, và vụ việc có số lượng bị hại lớn …
+        - listitem [ref=f252e242]:
+          - link "luatmtpd.vn" [ref=f252e244] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=3720c012be327140768a357d28f742e2d4aa0b4c20bd7ef85b0bf5e1da5624c8JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0bXRwZC52bi9jaHUtaHVpLWJvLXRyb24tZ2lhdC10aWVuLWJpLXh1LWx5LW5odS10aGUtbmFvLw&ntb=1
+            - generic [ref=f252e249]:
+              - generic [ref=f252e250]: luatmtpd.vn
+              - generic [ref=f252e251]: https://luatmtpd.vn › chu-hui-bo-tron-giat-tien-bi-xu-ly-nhu-the-nao
+          - heading [level=2] [ref=f252e254]:
+            - link "Chủ hụi bỏ trốn, giật tiền bị xử lý như thế nào?" [ref=f252e255] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=3720c012be327140768a357d28f742e2d4aa0b4c20bd7ef85b0bf5e1da5624c8JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sdWF0bXRwZC52bi9jaHUtaHVpLWJvLXRyb24tZ2lhdC10aWVuLWJpLXh1LWx5LW5odS10aGUtbmFvLw&ntb=1
+          - paragraph [ref=f252e257]: “Chơi hụi” vốn là hình thức góp vốn, xoay vòng tài chính quen thuộc trong đời sống nhiều người. Tuy nhiên, không ít trường hợp chủ …
+        - listitem [ref=f252e258]:
+          - link "phaplythungan.vn" [ref=f252e260] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e17568b9d903791bb9c01da20c8b3a560f4ced4afe5f9fc9070e77960424bc74JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9waGFwbHl0aHVuZ2FuLnZuL2JlLWh1aS1jby1raWVuLWR1b2Mta2hvbmcv&ntb=1
+            - generic [ref=f252e265]:
+              - generic [ref=f252e266]: phaplythungan.vn
+              - generic [ref=f252e267]: https://phaplythungan.vn › be-hui-co-kien-duoc-khong
+          - heading [level=2] [ref=f252e270]:
+            - link "Bể Hụi Có Kiện Được Không? Cách Lấy Lại Tiền Hụi 2026" [ref=f252e271] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=e17568b9d903791bb9c01da20c8b3a560f4ced4afe5f9fc9070e77960424bc74JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9waGFwbHl0aHVuZ2FuLnZuL2JlLWh1aS1jby1raWVuLWR1b2Mta2hvbmcv&ntb=1
+          - paragraph [ref=f252e273]: 15 thg 7, 2026 · Theo quy định pháp luật, người bị thiệt hại do bể hụi hoàn toàn có quyền yêu cầu chủ hụi hoặc hụi viên vi phạm …
+        - listitem [ref=f252e274]:
+          - link "tramtintuc.com" [ref=f252e276] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b7a1d98cf9364152fdf4a06ece2e7795c1840928fb1da1eb961409b9e3a9f8a9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90cmFtdGludHVjLmNvbS9jaG9pLWh1aS1iaS1naWF0Lw&ntb=1
+            - generic [ref=f252e281]:
+              - generic [ref=f252e282]: tramtintuc.com
+              - generic [ref=f252e283]: https://tramtintuc.com › choi-hui-bi-giat
+          - heading [level=2] [ref=f252e286]:
+            - link "Chơi Hụi Bị Giật Có Kiện Được Không? Cách Đòi Lại Tiền Nhanh" [ref=f252e287] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=b7a1d98cf9364152fdf4a06ece2e7795c1840928fb1da1eb961409b9e3a9f8a9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90cmFtdGludHVjLmNvbS9jaG9pLWh1aS1iaS1naWF0Lw&ntb=1
+          - paragraph [ref=f252e289]: 17 thg 4, 2026 · Bạn đang đứng ngồi không yên vì số tiền tích góp cả năm trời gửi vào dây hụi bỗng nhiên “bay màu” do chủ hụi …
+        - listitem [ref=f252e290]:
+          - link "THƯ VIỆN PHÁP LUẬT" [ref=f252e292] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=f25265185e11e615ec11c127a115fdf1036b592da1337b2fe23734c31f7876f5JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vaG9pLWRhcC1waGFwLWx1YXQvdG9hLWFuLWdpYWktcXV5ZXQtY2FjLXZ1LXZvLWh1aS1uaHUtdGhlLW5hby0xMjQ5ODIuaHRtbA&ntb=1
+            - generic [ref=f252e297]:
+              - generic [ref=f252e298]: THƯ VIỆN PHÁP LUẬT
+              - generic [ref=f252e299]: https://thuvienphapluat.vn › hoi-dap-phap-luat › toa...
+          - heading [level=2] [ref=f252e302]:
+            - link "Tòa án giải quyết các vụ vỡ hụi như thế nào?" [ref=f252e303] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=f25265185e11e615ec11c127a115fdf1036b592da1337b2fe23734c31f7876f5JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vaG9pLWRhcC1waGFwLWx1YXQvdG9hLWFuLWdpYWktcXV5ZXQtY2FjLXZ1LXZvLWh1aS1uaHUtdGhlLW5hby0xMjQ5ODIuaHRtbA&ntb=1
+          - paragraph [ref=f252e305]: 28 thg 3, 2023 · Đầu những năm 1990 các Tòa án đã giải quyết việc này nhưng đến nay chưa có hướng dẫn về việc giải quyết và …
+        - listitem [ref=f252e306]:
+          - link "Một số kết quả đã bị xóa" [ref=f252e308] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e7e0e4b27a77d08e3ba8e737568a767ff44dde3e84c17c7ede3301285b6ea292JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+        - listitem [ref=f252e309]:
+          - navigation "Thêm kết quả cho chơi hủi vỡ bỏ chạy chủ hủi giấy tờ thiếu ghi chép tòa án":
+            - list:
+              - listitem [ref=f252e310]:
+                - generic "Trang 1" [ref=f252e311]: "1"
+              - listitem [ref=f252e312]:
+                - link "Trang 2" [ref=f252e313] [cursor=pointer]:
+                  - /url: /search?q=ch%c6%a1i+h%e1%bb%a7i+v%e1%bb%a1+b%e1%bb%8f+ch%e1%ba%a1y+ch%e1%bb%a7+h%e1%bb%a7i+gi%e1%ba%a5y+t%e1%bb%9d+thi%e1%ba%bfu+ghi+ch%c3%a9p+t%c3%b2a+%c3%a1n&setlang=vi&FPIG=61C451F0318F4E37A04BA748D78972E4&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=f252e314]:
+                - link "Trang 3" [ref=f252e315] [cursor=pointer]:
+                  - /url: /search?q=ch%c6%a1i+h%e1%bb%a7i+v%e1%bb%a1+b%e1%bb%8f+ch%e1%ba%a1y+ch%e1%bb%a7+h%e1%bb%a7i+gi%e1%ba%a5y+t%e1%bb%9d+thi%e1%ba%bfu+ghi+ch%c3%a9p+t%c3%b2a+%c3%a1n&setlang=vi&FPIG=61C451F0318F4E37A04BA748D78972E4&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=f252e316]:
+                - link "Trang tiếp theo" [ref=f252e317] [cursor=pointer]:
+                  - /url: /search?q=ch%c6%a1i+h%e1%bb%a7i+v%e1%bb%a1+b%e1%bb%8f+ch%e1%ba%a1y+ch%e1%bb%a7+h%e1%bb%a7i+gi%e1%ba%a5y+t%e1%bb%9d+thi%e1%ba%bfu+ghi+ch%c3%a9p+t%c3%b2a+%c3%a1n&setlang=vi&FPIG=61C451F0318F4E37A04BA748D78972E4&first=11&FORM=PORE
+    - complementary "Kết quả bổ sung" [ref=f252e318]:
+      - list
+  - contentinfo [ref=f252e319]:
+    - generic [ref=f252e320]:
+      - list:
+        - listitem [ref=f252e321]:
+          - link "Quyền riêng tư" [ref=f252e322] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f252e323]:
+          - link "Điều khoản" [ref=f252e324] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

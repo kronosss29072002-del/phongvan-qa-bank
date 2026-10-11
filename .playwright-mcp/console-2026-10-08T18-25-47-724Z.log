@@ -1,0 +1,47 @@
+[    7280ms] [LOG] Không có data-categoryid @ https://res-files.vnncdn.net/vps_jscss/000001/000003/2026/9/30/detail-normal-3207.js:1
+[   11685ms] [LOG] Zalo Social Plugin is loaded successfully @ https://sp.zalo.me/plugins/sdk.js:1
+[   11687ms] [LOG] socialPluginsShare:  [div.zalo-share-button, div.zalo-share-button, div.zalo-share-button] @ https://sp.zalo.me/plugins/sdk.js:1
+[   12824ms] [LOG] SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON @ https://res-files.vnncdn.net/vps_jscss/000001/000003/2026/9/30/detail-normal-3207.js:1
+[   12952ms] [LOG] check-checkBaseUrl :  https://comment.vietnamnet.vn/api @ https://comment.vietnamnet.vn/static/js/main.e58cf2c6.chunk.js:0
+[   13640ms] [LOG] after...["wiki"] @ https://vietnamnet.vn/tre-mam-non-bi-bo-quen-tren-xe-dua-don-phat-hien-vang-tre-nhung-khong-kiem-tra-2285850.html:1987
+[   13796ms] [LOG] iframe comment loaded ! @ https://comment.vietnamnet.vn/js/vnnidmodule.js?v=04012025:1
+[   14954ms] [LOG] Version: 1.0.6 - Time: 9/30/2026, 11:25:16 AM API @ https://cdn.vlitag.com/w/f8a9857f-6ffb-458f-867b-5c5a3a734a07.js:1
+[   15005ms] [LOG] {type: 7k, zidlog: 517173, sspid: 2016789, size: 1160x250, format: 8} @ https://media1.admicro.vn/core/sspcallback.js:0
+[   15091ms] [LOG] AINS | Version: 1.1.0 | Time: 10/8/2026, 5:58:08 PM @ https://cdn.vlitag.com/ata/adv/f8a9857f-6ffb-458f-867b-5c5a3a734a07.js:7
+[   15209ms] [LOG] 23126: query @ https://s.eclick.vn/delivery/zone/23126.js:0
+[   15504ms] [LOG] {type: 7k, zidlog: 531628, sspid: 2019887, size: 660x300, format: 8} @ https://media1.admicro.vn/core/sspcallback.js:0
+[   15620ms] [LOG] ad in image done! @ :2
+[   16455ms] [LOG] {type: 7k, zidlog: 518034, sspid: 2025912, size: 300x600, format: 8} @ https://media1.admicro.vn/core/sspcallback.js:0
+[   17148ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17149ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17150ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17150ms] [WARNING] Deprecated property or method 'AbstractLoader.IMAGE'. See docs for info. @ https://media.yomedia.vn/createjs/createjs-2022.min.js:11
+[   17318ms] [LOG] lib._475x325 @ https://media.yomedia.vn/2026/07/romano/475x325/475x325.js?2026081206:2224
+[   17318ms] [LOG] Cards: [lib.c6, lib.c1, lib.c5] @ https://media.yomedia.vn/2026/07/romano/475x325/475x325.js?2026081206:2245
+[   17319ms] [LOG] Cards: 362.25 @ https://media.yomedia.vn/2026/07/romano/475x325/475x325.js?2026081206:2246
+[   17659ms] [LOG] startYomediaVideo @ https://media.yomedia.vn/yomedia/func_click.js:58
+[   19076ms] [ERROR] Provider's accounts list is empty. @ https://vietnamnet.vn/tre-mam-non-bi-bo-quen-tren-xe-dua-don-phat-hien-vang-tre-nhung-khong-kiem-tra-2285850.html:0
+[   22472ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ib.adnxs.com/getuid?https://simage2.pubmatic.com/AdServer/Pug?vcode=bz0yJnR5cGU9MSZjb2RlPTc4JnRsPTE1NzY4MDA=&piggybackCookie=$UID&gdpr=0&gdpr_consent=&us_privacy=&gpp=&gpp_sid=:0
+[   22831ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ https://syncingbridge.com/userIframe?gdpr=0&gdpr_consent=&usp_consent=&p=18&redirect=https%3A%2F%2Fsync.richaudience.com%2F2b188757a24fb860937ce93ac43d98c1%2F%3Fgdpr%3D%5Bgdpr%5D%26euconsent%3D%5Beuconsent%5D%26uid%3D%7BUID%7D:0
+[   24322ms] [LOG] phai @ https://media.yomedia.vn/2026/07/romano/475x325/475x325.js?2026081206:2290
+[   22472ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ib.adnxs.com/getuid?https://simage2.pubmatic.com/AdServer/Pug?vcode=bz0yJnR5cGU9MSZjb2RlPTc4JnRsPTE1NzY4MDA=&piggybackCookie=$UID&gdpr=0&gdpr_consent=&us_privacy=&gpp=&gpp_sid=:0
+[   25016ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ib.adnxs.com/getuid?%2F%2Fsync.adkernel.com%2Fuser-sync%3Fzone%3D218872%26dsp%3D1014844%26t%3Dimage%26uid%3D%24UID:0
+[   25113ms] [LOG] firstQuartileYomediaVideo @ https://media.yomedia.vn/yomedia/func_click.js:45
+[   22472ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ib.adnxs.com/getuid?https://simage2.pubmatic.com/AdServer/Pug?vcode=bz0yJnR5cGU9MSZjb2RlPTc4JnRsPTE1NzY4MDA=&piggybackCookie=$UID&gdpr=0&gdpr_consent=&us_privacy=&gpp=&gpp_sid=:0
+[   25016ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ib.adnxs.com/getuid?%2F%2Fsync.adkernel.com%2Fuser-sync%3Fzone%3D218872%26dsp%3D1014844%26t%3Dimage%26uid%3D%24UID:0
+[   25389ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ib.adnxs.com/prebid/setuid?bidder=connectad&gdpr=0&gdpr_consent=&f=i&uid=8b1d2842-e6ba-4e6c-9ade-d737b226e7c4&us_privacy=1---:0
+[   26321ms] [LOG] phai @ https://media.yomedia.vn/2026/07/romano/475x325/475x325.js?2026081206:2290
+[   27248ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://cdnstoremedia.com/core/1.0.0/createjs_min.js:14
+[   27398ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://cdnstoremedia.com/core/1.0.0/createjs_min.js:14

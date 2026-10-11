@@ -1,0 +1,286 @@
+{
+  "entries": [
+    {
+      "term": "Connection leak & pool exhaustion",
+      "aliases": [
+        "connection leak",
+        "pool exhaustion",
+        "rò rỉ kết nối",
+        "unclosed connection",
+        "cạn kiệt pool kết nối",
+        "connection pool exhaustion"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Service chạy được vài ngày thì bắt đầu timeout toàn bộ truy vấn DB, restart là hết rồi lại tái diễn. Nguyên nhân thường là nhánh lỗi hoặc early return không trả kết nối về pool: mỗi request lỗi làm rớt một connection, pool 20 chỗ cạn dần sau vài nghìn request lỗi.",
+      "origin": "không rõ",
+      "how": "Khóa pool bằng giới hạn cứng và bật connection leak detection threshold để log stack trace của kết nối không trả về sau N giây, trả kết nối trong block finally/defer ở mọi đường code. Theo dõi số idle và active, cảnh báo khi idle về 0 kéo dài vì đó là pool đang rỉ.",
+      "related": [
+        "Connection pool",
+        "Zombie Connection",
+        "Timeout"
+      ]
+    },
+    {
+      "term": "Slow query triage (slow query log, pg_stat_statements)",
+      "aliases": [
+        "slow query",
+        "slow query log",
+        "pg_stat_statements",
+        "truy vấn chậm"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "P99 API nhảy từ 200ms lên 8s nhưng dashboard CPU của DB vẫn thấp, không biết câu lệnh nào gây ra. Đo ở tầng request chỉ cho biết thời gian nằm ở phía database, còn câu lệnh cụ thể thì không nằm sẵn trong log nào.",
+      "origin": "",
+      "how": "Bật ngưỡng ghi log truy vấn (Postgres log_min_duration_statement, MySQL slow_query_log), lấy thống kê tổng hợp từ pg_stat_statements, xếp theo total_exec_time rồi EXPLAIN từng câu nặng. Nhóm theo hình thức query lặp để xử lý một kiểu thay vì sửa lẻ theo endpoint.",
+      "related": [
+        "Query plan / EXPLAIN",
+        "N+1 query",
+        "Index (B-tree, hash, composite)",
+        "Monitoring"
+      ]
+    },
+    {
+      "term": "PostgreSQL VACUUM & table bloat (autovacuum, dead tuples)",
+      "aliases": [
+        "autovacuum",
+        "dead tuple",
+        "table bloat",
+        "VACUUM PostgreSQL",
+        "bloat bảng"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Bảng dữ liệu 2GB nhưng tốn 40GB đĩa, DELETE 10 triệu dòng chạy xong mà dung lượng không giảm, query quét chậm dần theo tuần. MVCC không ghi đè row cũ tại chỗ khi còn transaction đọc nó, version chết tích lũy thành bloat.",
+      "origin": "",
+      "how": "autovacuum quét bảng để thu hồi dead tuple; chấm điểm bằng pg_stat_user_tables (n_dead_tup, autovacuum_count) và pgstattuple để đo bloat thật. Tăng tần suất với bảng ghi nhiều, xử lý bloat lớn bằng VACUUM FULL (khóa bảng) hoặc pg_repack để không dừng nhận ghi.",
+      "related": [
+        "MVCC (Multiversion Concurrency Control)",
+        "Transaction",
+        "Page",
+        "Buffer pool"
+      ]
+    },
+    {
+      "term": "Backup & point-in-time recovery (WAL archive, incremental)",
+      "aliases": [
+        "point-in-time recovery",
+        "PITR",
+        "WAL archive",
+        "sao lưu khôi phục theo thời điểm"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Dump nightly giữ trạng thái 2h sáng, sự cố lúc 14:00 ghi sai dữ liệu suốt 3 giờ mà team chỉ phát hiện khi khách khiếu nại. Mục tiêu là tua về đúng thời điểm phát hiện lỗi, thay vì quay về mốc đêm hôm trước.",
+      "origin": "",
+      "how": "Backup full và incremental định kỳ cộng WAL archive liên tục: replay WAL trên bản full rồi dừng tại mốc LSN chỉ định, đưa RPO về mức phút thay vì 24 giờ. Chưa khôi phục thử lần nào thì chưa tính là có backup, nên cần restore định kỳ vào môi trường sạch và đo cả thời gian.",
+      "related": [
+        "WAL (Write-Ahead Logging)",
+        "RPO",
+        "RTO",
+        "Crash recovery"
+      ]
+    },
+    {
+      "term": "Deep health check (dependency probing, tránh alert giả)",
+      "aliases": [
+        "deep health check",
+        "dependency probe",
+        "readiness sâu",
+        "kiểm tra sức khỏe phụ thuộc"
+      ],
+      "level": "intermediate",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Endpoint /health luôn trả 200 vì chỉ in chuỗi 'ok', DB chết 10 phút trước đó mà load balancer vẫn đẩy traffic vào node hỏng. Mặt khác, probe gọi toàn bộ dependency mỗi 2 giây sẽ tự làm sập service khi DB chập chờn vì chính lưu lượng probe đó.",
+      "origin": "",
+      "how": "Tách hai mức: liveness chỉ xác nhận tiến trình còn chạy, readiness probe tới các dependency thật với timeout ngắn và kết quả phân hạng, degraded khi cache hỏng nhưng DB còn. Probe do orchestrator hoặc collector bên ngoài thực hiện, kèm giới hạn tần suất để kiểm tra sâu không biến thành tải.",
+      "related": [
+        "Health Check",
+        "Circuit Breaker",
+        "Graceful Degradation",
+        "Monitoring"
+      ]
+    },
+    {
+      "term": "Consumer lag monitoring (offset lag)",
+      "aliases": [
+        "consumer lag",
+        "offset lag",
+        "khoảng trễ consumer",
+        "lag monitoring"
+      ],
+      "level": "intermediate",
+      "domain": "Messaging & Bất đồng bộ",
+      "problem": "Consumer group vẫn ở trạng thái healthy, không lỗi nào trong log, nhưng dữ liệu hiển thị cho khách cũ hơn 40 phút. Khoảng cách giữa offset đã commit và offset cao nhất của partition không có metric nào theo, nên phát hiện đầu tiên đến từ khách phàn nàn.",
+      "origin": "",
+      "how": "Đo max offset trừ committed offset theo từng partition (kafka-consumer-groups --describe hoặc metric consumer_lag từ exporter), cảnh báo theo cả ngưỡng lẫn tốc độ tăng. Đọc song song rate produce, rate consume và số partition để phân biệt producer burst với consumer bị chậm.",
+      "related": [
+        "Kafka topic / partition / consumer group",
+        "Alerting (threshold alert)",
+        "Metrics (time-series)",
+        "Backpressure & rate shaping"
+      ]
+    },
+    {
+      "term": "Crash-loop & restart policy (CrashLoopBackOff, systemd Restart=)",
+      "aliases": [
+        "CrashLoopBackOff",
+        "crash loop",
+        "vòng lặp khởi động lại",
+        "restart policy"
+      ],
+      "level": "basic",
+      "domain": "DevOps & Triển khai",
+      "problem": "Container chết nửa giây sau khi khởi động, orchestrator restart liên tục, log chỉ lướt qua vài dòng rồi biến mất. Một lỗi cấu hình nhỏ thành vòng lặp restart vô hạn, nuốt CPU và che chính dòng lỗi cần đọc.",
+      "origin": "",
+      "how": "Chính sách restart có giãn cách lũy thừa: systemd Restart=on-failure cùng StartLimitBurst, Kubernetes CrashLoopBackOff với trần giãn cách 5 phút mỗi lần. Đọc exit code trước khi retry, vì lỗi cấu hình (mã không đổi khi restart) phải dừng lại, còn lỗi tạm thời mới được thử lại.",
+      "related": [
+        "Process manager (systemd, PM2, Supervisor)",
+        "Exponential Backoff",
+        "Heartbeat & watchdog"
+      ]
+    },
+    {
+      "term": "Log rotation & retention (logrotate)",
+      "aliases": [
+        "logrotate",
+        "xoay log",
+        "log retention",
+        "chính sách giữ log"
+      ],
+      "level": "basic",
+      "domain": "DevOps & Triển khai",
+      "problem": "Máy chủ đầy đĩa sau ba tháng chạy, riêng file access log đã 80GB. Tiến trình vẫn ghi vào file cũ đã bị rename nên dung lượng không được giải phóng, tới lúc ghi log thất bại thì service sập theo.",
+      "origin": "",
+      "how": "logrotate xoay file theo chu kỳ và kích thước (daily, rotate 14, compress), kèm postrotate gửi signal để daemon mở file mới, nếu không thì FD cũ vẫn giữ file đã xoá trong đĩa. Gắn retention cho log đã tập trung (30 ngày chi tiết, WARN giữ dài hơn) và alert bằng df trước khi chạm ENOSPC.",
+      "related": [
+        "Log aggregation & ELK Stack",
+        "Structured logging",
+        "Log sampling & rate limiting",
+        "Disk IOPS, throughput & queue depth"
+      ]
+    },
+    {
+      "term": "Unix signals & exit codes (SIGTERM/SIGKILL/SIGINT)",
+      "aliases": [
+        "SIGTERM",
+        "SIGKILL",
+        "SIGINT",
+        "exit code",
+        "mã thoát"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Deploy dừng service bằng kill -9 nên request đang xử lý bị cắt giữa chừng, transaction dở dang và client nhận kết nối reset. Người thao tác không phân biệt được lệnh dừng êm với lệnh cưỡng chế.",
+      "origin": "",
+      "how": "SIGTERM cho tiến trình tự thu dọn: ngưng nhận request mới, drain kết nối, commit phần dở rồi thoát; SIGKILL không có handler nên chỉ dùng khi tiến trình đã treo thật. Exit code 0 là thành công, khác 0 là lỗi, và systemd hay orchestrator dùng chính hai giá trị này để quyết định có khởi động lại không.",
+      "related": [
+        "Graceful Shutdown",
+        "Process manager (systemd, PM2, Supervisor)",
+        "Drain Connections",
+        "Process vs Thread"
+      ]
+    },
+    {
+      "term": "File descriptor exhaustion & lsof (Too many open files)",
+      "aliases": [
+        "Too many open files",
+        "EMFILE",
+        "file descriptor exhaustion",
+        "lsof",
+        "cạn kiệt bộ mô tả tệp"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Service đang chạy tốt bỗng trả EMFILE 'Too many open files' trên toàn bộ request, CPU và RAM vẫn còn dư. Socket, file log và mỗi kết nối DB đều chiếm một file descriptor, limit 1024 mặc định của ulimit cạn khi traffic tăng.",
+      "origin": "",
+      "how": "Chẩn đoán bằng lsof -p <pid> | wc -l, ls /proc/<pid>/fd và ss -s để xem descriptor rơi vào socket không đóng hay file không nhả. Nâng LimitNOFILE (systemd) hoặc securityContext (Kubernetes), nhưng chỉ sau khi xử lý được nguồn rò, vì rò thật thì nâng limit chỉ trì hoãn thời điểm crash.",
+      "related": [
+        "C10K / C10M problem",
+        "TIME_WAIT & ephemeral port",
+        "Thread pool & pool exhaustion",
+        "Non-blocking I/O"
+      ]
+    },
+    {
+      "term": "strace (syscall-level debugging)",
+      "aliases": [
+        "strace",
+        "syscall trace",
+        "tracing hệ thống",
+        "gỡ lỗi mức syscall"
+      ],
+      "level": "intermediate",
+      "domain": "Hiệu năng",
+      "problem": "Tiến trình treo trong trạng thái không log gì, không stack rõ ràng: không biết nó đang chờ I/O nào hay đang blocked trên futex. Profiler ở tầng ứng dụng nhìn không ra vì điểm nghi ngờ nằm giữa user space và kernel.",
+      "origin": "",
+      "how": "strace -p <pid> -f -tt ghi từng syscall kèm đối số và mã trả về; -c tổng hợp theo loại syscall, chỉ ra thời gian rơi vào đâu (futex, poll, read). Trace đầy đủ làm chậm tiến trình nhiều lần nên chỉ chạy trong cửa sổ ngắn, và bằng chứng thu được nằm ở tầng syscall chứ không phải suy luận từ log ứng dụng.",
+      "related": [
+        "Syscall overhead",
+        "Profiling",
+        "Observability"
+      ]
+    },
+    {
+      "term": "eBPF & bpftrace (kernel tracing an toàn)",
+      "aliases": [
+        "eBPF",
+        "bpftrace",
+        "BPF",
+        "tracing nhân kernel"
+      ],
+      "level": "advanced",
+      "domain": "Hiệu năng",
+      "problem": "strace dán vào tiến trình production làm chậm nhiều lần, perf/kprobe lại cần gắn lại binary và đôi khi làm kernel panic. Đội muốn đo latency syscall của service đang chạy mà không sửa code, không restart, đúng lúc observability của ứng dụng lại không dùng được.",
+      "origin": "BPF do Van Jacobson và Craig Metcalfe đặt tại Lawrence Berkeley Laboratory năm 1992; eBPF do Alexei Starovoitov mở rộng năm 2014.",
+      "how": "eBPF chạy chương trình con đã được kernel verify trong sandbox, gắn vào kprobe/uprobe/tracepoint rồi xuất dữ liệu qua map về user space; bpftrace viết truy vấn theo kiểu one-liner. Chi phí mỗi event thấp hơn strace vì không dựng text qua pipe cho từng syscall, nên đo trực tiếp trên production được.",
+      "related": [
+        "Observability",
+        "Profiling",
+        "cgroup limits, CPU throttling & noisy neighbor",
+        "Syscall overhead"
+      ]
+    },
+    {
+      "term": "Network diagnostics (ping, traceroute, mtr, dig, tcpdump)",
+      "aliases": [
+        "ping traceroute mtr",
+        "tcpdump",
+        "network diagnostics",
+        "chẩn đoán mạng"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "API thỉnh thoảng timeout nhưng log server không ghi nhận request nào tới, và không phân biệt được gói rơi trước khi chạm máy chủ, DNS trả sai, hay load balancer chuyển nhầm cổng. Kết luận 'mạng chậm' không chỉ ra bước nào hỏng.",
+      "origin": "traceroute do Van Jacobson viết năm 1987; tcpdump ra đời tại Lawrence Berkeley National Laboratory trong thập niên 1980.",
+      "how": "Thu hẹp theo lớp: ping đo RTT và tỉ lệ mất gói, mtr liệt kê từng hop để tìm đoạn rơi packet, dig kiểm tra record và TTL của DNS, tcpdump bắt gói thật để so sequence number và retransmit. Mỗi công cụ loại một nhóm nguyên nhân, kết quả kèm timestamp đối chiếu được với log.",
+      "related": [
+        "RTT (Round-Trip Time)",
+        "DNS resolution chain",
+        "TCP handshake (three-way handshake)",
+        "Bandwidth vs Latency"
+      ]
+    },
+    {
+      "term": "Shadow traffic & traffic replay (dark launch)",
+      "aliases": [
+        "shadow traffic",
+        "dark launch",
+        "traffic replay",
+        "bóng ma lưu lượng"
+      ],
+      "level": "advanced",
+      "domain": "Bền vững & Chị tải",
+      "problem": "Version 2 của service qua toàn bộ test trên staging có data giả, thứ không tồn tại ở traffic thật. Đổi 100% route rồi mới thấy p99 nhảy, khi đó đã không còn bản nào để so sánh.",
+      "origin": "",
+      "how": "Shadow traffic mirror request sang instance mới, chỉ so response để đối chiếu, không trả về client. Traffic replay lấy log request từ production chạy lại trên môi trường mới. Cả hai nhân đôi tải lên hạ tầng hạ nguồn, nên chỉ hợp endpoint đọc hoặc đã idempotent.",
+      "related": [
+        "Canary deploy",
+        "Feature flag",
+        "Blue-green deploy",
+        "Load Testing"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,552 @@
+{
+  "entries": [
+    {
+      "term": "ETL/ELT (Extract-Transform-Load, Extract-Load-Transform)",
+      "aliases": [
+        "ETL",
+        "ELT",
+        "extract-transform-load",
+        "extract-load-transform",
+        "ETL vs ELT"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Query báo cáo chạy thẳng trên DB giao dịch vừa chậm vừa tranh khóa với đơn hàng thật. Kéo dữ liệu sang nơi khác để tính là lời giải, nhưng biến đổi ở đâu và bằng gì lại là quyết định kiến trúc: dữ liệu chỉ lớn thêm, còn logic nghiệp vụ còn đổi nhiều lần sau đó.",
+      "origin": "ETL gắn với data warehouse thập niên 1990 (Bill Inmon, Ralph Kimball); ELT phổ biến từ khoảng 2012 khi kho đám mây (Redshift, BigQuery, Snowflake) tách compute khỏi storage.",
+      "how": "ETL biến đổi trước khi ghi vào kho đích, thường qua máy chủ staging; hợp khi phải che dữ liệu nhạy cảm hoặc giảm tải cho kho. ELT nạp bản thô vào kho rồi transform bằng SQL ngay trong đó, dựa vào compute tách khỏi storage của kho đám mây; dữ liệu thô nằm lại để tính lại khi logic đổi.",
+      "related": [
+        "Data warehouse (kho dữ liệu, DWH)",
+        "Workflow orchestration (Airflow, Prefect, DAG)",
+        "Change Data Capture (CDC, Debezium, binlog/WAL-based CDC)",
+        "Stream processing vs batch"
+      ]
+    },
+    {
+      "term": "Data warehouse (kho dữ liệu, DWH)",
+      "aliases": [
+        "kho dữ liệu",
+        "DWH",
+        "data warehouse"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Analyst chạy query tổng hợp nhiều năm trên replica phục vụ giao dịch: replica lag tăng, dashboard ra số khác nhau mỗi lần refresh vì dữ liệu đang đổi, và hai loại workload chèn ép nhau trên cùng tài nguyên. Báo cáo cần một ảnh chụp đứng yên, còn hệ giao dịch luôn đang động.",
+      "origin": "Bill Inmon, 'Building the Data Warehouse' (1992).",
+      "how": "DB riêng với schema thiết kế cho truy vấn tổng hợp (denormalized, star schema), nhận dữ liệu qua pipeline định kỳ nên số liệu ổn định trong từng chu kỳ nạp; tách hẳn khỏi đường giao dịch, lưu trữ lịch sử nhiều năm thay vì chỉ trạng thái hiện tại.",
+      "related": [
+        "OLTP vs OLAP",
+        "ETL/ELT (Extract-Transform-Load, Extract-Load-Transform)",
+        "Star schema & snowflake schema (fact table, dimension table)",
+        "Data warehouse vs data lake (Lakehouse)"
+      ]
+    },
+    {
+      "term": "Star schema & snowflake schema (fact table, dimension table)",
+      "aliases": [
+        "star schema",
+        "snowflake schema",
+        "fact table",
+        "dimension table",
+        "mô hình sao"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Dữ liệu đã nạp vào kho nhưng analyst vẫn phải JOIN sáu bảng để tính doanh thu theo khu vực; mỗi người viết query cho ra một con số một kiểu vì hiểu quan hệ khác nhau. Cần mô hình bảng chuẩn để câu hỏi tổng theo nhóm viết ngắn và nhất quán.",
+      "origin": "Ralph Kimball, 'The Data Warehouse Toolkit' (1996); snowflake là biến thể chuẩn hóa dimension.",
+      "how": "Fact table chứa số đo và khóa ngoại (một dòng mỗi giao dịch), dimension chứa ngữ cảnh mô tả (khách, sản phẩm, thời gian). Star để dimension phẳng một tầng quanh fact, truy vấn ít join; snowflake chuẩn hóa dimension thành nhiều bảng lồng nhau, tiết kiệm chỗ và giảm trùng lặp nhưng thêm join.",
+      "related": [
+        "Data warehouse (kho dữ liệu, DWH)",
+        "Denormalization",
+        "Slowly changing dimension (SCD type 1/2/3)",
+        "OLTP vs OLAP"
+      ]
+    },
+    {
+      "term": "Columnar storage (column-oriented DB, columnstore, Parquet)",
+      "aliases": [
+        "columnar storage",
+        "columnstore",
+        "column-oriented",
+        "Parquet"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Bảng fact trăm triệu dòng mười mấy cột; báo cáo chỉ cần hai cột nhưng row store phải đọc trọn từng dòng từ đĩa, phần lớn I/O bị ném đi. Nén cũng kém vì giá trị khác kiểu nằm cạnh nhau trong cùng một dòng.",
+      "origin": "MonetDB (đầu thập niên 2000) và C-Store (Stonebraker, 2005); Parquet/ORC phổ biến định dạng cột trên data lake.",
+      "how": "Lưu giá trị theo từng cột liền nhau: query chỉ chạm cột được chọn nên giảm I/O, dữ liệu cùng cột cùng kiểu nén tốt hơn nhiều lần (run-length, dictionary), và có thể tính trực tiếp trên dữ liệu nén. Đổi lại ghi và cập nhật một dòng tốn hơn, nên hợp với workload đọc phân tích.",
+      "related": [
+        "OLTP vs OLAP",
+        "Data warehouse (kho dữ liệu, DWH)",
+        "Data warehouse vs data lake (Lakehouse)",
+        "Materialized view"
+      ]
+    },
+    {
+      "term": "Vector database (vector DB, vector search, ANN, HNSW)",
+      "aliases": [
+        "vector DB",
+        "vector search",
+        "ANN",
+        "HNSW",
+        "approximate nearest neighbor"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Semantic search: mỗi câu hỏi là một vector 768 chiều, cần tìm hàng xóm gần nhất trong hàng triệu vector. SQL không có kiểu dữ liệu lẫn toán tử khoảng cách cho việc này; quét tuyến tính từng vector thì độ trễ tỉ lệ thuận với kích thước corpus.",
+      "origin": "Faiss (Facebook, 2017) và các thư viện ANN; HNSW do Malkov & Yashunin công bố (2016).",
+      "how": "Chỉ mục ANN (HNSW, IVF, product quantization) xây đồ thị hoặc phân cụm để duyệt một phần nhỏ dữ liệu và trả kết quả gần đúng với recall đủ dùng; metadata được lưu kèm để filter trước khi tìm; khoảng cách L2, cosine hoặc dot product tính và tối ưu ngay trong engine.",
+      "related": [
+        "NoSQL (MongoDB / Redis / Cassandra)",
+        "Sharding",
+        "In-memory cache",
+        "Bloom filter"
+      ]
+    },
+    {
+      "term": "Time-series database (TSDB, InfluxDB, TimescaleDB)",
+      "aliases": [
+        "TSDB",
+        "InfluxDB",
+        "TimescaleDB",
+        "cơ sở dữ liệu chuỗi thời gian"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Metrics và dữ liệu cảm biến ghi vài trăm nghìn điểm mỗi giây, gần như chỉ thêm. Relational thường ngộp ở insert ổn định lâu dài và ở query dải thời gian khi bảng đã hàng tỉ dòng, còn cardinality theo cặp (device, tag) gần như vô hạn.",
+      "origin": "RRDtool (Tobias Oetiker, 1999) là hệ ghi chuỗi thời gian dạng vòng đầu tiên phổ biến; OpenTSDB (2010) đưa mô hình TSDB hiện đại.",
+      "how": "Tối ưu cho ghi tuần tự và query theo cửa sổ thời gian: nén theo delta timestamp và giá trị, partition theo thời gian kèm retention và downsampling tự động, rollup liên tục để query dài hạn không quét dữ liệu thô. TimescaleDB làm lớp này trên Postgres; InfluxDB, ClickHouse đứng riêng.",
+      "related": [
+        "Metrics (time-series)",
+        "Prometheus Pull Model",
+        "Partitioning (horizontal / vertical)",
+        "Columnar storage (column-oriented DB, columnstore, Parquet)"
+      ]
+    },
+    {
+      "term": "Graph database (graph DB, property graph, Neo4j)",
+      "aliases": [
+        "graph DB",
+        "property graph",
+        "Neo4j"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Truy vấn quan hệ nhiều tầng kiểu 'bạn của bạn của bạn mua gì' trên RDBMS bằng self-JOIN: mỗi tầng join bùng nổ số dòng trung gian, ba bốn tầng là query không trả nổi; thêm một loại quan hệ mới lại phải sửa schema và viết lại join.",
+      "origin": "Mô hình property graph gắn với Neo4j (ra mắt 2007); nhánh RDF/SPARQL chuẩn hóa ở W3C là dòng song song.",
+      "how": "Lưu quan hệ như con trỏ vật lý trực tiếp giữa các node thay vì tính lại bằng join, nên duyệt mỗi bậc có chi phí gần như độc lập với tổng số node; ngôn ngữ truy vấn khai báo theo pattern (Cypher, Gremlin) mô tả đường đi thay vì viết từng phép join.",
+      "related": [
+        "NoSQL (MongoDB / Redis / Cassandra)",
+        "Index (B-tree, hash, composite)",
+        "Sharding"
+      ]
+    },
+    {
+      "term": "NoSQL (MongoDB / Redis / Cassandra)",
+      "aliases": [
+        "NoSQL data models (document store, key-value store, wide-column / column family)",
+        "mô hình dữ liệu NoSQL",
+        "document store",
+        "key-value store",
+        "wide-column",
+        "column family",
+        "wide-column store"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Schema quan hệ cứng khiến mỗi lần sản phẩm đổi field là một migration lớn, còn tải ghi hàng triệu lượt/giây (session, feed, telemetry) thì single-node ACID trả giá quá cao; mô hình quan hệ không phù hợp cho tải này. Đổi sang NoSQL lại nảy ra vấn đề thứ hai: chọn mô hình dữ liệu. Nhét quan hệ nhiều bảng vào document store rồi tự join trong application, hoặc dùng key-value cho dữ liệu phải truy vấn theo thuộc tính — mô hình sai thì code phải bù bằng tay ở mọi tầng, và thứ không bù được là tính nhất quán lẫn hiệu năng truy vấn.",
+      "origin": "Thuật ngữ NoSQL xuất hiện cuối thập niên 1990 và phổ biến rộng rãi khoảng 2009 qua cuộc gặp NoSQL meetup ở San Francisco do Johan Oskarsson tổ chức; không có tác giả duy nhất. Cassandra mở nguồn từ Facebook 2008, MongoDB 2009, DynamoDB 2012.",
+      "how": "NoSQL bỏ bớt ràng buộc của mô hình quan hệ, thường chọn availability + tốc độ thay vì ACID đầy đủ (BASE). Ba họ chính: document store (MongoDB, CouchDB) giữ nguyên object JSON/BSON và cho truy vấn theo trường bên trong, hợp khi làm việc theo từng thực thể trọn vẹn; key-value (Redis, DynamoDB) chỉ có key trỏ tới value, tra cứu O(1) theo key (Redis giữ dữ liệu trong RAM) nhưng không truy vấn được theo thuộc tính; wide-column (Cassandra, HBase) nhóm cột theo row key, ghi phân tán và tuần tự theo hàng, đổi lại truy vấn phải theo row key đã chọn.",
+      "related": [
+        "Schema",
+        "Denormalization",
+        "Sharding",
+        "Eventual consistency",
+        "CAP theorem",
+        "Sharding & consistent hashing"
+      ]
+    },
+    {
+      "term": "Window function (OVER clause, PARTITION BY, ROW_NUMBER, RANK, running total)",
+      "aliases": [
+        "window function",
+        "OVER clause",
+        "PARTITION BY",
+        "ROW_NUMBER",
+        "RANK"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Top 3 đơn hàng lớn nhất của từng khách, lũy kế doanh thu theo ngày, so sánh giá trị với dòng trước: GROUP BY gộp mất các dòng gốc nên không làm được, còn self-join hoặc subquery tương quan thì vừa dài vừa quét bảng nhiều lần.",
+      "origin": "Chuẩn SQL:1999 bổ sung window functions; Postgres hỗ trợ từ 8.4 (2009), MySQL từ 8.0 (2018).",
+      "how": "Mệnh đề OVER chia kết quả thành phân vùng và cửa sổ trượt rồi tính trên đó mà không gộp dòng: ROW_NUMBER/RANK đánh số để lọc top-N, SUM() OVER cho lũy kế, LAG/LEAD lấy dòng trước/sau. Query planner xử lý window một lượt quét thay vì lặp join.",
+      "related": [
+        "Common Table Expression (CTE, WITH clause, recursive CTE)",
+        "Query plan / EXPLAIN",
+        "SQL"
+      ]
+    },
+    {
+      "term": "Common Table Expression (CTE, WITH clause, recursive CTE)",
+      "aliases": [
+        "CTE",
+        "WITH clause",
+        "recursive CTE",
+        "biểu thức bảng chung"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Query báo cáo lồng năm tầng subquery không còn đọc được, sửa một điều kiện phải lần theo từng lớp; dữ liệu dạng cây (danh mục, sơ đồ tổ chức) cần duyệt đệ quy mà SQL cơ bản không có cách viết, đẩy sang vòng lặp ở application thì mỗi tầng là một round-trip.",
+      "origin": "SQL:1999 thêm WITH và WITH RECURSIVE; Postgres 8.4 (2009) hiện thực hóa, Postgres 12 (2019) mặc định inline thay vì materialize.",
+      "how": "WITH đặt tên cho bảng tạm trong phạm vi một query, tách các bước thành khối đọc được; WITH RECURSIVE tự tham chiếu để duyệt cây (nhánh neo + nhánh đệ quy, UNION ALL). Optimizer có thể nhúng CTE vào query chính như subquery thường khi điều kiện cho phép.",
+      "related": [
+        "Window function (OVER clause, PARTITION BY, ROW_NUMBER, RANK, running total)",
+        "SQL",
+        "Query plan / EXPLAIN"
+      ]
+    },
+    {
+      "term": "UPSERT (INSERT ... ON CONFLICT, ON DUPLICATE KEY UPDATE, merge)",
+      "aliases": [
+        "INSERT ... ON CONFLICT",
+        "ON DUPLICATE KEY UPDATE",
+        "merge",
+        "upsert"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Đồng bộ hoặc webhook nhận lại cùng bản ghi nhiều lần: INSERT thuần chết vì trùng khóa, UPDATE thuần bỏ sót bản ghi chưa từng có. Kiểu check-then-insert ở application có khe hở race: hai worker cùng thấy 'chưa có' rồi cùng insert, một cái nổ duplicate.",
+      "origin": "MERGE vào chuẩn SQL:2003; Postgres thêm ON CONFLICT từ 9.5 (2016), MySQL dùng ON DUPLICATE KEY UPDATE từ lâu trước đó.",
+      "how": "Một câu lệnh nguyên tử tự chọn nhánh: chèn khi chưa có, cập nhật khi đã có (ON CONFLICT DO UPDATE/DO NOTHING của Postgres, ON DUPLICATE KEY UPDATE của MySQL, MERGE của SQL Server). Điều kiện nhận diện là unique index, nên bảng upsert phải có constraint tương ứng.",
+      "related": [
+        "Idempotency",
+        "Idempotency key (Stripe pattern)",
+        "Bulk Sync"
+      ]
+    },
+    {
+      "term": "Savepoint (lưu điểm, nested transaction, partial rollback)",
+      "aliases": [
+        "savepoint",
+        "lưu điểm",
+        "nested transaction",
+        "partial rollback"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Job nhập dữ liệu chạy một transaction cho cả nghìn dòng, tới dòng 500 gặp bản ghi lỗi và cả transaction phải rollback: 499 dòng xử lý đúng bị vứt bỏ, retry từ đầu lại chết ở đúng chỗ cũ. Cần bỏ một dòng mà giữ phần đã làm.",
+      "origin": "PostgreSQL thêm ở 8.0 (2005) cùng cơ chế subtransaction; Oracle hỗ trợ từ lâu, SQLite từ 3.6.8.",
+      "how": "SAVEPOINT đánh dấu một điểm giữa transaction; ROLLBACK TO SAVEPOINT hủy mọi thay đổi sau điểm đó rồi transaction chạy tiếp, RELEASE SAVEPOINT gỡ dấu khi đoạn xử lý xong. Các framework ORM dựng nested transaction trên đúng cơ chế này để giữ transaction ngoài còn nguyên.",
+      "related": [
+        "BEGIN/COMMIT/ROLLBACK",
+        "Transaction",
+        "Isolation level"
+      ]
+    },
+    {
+      "term": "Partial index (filtered index, index có WHERE clause)",
+      "aliases": [
+        "partial index",
+        "filtered index",
+        "index có WHERE"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Bảng vài chục triệu dòng nhưng phần lớn đã hủy hoặc lưu trữ, chỉ vài phần trăm còn hoạt động. Index đầy đủ phình dung lượng, mỗi lần ghi phải thêm một mục cho cả những dòng không bao giờ được truy vấn, và index lớn không nằm hết trong bộ nhớ.",
+      "origin": "Postgres 7.4 (2003) đưa partial index; SQL Server gọi tên filtered index.",
+      "how": "CREATE INDEX kèm WHERE chỉ lập chỉ mục cho tập con thỏa điều kiện: nhỏ hơn, giữ được trong cache, ghi ít hơn vì bỏ qua dòng ngoài tập. Planner chỉ dùng index khi predicate của query khớp điều kiện, nên điều kiện phải chọn theo truy vấn thật sự chạy.",
+      "related": [
+        "Index (B-tree, hash, composite)",
+        "Covering index",
+        "Query plan / EXPLAIN"
+      ]
+    },
+    {
+      "term": "Online DDL (zero-downtime schema change, gh-ost, pt-online-schema-change)",
+      "aliases": [
+        "online DDL",
+        "zero-downtime schema change",
+        "gh-ost",
+        "pt-online-schema-change"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "ALTER TABLE thêm cột trên bảng 200 triệu dòng: MySQL bản cũ copy cả bảng sang file mới và giữ metadata lock suốt quá trình, write bị chặn có khi hàng chục phút đúng lúc traffic cao. Deploy buổi trưa là sập, chờ cửa sổ bảo trì 3 giờ sáng là không scale.",
+      "origin": "MySQL 5.6 (2013) thêm ALGORITHM=INPLACE; công cụ gh-ost (GitHub, 2016) và pt-online-schema-change (Percona Toolkit) chuyên trị MySQL bản cũ.",
+      "how": "Thay đổi chạy trên bản sao shadow của bảng trong khi bảng gốc tiếp tục phục vụ; trigger hoặc đọc binlog đồng bộ thay đổi mới sang bản sao, tới lúc gần đuổi kịp thì đổi tên bảng trong tích tắc. DB hiện đại hỗ trợ nhiều loại DDL in-place chỉ chốt metadata lock ngắn, giới hạn ở vài thao tác không rewrite.",
+      "related": [
+        "Migration",
+        "Expand-contract (database migration trong deploy)",
+        "Zero-downtime deploy (rolling deploy)",
+        "Backfill (data backfill, backfill job, batch backfill)"
+      ]
+    },
+    {
+      "term": "Backfill (data backfill, backfill job, batch backfill)",
+      "aliases": [
+        "backfill",
+        "backfill job",
+        "batch backfill",
+        "đổ dữ liệu cũ"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Deploy xong cột mới hoặc bảng mới, code mới chạy nhưng dữ liệu cũ vẫn nằm ở dạng trước đó: báo cáo đọc cột mới thấy NULL hàng loạt, và càng để lâu càng khó chạy vì bảng tiếp tục lớn thêm mỗi ngày. Chạy UPDATE một phát cho toàn bảng thì khóa cả bảng, đứng hệ thống.",
+      "origin": "",
+      "how": "Job riêng duyệt dữ liệu hiện hữu theo lô nhỏ có đánh dấu tiến độ, ghi giá trị mới cho từng lô rồi nghỉ giữa các lô để không chiếm tài nguyên; idempotent để rerun từ vị trí dở dang sau khi job chết. Thường đi kèm giai đoạn read-both của expand-contract để so số liệu trước khi tin bảng mới.",
+      "related": [
+        "Expand-contract (database migration trong deploy)",
+        "Migration",
+        "Online DDL (zero-downtime schema change, gh-ost, pt-online-schema-change)"
+      ]
+    },
+    {
+      "term": "Database constraint (CHECK, UNIQUE, NOT NULL)",
+      "aliases": [
+        "CHECK constraint",
+        "UNIQUE constraint",
+        "NOT NULL",
+        "ràng buộc dữ liệu"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Validate ở application chỉ được tới lúc có đường ghi thứ hai: script migration, job đồng bộ, người sửa DB trực tiếp đều đi vòng qua code. Một email trùng hoặc quantity âm lọt vào bảng rồi thì mọi truy vấn phía sau đều phải sống chung với dữ liệu rác.",
+      "origin": "CHECK, UNIQUE, NOT NULL nằm trong chuẩn SQL từ SQL-86/SQL-92.",
+      "how": "DB cưỡng chế điều kiện ngay lúc ghi: CHECK giới hạn miền giá trị (quantity > 0), UNIQUE chặn trùng (kể cả composite nhiều cột), NOT NULL chặn thiếu. Mọi đường ghi đều phải qua, không phụ thuộc ngôn ngữ hay framework của client.",
+      "related": [
+        "Primary key & Foreign key",
+        "Schema",
+        "SQL"
+      ]
+    },
+    {
+      "term": "Cascade & referential action (ON DELETE CASCADE, SET NULL, RESTRICT)",
+      "aliases": [
+        "ON DELETE CASCADE",
+        "SET NULL",
+        "RESTRICT",
+        "referential action",
+        "hành vi tham chiếu"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Xóa một user thì đống đơn hàng, comment, file của user trỏ về khóa đã mất thành bản ghi mồ côi; app JOIN không ra kết quả, hoặc tệ hơn là xóa dây chuyền ngoài dự tính vì một FK được cấu hình CASCADE mà người viết bảng không để ý. Hành vi khi xóa cha là quyết định dữ liệu sống chết, thường bị bỏ qua lúc thiết kế bảng.",
+      "origin": "",
+      "how": "FK khai báo referential action cho từng sự kiện xóa/cập nhật: CASCADE lan theo khóa, SET NULL gỡ liên kết, RESTRICT/NO ACTION chặn xóa cha khi còn con. Mức lan truyền quyết định xóa một dòng có xóa cả đồ thị phía sau hay không, nên phải chọn theo nghiệp vụ chứ không theo mặc định của ORM.",
+      "related": [
+        "Primary key & Foreign key",
+        "Database constraint (CHECK, UNIQUE, NOT NULL)",
+        "Schema"
+      ]
+    },
+    {
+      "term": "Object storage (S3, blob storage, presigned URL)",
+      "aliases": [
+        "S3",
+        "blob storage",
+        "presigned URL",
+        "lưu trữ đối tượng"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Ảnh, video, PDF, backup nằm trong filesystem local của app: deploy hai instance là hai bản dữ liệu lệch nhau, scale ngang không được vì file gắn với máy, còn nhét thẳng BLOB vào DB thì bảng phình, backup chậm và tốn kém cho thứ chỉ cần đọc nguyên khối.",
+      "origin": "Amazon S3 ra mắt 2006; API của nó thành chuẩn de facto cho object storage.",
+      "how": "Lưu từng object nguyên khối kèm key và metadata trong namespace phẳng, nhân bản và phân tán sẵn ở tầng dịch vụ; app chỉ giữ key trong DB. Truy cập qua API HTTP, và presigned URL ký sẵn thời hạn để client tải/up trực tiếp mà không đưa credentials cho họ hay bơm file qua server.",
+      "related": [
+        "CDN (Content Delivery Network)",
+        "NoSQL (MongoDB / Redis / Cassandra)",
+        "Backup & point-in-time recovery (WAL archive, incremental)"
+      ]
+    },
+    {
+      "term": "Redis persistence (RDB snapshot, AOF append-only file)",
+      "aliases": [
+        "RDB",
+        "AOF",
+        "append-only file",
+        "Redis persistence"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Redis để làm store thật (queue nhẹ, session, rate limit counter) chứ không thuần cache: process chết là mất sạch dữ liệu trong RAM, các key count và lock đang giữ biến mất, job rơi vào trạng thái nửa vời. Mặc định Redis không đảm bảo gì về chuyện này, phải chọn cơ chế lưu bền.",
+      "origin": "RDB gắn với Redis từ đầu dự án (Salvatore Sanfilippo, 2009); AOF thêm trong loạt bản 1.x đầu để bù cửa sổ mất dữ liệu của snapshot.",
+      "how": "RDB ghi snapshot toàn bộ dataset theo chu kỳ (fork copy-on-write), file gọn, khôi phục nhanh nhưng mất dữ liệu từ snapshot trước tới lúc chết. AOF append từng lệnh ghi, fsync theo chính sách (everysec mất tối đa ~1 giây, always chậm hơn), khôi phục chậm hơn nhưng cửa sổ mất dữ liệu nhỏ; thường bật cả hai và để AOF chủ đạo khi cần durability.",
+      "related": [
+        "Redis",
+        "WAL (Write-Ahead Logging)",
+        "fsync cost & SSD vs HDD latency"
+      ]
+    },
+    {
+      "term": "Slowly changing dimension (SCD type 1/2/3)",
+      "aliases": [
+        "SCD",
+        "SCD type 2",
+        "slowly changing dimension",
+        "dimension thay đổi chậm"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Khách hàng đổi địa chỉ sang thành phố khác; dimension ghi đè giá trị mới thì báo cáo doanh thu quá khứ bỗng gán nhầm mọi đơn cũ cho thành phố mới, còn giữ nguyên giá trị cũ thì không trả lời được câu hỏi trạng thái hiện tại. Dữ liệu mô tả đổi theo thời gian, kho báo cáo phải chọn giữ gì.",
+      "origin": "Ralph Kimball, 'The Data Warehouse Toolkit' — ba kỹ thuật type 1/2/3.",
+      "how": "Type 1 ghi đè, mất lịch sử; type 2 thêm dòng mới cho mỗi phiên bản kèm cột hiệu lực (valid_from/valid_to, is_current), giữ được lịch sử và join fact vào đúng phiên bản tại thời điểm giao dịch; type 3 giữ thêm một cột giá trị trước đó. Type 2 đắt hơn về dòng và logic nhưng là mặc định khi cần báo cáo lịch sử.",
+      "related": [
+        "Data warehouse (kho dữ liệu, DWH)",
+        "Star schema & snowflake schema (fact table, dimension table)",
+        "Change Data Capture (CDC, Debezium, binlog/WAL-based CDC)"
+      ]
+    },
+    {
+      "term": "Change Data Capture (CDC, Debezium, binlog/WAL-based CDC)",
+      "aliases": [
+        "CDC",
+        "Debezium",
+        "binlog CDC",
+        "WAL-based CDC",
+        "bắt sự thay đổi dữ liệu"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Đồng bộ hai hệ (DB giao dịch sang search index, cache, warehouse) bằng cách định kỳ SELECT theo updated_at: quét thừa dữ liệu không đổi, bỏ sót thay đổi vì clock lệch hoặc row UPDATE trong cùng giây, và DELETE thì poll không bao giờ thấy. Đọc thẳng bảng nguồn gây tải, còn viết kép ở app thì mỗi lần thêm đường ghi là một lần quên.",
+      "origin": "Debezium (Red Hat mở nguồn 2016) phổ biến hóa WAL/binlog-based CDC; khái niệm bắt nguồn từ các công cụ replication nội bộ của DB.",
+      "how": "Đọc log vật lý của DB (binlog MySQL, WAL Postgres) là nơi mọi thay đổi đã được ghi bất kể đường nào tạo ra, parse thành event insert/update/delete kèm trước-sau, rồi đẩy vào Kafka/stream để consumer áp vào hệ đích. Độ trễ ở mức giây, đúng thứ tự theo transaction, không chạm bảng nguồn nhưng cần vai trò replication và giữ slot/log đủ lâu.",
+      "related": [
+        "WAL (Write-Ahead Logging)",
+        "Apache Kafka",
+        "Transactional outbox",
+        "Stream processing vs batch"
+      ]
+    },
+    {
+      "term": "Cold start",
+      "aliases": [
+        "cold start",
+        "khởi động nguội",
+        "cold-start latency"
+      ],
+      "level": "intermediate",
+      "domain": "Caching & Hiệu năng",
+      "problem": "Deploy xong, instance mới đầu tiên nhận traffic trong khi mọi thứ còn trống: connection pool chưa mở, JIT chưa biên dịch, cache rỗng nên mọi request đầu tiên đều chạm DB. Trên serverless độ trễ này rơi vào từng request khi function bị recycle, còn với service thường nó là quãng p99 vọt lên sau mỗi lần scale hoặc restart.",
+      "origin": "",
+      "how": "Dựng sẵn tài nguyên trước khi nhận request: khởi tạo pool và kết nối DB trong startup hook rồi mới mở readiness, chạy warmup request nhân tạo trước khi đưa vào load balancer. Serverless dùng provisioned concurrency hoặc snapshot khởi động; service thường dùng pre-stop hook kết hợp rolling update để luôn còn instance ấm phục vụ.",
+      "related": [
+        "JIT compilation & warmup",
+        "Autoscaling (Horizontal/Vertical)",
+        "Serverless"
+      ]
+    },
+    {
+      "term": "Single-flight / request coalescing",
+      "aliases": [
+        "single-flight",
+        "request coalescing",
+        "gộp request trùng"
+      ],
+      "level": "intermediate",
+      "domain": "Caching & Hiệu năng",
+      "problem": "Một key hot hết hạn cache đúng lúc đông người hỏi: 500 request cùng miss, cùng query DB, cùng chờ một kết quả. Cache stampede kinh điển — DB nhận 500 query giống nhau trong vài chục ms, có khi sập vì đúng cái key đáng ra phải giảm tải.",
+      "origin": "Thuật ngữ singleflight phổ biến từ package golang.org/x/sync/singleflight của Go; ý tưởng coalescing đã dùng rộng trong CDN/proxy từ trước đó.",
+      "how": "Giữ map key → future đang chạy; request thứ hai cho cùng key dừng lại chờ future thay vì tự load. Khi load xong, mọi request chờ nhận chung kết quả, entry xóa khỏi map. Chỉ có một truy vấn nguồn cho mỗi key đang được load, không cần lock theo key vĩnh viễn.",
+      "related": [
+        "Cache stampede / thundering herd",
+        "Thundering Herd",
+        "Hot key"
+      ]
+    },
+    {
+      "term": "Refresh-ahead cache",
+      "aliases": [
+        "refresh-ahead",
+        "làm mới trước"
+      ],
+      "level": "advanced",
+      "domain": "Caching & Hiệu năng",
+      "problem": "Working set truy cập đều đặn nhưng TTL hết hạn theo lịch: đúng chu kỳ đó một loạt request ăn cache miss và phải chờ load lại, p99 nhấp nhô theo đồng hồ dù traffic phẳng. Tăng TTL lên thì dữ liệu cũ lâu hơn, để nguyên thì tail latency có gai định kỳ.",
+      "origin": "",
+      "how": "Theo dõi tần suất truy cập từng key; key nào được hỏi đều đặn thì lên lịch load trước khi TTL hết (ví dụ còn 20% thời gian sống), dùng một worker nền làm mới — request luôn đọc bản còn hợp lệ. Nền tảng là chấp nhận trả một chút tươi mới để đổi lấy không bao giờ có miss ở nhóm key nóng.",
+      "related": [
+        "Cache-aside (lazy loading)",
+        "TTL (Time To Live)",
+        "Cache warming / pre-warming"
+      ]
+    },
+    {
+      "term": "Cache warming / pre-warming",
+      "aliases": [
+        "cache warming",
+        "pre-warming",
+        "làm ấm cache"
+      ],
+      "level": "intermediate",
+      "domain": "Caching & Hiệu năng",
+      "problem": "Sau restart hoặc deploy, cache nguội hoàn toàn: ngày thường hit 95% giờ về 0, toàn bộ traffic dồn vào DB trong lúc instance mới còn yếu nhất. Cold cache biến một deploy bình thường thành sự cố DB, nhất là khi cache giữ các truy vấn đắt.",
+      "origin": "",
+      "how": "Chạy job nạp trước working set (top key theo access log, danh mục ít đổi, cấu hình) ngay sau deploy/restart, xong mới mở dần traffic (ví dụ gắn với rolling update); hoặc duy trì cache ấm bằng traffic replay từ môi trường tương đương. Tốn thời gian khởi động và tài nguyên nạp, đổi lại không có cửa sổ DB bị dồn tải.",
+      "related": [
+        "Cold start",
+        "Cache-aside (lazy loading)",
+        "Cache hit ratio"
+      ]
+    },
+    {
+      "term": "Zipf's law / access skew",
+      "aliases": [
+        "Zipf",
+        "access skew",
+        "phân bố truy cập lệch"
+      ],
+      "level": "advanced",
+      "domain": "Caching & Hiệu năng",
+      "problem": "Chọn shard bằng hash đều theo key rồi phát hiện một shard cháy CPU gấp nhiều lần shard khác dù dữ liệu chia đều: vài key chiếm phần lớn truy cập (một sản phẩm viral, một celebrity, một khóa cấu hình), nên tải không tỉ lệ với kích thước dữ liệu. Thiết kế theo trực giác 'chia đều' không đỡ được.",
+      "origin": "George Kingsley Zipf quan sát phân bố tần suất từ tiếng tự nhiên, thập niên 1930-40.",
+      "how": "Tần suất truy cập key tuân theo phân bố giảm dần theo hạng: hạng k phổ biến được gọi tỉ lệ với 1/k^s, nên top 1% key có thể chiếm phần lớn request. Hệ quả thiết kế: cache hit ratio cao nếu cache đủ chứa top key, sharding phải ly tài khoản hot, và hot key cần nhân bản hoặc local cache trước khi tính đến chia đều.",
+      "related": [
+        "Hot key",
+        "Sharding",
+        "Cache hit ratio"
+      ]
+    },
+    {
+      "term": "Workflow orchestration (Airflow, Prefect, DAG)",
+      "aliases": [
+        "Airflow",
+        "Prefect",
+        "DAG",
+        "điều phối workflow",
+        "workflow engine",
+        "Airflow scheduler",
+        "điều phối pipeline dữ liệu"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Pipeline dữ liệu gồm hai chục job: extract chạy xong mới tới transform, transform xong mới tới aggregate, giữa các job phải truyền trạng thái. Ghép bằng crontab và sleep thì job cha xong muộn làm con chạy trên dữ liệu thiếu, một job chết không ai biết, chạy lại toàn chuỗi vì không rõ dở ở đâu, và ngày lễ đổi lịch là sửa bằng tay.",
+      "origin": "Apache Airflow (Airbnb, mở nguồn 2015); Prefect, Dagster tiếp nối.",
+      "how": "Khai báo pipeline thành DAG: mỗi task có dependency tường minh, scheduler chỉ chạy task khi cha thành công; state và log từng lần chạy được lưu để retry đúng task, backfill theo ngày, và cảnh báo khi fail. Idempotent task + catchup cho phép chạy bù khoảng thời gian đã bỏ lỡ.",
+      "related": [
+        "ETL/ELT (Extract-Transform-Load, Extract-Load-Transform)",
+        "Cron job & Scheduler",
+        "Backfill (data backfill, backfill job, batch backfill)"
+      ]
+    },
+    {
+      "term": "Data warehouse vs data lake (Lakehouse)",
+      "aliases": [
+        "data lake",
+        "Lakehouse",
+        "kho dữ liệu vs hồ dữ liệu"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Dữ liệu phân tích vừa có phần cấu trúc đều đặn (giao dịch) vừa có phần thô, dị dạng (log, JSON, ảnh) chỉ cần giữ để đào sau. Nhét hết vào warehouse thì schema cứng và hóa đơn compute phình với dữ liệu thô; ném hết vào hồ thì không query tổng hợp nhanh, dễ biến thành data swamp không ai biết trong đó có gì.",
+      "origin": "Thuật ngữ data lake phổ biến khoảng 2010 (Hadoop); Lakehouse do Databricks đặt (2020) cho mô hình Delta Lake, Iceberg trên object storage.",
+      "how": "Warehouse viết theo schema-on-write: kiểm tra và tổ chức lúc nạp, truy vấn nhanh và tin cậy. Lake giữ file thô trên object storage, schema-on-read suy ra lúc đọc, rẻ và nhận mọi định dạng nhưng ai đọc người đó tự chịu. Lakehouse đặt tầng bảng có transaction (Iceberg, Delta) lên chính file trên hồ để vừa rẻ vừa query như kho.",
+      "related": [
+        "Data warehouse (kho dữ liệu, DWH)",
+        "Columnar storage (column-oriented DB, columnstore, Parquet)",
+        "Object storage (S3, blob storage, presigned URL)"
+      ]
+    }
+  ],
+  "skipped": [
+    "ETL vs ELT (extract-transform-load, extract-load-transform) — trùng với mục ETL/ELT đã viết (đã gộp làm alias 'ETL vs ELT')"
+  ]
+}

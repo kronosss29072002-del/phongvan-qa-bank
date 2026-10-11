@@ -1,0 +1,607 @@
+{
+  "domain": "SECURITY & AUTHENTICATION/AUTHORIZATION",
+  "entries": [
+    {
+      "term": "authentication vs authorization",
+      "aliases": [
+        "authN vs authZ"
+      ],
+      "level": "basic",
+      "problem": "Khi web app mới xuất hiện, chỉ cần 'ai là ai' (authentication) thôi chưa đủ — hệ thống cũng phải biết 'ai được làm gì' (authorization). Nếu không phân biệt rõ, dễ cấp quyền sai hoặc chặn nhầm người dùng hợp lệ.",
+      "origin": "General access control model (early multi-user systems)",
+      "how": "Authentication xác minh danh tính (username/password, token), authorization quyết định quyền truy cập tài nguyên sau khi đã xác minh.",
+      "related": [
+        "session-based auth",
+        "RBAC",
+        "least privilege"
+      ]
+    },
+    {
+      "term": "session-based auth",
+      "aliases": [
+        "cookie-based session"
+      ],
+      "level": "basic",
+      "problem": "Khi server cần ghi nhớ người dùng sau login, việc gửi username/password đi lại mỗi request rất tốn và không an toàn. Cần cách 'ghi nhớ phiên đăng nhập' mà vẫn có thể kiểm soát hết hạn.",
+      "origin": "HTTP is stateless; early web apps needed stateful sessions",
+      "how": "Sau login, server tạo session ID lưu server-side (session store), gửi session ID qua cookie cho client. Mỗi request kèm cookie để server tra cứu phiên.",
+      "related": [
+        "authentication vs authorization",
+        "CORS vs CSRF",
+        "replay attack"
+      ]
+    },
+    {
+      "term": "token",
+      "aliases": [
+        "access token"
+      ],
+      "level": "basic",
+      "problem": "Session lưu trên server không scale tốt (load balancer nhiều node). Cần cách đại diện cho quyền truy cập mà client tự mang theo, server có thể xác minh nhanh mà không cần tra cứu session store.",
+      "origin": "OAuth delegation needs stateless credentials",
+      "how": "Token là chuỗi đại diện (thường signed) client đính kèm (Authorization: Bearer) để server xác minh quyền truy cập.",
+      "related": [
+        "JWT",
+        "OAuth 2.0",
+        "refresh token rotation"
+      ]
+    },
+    {
+      "term": "password hashing",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Nếu lưu password dạng plaintext, một khi database bị leak, toàn bộ tài khoản bị mất ngay. Cần biến đổi password thành dạng không thể đảo ngược để so sánh khi login.",
+      "origin": "UNIX password storage (DES crypt) evolved to salted hashes",
+      "how": "Dùng hash function chuyên biệt cho password (bcrypt/scrypt/argon2) với salt để tạo digest; login so sánh digest.",
+      "related": [
+        "Salt",
+        "rainbow table",
+        "brute force + rate limiting"
+      ]
+    },
+    {
+      "term": "Salt",
+      "aliases": [
+        "salt",
+        "salting",
+        "random salt",
+        "mặn hóa mật khẩu"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Hash mật khẩu thuần không phân biệt hai user cùng gõ 'password123': cùng input cho cùng một hash, nên attacker tải bảng tra ngược hoặc rainbow table là dò được nguyên loạt tài khoản dùng chung mật khẩu, và biết ngay account nào trùng nhau mà không cần thử từng cái. Với hash trần như vậy, đốiet hàng loạt chỉ tốn một lần tính toán thay vì hàng triệu lần.",
+      "origin": "Morris và Thompson (1979),>Password Security: A Case History",
+      "how": "Mỗi mật khẩu được sinh một số ngẫu nhiên 128-bit riêng (salt) và lưu cạnh hash; lúc tạo lẫn lúc kiểm tra đều tính hash(password + salt). Nhờ hai mật khẩu giống nhau vẫn cho hai hash khác nhau, bảng tra trước vô hiệu và việc đối chiếu hàng loạt không còn tác dụng.",
+      "related": [
+        "rainbow table",
+        "password hashing",
+        "bcrypt",
+        "scrypt",
+        "Argon2"
+      ]
+    },
+    {
+      "term": "rainbow table",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Attacker cần nhanh chóng đảo ngược hash thành plaintext sau khi có database leak. Brute force chậm, nên sinh bảng precomputed (space-time tradeoff) để tra ngược nhanh.",
+      "origin": "Martin Hellman (1980) time-memory tradeoff; Philippe Oechslin (2003) rainbow tables",
+      "how": "Precompute chains (hash+reduce) từ passwords, chỉ lưu start/end. Khi có hash cần crack, tìm chain chứa hash rồi dựng lại plaintext.",
+      "related": [
+        "Salt",
+        "password hashing"
+      ]
+    },
+    {
+      "term": "encryption symmetric vs asymmetric",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Cần mã hóa dữ liệu trong truyền tải/lưu trữ. Symmetric nhanh nhưng khó phân phối key; asymmetric dùng cặp public/private giúp trao đổi key/xác thực nhưng chậm hơn.",
+      "origin": "Diffie–Hellman (1976), RSA (1978)",
+      "how": "Symmetric: cùng key mã hóa/giải mã (AES). Asymmetric: public key mã hóa, private key giải mã (RSA/ECDSA); ngược lại dùng cho signature.",
+      "related": [
+        "TLS handshake",
+        "certificate",
+        "digital signature"
+      ]
+    },
+    {
+      "term": "CORS vs CSRF",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Browser thực thi Same-Origin Policy để bảo vệ, nhưng app frontend cần gọi API cross-origin. Đồng thời, browser tự động gửi cookie khiến request giả mạo từ trang khác có thể hành động thay user (CSRF). Cần phân biệt rõ hai vấn đề.",
+      "origin": "Same-Origin Policy; CSRF described in security literature (early 2000s)",
+      "how": "CORS (server opt-in qua HTTP headers) quyết định trình duyệt có cho JS đọc response cross-origin không. CSRF là tấn công khiến user vô tình gửi request có cookie; phòng bằng CSRF token, SameSite cookie.",
+      "related": [
+        "session-based auth",
+        "XSS"
+      ]
+    },
+    {
+      "term": "JWT",
+      "aliases": [
+        "JSON Web Token"
+      ],
+      "level": "intermediate",
+      "problem": "Khi nhiều service cần xác minh quyền truy cập mà không muốn gọi centralized session store mỗi request, cần định dạng token nhỏ gọn, self-contained chứa claims, có thể xác minh tính toàn vẹn.",
+      "origin": "RFC 7519 (Jones et al., 2015)",
+      "how": "JWT gồm header.payload.signature (compact, URL-safe). Có thể ký (JWS) để đảm bảo toàn vẹn, hoặc mã hóa (JWE). Cần cẩn thận: alg confusion, 'none', key rotation, expiry (exp), jti để chống replay, không nhồi nhét dữ liệu nhạy cảm trừ khi encrypt.",
+      "related": [
+        "token",
+        "HMAC",
+        "digital signature",
+        "refresh token rotation"
+      ]
+    },
+    {
+      "term": "OAuth 2.0",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Trước đây, app bên thứ ba muốn truy cập tài nguyên user phải xin password user — nguy hiểm (lưu password, không giới hạn quyền, không thu hồi). Cần cơ chế ủy quyền tách rời: user cấp quyền cho client qua authorization server.",
+      "origin": "RFC 6749 (Hardt, 2012) replacing OAuth 1.0",
+      "how": "Roles: resource owner, client, authorization server, resource server. Flows: authorization code (recommended), implicit (deprecated), resource owner password (discouraged), client credentials (service-to-service).",
+      "related": [
+        "authorization code",
+        "PKCE",
+        "OpenID Connect"
+      ]
+    },
+    {
+      "term": "authorization code",
+      "aliases": [
+        "authorization code flow"
+      ],
+      "level": "intermediate",
+      "problem": "Cần ủy quyền an toàn nhất cho web app/confidential client. Tránh trả access token thẳng về user agent (trình duyệt) để giảm rò rỉ.",
+      "origin": "RFC 6749",
+      "how": "User được redirect tới authorization server xác thực/đồng ý; server trả code về redirect URI. Client (backend) trao đổi code + client secret với token endpoint để lấy access token. Kết hợp PKCE cho public client.",
+      "related": [
+        "OAuth 2.0",
+        "PKCE"
+      ]
+    },
+    {
+      "term": "PKCE",
+      "aliases": [
+        "Proof Key for Code Exchange"
+      ],
+      "level": "intermediate",
+      "problem": "Với public client (mobile app/native/spa) không có client secret, authorization code bị chặn giữa app và browser có thể bị ăn cắp để đổi token. Cần cơ chế chứng minh client thật sự là người nhận code.",
+      "origin": "RFC 7636 (Sakimura et al., 2015)",
+      "how": "Client tạo code_verifier ngẫu nhiên, tính code_challenge (SHA256+base64url). Gửi challenge khi authorize, gửi verifier khi exchange code. Server so khớp — attacker không có verifier.",
+      "related": [
+        "authorization code",
+        "OAuth 2.0"
+      ]
+    },
+    {
+      "term": "client credentials",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Khi service A cần gọi service B mà không có user context (machine-to-machine), không thể dùng authorization code. Cần flow cho client tự chứng minh để lấy token.",
+      "origin": "RFC 6749 Section 4.4",
+      "how": "Client gửi client_id+client_secret tới token endpoint, nhận access token để gọi resource server.",
+      "related": [
+        "OAuth 2.0",
+        "mTLS"
+      ]
+    },
+    {
+      "term": "OpenID Connect",
+      "aliases": [
+        "OIDC"
+      ],
+      "level": "intermediate",
+      "problem": "OAuth 2.0 chỉ giải quyết ủy quyền, không chuẩn hóa 'ai đang đăng nhập'. Nhiều app cần identity layer chuẩn để SSO an toàn.",
+      "origin": "OpenID Foundation (2014, OIDC 1.0 built on OAuth 2.0)",
+      "how": "OIDC thêm ID Token (JWT chứa claims về user) và UserInfo endpoint. Cho phép xác thực user và lấy thông tin cơ bản theo chuẩn.",
+      "related": [
+        "OAuth 2.0",
+        "SSO",
+        "JWT"
+      ]
+    },
+    {
+      "term": "SSO",
+      "aliases": [
+        "Single Sign-On"
+      ],
+      "level": "intermediate",
+      "problem": "User phải nhớ/login nhiều hệ thống khác nhau gây phiền phức và tăng nguy cơ dùng password yếu/lặp lại. Cần đăng nhập một lần để truy cập nhiều app.",
+      "origin": "Kerberos (MIT, 1988), later SAML/OIDC",
+      "how": "Central identity provider (IdP) xác thực user, phát token/assertion cho các service provider (SP). User không cần login lại.",
+      "related": [
+        "SAML",
+        "OpenID Connect"
+      ]
+    },
+    {
+      "term": "SAML",
+      "aliases": [
+        "Security Assertion Markup Language"
+      ],
+      "level": "intermediate",
+      "problem": "Cần chuẩn trao đổi thông tin xác thực/ủy quyền giữa IdP và SP, đặc biệt trong enterprise (legacy). XML-based assertions.",
+      "origin": "OASIS SAML 1.0 (2002), SAML 2.0 (2005)",
+      "how": "IdP phát SAML assertion (XML) chứa user identity/attributes, SP xác minh signature và cho phép truy cập.",
+      "related": [
+        "SSO",
+        "digital signature"
+      ]
+    },
+    {
+      "term": "API key",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Cần đơn giản để gọi API (server-to-server hoặc đơn giản), nhưng nếu chỉ dùng secret cố định trong header, dễ bị rò rỉ (commit code, log). Cần quản lý vòng đời.",
+      "origin": "Early web APIs",
+      "how": "Client gửi API key trong header/query. Đơn giản nhưng thiếu phân quyền chi tiết, khó thu hồi theo user context; nên hạn chế scope, quay vòng key.",
+      "related": [
+        "secrets management",
+        "key rotation"
+      ]
+    },
+    {
+      "term": "mTLS",
+      "aliases": [
+        "mutual TLS"
+      ],
+      "level": "intermediate",
+      "problem": "TLS thông thường chỉ chứng minh server với client. Trong service-to-service hoặc zero trust, cần cả hai bên chứng minh danh tính (client cert) để ngăn truy cập trái phép.",
+      "origin": "IETF TLS; widely used in service meshes",
+      "how": "Client cũng phải gửi certificate trong TLS handshake; server xác minh client cert bằng CA. Tránh dùng shared secrets đơn thuần.",
+      "related": [
+        "TLS handshake",
+        "certificate",
+        "zero trust"
+      ]
+    },
+    {
+      "term": "bcrypt/scrypt/argon2",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Fast hash (SHA-256/MD5) quá nhanh với GPU/cloud, dễ brute force hàng triệu tỷ lần/giây. Cần password hash chậm, có thể điều chỉnh độ khó.",
+      "origin": "bcrypt (Provos–Mazieres 1999), scrypt (Percival 2009), argon2 (Biryukov et al. 2015, PHC winner)",
+      "how": "bcrypt dùng work factor + Blowfish; scrypt thêm memory hardness chống ASIC/GPU; argon2id cân bằng resistance vs side-channels.",
+      "related": [
+        "password hashing",
+        "Salt",
+        "brute force + rate limiting"
+      ]
+    },
+    {
+      "term": "TLS handshake",
+      "aliases": [
+        "bắt tay TLS",
+        "TLS 1.3 handshake",
+        "TLS handshake & session resumption",
+        "session resumption"
+      ],
+      "level": "intermediate",
+      "problem": "HTTP plaintext bị nghe trộm/thay đổi. Cần thiết lập kênh mã hóa giữa client/server và xác minh server trước khi trao đổi dữ liệu.",
+      "origin": "TLS evolved from SSL; TLS 1.3 (RFC 8446) simplified",
+      "how": "ClientHello -> ServerHello+cert -> key exchange -> encrypted channel. Server chứng minh qua certificate; TLS 1.3 rút ngắn handshake, bỏ cipher yếu.",
+      "related": [
+        "encryption symmetric vs asymmetric",
+        "certificate",
+        "mTLS"
+      ]
+    },
+    {
+      "term": "certificate",
+      "aliases": [
+        "X.509 certificate",
+        "TLS certificate"
+      ],
+      "level": "intermediate",
+      "problem": "Khi dùng asymmetric, làm sao client biết public key nhận được thực sự thuộc về server đúng? Cần chứng chỉ số do CA đáng tin cậy ký.",
+      "origin": "X.509 PKI",
+      "how": "Server có cert chứa public key+domain, ký bởi CA. Client kiểm tra chain of trust tới root CA. Cert hết hạn cần rotation.",
+      "related": [
+        "TLS handshake",
+        "digital signature",
+        "key rotation"
+      ]
+    },
+    {
+      "term": "RBAC",
+      "aliases": [
+        "Role-Based Access Control"
+      ],
+      "level": "intermediate",
+      "problem": "Gán quyền trực tiếp cho từng user không scale (hàng ngàn user). Cần nhóm quyền theo vai trò.",
+      "origin": "Ferraiolo–Kuhn (1992)",
+      "how": "Gán user vào role (admin/editor/viewer), role có permissions. Kiểm tra role khi truy cập resource.",
+      "related": [
+        "permission model",
+        "ABAC",
+        "least privilege"
+      ]
+    },
+    {
+      "term": "ABAC",
+      "aliases": [
+        "Attribute-Based Access Control"
+      ],
+      "level": "intermediate",
+      "problem": "RBAC cứng khi cần quy tắc phức tạp (thời gian, IP, tài sản cụ thể). Cần đánh giá dựa trên attributes (user/resource/environment).",
+      "origin": "NIST ABAC model",
+      "how": "Policy đánh giá attributes: user.department==resource.ownerDept AND time in range. Linh hoạt hơn RBAC nhưng phức tạp hơn.",
+      "related": [
+        "RBAC",
+        "permission model"
+      ]
+    },
+    {
+      "term": "permission model",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Mỗi module (order, invoice) cần kiểm soát ai đọc/sửa/xóa. Nếu logic rải rác khắp controller dễ sai, khó audit.",
+      "origin": "Access control design",
+      "how": "Thống nhất cách định nghĩa permissions (resource:action) + assignment (RBAC/ABAC) + enforcement (guards/policies).",
+      "related": [
+        "RBAC",
+        "ABAC",
+        "least privilege"
+      ]
+    },
+    {
+      "term": "XSS",
+      "aliases": [
+        "Cross-Site Scripting"
+      ],
+      "level": "intermediate",
+      "problem": "Nếu app nhúng dữ liệu user vào HTML mà không sanitize, attacker có thể chèn JS chạy trong session victim, ăn cắp cookie/token, hành động thay user.",
+      "origin": "CERT advisory early 2000s; OWASP",
+      "how": "Reflected/stored/DOM-based. Phòng: output encoding, CSP, HttpOnly/Secure cookies, tránh dùng innerHTML với data không tin cậy.",
+      "related": [
+        "CORS vs CSRF",
+        "secrets management"
+      ]
+    },
+    {
+      "term": "SQL injection",
+      "aliases": [
+        "SQLi"
+      ],
+      "level": "intermediate",
+      "problem": "Khi xây query bằng string concatenation với input user, input có thể chứa SQL meta-char làm thay đổi ý nghĩa query (đọc/xóa dữ liệu).",
+      "origin": "First public discussions late 1990s; OWASP",
+      "how": "Parameterized queries/prepared statements là giải pháp chính. Validate allowlist, dùng least privilege DB user.",
+      "related": [
+        "IDOR",
+        "Input validation / Data validation (kiểm tra đầu vào)",
+        "Output encoding / HTML escaping (mã hóa đầu ra)",
+        "Parameterized queries / Prepared statements"
+      ]
+    },
+    {
+      "term": "SSRF",
+      "aliases": [
+        "Server-Side Request Forgery"
+      ],
+      "level": "intermediate",
+      "problem": "Server được phép gọi HTTP tới internal services (metadata, DB admin). Nếu attacker kiểm soát URL, server có thể gọi internal endpoints người ngoài không thấy, tiết lộ thông tin nhạy cảm.",
+      "origin": "OWASP Top 10 awareness; cloud metadata abuse",
+      "how": "Validate URL allowlist, chặn private IP ranges/loopback, không follow redirect tùy tiện, tách network cho internal calls.",
+      "related": [
+        "zero trust",
+        "least privilege"
+      ]
+    },
+    {
+      "term": "IDOR",
+      "aliases": [
+        "Insecure Direct Object Reference"
+      ],
+      "level": "intermediate",
+      "problem": "App dùng ID từ request (orderId/userId) trực tiếp truy vấn object mà không kiểm tra quyền sở hữu. Chỉ đổi ID là truy cập được dữ liệu người khác.",
+      "origin": "OWASP 2007 Top 10",
+      "how": "Luôn enforce authorization: kiểm tra current user có quyền truy cập object đó. Dùng indirect references nếu cần.",
+      "related": [
+        "permission model",
+        "RBAC"
+      ]
+    },
+    {
+      "term": "mass assignment",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Framework auto-bind toàn bộ request body vào model object. Attacker có thể gửi field nhạy cảm (isAdmin, role) để tự nâng quyền.",
+      "origin": "OWASP; GitHub 2012 incident highlighted risk",
+      "how": "Dùng DTO/whitelist fields được phép update, không bind trực tiếp model. Enforce server-side validation.",
+      "related": [
+        "permission model"
+      ]
+    },
+    {
+      "term": "secrets management",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "API keys, DB passwords, JWT secrets dễ bị rò rỉ nếu commit vào git, log, hoặc hardcode. Cần lưu tập trung, kiểm soát truy cập, xoay vòng.",
+      "origin": "DevSecOps practices",
+      "how": "Dùng secret store (Vault, AWS Secrets Manager), inject qua env/CI, scan secrets (gitleaks), tránh log secrets.",
+      "related": [
+        "key rotation",
+        "API key"
+      ]
+    },
+    {
+      "term": "key rotation",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Nếu secret/key bị lộ mà không thay, attacker có thời gian dài khai thác. Cần quy trình xoay vòng định kỳ và khẩn cấp.",
+      "origin": "NIST key management guidance",
+      "how": "Xoay JWT signing keys, DB credentials, API keys theo lịch. Hỗ trợ multiple active keys (key rollover) để tránh downtime.",
+      "related": [
+        "secrets management",
+        "JWT"
+      ]
+    },
+    {
+      "term": "least privilege",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Nếu service/user có quyền quá rộng, một lỗ hổng nhỏ gây thiệt hại lớn. Cần cấp đúng mức quyền cần thiết.",
+      "origin": "Saltzer–Schroeder principles (1975)",
+      "how": "DB user chỉ SELECT/INSERT cần thiết, service chỉ quyền truy cập resource cụ thể, role tối thiểu.",
+      "related": [
+        "RBAC",
+        "permission model",
+        "zero trust"
+      ]
+    },
+    {
+      "term": "replay attack",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Attacker chặn request hợp lệ (token/cookie) và gửi lại sau để lặp lại hành động (vd. thanh toán). Cần ngăn dùng lại credential cũ.",
+      "origin": "Network security literature",
+      "how": "Dùng jti trong JWT, nonce cho requests nhạy cảm, short expiry, TLS, one-time use codes.",
+      "related": [
+        "JWT",
+        "nonce",
+        "HMAC"
+      ]
+    },
+    {
+      "term": "nonce",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Khi cần đảm bảo request chỉ dùng một lần (login, payment), cần giá trị ngẫu nhiên duy nhất dùng trong phiên đó.",
+      "origin": "Cryptographic protocols (Needham–Schroeder)",
+      "how": "Server phát nonce, client gửi kèm hash/signature; server kiểm tra chưa dùng trước đó.",
+      "related": [
+        "replay attack",
+        "HMAC"
+      ]
+    },
+    {
+      "term": "HMAC",
+      "aliases": [
+        "Hash-based Message Authentication Code"
+      ],
+      "level": "intermediate",
+      "problem": "Cần đảm bảo tính toàn vẹn và xác thực nguồn gốc của message khi chỉ có shared secret. Hash thuần không đủ vì attacker có thể thay payload+hash nếu biết hash algo.",
+      "origin": "RFC 2104 (Krawczyk et al., 1997)",
+      "how": "HMAC(K,m)=H((K^opad)||H((K^ipad)||m)). Chỉ ai có secret mới tính đúng MAC; dùng để verify webhook, API signature.",
+      "related": [
+        "digital signature",
+        "replay attack"
+      ]
+    },
+    {
+      "term": "digital signature",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Với asymmetric, cần chứng minh ai tạo message và message không bị thay đổi, mà không cần chia sẻ secret.",
+      "origin": "Diffie–Hellman context; RSA signatures",
+      "how": "Signer dùng private key ký hash(message); verifier dùng public key xác minh. Dùng trong JWT (RS256/ES256), SAML, certs.",
+      "related": [
+        "HMAC",
+        "JWT",
+        "certificate"
+      ]
+    },
+    {
+      "term": "refresh token rotation",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Refresh token dài hạn nếu bị đánh cắp cho phép attacker lấy access token liên tục. Cần giảm thiệt hại: mỗi lần dùng refresh token cũ sẽ bị thu hồi và cấp token mới.",
+      "origin": "OAuth 2.0 Security BCP (RFC 9700)",
+      "how": "Khi refresh, cấp cặp (access+new refresh), vô hiệu hóa refresh cũ. Nếu phát hiện reuse (refresh cũ bị dùng lại), thu hồi toàn bộ token chain.",
+      "related": [
+        "JWT",
+        "OAuth 2.0"
+      ]
+    },
+    {
+      "term": "MFA/TOTP",
+      "aliases": [
+        "Multi-Factor Authentication",
+        "Time-based One-Time Password"
+      ],
+      "level": "intermediate",
+      "problem": "Password đơn lẻ dễ bị rò rỉ (phishing, breach). Cần thêm lớp xác thực thứ hai (factor khác).",
+      "origin": "RFC 6238 (M'Raihi et al., 2011) for TOTP",
+      "how": "TOTP sinh code 6-8 số dựa trên shared secret + thời gian (30s). Authenticator app (Google Authenticator, Authy) hiển thị code; server verify. Kết hợp với password tạo MFA.",
+      "related": [
+        "brute force + rate limiting"
+      ]
+    },
+    {
+      "term": "brute force + rate limiting",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Attacker có thể thử hàng nghìn password/login liên tục. Cần làm chậm hoặc chặn sau nhiều lần thất bại.",
+      "origin": "Basic account lockout practices",
+      "how": "Rate limit theo IP/account (exponential backoff, sliding window), account lockout tạm thời, CAPTCHA, hoặc dùng login failure tracking. Kết hợp với MFA.",
+      "related": [
+        "password hashing",
+        "MFA/TOTP"
+      ]
+    },
+    {
+      "term": "OWASP Top 10",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Cần danh sách ưu tiên các lỗ hổng web phổ biến nhất dựa trên dữ liệu thực tế để tập trung fix đúng thứ quan trọng.",
+      "origin": "OWASP Top 10 project (first 2003, updated periodically; 2021 edition widely referenced)",
+      "how": "Liệt kê 10 rủi ro hàng đầu (vd. A01 Broken Access Control, A02 Cryptographic Failures, A03 Injection, A07 Identification/Auth Failures, v.v.) kèm ngữ cảnh/khuyến nghị.",
+      "related": [
+        "SQL injection",
+        "XSS",
+        "IDOR"
+      ]
+    },
+    {
+      "term": "zero trust",
+      "aliases": [
+        "Zero Trust Architecture"
+      ],
+      "level": "advanced",
+      "problem": "Mô hình perimeter cũ (trust internal network) không còn phù hợp với cloud, remote work, BYOD. Giả định mạng có thể bị xâm nhập; cần không tin tưởng ngầm, luôn xác minh.",
+      "origin": "NIST SP 800-207 (Rose et al., 2020)",
+      "how": "Nguyên tắc: never trust, always verify; xác thực+ủy quyền mọi request (user/device/context); micro-segmentation; assume breach; focus on resources thay vì network perimeter.",
+      "related": [
+        "least privilege",
+        "mTLS",
+        "RBAC"
+      ]
+    },
+    {
+      "term": "capability token",
+      "aliases": [
+        "capability-based token"
+      ],
+      "level": "advanced",
+      "problem": "Access token truyền thống thường đại diện cho identity (who), nhưng để kiểm soát chặt 'có quyền làm gì với resource nào', cần token mang theo quyền hạn (capability) thay vì chỉ identity.",
+      "origin": "Capability-based security (Dennis–Van Horn 1966), modern incarnations (macaroons, Biscuit)",
+      "how": "Token chứa danh sách quyền (capabilities) và có thể bị thu hẹp (attenuation), ký để xác minh. Client chỉ trình token có đúng capability khi gọi API.",
+      "related": [
+        "JWT",
+        "permission model"
+      ]
+    }
+  ],
+  "sources": [
+    "https://owasp.org/www-community/attacks/SQL_Injection",
+    "https://datatracker.ietf.org/doc/html/rfc7519",
+    "https://datatracker.ietf.org/doc/html/rfc6749",
+    "https://www.rfc-editor.org/rfc/rfc7636",
+    "https://portswigger.net/web-security/csrf",
+    "https://portswigger.net/web-security/access-control/idor",
+    "https://portswigger.net/web-security/ssrf",
+    "https://portswigger.net/web-security/cross-site-scripting",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+    "https://www.rfc-editor.org/rfc/rfc6238",
+    "https://en.wikipedia.org/wiki/Rainbow_table",
+    "https://csrc.nist.gov/pubs/sp/800/207/final",
+    "https://www.rfc-editor.org/rfc/rfc2104",
+    "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+    "https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html",
+    "https://www.rfc-editor.org/rfc/rfc9700",
+    "https://top10.owasp.org/",
+    "https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/"
+  ]
+}

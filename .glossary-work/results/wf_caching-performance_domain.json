@@ -1,0 +1,448 @@
+{
+  "domain": "CACHING & PERFORMANCE",
+  "entries": [
+    {
+      "term": "Cache",
+      "aliases": [
+        "bộ nhớ đệm"
+      ],
+      "level": "basic",
+      "problem": "Mỗi request đều đọc database hoặc tính lại dữ liệu khiến hệ thống chậm và database chết tải khi traffic tăng. Đọc ổ cứng/Database tốn hàng chục ms trong khi RAM chỉ tốn vài ms — người phục vụ website động những năm 1990-2000 liên tục bị bottleneck ở tầng lưu trữ.",
+      "how": "Chuỗi lưu kết quả tính sẵn ở nơi đọc nhanh (RAM, ổ đĩa) để request sau đọc lại thay vì truy vấn lại nguồn gốc; chỉ trả về từ nguồn thật khi cache miss.",
+      "origin": "Khái niệm cổ trong khoa học máy tính (CPU cache từ những năm 1960s); không ghi nhận một người phát minh duy nhất",
+      "related": [
+        "In-memory cache",
+        "TTL (Time To Live)",
+        "Cache invalidation",
+        "CDN"
+      ]
+    },
+    {
+      "term": "In-memory cache",
+      "aliases": [
+        "cache trong bộ nhớ RAM"
+      ],
+      "level": "basic",
+      "problem": "Database lưu trên đĩa (hoặc network round-trip) quá chậm so với nhu cầu đọc hàng nghìn lần/giây; đọc cùng một row hàng nghìn lần mà vẫn disk I/O thì throughput bị chặn.",
+      "how": "Giữ dữ liệu thường đọc trong RAM của process hoặc service riêng, tra key-value O(1) thay vì truy vấn SQL; đổi lấy chi phí RAM và vấn đề đồng bộ khi dữ liệu gốc thay đổi.",
+      "origin": "không rõ",
+      "related": [
+        "Redis",
+        "Memcached",
+        "Cache"
+      ]
+    },
+    {
+      "term": "Browser cache",
+      "aliases": [
+        "HTTP cache",
+        "client cache"
+      ],
+      "level": "basic",
+      "problem": "Mỗi lần mở trang, browser tải lại toàn bộ CSS/JS/ảnh dù file không đổi — tốn bandwidth, chậm, server chịu load vô nghĩa cho static resource.",
+      "how": "Browser lưu response kèm metadata (ETag, Last-Modified, Cache-Control) rồi gửi conditional request (If-None-Match) — server trả 304 Not Modified khi chưa đổi, tiết kiệm cả bandwidth lẫn round-trip.",
+      "origin": "Phần của HTTP/1.0 (1997) với header Expires; phát triển qua RFC 2616 (1999) và RFC 9111 (2022)",
+      "related": [
+        "Cache",
+        "TTL (Time To Live)",
+        "Stale-while-revalidate",
+        "CDN"
+      ]
+    },
+    {
+      "term": "TTL (Time To Live)",
+      "aliases": [
+        "thời gian sống",
+        "cache expiry"
+      ],
+      "level": "basic",
+      "problem": "Cache không bao giờ hết hạn thì dữ liệu cũ tồn tại mãi — giá sản phẩm thay đổi nhưng client vẫn thấy giá cũ, hoặc cache phình vô hạn vì không có cơ chế tự dọn.",
+      "how": "Gắn thời hạn cho mỗi entry; quá hạn thì bị evict hoặc phải revalidate với nguồn, cân bằng giữa độ tươi mới dữ liệu và số lần phải truy vấn nguồn.",
+      "origin": "không rõ (khái niệm xuất hiện sớm trong DNS TTL và mạng máy tính)",
+      "related": [
+        "Cache invalidation",
+        "TTL jitter",
+        "Stale-while-revalidate"
+      ]
+    },
+    {
+      "term": "Cache invalidation",
+      "aliases": [
+        "hủy cache",
+        "xóa cache"
+      ],
+      "level": "basic",
+      "problem": "Dữ liệu trong cache là bản sao — khi user ghi đè database, cache vẫn giữ bản cũ nên user thấy dữ liệu sai (giá cũ, quyền hạn cũ). Invalidate sai cách thì serve data sai; invalidate quá mạnh thì mất hết lợi ích cache.",
+      "how": "Có nhiều chiến lược: ghi DB thì xóa key tương ứng (cache-aside), version/epoch key, pub/sub broadcast xóa đa node, hoặc để TTL tự hết — chọn theo mức chấp nhận được của staleness.",
+      "origin": "Phát biểu nổi tiếng \"there are only two hard things in cache invalidation\" gắn với Phil Karlton (late 1990s); không có một phát minh cụ thể",
+      "related": [
+        "Cache",
+        "TTL (Time To Live)",
+        "Cache-aside (lazy loading)",
+        "Write-through"
+      ]
+    },
+    {
+      "term": "CDN (Content Delivery Network)",
+      "aliases": [
+        "mạng phân phối nội dung"
+      ],
+      "level": "basic",
+      "problem": "Người dùng ở Việt Nam truy cập server đặt ở Mỹ phải đi qua hàng chục hop xuyên đại dương — latency 200-300ms mỗi request, và server gốc chịu toàn bộ traffic dồn dập gây bottleneck.",
+      "how": "Phân phối static content ra các edge node đặt khắp thế giới; request trả lời từ node gần user nhất, giảm latency và gánh bandwidth cho origin. Push CDN nhận file chủ động, Pull CDN hút khi có request đầu tiên.",
+      "origin": "CDN xuất hiện cuối thập niên 1990 (Akamai thành lập 1998 bởi Tom Leighton và nhóm MIT) để xử lý bottleneck Internet thời đó",
+      "related": [
+        "Cache",
+        "Browser cache",
+        "Stale-while-revalidate",
+        "Compression (gzip/Brotli)"
+      ]
+    },
+    {
+      "term": "Latency vs Throughput",
+      "aliases": [
+        "độ trễ vs công suất"
+      ],
+      "level": "basic",
+      "problem": "Team đo 'hệ thống xử lý 10k req/s' nhưng user vẫn phì thanh toán chậm 5 giây — vì họ nhầm throughput cao = nhanh. Tối ưu một chiều có thể làm chiều kia xấu đi (batching tăng throughput nhưng tăng latency từng request).",
+      "how": "Latency = thời gian 1 request hoàn thành (ms); throughput = số request hoàn thành mỗi giây. Đặt SLO theo p50/p95/p99 latency cho UX, dùng throughput để tính capacity — tối ưu cả hai theo mục tiêu thật chứ không chỉ một con số.",
+      "origin": "không rõ (khái niệm nền tảng của performance engineering)",
+      "related": [
+        "QPS (Queries Per Second)",
+        "Little's law",
+        "Benchmark",
+        "Backpressure & rate shaping"
+      ]
+    },
+    {
+      "term": "Memoization",
+      "aliases": [
+        "ghi nhớ kết quả hàm"
+      ],
+      "level": "basic",
+      "problem": "Hàm tính toán đắt (định giá, render báo cáo, gọi API bên ngoài) bị gọi nghìn lần với cùng input mỗi request — CPU lãng phí tính lại kết quả y hệt, latency tăng không cần thiết.",
+      "how": "Cache kết quả hàm theo input trong hàm (thường bằng hash map), lần gọi sau trả về ngay; chỉ đúng với hàm thuần (cùng input → cùng output) và phải cân bằng cache hit vs tốn bộ nhớ.",
+      "origin": "Thuật ngữ do Donald Michie đặt năm 1968, lấy từ tiếng Latin 'memorandum' (để nhớ lại)",
+      "related": [
+        "Cache",
+        "Precomputation",
+        "Materialized view"
+      ]
+    },
+    {
+      "term": "Redis",
+      "aliases": [
+        "Remote Dictionary Server"
+      ],
+      "level": "intermediate",
+      "problem": "Memcached chỉ lưu string thuần và không persist — startup của Salvatore Sanfilippo gặp khó khi scale các workload kiểu real-time (log analyzer) mà database quan hệ truyền thống xử lý không nổi: cần đọc/ghi cực nhanh nhưng vẫn phải có cấu trúc dữ liệu và không mất dữ liệu khi restart.",
+      "how": "In-memory key-value store đơn process với nhiều cấu trúc (string, hash, list, set, sorted set), persist tùy chọn ra disk, hỗ trợ pub/sub và Lua — vừa là cache vừa là broker/lock/coordination layer nhanh hơn database hàng chục lần.",
+      "origin": "Salvatore Sanfilippo (antirez) tạo năm 2009 tại Ý; ban đầu viết bằng Tcl rồi chuyển C",
+      "related": [
+        "In-memory cache",
+        "Memcached",
+        "Cache-aside (lazy loading)",
+        "Hot key"
+      ]
+    },
+    {
+      "term": "Memcached",
+      "aliases": [
+        "in-memory key-value store (Memcached)"
+      ],
+      "level": "intermediate",
+      "problem": "LiveJournal cuối những năm 1990-early 2000s: mỗi request trang nhật ký đọc nhiều row từ MySQL lặp lại y hệt — database chịu hàng nghìn query giống nhau/giây cho dữ liệu gần như tĩnh, CPU disk I/O trở thành bottleneck của toàn site.",
+      "how": "Distributed key-value cache chạy hoàn toàn trong RAM với LRU eviction: app tra cache trước, miss mới quỳ database — đơn giản, slab allocator, không persist, không cấu trúc dữ liệu phức tạp.",
+      "origin": "Brad Fitzpatrick tạo cho LiveJournal, phát hành 22/5/2003; viết lại bằng C bởi Anatoly Vorobey",
+      "related": [
+        "Redis",
+        "In-memory cache",
+        "Cache-aside (lazy loading)",
+        "Connection pool"
+      ]
+    },
+    {
+      "term": "Cache-aside (lazy loading)",
+      "aliases": [
+        "đọc ghi qua cache",
+        "lazy loading cache"
+      ],
+      "level": "intermediate",
+      "problem": "App tự tô cache ngay cả cho dữ liệu ít người đọc thì lãng phí RAM; còn bỏ cache đi thì mỗi request lại đập thẳng vào database. Cần cách để cache tự nhiên chỉ chứa thứ thực sự được hỏi.",
+      "how": "App tự quản lý cache: đọc thì check cache, miss thì đọc DB rồi ghi vào cache; ghi thì ghi DB rồi xóa (hoặc ghi lại) key cache — chỉ dữ liệu thật sự được truy cập mới vào cache, nhưng mỗi miss phát sinh thêm 1 truy vấn DB và cần xử lý invalidation thủ công.",
+      "origin": "không rõ (phổ biến qua tài liệu AWS và paper Amazon Dynamo 2007 mô tả lazy loading)",
+      "related": [
+        "Cache",
+        "Cache invalidation",
+        "Write-through",
+        "Lazy loading (backend)"
+      ]
+    },
+    {
+      "term": "Write-through",
+      "aliases": [
+        "ghi xuyên qua cache"
+      ],
+      "level": "intermediate",
+      "problem": "Ghi dữ liệu mà cache không được cập nhật thì đọc ngay sau đó trả về bản cũ (read-your-own-writes fail) — user bấm 'đã lưu' mà refresh vẫn thấy giá trị cũ, mất niềm tin vào hệ thống.",
+      "how": "Mọi ghi đi đồng thời vào cache và DB (đồng bộ, ghi thành công cả hai mới trả success) — cache luôn nhất quán với DB, đổi lấy latency ghi cao hơn và DB chịu toàn bộ write load.",
+      "origin": "không rõ (chính sách ghi kinh điển của CPU cache, áp dụng xuống tầng ứng dụng)",
+      "related": [
+        "Cache-aside (lazy loading)",
+        "Write-behind (write-back)",
+        "Cache invalidation"
+      ]
+    },
+    {
+      "term": "Write-behind (write-back)",
+      "aliases": [
+        "ghi nền",
+        "write-back"
+      ],
+      "level": "intermediate",
+      "problem": "Hệ thống ghi hàng nghìn event/giây (giỏ hàng, telemetry) mà mỗi ghi đều đồng bộ xuống DB thì write latency chặn hết throughput, DB bị write hotspot.",
+      "how": "Ghi vào cache trước, flush xuống DB sau (async, theo batch hoặc khi evict) — ghi cực nhanh cho client; đánh đổi là rủi ro mất dữ liệu nếu cache chết trước khi flush, và DB nhận burst ghi định kỳ.",
+      "origin": "không rõ (write-back là chính sách cache CPU cổ điển; bất đồng bộ xuống storage phổ biến ở tầng ứng dụng)",
+      "related": [
+        "Write-through",
+        "Batching",
+        "Backpressure & rate shaping"
+      ]
+    },
+    {
+      "term": "Lazy loading (backend)",
+      "aliases": [
+        "tải trì hoãn",
+        "load on demand"
+      ],
+      "level": "intermediate",
+      "problem": "Endpoint trả order nhưng eager-load luôn user, products, reviews, coupons... dù 90% response không cần — query N+1 hoặc join khổng lồ, mỗi request tốn hàng chục query cho dữ liệu không ai dùng.",
+      "how": "Chỉ load dữ liệu khi thật sự được truy cập (field resolver trì hoãn, virtual proxy, on-demand cache fill) — giảm chi phí khởi tạo và chỉ trả phần cần thiết; đổi lại code phức tạp hơn và có thể dồn query về cuối request (lazy load burst).",
+      "origin": "không rõ (pattern thuộc quen thuộc của ORM/Hibernate và lazy initialization)",
+      "related": [
+        "Cache-aside (lazy loading)",
+        "Batching",
+        "N+1 queries",
+        "Memoization"
+      ]
+    },
+    {
+      "term": "Stale-while-revalidate",
+      "aliases": [
+        "phục vụ bản cũ đồng thời làm mới",
+        "SWR (HTTP)"
+      ],
+      "level": "intermediate",
+      "problem": "Cache hết hạn mà revalidate đồng bộ thì mỗi lần user đều phải chờ round-trip về origin — đúng dữ liệu nhưng chậm; còn serve bản cũ mãi thì sai dữ liệu. Cần cách vừa nhanh vừa không serve cũ quá lâu.",
+      "how": "Sau khi hết max-age, cache vẫn trả bản cũ ngay cho user và âm thầm revalidate với origin ở background — người dùng không cảm nhận latency, dữ liệu được làm mới sau vài trăm ms; cửa sổ stale bị giới hạn bởi giá trị SWR.",
+      "origin": "RFC 5861 (Mark Nottingham, 2010) — HTTP Cache-Control Extensions for Stale Content",
+      "related": [
+        "TTL (Time To Live)",
+        "CDN",
+        "Browser cache",
+        "Cache invalidation"
+      ]
+    },
+    {
+      "term": "Debounce / Throttle (backend context)",
+      "aliases": [
+        "chống rung",
+        "xử lý dồn",
+        "rate-limit theo thời gian"
+      ],
+      "level": "intermediate",
+      "problem": "Webhook Stripe/GitHub bắn 50 event trùng trong 2 giây mà mỗi event đều trigger recompute báo cáo thì backend tốn 50 lần tính việc chỉ cần làm 1 lần; hoặc client bấm double-submit tạo 2 đơn hàng.",
+      "how": "Debounce: chỉ xử lý khi im lặng đủ N ms (dồn event lại thành 1). Throttle: cho phép tối đa N lần xử lý trong cửa sổ thời gian. Ở backend còn là rate limiting theo token bucket cho API — cả hai giảm tải và chống duplicate work.",
+      "origin": "không rõ (debounce/throttle gốc từ kỹ thuật điện tử; áp dụng sang backend phổ biến cùng era webhook/realtime)",
+      "related": [
+        "Batching",
+        "Backpressure & rate shaping",
+        "QPS (Queries Per Second)"
+      ]
+    },
+    {
+      "term": "Batching",
+      "aliases": [
+        "gộp lô",
+        "batch write/read",
+        "Syscall batching"
+      ],
+      "level": "intermediate",
+      "problem": "Gửi 1000 message mỗi cái 1 round-trip (network hoặc disk seek) thì latency tích lũy nghìn ms — hệ thống I/O-bound, CPU chờ I/O gần như suốt ngày dù chưa bận thật.",
+      "how": "Gộp nhiều thao tác nhỏ thành 1 lần I/O/1 query (bulk insert, batch API, message batch) — giảm số round-trip theo cấp số nhân, tăng throughput; đánh đổi là latency từng phần tử cao hơn và logic retry phức tạp hơn khi batch fail giữa chừng.",
+      "origin": "không rõ (kỹ thuật kinh điển của I/O và network, có từ era mainframe)",
+      "related": [
+        "Write-behind (write-back)",
+        "Precomputation",
+        "Latency vs Throughput",
+        "Backpressure & rate shaping"
+      ]
+    },
+    {
+      "term": "QPS (Queries Per Second)",
+      "aliases": [
+        "số truy vấn mỗi giây"
+      ],
+      "level": "intermediate",
+      "problem": "Không đo được 'hệ thống chịu bao nhiêu' thì không biết khi nào phải scale, không đặt được capacity plan, và mọi so sánh tối ưu đều cảm tính — deploy feature mới không biết có làm sập hệ thống không.",
+      "how": "Đếm số request hoàn thành mỗi giây (thường kèm p95/p99 latency) làm đơn vị đo tải và capacity: QPS hiện tại × hệ số an toàn = số máy cần có; so QPS đỉnh với giới hạn của DB/connection pool để dự báo điểm nghẽp.",
+      "origin": "không rõ (metric vận hành chuẩn của ngành, phổ biến cùng era web scale)",
+      "related": [
+        "Benchmark",
+        "Little's law",
+        "Latency vs Throughput",
+        "Connection pool"
+      ]
+    },
+    {
+      "term": "Benchmark",
+      "aliases": [
+        "đo chuẩn",
+        "ép thử",
+        "Regression detection in benchmarks",
+        "Statistical significance in benchmarks"
+      ],
+      "level": "intermediate",
+      "problem": "Tối ưu code hoặc đổi database mà không đo trước/sau thì chỉ là cảm tính — 'có vẻ nhanh hơn' thực tế có thể chậm hơn, hoặc regression âm thầm khi upgrade version không ai phát hiện.",
+      "how": "Chạy workload chuẩn hoá (wrk, sysbench, k6, JMH) với dữ liệu và cấu hình cố định, so sánh throughput/latency trước và sau — định lượng từng thay đổi, phát hiện regression; phải chạy ở môi trường tương đương production mới có giá trị.",
+      "origin": "không rõ (benchmark là thực hành lâu đời của khoa học máy tính; Node.js/microbenchmark culture phổ biến từ 2010s)",
+      "related": [
+        "QPS (Queries Per Second)",
+        "Profiling",
+        "Hot path",
+        "Little's law"
+      ]
+    },
+    {
+      "term": "Cache penetration / breakdown / thundering herd",
+      "aliases": [
+        "缓存穿透",
+        "缓存击穿",
+        "缓存雪崩"
+      ],
+      "level": "advanced",
+      "problem": "Ba kiểu sập cache theo kiểu khác nhau: (1) penetration — attacker hoặc bug query key không tồn tại ở cả cache lẫn DB (id=-1) nên mọi request đều miss, DB nhận toàn bộ traffic; (2) breakdown — một key hot vừa hết hạn, nghìn request đồng loạt miss cùng lúc cùng recompute; (3) avalanche — hàng nghìn key TTL giống hệt nhau hết hạn cùng một thời điểm. Kết quả: hit rate về 0, DB chết tải, có thể cascade sập toàn hệ thống (ví dụ render 3s × 10 req/s = 30 process tính đồng thời).",
+      "how": "Penetration: Bloom filter chặn key không tồn tại + cache negative result với TTL ngắn. Breakdown: mutex/single-flight chỉ 1 process recompute, phần còn chờ hoặc trả stale. Avalanche: TTL jitter ngẫu nhiên (không set trùng nhau) + probabilistic early expiration (Vattani et al. 2015 chứng minh phân phối mũ là tối ưu) + circuit breaker.",
+      "origin": "Cache stampede có trong Jargon File; 3 thuật ngữ '穿透/击穿/雪崩' phổ biến trong cộng đồng kỹ thuật Trung Quốc (Alibaba/Meituan blogs); giải pháp probabilistic early expiration: Vattani et al., 2015",
+      "related": [
+        "Thundering Herd",
+        "TTL (Time To Live)",
+        "Hot key",
+        "Cache-aside (lazy loading)",
+        "Single-flight / request coalescing"
+      ]
+    },
+    {
+      "term": "Precomputation",
+      "aliases": [
+        "tính trước",
+        "precompute"
+      ],
+      "level": "advanced",
+      "problem": "Dashboard phải aggregate hàng triệu dòng mỗi lần mở (top seller, feed score) — query 3-5 giây, user chờ không nổi, và mỗi request đều tính lại y hệt kết quả cho dữ liệu gần như không đổi.",
+      "how": "Tính toán trước kết quả khi dữ liệu thay đổi (cron job, trigger, stream processor) rồi lưu lại; request chỉ đọc thành phẩm O(1) — đổi lấy độ trễ cập nhật (staleness window) và chi phí lưu trữ/refresh job.",
+      "origin": "không rõ",
+      "related": [
+        "Materialized view",
+        "Memoization",
+        "Batching",
+        "Cache"
+      ]
+    },
+    {
+      "term": "Materialized view",
+      "aliases": [
+        "view vật lý hóa",
+        "indexed view",
+        "View & materialized view (VIEW vs MATERIALIZED VIEW, refresh)",
+        "SQL view",
+        "VIEW",
+        "REFRESH MATERIALIZED VIEW",
+        "bảng ảo",
+        "khung nhìn",
+        "view ảo",
+        "bảng tổng hợp",
+        "precomputed view"
+      ],
+      "level": "advanced",
+      "problem": "Báo cáo phải JOIN 5 bảng + GROUP BY triệu row mỗi lần chạy — query nặng lặp lại hàng giờ, BI team chờ mỏi, và view thường thì mỗi lần truy vấn vẫn tính lại toàn bộ.",
+      "how": "Lưu kết quả query thành bảng vật lý thật (có index riêng), refresh định kỳ hoặc CONCURRENTLY — đọc báo cáo gần như tức thì; đánh đổi là data cũ theo chu kỳ refresh và tốn thêm disk. Oracle đi đầu (gọi trước là 'snapshots', query rewrite từ 8i), Postgres hỗ trợ từ 9.3, SQL Server gọi là Indexed Views (2000).",
+      "origin": "Oracle Database là hệ đầu tiên implement (trước đó gọi là snapshots); PostgreSQL native từ 9.3 (2013)",
+      "related": [
+        "Precomputation",
+        "Cache",
+        "Materialized view vs cache",
+        "Memoization"
+      ]
+    },
+    {
+      "term": "Little's law",
+      "aliases": [
+        "định luật Little",
+        "L = λW"
+      ],
+      "level": "advanced",
+      "problem": "Team muốn biết 'nếu muốn p99 < 200ms ở 5000 req/s thì cần bao nhiêu server?' mà chỉ đo bề mặt thì câu trả lời là phỏng đoán — capacity planning cảm tính dẫn tới over-provision (tốn tiền) hoặc under-provision (sập khi peak).",
+      "how": "L = λW: số request trong hệ thống = throughput × thời gian xử lý trung bình. Từ đó suy ra được latency nếu biết QPS và số connection đang bận (hoặc ngược lại) — công cụ kiểm chứng đo lường và tính capacity, bất chấp phân phối đến/phục vụ như thế nào (chứng minh 1961).",
+      "origin": "John D. C. Little, chứng minh năm 1961 trên tạp chí Operations Research",
+      "related": [
+        "QPS (Queries Per Second)",
+        "Latency vs Throughput",
+        "Connection pool",
+        "Backpressure & rate shaping"
+      ]
+    },
+    {
+      "term": "Profiling",
+      "aliases": [
+        "chạy hồ sơ hiệu năng",
+        "CPU profile",
+        "Heap profiling",
+        "CPU profiling"
+      ],
+      "level": "advanced",
+      "problem": "API chậm nhưng 'code nhìn không có gì nặng' — tối ưu mù các dòng code cảm tính (micro-optimize vòng lặp nhỏ) trong khi bottleneck thật là một regex compile lại mỗi request hoặc GC pause 200ms. Không profile thì tối ưu kiểu mò kim đáy bể.",
+      "how": "Đo thật: CPU profile (sampling flame graph tìm hàm chiếm % CPU), memory profile (leak, allocation rate), wall-clock/race detector — chỉ ra chính xác dòng code tiêu tốn tài nguyên, tối ưu đúng chỗ rồi đo lại để xác nhận.",
+      "origin": "không rõ (profiler có từ hệ thống mainframe; flame graph do Brendan Gregg phổ biến năm 2011)",
+      "related": [
+        "Hot path",
+        "Benchmark",
+        "Hot key"
+      ]
+    },
+    {
+      "term": "Hot path",
+      "aliases": [
+        "đường nóng",
+        "critical path hiệu năng"
+      ],
+      "level": "advanced",
+      "problem": "Một request đi qua 30 lớp (auth, log, validate, 5 service call, serialize) nhưng chỉ 5% thời gian nằm ở đoạn tính toán — tối ưu nhầm đoạn nguội vô ích, còn hot path (mỗi request đều đi qua, chiếm phần lớn latency) không ai động tới.",
+      "how": "Xác định đoạn code/request path chiếm phần lớn thời gian (qua tracing/profiling) rồi tối ưu tập trung đúng đó: cache kết quả, bỏ I/O thừa, giảm allocation — 80/20 của performance engineering; phần còn lại để nguyên.",
+      "origin": "không rõ",
+      "related": [
+        "Profiling",
+        "Benchmark",
+        "Memoization",
+        "Latency vs Throughput"
+      ]
+    }
+  ],
+  "sources": [
+    "https://github.com/donnemartin/system-design-primer",
+    "https://en.wikipedia.org/wiki/Cache_(computing)",
+    "https://en.wikipedia.org/wiki/Memcached",
+    "https://en.wikipedia.org/wiki/Redis",
+    "https://en.wikipedia.org/wiki/Little%27s_law",
+    "https://en.wikipedia.org/wiki/Memoization",
+    "https://en.wikipedia.org/wiki/Thundering_herd_problem",
+    "https://en.wikipedia.org/wiki/Cache_stampede",
+    "https://en.wikipedia.org/wiki/Materialized_view",
+    "https://en.wikipedia.org/wiki/Connection_pool",
+    "https://en.wikipedia.org/wiki/Content_delivery_network",
+    "https://en.wikipedia.org/wiki/Backpressure",
+    "https://en.wikipedia.org/wiki/Brotli",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#stale-while-revalidate",
+    "https://use-the-index-luke.com/no-offset"
+  ]
+}

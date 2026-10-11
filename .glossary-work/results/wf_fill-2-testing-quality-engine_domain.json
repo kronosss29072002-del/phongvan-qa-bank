@@ -1,0 +1,377 @@
+{
+  "domain": "Testing & quality engineering",
+  "entries": [
+    {
+      "term": "Test pyramid",
+      "aliases": [
+        "Testing pyramid"
+      ],
+      "level": "basic",
+      "problem": "Khi chỉ viết test giao diện (UI) và test chậm, toàn bộ test suite trở nên chậm và rất khó bảo trì. Việc chạy test mất hàng giờ khiến team không thể phát hiện lỗi nhanh để triển khai liên tục.",
+      "origin": "Mike Cohn (Succeeding with Agile, 2009)",
+      "how": "Chia các test thành các tầng: càng gần tầng đáy (unit) càng nhiều và nhanh hơn, càng gần đỉnh (end-to-end) càng ít và chậm hơn nhằm ưu tiên phản hồi nhanh.",
+      "related": [
+        "Unit test",
+        "Integration test",
+        "e2e test"
+      ]
+    },
+    {
+      "term": "Unit test",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Khi cần kiểm tra xem một hàm hay phương thức có hoạt động đúng, nhưng lại phụ thuộc vào database, API hay UI, test sẽ chậm, dễ hỏng và khó hiểu nguyên nhân lỗi.",
+      "origin": "Kent Beck (xUnit / Extreme Programming)",
+      "how": "Kiểm tra một đơn vị nhỏ nhất (hàm, lớp) một cách độc lập bằng cách cô lập khỏi các phụ thuộc bên ngoài thông qua mocking.",
+      "related": [
+        "Test pyramid",
+        "mocking/stub/fake/spy",
+        "Test isolation"
+      ]
+    },
+    {
+      "term": "Integration test",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Unit test không cho thấy các thành phần riêng biệt có hoạt động đúng với nhau hay không (ví dụ: service gọi repository có truyền đúng tham số, mapping dữ liệu có chính xác).",
+      "origin": "không rõ",
+      "how": "Kiểm tra sự tương tác giữa hai hoặc nhiều đơn vị (ví dụ: service + database in-memory) mà không cần chạy toàn bộ ứng dụng qua UI.",
+      "related": [
+        "Test pyramid",
+        "Unit test",
+        "e2e test"
+      ]
+    },
+    {
+      "term": "TDD",
+      "aliases": [
+        "Test-Driven Development"
+      ],
+      "level": "basic",
+      "problem": "Khi viết test sau khi viết code, developer thường chỉ viết test để \"vượt qua\" code hiện có thay vì suy nghĩ kỹ về thiết kế và yêu cầu trước khi implement.",
+      "origin": "Kent Beck (Extreme Programming, cuối thập niên 1990, phổ biến qua xUnit)",
+      "how": "Áp dụng chu trình Red-Green-Refactor: viết test fail trước, viết code tối giản để pass, sau đó refactor để giữ sạch code.",
+      "related": [
+        "BDD",
+        "Red-Green-Refactor",
+        "Regression test"
+      ]
+    },
+    {
+      "term": "BDD",
+      "aliases": [
+        "Behavior-Driven Development"
+      ],
+      "level": "basic",
+      "problem": "Khi chỉ dùng test kỹ thuật (TDD thuần), đội ngũ phát triển và nghiệp vụ thường không có ngôn ngữ chung để thống nhất yêu cầu, dẫn đến hiểu sai tính năng cần xây dựng.",
+      "origin": "Dan North (khoảng 2003–2006)",
+      "how": "Biểu diễn hành vi mong muốn bằng ngôn ngữ gần gũi với nghiệp vụ (Given/When/Then) để cả BA, QA, Dev cùng hiểu và dùng làm cơ sở cho test.",
+      "related": [
+        "TDD",
+        "Gherkin",
+        "Specification by example"
+      ]
+    },
+    {
+      "term": "Gherkin",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Cần một định dạng văn bản có cấu trúc để biểu diễn ví dụ nghiệp vụ mà cả người kỹ thuật và không kỹ thuật đều đọc được và có thể chạy làm test.",
+      "origin": "khoảng 2008 (Cucumber)",
+      "how": "Sử dụng cú pháp Given, When, Then để mô tả ngữ cảnh, hành động và kết quả kỳ vọng, sau đó ánh xạ từng bước vào code thực thi.",
+      "related": [
+        "BDD",
+        "Cucumber",
+        "Specification by example"
+      ]
+    },
+    {
+      "term": "Mock",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Khi muốn đảm bảo system under test gọi đúng phương thức với tham số đúng lên một collaborator (hành vi tương tác), chứ không chỉ quan tâm đến kết quả trả về.",
+      "origin": "Gerard Meszaros (xUnit Test Patterns)",
+      "how": "Một test double được cấu hình trước với các kỳ vọng (expectations) về cách nó sẽ được gọi; test sẽ thất bại nếu các tương tác không khớp như mong đợi.",
+      "related": [
+        "mocking/stub/fake/spy",
+        "Behavior verification",
+        "Stub"
+      ]
+    },
+    {
+      "term": "Stub",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Khi cần cung cấp dữ liệu trả về cố định cho một phụ thuộc để system under test đi vào nhánh mong muốn, mà không cần quan tâm collaborator có được gọi đúng cách không.",
+      "origin": "Gerard Meszaros (xUnit Test Patterns)",
+      "how": "Cung cấp câu trả lời cứng (hardcoded) cho các lời gọi, giúp kiểm soát luồng chạy mà không thực thi logic thật của phụ thuộc.",
+      "related": [
+        "mocking/stub/fake/spy",
+        "State verification",
+        "Mock"
+      ]
+    },
+    {
+      "term": "Spy",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Khi cần dùng một phụ thuộc thực (hoặc gần thực) nhưng vẫn muốn ghi lại các lời gọi đã diễn ra (tham số, số lần gọi) để kiểm chứng sau khi thực thi.",
+      "origin": "Gerard Meszaros (xUnit Test Patterns)",
+      "how": "Bọc quanh một đối tượng thật và ghi lại lịch sử tương tác, sau đó cho phép kiểm tra các tương tác đó trong phần assert.",
+      "related": [
+        "mocking/stub/fake/spy",
+        "Mock",
+        "Stub"
+      ]
+    },
+    {
+      "term": "Fake",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Khi stub đơn thuần quá đơn giản nhưng dùng phụ thuộc thật lại quá chậm (vd. dùng DB thật trong unit test), cần một triển khai thay thế có hành vi tương tự nhưng nhẹ.",
+      "origin": "Gerard Meszaros (xUnit Test Patterns)",
+      "how": "Thay phụ thuộc thật bằng một triển khai nhẹ hơn vẫn cùng interface, ví dụ in-memory database thay cho MySQL; hệ thống gọi qua interface quen thuộc nhưng không chịu I/O thật. Khác Stub ở chỗ fake có logic hành vi để chạy, còn stub chỉ trả dữ liệu cứng.",
+      "related": [
+        "mocking/stub/fake/spy",
+        "Mock",
+        "Stub"
+      ]
+    },
+    {
+      "term": "Dummy",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Khi signature của phương thức yêu cầu một tham số, nhưng test không hề dùng đến giá trị đó, cần truyền gì đó chỉ để gọi được.",
+      "origin": "Gerard Meszaros (xUnit Test Patterns)",
+      "how": "Truyền một giá trị không sử dụng (null, object rỗng) nhằm thỏa mãn interface mà không ảnh hưởng đến logic test.",
+      "related": [
+        "mocking/stub/fake/spy"
+      ]
+    },
+    {
+      "term": "State verification",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Cần xác minh kết quả cuối cùng của system under test sau khi thực thi (trạng thái trả về, dữ liệu thay đổi) thay vì cách nó đạt được kết quả đó.",
+      "origin": "Gerard Meszaros (xUnit Test Patterns)",
+      "how": "Quan sát trạng thái bên ngoài của SUT sau hành động và so sánh với kỳ vọng, thường dùng với stub/fake.",
+      "related": [
+        "Stub",
+        "Fake",
+        "Behavior verification"
+      ]
+    },
+    {
+      "term": "Behavior verification",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Trong một số trường hợp, trạng thái cuối cùng không đủ để chứng minh SUT đã tương tác đúng (ví dụ: phải gọi đúng service thanh toán đúng số lần), cần kiểm tra các lời gọi đã xảy ra.",
+      "origin": "Gerard Meszaros (xUnit Test Patterns)",
+      "how": "Kiểm tra rằng SUT đã gửi đúng thông điệp/tương tác tới collaborator theo đúng kỳ vọng đã định trước.",
+      "related": [
+        "Mock",
+        "State verification"
+      ]
+    },
+    {
+      "term": "Test isolation",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Khi các test chia sẻ trạng thái (biến toàn cục, database, file) với nhau, kết quả test sẽ phụ thuộc vào thứ tự chạy — gây ra flaky test.",
+      "origin": "không rõ",
+      "how": "Đảm bảo mỗi test chạy độc lập: khởi tạo dữ liệu sạch, không phụ thuộc test khác, và dọn dẹp sau khi chạy.",
+      "related": [
+        "Flaky test",
+        "fixture",
+        "Hermetic test"
+      ]
+    },
+    {
+      "term": "Flaky test",
+      "aliases": [
+        "Non-deterministic test"
+      ],
+      "level": "intermediate",
+      "problem": "Test đôi khi pass, đôi khi fail dù không thay đổi code — làm giảm niềm tin vào test suite và có thể ẩn đi lỗi thật trong CI.",
+      "origin": "Google Testing Blog (2016, \"Flaky Tests at Google\")",
+      "how": "Nguyên nhân thường là thời gian (race condition), phụ thuộc bên ngoài, chia sẻ trạng thái hoặc phụ thuộc thứ tự. Cần cô lập, dùng mocking, đồng bộ đúng hoặc tách riêng (quarantine) khi chưa khắc phục ngay.",
+      "related": [
+        "Test isolation",
+        "Hermetic test",
+        "Quarantine"
+      ]
+    },
+    {
+      "term": "Quarantine",
+      "aliases": [],
+      "level": "advanced",
+      "problem": "Khi một test flaky đã được xác nhận nhưng chưa sửa ngay, nó vẫn có thể chặn toàn bộ pipeline CI — cần cách ngăn nó làm fail build mà vẫn theo dõi được.",
+      "origin": "Google (Flaky test handling)",
+      "how": "Đánh dấu test đã biết là flaky và chạy riêng/quá trình đánh giá tách biệt (không fail CI mặc định) để tránh chặn team, đồng thời theo dõi tần suất fail để ưu tiên sửa.",
+      "related": [
+        "Flaky test"
+      ]
+    },
+    {
+      "term": "Hermetic test",
+      "aliases": [],
+      "level": "advanced",
+      "problem": "Test phụ thuộc vào môi trường bên ngoài (network, time, filesystem, service) dễ flaky và khó tái lập kết quả trên máy khác hay trong CI.",
+      "origin": "Google Testing Blog (2012, \"Hermetic Tests\")",
+      "how": "Test hoàn toàn tự chứa: không truy cập tài nguyên bên ngoài, dùng mock/fake, sandbox, hoặc service được cung cấp nội bộ (in-memory) để đảm bảo kết quả nhất quán.",
+      "related": [
+        "Test isolation",
+        "Flaky test"
+      ]
+    },
+    {
+      "term": "Mutation testing",
+      "aliases": [],
+      "level": "advanced",
+      "problem": "Code coverage chỉ cho biết \"đã chạy\", không cho biết test có thực sự phát hiện được lỗi khi code thay đổi — cần cách đo sức mạnh thực tế của test suite.",
+      "origin": "Richard Lipton (1971), DeMillo–Lipton–Sayward (1978), Budd (1980)",
+      "how": "Tạo các biến thể nhỏ (mutant) của code (thay toán tử, bỏ câu lệnh...), chạy test suite; mutant bị \"kill\" nếu có test fail. Mutation score = tỷ lệ mutant bị kill — càng cao, test càng mạnh.",
+      "related": [
+        "Code coverage",
+        "Test suite quality"
+      ]
+    },
+    {
+      "term": "QuickCheck",
+      "aliases": [],
+      "level": "advanced",
+      "problem": "Cần công cụ để tự động sinh test case từ property thay vì phải viết thủ công hàng loạt example.",
+      "origin": "Koen Claessen & John Hughes (1999), Haskell",
+      "how": "Thư viện gốc Haskell cho property-based testing, sau này được triển khai lại trên nhiều ngôn ngữ (Hypothesis Python, RapidCheck C++, ScalaCheck...).",
+      "related": [
+        "Property-based testing",
+        "Shrinking"
+      ]
+    },
+    {
+      "term": "Shrinking",
+      "aliases": [],
+      "level": "advanced",
+      "problem": "Khi property-based test tìm thấy input gây fail, input đó thường phức tạp và khó debug; cần tự động đơn giản hóa về dạng tối thiểu nhất.",
+      "origin": "Koen Claessen & John Hughes (QuickCheck)",
+      "how": "Thử loại bỏ hoặc đơn giản hóa từng phần của input thất bại cho đến khi không thể rút gọn thêm mà vẫn gây fail — giúp nhanh chóng xác định nguyên nhân.",
+      "related": [
+        "Property-based testing",
+        "QuickCheck"
+      ]
+    },
+    {
+      "term": "Regression test",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Sau khi sửa bug hoặc thêm tính năng, thay đổi có thể vô tình làm hỏng chức năng đã hoạt động trước đó (regression) — cần phát hiện sớm.",
+      "origin": "Fred Brooks (The Mythical Man-Month) đã mô tả thực hành này",
+      "how": "Chạy lại tập hợp test đã tồn tại (hoặc subset liên quan) sau mỗi thay đổi để đảm bảo hành vi cũ không bị phá vỡ.",
+      "related": [
+        "TDD",
+        "Test suite",
+        "Continuous Integration (CI)"
+      ]
+    },
+    {
+      "term": "Test suite",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Cần tổ chức tập hợp test một cách có cấu trúc để chạy hiệu quả, phân loại và báo cáo kết quả rõ ràng.",
+      "origin": "không rõ",
+      "how": "Tập hợp các test case được nhóm theo module/tầng (unit/integration/e2e) có thể chạy cùng nhau, thường tự động trong CI.",
+      "related": [
+        "Regression test",
+        "Test pyramid"
+      ]
+    },
+    {
+      "term": "Consumer-driven contract",
+      "aliases": [
+        "CDC"
+      ],
+      "level": "advanced",
+      "problem": "Provider sửa API theo kiểu break change (bỏ field, đổi kiểu dữ liệu, đổi mã trạng thái) mà không biết service khác đang phụ thuộc. Hai bên thống nhất contract muộn, thường chỉ phát hiện khi tích hợp giữa môi trường, nên lỗi lộ ra muộn, rollback kéo theo và test tích hợp giữa hai hệ thống thật vừa chậm vừa đắt.",
+      "origin": "Ian Robinson (2006) giới thiệu khái niệm, được thực hành qua Pact",
+      "how": "Consumer viết expectation cho từng luồng gọi (đường dẫn, header, schema body, mã trạng thái mong đợi) rồi check file contract vào CI. Provider chạy các contract đó trước mỗi lần deploy, nếu không đáp ứng thì build fail ngay ở đoạn sớm nhất. Công cụ như Pact lưu contract qua broker để hai bên không cần khởi chạy hệ thống thật; khi consumer thay đổi expectation, provider nhận thông báo để điều chỉnh kịp thời.",
+      "related": [
+        "Contract testing",
+        "Pact"
+      ]
+    },
+    {
+      "term": "Pact",
+      "aliases": [],
+      "level": "advanced",
+      "problem": "Consumer-driven contract testing cần một framework chạy tự động trong pipeline CI; nếu không có công cụ chuyên biệt, mỗi đội phải tự sinh file contract và tự verify, khiến chuẩn giao tiếp giữa các service lệch nhau và breaking change chỉ lộ ra khi tích hợp thật.",
+      "origin": "Matt Fellows và cộng đồng Pact (Pact Foundation)",
+      "how": "Framework mã nguồn mở cho contract testing: consumer sinh ra file pact, provider verify file pact đó trong pipeline CI để bắt breaking change.",
+      "related": [
+        "Contract testing",
+        "Consumer-driven contract"
+      ]
+    },
+    {
+      "term": "Test data management",
+      "aliases": [
+        "TDM"
+      ],
+      "level": "intermediate",
+      "problem": "Khi test cần dữ liệu nhất quán, duy nhất, sạch sẽ và có thể tái sử dụng giữa các môi trường/test case, việc tạo/xóa dữ liệu thủ công gây lỗi và làm chậm test.",
+      "origin": "không rõ",
+      "how": "Quản lý vòng đời dữ liệu test: tạo trước (setup), cung cấp cho test, dọn dẹp sau (teardown), ưu tiên dùng factory/faker, tránh chia sẻ dữ liệu giữa test.",
+      "related": [
+        "fixture",
+        "Test isolation"
+      ]
+    },
+    {
+      "term": "Example-based testing",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Cần phân biệt với property-based testing: cách viết test truyền thống dựa trên ví dụ cố định.",
+      "origin": "không rõ",
+      "how": "Viết test với input và output cụ thể (vd. assert add(2,3) == 5) thay vì định nghĩa tính chất tổng quát.",
+      "related": [
+        "Property-based testing"
+      ]
+    },
+    {
+      "term": "Red-Green-Refactor",
+      "aliases": [],
+      "level": "basic",
+      "problem": "Cần quy trình rõ ràng để thực hành TDD một cách nhất quán.",
+      "origin": "Kent Beck (Extreme Programming)",
+      "how": "Red: test fail; Green: code tối giản pass test; Refactor: cải thiện code mà vẫn giữ test pass.",
+      "related": [
+        "TDD"
+      ]
+    },
+    {
+      "term": "Specification by example",
+      "aliases": [],
+      "level": "intermediate",
+      "problem": "Khi yêu cầu chỉ mô tả trừu tượng, dễ dẫn đến hiểu sai — cần dùng ví dụ cụ thể để làm rõ kỳ vọng nghiệp vụ.",
+      "origin": "Gojko Adzic (Specification by Example, 2011)",
+      "how": "Dùng các ví dụ cụ thể, có thể kiểm chứng được làm cầu nối giữa yêu cầu nghiệp vụ và test tự động (thường dùng với BDD/Gherkin).",
+      "related": [
+        "BDD",
+        "Gherkin"
+      ]
+    }
+  ],
+  "sources": [
+    "https://martinfowler.com/articles/practical-test-pyramid.html",
+    "https://en.wikipedia.org/wiki/Test-driven_development",
+    "https://en.wikipedia.org/wiki/Behavior-driven_development",
+    "https://en.wikipedia.org/wiki/Mutation_testing",
+    "https://en.wikipedia.org/wiki/QuickCheck",
+    "https://martinfowler.com/articles/mocksAintStubs.html",
+    "https://en.wikipedia.org/wiki/Test_double",
+    "https://en.wikipedia.org/wiki/Flaky_test",
+    "https://en.wikipedia.org/wiki/Code_coverage",
+    "https://en.wikipedia.org/wiki/Characterization_test",
+    "https://en.wikipedia.org/wiki/Regression_testing",
+    "https://pact.io/"
+  ]
+}

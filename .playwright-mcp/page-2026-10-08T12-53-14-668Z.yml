@@ -1,0 +1,350 @@
+- generic [active] [ref=f53e1]:
+  - generic [aria-hidden] [ref=f53e2]: "For AI agents: the site's llms.txt is at /llms.txt. This page has a Markdown version at /docs/concepts/sampling/index.md."
+  - banner:
+    - navigation [ref=f53e3]:
+      - generic [ref=f53e4]:
+        - link [ref=f53e5] [cursor=pointer]:
+          - /url: /
+          - img "The OpenTelemetry Logo" [ref=f53e7]
+        - list [ref=f53e10]:
+          - listitem [ref=f53e11]:
+            - link "Docs" [ref=f53e12] [cursor=pointer]:
+              - /url: /docs/
+          - listitem [ref=f53e13]:
+            - link "Ecosystem" [ref=f53e14] [cursor=pointer]:
+              - /url: /ecosystem/
+          - listitem [ref=f53e15]:
+            - link "Status" [ref=f53e16] [cursor=pointer]:
+              - /url: /status/
+          - listitem [ref=f53e17]:
+            - link "Community" [ref=f53e18] [cursor=pointer]:
+              - /url: /community/
+          - listitem [ref=f53e19]:
+            - link "Training" [ref=f53e20] [cursor=pointer]:
+              - /url: /training/
+          - listitem [ref=f53e21]:
+            - link "Blog" [ref=f53e22] [cursor=pointer]:
+              - /url: /blog/
+          - listitem [ref=f53e23]:
+            - generic [ref=f53e24]:
+              - button " EN" [ref=f53e25] [cursor=pointer]
+              - text: 
+          - listitem [ref=f53e26]:
+            - button "Toggle theme (Light)" [ref=f53e28] [cursor=pointer]:
+              - generic [ref=f53e31]: Toggle theme
+        - text: 
+  - generic [ref=f53e32]:
+    - generic [ref=f53e34]:
+      - complementary [ref=f53e35]:
+        - generic [ref=f53e36]:
+          - generic [ref=f53e38]:
+            - generic [ref=f53e39]:
+              - generic [aria-hidden]: 
+              - searchbox "Ask AI or search…" [ref=f53e40]
+            - text: 
+          - navigation [ref=f53e41]:
+            - list [ref=f53e42]:
+              - listitem [ref=f53e43]:
+                - link "Docs" [ref=f53e44] [cursor=pointer]:
+                  - /url: /docs/
+                - list [ref=f53e45]:
+                  - listitem [ref=f53e46]:
+                    - link "What is OpenTelemetry?" [ref=f53e48] [cursor=pointer]:
+                      - /url: /docs/what-is-opentelemetry/
+                  - listitem [ref=f53e49]:
+                    - generic [ref=f53e50]:
+                      - text: 
+                      - link "Getting Started" [ref=f53e51] [cursor=pointer]:
+                        - /url: /docs/getting-started/
+                  - listitem [ref=f53e52]:
+                    - generic [ref=f53e53]:
+                      - text: 
+                      - link "Concepts" [ref=f53e54] [cursor=pointer]:
+                        - /url: /docs/concepts/
+                    - list [ref=f53e55]:
+                      - listitem [ref=f53e56]:
+                        - link "Observability primer" [ref=f53e58] [cursor=pointer]:
+                          - /url: /docs/concepts/observability-primer/
+                      - listitem [ref=f53e59]:
+                        - link "Context propagation" [ref=f53e61] [cursor=pointer]:
+                          - /url: /docs/concepts/context-propagation/
+                      - listitem [ref=f53e62]:
+                        - generic [ref=f53e63]:
+                          - text: 
+                          - link "Signals" [ref=f53e64] [cursor=pointer]:
+                            - /url: /docs/concepts/signals/
+                      - listitem [ref=f53e65]:
+                        - generic [ref=f53e66]:
+                          - text: 
+                          - link "Instrumentation" [ref=f53e67] [cursor=pointer]:
+                            - /url: /docs/concepts/instrumentation/
+                      - listitem [ref=f53e68]:
+                        - link "Components" [ref=f53e70] [cursor=pointer]:
+                          - /url: /docs/concepts/components/
+                      - listitem [ref=f53e71]:
+                        - link "Semantic Conventions" [ref=f53e73] [cursor=pointer]:
+                          - /url: /docs/concepts/semantic-conventions/
+                      - listitem [ref=f53e74]:
+                        - link "Resources" [ref=f53e76] [cursor=pointer]:
+                          - /url: /docs/concepts/resources/
+                      - listitem [ref=f53e77]:
+                        - link "Instrumentation scope" [ref=f53e79] [cursor=pointer]:
+                          - /url: /docs/concepts/instrumentation-scope/
+                      - listitem [ref=f53e80]:
+                        - link "Sampling" [ref=f53e82] [cursor=pointer]:
+                          - /url: /docs/concepts/sampling/
+                      - listitem [ref=f53e83]:
+                        - link "Distributions" [ref=f53e85] [cursor=pointer]:
+                          - /url: /docs/concepts/distributions/
+                      - listitem [ref=f53e86]:
+                        - link "Glossary" [ref=f53e88] [cursor=pointer]:
+                          - /url: /docs/concepts/glossary/
+                  - listitem [ref=f53e89]:
+                    - generic [ref=f53e90]:
+                      - text: 
+                      - link "Demo" [ref=f53e91] [cursor=pointer]:
+                        - /url: /docs/demo/
+                    - text:     
+                  - listitem [ref=f53e92]:
+                    - generic [ref=f53e93]:
+                      - text: 
+                      - link "Language APIs & SDKs" [ref=f53e94] [cursor=pointer]:
+                        - /url: /docs/languages/
+                    - text:                                       
+                  - listitem [ref=f53e95]:
+                    - generic [ref=f53e96]:
+                      - text: 
+                      - link "Platforms" [ref=f53e97] [cursor=pointer]:
+                        - /url: /docs/platforms/
+                    - text:        
+                  - listitem [ref=f53e98]:
+                    - generic [ref=f53e99]:
+                      - text: 
+                      - link "Zero-code Instrumentation" [ref=f53e100] [cursor=pointer]:
+                        - /url: /docs/zero-code/
+                    - text:                 
+                  - listitem [ref=f53e101]:
+                    - generic [ref=f53e102]:
+                      - text: 
+                      - link "Collector" [ref=f53e103] [cursor=pointer]:
+                        - /url: /docs/collector/
+                    - text:        
+                  - listitem [ref=f53e104]:
+                    - generic [ref=f53e105]:
+                      - text: 
+                      - link "Blueprints and reference implementations" [ref=f53e106] [cursor=pointer]:
+                        - /url: /docs/guidance/
+                    - text:  
+                  - listitem [ref=f53e107]:
+                    - generic [ref=f53e108]:
+                      - text: 
+                      - link "Compatibility" [ref=f53e109] [cursor=pointer]:
+                        - /url: /docs/compatibility/
+                    - text:  
+                  - listitem [ref=f53e110]:
+                    - generic [ref=f53e111]:
+                      - text: 
+                      - link "Specs" [ref=f53e112] [cursor=pointer]:
+                        - /url: /docs/specs/
+                    - text:                                                          
+                  - listitem [ref=f53e113]:
+                    - generic [ref=f53e114]:
+                      - text: 
+                      - link "Security" [ref=f53e115] [cursor=pointer]:
+                        - /url: /docs/security/
+                  - listitem [ref=f53e116]:
+                    - generic [ref=f53e117]:
+                      - text: 
+                      - link "Contributing" [ref=f53e118] [cursor=pointer]:
+                        - /url: /docs/contributing/
+      - main [ref=f53e119]:
+        - navigation "breadcrumb" [ref=f53e120]:
+          - list [ref=f53e121]:
+            - listitem [ref=f53e122]:
+              - link "Docs" [ref=f53e123] [cursor=pointer]:
+                - /url: /docs/
+            - listitem [ref=f53e124]:
+              - text: /
+              - link "Concepts" [ref=f53e125] [cursor=pointer]:
+                - /url: /docs/concepts/
+            - listitem [ref=f53e126]: / Sampling
+        - generic [ref=f53e127]:
+          - heading "Sampling" [level=1] [ref=f53e128]
+          - generic [ref=f53e129]: Learn about sampling and the different sampling options available in OpenTelemetry.
+          - paragraph [ref=f53e130]:
+            - text: With
+            - link "traces" [ref=f53e131] [cursor=pointer]:
+              - /url: /docs/concepts/signals/traces/
+            - text: ", you can observe requests as they move from one service to another in a distributed system. Tracing is highly practical for both high-level and in-depth analysis of systems."
+          - paragraph [ref=f53e132]: However, if the large majority of your requests are successful and finish with acceptable latency and no errors, you do not need 100% of your traces to meaningfully observe your applications and systems. You just need the right sampling.
+          - button "Illustration shows that not all data needs to be traced, and that a sample of data is sufficient." [ref=f53e133]
+          - heading "Terminology" [level=2] [ref=f53e134]
+          - paragraph [ref=f53e135]: "It’s important to use consistent terminology when discussing sampling. A trace or span is considered “sampled” or “not sampled”:"
+          - list [ref=f53e136]:
+            - listitem [ref=f53e137]:
+              - strong [ref=f53e138]: Sampled
+              - text: ": A trace or span is processed and exported. Because it is chosen by the sampler as a representative of the population, it is considered “sampled”."
+            - listitem [ref=f53e139]:
+              - strong [ref=f53e140]: Not sampled
+              - text: ": A trace or span is not processed or exported. Because it is not chosen by the sampler, it is considered “not sampled”."
+          - paragraph [ref=f53e141]: Sometimes, the definitions of these terms get mixed up. You might find someone states that they are “sampling out data” or that data not processed or exported is considered “sampled”. These are incorrect statements.
+          - heading "Why sampling?" [level=2] [ref=f53e142]
+          - paragraph [ref=f53e143]: Sampling is one of the most effective ways to reduce the costs of observability without losing visibility. Although there are other ways to lower costs, such as filtering or aggregating data, these other methods do not adhere to the concept of representativeness, which is crucial when performing in-depth analysis of application or system behavior.
+          - paragraph [ref=f53e144]: Representativeness is the principle that a smaller group can accurately represent a larger group. Additionally, representativeness can be mathematically verified, meaning that you can have high confidence that a smaller sample of data accurately represents the larger group.
+          - paragraph [ref=f53e145]: Additionally, the more data you generate, the less data you actually need to have a representative sample. For high-volume systems, it is quite common for a sampling rate of 1% or lower to very accurately represent the other 99% of data.
+          - heading "When to sample" [level=3] [ref=f53e146]
+          - paragraph [ref=f53e147]: "Consider sampling if you meet any of the following criteria:"
+          - list [ref=f53e148]:
+            - listitem [ref=f53e149]: You generate 1000 or more traces per second.
+            - listitem [ref=f53e150]: Most of your trace data represents healthy traffic with little variation in data.
+            - listitem [ref=f53e151]: You have some common criteria, like errors or high latency, that usually means something is wrong.
+            - listitem [ref=f53e152]: You have domain-specific criteria you can use to determine relevant data beyond errors and latency.
+            - listitem [ref=f53e153]: You can describe some common rules that determine if data should be sampled or dropped.
+            - listitem [ref=f53e154]: You have a way to tell your services apart, so that high- and low-volume services are sampled differently.
+            - listitem [ref=f53e155]: You have the ability to route unsampled data (for “just in case” scenarios) to low-cost storage systems.
+          - paragraph [ref=f53e156]: Finally, consider your overall budget. If you have limited budget for observability, but can afford to spend time to effectively sample, then sampling can generally be worth it.
+          - heading "When not to sample" [level=3] [ref=f53e157]
+          - paragraph [ref=f53e158]: "Sampling might not be appropriate for you. You might want to avoid sampling if you meet any of the following criteria:"
+          - list [ref=f53e159]:
+            - listitem [ref=f53e160]: You generate very little data (tens of small traces per second or lower).
+            - listitem [ref=f53e161]: You only use observability data in aggregate, and can thus pre-aggregate data.
+            - listitem [ref=f53e162]: You are bound by circumstances such as regulation that prohibit dropping data (and cannot route unsampled data to low-cost storage).
+          - paragraph [ref=f53e163]: "Finally, consider the following three costs associated with sampling:"
+          - list [ref=f53e164]:
+            - listitem [ref=f53e165]: The direct cost of compute to effectively sample data, such as a tail sampling proxy.
+            - listitem [ref=f53e166]: The indirect engineering cost of maintaining effective sampling methodologies as more applications, systems, and data are involved.
+            - listitem [ref=f53e167]: The indirect opportunity cost of missing critical information with ineffective sampling techniques.
+          - paragraph [ref=f53e168]: Sampling, while effective at reducing observability costs, might introduce other unexpected costs if not performed well. It could be cheaper to allocate more resources for observability instead, either with a vendor or compute when self-hosting, depending on your observability backend, the nature of your data, and your attempts to sample effectively.
+          - heading "Head Sampling" [level=2] [ref=f53e169]
+          - paragraph [ref=f53e170]: Head sampling is a sampling technique used to make a sampling decision as early as possible. A decision to sample or drop a span or trace is not made by inspecting the trace as a whole.
+          - paragraph [ref=f53e171]:
+            - text: For example, the most common form of head sampling is
+            - link "Consistent Probability Sampling" [ref=f53e172] [cursor=pointer]:
+              - /url: /docs/specs/otel/trace/tracestate-probability-sampling/#consistent-sampling-decision
+            - text: . This is also referred to as Deterministic Sampling. In this case, a sampling decision is made based on the trace ID and the desired percentage of traces to sample. This ensures that whole traces are sampled - no missing spans - at a consistent rate, such as 5% of all traces.
+          - paragraph [ref=f53e173]: "The upsides to head sampling are:"
+          - list [ref=f53e174]:
+            - listitem [ref=f53e175]: Easy to understand
+            - listitem [ref=f53e176]: Easy to configure
+            - listitem [ref=f53e177]: Efficient
+            - listitem [ref=f53e178]: Can be done at any point in the trace collection pipeline
+          - paragraph [ref=f53e179]: The primary downside to head sampling is that it is not possible to make a sampling decision based on data in the entire trace. For example, you cannot ensure that all traces with an error within them are sampled with head sampling alone. For this situation and many others, you need tail sampling.
+          - heading "Tail Sampling" [level=2] [ref=f53e180]
+          - paragraph [ref=f53e181]: Tail sampling is where the decision to sample a trace takes place by considering all or most of the spans within the trace. Tail Sampling gives you the option to sample your traces based on specific criteria derived from different parts of a trace, which isn’t an option with Head Sampling.
+          - button "Illustration shows how spans originate from a root span. After the spans are complete, the tail sampling processor makes a sampling decision." [ref=f53e182]
+          - paragraph [ref=f53e183]: "Some examples of how you can use Tail Sampling include:"
+          - list [ref=f53e184]:
+            - listitem [ref=f53e185]: Always sampling traces that contain an error
+            - listitem [ref=f53e186]: Sampling traces based on overall latency
+            - listitem [ref=f53e187]: Sampling traces based on the presence or value of specific attributes on one or more spans in a trace; for example, sampling more traces originating from a newly deployed service
+            - listitem [ref=f53e188]: Applying different sampling rates to traces based on certain criteria, such as when traces only come from low-volume services versus traces with high-volume services.
+          - paragraph [ref=f53e189]: As you can see, tail sampling allows for a much higher degree of sophistication in how you sample data. For larger systems that must sample telemetry, it is almost always necessary to use Tail Sampling to balance data volume with the usefulness of that data.
+          - paragraph [ref=f53e190]: "There are three primary downsides to tail sampling today:"
+          - list [ref=f53e191]:
+            - listitem [ref=f53e192]: Tail sampling can be difficult to implement. Depending on the kind of sampling techniques available to you, it is not always a “set and forget” kind of thing. As your systems change, so too will your sampling strategies. For a large and sophisticated distributed system, rules that implement sampling strategies can also be large and sophisticated.
+            - listitem [ref=f53e193]: Tail sampling can be difficult to operate. The component(s) that implement tail sampling must be stateful systems that can accept and store a large amount of data. Depending on traffic patterns, this can require dozens or even hundreds of compute nodes that all utilize resources differently. Furthermore, a tail sampler might need to “fall back” to less computationally intensive sampling techniques if it is unable to keep up with the volume of data it is receiving. Because of these factors, it is critical to monitor tail-sampling components to ensure that they have the resources they need to make the correct sampling decisions.
+            - listitem [ref=f53e194]: Tail samplers often end up as vendor-specific technology today. If you’re using a paid vendor for Observability, the most effective tail sampling options available to you might be limited to what the vendor offers.
+          - paragraph [ref=f53e195]: Finally, for some systems, tail sampling might be used in conjunction with Head Sampling. For example, a set of services that produce an extremely high volume of trace data might first use head sampling to sample only a small percentage of traces, and then later in the telemetry pipeline use tail sampling to make more sophisticated sampling decisions before exporting to a backend. This is often done in the interest of protecting the telemetry pipeline from being overloaded.
+          - heading "Support" [level=2] [ref=f53e196]
+          - heading "Collector" [level=3] [ref=f53e197]
+          - paragraph [ref=f53e198]: "The OpenTelemetry Collector includes the following sampling processors:"
+          - list [ref=f53e199]:
+            - listitem [ref=f53e200]:
+              - link "Probabilistic Sampling Processor " [ref=f53e201] [cursor=pointer]:
+                - /url: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/probabilisticsamplerprocessor
+            - listitem [ref=f53e202]:
+              - link "Tail Sampling Processor " [ref=f53e203] [cursor=pointer]:
+                - /url: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/tailsamplingprocessor
+          - heading "Language SDKs" [level=3] [ref=f53e204]
+          - paragraph [ref=f53e205]: "For the individual language-specific implementations of the OpenTelemetry API & SDK, you will find support for sampling in the respective documentation pages:"
+          - list [ref=f53e206]:
+            - listitem [ref=f53e207]:
+              - link ".NET" [ref=f53e208] [cursor=pointer]:
+                - /url: /docs/languages/dotnet/sampling/
+            - listitem [ref=f53e209]:
+              - link "Erlang/Elixir" [ref=f53e210] [cursor=pointer]:
+                - /url: /docs/languages/erlang/sampling/
+            - listitem [ref=f53e211]:
+              - link "Go" [ref=f53e212] [cursor=pointer]:
+                - /url: /docs/languages/go/sampling/
+            - listitem [ref=f53e213]:
+              - link "JavaScript" [ref=f53e214] [cursor=pointer]:
+                - /url: /docs/languages/js/sampling/
+            - listitem [ref=f53e215]:
+              - link "Ruby" [ref=f53e216] [cursor=pointer]:
+                - /url: /docs/languages/ruby/sampling/
+          - heading "Vendors" [level=3] [ref=f53e217]
+          - paragraph [ref=f53e218]:
+            - text: Many
+            - link "vendors" [ref=f53e219] [cursor=pointer]:
+              - /url: /ecosystem/vendors/
+            - text: offer comprehensive sampling solutions that incorporate head sampling, tail sampling, and other features that can support sophisticated sampling needs. These solutions may also be optimized specifically for the vendor’s backend. If you are sending telemetry to a vendor, consider using their sampling solutions.
+          - generic [ref=f53e220]:
+            - heading "Feedback" [level=2] [ref=f53e221]
+            - paragraph [ref=f53e222]: Was this page helpful?
+            - button "Yes" [ref=f53e223] [cursor=pointer]
+            - button "No" [ref=f53e224] [cursor=pointer]
+            - text: 
+          - generic [ref=f53e225]:
+            - text: "Last modified October 16, 2025:"
+            - link "Replace OTEP 4673 links by reference to OTel spec trace/tracestate-probability-sampling (#8108) (6b2e90b3)" [ref=f53e226] [cursor=pointer]:
+              - /url: https://github.com/open-telemetry/opentelemetry.io/commit/6b2e90b3e0aeea51aef3347f93ce78413ca6c2ec
+    - contentinfo [ref=f53e227]:
+      - generic [ref=f53e229]:
+        - list [ref=f53e231]:
+          - listitem "Mailing Lists" [ref=f53e232]:
+            - link "Mailing Lists" [ref=f53e233] [cursor=pointer]:
+              - /url: https://github.com/open-telemetry/community#mailing-lists
+          - listitem "Bluesky" [ref=f53e235]:
+            - link "Bluesky" [ref=f53e236] [cursor=pointer]:
+              - /url: https://bsky.app/profile/opentelemetry.io
+          - listitem "Mastodon" [ref=f53e238]:
+            - link "Mastodon" [ref=f53e239] [cursor=pointer]:
+              - /url: https://fosstodon.org/@opentelemetry
+          - listitem "Stack Overflow" [ref=f53e241]:
+            - link "Stack Overflow" [ref=f53e242] [cursor=pointer]:
+              - /url: https://stackoverflow.com/questions/tagged/open-telemetry
+          - listitem "OTel logos" [ref=f53e244]:
+            - link "OTel logos" [ref=f53e245] [cursor=pointer]:
+              - /url: https://github.com/cncf/artwork/tree/master/projects/opentelemetry
+          - listitem "Meeting Recordings" [ref=f53e247]:
+            - link "Meeting Recordings" [ref=f53e248] [cursor=pointer]:
+              - /url: https://docs.google.com/spreadsheets/d/1SYKfjYhZdm2Wh2Cl6KVQalKg_m4NhTPZqq-8SzEVO6s
+          - listitem "Site analytics" [ref=f53e250]:
+            - link "Site analytics" [ref=f53e251] [cursor=pointer]:
+              - /url: https://lookerstudio.google.com/s/tSTKxK1ECeU
+        - list [ref=f53e254]:
+          - listitem "GitHub" [ref=f53e255]:
+            - link "GitHub" [ref=f53e256] [cursor=pointer]:
+              - /url: https://github.com/open-telemetry
+          - 'listitem "Slack #opentelemetry-new-contributors" [ref=f53e258]':
+            - 'link "Slack #opentelemetry-new-contributors" [ref=f53e259] [cursor=pointer]':
+              - /url: https://cloud-native.slack.com/archives/C09H3MNMBQV
+          - 'listitem "Slack #opentelemetry" [ref=f53e261]':
+            - 'link "Slack #opentelemetry" [ref=f53e262] [cursor=pointer]':
+              - /url: https://cloud-native.slack.com/archives/CJFCJHG4Q
+          - listitem "CNCF DevStats" [ref=f53e264]:
+            - link "CNCF DevStats" [ref=f53e265] [cursor=pointer]:
+              - /url: https://opentelemetry.devstats.cncf.io/d/8/dashboards?orgId=1&refresh=15m
+          - listitem "Privacy Policy" [ref=f53e267]:
+            - link "Privacy Policy" [ref=f53e268] [cursor=pointer]:
+              - /url: https://www.linuxfoundation.org/legal/privacy-policy
+          - listitem "Trademark Usage" [ref=f53e270]:
+            - link "Trademark Usage" [ref=f53e271] [cursor=pointer]:
+              - /url: https://www.linuxfoundation.org/legal/trademark-usage
+          - listitem "Marketing Guidelines" [ref=f53e273]:
+            - link "Marketing Guidelines" [ref=f53e274] [cursor=pointer]:
+              - /url: /community/marketing-guidelines/
+          - listitem "Site-build info" [ref=f53e276]:
+            - link "Site-build info" [ref=f53e277] [cursor=pointer]:
+              - /url: /site/
+        - generic [ref=f53e280]:
+          - text: © 2019–present
+          - generic [ref=f53e281]:
+            - text: OpenTelemetry Authors | Docs
+            - link "CC BY 4.0" [ref=f53e282] [cursor=pointer]:
+              - /url: https://creativecommons.org/licenses/by/4.0
+  - button [ref=f53e283] [cursor=pointer]:
+    - generic [ref=f53e286]:
+      - img "Project Logo" [ref=f53e287]
+      - paragraph [ref=f53e288]: Ask AI

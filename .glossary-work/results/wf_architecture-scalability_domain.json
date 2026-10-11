@@ -1,0 +1,473 @@
+{
+  "domain": "ARCHITECTURE & SCALABILITY",
+  "entries": [
+    {
+      "term": "Monolith",
+      "aliases": [
+        "monolithic architecture",
+        "kiến trúc đơn khối"
+      ],
+      "level": "basic",
+      "problem": "Khi mới xây dựng sản phẩm, đội nhỏ (3-5 dev) cần một codebase duy nhất để deploy nhanh, debug dễ, không ai muốn chia nhỏ hệ thống khi chưa có user. Monolith ra đời vì nhu cầu 'chỉ cần chạy được đã' — mọi module nằm chung process, chung DB, gọi hàm trực tiếp không qua mạng.",
+      "origin": "Kiến trúc mặc định của phần mềm từ những năm 1960s; thuật ngữ 'monolith' được dùng phổ biến trong cộng đồng SOA/microservices những năm 2010 để phân biệt với kiến trúc phân tán.",
+      "how": "Toàn bộ logic (auth, business, DB access) chạy trong một process duy nhất; deploy một artifact duy nhất; scale bằng cách nhân bản instance.",
+      "related": [
+        "Microservices",
+        "Modular Monolith",
+        "SOA (Service-Oriented Architecture)"
+      ]
+    },
+    {
+      "term": "Microservices",
+      "aliases": [
+        "kiến trúc vi dịch vụ"
+      ],
+      "level": "basic",
+      "problem": "Monolith lớn tới mức một thay đổi nhỏ ở module thanh toán buộc phải redeploy toàn bộ app, team 50+ dev đụng code nhau liên tục, một bug ở feature A kéo sập cả hệ thống. Microservices ra đời để mỗi team sở hữu một service độc lập, deploy riêng, fail riêng.",
+      "origin": "Thuật ngữ được Peter Rodgers (HP Labs) dùng năm 2005 tại hội nghị Web Services Edge; phổ biến rộng rãi sau bài viết của Martin Fowler và James Lewis năm 2014, và được Netflix/Amazon/Uber áp dụng từ ~2008-2012.",
+      "how": "Chia hệ thống thành nhiều service nhỏ, mỗi service có DB riêng, giao tiếp qua network (HTTP/gRPC/message), deploy độc lập, team nào làm service nấy sở hữu.",
+      "related": [
+        "SOA (Service-Oriented Architecture)",
+        "Monolith",
+        "Bounded Context",
+        "Service Mesh"
+      ]
+    },
+    {
+      "term": "SOA (Service-Oriented Architecture)",
+      "aliases": [
+        "kiến trúc hướng dịch vụ"
+      ],
+      "level": "basic",
+      "problem": "Trong doanh nghiệp lớn, mỗi phòng ban có một app riêng (ERP, CRM, billing) không nói chuyện được với nhau; tích hợp point-to-point tạo ra 'spaghetti' mỗi lần thêm app mới lại phải viết N connector. SOA sinh ra để các app này tái sử dụng nhau qua service chuẩn.",
+      "origin": "Phát triển từ distributed computing và CORBA/DCOM những năm 1990s; thuật ngữ SOA được chuẩn hóa qua các công bố của Gartner và OASIS đầu những năm 2000, phổ biến với SOAP/WSDL.",
+      "how": "Expose chức năng business dưới dạng service có contract chuẩn (thường SOAP/REST), các app khác gọi lại qua network; thường đi kèm ESB (Enterprise Service Bus).",
+      "related": [
+        "Microservices",
+        "Monolith",
+        "API Gateway"
+      ]
+    },
+    {
+      "term": "Modular Monolith",
+      "aliases": [
+        "modularized monolith"
+      ],
+      "level": "intermediate",
+      "problem": "Team muốn có cấu trúc rõ ràng như microservices nhưng chưa sẵn sàng trả giá vận hành hàng chục service (deploy, monitoring, network latency). Modular monolith ra đời để giữ lợi ích của monolith (deploy đơn giản, debug dễ) nhưng có boundary rõ giữa các module để sau này tách ra dễ.",
+      "origin": "Martin Fowler phổ biến khái niệm 'MonolithFirst' (2015); thuật ngữ 'modular monolith' được cộng đồng dùng rộng từ ~2017-2020.",
+      "how": "Chia codebase thành các module có boundary rõ (interface, dependency rule), chạy chung process và DB, nhưng các module giao tiếp qua API nội bộ thay vì gọi trực tiếp hàm.",
+      "related": [
+        "Monolith",
+        "Microservices",
+        "Bounded Context"
+      ]
+    },
+    {
+      "term": "Load Balancer (L4/L7)",
+      "aliases": [
+        "bộ cân bằng tải"
+      ],
+      "level": "basic",
+      "problem": "Một server không chịu nổi 10k request/giây, nhưng thay vì mua server to hơn, người ta đặt nhiều server nhỏ phía sau và cần một 'người gác cổng' chia request đều cho chúng — đồng thời loại bỏ server chết khỏi vòng xoay để user không bị lỗi.",
+      "origin": "Load balancing xuất hiện từ các hệ thống viễn thông và mainframe những năm 1970-80s; DNS round-robin có từ những ngày đầu của DNS (RFC 1035, 1987).",
+      "how": "L4 (transport) cân bằng theo IP+port, nhanh nhưng không đọc được nội dung HTTP. L7 (application) đọc được header/URL/cookie để route thông minh hơn (ví dụ route /api sang pool API, /static sang pool static) nhưng tốn tài nguyên hơn.",
+      "related": [
+        "Round Robin",
+        "Sticky Session",
+        "horizontal scaling"
+      ]
+    },
+    {
+      "term": "Round Robin",
+      "aliases": [
+        "luân phiên"
+      ],
+      "level": "basic",
+      "problem": "Cần chia request đều cho N server mà không muốn giữ state, không muốn tính toán phức tạp. Round robin ra đời như cách đơn giản nhất: phát đều tay, server nào cũng nhận số lượng xấp xỉ như nhau.",
+      "origin": "Xuất phát từ lý thuyết xếp hàng (queueing theory) và lập lịch CPU; áp dụng vào DNS round-robin từ cuối những năm 1980s.",
+      "how": "Danh sách server xếp vòng tròn, mỗi request phát cho server kế tiếp; có biến thể weighted round robin cho server mạnh nhận nhiều request hơn server yếu.",
+      "related": [
+        "Load Balancer (L4/L7)",
+        "Sticky Session",
+        "least connections"
+      ]
+    },
+    {
+      "term": "Sticky Session",
+      "aliases": [
+        "session affinity",
+        "phiên bám dính"
+      ],
+      "level": "basic",
+      "problem": "App lưu session trên RAM của server (không dùng Redis/DB chung). Khi load balancer chuyển user từ server A sang server B, user bị logout ngay. Sticky session ra đời để 'ghim' user vào đúng server họ đã login.",
+      "origin": "Xuất hiện cùng sự phát triển của web application và session-based authentication những năm 1990s-2000s.",
+      "how": "Load balancer đọc cookie (hoặc IP) để luôn route cùng một user về cùng một backend server. Nhược điểm: khi server đó chết, user mất session; phân phối tải không còn đều; khó scale khi user dồn vào một server nóng.",
+      "related": [
+        "Load Balancer (L4/L7)",
+        "session replication",
+        "horizontal scaling"
+      ]
+    },
+    {
+      "term": "Horizontal vs Vertical Scaling",
+      "aliases": [
+        "scale out vs scale up",
+        "mở rộng ngang vs dọc"
+      ],
+      "level": "basic",
+      "problem": "App chạy chậm vì quá tải. Có 2 cách: mua server mạnh hơn (vertical — đắt, có giới hạn phần cứng, downtime khi nâng) hoặc thêm nhiều server nhỏ chạy song song (horizontal — rẻ hơn theo đơn vị, elastic, nhưng cần app stateless và có load balancer).",
+      "origin": "Khái niệm có từ thời mainframe; trở thành lựa chọn kiến trúc rõ ràng từ khi cloud ra đời (AWS EC2 2006) cho phép thêm/bớt máy theo phút.",
+      "how": "Vertical: tăng CPU/RAM của một máy, tới giới hạn phần cứng thì phải dừng. Horizontal: thêm nhiều máy phía sau load balancer, không có ceiling; yêu cầu app stateless, session chuyển sang store trung tâm (Redis/DB).",
+      "related": [
+        "Load Balancer (L4/L7)",
+        "Autoscaling",
+        "Statelessness"
+      ]
+    },
+    {
+      "term": "Autoscaling",
+      "aliases": [
+        "tự động co giãn"
+      ],
+      "level": "intermediate",
+      "problem": "Traffic biến động theo giờ (cao điểm trưa, thấp đêm). Provision cho peak thì lãng phí 70% thời gian; provision cho trung bình thì sập lúc peak. Autoscaling ra đời để tự động thêm/bớt server theo metric (CPU, request rate, queue depth).",
+      "origin": "AWS Auto Scaling ra mắt năm 2006 cùng EC2; khái niệm elastic computing phổ biến từ đó.",
+      "how": "Đặt policy: khi CPU > 70% trong 5 phút thì thêm instance; khi < 30% thì bớt. Kết hợp health check để chỉ route traffic vào instance đã sẵn sàng, và cooldown để tránh scale oscillation.",
+      "related": [
+        "horizontal scaling",
+        "Load Balancer (L4/L7)",
+        "Serverless"
+      ]
+    },
+    {
+      "term": "Service Discovery",
+      "aliases": [
+        "khám phá dịch vụ",
+        "service registry"
+      ],
+      "level": "intermediate",
+      "problem": "Trong microservices, hàng trăm instance có IP thay đổi liên tục (autoscaling, restart, deploy). Hard-code IP vào config là không thể bảo trì. Service discovery ra đời để các service tự tìm ra nhau qua registry trung tâm.",
+      "origin": "Netflix open-source Eureka năm 2012; các hệ thống trước đó dùng Zookeeper (Yahoo, 2006). Consul (HashiCorp) và etcd (CoreOS) ra đời ~2014. DNS cũ quá chậm (TTL cao) cho môi trường dynamic.",
+      "how": "Mỗi service khi khởi động đăng ký IP+port vào registry. Client hoặc sidecar query registry để lấy danh sách instance sống, tự cập nhật khi có instance chết/mới, kết hợp health check để tránh route vào instance hỏng.",
+      "related": [
+        "Load Balancer (L4/L7)",
+        "Sidecar",
+        "Service Mesh"
+      ]
+    },
+    {
+      "term": "API Gateway",
+      "aliases": [
+        "cổng API"
+      ],
+      "level": "intermediate",
+      "problem": "Mobile client cần gọi 5 microservice để render một màn hình (user, order, product, review, recommendation) — 5 round-trip qua mạng chậm. API gateway ra đời như entry point duy nhất, gom tất cả lời gọi backend thành 1 request cho client, đồng thời lo auth, rate limit, SSL termination.",
+      "origin": "Pattern được Chris Richardson mô tả trong microservices.io; Netflix API Gateway (2012-2013) là một trong những triển khai nổi tiếng đầu tiên.",
+      "how": "Nhận request từ client, route tới service phù hợp, gom response, trả về client. Cũng là nơi đặt cross-cutting concern: authentication, rate limiting, logging, request validation, TLS termination.",
+      "related": [
+        "BFF",
+        "Load Balancer (L4/L7)",
+        "Microservices"
+      ]
+    },
+    {
+      "term": "BFF (Backend For Frontend)",
+      "aliases": [
+        "backend cho frontend"
+      ],
+      "level": "intermediate",
+      "problem": "Một API chung cho web, mobile, third-party luôn phải thỏa hiệp: mobile cần payload nhỏ, web cần đầy đủ, third-party cần ổn định contract. Kết quả là API phình to, mỗi client phải lọc data thừa. BFF ra đời để mỗi loại client có backend riêng, tối ưu đúng nhu cầu.",
+      "origin": "Phil Calçado (khi làm ở SoundCloud) đặt tên pattern này; Sam Newman mô tả chính thức tháng 11/2015.",
+      "how": "Mỗi client type (web, iOS, Android, partner) có một service BFF riêng nằm giữa client và downstream services. BFF chỉ expose đúng gì client đó cần, aggregate và transform data phù hợp; đội frontend sở hữu BFF theo Conway's Law.",
+      "related": [
+        "API Gateway",
+        "Microservices",
+        "Monolith"
+      ]
+    },
+    {
+      "term": "Serverless",
+      "aliases": [
+        "không máy chủ"
+      ],
+      "level": "intermediate",
+      "problem": "Dev viết một function xử lý ảnh upload, nhưng phải lo luôn: provision server, scale khi 10k ảnh cùng lúc, trả tiền cho server chạy 24/7 dù ban đêm không ai upload. Serverless ra đời để dev chỉ quan tâm code, cloud lo phần còn lại và tính tiền theo thời gian thực chạy.",
+      "origin": "Thuật ngữ 'serverless' được Iron.io dùng từ 2012; AWS Lambda ra mắt 13/11/2014 đưa khái niệm vào mainstream.",
+      "how": "Cloud provider quản lý hoàn toàn infrastructure; dev deploy code (function/service) và provider tự scale từ 0 đến hàng ngàn concurrent execution, tính tiền theo số request và thời gian chạy (đến millisecond).",
+      "related": [
+        "FaaS (Function as a Service)",
+        "Autoscaling",
+        "12-Factor App"
+      ]
+    },
+    {
+      "term": "FaaS (Function as a Service)",
+      "aliases": [
+        "hàm như dịch vụ"
+      ],
+      "level": "intermediate",
+      "problem": "Cần chạy logic ngắn (xử lý webhook, transform data, cron job) mà không muốn duy trì một server luôn chạy. FaaS ra đời để mỗi function chạy khi có sự kiện, tự động scale, tắt ngay khi xong.",
+      "origin": "AWS Lambda (2014) là sản phẩm FaaS phổ biến đầu tiên; trước đó có Google App Engine (2008) và PiCloud nhưng chưa đúng nghĩa FaaS.",
+      "how": "Dev viết function với signature nhận event, trả về result. Provider bind function với trigger (HTTP, queue, schedule). Mỗi invocation chạy trong container ephemeral — sinh ra khi có request, chết khi xong (gây cold start).",
+      "related": [
+        "Serverless",
+        "Event Bus",
+        "Cold start"
+      ]
+    },
+    {
+      "term": "Container vs VM",
+      "aliases": [
+        "thùng chứa vs máy ảo"
+      ],
+      "level": "basic",
+      "problem": "App cần chạy trên máy dev, staging, production giống hệt nhau. VM giải quyết bằng cách giả lập cả OS — nhưng mỗi VM nặng hàng GB, khởi động mất phút, tốn RAM cho kernel riêng. Container ra đời để đóng gói app + dependency nhưng dùng chung kernel host, nhẹ hơn, khởi động bằng giây.",
+      "origin": "chroot (1982), FreeBSD Jail (2000), Solaris Zones (2004), LXC (2008). Docker (2013) phổ biến hóa container trên Linux bằng UX đơn giản và image registry.",
+      "how": "VM: hypervisor chạy nhiều guest OS riêng (strong isolation, nặng). Container: engine (Docker/containerd) chạy nhiều user-space isolated trên cùng kernel host qua Linux namespaces (chia view) và cgroups (giới hạn resource).",
+      "related": [
+        "Sidecar",
+        "Orchestration vs Choreography",
+        "12-Factor App"
+      ]
+    },
+    {
+      "term": "12-Factor App",
+      "aliases": [
+        "ứng dụng 12 yếu tố"
+      ],
+      "level": "intermediate",
+      "problem": "App chạy tốt trên máy dev nhưng fail khi lên production vì phụ thuộc config file local, file system, state lưu trên disk, version khác nhau giữa môi trường dev và prod. 12-factor ra đời như checklist để app chạy được trên mọi cloud PaaS mà không sửa code.",
+      "origin": "Adam Wiggins (Heroku/Salesforce) công bố năm 2011, tổng kết từ kinh nghiệm deploy hàng trăm ngàn app trên Heroku; format lấy cảm hứng từ sách của Martin Fowler.",
+      "how": "12 nguyên tắc: codebase duy nhất, dependency khai báo rõ, config lưu env, backing service là resource, build/release/run tách biệt, process stateless, port binding, concurrency, disposability, dev/prod parity, logs là event stream, admin process chạy một lần.",
+      "related": [
+        "Serverless",
+        "Container (Docker, container image)",
+        "Monolith"
+      ]
+    },
+    {
+      "term": "Fallacies of Distributed Computing",
+      "aliases": [
+        "8 ngộ nhận về tính toán phân tán"
+      ],
+      "level": "advanced",
+      "problem": "Dev quen viết app trên một máy, khi chuyển sang hệ thống phân tán vẫn giả định 'mạng luôn chạy, latency = 0, bandwidth vô hạn...' — dẫn đến app treo khi mạng rớt, timeout sai, không retry, security lỏng. 8 fallacies ra đời để cảnh tỉnh những giả định sai lầm này.",
+      "origin": "L. Peter Deutsch (Sun Microsystems Fellow) công bố 7 fallacies năm 1994 (dựa trên 4 fallacy của Bill Joy và Dave Lyon); James Gosling thêm fallacy thứ 8 khoảng năm 1997.",
+      "how": "8 fallacies: (1) mạng đáng tin, (2) latency = 0, (3) bandwidth vô hạn, (4) mạng bảo mật, (5) topology không đổi, (6) chỉ có 1 admin, (7) chi phí transport = 0, (8) mạng đồng nhất. Thiết kế phải đối mặt từng cái: timeout + retry, circuit breaker, backpressure, encryption, service discovery, graceful degradation.",
+      "related": [
+        "Service Discovery",
+        "Circuit Breaker",
+        "Geo-Replication"
+      ]
+    },
+    {
+      "term": "Tight vs Loose Coupling",
+      "aliases": [
+        "liên kết chặt vs lỏng"
+      ],
+      "level": "basic",
+      "problem": "Module A gọi trực tiếp hàm của module B, khi B đổi signature thì A break — phải sửa cả hệ thống mỗi lần thay đổi nhỏ. Loose coupling ra đời để các thành phần ít biết về nhau, thay đổi một bên không kéo theo sửa hàng loạt bên kia.",
+      "origin": "Khái niệm coupling/cohesion từ Larry Constantine và Edward Yourdon cuối những năm 1960s-1970s (Structured Design, 1979).",
+      "how": "Tight coupling: gọi trực tiếp, shared state, phụ thuộc implementation. Loose coupling: giao tiếp qua interface ổn định, message queue, event, contract rõ ràng. Hệ thống lớn luôn hướng tới loose coupling để đổi một service mà không đụng services khác.",
+      "related": [
+        "Microservices",
+        "Event Bus",
+        "SOA (Service-Oriented Architecture)"
+      ]
+    },
+    {
+      "term": "Bounded Context",
+      "aliases": [
+        "ngữ cảnh giới hạn"
+      ],
+      "level": "advanced",
+      "problem": "Trong hệ thống lớn, từ 'Customer' với team billing nghĩa là 'người trả tiền', với team shipping là 'người nhận hàng', với team marketing là 'lead'. Ép tất cả dùng chung một model Customer thì model đó trở nên vô nghĩa vì mỗi team hiểu khác nhau. Bounded context ra đời để mỗi team có model riêng, rõ ràng, không đụng nhau.",
+      "origin": "Eric Evans giới thiệu trong cuốn 'Domain-Driven Design' (2003); Martin Fowler mô tả chi tiết trên bliki (BoundedContext.html).",
+      "how": "Chia hệ thống thành các context, mỗi context có ubiquitous language và model riêng, nội bộ nhất quán. Các context giao tiếp qua context map với các relationship rõ ràng (anti-corruption layer, shared kernel, customer-supplier...).",
+      "related": [
+        "DDD (Domain-Driven Design)",
+        "Modular Monolith",
+        "Ubiquitous Language (ngôn ngữ dùng chung)"
+      ]
+    },
+    {
+      "term": "DDD (Domain-Driven Design)",
+      "aliases": [
+        "thiết kế hướng domain"
+      ],
+      "level": "advanced",
+      "problem": "Dev hiểu business ít hơn domain expert, code implement sai logic nghiệp vụ vì yêu cầu bị dịch qua nhiều lớp (BA → spec → code), và model code ngày càng lệch khỏi model business thật. DDD ra đời để dev và domain expert nói chung một ngôn ngữ, model code phản ánh đúng model nghiệp vụ.",
+      "origin": "Eric Evans, cuốn 'Domain-Driven Design: Tackling Complexity in the Heart of Software' (2003).",
+      "how": "Strategic design: bounded context, context map, ubiquitous language. Tactical design: entity, value object, aggregate, repository, domain service, domain event. Tách model kỹ thuật (database tables) khỏi domain model.",
+      "related": [
+        "Bounded Context",
+        "Aggregate Root",
+        "Microservices"
+      ]
+    },
+    {
+      "term": "Event Bus",
+      "aliases": [
+        "tuyến sự kiện",
+        "message broker"
+      ],
+      "level": "intermediate",
+      "problem": "Service A cần báo cho B, C, D biết 'đơn hàng đã thanh toán' — nhưng A không nên biết B/C/D là ai (thêm service E thì A phải sửa code). Event bus ra đời để A chỉ publish sự kiện vào một nơi trung gian, ai quan tâm thì tự subscribe.",
+      "origin": "Khái niệm từ event-driven architecture và pub-sub pattern; implementation phổ biến: RabbitMQ (2007), Kafka (LinkedIn, 2011), AWS SNS/SQS, Azure Event Grid.",
+      "how": "Producer publish event vào bus. Bus phân phối cho subscriber đã đăng ký. Subscriber không biết producer và ngược lại. 2 mô hình: pub-sub (fan-out, không lưu) và event streaming (Kafka — log lưu bền, replay được).",
+      "related": [
+        "Event-driven architecture",
+        "Orchestration vs Choreography",
+        "Message queue"
+      ]
+    },
+    {
+      "term": "Orchestration vs Choreography",
+      "aliases": [
+        "điều phối vs biên đạo"
+      ],
+      "level": "advanced",
+      "problem": "Business transaction (đặt hàng → trừ kho → trừ tiền → giao hàng) cần nhiều service phối hợp. Orchestration: có một 'nhạc trưởng' điều khiển tất cả — dễ theo dõi nhưng nhạc trưởng thành single point of failure và bottleneck. Choreography: mỗi service tự biết khi nào làm gì qua event — loose coupling nhưng logic ẩn trong event flow, rất khó debug và không ai thấy được bức tranh toàn cảnh.",
+      "origin": "Mượn từ business process management (BPM); được mô tả trong pattern catalog của Chris Richardson (microservices.io) và Azure Architecture Center (choreography pattern).",
+      "how": "Orchestration: orchestrator phát lệnh tới từng service, nhận kết quả, quyết định bước tiếp theo — dễ trace nhưng coupling cao. Choreography: service A xong publish event, B lắng nghe và làm việc của B rồi publish tiếp cho C — không có điểm trung tâm nhưng phải dùng distributed tracing + correlation ID mới theo dõi được.",
+      "related": [
+        "Event Bus",
+        "Saga",
+        "Microservices"
+      ]
+    },
+    {
+      "term": "Cell-Based Architecture",
+      "aliases": [
+        "kiến trúc phân ô"
+      ],
+      "level": "advanced",
+      "problem": "Hệ thống lớn phục vụ hàng triệu user, khi một service fail, deploy lỗi, hoặc lỗi chiếm hết tài nguyên, toàn bộ user bị ảnh hưởng — blast radius quá lớn. Cell-based architecture ra đời để chia hệ thống thành nhiều 'cell' độc lập: fail một cell chỉ ảnh hưởng tập user của cell đó, không lan ra toàn hệ thống.",
+      "origin": "Amazon phổ biến qua AWS Builders Library (bài 'Avoiding overload in distributed systems by putting cell-based architecture in place').",
+      "how": "Mỗi cell là một bản sao đầy đủ của hệ thống (API, service, DB). Router phân user vào cell dựa trên shard key (user ID, region). Cell sập thì router redirect sang cell khác; deploy theo từng cell để rollout từng phần, không cần outage toàn hệ thống.",
+      "related": [
+        "Multi-Tenancy",
+        "Geo-Replication",
+        "blast radius",
+        "Bulkhead"
+      ]
+    },
+    {
+      "term": "Multi-Tenancy",
+      "aliases": [
+        "đa khách hàng",
+        "multi-tenant"
+      ],
+      "level": "intermediate",
+      "problem": "SaaS bán phần mềm cho 1000 công ty, nếu mỗi công ty một instance riêng thì tốn 1000 server, 1000 DB, 1000 lần deploy và nâng cấp. Multi-tenancy ra đời để một instance duy nhất phục vụ nhiều customer, chia sẻ tài nguyên nhưng data vẫn phải cô lập.",
+      "origin": "Xuất hiện từ timesharing trên mainframe những năm 1960s; được SaaS (Salesforce, 1999) và cloud computing phổ biến hóa trở lại.",
+      "how": "3 mô hình: silo (mỗi tenant một DB/instance — cô lập mạnh, đắt), pool (chung tất cả, phân biệt qua tenant_id — hiệu quả nhất, rủi ro noisy neighbor), bridge (hybrid: component nhạy cảm silo, phần còn lại pool).",
+      "related": [
+        "Cell-Based Architecture",
+        "Sharding",
+        "SaaS"
+      ]
+    },
+    {
+      "term": "Geo-Replication",
+      "aliases": [
+        "nhân bản địa lý"
+      ],
+      "level": "advanced",
+      "problem": "User ở Việt Nam gọi API đặt server tại US mất ~200ms mỗi round-trip; và nếu US region chết (mất điện, thảm họa) thì toàn bộ user không truy cập được. Geo-replication ra đời để copy data sang nhiều region: user đọc từ region gần nhất, region khác takeover khi một region sập.",
+      "origin": "Xuất hiện cùng các hệ thống distributed database lớn: Google Spanner (2012-2013), Apache Cassandra (Facebook, 2010), và tính năng replication của PostgreSQL/MySQL từ những năm 2000s.",
+      "how": "Đồng bộ data giữa datacenter ở các region khác nhau. Đồng bộ (synchronous): strong consistency nhưng chậm. Bất đồng bộ (asynchronous): nhanh nhưng eventual consistency. Thường ghép với global load balancer route user tới region gần nhất và để failover khi region chết.",
+      "related": [
+        "Transaction",
+        "Cell-Based Architecture",
+        "CDN"
+      ]
+    },
+    {
+      "term": "Edge Computing",
+      "aliases": [
+        "điện toán biên"
+      ],
+      "level": "intermediate",
+      "problem": "Camera giao thông phát hiện tai nạn cần phản ứng trong 50ms, nhưng gửi video lên cloud rồi nhận lệnh về mất 300ms — trễ không chấp nhận được. IoT xả hàng GB data mỗi phút thì băng thông gửi hết về cloud cũng không chịu nổi. Edge computing ra đời để xử lý data ngay tại nơi phát sinh.",
+      "origin": "Thuật ngữ xuất hiện từ những năm 1990s để chỉ CDN; được Karim Arabi (Qualcomm) định nghĩa tại keynote IEEE DAC 2014 và seminar MIT 2015.",
+      "how": "Đặt compute và storage gần user/device hơn: edge server (Cloudflare Workers, AWS Lambda@Edge), edge gateway (IoT), hoặc on-premise. Giảm latency, tiết kiệm bandwidth, data nhạy cảm không rời khỏi region (privacy).",
+      "related": [
+        "CDN",
+        "Bandwidth vs Latency",
+        "IoT"
+      ]
+    },
+    {
+      "term": "Singleton",
+      "aliases": [
+        "mẫu đơn bản"
+      ],
+      "level": "basic",
+      "problem": "Cần đảm bảo một class chỉ có đúng một instance trong toàn bộ app (connection pool, config manager, logger) — nếu mỗi chỗ tự new một connection pool thì lãng phí resource và state không nhất quán. Singleton ra đời để enforce điều đó ở mức language.",
+      "origin": "Gang of Four (Gamma, Helm, Johnson, Vlissides) trong cuốn 'Design Patterns: Elements of Reusable Object-Oriented Software' (1994).",
+      "how": "Private constructor, static method trả về instance duy nhất (lazy hoặc eager init). Nhược điểm: tạo global state ẩn, coupling ẩn, khó unit test (khó mock), vi phạm single responsibility. Thư viện hiện đại thường thay bằng DI container với scope singleton.",
+      "related": [
+        "Dependency Injection (DI) & IoC container",
+        "global state",
+        "design patterns"
+      ]
+    },
+    {
+      "term": "Sidecar",
+      "aliases": [
+        "mẫu sidecar",
+        "sidecar container"
+      ],
+      "level": "advanced",
+      "problem": "App viết bằng 5 ngôn ngữ khác nhau, nhưng tất cả đều cần logging, metrics, mTLS, service discovery, retry. Viết lại cùng logic cho 5 ngôn ngữ thì tốn công và không nhất quán giữa các team. Sidecar ra đời để gắn một container phụ chạy cạnh app chính, lo cross-cutting concern đúng một lần bằng một ngôn ngữ.",
+      "origin": "Pattern được Microsoft mô tả trong Azure Architecture Center (Sidecar Pattern); phổ biến cùng Kubernetes (native sidecar containers) và service mesh (Istio, Linkerd).",
+      "how": "Mỗi app instance chạy kèm một sidecar container cùng lifecycle, chia sẻ network namespace (gọi nhau qua localhost). Sidecar lo proxy traffic, collect metrics, inject headers, handle retry — app không cần biết sidecar tồn tại, không cần sửa code.",
+      "related": [
+        "Service Mesh",
+        "Container (Docker, container image)",
+        "Service Discovery"
+      ]
+    },
+    {
+      "term": "Service Mesh",
+      "aliases": [
+        "lưới dịch vụ"
+      ],
+      "level": "advanced",
+      "problem": "100 microservices đều cần retry, timeout, mTLS, tracing, rate limit. Nếu mỗi service tự implement thì 100 codebase khác nhau, không nhất quán, mỗi lần upgrade framework phải sửa cả trăm chỗ. Service mesh ra đời để tách networking logic ra khỏi app code, nhét vào layer hạ tầng.",
+      "origin": "Linkerd (Buoyant, 2016) là service mesh mã nguồn mở đầu tiên — bản thân là 'Finagle wrapped in proxy form'; Istio (Google/IBM/Lyft, 2017) phổ biến hóa khái niệm. Trước đó là library thế hệ: Netflix Hystrix, Twitter Finagle, Google Stubby.",
+      "how": "Mỗi service instance chạy kèm sidecar proxy (Envoy). Mọi traffic vào/ra đi qua proxy. Control plane push config, certificate, routing policy xuống proxy. App không sửa code vẫn có mTLS, retry, circuit breaking, metrics, traffic split (canary).",
+      "related": [
+        "Sidecar",
+        "Service Discovery",
+        "mTLS"
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing",
+    "https://en.wikipedia.org/wiki/Microservices",
+    "https://samnewman.io/patterns/architectural/bff/",
+    "https://12factor.net/",
+    "https://martinfowler.com/bliki/BoundedContext.html",
+    "https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar",
+    "https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography",
+    "https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven",
+    "https://en.wikipedia.org/wiki/Multitenancy",
+    "https://en.wikipedia.org/wiki/Edge_computing",
+    "https://en.wikipedia.org/wiki/Operating-system-level_virtualization",
+    "https://en.wikipedia.org/wiki/Singleton_pattern",
+    "https://en.wikipedia.org/wiki/Service-oriented_architecture",
+    "https://en.wikipedia.org/wiki/Load_balancing_(computing)",
+    "https://github.com/donnemartin/system-design-primer",
+    "https://microservices.io/patterns/apigateway.html",
+    "https://microservices.io/patterns/data/saga.html",
+    "https://buoyant.io/what-is-a-service-mesh",
+    "https://en.wikipedia.org/wiki/Amazon_Lambda",
+    "https://en.wikipedia.org/wiki/Geo-replication",
+    "https://github.com/Netflix/eureka",
+    "https://martin.kleppmann.com/2011/03/07/deployment-patterns.html"
+  ]
+}

@@ -1,0 +1,45 @@
+- generic [active] [ref=f23e1]:
+  - generic [ref=f23e2]:
+    - banner [ref=f23e3]:
+      - generic [ref=f23e11]:
+        - text: Join
+        - link "PromCon EU 2026" [ref=f23e12] [cursor=pointer]:
+          - /url: https://promcon.io/2026-munich/
+        - text: ", the Prometheus users conference, on October 7–8, 2026 in Munich."
+      - generic [ref=f23e19]:
+        - link [ref=f23e20] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f23e21]:
+            - img "Prometheus logo" [ref=f23e22]
+            - paragraph [ref=f23e23]: Prometheus
+        - generic [ref=f23e25]:
+          - link "Docs" [ref=f23e26] [cursor=pointer]:
+            - /url: /docs/introduction/overview/
+          - link "Download" [ref=f23e27] [cursor=pointer]:
+            - /url: /download/
+          - link "Community" [ref=f23e28] [cursor=pointer]:
+            - /url: /community/
+          - link "Support & Training" [ref=f23e29] [cursor=pointer]:
+            - /url: /support-training/
+          - link "Blog" [ref=f23e30] [cursor=pointer]:
+            - /url: /blog/
+    - main [ref=f23e31]:
+      - generic [ref=f23e34]:
+        - heading "404" [level=1] [ref=f23e35]
+        - heading "This page could not be found." [level=2] [ref=f23e37]
+    - contentinfo [ref=f23e39]:
+      - generic [ref=f23e41]:
+        - paragraph [ref=f23e42]:
+          - text: © Prometheus Authors 2014-2026 | All components are available under the
+          - link "Apache 2 License" [ref=f23e43] [cursor=pointer]:
+            - /url: http://www.apache.org/licenses/LICENSE-2.0
+          - text: "on"
+          - link "GitHub" [ref=f23e44] [cursor=pointer]:
+            - /url: https://github.com/prometheus
+          - text: .
+        - paragraph [ref=f23e45]:
+          - text: © 2026 The Linux Foundation. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our
+          - link "Trademark Usage" [ref=f23e46] [cursor=pointer]:
+            - /url: https://www.linuxfoundation.org/trademark-usage
+          - text: page.
+  - alert [ref=f23e47]

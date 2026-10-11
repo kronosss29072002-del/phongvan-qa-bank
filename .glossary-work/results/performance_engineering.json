@@ -1,0 +1,1312 @@
+{
+  "domain": "PERFORMANCE ENGINEERING",
+  "entries": [
+    {
+      "term": "Latency vs Throughput",
+      "aliases": [
+        "độ trễ và thông lượng",
+        "latency vs throughput"
+      ],
+      "level": "basic",
+      "problem": "Team thường tối ưu 'số request/giây' rồi ngạc nhiên khi người dùng vẫn phàn nàn vì mỗi request mất 3 giây, hoặc ngược lại chạy nhanh nhưng không xử lý nổi lưu lượng giờ cao điểm.",
+      "origin": "",
+      "how": "Latency là thời gian từ khi gửi request đến khi có kết quả (đơn vị ms/s); throughput là số request hoàn thành mỗi đơn vị thời gian. Hai metric tách nhau: có thể giảm latency bằng cách xử lý ít song song hơn (throughput giảm) hoặc tăng throughput bằng batch lớn (latency tăng). Đo cả hai, luôn kèm phân vị latency.",
+      "related": [
+        "Phân vị p50/p95/p99",
+        "Little's law",
+        "Tail latency"
+      ]
+    },
+    {
+      "term": "Phân vị trung vị và phần trăm (p50/p95/p99)",
+      "aliases": [
+        "percentile latency",
+        "median latency",
+        "average vs percentile"
+      ],
+      "level": "basic",
+      "problem": "Trung bình (mean) nói dối: 99 request nhanh 10ms + 1 request chậm 10s cho mean ~110ms,trông như đạt SLO trong khi 1% user chờ 10 giây.",
+      "origin": "",
+      "how": "Chia toàn bộ mẫu latency đã sắp xếp vào 100 phần, p50 = nửa dưới nhanh hơn, p99 = ngưỡng chỉ 1% mẫu vượt qua. Mean dễ tính nhưng bị outlier chi phối; p50 mô tả 'người dùng trung bình', p95/p99 mô tả nhóm kém may mắn — nhóm hay rời bỏ sản phẩm.",
+      "related": [
+        "Tail latency",
+        "Latency histogram / HDR Histogram",
+        "Coordinated omission"
+      ]
+    },
+    {
+      "term": "Tail latency",
+      "aliases": [
+        "độ trễ đuôi",
+        "tail latency at scale",
+        "p99 latency"
+      ],
+      "level": "advanced",
+      "problem": "Hệ thống hàng nghìn máy có request phải chờ nhiều service: dù mỗi service chỉ 1% request chậm, fan-out 100 nhánh khiến xác suất ít nhất 1 nhánh chậm là ~63%, user thấy chậm thường xuyên hơn nhiều so với con số p99 từng service.",
+      "origin": "Jeff Dean & Luis Barroso, 'The Tail at Scale', ACM CACM tháng 3/2013",
+      "how": "Đo và đặt ngân sách cho phần đuôi phân phối (p99/p99.9) thay vì trung bình. Kiến trúc giảm tail: hedged request (gửi bản sao sau ngưỡng trễ), tách cụm riêng cho tenant chậm, ưu tiên request, giảm fan-out. Theo đuôi qua histogram, không qua mean.",
+      "related": [
+        "Phân vị p50/p95/p99",
+        "Fan-out / Fan-in",
+        "Latency histogram / HDR Histogram"
+      ]
+    },
+    {
+      "term": "Coordinated omission",
+      "aliases": [
+        "omission được điều phối",
+        "Gil Tene coordinated omission"
+      ],
+      "level": "advanced",
+      "problem": "Benchmark gửi request theo lịch cố định; khi server kẹt 10 giây, client 'bỏ lỡ' hàng trăm lần gửi, các lần gửi tiếp theo chỉ đo được latency khi hệ thống đã hồi phục — số liệu đẹp hoàn toàn giả.",
+      "origin": "Gil Tene (Azul Systems), talk 'How NOT to Measure Latency', QCon San Francisco 2015",
+      "how": "Lỗi đo lường: thời gian bị miss không được ghi nhận nên histogram thiếu đúng các mẫu xấu nhất. Cách sửa: bắn request theo lịch trình đều từ thời điểm cố định (open-loop load gen, như wrk2/hdrhistogram ' coordinated omission correction'), hoặc ghi lại cả khoảng trống vào histogram để percentile phản ánh đúng trải nghiệm.",
+      "related": [
+        "Latency histogram / HDR Histogram",
+        "Tail latency",
+        "Microbenchmark & bẫy của nó"
+      ]
+    },
+    {
+      "term": "Latency histogram / HDR Histogram",
+      "aliases": [
+        "HDR Histogram",
+        "High Dynamic Range Histogram",
+        "histogram độ trễ"
+      ],
+      "level": "intermediate",
+      "problem": "Giữ toàn bộ mẫu latency trong mảng để tính percentile thì tốn RAM; lưu log rồi tính offline thì chậm; bucket cố định thô thì mất độ chính xác ở đuôi (p99.99).",
+      "origin": "HDR Histogram do Gil Tene & Brian Otto phát triển (Azul), công bố ~2014-2015, hdrhistogram.org",
+      "how": "Chia thang log các bucket theo bậc tin cậy (significant digits), độ trễ 3-6ns mỗi mẫu trên CPU Intel ~2014, bộ nhớ cố định theo khoảng giá trị. Cho phép gộp (add) histogram con thành tổng thể chính xác — nền tảng của benchmark correction (coordinated omission) và monitoring percentile.",
+      "related": [
+        "Coordinated omission",
+        "Phân vị p50/p95/p99",
+        "Benchmark"
+      ]
+    },
+    {
+      "term": "Amdahl's law",
+      "aliases": [
+        "định luật Amdahl",
+        "speedup tối đa",
+        "serial fraction",
+        "Amdahl"
+      ],
+      "level": "basic",
+      "problem": "Đội ngũ thêm 100 core mà tốc độ chỉ cải thiện 2x, rồi kết luận 'phần song song hóa làm sai' — thực ra phần tuần tự còn lại chi phối tất cả.",
+      "origin": "Gene Amdahl, trình bày tại AFIPS Spring Joint Computer Conference, 1967",
+      "how": "Speedup tối đa = 1 / (f + (1-f)/n), với f là fraction tuần tự, n số luồng/tài nguyên. Khi n → vô hạn, speedup bị chặn bởi 1/f. Bài học: đo fraction tuần tự trước khi đầu tư song song; tối ưu phần chiếm nhiều thời gian nhất (profiling) trước.",
+      "related": [
+        "Gustafson's law",
+        "Profiling"
+      ]
+    },
+    {
+      "term": "Gustafson's law",
+      "aliases": [
+        "định luật Gustafson",
+        "Gustafson-Barsis"
+      ],
+      "level": "basic",
+      "problem": "Amdahl's law dùng workload cố định nên có vẻ 'song song vô dụng', trong khi thực tế người dùng luôn tăng quy mô bài toán khi có thêm tài nguyên.",
+      "origin": "John L. Gustafson & Edwin H. Barsis, bài 'Reevaluating Amdahl's Law', 1988",
+      "how": "Speedup = n - (1-n)·s (với s là fraction tuần tự của bản tuần tự, n số core): workload mới = phần song song mở rộng + phần tuần tự giữ nguyên. Phản đề thực tế của Amdahl: câu hỏi đúng là 'có thêm tài nguyên thì giải được bài toán lớn đến đâu', không chỉ 'bài cũ nhanh bao nhiêu'.",
+      "related": [
+        "Amdahl's law",
+        "Capacity Planning"
+      ]
+    },
+    {
+      "term": "Little's law",
+      "aliases": [
+        "định luật Little",
+        "L = λW"
+      ],
+      "level": "intermediate",
+      "problem": "Đặt kích thước thread pool / connection pool / hàng đợi hoàn toàn theo cảm tính: quá nhỏ thì queue phình, quá lớn thì context switch và OOM, không có công thức kiểm chứng.",
+      "origin": "John Little (MIT), công thức L = λW, chứng minh năm 1961 (Operations Research)",
+      "how": "Số job trung bình trong hệ thống L = tốc độ đến λ × thời gian tồn W, đúng với hầu hết mọi hệ thống (không phụ thuộc phân phối tới hạn/dịch vụ). Dùng để suy ngược: đo throughput và latency → biết có bao nhiêu request đang 'nằm trong hệ thống' → sized pool/queue hợp lý, phát hiện bottleneck.",
+      "related": [
+        "Latency vs Throughput",
+        "Backpressure & rate shaping",
+        "Capacity Planning"
+      ]
+    },
+    {
+      "term": "Latency numbers every programmer should know",
+      "aliases": [
+        "bảng số độ trễ",
+        "100ns/1ms/10ms",
+        "Jeff Dean latency table"
+      ],
+      "level": "basic",
+      "problem": "Dev viết code gọi network call cho việc có thể làm bằng RAM cache vì không có 'intuition' về thứ tự độ lớn: 100ns với 10ms chênh 100.000 lần nhưng trong đầu người viết chỉ là 'cũng nhanh thôi'.",
+      "origin": "Bảng số của Jeff Dean (Google) trong các talk (~2002-2009); bản tương tác phổ biến của Colin Scott; nhiều bản cập nhật sau này",
+      "how": "Tham chiếu thứ tự độ lớn: ~1ns đọc cache L1, ~100ns đọc RAM / cache L3, ~1ms network RTT cùng trung tâm dữ liệu, ~10-40ms RTT xuyên lục địa, ~10ms đọc SSD, ~100ms-10s đọc HDD/seek. Dùng làm quy tắc ngón tay trước khi quyết định thêm một hop mạng hoặc một lần đọc đĩa.",
+      "related": [
+        "Bandwidth vs Latency",
+        "Cache locality (spatial/temporal)"
+      ]
+    },
+    {
+      "term": "Speed of light & network RTT",
+      "aliases": [
+        "độ trễ tốc độ ánh sáng",
+        "round-trip time",
+        "cross-country latency"
+      ],
+      "level": "basic",
+      "problem": "Kế hoạch 'gọi service ở datacenter bên kia quả đất cho mỗi request' thất bại vì không phần mềm nào nhanh hơn tín hiệu đi qua cáp quang: mỗi round trip thêm hàng chục ms bất kể code tối ưu thế nào.",
+      "origin": "",
+      "how": "Tín hiệu trong cáp quang ~200.000 km/s (≈2/3 tốc độ ánh sáng), nên RTT TP.HCM–Hoa Kỳ thực tế ~150-250ms kể cả không nghẽn. Tổng latency request ≈ (số round trip) × RTT + thời gian xử lý. Giảm số round trip (batch, pipeline, cache) thường thắng việc tối ưu vài dòng code.",
+      "related": [
+        "Latency numbers every programmer should know",
+        "Bandwidth vs Latency",
+        "TLS handshake cost, session resumption, OCSP stapling"
+      ]
+    },
+    {
+      "term": "Bandwidth vs Latency",
+      "aliases": [
+        "băng thông và độ trễ",
+        "bandwidth latency tradeoff",
+        "Speed of light RTT",
+        "latency"
+      ],
+      "level": "basic",
+      "problem": "Đường truyền 1Gbps vẫn upload file chậm vì latency cao (satellite/4G): người dùng hiểu nhầm 'mạng nhanh = băng thông lớn'.",
+      "origin": "",
+      "how": "Bandwidth = số byte tối đa mỗi giây (phụ thuộc pipe); latency = thời gian byte đầu tiên đi được hết đường (phụ thuộc khoảng cách + xử lý ở mỗi nút). Giao thức gửi nhiều round trip nhỏ bị chi phối bởi latency; transfer file lớn bị chi phối bởi bandwidth. High-BDP link cần cửa sổ truyền đủ lớn để lấp đầy băng thông.",
+      "related": [
+        "TCP slow start",
+        "Bufferbloat"
+      ]
+    },
+    {
+      "term": "Cache hit ratio",
+      "aliases": [
+        "tỉ lệ trúng cache",
+        "hit rate",
+        "cache hit rate"
+      ],
+      "level": "basic",
+      "problem": "Thêm Redis nhưng DB vẫn chết vì hit ratio chỉ 40% — 60% request vẫn xuyên thấu xuống database đúng lúc traffic cao điểm.",
+      "origin": "",
+      "how": "Hit ratio = số truy cập trả về từ cache / tổng số truy cập. Đo theo key/hotpath, không chỉ tổng thể (một tỷ lệ cao toàn cục vẫn che một vùng key miss 100%). Cải thiện: TTL và refresh phù hợp, warming, nâng cache cho hot key; kết hợp negative caching cho miss lặp lại.",
+      "related": [
+        "Cache stampede / thundering herd",
+        "Negative caching & cache penetration (null cache)",
+        "Hot key"
+      ]
+    },
+    {
+      "term": "Cache locality (spatial/temporal)",
+      "aliases": [
+        "tính cục bộ cache",
+        "temporal locality",
+        "spatial locality"
+      ],
+      "level": "intermediate",
+      "problem": "Duyệt mảng AoS tràn lan trên dataset lớn chạy chậm gấp nhiều lần vòng lặp gọn tương đương, dù 'cùng một công việc tính toán' — vì CPU cache miss trả giá hàng chục-đôi trăm chu kỳ.",
+      "origin": "",
+      "how": "Temporal locality: dữ liệu vừa dùng sẽ được dùng lại soon (giữ biến vòng lặp trong cache/register). Spatial locality: truy cập dữ liệu kề nhau nên fetch theo block (cache line) sẽ trúng. Tối ưu: duyệt theo thứ tự bộ nhớ, struct-of-arrays cho hot field, tách dữ liệu lạnh ra để dòng cache không bị pollution.",
+      "related": [
+        "CPU cache line",
+        "False sharing",
+        "Prefetch"
+      ]
+    },
+    {
+      "term": "False sharing",
+      "aliases": [
+        "chia sẻ ảo",
+        "false sharing cache"
+      ],
+      "level": "advanced",
+      "problem": "Bốn thread cộng biến đếm riêng trên cùng một mảng nguyên – mỗi luồng 'chỉ sở hữu' một phần, nhưng hiệu năng tụt 4-10x vì core liên tục giành lại cùng một cache line.",
+      "origin": "",
+      "how": "Cache chia sẻ theo cache line (thường 64 byte); hai biến độc lập nằm chung một dòng cache bị invalidate liên tục khi core khác ghi. Fix: pad biên mảng/struct cho đủ cache line, tách biến hot của các thread ra xa, dùng per-thread counter rồi giảm ở cuối.",
+      "related": [
+        "CPU cache line",
+        "Cache locality (spatial/temporal)",
+        "NUMA & CPU pinning"
+      ]
+    },
+    {
+      "term": "CPU cache line",
+      "aliases": [
+        "dòng cache",
+        "cache line 64 bytes",
+        "cacheline"
+      ],
+      "level": "intermediate",
+      "problem": "Không hiểu cache line dẫn tới tối ưu 'đúng logic nhưng sai vật lý': đọc một byte vẫn kéo cả 64 byte, và ghi một byte vẫn invalidate cả dòng trên các core khác.",
+      "origin": "",
+      "how": "Đơn vị nhỏ nhất cache(L1/L2/L3) di chuyển và hợp nhất coherence — thường 64 byte. Đọc 1 byte = load cả dòng (lợi nếu truy cập tuần tự, lãng nếu duỗi dọc array-of-struct). Đồ thị directory-based coherence theo dòng: mọi false sharing, race padding đều tính trên đơn vị này.",
+      "related": [
+        "False sharing",
+        "Cache locality (spatial/temporal)",
+        "Prefetch"
+      ]
+    },
+    {
+      "term": "Branch prediction",
+      "aliases": [
+        "dự đoán nhánh",
+        "branch misprediction",
+        "pipeline stall"
+      ],
+      "level": "intermediate",
+      "problem": "Thứ tự dữ liệu đầu vào làm thay đổi tỉ lệ true/false của một if trong vòng lặp khiến code chạy chậm gấp 2-3 lần mà profiler CPU không chỉ ra dòng nào 'đắt' rõ ràng.",
+      "origin": "",
+      "how": "CPU đoán trước nhánh điều khiển để nạp sẵn instruction; đoán sai = flush pipeline, mất hàng chục chu kỳ. Code phân nhánh khó đoán (dữ liệu aleatory) làm giảm IPC. Tối ưu: sort dữ liệu để tăng tính dự đoán được, gom nhánh hot ra ngoài vòng lặp, dùng branchless/CMOV khi hợp lý.",
+      "related": [
+        "Profiling",
+        "CPU cache line",
+        "Hot path"
+      ]
+    },
+    {
+      "term": "Syscall overhead",
+      "aliases": [
+        "chi phí system call",
+        "syscall cost",
+        "user kernel transition"
+      ],
+      "level": "intermediate",
+      "problem": "Hàm đọc file nhỏ gọi open/read/close hàng nghìn lần mỗi request, mỗi lần trả giá chuyển ngữ cảnh user→kernel (~hàng trăm ns đến ~1μs) — tổng lại thành bottleneck CPU không thấy trong code ứng dụng.",
+      "origin": "",
+      "how": "Mỗi syscall phải chuyển chế độ kernel, kiểm tra tham số, đối chiếu page table (đặc biệt khi bộ nhớ user bị thay đổi). Reduce: batch syscall (preadv/writev, recvmmsg, io_uring), cache fd/connection (keep-alive), map file thay vì đọc lặp, tránh gettimeofday() trong hot loop.",
+      "related": [
+        "Batching",
+        "io_uring",
+        "Zero-copy"
+      ]
+    },
+    {
+      "term": "Context switch cost",
+      "aliases": [
+        "chi phí đổi ngữ cảnh",
+        "context switch latency",
+        "voluntary switch"
+      ],
+      "level": "intermediate",
+      "problem": "Máy có 16 core nhưng load 100% với số thread gấp 10x core, throughput lại giảm vì thời gian bị mất vào lưu/đổ register, TLB shootdown, scheduler.",
+      "origin": "",
+      "how": "Đổi thread: lưu ngữ cảnh, có thể đổi vùng địa chỉ (CR3/TLB flush), tốn khoảng vài μs (thời gian thật phụ thuộc hệ điều hành/nội dung) + jitter từ scheduler. Tới hạn khi hàng nghìn thread/tiến trình tranh chấp. Giảm: thread pool thay vì thread-per-request, async I/O, CPU pinning để tăng cache ấm.",
+      "related": [
+        "Thread-per-request vs event loop",
+        "NUMA & CPU pinning",
+        "Syscall overhead"
+      ]
+    },
+    {
+      "term": "Stop-the-world & GC pause",
+      "aliases": [
+        "GC pause",
+        "STW",
+        "thời gian dừng GC"
+      ],
+      "level": "intermediate",
+      "problem": "Service Java/Go p99 thỉnh thoảng nhảy từ 50ms lên 2 giây đúng lúc heap đầy, log không có lỗi gì — đó là garbage collector dừng toàn bộ mutator.",
+      "origin": "",
+      "how": "GC cần chặn luồng ứng dụng (stop-the-world) ở các phase như root scanning/compaction để graph đối tượng nhất quán. Pause dài = outlier latency. Giảm: giữ heap và rate tạo object ổn định, GC low-latency (ZGC/Shenandoah), cân nhắc region-based collector, luôn đo GC time trong SLO.",
+      "related": [
+        "Generational GC",
+        "Memory allocation & GC churn",
+        "Tail latency"
+      ]
+    },
+    {
+      "term": "Generational GC",
+      "aliases": [
+        "GC thế hệ",
+        "generation scavenging",
+        "young/old generation"
+      ],
+      "level": "intermediate",
+      "problem": "Trace cả heap vài GB mỗi lần thu dọn thì pause quá dài; thực tế phần lớn object chết rất sớm nên quét cả núi dữ liệu sống là lãng phí.",
+      "origin": "David Ungar, 'Generation Scavenging', 1984; thành chuẩn trong JVM/boyer-GC hiện đại",
+      "how": "Chia heap theo thế hệ dựa trên giả thuyết 'most objects die young': object mới vào young gen,_minor GC quét nhanh khu nhỏ, object sống qua nhiều vòng được promote lên old gen (quét ít hơn). Viết barrier cho tham chiếu cross-generation. Tradeoff: fragmentation/promotion và major GC thỉnh thoảng vẫn lâu.",
+      "related": [
+        "Stop-the-world & GC pause",
+        "Memory allocation & GC churn",
+        "Profiling"
+      ]
+    },
+    {
+      "term": "Zero-copy",
+      "aliases": [
+        "không sao chép",
+        "sendfile",
+        "splice",
+        "MSG_ZEROCOPY"
+      ],
+      "level": "intermediate",
+      "problem": "Proxy/streaming server đẩy 10Gbps mà CPU 100% chỉ để copy dữ liệu qua lại giữa kernel buffer, user buffer, socket buffer — nội dung không đổi nhưng bị memcpy nhiều lần.",
+      "origin": "",
+      "how": "Đưa dữ liệu từ đĩa/network thẳng sang socket (sendfile/splice/io_uring fixed buffers, RDMA/DPDK) không qua vùng đệm user-space. Tránh 2-3 lần memcpy + giảm cache pollution. Tradeoff: khó transform giữa chừng (nếu cần chỉnh byte thì phải copy), API phức tạp hơn.",
+      "related": [
+        "io_uring",
+        "Batching",
+        "Compression (gzip/Brotli)"
+      ]
+    },
+    {
+      "term": "epoll vs select vs poll",
+      "aliases": [
+        "select poll epoll",
+        "I/O multiplexing",
+        "scalable event notification"
+      ],
+      "level": "intermediate",
+      "problem": "Server dùng select() với hàng nghìn socket: mỗi lần gọi quét O(n) toàn bộ fd, fd tối đa bị giới hạn (FD_SETSIZE), wake-up báo 'có sự kiện' nhưng không nói cái nào → tự quét lại rồi lãng phí.",
+      "origin": "select/poll có từ BSD/System V cổ điển; epoll thêm vào kernel Linux 2.5.45 (tháng 10/2002, Davide Libenzi)",
+      "how": "select/poll: O(n) mỗi lần, sao chép toàn bộ bitmap/ mảng fd sang-kernel. epoll: đăng ký interest set một lần, kernel chủ động báo exact fd sẵn sàng (ready list), O(1) trên hot path; có edge/level trigger. Tương đương: kqueue (BSD), IOCP (Windows).",
+      "related": [
+        "C10k problem",
+        "Event loop",
+        "Polling"
+      ]
+    },
+    {
+      "term": "io_uring",
+      "aliases": [
+        "Linux async I/O",
+        "io_uring SQE CQE"
+      ],
+      "level": "advanced",
+      "problem": "Mô hình epoll + read/write vẫn tốn syscall cho từng bước (submit, complete), và AIO cổ điển của Linux chỉ hỗ trợ I/O đĩa không làm được socket/nhánh khác — server rất nhanh nhưng bị bottleneck ở chuyển ngữ cảnh.",
+      "origin": "Jens Axboe, giới thiệu trong Linux 5.1 (2019) — theo kernelnewbies.org/Linux_5.1",
+      "how": "Hai vòng shared memory (submission queue / completion queue) giữa user và kernel: xếp hàng nhiều request I/O (read/write/accept/timeout...) mà không cần syscall mỗi cái, batch submit/batch reap, đăng ký fixed buffer và fd. Giảm syscall + cache-line ping-pong, đạt throughput I/O cao với ít luồng.",
+      "related": [
+        "Batching",
+        "Zero-copy",
+        "Event loop"
+      ]
+    },
+    {
+      "term": "C10K / C10M problem",
+      "aliases": [
+        "c10k",
+        "c10m",
+        "10.000 kết nối",
+        "millions of connections"
+      ],
+      "level": "intermediate",
+      "problem": "Web server 2000 ('một request = một process/thread') sập khi có 10.000 client đồng thời vì mỗi kết nối tốn một process và bộ nhớ, dù CPU hoàn toàn có thể gánh nổi.",
+      "origin": "Dan Kegel, trang 'The C10K problem' (kegel.com/c10k.html), khoảng năm 2000; C10M do Robert Graham đề xuất (Black Hat, 2013)",
+      "how": "Bài toán phục vụ 10.000 (rồi 10 triệu) kết nối đồng thời: cần event-driven I/O (epoll/kqueue), thread pool, non-blocking sockets, kernel tuning (somaxconn, file descriptor limit, TIME_WAIT), tách accept worker. Trở thành nền của Nginx, Node.js, Netty.",
+      "related": [
+        "epoll vs select vs poll",
+        "Event loop",
+        "Non-blocking I/O"
+      ]
+    },
+    {
+      "term": "Thread-per-request vs event loop",
+      "aliases": [
+        "một thread mỗi request",
+        "reactor pattern",
+        "event-driven server"
+      ],
+      "level": "intermediate",
+      "problem": "Mỗi request một thread (container servlet cổ điển) khiến 10.000 request đồng thời tương ứng 10.000 thread: RAM phình vì stack mỗi thread và context switch tốn kém; ngược lại, event loop một thread lại dễ bị block bởi I/O đồng bộ ngầm khiến toàn bộ server đứng chờ.",
+      "origin": "Không có một nguồn phát minh duy nhất; đối chiếu được hệ thống hóa trong bài 'The C10K problem' của Dan Kegel (1999) và trong thực tế vận hành giữa Apache/Tomcat (mỗi request một thread) với Nginx/Node.js (event loop single-thread).",
+      "how": "Thread-per-request: code đồng bộ dễ viết, chi phí thread (~stack MB, context switch) giới hạn C10K. Event loop/reactor: 1 luồng điều phối hàng vạn kết nối, I/O phải non-blocking, callback/coroutine; CPU-bound job phải tách worker pool. Chọn theo workload: I/O-bound→event loop, CPU-bound/đồng bộ legacy→thread pool.",
+      "related": [
+        "C10k problem",
+        "Non-blocking I/O",
+        "Context switch cost"
+      ]
+    },
+    {
+      "term": "HTTP keep-alive",
+      "aliases": [
+        "Keep-alive",
+        "persistent connection",
+        "Connection: keep-alive",
+        "TCP connection reuse",
+        "HTTP connection reuse"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Mỗi tài nguyên (ảnh/JS/CSS) tốn một TCP+TLS handshake mới, vài trăm ms mỗi lần; ở HTTP/1.0, một request tái tạo TCP handshake (3 gói) cộng TLS handshake (2 round-trip) chỉ để gửi một file nhỏ, nên trang 50 tài nguyên mất vài giây chỉ cho phần 'chào hỏi', còn server liên tục gánh chi phí accept/teardown kết nối.",
+      "origin": "Đề xuất như extension 'Connection: Keep-Alive' trong HTTP/1.0, trở thành mặc định trong HTTP/1.1 (RFC 2616, 1999); mặc định từ HTTP/1.1 (RFC 2068/7230, Fielding và cộng sự, 1997).",
+      "how": "Giữ socket TCP/TLS mở sau response đầu tiên và tái dùng cho các request tiếp theo, tiết kiệm 1-3 round trip (SYN, TLS) trên mỗi tài nguyên; việc phân tách request/response vẫn dựa trên Content-Length hoặc chunked nên không cần đóng kết nối giữa chừng. Cần cấu hình keep-alive timeout phía server để giải phóng kết nối idle, max requests per connection, và connection pool phía client với pool size cân bằng với số kết nối server chịu nổi.",
+      "related": [
+        "Connection pool",
+        "TLS handshake cost, session resumption, OCSP stapling",
+        "HTTP/2 multiplexing",
+        "HTTP/1.1",
+        "TCP",
+        "TLS/SSL",
+        "TTFB"
+      ]
+    },
+    {
+      "term": "HTTP/2 multiplexing",
+      "aliases": [
+        "đaplex HTTP/2",
+        "stream HTTP/2",
+        "multiplexing over one connection"
+      ],
+      "level": "intermediate",
+      "problem": "HTTP/1.1 giới hạn ~6 kết nối/nền tảng nên trình duyệt phải mở nhiều TCP (hoặc serialize), trang nhiều tài nguyên nhỏ bị head-of-line và chậm tải song song.",
+      "origin": "HTTP/2 chuẩn hóa tại RFC 7540 (tháng 5/2015), kế thừa SPDY của Google (2009-2012)",
+      "how": "Nhiều stream (request/response) chạy đồng thời trên cùng một TCP connection, mỗi stream có ID, frame tùy ý interleaving + HPACK nén header. Giảm số kết nối, tận dụng một handshake TLS. Nhưng: một packet TCP loss vẫn block toàn connection (xem HOL blocking).",
+      "related": [
+        "Head-of-line blocking",
+        "HTTP keep-alive",
+        "TLS handshake cost, session resumption, OCSP stapling"
+      ]
+    },
+    {
+      "term": "Head-of-line blocking",
+      "aliases": [
+        "HOL blocking",
+        "đầu hàng bị chặn",
+        "queue head blocking",
+        "Head-of-line"
+      ],
+      "level": "advanced",
+      "problem": "Một packet mất trên đường truyền khiến request A chưa xong kéo theo B, C (không liên quan) chờ dù chúng hoàn toàn sẵn sàng — HTTP/2 'multiplexing' vẫn chậm sau một loss.",
+      "origin": "Hiện tượng đã được mô tả trong networking hàng thập niên; trở nên nổi bật với HOL của HTTP/1.1 pipelining và HOL của HTTP/2-over-TCP",
+      "how": "Hàng đợi chỉ dịch chuyển khi phần tử đầu xử lý xong. HTTP/1.1: response đến theo thứ tự nên response chậm chặn response nhanh (giải quyết bằng nhiều connection/pipelining có giới hạn). HTTP/2: gỡ HOL ứng dụng nhưng giữ HOL vận chuyển ở tầng TCP. HTTP/3 (QUIC) tách stream riêng — loss của stream này không chặn stream khác.",
+      "related": [
+        "HTTP/2 multiplexing",
+        "Head-of-line",
+        "BBR congestion control"
+      ]
+    },
+    {
+      "term": "BBR congestion control",
+      "aliases": [
+        "BBR",
+        "Bottleneck Bandwidth and RTT",
+        "model-based congestion control"
+      ],
+      "level": "advanced",
+      "problem": "Cubic/Reno đo xung đột bằng packet loss, nhưng mạng modern (WiFi, mobile, đường truyền đầy) mất tín hiệu: buffer đầy 100-500ms mới drop → throughput cao nhưng latency phình kinh khủng (bộ đệm đọng).",
+      "origin": "Nhóm BBR của Google (Neal Cardwell, Yuchung Cheng, Soheil Hassas Yeganeh, Van Jacobson), công bố rộng năm 2016 (ACM Queue + list bbr-dev, github.com/google/bbr)",
+      "how": "Ước tính 2 tham số: bottleneck bandwidth (BtlBw) và minimum RTT (RTprop) bằng delivery rate, rồi giữ cwnd ≈ BtlBw × RTprop (BDP) — gửi đủ để lấp ống nhưng không phình buffer. Gồm 4 giai đoạn: Startup (slow start gain), Drain, ProbeBW, ProbeRTT. Ít loss hơn, latency ổn định hơn trong nhiều thực nghiệm Google/Cloudflare.",
+      "related": [
+        "TCP slow start",
+        "Bufferbloat",
+        "Bandwidth vs Latency"
+      ]
+    },
+    {
+      "term": "TCP slow start",
+      "aliases": [
+        "slow start",
+        "khởi động chậm",
+        "cwnd growth"
+      ],
+      "level": "intermediate",
+      "problem": "Kết nối mới (hoặc mất kết nối) gửi nhỏ giọt từ ~10 segment, mất nhiều round trip mới đạt băng thông tối đa — request đầu của connection pool 'nóng' bất ngờ chậm.",
+      "origin": "Van Jacobson, 'Congestion Avoidance and Control', SIGCOMM 1988",
+      "how": "cwnd bắt đầu nhỏ (10 MSS theo RFC 5681) và tăng gấp đôi mỗi RTT (exponential) đến ngưỡng ssthresh/congestion event rồi chuyển sang additive increase. Slow start kết thúc sớm bằng pacing (prr) hoặc BBR Startup. Ảnh hưởng thực tế: kết nối mới luôn chịu 'tax' vài round trip — lại là lý do keep-alive/pool/pre-warm.",
+      "related": [
+        "BBR congestion control",
+        "Connection pool",
+        "TLS handshake cost, session resumption, OCSP stapling"
+      ]
+    },
+    {
+      "term": "Nagle's algorithm & delayed ACK",
+      "aliases": [
+        "Nagle algorithm",
+        "delayed ACK",
+        "RFC 896",
+        "tinygram"
+      ],
+      "level": "intermediate",
+      "problem": "Protocol gửi phím gõ / message nhỏ hàng chục byte thấy latency lạ thường (40-200ms) đôi khi — hai thuật toán tối ưu 'chống nhau': một bên gom gói, bên kia chờ trả lời.",
+      "origin": "John Nagle (Ford Aerospace), RFC 896 'Congestion Control in IP/TCP Internetworks', 1984; delayed ACK đến từ triển khai TCP cổ điển (~4.2BSD)",
+      "how": "Nagle: chỉ gửi segment nhỏ ngay khi không có gói chưa ACK; nếu có thì gom đến khi ACK về hoặc đủ MSS (giảm tinygram). Delayed ACK: receiver chờ ~40ms (hoặc 2 packet đến) mới ACK. Kết quả deadlock nhẹ: Nagle chờ ACK, ACK bị delay → 40ms+. Fix: TCP_NODELAY cho latency-sensitive, gom message ở ứng dụng, hoặc dùng header + payload trong 1 packet.",
+      "related": [
+        "TCP keepalive (SO_KEEPALIVE) & dead-peer detection",
+        "Latency numbers every programmer should know",
+        "Bufferbloat"
+      ]
+    },
+    {
+      "term": "Bufferbloat",
+      "aliases": [
+        "phình bộ đệm",
+        "độ trễ do buffer",
+        "smart queue management"
+      ],
+      "level": "intermediate",
+      "problem": "Đường truyền 50Mbps nhưng ping luôn 300ms+ vì router consumer giữ buffer hàng trăm MB 'cho đầy' rồi packet delay cả giây — VoIP/gaming lag trong khi throughput test vẫn 'nhanh'.",
+      "origin": "Thuật ngữ phổ biến nhờ Jim Gettys (blog 'Bufferbloat', ~2010-2011); giải pháp CoDel của Nichols & Jacobson (2012)",
+      "how": "Buffer lớn ở switch/router/home gateway giữ queue đầy → standing queue → RTT tăng (theo Little's law: L = λW, W phình khi queue phình). Xử lý: sqm/fq_codel/cake đặt queue nhỏ + fair queueing, hoặc giảm hẳn buffer — theo BBR: bạn không cần buffer đầy để đạt BtlBw.",
+      "related": [
+        "Little's law",
+        "BBR congestion control",
+        "Bandwidth vs Latency"
+      ]
+    },
+    {
+      "term": "SYN flood & SYN cookies",
+      "aliases": [
+        "SYN flood",
+        "SYN cookie",
+        "half-open connection"
+      ],
+      "level": "intermediate",
+      "problem": "Máy chủ web nhận hàng triệu SYN giả, bảng kết nối half-open đầy thật → không accept nổi kết nối hợp lệ (từ chối dịch vụ cả khách thật).",
+      "origin": "Sóng tấn công SYN flood được cảnh báo rộng rãi cuối những năm 1990 (CERT); SYN cookies do Daniel J. Bernstein đề xuất năm 1996",
+      "how": "Attacker gửi SYN mà không trả lời ACK, mỗi kết nối nửa vời chiếm entry bảng. SYN cookie mã hóa state (timestamp, MSS, secret) vào ISN sequence → server không lưu state cho đến khi ACK hợp lệ về; kèm backlog tuning, syncookies sysctl, rate limit SYN theo nút con.",
+      "related": [
+        "Connection pool",
+        "Backpressure & rate shaping",
+        "HTTP keep-alive"
+      ]
+    },
+    {
+      "term": "JIT compilation & warmup",
+      "aliases": [
+        "just-in-time",
+        "JIT warmup",
+        "pre-warming JIT",
+        "tiered compilation"
+      ],
+      "level": "intermediate",
+      "problem": "Service JVM vừa deploy (hoặc vừa scale) cho p99 xấu gấp 3-5 lần vài phút đầu vì mã bytecode chưa được biên dịch thành mã máy tối ưu — benchmark hoặc smoke test ngay sau restart ra kết quả sai.",
+      "origin": "JIT như khái niệm xuất hiện từ đầu thập niên 1980 (Smalltalk-80 VM, UCSD p-code); phổ biến rộng rãi bởi JVM/HotSpot từ những năm 1990-2000",
+      "how": "Runtime dịch bytecode → machine code khi phát hiện hot method (profiling counters), rồi tái biên dịch cấp cao hơn (C1/C2 tiered, OSR). Warmup = thời gian JIT quan sát + biên dịch + JIT log ổn định. Trong benchmark: warmup đủ vòng, xóa/warm JIT profile nhất quán; trong prod: pre-warm bằng health-check/traffic giả trước khi nhận user thật.",
+      "related": [
+        "Hot path",
+        "Benchmark",
+        "Microbenchmark & bẫy của nó"
+      ]
+    },
+    {
+      "term": "Profiling: CPU/heap, flame graph",
+      "aliases": [
+        "flame graph",
+        "CPU profiler",
+        "heap profiler"
+      ],
+      "level": "intermediate",
+      "problem": "Code chậm nhưng log và metric chỉ nói endpoint mất 2s, không nói hàm nào, dòng nào đang cháy CPU hay giữ object; đoán mò theo cảm tính khiến fix sai chỗ và performance regression lặp lại.",
+      "origin": "Flame graph do Brendan Gregg phát triển năm 2011 (brendangregg.com/flamegraphs); USE method cũng của Gregg",
+      "how": "Sampling profiler lấy stack định kỳ (low overhead) → histogram stack; instrument ghi mọi entry (đầy đủ nhưng overhead cao). Flame graph: trục X = % mẫu (không phải thời gian), trục Y = độ sâu stack, width = tỉ trọng CPU — nhìn ngay 'ngọn lửa' nóng. Heap profiler (pprof, async-profiler) xem ai giữ object; kết hợp mutation breakpoint/line-level cho phần code cần sửa.",
+      "related": [
+        "Sampling vs instrumentation",
+        "Hot path",
+        "Benchmark",
+        "USE Method"
+      ]
+    },
+    {
+      "term": "Sampling vs instrumentation",
+      "aliases": [
+        "sampling profiler",
+        "instrumentation overhead",
+        "observer effect profiling"
+      ],
+      "level": "intermediate",
+      "problem": "Bật profiler instrumentation để đo thì chính nó làm slowdown 2-5x, benchmark bị thay đổi ('hiệu ứng người quan sát'); sampling quá thô thì miss hot path hàng chục μs.",
+      "origin": "",
+      "how": "Sampling: đếm stack mỗi N μs hoặc N event (perf, async-profiler wall/cpu) — overhead thấp, số liệu statistical, có thể miss code ngắn. Instrumentation: hook mọi hàm/đoạn (pgo, karhu, eBPF uprobe dày) — chính xác per-call nhưng overhead và skew độ trễ. Chọn theo câu hỏi: 'chỗ nào tốn CPU tổng thể?' → sampling; 'hàm này chạy bao nhiêu lần/bao lâu?' → instrumentation có kiểm soát sampling rate.",
+      "related": [
+        "Profiling",
+        "Tracing overhead",
+        "Benchmark"
+      ]
+    },
+    {
+      "term": "Tracing overhead",
+      "aliases": [
+        "overhead distributed tracing",
+        "OpenTelemetry overhead"
+      ],
+      "level": "intermediate",
+      "problem": "Mở full tracing cho mọi request trên service QPS cao thì CPU và network export phình, latency tăng — 'đo để không làm méo thứ mình đo'.",
+      "origin": "",
+      "how": "Mỗi span = object + serialization + export; head sampling (quyết định trace ở entry), tail sampling (giữ trace chậm/lỗi), probabilistic rate. Benchmark so sánh bật/tắt tracing; giới hạn attributes/stack depth; queue+batch exporter. Quy tắc: overhead mục tiêu < ~1-5% CPU, luôn đo baseline.",
+      "related": [
+        "Sampling vs instrumentation",
+        "Latency histogram / HDR Histogram",
+        "Observability"
+      ]
+    },
+    {
+      "term": "Microbenchmark & bẫy của nó",
+      "aliases": [
+        "benchmark nhỏ",
+        "microbenchmark pitfalls",
+        "JMH",
+        "benchmark artifacts"
+      ],
+      "level": "intermediate",
+      "problem": "Benchmark vòng lặp 10^9 lần hàm 5ns rồi kết luận tối ưu 20% — thực tế JVM đã dead-code elimination, constant fold, CPU boost, branch predictor ấm, và khác hẳn khi chạy thật với data lớn.",
+      "origin": "",
+      "how": "Bẫy: dead-code elimination (kết quả không dùng → JIT xóa), store-to-load forwarding/constant folding, warmup thiếu, data set nằm gọn trong L1 (không phản ánh production), turbo clock, run-to-run variance, đồng bộ đo sai (System.nanoTime mỗi iter). Giải pháp: JMH/blackhole, warmup đầy đủ, -prof perf, chạy nhiều lần, báo median + confidence interval.",
+      "related": [
+        "Warmup & statistical significance trong benchmark",
+        "Benchmark"
+      ]
+    },
+    {
+      "term": "Warmup & statistical significance trong benchmark",
+      "aliases": [
+        "warm-up",
+        "độ tin cậy thống kê",
+        "confidence interval benchmark",
+        "noise floor"
+      ],
+      "level": "advanced",
+      "problem": "So sánh 2 commit, bản A nhanh hơn 3% rồi 'merge đi' — chạy lại 10 lần thì khác biệt nằm trong noise, rồi 'performance regression' ảo kéo dài hàng tuần.",
+      "origin": "",
+      "how": "Warmup: cho JIT/OS/page cache/branch predictor ổn định trước khi đo (JVM, DB buffer pool). Ý nghĩa thống kê: chạy đủ mẫu (n≥10-30), loại outlier có lý do, tính CI/p-value hoặc ít nhất là overlap của median±IQR; ngưỡng regression phải vượt noise floor đo được (vd >5% và CI không giao).",
+      "related": [
+        "Microbenchmark & bẫy của nó",
+        "Benchmark",
+        "JIT compilation & warmup"
+      ]
+    },
+    {
+      "term": "Capacity test vs performance test",
+      "aliases": [
+        "capacity testing",
+        "performance testing",
+        "load test vs stress test",
+        "soak test"
+      ],
+      "level": "basic",
+      "problem": "Team chỉ chạy 'load test đúng kịch bản giờ cao điểm' rồi kết luận đủ capacity — thực tế không biết giới hạn rìa ở đâu, không biết phục hồi sau quá tải ra sao.",
+      "origin": "Performance engineering; Capacity planning",
+      "how": "Performance test đo latency/throughput ở mức load xác định (so sánh regression); capacity test dò đến ngưỡng (max sustainable RPS trước khi latency SLO vỡ); stress test vượt ngưỡng để xem degrade/recovery; soak test chạy giờ-độ để bắt leak. Mỗi loại mục tiêu và tiêu chí pass khác nhau.",
+      "related": [
+        "Performance budget & SLO-driven optimization",
+        "Benchmark"
+      ]
+    },
+    {
+      "term": "N+1 query",
+      "aliases": [
+        "N+1 query",
+        "N+1 problem",
+        "truy vấn N+1",
+        "chậm vì lặp query",
+        "vấn đề N+1 query",
+        "N+1 select",
+        "lazy loading issue"
+      ],
+      "level": "basic",
+      "domain": "Hiệu năng",
+      "problem": "Trang danh sách 50 bài viết hiển thị tác giả chậm vài giây vì code hỏi DB 51 lần: một lần lấy danh sách, rồi 50 lần query lặp trong vòng lặp để lấy category hay tác giả từng dòng. QPS vào DB phình gấp khoảng 50 lần, latency tăng theo O(N) dù code chạy đúng với ORM lazy loading.",
+      "origin": "Không rõ tác giả; thuật ngữ phổ biến qua cộng đồng ORM/Ruby on Rails (cuối thập niên 2000)",
+      "how": "Gộp các query lặp thành một lệnh duy nhất bằng JOIN hoặc include prefetch, hoặc batch theo khóa chính (WHERE id IN (...)) rồi dựng map tra cứu trong bộ nhớ, giảm từ N+1 xuống tối đa 2-3 query mỗi request. Nhận diện bằng log query của ORM, chế độ debug, đếm số statement mỗi request và EXPLAIN hoặc pg_stat_statements.",
+      "related": [
+        "Query batching (IN / bulk)",
+        "Fan-out / Fan-in",
+        "Prefetch",
+        "ORM",
+        "Connection pool",
+        "Query plan / EXPLAIN"
+      ]
+    },
+    {
+      "term": "Query batching (IN / bulk)",
+      "aliases": [
+        "batch query",
+        "whereIn",
+        "bulk insert",
+        "batch insert"
+      ],
+      "level": "basic",
+      "problem": "Ghi 1.000 dòng mỗi dòng một INSERT trong 1 transaction riêng → 1.000 round trip mạng và fsync, mất hàng chục giây.",
+      "origin": "",
+      "how": "Gộp N câu thành một: INSERT multi-values, SELECT ... WHERE id IN (n,...), bulk update qua VALUES join (PostgreSQL). Cần trần batch (vd 500-1000 id/query) tránh packet size limit và plan xấu. Tradeoff: SQL dài hơn, parameter limits (SQLite 999), lock giữ lâu hơn.",
+      "related": [
+        "N+1 query",
+        "Batching",
+        "Fan-out / Fan-in"
+      ]
+    },
+    {
+      "term": "Fan-out & amplification factor",
+      "aliases": [
+        "amplification",
+        "read amplification",
+        "write amplification",
+        "request amplification"
+      ],
+      "level": "intermediate",
+      "problem": "1 request API phía user khiến service gọi 50 service con (fan-out 50), mỗi service con lại fan-out tiếp → mức khuếch đại gấp 50 lần nằm sau một endpoint trông nhẹ; hay WAL ghi 1MB nhưng flash phải ghi 10MB (write amplification) làm SSD mòn và chậm.",
+      "origin": "",
+      "how": "Fan-out: số lời gọi nội bộ sinh ra từ 1 request — nhân với tail latency (xem The Tail at Scale) và QPS của downstream. Amplification factor: tỉ lệ bytes/IO thực tế so với bytes hữu ích (read/write amplification trong LSM-tree/SSD, DNS amplification trong networking). Đo để phát hiện: metric per-request downstream calls, write bytes/ingest bytes.",
+      "related": [
+        "Tail latency",
+        "N+1 query",
+        "Pagination (offset vs cursor/keyset)"
+      ]
+    },
+    {
+      "term": "Cache stampede / thundering herd",
+      "aliases": [
+        "Stampeding Herd",
+        "cache stampede",
+        "thundering herd",
+        "dogpile",
+        "dog-piling",
+        "hot key stampede",
+        "hotspot key expiry",
+        "đàn ong"
+      ],
+      "level": "intermediate",
+      "domain": "Caching & Hiệu năng",
+      "problem": "Key cache hot (đọc nhiều) hết TTL đúng một thời điểm cao tải → hàng nghìn request đồng loạt miss và cùng đi compute lại/đập vào DB cho đúng một giá trị (10.000 request cho 1 key), thay vì một request tính rồi chia sẻ. Hệ quả: backend/DB quá tải, chết thêm lần nữa (đúng cái mà cache sinh ra để tránh); ví dụ render 3s × 10 req/s = 30 process cùng tính đồng thời.",
+      "origin": "Hiện tượng 'thundering herd' mô tả trong networking/OS hàng thập niên (xem Wikipedia: thundering herd problem); 'cache stampede' là tên gọi cụ thể trong cộng đồng cache (có trong Jargon File); 'Stampeding Herd'/'dogpile'/'dog-piling' là các tên gọi khác, nhấn mạnh phạm vi cache/key; giải pháp probabilistic early expiration: Vattani et al., 2015",
+      "how": "Đảm bảo chỉ một request recompute cho mỗi key đang tính: distributed lock (SETNX) hoặc single-flight (singleflight trong Go, memoize + mutex); các request còn lại chờ hoặc serve stale qua stale-while-revalidate. Giảm xác suất hết hạn trùng nhau: jitter TTL ngẫu nhiên, pre-warm trước khi hết TTL, probabilistic early expiration/early refresh (Vattani et al. 2015 chứng minh phân phối mũ là tối ưu).",
+      "related": [
+        "Stale-while-revalidate",
+        "Hot key",
+        "Single-flight / request coalescing",
+        "TTL (Time To Live)",
+        "Negative caching & cache penetration (null cache)",
+        "Rate Limiting (Adaptive)"
+      ]
+    },
+    {
+      "term": "Stale-while-revalidate",
+      "aliases": [
+        "SWR",
+        "phục vụ cũ làm mới nền",
+        "cache revalidation"
+      ],
+      "level": "intermediate",
+      "problem": "Cache hết hạn = mọi request đầu tiên sau đó chịu full latency backend (và nếu đồng loạt thì thành stampede), trong khi dữ liệu cũ vài giây thường vẫn chấp nhận được.",
+      "origin": "Được chuẩn hóa tại RFC 5861 (M. Nottingham, Yahoo!, tháng 5/2010); cách dùng phổ biến trước đó từ RFC 2616 (HTTP/1.1)",
+      "how": "Khi TTL stale: trả ngay bản cũ cho client (latency ~0) và đồng thời trigger refresh nền; response tiếp theo lấy bản mới. Kết hợp với stale-if-error, jitter TTL, soft/hard TTL. Cân bằng giữa freshness và availability — đo xem dữ liệu cũ bao lâu thì vẫn đúng nghiệp vụ.",
+      "related": [
+        "Cache stampede / thundering herd",
+        "CDN edge caching",
+        "Negative caching & cache penetration (null cache)"
+      ]
+    },
+    {
+      "term": "Negative caching & cache penetration (null cache)",
+      "aliases": [
+        "null cache",
+        "negative cache",
+        "cache penetration",
+        "không-trúng xuyên thấu"
+      ],
+      "level": "intermediate",
+      "problem": "Bot quét id không tồn tại liên tục: mỗi request đều miss cache → 100% dồn xuống DB (cache penetration), hoặc cache 'không có' TTL quá dài thì item vừa được tạo lại bị che (null cache sai).",
+      "origin": "",
+      "how": "Negative caching: lưu kết quả 'không tồn tại' với TTL ngắn (vd 30-60s) để chặn chuỗi miss lặp. Null cache/không-trúng cache penetration: key lạ không có trong cache luôn đi DB — đối phó: bloom filter phía trước, validate id định dạng, TTL negative ngắn, jitter. Đừng cache null vĩnh viễn (che dữ liệu vừa ghi).",
+      "related": [
+        "Cache hit ratio",
+        "Stale-while-revalidate",
+        "Hot key"
+      ]
+    },
+    {
+      "term": "Hot key",
+      "aliases": [
+        "Hot key / hot partition",
+        "hot partition",
+        "phân vùng nóng",
+        "hotspot key",
+        "skewed key",
+        "khóa nóng"
+      ],
+      "level": "intermediate",
+      "domain": "Caching & Hiệu năng",
+      "problem": "Phân bố key theo hash hiếm khi đều trong thực tế (zipf): một hashtag viral dồn 30% traffic vào một shard, và một key như sản phẩm flash-sale hay tweet của người nổi tiếng nhận hàng chục nghìn query/giây — node Redis duy nhất giữ key đó chạm trần CPU/network (CPU 100% trong khi toàn cluster chỉ 40%). Xoá cache để refresh key đó thì lập tức hàng nghìn thread stampede cùng đọc DB.",
+      "origin": "không rõ (bài toán hotspot phổ biến trong blog kỹ thuật Trung Quốc và tài liệu vận hành Redis/MySQL)",
+      "how": "Hot key hình thành do phân bố key lệch (zipf). Cách xử lý: tách hot key ra instance riêng bằng salting hoặc trie sharding cho hot prefix; replicate key sang nhiều node, thêm random suffix (key-1..key-N) và hash về nhiều shard rồi để client load-balance; thêm lớp cache L1 tại ứng dụng với TTL ngắn; rate limit theo key; hoặc đọc key đó từ read replica DB. Phát hiện hotspot bằng per-key access counter có sampling.",
+      "related": [
+        "Cache stampede / thundering herd",
+        "Cache penetration / breakdown / thundering herd",
+        "Hot path",
+        "Redis",
+        "Connection pool"
+      ]
+    },
+    {
+      "term": "Backpressure & rate shaping",
+      "aliases": [
+        "back pressure",
+        "áp suất ngược",
+        "khối áp lực ngược",
+        "throttling",
+        "flow control",
+        "rate limiting vs rate shaping",
+        "buffering",
+        "buffer",
+        "Backpressure (Reactive)",
+        "reactive backpressure",
+        "subscriber.request(n)",
+        "demand-driven flow",
+        "Rate shaping"
+      ],
+      "level": "advanced",
+      "domain": "Bền vững & Chị tải",
+      "problem": "Producer nhanh hơn consumer: dữ liệu dồn vào queue/buffer trong RAM phình tới OOM, service crash và mất dữ liệu; reactive streams cũng gặp cảnh buffer vô hạn khi subscriber nhận chậm hơn publisher. Cần truyền tín hiệu 'chậm lại' hoặc từ chối có kiểm soát thay vì để hệ thống sập ngẫu nhiên.",
+      "origin": "Khái niệm backpressure từ networking/dataflow; được phổ biến trong model reactive/Reactive Streams (2015-2016); Reactive Streams initiative: collaboration giữa Kaazing, Lightbend, Netflix, Pivotal, Red Hat, Twitter và nhiều others; Java API v1.0.4 phát hành 2022-05-26; java.util.concurrent.Flow trong JDK 9 tương đương 1:1",
+      "how": "Backpressure truyền tín hiệu 'chậm lại' ngược từ consumer sang producer qua TCP window, bounded queue kèm chính sách discard/block, hoặc credit-based flow control trong gRPC/reactive. Reactive streams dùng demand-driven: Subscriber gọi Subscription.request(n) để yêu cầu n element, Publisher chỉ gửi tối đa n element (onNext) cho đến khi hết demand; request cộng dồn, request <= 0 báo onError, tránh stop-and-wait (request 1), buffer luôn bounded theo demand. Ở phía nhận request: rate limiting chặn request đến (trả 429); rate shaping giữ lại và phát ra đều hơn để làm mượt đỉnh. Kết hợp: bounded queue + drop policy có chủ đích + metric queue depth.",
+      "related": [
+        "Little's law",
+        "Disk IOPS, throughput & queue depth",
+        "Fan-out / Fan-in",
+        "Queue Backpressure",
+        "Reactive Streams",
+        "Head-of-line blocking",
+        "Queue",
+        "Latency vs Throughput",
+        "Batching",
+        "Debounce / Throttle (backend context)",
+        "Message queue",
+        "Stream processing vs batch",
+        "Apache Kafka"
+      ]
+    },
+    {
+      "term": "Memoization",
+      "aliases": [
+        "ghi nhớ kết quả",
+        "memoise",
+        "function result cache"
+      ],
+      "level": "basic",
+      "problem": "Hàm đệ quy tính lại Fibonacci/parse config/validate token hàng nghìn lần với cùng input — CPU đốt cho việc đã từng tính rồi.",
+      "origin": "Thuật ngữ do Donald Michie đặt năm 1968 (từ tiếng Hy Lạp 'memorikos')",
+      "how": "Hash map input → kết quả, lần gọi sau trả thẳng (trade time lấy space). Yêu cầu hàm thuần (cùng input → cùng output) và key hash ổn định; cần TTL/invalidation nếu dữ liệu nền thay đổi. Kết hợp cache-control: LRU cho kích thước, per-key lock chống stampede khi compute đắt.",
+      "related": [
+        "Cache hit ratio",
+        "Lazy vs eager loading / lazy evaluation",
+        "Cache stampede / thundering herd"
+      ]
+    },
+    {
+      "term": "Lazy vs eager loading / lazy evaluation",
+      "aliases": [
+        "trễ trễ",
+        "deferred evaluation",
+        "call-by-need",
+        "eager loading",
+        "Lazy evaluation",
+        "lazy loading"
+      ],
+      "level": "basic",
+      "problem": "Eager: render trang list 1000 phần tử gán mọi relation dù 90% không hiển thị → query thừa. Lazy ngược lại: mỗi phần tử hiển thị lại query 1 lần → N+1. Cả hai cực đoan đều sai.",
+      "origin": "Lazy evaluation (call-by-need) là chủ đề học thuật PL từ thập niên 1970",
+      "how": "Lazy hoãn tính đến khi giá trị cần (giảm work thừa, thêm độ trễ lần đầu + complexity); eager tính ngay (dễ dự đoán, trả giá trước). Trong backend: lazy load relation theo trang, nhưng eager theo batch cho list; pagination + virtual list; dùng projection select đúng cột.",
+      "related": [
+        "N+1 query",
+        "Memoization",
+        "Pagination (offset vs cursor/keyset)"
+      ]
+    },
+    {
+      "term": "Debounce & throttle",
+      "aliases": [
+        "debounce",
+        "throttle",
+        "giới hạn tần suất event"
+      ],
+      "level": "basic",
+      "problem": "User gõ nhanh mỗi phím bắn 1 request gợi ý → server nhận 10 request/giây cho 1 truy vấn thật, phần lớn bị bỏ phí (và có thể bị rate limit chính mình).",
+      "origin": "",
+      "how": "Debounce: chỉ fire sau khi sự kiện dừng một khoảng (gõ xong mới gọi API). Throttle: fire tối đa 1 lần mỗi N ms (cố định tần suất). Áp dụng cả hai phía: client giảm request, server endpoint tìm kiếm có thể debounce/queue nội bộ. Đây là rate shaping ở mức độ trễ-micro.",
+      "related": [
+        "Backpressure & rate shaping",
+        "Debounced search"
+      ]
+    },
+    {
+      "term": "Connection pool",
+      "aliases": [
+        "Connection pool vs kết nối mới",
+        "connection pool",
+        "pooling",
+        "pre-warm connections",
+        "connection reuse",
+        "pool kết nối",
+        "kết nối DB tái sử dụng",
+        "connection pooling",
+        "DB pool",
+        "Connection Pool Sizing",
+        "kích thước connection pool",
+        "kết nối pool",
+        "pool kết nối database",
+        "Connection pool vs new connection"
+      ],
+      "level": "basic",
+      "domain": "Hiệu năng",
+      "problem": "Mỗi request mở một kết nối TCP mới, thực hiện TLS handshake (1-2 RTT) và xác thực với database rồi đóng lại ngay: chi phí hàng chục đến vài trăm mili giây lặp lại ở từng request, máy chủ tốn thêm file descriptor và các socket nằm trong TIME_WAIT. Khi traffic cao, hàng nghìn kết nối ngắn hạn đồng thời dồn lên database làm cạn slot và RAM của nó, tình trạng này gọi là connection storm; môi trường serverless như Lambda còn phải khởi tạo lại kết nối ở mỗi lần thực thi. Chọn sai kích thước pool cũng gây hại tương tự: pool quá nhỏ khiến request phải chờ đợi tài nguyên, pool quá lớn đẩy quá nhiều connection đồng thời lên database thay vì bảo vệ nó.",
+      "origin": "Không rõ tác giả — pool kết nối phổ biến từ thời ODBC/JDBC những năm 1990 và phát triển cùng application server Java thập niên 2000 (Commons DBCP, HikariCP)",
+      "how": "Chương trình giữ sẵn một nhóm kết nối đã xác thực, application mượn rồi trả lại trong khoảng microsecond thay vì mở và đóng mỗi lần. Các tham số quan trọng: max pool size tính theo số instance ứng dụng và giới hạn max_connections của database, công thức tham khảo max_pool_size ≈ threads_per_instance × instances; idle timeout chống việc NAT hoặc proxy âm thầm giết kết nối cũ; validation query khi mượn để loại connection chết; leak detection log stack trace của kết nối không được trả về. Pre-warming mở sẵn toàn bộ pool lúc khởi động trước khi nhận traffic để tránh cold-start spike; HikariCP khuyến nghị tránh pool quá lớn, theo dõi wait time và kết hợp circuit breaker khi database chậm.",
+      "related": [
+        "HTTP keep-alive",
+        "Connection leak & pool exhaustion",
+        "TCP",
+        "Thread Pool Sizing",
+        "TLS handshake",
+        "Bulkhead",
+        "Zombie Connection"
+      ]
+    },
+    {
+      "term": "TLS handshake cost, session resumption, OCSP stapling",
+      "aliases": [
+        "TLS handshake",
+        "session resumption",
+        "OCSP stapling",
+        "0-RTT",
+        "session ticket"
+      ],
+      "level": "advanced",
+      "problem": "TLS 1.2 full handshake thêm 2 RTT (+ chứng chỉ vài KB) mỗi kết nối mới; OCSP check riêng làm chậm thêm; client ở đường truyền 200ms thấy chậm rõ rệt.",
+      "origin": "OCSP stapling mô tả tại RFC 6960 (2013) và RFC 6066 (session ticket, 2011)",
+      "how": "Session resumption (session ID/ticket TLS 1.2, PSK TLS 1.3) bỏ đi phần trao đổi chứng chỉ. TLS 1.3 rút handshake còn 1-RTT (0-RTT với replay risk). OCSP stapling: server tự staple phản hồi OCSP tươi (CRL/OCSP check) thay vì browser tự hỏi CA — giảm 1 chu kỳ mạng và lỗi CA-down.",
+      "related": [
+        "HTTP keep-alive",
+        "Bandwidth vs Latency"
+      ]
+    },
+    {
+      "term": "TTFB (Time To First Byte)",
+      "aliases": [
+        "time to first byte",
+        "thời gian đến byte đầu"
+      ],
+      "level": "basic",
+      "problem": "TTFB 2s dù transfer chỉ 20KB: vấn đề nằm ở phía server (DNS, TLS, xử lý, block I/O) chứ không phải bandwidth — nhưng dev lại đi tối ưu nén ảnh.",
+      "origin": "",
+      "how": "TTFB = thời gian từ request bắt đầu đến byte đầu của response về (gồm DNS + TCP + TLS + server processing + network). TTFB cao → nghi server/DB/queue; TTFB thấp mà LCP chậm → nghi payload/render. Phân tách bằng watermark DevTools (DNS/connect/TLS/wait).",
+      "related": [
+        "DNS lookup cost",
+        "TLS handshake cost, session resumption, OCSP stapling",
+        "FCP / LCP (web vitals backend liên quan)"
+      ]
+    },
+    {
+      "term": "DNS lookup cost",
+      "aliases": [
+        "DNS resolution",
+        "resolve time",
+        "DNS TTL"
+      ],
+      "level": "basic",
+      "problem": "Mỗi cold request chịu 1-2 lần DNS query hàng chục-hàng trăm ms (đặc biệt mobile/3G hoặc resolver chậm), và TTL thấp làm re-resolve thường xuyên.",
+      "origin": "",
+      "how": "Hạ tầng DNS: recursive resolver cache theo TTL; hạ TTL trước khi migrate. Ứng dụng: connection pooling giữ socket sống (không phải resolve lại), happy eyeballs IPv6/IPv4 song song, DNS-over-HTTPS/TCP có chi phí riêng. Đo riêng component DNS trong waterfall.",
+      "related": [
+        "HTTP keep-alive",
+        "TTFB",
+        "Latency numbers every programmer should know"
+      ]
+    },
+    {
+      "term": "FCP / LCP (web vitals backend liên quan)",
+      "aliases": [
+        "First Contentful Paint",
+        "Largest Contentful Paint",
+        "Core Web Vitals"
+      ],
+      "level": "basic",
+      "problem": "LCP 4s trên mobile do HTML render-blocking + ảnh hero không nén + API chặn first paint (màn hình đầu) — số liệu UX này quyết định SEO/ranking nhưng dev backend thường không nhìn.",
+      "origin": "FCP đến từ cộng đồng W3C Web Performance; LCP do nhóm Chrome/Google giới thiệu ~2019, chuẩn hóa trong Core Web Vitals (web.dev, 2020)",
+      "how": "FCP: thời điểm pixel đầu tiên có nội dung xuất hiện. LCP: thời điểm phần tử lớn nhất (hero ảnh/title) hoàn tất. Backend ảnh hưởng qua: TTFB, server-rendered HTML, CDN cache hit, payload ảnh/API blocking. Ngân sách: LCP < 2.5s ở p75, TTFB mục tiêu < 800ms.",
+      "related": [
+        "TTFB",
+        "Performance budget & SLO-driven optimization",
+        "CDN edge caching"
+      ]
+    },
+    {
+      "term": "Compression (gzip/Brotli)",
+      "aliases": [
+        "nén dữ liệu",
+        "gzip",
+        "brotli",
+        "nén HTTP",
+        "compression ratio",
+        "Compression (gzip/brotli) & CPU tradeoff"
+      ],
+      "level": "basic",
+      "domain": "Caching & Hiệu năng",
+      "problem": "Response JSON/HTML/JS hàng trăm KB gửi nguyên dạng khiến trang tải chậm trên mạng di động và tốn bandwidth, kéo theo chi phí băng thông egress mỗi GB server trả về. Bật nén lại tạo ra đánh đổi ngược: brotli level 11 nén JSON 200KB tốn khoảng 50ms CPU mỗi request, ở QPS cao thì bandwidth tiết kiệm được đổi bằng CPU và latency; còn nén cả ảnh/video vốn đã nén chỉ làm tốn CPU vô ích.",
+      "origin": "Gzip là RFC 1952 (1996). Brotli do kỹ sư Google Jyrki Alakuijala và Zoltán Szabadka phát triển, phát hành 15/10/2013, chuẩn hóa RFC 7932",
+      "how": "Nén payload trước khi gửi (Content-Encoding), client giải nén; JSON 500KB có thể còn ~50-100KB. Gzip (deflate) nhanh, giảm ~70-80% kích thước so với thô; brotli (Google, RFC 7932) ratio cao hơn, nén tốt hơn ~15-20% với JS/HTML/CSS nhờ dictionary 120KB, nhưng encode chậm hơn ở level cao nên static asset thường được precompress từ lúc build. Chỉ nén text (JSON/HTML/JS/CSS), bỏ qua ảnh/video đã nén, đặt threshold tối thiểu ~1KB, trả Vary: Accept-Encoding, và với nội dung động thì chọn level theo QPS — tính CPU/request × QPS trước khi bật level cao.",
+      "related": [
+        "CDN (Content Delivery Network)",
+        "Latency vs Throughput",
+        "Connection pool",
+        "NUMA & CPU pinning",
+        "Zero-copy (sendfile)",
+        "CDN edge caching"
+      ]
+    },
+    {
+      "term": "Non-blocking I/O",
+      "aliases": [
+        "async I/O",
+        "nonblocking",
+        "async/await I/O"
+      ],
+      "level": "intermediate",
+      "problem": "Thread bị block chờ read socket (hoặc NFS) trong 50ms thì toàn bộ capacity của thread đó mất — 20 thread block = service tê liệt dù CPU rảnh 90%.",
+      "origin": "",
+      "how": "Socket ở chế độ non-blocking: read trả EAGAIN thay vì chờ; event loop đăng ký epoll rồi quay lại khi data sẵn sàng. Nhờ đó hàng vạn kết nối sống trên 1 thread. Phải tránh block đồng bộ vô tình (DNS, file sync, gọi library blocking) trong hot loop.",
+      "related": [
+        "epoll vs select vs poll",
+        "Event loop",
+        "C10k problem"
+      ]
+    },
+    {
+      "term": "Prefetch",
+      "aliases": [
+        "hardware prefetch",
+        "software prefetch",
+        "read-ahead",
+        "prefetching"
+      ],
+      "level": "intermediate",
+      "problem": "Duyệt con trỏ liên kết (linked list/tree node phân tán) chậm vì mỗi node một cache miss — CPU không đoán được trỏ tiếp theo nên luôn chờ DRAM.",
+      "origin": "",
+      "how": "Hardware prefetcher đoán pattern tuần tự/stride và nạp trước dòng cache; software prefetch (__builtin_prefetch/PRF) chủ động nạp ô sẽ dùng sau N vòng lặp. Tối ưu cấu trúc data (array thay vì linked list) thường thắng prefetch thủ công. Cũng áp dụng ở tầng cao: prefetch relation/bản ghi trước khi cần.",
+      "related": [
+        "Cache locality (spatial/temporal)",
+        "N+1 query",
+        "Lazy vs eager loading / lazy evaluation"
+      ]
+    },
+    {
+      "term": "Memory allocation & GC churn",
+      "aliases": [
+        "allocation rate",
+        "memory churn",
+        "heap allocation",
+        "object churn"
+      ],
+      "level": "intermediate",
+      "problem": "Hot loop new object hàng triệu lần mỗi giây làm GC chạy liên tục, log GC warning và p99 phình dù algorithm chính xác.",
+      "origin": "",
+      "how": "Mỗi allocation = native heap/arena work + later reclamation; rate cao → young GC dày đặc → STW/scan nhiều. Giảm: object pool/arena, reuse buffer (bytes.Buffer), tránh boxing/lambda capture thừa, chọn cấu trúc data gọn (primitive arrays), đo allocation rate qua profiler (async-profiler, go tool pprof -alloc).",
+      "related": [
+        "Generational GC",
+        "Stop-the-world & GC pause",
+        "Profiling"
+      ]
+    },
+    {
+      "term": "Zero-copy file: mmap & huge page",
+      "aliases": [
+        "memory-mapped file",
+        "mmap",
+        "huge pages",
+        "transparent huge pages"
+      ],
+      "level": "advanced",
+      "problem": "Đọc file lớn rồi copy vào buffer user (read+memcpy 2 lần), hoặc cấu trúc dữ liệu khổng lồ bị TLB miss liên tục do trang 4KB thông thường.",
+      "origin": "",
+      "how": "mmap: map file vào vùng địa chỉ, page fault nạp trang khi chạm (không copy explicit) — tiện cho random access, nhưng page fault first-touch và writeback bất ngờ có thể gây spike. Huge page (2MB/1GB) giảm số entry TLB và fault overhead; THP Linux cần kiểm tra vì compaction có thể gây pause. Tradeoff: mmap phức tạp với I/O đồng bộ và invalidate.",
+      "related": [
+        "Page fault, swap & OOM killer",
+        "NUMA & CPU pinning",
+        "Zero-copy"
+      ]
+    },
+    {
+      "term": "Page fault, swap & OOM killer",
+      "aliases": [
+        "page fault",
+        "major/minor fault",
+        "swapping",
+        "OOM killer",
+        "out of memory"
+      ],
+      "level": "advanced",
+      "problem": "Dịch vụ đột nhiên treo 1-2 giây rồi bị kill (exit 137) khi container chạm limit: trang bị trục xuất ra swap hoặc OOM killer chọn kill process.",
+      "origin": "",
+      "how": "Page fault: truy cập trang chưa nạp — minor (cập nhật bảng trang), major (đọc từ disk, hàng ms). Swap/region trục xuất: fault major khi truy cập lại → latency spike. OOM: kernel/cgroup vượt bộ nhớ → kill process (oom_score). Xử lý: bật/đo memory.swap, giới hạn heap rõ ràng, tránh overcommit liều, set memory request/limit hợp lý.",
+      "related": [
+        "cgroup limits, CPU throttling & noisy neighbor",
+        "NUMA & CPU pinning",
+        "Stop-the-world & GC pause"
+      ]
+    },
+    {
+      "term": "NUMA & CPU pinning",
+      "aliases": [
+        "non-uniform memory access",
+        "numactl",
+        "CPU affinity",
+        "core pinning",
+        "isolcpus",
+        "CPU pinning"
+      ],
+      "level": "advanced",
+      "problem": "Process ghi dữ liệu từ node 0 nhưng thread chạy ở node 1: mỗi truy cập RAM phải qua QPI/UPI interconnect — hiệu năng tụt 10-30% khó hiểu vì 'cùng một máy'.",
+      "origin": "",
+      "how": "NUMA: mỗi socket có RAM cục bộ; truy cập remote node chậm hơn (độ trễ khác nhau — 'không đều'). Tối ưu: numactl --cpunodebind/--membind, thread pool locality theo socket,allocate gần CPU xử lý. CPU pinning (taskset/cgroup cpuset) tránh di chuyển thread → cache ấm, jitter giảm; hữu ích cho hot path và benchmark.",
+      "related": [
+        "False sharing",
+        "Context switch cost",
+        "Huge page"
+      ]
+    },
+    {
+      "term": "Disk IOPS, throughput & queue depth",
+      "aliases": [
+        "IOPS",
+        "queue depth",
+        "disk throughput",
+        "io scheduler",
+        "fio"
+      ],
+      "level": "intermediate",
+      "problem": "Database report chậm nhưng 'đĩa không bận lắm' — nhìn sai metric: throughput (MB/s) ổn định trong khi IOPS saturation và queue depth (nvme0n1qu_time) đang phình, latency ghi tăng gấp 5.",
+      "origin": "",
+      "how": "IOPS = số thao tác mỗi giây (4K random vs 1M sequential khác nhau hàng chục lần); queue depth = số I/O đang chờ trong thiết bị — tăng QD đến một ngưỡng thì throughput bão hòa mà latency tăng tuyến tính (Little's law trên disk). Đo bằng iostat -x (%util, aqu-sz), fio benchmark. SSD: QD nhỏ đã đủ; HDD cần QD lớn.",
+      "related": [
+        "fsync cost & SSD vs HDD latency",
+        "Little's law"
+      ]
+    },
+    {
+      "term": "fsync cost & SSD vs HDD latency",
+      "aliases": [
+        "fsync",
+        "durability",
+        "độ trễ ghi bền",
+        "SSD latency",
+        "fsync fdatasync"
+      ],
+      "level": "advanced",
+      "problem": "WAL ghi mỗi transaction kèm fsync: HDD tốn ~5-15ms mỗi lần (seek), SSD ~0.05-0.5ms — cùng code, cùng ổ 'đĩa', khác HDD thì throughput chỉ vài trăm ghi/giây.",
+      "origin": "fsync là lệnh hệ thống của Unix có từ thập niên 1970 tại Bell Labs. Chi phí mỗi lần fsync do phần cứng quyết định: ổ cơ cần seek vật lý nên mất ~5-15ms, SSD NAND không có seek nên chỉ ~0,05-0,5ms; độ trễ này là đặc tính của ổ đĩa, độc lập với filesystem hay engine database.",
+      "how": "fsync đảm bảo dữ liệu trong cache trang đã về thiết bị bền (power-loss safe); overhead chủ yếu do seek/commit internal của ổ. Tối ưu: group commit (gộp fsync nhiều transaction), ghi log tuần tự thay vì random, fdatasync khi metadata không đổi, dùng NVMe/PLP SSD cho OLTP. Benchmark phải đo cả mixed workload với QD thực.",
+      "related": [
+        "Disk IOPS, throughput & queue depth",
+        "Zero-copy",
+        "Fan-out & amplification factor"
+      ]
+    },
+    {
+      "term": "cgroup limits, CPU throttling & noisy neighbor",
+      "aliases": [
+        "CFS throttling",
+        "cpu.max",
+        "container CPU limit",
+        "noisy neighbor",
+        "steal time"
+      ],
+      "level": "advanced",
+      "problem": "Container có limit 1 CPU nhưng code dùng hết quota mỗi kỳ scheduler (100ms) rồi bị CFS throttle đến hết kỳ — latency nhảy vọt dù CPU trung bình chỉ 60%, hoặc VM trên cùng host bị 'steal time' do tenant khác.",
+      "origin": "CFS bandwidth control (throttle theo quota) do Paul Turner và cộng sự phát triển cho Linux — từ cuối thập niên 2000/2010; 'noisy neighbor' là thuật ngữ cloud phổ biến từ ~2010s",
+      "how": "cgroup v2 cpu.max = quota/period; vượt quota → runnable nhưng bị dừng (throttled, cfs_throttled_count tăng). Noisy neighbor: hypervisor/shared storage contention làm steal/latency tăng không do code. Xử lý: period lớn hơn GC spike, tránh limit quá sát, monitor throttled_usec và steal, chọn dedicated/host resources khi cần.",
+      "related": [
+        "NUMA & CPU pinning",
+        "Performance budget & SLO-driven optimization"
+      ]
+    },
+    {
+      "term": "Performance budget & SLO-driven optimization",
+      "aliases": [
+        "performance budget",
+        "budget hiệu năng",
+        "SLO-driven optimization"
+      ],
+      "level": "basic",
+      "problem": "Không ai đặt ngưỡng 'được phép chậm bao nhiêu' nên mỗi lần regression chỉ phát hiện khi khách khiếu nại; tối ưu lan man vì thiếu tiêu chí 'đủ rồi'.",
+      "origin": "SLO/error budget được hệ thống hóa trong Google SRE Book (2016); performance budget là thông lệ của cộng đồng web performance",
+      "how": "Performance budget: ngưỡng cứng cho metric (LCP < 2.5s, API p99 < 300ms, bundle < 200KB) — vượt là gate CI/PR. SLO = mục tiêu độ tin cậy (99.9% requests < 300ms/tháng); error budget = phần được phép fail, còi báo khi burn quá nhanh. Tối ưu theo budget/SLO, không theo cảm tính.",
+      "related": [
+        "Benchmark",
+        "Tail latency"
+      ]
+    },
+    {
+      "term": "Regression detection trong benchmark & A/B perf testing",
+      "aliases": [
+        "performance regression",
+        "perf A/B test",
+        "canary benchmark",
+        "benchmark CI"
+      ],
+      "level": "advanced",
+      "problem": "Hàng trăm commit mỗi tuần, mỗi commit thêm vài % overhead tích lũy — không ai phát hiện đến khi hệ thống chậm gấp đôi sau 3 tháng.",
+      "origin": "",
+      "how": "Chạy benchmark cố định (máy chuyên dụng hoặc container có pin CPU) trên mỗi commit/PR, so sánh với baseline bằng test thống kê (không chỉ so 1 con số), cảnh báo vượt ngưỡng noise. A/B perf: song song 2 version trên cùng traffic/workload, so p50/p99 với CI. Kết hợp canary deploy + synthetic probe production.",
+      "related": [
+        "Benchmark",
+        "Microbenchmark & bẫy của nó",
+        "Capacity test vs performance test"
+      ]
+    },
+    {
+      "term": "Hot path",
+      "aliases": [
+        "hot code path",
+        "đường nóng",
+        "hot loop",
+        "hotspot code"
+      ],
+      "level": "intermediate",
+      "problem": "Đội tối ưu code path nguội (chạy 1 lần/ngày) trong khi 80% CPU dồn vào 3 hàm được gọi hàng triệu lần mỗi request — không phân biệt hot/cold thì tối ưu vô nghĩa.",
+      "origin": "",
+      "how": "Hot path = đoạn code thực thi với tần suất cao nhất (đo bằng sampling profiler, không đoán). Quy tắc: chỉ tối ưu sau khi profile; trên hot path tránh allocation, syscall, phân nhánh khó đoán, dùng inline/branch prediction-friendly code; cold path ưu tiên clarity. JPM/HP o cũng tự động compile hot method (liên quan JIT).",
+      "related": [
+        "Profiling",
+        "JIT compilation & warmup",
+        "Branch prediction"
+      ]
+    },
+    {
+      "term": "CDN edge caching",
+      "aliases": [
+        "CDN",
+        "edge cache",
+        "cache tại biên",
+        "origin shield"
+      ],
+      "level": "basic",
+      "problem": "User ở xa origin: mỗi lần tải ảnh/video qua nửa vòng đất, origin chịu load dù nội dung tĩnh — chi phí bandwidth và latency cao vô ích.",
+      "origin": "",
+      "how": "CDN phân phối replica nội dung tại PoP gần user: cache HIT → RTT vài ms; MISS → pull về origin rồi phục vụ edge sau. Cấu hình: Cache-Control/TTL, cache key (query string, header), stale-while-revalidate tại edge, purge, origin shield để tránh request storm (cache stampede phân tán). Đo hit ratio theo edge.",
+      "related": [
+        "Stale-while-revalidate",
+        "Cache stampede / thundering herd",
+        "TTFB"
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Amdahl's_law (Gene Amdahl, AFIPS 1967)",
+    "https://en.wikipedia.org/wiki/Gustafson's_law (Gustafson & Barsis, 'Reevaluating Amdahl's Law', 1988)",
+    "https://en.wikipedia.org/wiki/Little's_law (John Little, L=λW)",
+    "https://en.wikipedia.org/wiki/Nagle's_algorithm (John Nagle, RFC 896, 1984)",
+    "https://en.wikipedia.org/wiki/Epoll (epoll, Linux 2.5.45, tháng 10/2002)",
+    "https://en.wikipedia.org/wiki/Bufferbloat (phình buffer, Jim Gettys ~2010-2011)",
+    "https://en.wikipedia.org/wiki/Thundering_herd_problem",
+    "https://en.wikipedia.org/wiki/Head-of-line_blocking",
+    "https://en.wikipedia.org/wiki/Memoization (Donald Michie, 1968)",
+    "https://en.wikipedia.org/wiki/Lazy_evaluation",
+    "https://en.wikipedia.org/wiki/Just-in-time_compilation",
+    "https://www.kegel.com/c10k.html — Dan Kegel, The C10K problem (~2000)",
+    "https://qconsf.com/sf2015/presentation/how-not-measure-latency.html — Gil Tene, QCon SF 2015 (coordinated omission)",
+    "https://www.hdrhistogram.org/ — HDR Histogram (Gil Tene, ~2014)",
+    "https://www.brendangregg.com/flamegraphs.html — Brendan Gregg, Flame Graphs (2011)",
+    "https://github.com/google/bbr — BBR congestion control, Google, 2016 (ACM Queue + bbr-dev)",
+    "https://www.rfc-editor.org/rfc/rfc5861.txt — stale-while-revalidate (M. Nottingham, 5/2010)",
+    "https://kernelnewbies.org/Linux_5.1 — io_uring (Jens Axboe, Linux 5.1, 2019)",
+    "https://research.google.com/archive/tail_at_scale.html — Dean & Barroso, 'The Tail at Scale', CACM 3/2013",
+    "https://gist.github.com/jboner/2841832 và https://philbogle.github.io/interactive-latency-numbers/ — bảng latency numbers từ talk của Jeff Dean, bản tương tác Colin Scott",
+    "https://12factor.net — noop deployment (Adam Wiggins, Heroku)",
+    "https://sre.google/sre-book/table-of-contents/ — SLO/error budget (Google SRE Book, 2016)",
+    "https://www.brendangregg.com/usemethod.html — USE method (Brendan Gregg)",
+    "https://www.rfc-editor.org/rfc/rfc7540 — HTTP/2 (5/2015)"
+  ]
+}

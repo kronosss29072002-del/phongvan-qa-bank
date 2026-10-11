@@ -1,0 +1,331 @@
+- generic [active] [ref=f37e1]:
+  - generic [ref=f37e2]:
+    - generic [ref=f37e4]:
+      - generic [ref=f37e5]:
+        - generic [ref=f37e6]:
+          - link "DuckDuckGo home" [ref=f37e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f37e8]: DuckDuckGo
+          - generic [ref=f37e15]:
+            - combobox "Search privately" [ref=f37e17]: testimonial collection tool social proof why reviews matter conversion statistics
+            - button "Search" [ref=f37e19] [cursor=pointer]
+        - button "Open menu" [ref=f37e24] [cursor=pointer]
+      - navigation [ref=f37e32]:
+        - list [ref=f37e33]:
+          - listitem [ref=f37e34]:
+            - link [ref=f37e35] [cursor=pointer]:
+              - /url: /?q=testimonial+collection+tool+social+proof+why+reviews+matter+conversion+statistics&ia=web
+              - strong [ref=f37e36]: All
+          - listitem [ref=f37e39]:
+            - link [ref=f37e40] [cursor=pointer]:
+              - /url: /?q=testimonial+collection+tool+social+proof+why+reviews+matter+conversion+statistics&ia=images&iax=images
+              - strong [ref=f37e41]: Images
+          - listitem [ref=f37e42]:
+            - link [ref=f37e43] [cursor=pointer]:
+              - /url: /?q=testimonial+collection+tool+social+proof+why+reviews+matter+conversion+statistics&ia=videos&iax=videos
+              - strong [ref=f37e44]: Videos
+          - listitem [ref=f37e45]:
+            - link [ref=f37e46] [cursor=pointer]:
+              - /url: /?q=testimonial+collection+tool+social+proof+why+reviews+matter+conversion+statistics&iaxm=maps
+              - strong [ref=f37e47]: Maps
+        - list [ref=f37e48]:
+          - listitem [ref=f37e49]:
+            - link "Duck.ai" [ref=f37e51] [cursor=pointer]:
+              - /url: /?q=testimonial+collection+tool+social+proof+why+reviews+matter+conversion+statistics&ia=chat&entry=serp
+          - listitem [ref=f37e55]:
+            - button "Search Settings ✀" [ref=f37e57] [cursor=pointer]:
+              - generic [ref=f37e60]: Search Settings
+              - generic [ref=f37e61]: ✀
+    - generic [ref=f37e68]:
+      - navigation [ref=f37e70]:
+        - button [ref=f37e72] [cursor=pointer]:
+          - strong [ref=f37e79]: Private
+        - generic [ref=f37e83]:
+          - switch "Filter by the selected region" [ref=f37e87]
+          - button "Vietnam (en)" [ref=f37e89] [cursor=pointer]
+        - button [ref=f37e94] [cursor=pointer]:
+          - strong [ref=f37e96]: "Safe search: moderate"
+        - button [ref=f37e100] [cursor=pointer]:
+          - strong [ref=f37e102]: Any time
+      - generic [ref=f37e106]:
+        - list [ref=f37e107]:
+          - listitem [ref=f37e108]:
+            - article [ref=f37e109] [cursor=pointer]:
+              - button [ref=f37e111]
+              - generic [ref=f37e115]:
+                - link "Search domain socialproof.reviews" [ref=f37e117]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:socialproof.reviews
+                - generic [ref=f37e120]:
+                  - paragraph [ref=f37e121]: socialproof.reviews
+                  - link "https://socialproof.reviews › statistics › conversion-social-proof-statistics" [ref=f37e122]:
+                    - /url: https://socialproof.reviews/statistics/conversion-social-proof-statistics
+                    - paragraph [ref=f37e124]:
+                      - generic [ref=f37e125]: https://socialproof.reviews
+                      - generic [ref=f37e126]: › statistics › conversion-social-proof-statistics
+              - heading [level=2] [ref=f37e128]:
+                - 'link "Conversion Rate Statistics: Social Proof & Sales Impact" [ref=f37e129]':
+                  - /url: https://socialproof.reviews/statistics/conversion-social-proof-statistics
+              - generic [ref=f37e131]: Data on how social proof affects conversion rates — landing pages, checkout trust signals, and A/B test results — with source guidance and verified placeholders.
+          - listitem [ref=f37e136]:
+            - article [ref=f37e137] [cursor=pointer]:
+              - button [ref=f37e139]
+              - generic [ref=f37e143]:
+                - link "Search domain socialproof.reviews" [ref=f37e145]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:socialproof.reviews
+                - generic [ref=f37e148]:
+                  - paragraph [ref=f37e149]: socialproof.reviews
+                  - link "https://socialproof.reviews › statistics › testimonial-statistics" [ref=f37e150]:
+                    - /url: https://socialproof.reviews/statistics/testimonial-statistics
+                    - paragraph [ref=f37e152]:
+                      - generic [ref=f37e153]: https://socialproof.reviews
+                      - generic [ref=f37e154]: › statistics › testimonial-statistics
+              - heading [level=2] [ref=f37e156]:
+                - 'link "Testimonial Statistics: What the Research Shows | socialproof.reviews" [ref=f37e157]':
+                  - /url: https://socialproof.reviews/statistics/testimonial-statistics
+              - generic [ref=f37e159]: Testimonials are among the oldest forms of social proof in commercial contexts. What has changed is our ability to measure their impact with precision. This page compiles key statistics on how testimonials affect conversion rates, buyer trust, and business outcomes.
+          - listitem [ref=f37e164]:
+            - article [ref=f37e165] [cursor=pointer]:
+              - button [ref=f37e167]
+              - generic [ref=f37e171]:
+                - link "Search domain proofpst.com" [ref=f37e173]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:proofpst.com
+                - generic [ref=f37e176]:
+                  - paragraph [ref=f37e177]: proofpst.com
+                  - link "https://proofpst.com › blog › social-proof-statistics" [ref=f37e178]:
+                    - /url: https://proofpst.com/blog/social-proof-statistics
+                    - paragraph [ref=f37e180]:
+                      - generic [ref=f37e181]: https://proofpst.com
+                      - generic [ref=f37e182]: › blog › social-proof-statistics
+              - heading [level=2] [ref=f37e184]:
+                - link "75+ Social Proof Statistics for 2026 — Reviews, Testimonials & Trust ..." [ref=f37e185]:
+                  - /url: https://proofpst.com/blog/social-proof-statistics
+              - generic [ref=f37e190]:
+                - text: Mar 27, 2026·
+                - generic [ref=f37e191]: The most comprehensive collection of social proof statistics for 2026. Review stats, testimonial data, and consumer trust research. Updated monthly.
+          - listitem [ref=f37e192]:
+            - article [ref=f37e193] [cursor=pointer]:
+              - button [ref=f37e195]
+              - generic [ref=f37e199]:
+                - link "Search domain testigather.com" [ref=f37e201]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:testigather.com
+                - generic [ref=f37e204]:
+                  - paragraph [ref=f37e205]: testigather.com
+                  - link "https://testigather.com › blog › testimonial-statistics" [ref=f37e206]:
+                    - /url: https://testigather.com/blog/testimonial-statistics
+                    - paragraph [ref=f37e208]:
+                      - generic [ref=f37e209]: https://testigather.com
+                      - generic [ref=f37e210]: › blog › testimonial-statistics
+              - heading [level=2] [ref=f37e212]:
+                - link "27 Testimonial Statistics That Prove Social Proof Works (2026)" [ref=f37e213]:
+                  - /url: https://testigather.com/blog/testimonial-statistics
+              - generic [ref=f37e218]:
+                - text: Jan 30, 2026·
+                - generic [ref=f37e219]: Data-backed statistics showing how testimonials and social proof increase conversions, trust, and revenue. Every stat includes source attribution.
+          - listitem [ref=f37e220]:
+            - article [ref=f37e221] [cursor=pointer]:
+              - button [ref=f37e223]
+              - generic [ref=f37e227]:
+                - link "Search domain shno.co" [ref=f37e229]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:www.shno.co
+                - generic [ref=f37e232]:
+                  - paragraph [ref=f37e233]: Shnoco
+                  - link "https://www.shno.co › marketing-statistics › social-proof-statistics" [ref=f37e234]:
+                    - /url: https://www.shno.co/marketing-statistics/social-proof-statistics
+                    - paragraph [ref=f37e236]:
+                      - generic [ref=f37e237]: https://www.shno.co
+                      - generic [ref=f37e238]: › marketing-statistics › social-proof-statistics
+              - heading [level=2] [ref=f37e240]:
+                - 'link "Social Proof Statistics for 2026: Consumer Trust, Reviews, Testimonials ..." [ref=f37e241]':
+                  - /url: https://www.shno.co/marketing-statistics/social-proof-statistics
+              - generic [ref=f37e243]: Up-to-date social proof statistics for 2026, based on the latest figures from the last two years, covering consumer trust, online reviews, testimonials, UGC, influencer endorsements, trust signals, and conversion impact by format.
+          - listitem [ref=f37e248]:
+            - article [ref=f37e249] [cursor=pointer]:
+              - button [ref=f37e251]
+              - generic [ref=f37e255]:
+                - link "Search domain proofpings.com" [ref=f37e257]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:proofpings.com
+                - generic [ref=f37e260]:
+                  - paragraph [ref=f37e261]: proofpings.com
+                  - link "https://proofpings.com › blog › social-proof-statistics" [ref=f37e262]:
+                    - /url: https://proofpings.com/blog/social-proof-statistics
+                    - paragraph [ref=f37e264]:
+                      - generic [ref=f37e265]: https://proofpings.com
+                      - generic [ref=f37e266]: › blog › social-proof-statistics
+              - heading [level=2] [ref=f37e268]:
+                - link "Social Proof Statistics 2025 - Conversion Data and Research" [ref=f37e269]:
+                  - /url: https://proofpings.com/blog/social-proof-statistics
+              - generic [ref=f37e274]:
+                - text: Apr 22, 2026·
+                - generic [ref=f37e275]: A collection of the most reliable social proof statistics - on reviews, testimonials, activity notifications, and their effect on conversion rates.
+          - listitem [ref=f37e276]:
+            - article [ref=f37e277] [cursor=pointer]:
+              - button [ref=f37e279]
+              - generic [ref=f37e283]:
+                - link "Search domain shoutjar.com" [ref=f37e285]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:shoutjar.com
+                - generic [ref=f37e288]:
+                  - paragraph [ref=f37e289]: shoutjar.com
+                  - link "https://shoutjar.com › guides › social-proof-statistics" [ref=f37e290]:
+                    - /url: https://shoutjar.com/guides/social-proof-statistics
+                    - paragraph [ref=f37e292]:
+                      - generic [ref=f37e293]: https://shoutjar.com
+                      - generic [ref=f37e294]: › guides › social-proof-statistics
+              - heading [level=2] [ref=f37e296]:
+                - link "50+ Social Proof Statistics for 2026 — Every Stat You Need | Shoutjar" [ref=f37e297]:
+                  - /url: https://shoutjar.com/guides/social-proof-statistics
+              - generic [ref=f37e299]: 50+ social proof statistics for 2026. Reviews increase conversions by 270%. 93% of consumers check reviews before buying. All stats with sources.
+          - listitem [ref=f37e304]:
+            - article [ref=f37e305] [cursor=pointer]:
+              - button [ref=f37e307]
+              - generic [ref=f37e311]:
+                - link "Search domain notificationx.com" [ref=f37e313]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:notificationx.com
+                - generic [ref=f37e316]:
+                  - paragraph [ref=f37e317]: notificationx.com
+                  - link "https://notificationx.com › blog › social-proof-statistics" [ref=f37e318]:
+                    - /url: https://notificationx.com/blog/social-proof-statistics/
+                    - paragraph [ref=f37e320]:
+                      - generic [ref=f37e321]: https://notificationx.com
+                      - generic [ref=f37e322]: › blog › social-proof-statistics
+              - heading [level=2] [ref=f37e324]:
+                - 'link "Social Proof Statistics 2026: What the Latest Data Says About Online ..." [ref=f37e325]':
+                  - /url: https://notificationx.com/blog/social-proof-statistics/
+              - generic [ref=f37e327]: The latest social proof statistics from across the industry. See how reviews, testimonials, and real-time notifications affect conversion behavior.
+          - listitem [ref=f37e332]:
+            - article [ref=f37e333] [cursor=pointer]:
+              - button [ref=f37e335]
+              - generic [ref=f37e339]:
+                - link "Search domain wisernotify.com" [ref=f37e341]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:wisernotify.com
+                - generic [ref=f37e344]:
+                  - paragraph [ref=f37e345]: WiserNotify
+                  - link "https://wisernotify.com › blog › social-proof-statistics" [ref=f37e346]:
+                    - /url: https://wisernotify.com/blog/social-proof-statistics/
+                    - paragraph [ref=f37e348]:
+                      - generic [ref=f37e349]: https://wisernotify.com
+                      - generic [ref=f37e350]: › blog › social-proof-statistics
+              - heading [level=2] [ref=f37e352]:
+                - link "34 Social Proof Statistics for 2026 (Verified Data) - Wisernotify" [ref=f37e353]:
+                  - /url: https://wisernotify.com/blog/social-proof-statistics/
+              - generic [ref=f37e355]: "34 verified social proof statistics for 2026: reviews, testimonials, UGC, FOMO, and conversion data, organized by category with real sources."
+          - listitem [ref=f37e360]:
+            - article [ref=f37e361] [cursor=pointer]:
+              - button [ref=f37e363]
+              - generic [ref=f37e367]:
+                - link "Search domain provesrc.com" [ref=f37e369]:
+                  - /url: /?q=testimonial%20collection%20tool%20social%20proof%20why%20reviews%20matter%20conversion%20statistics+site:provesrc.com
+                - generic [ref=f37e372]:
+                  - paragraph [ref=f37e373]: ProveSource
+                  - link "https://provesrc.com › blog › social-proof-statistics" [ref=f37e374]:
+                    - /url: https://provesrc.com/blog/social-proof-statistics/
+                    - paragraph [ref=f37e376]:
+                      - generic [ref=f37e377]: https://provesrc.com
+                      - generic [ref=f37e378]: › blog › social-proof-statistics
+              - heading [level=2] [ref=f37e380]:
+                - link "75 Social Proof Statistics for 2026 (Latest Data) - provesrc.com" [ref=f37e381]:
+                  - /url: https://provesrc.com/blog/social-proof-statistics/
+              - generic [ref=f37e386]:
+                - text: Apr 19, 2026·
+                - generic [ref=f37e387]: Social proof isn't just a marketing buzzword—it's the reason 92% of consumers hesitate to buy when reviews are missing. The data for 2026 shows that visible trust signals now influence more purchase decisions than brand messaging or advertising.
+        - button "More results" [ref=f37e390] [cursor=pointer]
+    - list [ref=f37e393]:
+      - button "Close menu" [ref=f37e394] [cursor=pointer]
+      - list [ref=f37e398]:
+        - listitem [ref=f37e399]: Search
+        - listitem [ref=f37e400]:
+          - link "Homepage" [ref=f37e401] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f37e402]:
+          - link "Themes" [ref=f37e403] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f37e404]:
+          - link "Settings" [ref=f37e405] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f37e406]:
+        - listitem [ref=f37e407]: Share Feedback
+        - listitem [ref=f37e408]:
+          - generic [ref=f37e411]:
+            - button "Positive feedback" [ref=f37e412] [cursor=pointer]
+            - button "Negative feedback" [ref=f37e416] [cursor=pointer]
+      - list [ref=f37e420]:
+        - listitem [ref=f37e421]: Downloads
+        - listitem [ref=f37e422]:
+          - link "iOS Browser" [ref=f37e423] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f37e424]:
+          - link "Android Browser" [ref=f37e425] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f37e426]:
+          - link "Mac Browser" [ref=f37e427] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f37e428]:
+          - link "Windows Browser" [ref=f37e429] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f37e430]:
+          - link "Browser Extensions" [ref=f37e431] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f37e432]:
+        - listitem [ref=f37e433]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f37e434]:
+          - link "Duck.ai" [ref=f37e435] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f37e436]:
+          - link "Email Protection" [ref=f37e437] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f37e438]:
+          - link "Newsletter" [ref=f37e439] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f37e440]:
+          - link "Blog" [ref=f37e441] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f37e442]:
+          - link "Podcast" [ref=f37e443] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f37e444]:
+          - link "Collaborations" [ref=f37e445] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f37e446]:
+        - listitem [ref=f37e447]: Learn More
+        - listitem [ref=f37e448]:
+          - link "What’s New" [ref=f37e449] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f37e450]:
+          - link "Compare Privacy" [ref=f37e451] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f37e452]:
+          - link "About Our Browser" [ref=f37e453] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f37e454]:
+          - link "About DuckDuckGo" [ref=f37e455] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f37e456]:
+        - listitem [ref=f37e457]: Other Resources
+        - listitem [ref=f37e458]:
+          - link "Help" [ref=f37e459] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f37e460]:
+          - link "Community" [ref=f37e461] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f37e462]:
+          - link "Careers" [ref=f37e463] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f37e464]:
+          - link "Privacy Policy" [ref=f37e465] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f37e466]:
+          - link "Terms of Service" [ref=f37e467] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f37e468]:
+          - link "Press Kit" [ref=f37e469] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f37e470]:
+          - link "Advertise on Search" [ref=f37e471] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f37e477]:
+    - generic [ref=f37e488]:
+      - heading "Introducing DuckDuckGo Collaborations" [level=3] [ref=f37e489]
+      - paragraph [ref=f37e490]: Expertly crafted products for people who give a duck about privacy.
+    - link "See More" [ref=f37e491] [cursor=pointer]:
+      - /url: https://duckduckgo.com/collaborations
+  - button "Share Feedback" [ref=f37e496] [cursor=pointer]

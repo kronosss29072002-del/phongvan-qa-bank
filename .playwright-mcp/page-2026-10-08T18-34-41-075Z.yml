@@ -1,0 +1,287 @@
+- generic [active] [ref=f288e1]:
+  - dialog [ref=f288e2]:
+    - generic [ref=f288e7]:
+      - generic [ref=f288e8]:
+        - paragraph [ref=f288e9]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+        - paragraph [ref=f288e10]:
+          - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+          - link "Điều khoản về quyền riêng tư" [ref=f288e11] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+      - generic [ref=f288e12]:
+        - link "Chấp nhận" [ref=f288e14] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+        - link "Từ chối" [ref=f288e16] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+      - link "Các lựa chọn khác" [ref=f288e18] [cursor=pointer]:
+        - /url: "javascript: void(0)"
+  - banner [ref=f288e19]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f288e20] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f288e23] [cursor=pointer]
+    - generic [ref=f288e26]:
+      - link [ref=f288e27] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f288e28]
+      - search [ref=f288e29]:
+        - button "Tìm kiếm" [ref=f288e32] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f288e33]: xe đưa đón học sinh phải có thiết bị cạnh báo quên trị thiếu năm 2025 nghị định
+        - generic [ref=f288e34] [cursor=pointer]
+        - generic [ref=f288e36] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f288e41] [cursor=pointer]
+      - link [ref=f288e43] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=3ad1cf6e2fa8c58253fc52b1fe6ab8d35604c4cae85c47e263596400f41e41b7JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT14ZSslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24raCVlMSViYiU4ZGMrc2luaCtwaCVlMSViYSVhM2krYyVjMyViMyt0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrYyVlMSViYSVhMW5oK2IlYzMlYTFvK3F1JWMzJWFhbit0ciVlMSViYiU4Yit0aGklZTElYmElYmZ1K24lYzQlODNtKzIwMjUrbmdoJWUxJWJiJThiKyVjNCU5MSVlMSViYiU4Ym5oJnNlbmRxdWVyeT0xJmZvcm09SEVDT0RY&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f288e44]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f288e46]:
+      - link "Đăng nhập" [ref=f288e47] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f288e49] [cursor=pointer]:
+        - generic [ref=f288e50]: Rewards
+    - navigation "Bộ lọc Tìm kiếm" [ref=f288e66]:
+      - list [ref=f288e67]:
+        - listitem [ref=f288e68]:
+          - link "Tất cả" [ref=f288e69] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f288e71]:
+          - link "Web" [ref=f288e72] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=907b09bee7c2ca07e1db2778fdd4fb8d5ad9b8dbd486ced879151c48cdf05189JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXhlKyVjNCU5MSVjNiViMGErJWM0JTkxJWMzJWIzbitoJWUxJWJiJThkYytzaW5oK3BoJWUxJWJhJWEzaStjJWMzJWIzK3RoaSVlMSViYSViZnQrYiVlMSViYiU4YitjJWUxJWJhJWExbmgrYiVjMyVhMW8rcXUlYzMlYWFuK3RyJWUxJWJiJThiK3RoaSVlMSViYSViZnUrbiVjNCU4M20rMjAyNStuZ2glZTElYmIlOGIrJWM0JTkxJWUxJWJiJThibmgmd2Vic2NwPTEmRk9STT1IRFJXU0M&ntb=1
+        - listitem [ref=f288e73]:
+          - link "Tìm kiếm" [ref=f288e74] [cursor=pointer]:
+            - /url: /copilotsearch?q=xe+%c4%91%c6%b0a+%c4%91%c3%b3n+h%e1%bb%8dc+sinh+ph%e1%ba%a3i+c%c3%b3+thi%e1%ba%bft+b%e1%bb%8b+c%e1%ba%a1nh+b%c3%a1o+qu%c3%aan+tr%e1%bb%8b+thi%e1%ba%bfu+n%c4%83m+2025+ngh%e1%bb%8b+%c4%91%e1%bb%8bnh&FORM=CSSCOP
+        - listitem [ref=f288e77]:
+          - link "Hình ảnh" [ref=f288e78] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=847590d4c2fa554d386bfddb197fb610eb6011233a2e6e5e1d540cdd57fbff51JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT14ZSslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24raCVlMSViYiU4ZGMrc2luaCtwaCVlMSViYSVhM2krYyVjMyViMyt0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrYyVlMSViYSVhMW5oK2IlYzMlYTFvK3F1JWMzJWFhbit0ciVlMSViYiU4Yit0aGklZTElYmElYmZ1K24lYzQlODNtKzIwMjUrbmdoJWUxJWJiJThiKyVjNCU5MSVlMSViYiU4Ym5oJkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=f288e79]:
+          - link "Video" [ref=f288e80] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=636dea9121200ec5bd9eb08439ae1bcad0af8e77b95c4a4e1e72552403d584a7JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT14ZSslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24raCVlMSViYiU4ZGMrc2luaCtwaCVlMSViYSVhM2krYyVjMyViMyt0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrYyVlMSViYSVhMW5oK2IlYzMlYTFvK3F1JWMzJWFhbit0ciVlMSViYiU4Yit0aGklZTElYmElYmZ1K24lYzQlODNtKzIwMjUrbmdoJWUxJWJiJThiKyVjNCU5MSVlMSViYiU4Ym5oJkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=f288e81]:
+          - link "Bản đồ" [ref=f288e82] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=d73dc0ba092a9f2f8cba6ea329f6fe4c34b8e30503b5cd8993214bdcae75d194JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT14ZSslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24raCVlMSViYiU4ZGMrc2luaCtwaCVlMSViYSVhM2krYyVjMyViMyt0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrYyVlMSViYSVhMW5oK2IlYzMlYTFvK3F1JWMzJWFhbit0ciVlMSViYiU4Yit0aGklZTElYmElYmZ1K24lYzQlODNtKzIwMjUrbmdoJWUxJWJiJThiKyVjNCU5MSVlMSViYiU4Ym5oJkZPUk09SERSU0M2&ntb=1
+        - listitem [ref=f288e83]:
+          - button [ref=f288e84] [cursor=pointer]
+  - generic [ref=f288e88]:
+    - main "Kết quả Tìm kiếm" [ref=f288e89]:
+      - generic [ref=f288e91]:
+        - generic [aria-hidden] [ref=f288e92]:
+          - generic [ref=f288e93] [cursor=pointer]
+          - generic [ref=f288e95] [cursor=pointer]
+          - generic [ref=f288e98] [cursor=pointer]
+        - text: Về 6.860 kết quả
+      - list [ref=f288e101]:
+        - listitem [ref=f288e102]:
+          - generic [ref=f288e106]:
+            - generic [ref=f288e108]:
+              - button "Thích" [ref=f288e109]
+              - button "Không thích" [ref=f288e112]
+            - button "Tuyên bố miễn trừ trách nhiệm về AI" [ref=f288e115]
+        - listitem [ref=f288e140]:
+          - link "THƯ VIỆN PHÁP LUẬT" [ref=f288e142] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7b36c1b8a6f935783096b2832b9b32529fb795683c52fa9e11e1858212af8a0eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vYmFuYW4vdGluLXR1Yy94ZS1kdWEtZG9uLXRyZS1lbS1ob2Mtc2luaC1waGFpLWNvLXRoaWV0LWJpLWNhbmgtYmFvLWNob25nLWJvLXF1ZW4tdHJlLWVtLXR1LW5nYXktMDEwMTIwMjUtMTEwMDguaHRtbA&ntb=1
+            - generic [ref=f288e147]:
+              - generic [ref=f288e148]: THƯ VIỆN PHÁP LUẬT
+              - generic [ref=f288e149]: https://thuvienphapluat.vn › banan › tin-tuc › xe-dua-don...
+          - heading [level=2] [ref=f288e152]:
+            - link "Xe đưa đón trẻ em, học sinh phải có thiết bị cảnh báo chống bỏ quên …" [ref=f288e153] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=7b36c1b8a6f935783096b2832b9b32529fb795683c52fa9e11e1858212af8a0eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vYmFuYW4vdGluLXR1Yy94ZS1kdWEtZG9uLXRyZS1lbS1ob2Mtc2luaC1waGFpLWNvLXRoaWV0LWJpLWNhbmgtYmFvLWNob25nLWJvLXF1ZW4tdHJlLWVtLXR1LW5nYXktMDEwMTIwMjUtMTEwMDguaHRtbA&ntb=1
+          - paragraph [ref=f288e155]: 10 thg 9, 2024 · Như vậy, theo quy định mới tại Luật Trật tự, an toàn giao thông đường bộ 2024 thì xe đưa đón trẻ em mầm non, học …
+        - listitem [ref=f288e156]:
+          - link "THƯ VIỆN PHÁP LUẬT" [ref=f288e158] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=d87337b748039f08684f587c6c7eac24c62355aee322b11a4b5d6a69946d57aeJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vaG9pLWRhcC1waGFwLWx1YXQvdHUtbmdheS0wMTAxMjAyNS14ZS1kdWEtZG9uLXRyZS1lbS1ob2Mtc2luaC1waGFpLWNvLXRoaWV0LWJpLWNhbmgtYmFvLWNob25nLWJvLXF1ZW4tdHJlLTEzODAzMDA3My5odG1s&ntb=1
+            - generic [ref=f288e163]:
+              - generic [ref=f288e164]: THƯ VIỆN PHÁP LUẬT
+              - generic [ref=f288e165]: https://thuvienphapluat.vn › hoi-dap-phap-luat
+          - heading [level=2] [ref=f288e168]:
+            - link "Từ ngày 01/01/2025 xe đưa đón trẻ em, học sinh phải có thiết bị cảnh ..." [ref=f288e169] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=d87337b748039f08684f587c6c7eac24c62355aee322b11a4b5d6a69946d57aeJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90aHV2aWVucGhhcGx1YXQudm4vaG9pLWRhcC1waGFwLWx1YXQvdHUtbmdheS0wMTAxMjAyNS14ZS1kdWEtZG9uLXRyZS1lbS1ob2Mtc2luaC1waGFpLWNvLXRoaWV0LWJpLWNhbmgtYmFvLWNob25nLWJvLXF1ZW4tdHJlLTEzODAzMDA3My5odG1s&ntb=1
+          - paragraph [ref=f288e171]: 23 thg 7, 2024 · Đối với xe đưa đón trẻ em, học sinh (cụ thể là xe ô tô kinh doanh vận tải kết hợp với hoạt động đưa đón trẻ em …
+        - listitem [ref=f288e172]:
+          - generic [ref=f288e173]:
+            - generic [ref=f288e175]:
+              - generic [ref=f288e177]:
+                - link [ref=f288e179] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=de36380c4c69de5557f6e296b0e09c18e6680f0784c190f66d53dded9449bab5JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L25ld3Mvc2VhcmNoP3E9eGUrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK2glZTElYmIlOGRjK3NpbmgrcGglZTElYmElYTNpK2MlYzMlYjMrdGhpJWUxJWJhJWJmdCtiJWUxJWJiJThiK2MlZTElYmElYTFuaCtiJWMzJWExbytxdSVjMyVhYW4rdHIlZTElYmIlOGIrdGhpJWUxJWJhJWJmdStuJWM0JTgzbSsyMDI1K25naCVlMSViYiU4YislYzQlOTElZTElYmIlOGJuaCZGT1JNPUVXUkU&ntb=1
+                  - heading "Tin tức về xe đưa đón học sinh phải có thiết bị cạnh báo quên trị thiếu năm 2025 nghị định" [level=2] [ref=f288e180]
+                - generic [ref=f288e184]:
+                  - generic [ref=f288e186]:
+                    - 'link "Xe đưa đón học sinh: Đừng để an toàn bị bỏ ngỏ Báo Quân đội Nhân dân Báo Quân đội Nhân dân · 4 ngày Xe đưa đón học sinh: Đừng để an toàn bị bỏ ngỏ Thời gian gần đây, lực lượng chức năng phát hiện nhiều xe đưa đón học sinh vi phạm quy định về giao thông đường bộ, tiềm ẩn nguy cơ mất an toàn." [ref=f288e187] [cursor=pointer]':
+                      - /url: https://www.bing.com/ck/a?!&&p=45c38c4797b538c64a4049e66fcd7a1c6468cb2d1df4cdbedecf5a005ee7eacaJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cucWRuZC52bi94YS1ob2kvY2FjLXZhbi1kZS94ZS1kdWEtZG9uLWhvYy1zaW5oLWR1bmctZGUtYW4tdG9hbi1iaS1iby1uZ28tMTA1OTMxMg&ntb=1
+                      - generic [ref=f288e188]:
+                        - 'img "Xe đưa đón học sinh: Đừng để an toàn bị bỏ ngỏ" [ref=f288e190]'
+                        - generic [ref=f288e191]:
+                          - generic [ref=f288e193]:
+                            - img "Báo Quân đội Nhân dân" [ref=f288e194]
+                            - generic "Báo Quân đội Nhân dân" [ref=f288e195]: Báo Quân đội Nhân dân · 4 ngày
+                          - generic [ref=f288e196]: "Xe đưa đón học sinh: Đừng để an toàn bị bỏ ngỏ"
+                          - generic [ref=f288e197]: Thời gian gần đây, lực lượng chức năng phát hiện nhiều xe đưa đón học sinh vi phạm quy định về giao thông đường bộ, tiềm ẩn nguy cơ mất an toàn.
+                    - link "Báo Quân đội Nhân dân":
+                      - /url: /news/search?q=site%3awww.qdnd.vn&FORM=NWBCLM
+                  - list "Vui lòng sử dụng các phím mũi tên để điều hướng" [ref=f288e203]:
+                    - listitem [ref=f288e204]:
+                      - generic [ref=f288e206]:
+                        - link "Đồng loạt kiểm tra xe đưa đón học sinh, chấn chỉnh các vi phạm về an toàn giao thông Báo Điện tử An ninh Thủ đô Báo Điện tử A… · 6 ngày Đồng loạt kiểm tra xe đưa đón học sinh, chấn chỉnh các vi phạm về an toàn giao thông" [ref=f288e207] [cursor=pointer]:
+                          - /url: https://www.bing.com/ck/a?!&&p=5aa28510ea76c1ab2bb194d432bfe41df89a142d37ee087de50e9ab79da54c26JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuYW5uaW5odGh1ZG8udm4vZG9uZy1sb2F0LWtpZW0tdHJhLXhlLWR1YS1kb24taG9jLXNpbmgtY2hhbi1jaGluaC1jYWMtdmktcGhhbS12ZS1hbi10b2FuLWdpYW8tdGhvbmctcG9zdDY3MDY0NC5hbnRk&ntb=1
+                          - generic [ref=f288e208]:
+                            - img "Đồng loạt kiểm tra xe đưa đón học sinh, chấn chỉnh các vi phạm về an toàn giao thông" [ref=f288e210]
+                            - generic [ref=f288e211]:
+                              - generic [ref=f288e213]:
+                                - img "Báo Điện tử An ninh Thủ đô" [ref=f288e214]
+                                - generic "Báo Điện tử An ninh Thủ đô" [ref=f288e215]:
+                                  - generic [ref=f288e216]: Báo Điện tử A…
+                                  - generic [ref=f288e217]: · 6 ngày
+                              - generic [ref=f288e218]: Đồng loạt kiểm tra xe đưa đón học sinh, chấn chỉnh các vi phạm về an toàn giao thông
+                        - link "Báo Điện tử An ninh Thủ đô":
+                          - /url: /news/search?q=site%3awww.anninhthudo.vn&FORM=NWBCLM
+                    - listitem [ref=f288e219]:
+                      - generic [ref=f288e221]:
+                        - 'link "Hà Nội: CSGT kiểm tra xe chở học sinh, phát hiện vi phạm về thiết bị chống bỏ quên trẻ em Báo Mới Báo Mới · 7 ngày Hà Nội: CSGT kiểm tra xe chở học sinh, phát hiện vi phạm về thiết bị chống bỏ quên trẻ em" [ref=f288e222] [cursor=pointer]':
+                          - /url: https://www.bing.com/ck/a?!&&p=d8fcaa8f719fc7d31756115e16294c5f158a72b366db5bde3f6545131f2653c2JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW9tb2kuY29tL2hhLW5vaS1jc2d0LWtpZW0tdHJhLXhlLWNoby1ob2Mtc2luaC1waGF0LWhpZW4tdmktcGhhbS12ZS10aGlldC1iaS1jaG9uZy1iby1xdWVuLXRyZS1lbS1jNTYxNzE2MDcuZXBp&ntb=1
+                          - generic [ref=f288e223]:
+                            - 'img "Hà Nội: CSGT kiểm tra xe chở học sinh, phát hiện vi phạm về thiết bị chống bỏ quên trẻ em" [ref=f288e225]'
+                            - generic [ref=f288e226]:
+                              - generic [ref=f288e228]:
+                                - img "Báo Mới" [ref=f288e229]
+                                - generic "Báo Mới" [ref=f288e230]: · 7 ngày
+                              - generic [ref=f288e233]: "Hà Nội: CSGT kiểm tra xe chở học sinh, phát hiện vi phạm về thiết bị chống bỏ quên trẻ em"
+                        - link "Báo Mới":
+                          - /url: /news/search?q=site%3abaomoi.com&FORM=NWBCLM
+                    - listitem [ref=f288e234]:
+                      - generic [ref=f288e236]:
+                        - link "Hà Nội tổng kiểm tra xe đưa đón học sinh, không đủ điều kiện sẽ bị xử lý Đài Truyền Hình Việt Nam Đài Truyền Hì… · 12 ngày Hà Nội tổng kiểm tra xe đưa đón học sinh, không đủ điều kiện sẽ bị xử lý" [ref=f288e237] [cursor=pointer]:
+                          - /url: https://www.bing.com/ck/a?!&&p=e165f2f7911959b7e8e4e75a0a2177ff5085807d9c58540b3f46888459d5120aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92dHYudm4vaGEtbm9pLXRvbmcta2llbS10cmEteGUtZHVhLWRvbi1ob2Mtc2luaC1raG9uZy1kdS1kaWV1LWtpZW4tc2UtYmkteHUtbHktMTAwMjYwOTI2MTg0ODE4NTYyLmh0bQ&ntb=1
+                          - generic [ref=f288e238]:
+                            - img "Hà Nội tổng kiểm tra xe đưa đón học sinh, không đủ điều kiện sẽ bị xử lý" [ref=f288e240]
+                            - generic [ref=f288e241]:
+                              - generic [ref=f288e243]:
+                                - img "Đài Truyền Hình Việt Nam" [ref=f288e244]
+                                - generic "Đài Truyền Hình Việt Nam" [ref=f288e245]:
+                                  - generic [ref=f288e246]: Đài Truyền Hì…
+                                  - generic [ref=f288e247]: · 12 ngày
+                              - generic [ref=f288e248]: Hà Nội tổng kiểm tra xe đưa đón học sinh, không đủ điều kiện sẽ bị xử lý
+                        - link "Đài Truyền Hình Việt Nam":
+                          - /url: /news/search?q=site%3avtv.vn&FORM=NWBCLM
+                    - listitem
+                    - listitem
+                    - listitem
+                    - listitem
+                    - listitem
+                    - listitem
+                    - listitem
+                    - listitem [ref=f288e249]:
+                      - link "Xem tất cả Tin tức về Xe Đưa Đón Học Sinh Phải Có Thiết Bị Cạnh Báo Quên Trị Thiếu Năm 2025 Nghị Định" [ref=f288e251] [cursor=pointer]:
+                        - /url: https://www.bing.com/ck/a?!&&p=de36380c4c69de5557f6e296b0e09c18e6680f0784c190f66d53dded9449bab5JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L25ld3Mvc2VhcmNoP3E9eGUrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK2glZTElYmIlOGRjK3NpbmgrcGglZTElYmElYTNpK2MlYzMlYjMrdGhpJWUxJWJhJWJmdCtiJWUxJWJiJThiK2MlZTElYmElYTFuaCtiJWMzJWExbytxdSVjMyVhYW4rdHIlZTElYmIlOGIrdGhpJWUxJWJhJWJmdStuJWM0JTgzbSsyMDI1K25naCVlMSViYiU4YislYzQlOTElZTElYmIlOGJuaCZGT1JNPUVXUkU&ntb=1
+                        - img "Xem tất cả" [ref=f288e252]
+                        - generic [ref=f288e253]: Xem tất cả
+              - generic [ref=f288e255]:
+                - generic [ref=f288e256]: Phản hồi
+                - button "Thích phản hồi" [ref=f288e257] [cursor=pointer]
+                - button "Không thích phản hồi" [ref=f288e258] [cursor=pointer]
+            - link "Xem thêm tin tức" [ref=f288e262] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=de36380c4c69de5557f6e296b0e09c18e6680f0784c190f66d53dded9449bab5JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L25ld3Mvc2VhcmNoP3E9eGUrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK2glZTElYmIlOGRjK3NpbmgrcGglZTElYmElYTNpK2MlYzMlYjMrdGhpJWUxJWJhJWJmdCtiJWUxJWJiJThiK2MlZTElYmElYTFuaCtiJWMzJWExbytxdSVjMyVhYW4rdHIlZTElYmIlOGIrdGhpJWUxJWJhJWJmdStuJWM0JTgzbSsyMDI1K25naCVlMSViYiU4YislYzQlOTElZTElYmIlOGJuaCZGT1JNPUVXUkU&ntb=1
+        - listitem [ref=f288e265]:
+          - link "Báo Pháp luật Việt Nam điện tử" [ref=f288e267] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=1d5f30c0323a9e7bd9596a90db0346e51e1a2b7064a6c4a42aaa31cde77d2e74JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW9waGFwbHVhdC52bi9sYXAtZGF0LXRoaWV0LWJpLWNhbmgtYmFvLXF1ZW4tdHJlLWVtLXRyZW4teGUtZHVhLWRvbi1ob2Mtc2luaC1jYW4tY2FuaC1naWFjLWhhbmctdHJvaS1ub2kuaHRtbA&ntb=1
+            - generic [ref=f288e272]:
+              - generic [ref=f288e273]: Báo Pháp luật Việt Nam điện tử
+              - generic [ref=f288e274]: https://baophapluat.vn › lap-dat-thiet-bi-canh-bao...
+          - heading [level=2] [ref=f288e277]:
+            - 'link "Lắp đặt thiết bị cảnh báo quên trẻ em trên xe đưa đón học sinh: Cần ..." [ref=f288e278] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=1d5f30c0323a9e7bd9596a90db0346e51e1a2b7064a6c4a42aaa31cde77d2e74JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW9waGFwbHVhdC52bi9sYXAtZGF0LXRoaWV0LWJpLWNhbmgtYmFvLXF1ZW4tdHJlLWVtLXRyZW4teGUtZHVhLWRvbi1ob2Mtc2luaC1jYW4tY2FuaC1naWFjLWhhbmctdHJvaS1ub2kuaHRtbA&ntb=1
+          - paragraph [ref=f288e280]: 4 thg 12, 2025 · Từ ngày 1/1/2025, xe ô tô đưa đón trẻ mầm non, học sinh bắt buộc phải lắp thiết bị cảnh báo, chống bỏ quên trẻ em …
+        - listitem [ref=f288e281]:
+          - link "Báo điện tử VTV News" [ref=f288e283] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c90690015868166c1322aed03a000fd608d9b4e0b4bcb0265ba31afedcb3be10JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92dHYudm4veGEtaG9pL3RyaWVuLWtoYWktcXV5LWRpbmgtbGFwLXRoaWV0LWJpLWNob25nLWJvLXF1ZW4taG9jLXNpbmgtdHJlbi14ZS0yMDI1MDExMDEyNTg0NTQ2Ni5odG0&ntb=1
+            - generic [ref=f288e288]:
+              - generic [ref=f288e289]: Báo điện tử VTV News
+              - generic [ref=f288e290]: https://vtv.vn › xa-hoi › trien-khai-quy-dinh-lap...
+          - heading [level=2] [ref=f288e293]:
+            - link "Triển khai quy định lắp thiết bị chống bỏ quên học sinh trên xe" [ref=f288e294] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=c90690015868166c1322aed03a000fd608d9b4e0b4bcb0265ba31afedcb3be10JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92dHYudm4veGEtaG9pL3RyaWVuLWtoYWktcXV5LWRpbmgtbGFwLXRoaWV0LWJpLWNob25nLWJvLXF1ZW4taG9jLXNpbmgtdHJlbi14ZS0yMDI1MDExMDEyNTg0NTQ2Ni5odG0&ntb=1
+          - paragraph [ref=f288e296]: 10 thg 1, 2025 · VTV.vn - Từ đầu năm nay, tất cả các xe đưa đón trẻ em, học sinh sẽ bắt buộc phải lắp thiết bị cảnh báo chống bỏ …
+        - listitem [ref=f288e297]:
+          - link "Báo Tuổi Trẻ" [ref=f288e299] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=3c4e959dfd3c450ab7e5d3bd11ca29738e21c4d8ba2ffc64785eb7c5ce7acac2JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90dW9pdHJlLnZuL3Bsby94ZS1kdWEtZG9uLWhvYy1zaW5oLXBoYWktY28tdGhpZXQtYmktY2hvbmctYm8tcXVlbi10cmUtZW0tMTA5ODA2OTU1Lmh0bQ&ntb=1
+            - generic [ref=f288e304]:
+              - generic [ref=f288e305]: Báo Tuổi Trẻ
+              - generic [ref=f288e306]: https://tuoitre.vn › plo › xe-dua-don-hoc-sinh-phai-co...
+          - heading [level=2] [ref=f288e309]:
+            - link "Xe đưa đón học sinh phải có thiết bị chống bỏ quên trẻ em" [ref=f288e310] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=3c4e959dfd3c450ab7e5d3bd11ca29738e21c4d8ba2ffc64785eb7c5ce7acac2JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90dW9pdHJlLnZuL3Bsby94ZS1kdWEtZG9uLWhvYy1zaW5oLXBoYWktY28tdGhpZXQtYmktY2hvbmctYm8tcXVlbi10cmUtZW0tMTA5ODA2OTU1Lmh0bQ&ntb=1
+          - paragraph [ref=f288e312]: 27 thg 8, 2024 · Đối với xe ô tô kinh doanh vận tải chở trẻ em mầm non, học sinh phải bảo đảm có chứng nhận đăng ký xe, biển số …
+        - listitem [ref=f288e313]:
+          - link "Báo Mới" [ref=f288e315] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=8317f3ecec8a61fbaf06b8e2279669884d7e9cb45529171dc8b94dfd59ec1b72JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW9tb2kuY29tL3R1LTEtMS0yMDI1LXhlLWR1YS1kb24taG9jLXNpbmgtcGhhaS1jby10aGlldC1iaS1jYW5oLWJhby1jaG9uZy1iby1xdWVuLXRyZS1jNDk3MTQzMTEuZXBp&ntb=1
+            - generic [ref=f288e320]:
+              - generic [ref=f288e321]: Báo Mới
+              - generic [ref=f288e322]: https://baomoi.com
+          - heading [level=2] [ref=f288e325]:
+            - link "Từ 1/1/2025, xe đưa đón học sinh phải có thiết bị cảnh báo chống bỏ ..." [ref=f288e326] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=8317f3ecec8a61fbaf06b8e2279669884d7e9cb45529171dc8b94dfd59ec1b72JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW9tb2kuY29tL3R1LTEtMS0yMDI1LXhlLWR1YS1kb24taG9jLXNpbmgtcGhhaS1jby10aGlldC1iaS1jYW5oLWJhby1jaG9uZy1iby1xdWVuLXRyZS1jNDk3MTQzMTEuZXBp&ntb=1
+          - paragraph [ref=f288e328]: 24 thg 7, 2024 · Như vậy, theo quy định thì một trong những yêu cầu đối với xe ô tô kinh doanh vận tải chở trẻ em mầm non, học …
+        - listitem [ref=f288e329]:
+          - link "Báo Mới" [ref=f288e331] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=8ad744f01b9afb9c943b226c1723962004ba0aa9661b18e3011a85c7cd122043JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW9tb2kuY29tL2NodS14ZS1kdWEtZG9uLWhvYy1zaW5oLW5nb25nLXF1eS1jaHVhbi10aGlldC1iaS1jaG9uZy1iby1xdWVuLWM1MTQxNTAzMi5lcGk&ntb=1
+            - generic [ref=f288e336]:
+              - generic [ref=f288e337]: Báo Mới
+              - generic [ref=f288e338]: https://baomoi.com › chu-xe-dua-don-hoc-sinh-ngong...
+          - heading [level=2] [ref=f288e341]:
+            - link "Chủ xe đưa đón học sinh 'ngóng' quy chuẩn thiết bị chống bỏ quên" [ref=f288e342] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=8ad744f01b9afb9c943b226c1723962004ba0aa9661b18e3011a85c7cd122043JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9iYW9tb2kuY29tL2NodS14ZS1kdWEtZG9uLWhvYy1zaW5oLW5nb25nLXF1eS1jaHVhbi10aGlldC1iaS1jaG9uZy1iby1xdWVuLWM1MTQxNTAzMi5lcGk&ntb=1
+          - paragraph [ref=f288e344]: Từ ngày 1/1/2025, xe đưa đón học sinh bắt buộc phải gắn thiết bị chống bỏ quên học sinh trên xe, phải có màu sơn vàng đậm, phải …
+        - listitem [ref=f288e345]:
+          - link "chongboquen.vn" [ref=f288e347] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9625ef77e11fec2869e041cdba63bbdae3b3020d17e38ef3bc000086003e56faJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9jaG9uZ2JvcXVlbi52bi90dS1uYW0tMjAyNS1iYXQtYnVvYy1sYXAtdGhpZXQtYmktY2hvbmctYm8tcXVlbi10cmUtZW0tdHJlbi14ZS1kdWEtZG9uLWhvYy1zaW5oLw&ntb=1
+            - generic [ref=f288e352]:
+              - generic [ref=f288e353]: chongboquen.vn
+              - generic [ref=f288e354]: https://chongboquen.vn
+          - heading "Từ năm 2025, bắt buộc lắp thiết bị chống bỏ quên trẻ em trên xe đưa …" [level=2] [ref=f288e357]:
+            - link "Từ năm 2025, bắt buộc lắp thiết bị chống bỏ quên trẻ em trên xe đưa …":
+              - /url: https://www.bing.com/ck/a?!&&p=9625ef77e11fec2869e041cdba63bbdae3b3020d17e38ef3bc000086003e56faJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9jaG9uZ2JvcXVlbi52bi90dS1uYW0tMjAyNS1iYXQtYnVvYy1sYXAtdGhpZXQtYmktY2hvbmctYm8tcXVlbi10cmUtZW0tdHJlbi14ZS1kdWEtZG9uLWhvYy1zaW5oLw&ntb=1
+          - paragraph [ref=f288e359]: Bắt đầu từ ngày 01/01/2025, tất cả các xe đưa đón trẻ em, học sinh sẽ bắt buộc phải lắp thiết bị chống bỏ quên trẻ em, theo quy định …
+        - listitem [ref=f288e360]:
+          - link "baophapluat.vn" [ref=f288e362] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b28d0dde11bc9ff0176a741d8b0b4940b84aa74a210913ba9c8c14be3c7b7d73JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9waGFwbHVhdHBsdXMuYmFvcGhhcGx1YXQudm4vbGFwLWRhdC10aGlldC1iaS1jYW5oLWJhby1xdWVuLXRyZS1lbS10cmVuLXhlLWR1YS1kb24taG9jLXNpbmgtY2FuLWNhbmgtZ2lhYy1oYW5nLXRyb2ktbm9pLTIyOTc2OS5odG1s&ntb=1
+            - generic [ref=f288e367]:
+              - generic [ref=f288e368]: baophapluat.vn
+              - generic [ref=f288e369]: https://phapluatplus.baophapluat.vn › lap-dat-thiet...
+          - heading "Lắp đặt thiết bị cảnh báo quên trẻ em trên xe đưa đón học sinh cần …" [level=2] [ref=f288e372]:
+            - link "Lắp đặt thiết bị cảnh báo quên trẻ em trên xe đưa đón học sinh cần …":
+              - /url: https://www.bing.com/ck/a?!&&p=b28d0dde11bc9ff0176a741d8b0b4940b84aa74a210913ba9c8c14be3c7b7d73JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9waGFwbHVhdHBsdXMuYmFvcGhhcGx1YXQudm4vbGFwLWRhdC10aGlldC1iaS1jYW5oLWJhby1xdWVuLXRyZS1lbS10cmVuLXhlLWR1YS1kb24taG9jLXNpbmgtY2FuLWNhbmgtZ2lhYy1oYW5nLXRyb2ktbm9pLTIyOTc2OS5odG1s&ntb=1
+          - paragraph [ref=f288e374]: 4 thg 12, 2025 · Từ ngày 1/1/2025, xe ô tô đưa đón trẻ mầm non, học sinh bắt buộc phải lắp thiết bị cảnh báo, chống bỏ quên trẻ em …
+        - listitem [ref=f288e375]:
+          - link "Báo Điện tử An ninh Thủ đô" [ref=f288e377] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=8c44beab716a39d35de664ac2a657e1a7ec3bd569b628f97f99ea48c2d011296JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuYW5uaW5odGh1ZG8udm4veGUtZHVhLWRvbi1ob2Mtc2luaC1waGFpLWRhcC11bmctbmh1bmctZGlldS1raWVuLWFuLXRvYW4tbmFvLXBvc3Q2NjYzMDYuYW50ZA&ntb=1
+            - generic [ref=f288e382]:
+              - generic [ref=f288e383]: Báo Điện tử An ninh Thủ đô
+              - generic [ref=f288e384]: https://www.anninhthudo.vn › xe-dua-don-hoc-sinh...
+          - heading "Xe đưa đón học sinh phải đáp ứng những điều kiện an toàn nào?" [level=2] [ref=f288e387]:
+            - link "Xe đưa đón học sinh phải đáp ứng những điều kiện an toàn nào?":
+              - /url: https://www.bing.com/ck/a?!&&p=8c44beab716a39d35de664ac2a657e1a7ec3bd569b628f97f99ea48c2d011296JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cuYW5uaW5odGh1ZG8udm4veGUtZHVhLWRvbi1ob2Mtc2luaC1waGFpLWRhcC11bmctbmh1bmctZGlldS1raWVuLWFuLXRvYW4tbmFvLXBvc3Q2NjYzMDYuYW50ZA&ntb=1
+          - paragraph [ref=f288e389]: 6 thg 9, 2026 · Trên xe phải có thiết bị ghi nhận hình ảnh trẻ em, học sinh cùng thiết bị có chức năng cảnh báo, chống bỏ quên trẻ. …
+        - listitem [ref=f288e390]:
+          - link "Một số kết quả đã bị xóa" [ref=f288e392] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e7e0e4b27a77d08e3ba8e737568a767ff44dde3e84c17c7ede3301285b6ea292JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+        - listitem [ref=f288e393]:
+          - navigation "Thêm kết quả cho xe đưa đón học sinh phải có thiết bị cạnh báo quên trị thiếu năm 2025 nghị định":
+            - list:
+              - listitem [ref=f288e394]:
+                - generic "Trang 1" [ref=f288e395]: "1"
+              - listitem [ref=f288e396]:
+                - link "Trang 2" [ref=f288e397] [cursor=pointer]:
+                  - /url: /search?q=xe+%c4%91%c6%b0a+%c4%91%c3%b3n+h%e1%bb%8dc+sinh+ph%e1%ba%a3i+c%c3%b3+thi%e1%ba%bft+b%e1%bb%8b+c%e1%ba%a1nh+b%c3%a1o+qu%c3%aan+tr%e1%bb%8b+thi%e1%ba%bfu+n%c4%83m+2025+ngh%e1%bb%8b+%c4%91%e1%bb%8bnh&setlang=vi&FPIG=ADCCCB14255440D0BC2E3A634B22040E&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=f288e398]:
+                - link "Trang 3" [ref=f288e399] [cursor=pointer]:
+                  - /url: /search?q=xe+%c4%91%c6%b0a+%c4%91%c3%b3n+h%e1%bb%8dc+sinh+ph%e1%ba%a3i+c%c3%b3+thi%e1%ba%bft+b%e1%bb%8b+c%e1%ba%a1nh+b%c3%a1o+qu%c3%aan+tr%e1%bb%8b+thi%e1%ba%bfu+n%c4%83m+2025+ngh%e1%bb%8b+%c4%91%e1%bb%8bnh&setlang=vi&FPIG=ADCCCB14255440D0BC2E3A634B22040E&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=f288e400]:
+                - link "Trang tiếp theo" [ref=f288e401] [cursor=pointer]:
+                  - /url: /search?q=xe+%c4%91%c6%b0a+%c4%91%c3%b3n+h%e1%bb%8dc+sinh+ph%e1%ba%a3i+c%c3%b3+thi%e1%ba%bft+b%e1%bb%8b+c%e1%ba%a1nh+b%c3%a1o+qu%c3%aan+tr%e1%bb%8b+thi%e1%ba%bfu+n%c4%83m+2025+ngh%e1%bb%8b+%c4%91%e1%bb%8bnh&setlang=vi&FPIG=ADCCCB14255440D0BC2E3A634B22040E&first=11&FORM=PORE
+    - complementary "Kết quả bổ sung" [ref=f288e402]:
+      - list
+  - contentinfo [ref=f288e403]:
+    - generic [ref=f288e404]:
+      - list:
+        - listitem [ref=f288e405]:
+          - link "Quyền riêng tư" [ref=f288e406] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f288e407]:
+          - link "Điều khoản" [ref=f288e408] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

@@ -1,0 +1,238 @@
+- generic [active] [ref=f15e1]:
+  - paragraph [ref=f15e2]
+  - generic [ref=f15e3]: DuckDuckGo
+  - paragraph [ref=f15e4]
+  - generic [ref=f15e5]:
+    - textbox [ref=f15e6]: uber clone portfolio project overdone recruiter
+    - button "Search" [ref=f15e7] [cursor=pointer]
+    - generic [ref=f15e8]:
+      - combobox [ref=f15e9] [cursor=pointer]:
+        - option "All Regions" [selected]
+        - option "Argentina"
+        - option "Australia"
+        - option "Austria"
+        - option "Belgium (fr)"
+        - option "Belgium (nl)"
+        - option "Brazil"
+        - option "Bulgaria"
+        - option "Canada (en)"
+        - option "Canada (fr)"
+        - option "Catalonia"
+        - option "Chile"
+        - option "China"
+        - option "Colombia"
+        - option "Croatia"
+        - option "Czech Republic"
+        - option "Denmark"
+        - option "Estonia"
+        - option "Finland"
+        - option "France"
+        - option "Germany"
+        - option "Greece"
+        - option "Hong Kong"
+        - option "Hungary"
+        - option "Iceland"
+        - option "India (en)"
+        - option "Indonesia (en)"
+        - option "Ireland"
+        - option "Israel (en)"
+        - option "Italy"
+        - option "Japan"
+        - option "Korea"
+        - option "Latvia"
+        - option "Lithuania"
+        - option "Malaysia (en)"
+        - option "Mexico"
+        - option "Netherlands"
+        - option "New Zealand"
+        - option "Norway"
+        - option "Pakistan (en)"
+        - option "Peru"
+        - option "Philippines (en)"
+        - option "Poland"
+        - option "Portugal"
+        - option "Romania"
+        - option "Russia"
+        - option "Saudi Arabia"
+        - option "Singapore"
+        - option "Slovakia"
+        - option "Slovenia"
+        - option "South Africa"
+        - option "Spain (ca)"
+        - option "Spain (es)"
+        - option "Sweden"
+        - option "Switzerland (de)"
+        - option "Switzerland (fr)"
+        - option "Taiwan"
+        - option "Thailand (en)"
+        - option "Turkey"
+        - option "US (English)"
+        - option "US (Spanish)"
+        - option "Ukraine"
+        - option "United Kingdom"
+        - option "Vietnam (en)"
+      - combobox [ref=f15e10] [cursor=pointer]:
+        - option "Any Time" [selected]
+        - option "Past Day"
+        - option "Past Week"
+        - option "Past Month"
+        - option "Past Year"
+  - paragraph [ref=f15e11]
+  - table [ref=f15e12]:
+    - rowgroup [ref=f15e13]:
+      - row [ref=f15e14]:
+        - cell
+        - cell [ref=f15e15]:
+          - button "Next Page >" [ref=f15e17] [cursor=pointer]
+  - paragraph [ref=f15e18]
+  - table
+  - table [ref=f15e19]:
+    - rowgroup [ref=f15e20]:
+      - row [ref=f15e21]:
+        - cell "1." [ref=f15e22]
+        - cell [ref=f15e23]:
+          - 'link "GitHub - adrianhajdin/uber: Build a full-stack Uber Clone Application ..." [ref=f15e24] [cursor=pointer]':
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fgithub.com%2Fadrianhajdin%2Fuber&rut=1e94dd7d99d475a6e5b2d614bb8d94f0e0cd1de737cca43ed88d909ef13b8ee5
+      - row [ref=f15e25]:
+        - cell [ref=f15e26]
+        - cell "Built with React Native for handling the user interface, Google Maps for rendering maps with directions, stripe for handling payments, serverless Postgres for managing databases, and styled with TailwindCSS, Uber Clone is a perfect mobile app." [ref=f15e27]
+      - row [ref=f15e28]:
+        - cell [ref=f15e29]
+        - cell "github.com/adrianhajdin/uber" [ref=f15e30]
+      - row [ref=f15e31]:
+        - cell [ref=f15e32]
+        - cell [ref=f15e33]
+      - row [ref=f15e34]:
+        - cell "2." [ref=f15e35]
+        - cell [ref=f15e36]:
+          - link "uber-clone · GitHub Topics · GitHub" [ref=f15e37] [cursor=pointer]:
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fgithub.com%2Ftopics%2Fuber%2Dclone&rut=3575868199120706ec4b5b2aa20dad3f502e736de6eaec0d78ff05e5f39fae72
+      - row [ref=f15e38]:
+        - cell [ref=f15e39]
+        - cell "Build a full-stack Uber Clone Application with Expo's latest features and lightning-fast edge-ready Postgres database in React Native. Uber Clone Android App 👨‍💻 I'll show you how you can do this in the simplest way and terms possible." [ref=f15e40]
+      - row [ref=f15e41]:
+        - cell [ref=f15e42]
+        - cell "github.com/topics/uber-clone 2024-10-29T00:00:00.0000000" [ref=f15e43]
+      - row [ref=f15e44]:
+        - cell [ref=f15e45]
+        - cell [ref=f15e46]
+      - row [ref=f15e47]:
+        - cell "3." [ref=f15e48]
+        - cell [ref=f15e49]:
+          - link "Build an Uber Clone App with MERN Stack - YouTube" [ref=f15e50] [cursor=pointer]:
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D4qyBjxPlEZo&rut=d82e829a39c620dde9ada608bba7374a7a82782680f0f9d8291d0375ed542f90
+      - row [ref=f15e51]:
+        - cell [ref=f15e52]
+        - cell "Join this 11-hour masterclass to build a complete Uber Clone app using the MERN stack! Master React, Node.js, Express, and MongoDB as you create a fully functional ride-booking application." [ref=f15e53]
+      - row [ref=f15e54]:
+        - cell [ref=f15e55]
+        - cell "www.youtube.com/watch?v=4qyBjxPlEZo" [ref=f15e56]
+      - row [ref=f15e57]:
+        - cell [ref=f15e58]
+        - cell [ref=f15e59]
+      - row [ref=f15e60]:
+        - cell "4." [ref=f15e61]
+        - cell [ref=f15e62]:
+          - 'link "Uber Design Portfolio Projects :: Photos, videos, logos ... - Behance" [ref=f15e63] [cursor=pointer]':
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.behance.net%2Fsearch%2Fprojects%2Fuber%2520design%2520portfolio&rut=6c624653d6fd851d37435e2fd9ddda11f25109649ee43047182e507c94fc5699
+      - row [ref=f15e64]:
+        - cell [ref=f15e65]
+        - cell "Behance is the world's largest creative network for showcasing and discovering creative uber design portfolio work" [ref=f15e66]
+      - row [ref=f15e67]:
+        - cell [ref=f15e68]
+        - cell "www.behance.net/search/projects/uber design portfolio" [ref=f15e69]
+      - row [ref=f15e70]:
+        - cell [ref=f15e71]
+        - cell [ref=f15e72]
+      - row [ref=f15e73]:
+        - cell "5." [ref=f15e74]
+        - cell [ref=f15e75]:
+          - 'link "Uber Clone App Development: Build Your Own Uber Clone" [ref=f15e76] [cursor=pointer]':
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fdianapps.com%2Fblog%2Fuber%2Dclone%2Dapp%2Ddevelopment%2Dbuild%2Dyour%2Down%2Duber%2Dclone%2F&rut=2f6ba105a2b3578c308ee14da51f4ac498f4fbeaae32fab3135e7225b43f5f9a
+      - row [ref=f15e77]:
+        - cell [ref=f15e78]
+        - cell "Looking to create your own Uber clone app? From tech stack to proper code commands, this guide covers all for you!" [ref=f15e79]
+      - row [ref=f15e80]:
+        - cell [ref=f15e81]
+        - cell "dianapps.com/blog/uber-clone-app-development-build-your-own-uber-clone/ 2025-04-15T00:00:00.0000000" [ref=f15e82]
+      - row [ref=f15e83]:
+        - cell [ref=f15e84]
+        - cell [ref=f15e85]
+      - row [ref=f15e86]:
+        - cell "6." [ref=f15e87]
+        - cell [ref=f15e88]:
+          - 'link "Uber Clone Projects :: Photos, videos, logos, illustrations and ..." [ref=f15e89] [cursor=pointer]':
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.behance.net%2Fsearch%2Fprojects%2Fuber%2520clone&rut=1340a344a11588567e0358dfd083914d076a920f146184efe7d631ebeb21e917
+      - row [ref=f15e90]:
+        - cell [ref=f15e91]
+        - cell "Behance is the world's largest creative network for showcasing and discovering creative work" [ref=f15e92]
+      - row [ref=f15e93]:
+        - cell [ref=f15e94]
+        - cell "www.behance.net/search/projects/uber clone" [ref=f15e95]
+      - row [ref=f15e96]:
+        - cell [ref=f15e97]
+        - cell [ref=f15e98]
+      - row [ref=f15e99]:
+        - cell "7." [ref=f15e100]
+        - cell [ref=f15e101]:
+          - link "Uber Clone Project Report" [ref=f15e102] [cursor=pointer]:
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.scribd.com%2Fdocument%2F1021103774%2FUber%2DClone%2DProject%2DReport&rut=4f8ae295c8809e2ef73a4707df60c96ec1dfc2856ce1045aaae60d608bb1f2a8
+      - row [ref=f15e103]:
+        - cell [ref=f15e104]
+        - cell "Uber Clone Project Report - Free download as PDF File (.pdf), Text File (.txt) or read online for free." [ref=f15e105]
+      - row [ref=f15e106]:
+        - cell [ref=f15e107]
+        - cell "www.scribd.com/document/1021103774/Uber-Clone-Project-Report" [ref=f15e108]
+      - row [ref=f15e109]:
+        - cell [ref=f15e110]
+        - cell [ref=f15e111]
+      - row [ref=f15e112]:
+        - cell "8." [ref=f15e113]
+        - cell [ref=f15e114]:
+          - link "Cross-Platform Uber Clone Development - Freelancer" [ref=f15e115] [cursor=pointer]:
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.freelancer.com%2Fprojects%2Fios%2Fcross%2Dplatform%2Duber%2Dclone%2Ddevelopment&rut=3762c62929b401930e1604c5c6d8f970677048801da764242541331d2df3f35d
+      - row [ref=f15e116]:
+        - cell [ref=f15e117]
+        - cell "I am confident in my ability and skills to develop high-quality Mobile apps and would like to work on your uber clone project. I will complete the work as per your requirements." [ref=f15e118]
+      - row [ref=f15e119]:
+        - cell [ref=f15e120]
+        - cell "www.freelancer.com/projects/ios/cross-platform-uber-clone-development 2026-08-31T00:00:00.0000000" [ref=f15e121]
+      - row [ref=f15e122]:
+        - cell [ref=f15e123]
+        - cell [ref=f15e124]
+      - row [ref=f15e125]:
+        - cell "9." [ref=f15e126]
+        - cell [ref=f15e127]:
+          - 'link "Uber Clone Applications: Fully Customizable Uber Clone Scripts" [ref=f15e128] [cursor=pointer]':
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fonde.app%2Fuber%2Dclone&rut=c96b9526e433f023fdb67512d5d1bb7ad20530fa52b80728af347d7e12c26b0d
+      - row [ref=f15e129]:
+        - cell [ref=f15e130]
+        - cell "100% customizable Uber clone app platform without hassle and coding. Suitable for any on-demand service. Trusted by 200+ companies!" [ref=f15e131]
+      - row [ref=f15e132]:
+        - cell [ref=f15e133]
+        - cell "onde.app/uber-clone" [ref=f15e134]
+      - row [ref=f15e135]:
+        - cell [ref=f15e136]
+        - cell [ref=f15e137]
+      - row [ref=f15e138]:
+        - cell "10." [ref=f15e139]
+        - cell [ref=f15e140]:
+          - 'link "Crafting a Feature-Rich Uber Clone: A Comprehensive Guide to Building ..." [ref=f15e141] [cursor=pointer]':
+            - /url: //duckduckgo.com/l/?uddg=https%3A%2F%2Fdev.to%2Fjohndanielm1999%2Fcrafting%2Da%2Dfeature%2Drich%2Duber%2Dclone%2Da%2Dcomprehensive%2Dguide%2Dto%2Dbuilding%2Dyour%2Down%2Dride%2Dhailing%2Dapp%2Dhf7&rut=dc631cae2c4b239216bb55b4a187dd194815b417432f8983e6e2acac5d41e8e4
+      - row [ref=f15e142]:
+        - cell [ref=f15e143]
+        - cell "Developing an Uber clone involves creating a comprehensive and feature-rich ride-hailing app that emulates the functionalities of Uber. This process includes backend development, frontend design, integrating third-party services, and ensuring robust security." [ref=f15e144]
+      - row [ref=f15e145]:
+        - cell [ref=f15e146]
+        - cell "dev.to/johndanielm1999/crafting-a-feature-rich-uber-clone-a-comprehensive-guide-to-building-your-own-ride-hailing-app-hf7" [ref=f15e147]
+      - row [ref=f15e148]:
+        - cell [ref=f15e149]
+        - cell [ref=f15e150]
+      - row [ref=f15e151]:
+        - cell [ref=f15e152]:
+          - button "Next Page >" [ref=f15e154] [cursor=pointer]
+  - paragraph [ref=f15e155]
+  - generic [ref=f15e156]:
+    - textbox [ref=f15e157]: uber clone portfolio project overdone recruiter
+    - button "Search" [ref=f15e158] [cursor=pointer]
+  - paragraph [ref=f15e159]

@@ -1,0 +1,325 @@
+- generic [active] [ref=f39e1]:
+  - generic [ref=f39e2]:
+    - generic [ref=f39e4]:
+      - generic [ref=f39e5]:
+        - generic [ref=f39e6]:
+          - link "DuckDuckGo home" [ref=f39e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f39e8]: DuckDuckGo
+          - generic [ref=f39e15]:
+            - combobox "Search privately" [ref=f39e17]: công cụ tạo hóa đơn freelancer Việt Nam nhắc thanh toán
+            - button "Search" [ref=f39e19] [cursor=pointer]
+        - button "Open menu" [ref=f39e24] [cursor=pointer]
+      - navigation [ref=f39e32]:
+        - list [ref=f39e33]:
+          - listitem [ref=f39e34]:
+            - link [ref=f39e35] [cursor=pointer]:
+              - /url: /?q=c%C3%B4ng+c%E1%BB%A5+t%E1%BA%A1o+h%C3%B3a+%C4%91%C6%A1n+freelancer+Vi%E1%BB%87t+Nam+nh%E1%BA%AFc+thanh+to%C3%A1n&ia=web
+              - strong [ref=f39e36]: All
+          - listitem [ref=f39e39]:
+            - link [ref=f39e40] [cursor=pointer]:
+              - /url: /?q=c%C3%B4ng+c%E1%BB%A5+t%E1%BA%A1o+h%C3%B3a+%C4%91%C6%A1n+freelancer+Vi%E1%BB%87t+Nam+nh%E1%BA%AFc+thanh+to%C3%A1n&ia=images&iax=images
+              - strong [ref=f39e41]: Images
+          - listitem [ref=f39e42]:
+            - link [ref=f39e43] [cursor=pointer]:
+              - /url: /?q=c%C3%B4ng+c%E1%BB%A5+t%E1%BA%A1o+h%C3%B3a+%C4%91%C6%A1n+freelancer+Vi%E1%BB%87t+Nam+nh%E1%BA%AFc+thanh+to%C3%A1n&ia=videos&iax=videos
+              - strong [ref=f39e44]: Videos
+          - listitem [ref=f39e45]:
+            - link [ref=f39e46] [cursor=pointer]:
+              - /url: /?q=c%C3%B4ng+c%E1%BB%A5+t%E1%BA%A1o+h%C3%B3a+%C4%91%C6%A1n+freelancer+Vi%E1%BB%87t+Nam+nh%E1%BA%AFc+thanh+to%C3%A1n&iaxm=maps
+              - strong [ref=f39e47]: Maps
+        - list [ref=f39e48]:
+          - listitem [ref=f39e49]:
+            - link "Duck.ai" [ref=f39e51] [cursor=pointer]:
+              - /url: /?q=c%C3%B4ng+c%E1%BB%A5+t%E1%BA%A1o+h%C3%B3a+%C4%91%C6%A1n+freelancer+Vi%E1%BB%87t+Nam+nh%E1%BA%AFc+thanh+to%C3%A1n&ia=chat&entry=serp
+          - listitem [ref=f39e55]:
+            - button "Search Settings ✀" [ref=f39e57] [cursor=pointer]:
+              - generic [ref=f39e60]: Search Settings
+              - generic [ref=f39e61]: ✀
+    - generic [ref=f39e68]:
+      - navigation [ref=f39e70]:
+        - button [ref=f39e72] [cursor=pointer]:
+          - strong [ref=f39e79]: Private
+        - generic [ref=f39e83]:
+          - switch "Filter by the selected region" [ref=f39e87]
+          - button "Vietnam (en)" [ref=f39e89] [cursor=pointer]
+        - button [ref=f39e94] [cursor=pointer]:
+          - strong [ref=f39e96]: "Safe search: moderate"
+        - button [ref=f39e100] [cursor=pointer]:
+          - strong [ref=f39e102]: Any time
+      - generic [ref=f39e106]:
+        - list [ref=f39e107]:
+          - listitem [ref=f39e108]:
+            - article [ref=f39e109] [cursor=pointer]:
+              - button [ref=f39e111]
+              - generic [ref=f39e115]:
+                - link "Search domain app.kiwi" [ref=f39e117]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:app.kiwi
+                - generic [ref=f39e120]:
+                  - paragraph [ref=f39e121]: app.kiwi
+                  - link "https://app.kiwi › vi › free-tools › invoice-generator" [ref=f39e122]:
+                    - /url: https://app.kiwi/vi/free-tools/invoice-generator/
+                    - paragraph [ref=f39e124]:
+                      - generic [ref=f39e125]: https://app.kiwi
+                      - generic [ref=f39e126]: › vi › free-tools › invoice-generator
+              - heading [level=2] [ref=f39e128]:
+                - link "Công cụ tạo hóa đơn - app.kiwi" [ref=f39e129]:
+                  - /url: https://app.kiwi/vi/free-tools/invoice-generator/
+              - generic [ref=f39e131]: Tạo hóa đơn chuyên nghiệp với đánh số tự động, VAT, nhắc thanh toán và xuất PDF. Miễn phí, không cần đăng ký.
+          - listitem [ref=f39e136]:
+            - article [ref=f39e137] [cursor=pointer]:
+              - button [ref=f39e139]
+              - generic [ref=f39e143]:
+                - link "Search domain easyinvoicefree.com" [ref=f39e145]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:easyinvoicefree.com
+                - generic [ref=f39e148]:
+                  - paragraph [ref=f39e149]: easyinvoicefree.com
+                  - link "https://easyinvoicefree.com › vi › invoice-for › freelancers" [ref=f39e150]:
+                    - /url: https://easyinvoicefree.com/vi/invoice-for/freelancers
+                    - paragraph [ref=f39e152]:
+                      - generic [ref=f39e153]: https://easyinvoicefree.com
+                      - generic [ref=f39e154]: › vi › invoice-for › freelancers
+              - heading [level=2] [ref=f39e156]:
+                - link "Công cụ tạo hóa đơn miễn phí cho Freelancer | EasyInvoiceFree" [ref=f39e157]:
+                  - /url: https://easyinvoicefree.com/vi/invoice-for/freelancers
+              - generic [ref=f39e159]: Tạo hóa đơn freelancer chuyên nghiệp trong vài giây. Theo dõi thanh toán, thêm chữ ký và tải PDF — miễn phí.
+          - listitem [ref=f39e164]:
+            - article [ref=f39e165] [cursor=pointer]:
+              - button [ref=f39e167]
+              - generic [ref=f39e171]:
+                - link "Search domain get-invoice.app" [ref=f39e173]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:get-invoice.app
+                - generic [ref=f39e176]:
+                  - paragraph [ref=f39e177]: get-invoice.app
+                  - link "https://get-invoice.app › vi › blog › freelancer-invoicing-guide" [ref=f39e178]:
+                    - /url: https://get-invoice.app/vi/blog/freelancer-invoicing-guide/
+                    - paragraph [ref=f39e180]:
+                      - generic [ref=f39e181]: https://get-invoice.app
+                      - generic [ref=f39e182]: › vi › blog › freelancer-invoicing-guide
+              - heading [level=2] [ref=f39e184]:
+                - 'link "Hướng Dẫn Lập Hóa Đơn Cho Freelancer: Nhận Thanh Toán Nhanh Hơn (2026 ..." [ref=f39e185]':
+                  - /url: https://get-invoice.app/vi/blog/freelancer-invoicing-guide/
+              - generic [ref=f39e187]: Hướng dẫn đầy đủ về lập hóa đơn cho freelancer. Tìm hiểu cách tạo hóa đơn chuyên nghiệp và nhận thanh toán đúng hạn.
+          - listitem [ref=f39e192]:
+            - article [ref=f39e193] [cursor=pointer]:
+              - button [ref=f39e195]
+              - generic [ref=f39e199]:
+                - link "Search domain toolk.io" [ref=f39e201]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:toolk.io
+                - generic [ref=f39e204]:
+                  - paragraph [ref=f39e205]: toolk.io
+                  - link "https://toolk.io › vi › tutorials › create-freelance-invoice" [ref=f39e206]:
+                    - /url: https://toolk.io/vi/tutorials/create-freelance-invoice
+                    - paragraph [ref=f39e208]:
+                      - generic [ref=f39e209]: https://toolk.io
+                      - generic [ref=f39e210]: › vi › tutorials › create-freelance-invoice
+              - heading [level=2] [ref=f39e212]:
+                - link "Tạo hóa đơn freelance miễn phí — Hướng dẫn từng bước — ToolK.io" [ref=f39e213]:
+                  - /url: https://toolk.io/vi/tutorials/create-freelance-invoice
+              - generic [ref=f39e215]: Hướng dẫn từng bước tạo hóa đơn freelance chuyên nghiệp dạng PDF. Thêm logo, thuế, cột tùy chỉnh, ghi chú pháp lý. Miễn phí, riêng tư, không cần đăng ký.
+          - listitem [ref=f39e220]:
+            - article [ref=f39e221] [cursor=pointer]:
+              - button [ref=f39e223]
+              - generic [ref=f39e227]:
+                - link "Search domain vi.wps.com" [ref=f39e229]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:vi.wps.com
+                - generic [ref=f39e232]:
+                  - paragraph [ref=f39e233]: vi.wps.com
+                  - link "https://vi.wps.com › word-articles › freelance-invoice-templates-for-easy-billing-article" [ref=f39e234]:
+                    - /url: https://vi.wps.com/word-articles/freelance-invoice-templates-for-easy-billing-article/
+                    - paragraph [ref=f39e236]:
+                      - generic [ref=f39e237]: https://vi.wps.com
+                      - generic [ref=f39e238]: › word-articles › freelance-invoice-templates-for-easy-billing-article
+              - heading [level=2] [ref=f39e240]:
+                - link "Mẫu Hóa Đơn Freelancer Tham Khảo Giúp Thanh Toán Dễ Dàng" [ref=f39e241]:
+                  - /url: https://vi.wps.com/word-articles/freelance-invoice-templates-for-easy-billing-article/
+              - generic [ref=f39e246]:
+                - text: Jun 5, 2026·
+                - generic [ref=f39e247]: Hướng dẫn này cung cấp 10 mẫu hóa đơn cho freelancer để giúp việc thanh toán trở nên dễ dàng. Các mẫu Word cung cấp khả năng tùy chỉnh, Excel xử lý các phép tính tự động và PDF giữ cho mọi thứ an toàn.
+          - listitem [ref=f39e248]:
+            - article [ref=f39e249] [cursor=pointer]:
+              - button [ref=f39e251]
+              - generic [ref=f39e255]:
+                - link "Search domain billsato.com" [ref=f39e257]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:billsato.com
+                - generic [ref=f39e260]:
+                  - paragraph [ref=f39e261]: billsato.com
+                  - link "https://billsato.com › vi" [ref=f39e262]:
+                    - /url: https://billsato.com/vi/
+                    - paragraph [ref=f39e264]:
+                      - generic [ref=f39e265]: https://billsato.com
+                      - generic [ref=f39e266]: › vi
+              - heading [level=2] [ref=f39e268]:
+                - link "Tạo Hóa Đơn Miễn Phí — Tạo & Tải Hóa Đơn Online | Billsato" [ref=f39e269]:
+                  - /url: https://billsato.com/vi/
+              - generic [ref=f39e271]: Tạo hóa đơn chuyên nghiệp trong vài phút — miễn phí, không cần đăng ký. Nhập thông tin, chỉnh sửa mục, tải PDF ngay. Dùng thử Billsato.
+          - listitem [ref=f39e276]:
+            - article [ref=f39e277] [cursor=pointer]:
+              - button [ref=f39e279]
+              - generic [ref=f39e283]:
+                - link "Search domain manus.im" [ref=f39e285]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:manus.im
+                - generic [ref=f39e288]:
+                  - paragraph [ref=f39e289]: manus.im
+                  - link "https://manus.im › vi › playbook › invoice-generator" [ref=f39e290]:
+                    - /url: https://manus.im/vi/playbook/invoice-generator
+                    - paragraph [ref=f39e292]:
+                      - generic [ref=f39e293]: https://manus.im
+                      - generic [ref=f39e294]: › vi › playbook › invoice-generator
+              - heading [level=2] [ref=f39e296]:
+                - 'link "Trình tạo hóa đơn: Tạo hóa đơn chuyên nghiệp với AI" [ref=f39e297]':
+                  - /url: https://manus.im/vi/playbook/invoice-generator
+              - generic [ref=f39e299]: Tạo hóa đơn chi tiết với tính toán thuế, điều khoản thanh toán và định dạng chuyên nghiệp. Lý tưởng cho các công ty tư vấn, đại lý và doanh nghiệp dịch vụ cần tài liệu thanh toán toàn diện.
+          - listitem [ref=f39e304]:
+            - article [ref=f39e305] [cursor=pointer]:
+              - button [ref=f39e307]
+              - generic [ref=f39e311]:
+                - link "Search domain shopify.com" [ref=f39e313]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:www.shopify.com
+                - generic [ref=f39e316]:
+                  - paragraph [ref=f39e317]: Shopify
+                  - link "https://www.shopify.com › vn › tools › invoice-generator" [ref=f39e318]:
+                    - /url: https://www.shopify.com/vn/tools/invoice-generator
+                    - paragraph [ref=f39e320]:
+                      - generic [ref=f39e321]: https://www.shopify.com
+                      - generic [ref=f39e322]: › vn › tools › invoice-generator
+              - heading [level=2] [ref=f39e324]:
+                - 'link "Trình tạo hóa đơn miễn phí: Tạo hóa đơn trong vài phút - Shopify Việt Nam" [ref=f39e325]':
+                  - /url: https://www.shopify.com/vn/tools/invoice-generator
+              - generic [ref=f39e327]: Chúng tôi cung cấp mẫu hóa đơn chuyên nghiệp, dễ sử dụng, bao gồm đầy đủ thông tin cần thiết để bạn yêu cầu thanh toán. Sau khi điền các thông tin bắt buộc, công cụ sẽ tạo một hóa đơn chuyên nghiệp để bạn lưu, in hoặc gửi email trực tiếp cho khách hàng.
+          - listitem [ref=f39e332]:
+            - article [ref=f39e333] [cursor=pointer]:
+              - button [ref=f39e335]
+              - generic [ref=f39e339]:
+                - link "Search domain webcatalog.io" [ref=f39e341]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:webcatalog.io
+                - generic [ref=f39e344]:
+                  - paragraph [ref=f39e345]: JetPunk
+                  - link "https://webcatalog.io › vi › blog › the-best-invoicing-software-for-freelancers-and-small-businesses" [ref=f39e346]:
+                    - /url: https://webcatalog.io/vi/blog/the-best-invoicing-software-for-freelancers-and-small-businesses
+                    - paragraph [ref=f39e348]:
+                      - generic [ref=f39e349]: https://webcatalog.io
+                      - generic [ref=f39e350]: › vi › blog › the-best-invoicing-software-for-freelancers-and-small-businesses
+              - heading [level=2] [ref=f39e352]:
+                - link "8 phần mềm lập hóa đơn tốt nhất cho freelancer và doanh nghiệp nhỏ" [ref=f39e353]:
+                  - /url: https://webcatalog.io/vi/blog/the-best-invoicing-software-for-freelancers-and-small-businesses
+              - generic [ref=f39e355]: Khám phá những công cụ lập hóa đơn tốt nhất dành cho freelancer và doanh nghiệp nhỏ — dễ sử dụng, đầy đủ tính năng và được thiết kế để đơn giản hóa việc xuất hóa đơn, theo dõi thanh toán và quản lý tài chính của bạn một cách dễ dàng.
+          - listitem [ref=f39e360]:
+            - article [ref=f39e361] [cursor=pointer]:
+              - button [ref=f39e363]
+              - generic [ref=f39e367]:
+                - link "Search domain billcrafter.com" [ref=f39e369]:
+                  - /url: /?q=c%C3%B4ng%20c%E1%BB%A5%20t%E1%BA%A1o%20h%C3%B3a%20%C4%91%C6%A1n%20freelancer%20Vi%E1%BB%87t%20Nam%20nh%E1%BA%AFc%20thanh%20to%C3%A1n+site:billcrafter.com
+                - generic [ref=f39e372]:
+                  - paragraph [ref=f39e373]: billcrafter.com
+                  - link "https://billcrafter.com › vn" [ref=f39e374]:
+                    - /url: https://billcrafter.com/vn
+                    - paragraph [ref=f39e376]:
+                      - generic [ref=f39e377]: https://billcrafter.com
+                      - generic [ref=f39e378]: › vn
+              - heading [level=2] [ref=f39e380]:
+                - link "Gửi hóa đơn chuyên nghiệp trong chưa đầy một phút." [ref=f39e381]:
+                  - /url: https://billcrafter.com/vn
+              - generic [ref=f39e383]: Gửi hóa đơn chuyên nghiệp trong chưa đầy một phút. Tạo hóa đơn, dự toán, báo giá và biên nhận, rồi tải xuống PDF sạch đẹp. Không cần đăng ký để tải xuống, và không bao giờ có watermark.
+        - button "More results" [ref=f39e390] [cursor=pointer]
+    - list [ref=f39e393]:
+      - button "Close menu" [ref=f39e394] [cursor=pointer]
+      - list [ref=f39e398]:
+        - listitem [ref=f39e399]: Search
+        - listitem [ref=f39e400]:
+          - link "Homepage" [ref=f39e401] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f39e402]:
+          - link "Themes" [ref=f39e403] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f39e404]:
+          - link "Settings" [ref=f39e405] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f39e406]:
+        - listitem [ref=f39e407]: Share Feedback
+        - listitem [ref=f39e408]:
+          - generic [ref=f39e411]:
+            - button "Positive feedback" [ref=f39e412] [cursor=pointer]
+            - button "Negative feedback" [ref=f39e416] [cursor=pointer]
+      - list [ref=f39e420]:
+        - listitem [ref=f39e421]: Downloads
+        - listitem [ref=f39e422]:
+          - link "iOS Browser" [ref=f39e423] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f39e424]:
+          - link "Android Browser" [ref=f39e425] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f39e426]:
+          - link "Mac Browser" [ref=f39e427] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f39e428]:
+          - link "Windows Browser" [ref=f39e429] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f39e430]:
+          - link "Browser Extensions" [ref=f39e431] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f39e432]:
+        - listitem [ref=f39e433]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f39e434]:
+          - link "Duck.ai" [ref=f39e435] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f39e436]:
+          - link "Email Protection" [ref=f39e437] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f39e438]:
+          - link "Newsletter" [ref=f39e439] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f39e440]:
+          - link "Blog" [ref=f39e441] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f39e442]:
+          - link "Podcast" [ref=f39e443] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f39e444]:
+          - link "Collaborations" [ref=f39e445] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f39e446]:
+        - listitem [ref=f39e447]: Learn More
+        - listitem [ref=f39e448]:
+          - link "What’s New" [ref=f39e449] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f39e450]:
+          - link "Compare Privacy" [ref=f39e451] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f39e452]:
+          - link "About Our Browser" [ref=f39e453] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f39e454]:
+          - link "About DuckDuckGo" [ref=f39e455] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f39e456]:
+        - listitem [ref=f39e457]: Other Resources
+        - listitem [ref=f39e458]:
+          - link "Help" [ref=f39e459] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f39e460]:
+          - link "Community" [ref=f39e461] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f39e462]:
+          - link "Careers" [ref=f39e463] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f39e464]:
+          - link "Privacy Policy" [ref=f39e465] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f39e466]:
+          - link "Terms of Service" [ref=f39e467] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f39e468]:
+          - link "Press Kit" [ref=f39e469] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f39e470]:
+          - link "Advertise on Search" [ref=f39e471] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f39e477]:
+    - generic [ref=f39e488]:
+      - heading "Introducing DuckDuckGo Collaborations" [level=3] [ref=f39e489]
+      - paragraph [ref=f39e490]: Expertly crafted products for people who give a duck about privacy.
+    - link "See More" [ref=f39e491] [cursor=pointer]:
+      - /url: https://duckduckgo.com/collaborations
+  - button "Share Feedback" [ref=f39e496] [cursor=pointer]

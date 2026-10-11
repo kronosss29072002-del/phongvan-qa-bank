@@ -1,0 +1,341 @@
+- generic [active] [ref=f29e1]:
+  - generic [ref=f29e2]:
+    - generic [ref=f29e4]:
+      - generic [ref=f29e5]:
+        - generic [ref=f29e6]:
+          - link "DuckDuckGo home" [ref=f29e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f29e8]: DuckDuckGo
+          - generic [ref=f29e15]:
+            - combobox "Search privately" [ref=f29e17]: site:github.com waitlist referral landing page saas
+            - button "Search" [ref=f29e19] [cursor=pointer]
+        - button "Open menu" [ref=f29e24] [cursor=pointer]
+      - navigation [ref=f29e32]:
+        - list [ref=f29e33]:
+          - listitem [ref=f29e34]:
+            - link [ref=f29e35] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+waitlist+referral+landing+page+saas&ia=web
+              - strong [ref=f29e36]: All
+          - listitem [ref=f29e39]:
+            - link [ref=f29e40] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+waitlist+referral+landing+page+saas&ia=images&iax=images
+              - strong [ref=f29e41]: Images
+          - listitem [ref=f29e42]:
+            - link [ref=f29e43] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+waitlist+referral+landing+page+saas&ia=videos&iax=videos
+              - strong [ref=f29e44]: Videos
+          - listitem [ref=f29e45]:
+            - link [ref=f29e46] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+waitlist+referral+landing+page+saas&ia=news&iar=news
+              - strong [ref=f29e47]: News
+          - listitem [ref=f29e48]:
+            - link [ref=f29e49] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+waitlist+referral+landing+page+saas&iaxm=maps
+              - strong [ref=f29e50]: Maps
+        - list [ref=f29e51]:
+          - listitem [ref=f29e52]:
+            - link "Duck.ai" [ref=f29e54] [cursor=pointer]:
+              - /url: /?q=site%3Agithub.com+waitlist+referral+landing+page+saas&ia=chat&entry=serp
+          - listitem [ref=f29e58]:
+            - button "Search Settings ✀" [ref=f29e60] [cursor=pointer]:
+              - generic [ref=f29e63]: Search Settings
+              - generic [ref=f29e64]: ✀
+    - generic [ref=f29e71]:
+      - navigation [ref=f29e73]:
+        - button [ref=f29e75] [cursor=pointer]:
+          - strong [ref=f29e82]: Private
+        - generic [ref=f29e86]:
+          - switch "Filter by the selected region" [ref=f29e90]
+          - button "Vietnam (en)" [ref=f29e92] [cursor=pointer]
+        - button [ref=f29e97] [cursor=pointer]:
+          - strong [ref=f29e99]: "Safe search: moderate"
+        - button [ref=f29e103] [cursor=pointer]:
+          - strong [ref=f29e105]: Any time
+      - generic [ref=f29e109]:
+        - list [ref=f29e110]:
+          - listitem [ref=f29e111]:
+            - generic [ref=f29e112]:
+              - generic [ref=f29e115]:
+                - text: Only showing results from
+                - generic [ref=f29e116]: github.com
+              - button "Show all results" [ref=f29e118] [cursor=pointer]
+          - listitem [ref=f29e119]:
+            - article [ref=f29e120] [cursor=pointer]:
+              - button [ref=f29e122]
+              - generic [ref=f29e126]:
+                - link "Search domain github.com" [ref=f29e128]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e131]:
+                  - paragraph [ref=f29e132]: Github
+                  - link "https://github.com › APMusyoka › saas-landing-page" [ref=f29e133]:
+                    - /url: https://github.com/APMusyoka/saas-landing-page
+                    - paragraph [ref=f29e135]:
+                      - generic [ref=f29e136]: https://github.com
+                      - generic [ref=f29e137]: › APMusyoka › saas-landing-page
+              - heading [level=2] [ref=f29e139]:
+                - link "SaaS Landing Page with Waitlist - GitHub" [ref=f29e140]:
+                  - /url: https://github.com/APMusyoka/saas-landing-page
+              - generic [ref=f29e145]:
+                - text: Jan 16, 2026·
+                - generic [ref=f29e146]: SaaS Landing Page with Waitlist A modern, conversion-optimized landing page for SaaS products featuring animated sections, waitlist capture, and premium design aesthetics.
+          - listitem [ref=f29e147]:
+            - article [ref=f29e148] [cursor=pointer]:
+              - button [ref=f29e150]
+              - generic [ref=f29e154]:
+                - link "Search domain github.com" [ref=f29e156]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e159]:
+                  - paragraph [ref=f29e160]: Github
+                  - link "https://github.com › marouanedaouyny-prog › saas-waitlist-page" [ref=f29e161]:
+                    - /url: https://github.com/marouanedaouyny-prog/saas-waitlist-page
+                    - paragraph [ref=f29e163]:
+                      - generic [ref=f29e164]: https://github.com
+                      - generic [ref=f29e165]: › marouanedaouyny-prog › saas-waitlist-page
+              - heading [level=2] [ref=f29e167]:
+                - link "GitHub - marouanedaouyny-prog/saas-waitlist-page" [ref=f29e168]:
+                  - /url: https://github.com/marouanedaouyny-prog/saas-waitlist-page
+              - generic [ref=f29e170]: SaaS Waitlist Page A high-conversion landing page for pre-launch products featuring viral referral loops, real-time position tracking, and achievement-based rewards.
+          - listitem [ref=f29e175]:
+            - article [ref=f29e176] [cursor=pointer]:
+              - button [ref=f29e178]
+              - generic [ref=f29e182]:
+                - link "Search domain gist.github.com" [ref=f29e184]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e187]:
+                  - paragraph [ref=f29e188]: GitHub Gist
+                  - link "https://gist.github.com › Shashank-VK › 9f43fb9e64b8714566f51db8dfa25329" [ref=f29e189]:
+                    - /url: https://gist.github.com/Shashank-VK/9f43fb9e64b8714566f51db8dfa25329
+                    - paragraph [ref=f29e191]:
+                      - generic [ref=f29e192]: https://gist.github.com
+                      - generic [ref=f29e193]: › Shashank-VK › 9f43fb9e64b8714566f51db8dfa25329
+              - heading [level=2] [ref=f29e195]:
+                - link "3 Free Production-Ready Modern Landing Page Templates in Pure HTML/CSS ..." [ref=f29e196]:
+                  - /url: https://gist.github.com/Shashank-VK/9f43fb9e64b8714566f51db8dfa25329
+              - generic [ref=f29e201]:
+                - text: Sep 4, 2026·
+                - generic [ref=f29e202]: A curated collection of lightweight, standalone, high-converting landing page templates with zero build steps, zero bloated dependencies, and modern dark glassmorphic styling.
+          - listitem [ref=f29e203]:
+            - article [ref=f29e204] [cursor=pointer]:
+              - button [ref=f29e206]
+              - generic [ref=f29e210]:
+                - link "Search domain gist.github.com" [ref=f29e212]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e215]:
+                  - paragraph [ref=f29e216]: GitHub Gist
+                  - link "https://gist.github.com › codewithsadee › 894b29e7090843d7183c344758fc43d4" [ref=f29e217]:
+                    - /url: https://gist.github.com/codewithsadee/894b29e7090843d7183c344758fc43d4
+                    - paragraph [ref=f29e219]:
+                      - generic [ref=f29e220]: https://gist.github.com
+                      - generic [ref=f29e221]: › codewithsadee › 894b29e7090843d7183c344758fc43d4
+              - heading [level=2] [ref=f29e223]:
+                - link "AnalytiX - Saas landing page · GitHub" [ref=f29e224]:
+                  - /url: https://gist.github.com/codewithsadee/894b29e7090843d7183c344758fc43d4
+              - generic [ref=f29e229]:
+                - text: Nov 30, 2024·
+                - generic [ref=f29e230]: "AnalytiX - Saas landing page. GitHub Gist: instantly share code, notes, and snippets."
+          - listitem [ref=f29e231]:
+            - article [ref=f29e232] [cursor=pointer]:
+              - button [ref=f29e234]
+              - generic [ref=f29e238]:
+                - link "Search domain github.com" [ref=f29e240]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e243]:
+                  - paragraph [ref=f29e244]: Github
+                  - link "https://github.com › GoLaunch-dev › saas-waitlist-landingpage" [ref=f29e245]:
+                    - /url: https://github.com/GoLaunch-dev/saas-waitlist-landingpage
+                    - paragraph [ref=f29e247]:
+                      - generic [ref=f29e248]: https://github.com
+                      - generic [ref=f29e249]: › GoLaunch-dev › saas-waitlist-landingpage
+              - heading [level=2] [ref=f29e251]:
+                - link "GitHub - GoLaunch-dev/saas-waitlist-landingpage" [ref=f29e252]:
+                  - /url: https://github.com/GoLaunch-dev/saas-waitlist-landingpage
+              - generic [ref=f29e254]: If you're SaaS has already launched, you can add more elements to the landing page like customer testimonials, demos, etc. A full list of things I'd recommend is here
+          - listitem [ref=f29e259]:
+            - article [ref=f29e260] [cursor=pointer]:
+              - button [ref=f29e262]
+              - generic [ref=f29e266]:
+                - link "Search domain github.com" [ref=f29e268]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e271]:
+                  - paragraph [ref=f29e272]: Github
+                  - link "https://github.com › poofbyte › LaunchList" [ref=f29e273]:
+                    - /url: https://github.com/poofbyte/LaunchList
+                    - paragraph [ref=f29e275]:
+                      - generic [ref=f29e276]: https://github.com
+                      - generic [ref=f29e277]: › poofbyte › LaunchList
+              - heading [level=2] [ref=f29e279]:
+                - 'link "GitHub - poofbyte/LaunchList: Create beautiful waitlist landing pages ..." [ref=f29e280]':
+                  - /url: https://github.com/poofbyte/LaunchList
+              - generic [ref=f29e282]: Create beautiful waitlist landing pages with built-in referral tracking. Collect emails, rank users by referrals, and create viral growth — all before writing a single line of product code.
+          - listitem [ref=f29e287]:
+            - article [ref=f29e288] [cursor=pointer]:
+              - button [ref=f29e290]
+              - generic [ref=f29e294]:
+                - link "Search domain github.com" [ref=f29e296]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e299]:
+                  - paragraph [ref=f29e300]: Github
+                  - link "https://github.com › appwrite-community › saas-waitlist" [ref=f29e301]:
+                    - /url: https://github.com/appwrite-community/saas-waitlist
+                    - paragraph [ref=f29e303]:
+                      - generic [ref=f29e304]: https://github.com
+                      - generic [ref=f29e305]: › appwrite-community › saas-waitlist
+              - heading [level=2] [ref=f29e307]:
+                - link "GitHub - appwrite-community/saas-waitlist" [ref=f29e308]:
+                  - /url: https://github.com/appwrite-community/saas-waitlist
+              - generic [ref=f29e313]:
+                - text: Apr 22, 2026·
+                - generic [ref=f29e314]: A minimal waitlist landing page built with Vite, React, TypeScript, and Appwrite. Visitors submit a name and email, entries are stored in an Appwrite TablesDB table, and duplicate emails are rejected by a unique index.
+          - listitem [ref=f29e315]:
+            - article [ref=f29e316] [cursor=pointer]:
+              - button [ref=f29e318]
+              - generic [ref=f29e322]:
+                - link "Search domain github.com" [ref=f29e324]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e327]:
+                  - paragraph [ref=f29e328]: Github
+                  - link "https://github.com › Cletches › KabaHub › tree › main" [ref=f29e329]:
+                    - /url: https://github.com/Cletches/KabaHub/tree/main
+                    - paragraph [ref=f29e331]:
+                      - generic [ref=f29e332]: https://github.com
+                      - generic [ref=f29e333]: › Cletches › KabaHub › tree › main
+              - heading [level=2] [ref=f29e335]:
+                - 'link "GitHub - Cletches/KabaHub: Modern SaaS landing page with waitlist ..." [ref=f29e336]':
+                  - /url: https://github.com/Cletches/KabaHub/tree/main
+              - generic [ref=f29e338]: A modern, responsive SaaS landing page built with React, Vite, and Tailwind CSS, featuring an integrated waitlist system with Google Sheets database.
+          - listitem [ref=f29e343]:
+            - article [ref=f29e344] [cursor=pointer]:
+              - button [ref=f29e346]
+              - generic [ref=f29e350]:
+                - link "Search domain github.com" [ref=f29e352]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e355]:
+                  - paragraph [ref=f29e356]: Github
+                  - link "https://github.com › Kacper-Hernacki › Waitlist-SaaS-Template" [ref=f29e357]:
+                    - /url: https://github.com/Kacper-Hernacki/Waitlist-SaaS-Template
+                    - paragraph [ref=f29e359]:
+                      - generic [ref=f29e360]: https://github.com
+                      - generic [ref=f29e361]: › Kacper-Hernacki › Waitlist-SaaS-Template
+              - heading [level=2] [ref=f29e363]:
+                - link "GitHub - Kacper-Hernacki/Waitlist-SaaS-Template" [ref=f29e364]:
+                  - /url: https://github.com/Kacper-Hernacki/Waitlist-SaaS-Template
+              - generic [ref=f29e366]: SaaS Waitlist Template A production-ready, SEO-optimized Next.js 15 waitlist landing page with n8n webhook integration, complete analytics tracking, and GDPR compliance.
+          - listitem [ref=f29e371]:
+            - article [ref=f29e372] [cursor=pointer]:
+              - button [ref=f29e374]
+              - generic [ref=f29e378]:
+                - link "Search domain github.com" [ref=f29e380]:
+                  - /url: /?q=site%3Agithub.com%20waitlist%20referral%20landing%20page%20saas
+                - generic [ref=f29e383]:
+                  - paragraph [ref=f29e384]: Github
+                  - link "https://github.com › berat › waitlist-landing-page" [ref=f29e385]:
+                    - /url: https://github.com/berat/waitlist-landing-page
+                    - paragraph [ref=f29e387]:
+                      - generic [ref=f29e388]: https://github.com
+                      - generic [ref=f29e389]: › berat › waitlist-landing-page
+              - heading [level=2] [ref=f29e391]:
+                - 'link "GitHub - berat/waitlist-landing-page: simple and effective waitlist page" [ref=f29e392]':
+                  - /url: https://github.com/berat/waitlist-landing-page
+              - generic [ref=f29e394]: Contribute to berat/waitlist-landing-page development by creating an account on GitHub.
+        - button "More results" [ref=f29e401] [cursor=pointer]
+    - list [ref=f29e404]:
+      - button "Close menu" [ref=f29e405] [cursor=pointer]
+      - list [ref=f29e409]:
+        - listitem [ref=f29e410]: Search
+        - listitem [ref=f29e411]:
+          - link "Homepage" [ref=f29e412] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f29e413]:
+          - link "Themes" [ref=f29e414] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f29e415]:
+          - link "Settings" [ref=f29e416] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f29e417]:
+        - listitem [ref=f29e418]: Share Feedback
+        - listitem [ref=f29e419]:
+          - generic [ref=f29e422]:
+            - button "Positive feedback" [ref=f29e423] [cursor=pointer]
+            - button "Negative feedback" [ref=f29e427] [cursor=pointer]
+      - list [ref=f29e431]:
+        - listitem [ref=f29e432]: Downloads
+        - listitem [ref=f29e433]:
+          - link "iOS Browser" [ref=f29e434] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f29e435]:
+          - link "Android Browser" [ref=f29e436] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f29e437]:
+          - link "Mac Browser" [ref=f29e438] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f29e439]:
+          - link "Windows Browser" [ref=f29e440] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f29e441]:
+          - link "Browser Extensions" [ref=f29e442] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f29e443]:
+        - listitem [ref=f29e444]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f29e445]:
+          - link "Duck.ai" [ref=f29e446] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f29e447]:
+          - link "Email Protection" [ref=f29e448] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f29e449]:
+          - link "Newsletter" [ref=f29e450] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f29e451]:
+          - link "Blog" [ref=f29e452] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f29e453]:
+          - link "Podcast" [ref=f29e454] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f29e455]:
+          - link "Collaborations" [ref=f29e456] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f29e457]:
+        - listitem [ref=f29e458]: Learn More
+        - listitem [ref=f29e459]:
+          - link "What’s New" [ref=f29e460] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f29e461]:
+          - link "Compare Privacy" [ref=f29e462] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f29e463]:
+          - link "About Our Browser" [ref=f29e464] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f29e465]:
+          - link "About DuckDuckGo" [ref=f29e466] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f29e467]:
+        - listitem [ref=f29e468]: Other Resources
+        - listitem [ref=f29e469]:
+          - link "Help" [ref=f29e470] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f29e471]:
+          - link "Community" [ref=f29e472] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f29e473]:
+          - link "Careers" [ref=f29e474] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f29e475]:
+          - link "Privacy Policy" [ref=f29e476] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f29e477]:
+          - link "Terms of Service" [ref=f29e478] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f29e479]:
+          - link "Press Kit" [ref=f29e480] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f29e481]:
+          - link "Advertise on Search" [ref=f29e482] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f29e488]:
+    - generic [ref=f29e499]:
+      - heading "Introducing DuckDuckGo Collaborations" [level=3] [ref=f29e500]
+      - paragraph [ref=f29e501]: Expertly crafted products for people who give a duck about privacy.
+    - link "See More" [ref=f29e502] [cursor=pointer]:
+      - /url: https://duckduckgo.com/collaborations
+  - button "Share Feedback" [ref=f29e507] [cursor=pointer]

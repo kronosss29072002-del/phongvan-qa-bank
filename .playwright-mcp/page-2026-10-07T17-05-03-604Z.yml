@@ -1,0 +1,2225 @@
+- generic [active] [ref=f8e1]:
+  - text: ×
+  - generic [ref=f8e3]:
+    - generic [ref=f8e4]:
+      - heading "Trải nghiệm của bạn là ưu tiên của chúng tôi" [level=4] [ref=f8e5]
+      - paragraph [ref=f8e6]: TopCV sử dụng cookie để đảm bảo tính năng thiết yếu và cải thiện trải nghiệm của bạn.
+    - generic [ref=f8e7]:
+      - button "Tùy chỉnh cookie" [ref=f8e8] [cursor=pointer]
+      - button "Chấp nhận tất cả" [ref=f8e9] [cursor=pointer]
+  - generic [ref=f8e10]:
+    - generic [ref=f8e11]:
+      - heading "Cài đặt cookie" [level=3] [ref=f8e12]
+      - button "×" [ref=f8e13] [cursor=pointer]
+    - generic [ref=f8e15]:
+      - generic [ref=f8e16]:
+        - paragraph [ref=f8e17]: Cookie là công cụ giúp chúng tôi lưu trữ hoặc truy xuất các thông tin cần thiết từ trình duyệt của bạn. Thông tin này có thể liên quan đến bạn, sở thích của bạn hoặc thiết bị của bạn và chủ yếu được sử dụng để giúp trang web hoạt động như bạn mong đợi.
+        - paragraph [ref=f8e18]:
+          - strong [ref=f8e19]: Vì chúng tôi tôn trọng quyền riêng tư của bạn
+          - text: ", bạn có thể chọn không cho phép một số loại cookie bên dưới. Tuy nhiên, việc chặn một số loại cookie có thể ảnh hưởng đến trải nghiệm của bạn trên trang web và các dịch vụ mà chúng tôi có thể cung cấp."
+        - link "Xem mô tả chi tiết" [ref=f8e20] [cursor=pointer]:
+          - /url: https://static.topcv.vn/docs/cookie-policy.pdf
+      - generic [ref=f8e21]:
+        - generic [ref=f8e22]:
+          - generic [ref=f8e23]:
+            - heading "Cookie thiết yếu" [level=4] [ref=f8e24]
+            - generic [ref=f8e25]:
+              - generic [ref=f8e26]: ✓
+              - text: Luôn hoạt động
+          - generic [ref=f8e27]:
+            - generic [ref=f8e28]: Các cookie này thực hiện nhiều hoạt động cần thiết để điều hướng trang web và sử dụng các chức năng của trang. Bạn sẽ không thể sử dụng trang web của chúng tôi nếu không cho phép cookie này hoạt động.
+            - link "Thu gọn" [ref=f8e29] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f8e30]:
+          - generic [ref=f8e31]:
+            - heading "Cookie hiệu năng (khuyên dùng)" [level=4] [ref=f8e32]
+            - generic [ref=f8e33]:
+              - generic [ref=f8e34]: Tắt
+              - generic [ref=f8e37]: Bật
+          - generic [ref=f8e40]:
+            - generic [ref=f8e41]: Những cookie này cho chúng tôi biết cách bạn sử dụng trang web và giúp chúng tôi cải thiện trang web. Ví dụ giúp tăng tốc độ tải trang để trải nghiệm của bạn tốt hơn, hoặc cá nhân hoá các tính năng để bạn tìm việc, tạo CV, sử dụng các công cụ hiệu quả hơn.
+            - link "Xem thêm" [ref=f8e42] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f8e43]:
+          - generic [ref=f8e44]:
+            - heading "Cookie quảng cáo" [level=4] [ref=f8e45]
+            - generic [ref=f8e46]:
+              - generic [ref=f8e47]: Tắt
+              - generic [ref=f8e50]: Bật
+          - generic [ref=f8e53]:
+            - generic [ref=f8e54]: Cookie quảng cáo giúp các bên thứ ba như LinkedIn, Facebook, Google,... hiển thị các quảng cáo, cơ hội việc làm hoặc nội dung phù hợp với nhu cầu và sở thích thực tế của bạn trên thay vì những quảng cáo ngẫu nhiên không liên quan. Chúng tôi cùng chịu trách nhiệm với nền tảng thứ ba về việc thu thập dữ liệu từ TopCV. Sau khi thu thập, nền tảng thứ ba sẽ xử lý dữ liệu theo chính sách quyền riêng tư của họ.
+            - link "Xem thêm" [ref=f8e55] [cursor=pointer]:
+              - /url: "#"
+    - generic [ref=f8e56]:
+      - button "Xác nhận lựa chọn" [ref=f8e57] [cursor=pointer]
+      - button "Chấp nhận tất cả" [ref=f8e58] [cursor=pointer]
+  - generic [ref=f8e59]:
+    - link "♥ 0" [ref=f8e61] [cursor=pointer]:
+      - /url: https://www.topcv.vn/viec-lam-da-luu
+      - generic [ref=f8e62]: ♥
+      - generic [ref=f8e63]: "0"
+    - link "" [ref=f8e65] [cursor=pointer]:
+      - /url: https://www.topcv.vn/connect-to-employer/list?ta_source=RemindIcon
+    - generic [ref=f8e67]:
+      - generic [ref=f8e68] [cursor=pointer]:
+        - generic [ref=f8e69]: 💬
+        - generic [ref=f8e70]: Góp ý
+      - generic [ref=f8e71] [cursor=pointer]:
+        - generic [ref=f8e72]: 
+        - generic [ref=f8e73]: Hỗ trợ
+      - text: × 📞 ✉ → ×
+  - text: × ×    × × ×  × × → → ← → ← → ← → →
+  - navigation [ref=f8e74]:
+    - generic [ref=f8e75]:
+      - img "Menu mobile" [ref=f8e77]
+      - link [ref=f8e78] [cursor=pointer]:
+        - /url: https://www.topcv.vn?ref=you
+        - img "TopCV Pro - Nơi kết nối Ứng viên chất & Doanh nghiệp hàng đầu" [ref=f8e79]
+    - link "Đăng nhập" [ref=f8e81] [cursor=pointer]:
+      - /url: https://www.topcv.vn/login
+  - text:     → → → → → → → → → → → → → → → → → → → → → → → → → → →     → → → → → → → → → → → → → → → → → → → → → → → →
+  - generic [ref=f8e82]:
+    - generic [ref=f8e87]:
+      - generic [ref=f8e88] [cursor=pointer]:
+        - generic [ref=f8e90]:
+          - textbox "category-filter" [ref=f8e91]: "-1"
+          - generic [ref=f8e92]:
+            - generic [ref=f8e93]: 
+            - generic [ref=f8e94]: Danh mục Nghề
+            - text: ×
+            - generic [ref=f8e95]: 
+        - generic [ref=f8e97]:
+          - generic [ref=f8e98]:
+            - generic [ref=f8e99]: 🔍
+            - textbox "Vị trí tuyển dụng" [ref=f8e100]
+            - text: ×
+          - generic [ref=f8e102]:
+            - textbox "invisible-input" [ref=f8e103]
+            - generic [ref=f8e104]:
+              - generic [ref=f8e105]: 
+              - generic [ref=f8e106]: Địa điểm
+              - generic [ref=f8e108]: ⌄
+          - generic: 〈 ×
+      - button "Tìm kiếm" [ref=f8e110] [cursor=pointer]
+    - generic [ref=f8e112]:
+      - generic [ref=f8e113]:
+        - link [ref=f8e114] [cursor=pointer]:
+          - /url: http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.topcv.vn%2Fviec-lam%2Ffrontend-developer-fresher-reactjs%2F1498997.html%3Fta_source%3DButtonShareFacebookInJobDetail
+        - link [ref=f8e117] [cursor=pointer]:
+          - /url: https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.topcv.vn%2Fviec-lam%2Ffrontend-developer-fresher-reactjs%2F1498997.html%3Fta_source%3DButtonShareTwitterInJobDetail
+        - link [ref=f8e120] [cursor=pointer]:
+          - /url: https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.topcv.vn%2Fviec-lam%2Ffrontend-developer-fresher-reactjs%2F1498997.html%3Fta_source%3DButtonShareLinkedInInJobDetail
+        - generic [ref=f8e123] [cursor=pointer]: 🔗
+      - list [ref=f8e126]:
+        - listitem [ref=f8e127]:
+          - link "Trang chủ" [ref=f8e128] [cursor=pointer]:
+            - /url: https://www.topcv.vn?ref=you
+          - generic [ref=f8e129]: ›
+        - listitem [ref=f8e130]:
+          - link "Việc làm" [ref=f8e131] [cursor=pointer]:
+            - /url: https://www.topcv.vn/viec-lam
+          - generic [ref=f8e132]: ›
+        - listitem [ref=f8e133]:
+          - link "Việc làm Frontend Developer" [ref=f8e134] [cursor=pointer]:
+            - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer
+          - generic [ref=f8e135]: ›
+        - listitem [ref=f8e136]:
+          - link "Việc làm IT" [ref=f8e137] [cursor=pointer]:
+            - /url: https://www.topcv.vn/tim-viec-lam-cong-nghe-thong-tin-cr257
+          - generic [ref=f8e138]: ›
+        - listitem [ref=f8e139]: Tuyển Frontend Developer Fresher (ReactJS)
+      - generic [ref=f8e141]:
+        - generic [ref=f8e142]:
+          - generic [ref=f8e145]:
+            - generic [ref=f8e146]:
+              - heading [level=1] [ref=f8e147]:
+                - link "Frontend Developer" [ref=f8e148] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer
+                - link "Fresher" [ref=f8e149] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-fresher
+                - text: (
+                - link "ReactJS" [ref=f8e150] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-reactjs
+                - text: )
+              - generic [ref=f8e151]:
+                - generic [ref=f8e152]: Thoả thuận
+                - link "Xem mức lương thị trường cho vị trí này 〉" [ref=f8e156] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tra-cuu-muc-luong-tai-viet-nam/frontend-developer
+                  - text: Xem mức lương thị trường cho vị trí này
+                  - generic [ref=f8e157]: 〉
+            - text: ⭐ ⭐
+            - generic [ref=f8e158]:
+              - generic [ref=f8e165]:
+                - generic [ref=f8e166]: Địa điểm
+                - link "Hồ Chí Minh" [ref=f8e168] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2
+              - generic [ref=f8e175]:
+                - generic [ref=f8e176]: Kinh nghiệm
+                - generic [ref=f8e177]: 1 năm
+              - generic [ref=f8e184]:
+                - generic [ref=f8e185]: Hạn ứng tuyển
+                - generic [ref=f8e186]: 11/01/2025
+            - link "👁 Xem số người đã ứng tuyển ✨ New" [ref=f8e187] [cursor=pointer]:
+              - /url: javascript:showLoginPopup('https://www.topcv.vn/viec-lam/frontend-developer-fresher-reactjs/1498997.html', 'Đăng nhập hoặc Đăng ký để xem thông tin!')
+              - generic [ref=f8e188]: 👁
+              - generic [ref=f8e190]: Xem số người đã ứng tuyển
+              - text: 
+              - generic [ref=f8e191]:
+                - generic [ref=f8e192]: ✨
+                - text: New
+            - generic [ref=f8e194]:
+              - generic [ref=f8e195]:
+                - generic [ref=f8e196]: 
+                - text: Hết hạn ứng tuyển
+              - link "Xem việc làm liên quan " [ref=f8e197] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=f8e198]: Xem việc làm liên quan
+                - generic [ref=f8e199]: 
+          - generic [ref=f8e200]:
+            - img "Tin đăng đã được kiểm duyệt" [ref=f8e201]
+            - paragraph [ref=f8e202]:
+              - text: 100% tin đăng tải trên TopCV được
+              - strong [ref=f8e203]: cung cấp bởi các Nhà tuyển dụng đã được xác thực thông tin
+              - text: .
+          - generic [ref=f8e205]:
+            - generic [ref=f8e206]:
+              - generic [ref=f8e207]:
+                - generic [ref=f8e208]:
+                  - heading "Tổng quan" [level=2] [ref=f8e209]
+                  - button "🔔 Gửi tôi việc làm tương tự" [ref=f8e211] [cursor=pointer]:
+                    - generic [ref=f8e212]: 🔔
+                    - generic [ref=f8e213]: Gửi tôi việc làm tương tự
+                - generic [ref=f8e214]:
+                  - generic [ref=f8e215]:
+                    - heading "Yêu cầu:" [level=3] [ref=f8e216]
+                    - generic [ref=f8e217]: 1 năm kinh nghiệm chuyên môn
+                  - generic [ref=f8e220]:
+                    - heading "Chuyên môn:" [level=3] [ref=f8e221]
+                    - link "Frontend Developer" [ref=f8e224] [cursor=pointer]:
+                      - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-cr257cb258cl273
+              - generic [ref=f8e225]:
+                - heading "Mô tả công việc" [level=2] [ref=f8e227]
+                - generic [ref=f8e228]:
+                  - paragraph [ref=f8e229]: Phát triển và nâng cấp các tính năng trong các dự án đang hoạt động với ngôn ngữ Javascript.
+                  - paragraph [ref=f8e230]: Xây dựng các microsite, trang quản lý (CRM, HRM, CMS ...) cho các dự án mới với framework ReactJS.
+                  - paragraph [ref=f8e231]: Tương tác dữ liệu với API được đội Backend cung cấp.
+                  - paragraph [ref=f8e232]: Phát triển kỹ năng thiết kế UI hoặc định hướng UX.
+              - generic [ref=f8e233]:
+                - heading "Yêu cầu ứng viên" [level=2] [ref=f8e235]
+                - generic [ref=f8e236]:
+                  - paragraph [ref=f8e237]: Tốt nghiệp các ngành học liên quan CNTT.
+                  - paragraph [ref=f8e238]: Có kinh nghiệm 1 năm.
+                  - paragraph [ref=f8e239]: Hiểu biết về HTML5, CSS3, Javascript ES6, Typescript.
+                  - paragraph [ref=f8e240]: Có kiến thức cơ bản về ReactJS , Angular.
+                  - paragraph [ref=f8e241]: Có kinh nghiệm sử dụng React-query, zustand, stateX.
+                  - paragraph [ref=f8e242]: Đã từng sử dụng Bootstrap, Ant Design, NextJS, MUI.
+                  - paragraph [ref=f8e243]: Có kiến thức về RESTful APIs.
+                  - paragraph [ref=f8e244]: Đã sử dụng qua GITHUB, JIRA, BITBUCKET.
+                  - paragraph [ref=f8e245]: Có khả năng design giao diện và biết sử dụng Figma.
+                  - paragraph [ref=f8e246]: Biết về AWWWARDS , gaming
+              - generic [ref=f8e247]:
+                - heading "Quyền lợi ứng viên" [level=2] [ref=f8e249]
+                - generic [ref=f8e250]:
+                  - paragraph [ref=f8e251]: "Thời gian làm việc linh động: 5 ngày/tuần (thứ 2 – thứ 6) ; 8h30 – 17h30 ; nghỉ trưa 1,5 tiếng)"
+                  - paragraph [ref=f8e252]: 12 ngày phép năm, 4 ngày phép đột xuất + nghỉ lễ, tết.
+                  - paragraph [ref=f8e253]: "Thử việc: 2 tháng"
+                  - paragraph [ref=f8e254]: Review 2 lần/năm dựa trên hiệu suất công việc, KPI.
+                  - paragraph [ref=f8e255]: Tham gia đầy đủ BHXH, BHYT, BHTN theo quy định.
+                  - paragraph [ref=f8e256]: Khám sức khỏe định kỳ hằng năm.
+                  - paragraph [ref=f8e257]: Lương dựa trên năng lực, kinh nghiệm, kiến thức.
+                  - paragraph [ref=f8e258]: Cung cấp thiết bị làm việc.
+                  - paragraph [ref=f8e259]: Được tham gia các buổi training nội bộ nhằm nâng cao kiến thức.
+                  - paragraph [ref=f8e260]: Môi trường làm việc năng động, trẻ trung, thoải mái.
+                  - paragraph [ref=f8e261]: Team building, tiệc ăn uống, giải trí hằng tháng, year-end party, v.v...
+                  - paragraph [ref=f8e262]: "Quà, thưởng: Sinh nhật, lễ tết, trung thu, giáng sinh, v.v...."
+              - generic [ref=f8e263]:
+                - heading "Địa điểm và thời gian" [level=2] [ref=f8e265]
+                - generic [ref=f8e267]:
+                  - heading "Địa điểm làm việc" [level=3] [ref=f8e268]
+                  - list [ref=f8e270]:
+                    - listitem [ref=f8e271]:
+                      - strong [ref=f8e272]: Hồ Chí Minh
+                      - text: ": Cách Mạng Tháng 8, Quận 3"
+                - generic [ref=f8e274]:
+                  - heading "Cách thức ứng tuyển" [level=3] [ref=f8e275]
+                  - list [ref=f8e277]:
+                    - listitem [ref=f8e278]: Ứng viên nộp hồ sơ trực tuyến bằng cách bấm Ứng tuyển ngay dưới đây.
+                - generic [ref=f8e280]:
+                  - generic [ref=f8e282]:
+                    - generic [ref=f8e283]:
+                      - generic [ref=f8e284]: 
+                      - text: Hết hạn ứng tuyển
+                    - link "Xem việc làm liên quan " [ref=f8e285] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                      - generic [ref=f8e286]: Xem việc làm liên quan
+                      - generic [ref=f8e287]: 
+                  - paragraph [ref=f8e289]: "Hạn ứng tuyển: 11/01/2025"
+                - generic [ref=f8e290]:
+                  - generic [ref=f8e291]: 
+                  - generic [ref=f8e293]:
+                    - text: "Báo cáo tin tuyển dụng: Nếu bạn thấy rằng tin tuyển dụng này không đúng hoặc có dấu hiệu lừa đảo,"
+                    - link "hãy phản ánh với chúng tôi." [ref=f8e294] [cursor=pointer]:
+                      - /url: javascript:showLoginPopup('https://www.topcv.vn/viec-lam/frontend-developer-fresher-reactjs/1498997.html?report-form=1', 'Đăng nhập hoặc Đăng ký để phản ánh tin tuyển dụng này!')
+              - button "Xem đầy đủ mô tả công việc " [ref=f8e296] [cursor=pointer]:
+                - generic [ref=f8e297]: Xem đầy đủ mô tả công việc
+                - generic [ref=f8e298]: 
+            - generic [ref=f8e299]:
+              - heading "Việc làm liên quan" [level=2] [ref=f8e301]
+              - generic [ref=f8e302]: Đang tải việc làm liên quan...
+        - generic [ref=f8e307]:
+          - generic [ref=f8e308]:
+            - generic [ref=f8e309]:
+              - link [ref=f8e310] [cursor=pointer]:
+                - /url: https://www.topcv.vn/cong-ty/cong-ty-co-phan-estuary/45650.html
+                - img "CÔNG TY CỔ PHẦN ESTUARY" [ref=f8e311]
+              - link "CÔNG TY CỔ PHẦN ESTUARY" [ref=f8e313] [cursor=pointer]:
+                - /url: https://www.topcv.vn/cong-ty/cong-ty-co-phan-estuary/45650.html
+            - generic [ref=f8e314]:
+              - generic [ref=f8e315]: "Quy mô: 25-99 nhân viên"
+              - generic [ref=f8e319]: "Địa điểm: Tầng 10, Tòa nhà GB Tower, 78-80 Cách Mạng Tháng Tám, Phường 06, Quận 3, Hồ Chí Minh, Vietnam"
+              - generic [ref=f8e323]: "Ngành nghề: Lập trình máy tính"
+            - link "Xem trang công ty " [ref=f8e330] [cursor=pointer]:
+              - /url: https://www.topcv.vn/cong-ty/cong-ty-co-phan-estuary/45650.html
+              - text: Xem trang công ty
+              - generic [ref=f8e331]: 
+          - generic [ref=f8e332]:
+            - heading "Thông tin chung" [level=2] [ref=f8e334]
+            - generic [ref=f8e335]:
+              - generic [ref=f8e340]:
+                - generic [ref=f8e341]: Cấp bậc
+                - generic [ref=f8e342]: Nhân viên
+              - generic [ref=f8e347]:
+                - generic [ref=f8e348]: Số lượng tuyển
+                - generic [ref=f8e349]: 1 người
+              - generic [ref=f8e354]:
+                - generic [ref=f8e355]: Loại hình làm việc
+                - generic [ref=f8e356]: Toàn thời gian
+          - generic [ref=f8e357]:
+            - generic [ref=f8e358]:
+              - generic [ref=f8e359]: Danh mục Nghề liên quan
+              - generic [ref=f8e360]:
+                - link "Công nghệ Thông tin" [ref=f8e361] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-cong-nghe-thong-tin-cr257
+                - link "Software Engineering" [ref=f8e362] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-software-engineering-cr257cb258
+                - link "Frontend Developer" [ref=f8e363] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-cr257cb258cl273
+                - link "Việc làm IT" [ref=f8e364] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/viec-lam-it
+              - generic [ref=f8e365] [cursor=pointer]: Xem thêm
+            - generic [ref=f8e367]:
+              - generic [ref=f8e368]: Tìm việc theo địa giới trước sáp nhập
+              - generic [ref=f8e369]:
+                - link "Hồ Chí Minh" [ref=f8e371] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2
+                - link "Việc làm Frontend Developer tại Hồ Chí Minh" [ref=f8e373] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2
+                - link "Bình Dương" [ref=f8e375] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-duong-l3
+                - link "Việc làm Frontend Developer tại Bình Dương" [ref=f8e377] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-binh-duong-kl3
+                - link "Bà Rịa-Vũng Tàu" [ref=f8e379] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ba-ria-vung-tau-l11
+                - link "Việc làm Frontend Developer tại Bà Rịa-Vũng Tàu" [ref=f8e381] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ba-ria-vung-tau-kl11
+              - generic [ref=f8e382] [cursor=pointer]: Xem thêm
+            - generic [ref=f8e384]:
+              - generic [ref=f8e385]: Tìm việc theo địa giới sau sáp nhập
+              - generic [ref=f8e386]:
+                - link "Hồ Chí Minh" [ref=f8e388] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2lv2
+                - link "Việc làm Frontend Developer tại Hồ Chí Minh" [ref=f8e390] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2lv2
+                - link "Quận 3 - TP HCM" [ref=f8e392] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-tai-quan-3-l2d203lv2
+                - link "Việc làm Frontend Developer tại Quận 3 - TP HCM" [ref=f8e394] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-quan-3-kl2d203lv2
+              - generic [ref=f8e395] [cursor=pointer]: Xem thêm
+          - text:  〈 〉
+          - generic [ref=f8e396]:
+            - link [ref=f8e397] [cursor=pointer]:
+              - /url: https://www.topcv.vn/mau-cv
+              - img "Mẫu CV xin việc tiếng Việt, Anh, Nhật, Trung" [ref=f8e398]
+            - link [ref=f8e399] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tinh-luong-gross-net
+              - img "Công cụ tính lương Gross sang Net, Net sang Gross" [ref=f8e400]
+            - link [ref=f8e401] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tinh-thue-thu-nhap-ca-nhan
+              - img "Công cụ tính Thuế thu nhập cá nhân" [ref=f8e402]
+            - link [ref=f8e403] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tra-cuu-muc-luong-tai-viet-nam
+              - img "Công cụ Tra cứu mức lương tại Việt Nam" [ref=f8e404]
+          - generic [ref=f8e405]:
+            - generic [ref=f8e406]:
+              - text: Vị trí
+              - link "Frontend Developer" [ref=f8e407] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer
+              - link "Fresher" [ref=f8e408] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-fresher
+              - text: (
+              - link "ReactJS" [ref=f8e409] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-reactjs
+              - text: ) tuyển dụng bởi công ty
+              - link "CÔNG TY CỔ PHẦN ESTUARY" [ref=f8e410] [cursor=pointer]:
+                - /url: https://www.topcv.vn/cong-ty/cong-ty-co-phan-estuary/45650.html
+              - text: tại Hồ Chí Minh, Quận 3 - TP HCM với mức lương Thoả thuận yêu cầu hình thức làm việc Toàn thời gian. Bạn có thể tham khảo thêm các vị trí tuyển dụng
+              - link "Frontend Developer tại Hồ Chí Minh, Quận 3 - TP HCM" [ref=f8e411] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2
+              - text: khác trên kênh tuyển dụng việc làm topcv.
+            - generic [ref=f8e412] [cursor=pointer]: Xem thêm
+          - generic [ref=f8e413]:
+            - generic [ref=f8e414]:
+              - link "web developer" [ref=f8e415] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-web-developer-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "reactjs developer" [ref=f8e416] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-reactjs-developer-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "backend developer" [ref=f8e417] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-backend-developer-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "full stack developer" [ref=f8e418] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-full-stack-developer-tai-ho-chi-minh-kl2
+              - text: ","
+              - link ".net developer" [ref=f8e419] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-net-developer-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "golang developer" [ref=f8e420] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-golang-developer-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "lập trình php" [ref=f8e421] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-php-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "java developer" [ref=f8e422] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-java-developer-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "frontend" [ref=f8e423] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "lập trình viên java" [ref=f8e424] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-java-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "nodejs developer" [ref=f8e425] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nodejs-developer-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "angular developer" [ref=f8e426] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-angular-developer-tai-ho-chi-minh-kl2
+              - text: ","
+              - link "lập trình viên" [ref=f8e427] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-tai-ho-chi-minh-kl2
+            - generic [ref=f8e428] [cursor=pointer]: Xem thêm
+    - generic [ref=f8e430]:
+      - generic [ref=f8e432]:
+        - paragraph [ref=f8e433]:
+          - strong [ref=f8e434]: Cơ hội tiếp cận việc làm đa ngành nghề với chế độ đãi ngộ hấp dẫn
+        - paragraph [ref=f8e435]:
+          - text: Trước sự phát triển vượt bậc của nền kinh tế, rất nhiều ngành nghề trở nên khan hiếm nhân lực hoặc thiếu nhân lực giỏi. Vì vậy, hầu hết các trường Đại học đều liên kết với các công ty, doanh nghiệp, cơ quan để tạo cơ hội cho các bạn sinh viên được học tập, rèn luyện bản thân và làm quen với môi trường làm việc từ sớm. Trong
+          - link [ref=f8e436] [cursor=pointer]:
+            - /url: https://www.topcv.vn/viec-lam
+            - strong [ref=f8e437]: danh sách việc làm
+          - text: trên đây, TopCV mang đến cho bạn những cơ hội việc làm tại những môi trường làm việc năng động, chuyên nghiệp.
+        - paragraph [ref=f8e438]:
+          - strong [ref=f8e439]: Vậy tại sao nên tìm việc làm tại TopCV?
+        - paragraph [ref=f8e440]:
+          - strong [ref=f8e441]: Việc làm Chất lượng
+        - list [ref=f8e442]:
+          - listitem [ref=f8e443]: Hàng ngàn tin tuyển dụng chất lượng cao được cập nhật thường xuyên để đáp ứng nhu cầu tìm việc của ứng viên.
+          - listitem [ref=f8e444]: Hệ thống thông minh tự động gợi ý các công việc phù hợp theo CV của bạn.
+        - paragraph [ref=f8e445]:
+          - strong [ref=f8e446]: Công cụ viết CV đẹp Miễn phí
+        - list [ref=f8e447]:
+          - listitem [ref=f8e448]: Nhiều mẫu CV đẹp, phù hợp nhu cầu ứng tuyển các vị trí khác nhau.
+          - listitem [ref=f8e449]: Tương tác trực quan, dễ dàng chỉnh sửa thông tin, tạo CV online nhanh chóng trong vòng 5 phút.
+        - paragraph [ref=f8e450]:
+          - strong [ref=f8e451]: Hỗ trợ Người tìm việc
+        - list [ref=f8e452]:
+          - listitem [ref=f8e453]: Nhà tuyển dụng chủ động tìm kiếm và liên hệ với bạn qua hệ thống kết nối ứng viên thông minh.
+          - listitem [ref=f8e454]: Báo cáo chi tiết Nhà tuyển dụng đã xem CV và gửi offer tới bạn.
+        - paragraph [ref=f8e455]:
+          - text: Nhanh tay tạo CV và ứng tuyển
+          - link [ref=f8e456] [cursor=pointer]:
+            - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ha-noi-l1
+            - strong [ref=f8e457]: việc làm Hà Nội
+          - text: ","
+          - link [ref=f8e458] [cursor=pointer]:
+            - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2
+            - strong [ref=f8e459]: việc làm TP.HCM
+          - strong [ref=f8e460]
+          - text: cùng nhiều cơ hội việc làm tại các tỉnh, thành khác trên TopCV. Hãy truy cập chuyên trang việc làm của TopV để khám phá các
+          - link [ref=f8e461] [cursor=pointer]:
+            - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat
+            - strong [ref=f8e462]: việc làm mới cập nhật
+          - text: trên nền tảng.
+      - generic [ref=f8e463]:
+        - generic [ref=f8e464]: Từ khoá tìm việc làm phổ biến tại TopCV
+        - generic [ref=f8e465]:
+          - generic [ref=f8e467]:
+            - generic "Việc làm theo ngành nghề" [ref=f8e468]: 🔍 Việc làm theo ngành nghề
+            - generic [ref=f8e471]:
+              - link "Việc làm Kinh doanh/Bán hàng" [ref=f8e472] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-ban-hang-cr1
+              - link "Việc làm Marketing/PR/Quảng cáo" [ref=f8e473] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-marketing-pr-quang-cao-cr92
+              - link "Việc làm Chăm sóc khách hàng (Customer Service)/Vận hành" [ref=f8e474] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cham-soc-khach-hang-customer-service-van-hanh-cr158
+              - link "Việc làm Nhân sự/Hành chính/Pháp chế" [ref=f8e475] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-su-hanh-chinh-phap-che-cr177
+              - link "Việc làm Công nghệ Thông tin" [ref=f8e476] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nghe-thong-tin-cr257
+              - link "Việc làm Lao động phổ thông" [ref=f8e477] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-lao-dong-pho-thong-cr1042
+              - link "Việc làm Tài chính/Ngân hàng/Bảo hiểm" [ref=f8e478] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-chinh-ngan-hang-bao-hiem-cr206
+              - link "Việc làm Bất động sản" [ref=f8e479] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bat-dong-san-cr333
+              - link "Việc làm Xây dựng" [ref=f8e480] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-xay-dung-cr1080
+              - link "Việc làm Kế toán/Kiểm toán/Thuế" [ref=f8e481] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-kiem-toan-thue-cr392
+              - link "Việc làm Sản xuất" [ref=f8e482] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-san-xuat-cr417
+              - link "Việc làm Giáo dục/Đào tạo" [ref=f8e483] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-duc-dao-tao-cr477
+              - link "Việc làm Bán lẻ/Dịch vụ đời sống" [ref=f8e484] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-le-dich-vu-doi-song-cr544
+              - link "Việc làm Phim và truyền hình/Báo chí/Xuất bản" [ref=f8e485] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phim-va-truyen-hinh-bao-chi-xuat-ban-cr612
+              - link "Việc làm Điện/Điện tử/Viễn thông" [ref=f8e486] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dien-dien-tu-vien-thong-cr644
+              - link "Việc làm Logistics/Thu mua/Kho/Vận tải" [ref=f8e487] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-logistics-thu-mua-kho-van-tai-cr711
+              - link "Việc làm Tư vấn chuyên môn" [ref=f8e488] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-chuyen-mon-cr750
+              - link "Việc làm Dược/Y tế/Sức khoẻ/Công nghệ sinh học" [ref=f8e489] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-duoc-y-te-suc-khoe-cong-nghe-sinh-hoc-cr781
+              - link "Việc làm Thiết kế" [ref=f8e490] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thiet-ke-cr826
+              - link "Việc làm Nhà hàng/Khách sạn/Du lịch" [ref=f8e491] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nha-hang-khach-san-du-lich-cr857
+              - link "Việc làm Năng lượng/Môi trường/Nông nghiệp" [ref=f8e492] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nang-luong-moi-truong-nong-nghiep-cr883
+              - link "Việc làm Tài xế" [ref=f8e493] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-cr1010
+              - link "Việc làm Biên phiên dịch" [ref=f8e494] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bien-phien-dich-cr1013
+              - link "Việc làm Luật" [ref=f8e495] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-luat-cr1014
+              - link "Việc làm Nhóm nghề khác" [ref=f8e496] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhom-nghe-khac-cr899
+          - generic [ref=f8e500]:
+            - generic "Việc làm theo khu vực" [ref=f8e501]
+            - generic [ref=f8e504]:
+              - link "Việc làm tại Hà Nội" [ref=f8e505] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ha-noi-l1
+              - link "Việc làm tại Hồ Chí Minh" [ref=f8e506] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2
+              - link "Việc làm tại Bình Dương" [ref=f8e507] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-duong-l3
+              - link "Việc làm tại Bắc Ninh" [ref=f8e508] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-bac-ninh-l4
+              - link "Việc làm tại Đồng Nai" [ref=f8e509] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-dong-nai-l5
+              - link "Việc làm tại Hưng Yên" [ref=f8e510] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hung-yen-l6
+              - link "Việc làm tại Hải Dương" [ref=f8e511] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hai-duong-l7
+              - link "Việc làm tại Đà Nẵng" [ref=f8e512] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-da-nang-l8
+              - link "Việc làm tại Hải Phòng" [ref=f8e513] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hai-phong-l9
+              - link "Việc làm tại An Giang" [ref=f8e514] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-an-giang-l10
+              - link "Việc làm tại Bà Rịa-Vũng Tàu" [ref=f8e515] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ba-ria-vung-tau-l11
+              - link "Việc làm tại Bắc Giang" [ref=f8e516] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-bac-giang-l12
+              - link "Việc làm tại Bắc Kạn" [ref=f8e517] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-bac-kan-l13
+              - link "Việc làm tại Bạc Liêu" [ref=f8e518] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-bac-lieu-l14
+              - link "Việc làm tại Bến Tre" [ref=f8e519] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ben-tre-l15
+              - link "Việc làm tại Bình Định" [ref=f8e520] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-dinh-l16
+              - link "Việc làm tại Bình Phước" [ref=f8e521] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-phuoc-l17
+              - link "Việc làm tại Bình Thuận" [ref=f8e522] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-thuan-l18
+              - link "Việc làm tại Cà Mau" [ref=f8e523] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ca-mau-l19
+              - link "Việc làm tại Cần Thơ" [ref=f8e524] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-can-tho-l20
+              - link "Việc làm tại Cao Bằng" [ref=f8e525] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-cao-bang-l21
+              - link "Việc làm tại Cửu Long" [ref=f8e526] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-cuu-long-l22
+              - link "Việc làm tại Đắk Lắk" [ref=f8e527] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-dak-lak-l23
+              - link "Việc làm tại Đắc Nông" [ref=f8e528] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-dac-nong-l24
+              - link "Việc làm tại Điện Biên" [ref=f8e529] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-dien-bien-l25
+              - link "Việc làm tại Đồng Tháp" [ref=f8e530] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-dong-thap-l26
+              - link "Việc làm tại Gia Lai" [ref=f8e531] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-gia-lai-l27
+              - link "Việc làm tại Hà Giang" [ref=f8e532] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ha-giang-l28
+              - link "Việc làm tại Hà Nam" [ref=f8e533] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ha-nam-l29
+              - link "Việc làm tại Hà Tĩnh" [ref=f8e534] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ha-tinh-l30
+              - link "Việc làm tại Hậu Giang" [ref=f8e535] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hau-giang-l31
+              - link "Việc làm tại Hòa Bình" [ref=f8e536] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hoa-binh-l32
+              - link "Việc làm tại Khánh Hòa" [ref=f8e537] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-khanh-hoa-l33
+              - link "Việc làm tại Kiên Giang" [ref=f8e538] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-kien-giang-l34
+              - link "Việc làm tại Kon Tum" [ref=f8e539] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-kon-tum-l35
+              - link "Việc làm tại Lai Châu" [ref=f8e540] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-lai-chau-l36
+              - link "Việc làm tại Lâm Đồng" [ref=f8e541] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-lam-dong-l37
+              - link "Việc làm tại Lạng Sơn" [ref=f8e542] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-lang-son-l38
+              - link "Việc làm tại Lào Cai" [ref=f8e543] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-lao-cai-l39
+              - link "Việc làm tại Long An" [ref=f8e544] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-long-an-l40
+              - link "Việc làm tại Miền Bắc" [ref=f8e545] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-mien-bac-l41
+              - link "Việc làm tại Miền Nam" [ref=f8e546] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-mien-nam-l42
+              - link "Việc làm tại Miền Trung" [ref=f8e547] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-mien-trung-l43
+              - link "Việc làm tại Nam Định" [ref=f8e548] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-nam-dinh-l44
+              - link "Việc làm tại Nghệ An" [ref=f8e549] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-nghe-an-l45
+              - link "Việc làm tại Ninh Bình" [ref=f8e550] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ninh-binh-l46
+              - link "Việc làm tại Ninh Thuận" [ref=f8e551] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ninh-thuan-l47
+              - link "Việc làm tại Phú Thọ" [ref=f8e552] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-phu-tho-l48
+              - link "Việc làm tại Phú Yên" [ref=f8e553] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-phu-yen-l49
+              - link "Việc làm tại Quảng Bình" [ref=f8e554] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-quang-binh-l50
+              - link "Việc làm tại Quảng Nam" [ref=f8e555] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-quang-nam-l51
+              - link "Việc làm tại Quảng Ngãi" [ref=f8e556] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-quang-ngai-l52
+              - link "Việc làm tại Quảng Ninh" [ref=f8e557] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-quang-ninh-l53
+              - link "Việc làm tại Quảng Trị" [ref=f8e558] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-quang-tri-l54
+              - link "Việc làm tại Sóc Trăng" [ref=f8e559] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-soc-trang-l55
+              - link "Việc làm tại Sơn La" [ref=f8e560] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-son-la-l56
+              - link "Việc làm tại Tây Ninh" [ref=f8e561] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-tay-ninh-l57
+              - link "Việc làm tại Thái Bình" [ref=f8e562] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-thai-binh-l58
+              - link "Việc làm tại Thái Nguyên" [ref=f8e563] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-thai-nguyen-l59
+              - link "Việc làm tại Thanh Hóa" [ref=f8e564] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-thanh-hoa-l60
+              - link "Việc làm tại Huế" [ref=f8e565] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-thua-thien-hue-l61
+              - link "Việc làm tại Tiền Giang" [ref=f8e566] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-tien-giang-l62
+              - link "Việc làm tại Toàn Quốc" [ref=f8e567] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-toan-quoc-l63
+              - link "Việc làm tại Trà Vinh" [ref=f8e568] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-tra-vinh-l64
+              - link "Việc làm tại Tuyên Quang" [ref=f8e569] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-tuyen-quang-l65
+              - link "Việc làm tại Vĩnh Long" [ref=f8e570] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-vinh-long-l66
+              - link "Việc làm tại Vĩnh Phúc" [ref=f8e571] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-vinh-phuc-l67
+              - link "Việc làm tại Yên Bái" [ref=f8e572] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-yen-bai-l68
+              - link "Việc làm tại Nước Ngoài" [ref=f8e573] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-nuoc-ngoai-l100
+              - link "Việc làm tại Đức" [ref=f8e574] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-duc-l10001
+              - link "Việc làm tại Nhật Bản" [ref=f8e575] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-nhat-ban-l10002
+          - generic [ref=f8e579]:
+            - generic "Việc làm phổ biến" [ref=f8e580]
+            - generic [ref=f8e583]:
+              - link "Việc làm Content Marketing" [ref=f8e584] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-content-marketing-cr92cb99cl101
+              - link "Việc làm Digital Marketing" [ref=f8e585] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-digital-marketing-cr92cb99cl106
+              - link "Việc làm Kế toán tổng hợp" [ref=f8e586] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tong-hop-cr392cb393cl396
+              - link "Việc làm Tuyển dụng" [ref=f8e587] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tuyen-dung-cr177cb178cl182
+              - link "Việc làm Chuyên môn Thu mua/Mua hàng" [ref=f8e588] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-thu-mua-mua-hang-cr711cb713cl728
+              - link "Việc làm Sales Admin/Sales Support/Sales Associate" [ref=f8e589] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-admin-sales-support-sales-associate-cr1cb8cl47
+              - link "Việc làm Chuyên môn Kinh doanh/Bán hàng khác" [ref=f8e590] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-kinh-doanh-ban-hang-khac-cr1cb18cl91
+              - link "Việc làm Tư vấn tuyển sinh/khoá học" [ref=f8e591] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-tuyen-sinh-khoa-hoc-cr1cb3cl31
+              - link "Việc làm Photographer/Video Editor" [ref=f8e592] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-photographer-video-editor-cr92cb97cl606
+              - link "Việc làm Quan hệ khách hàng cá nhân/doanh nghiệp" [ref=f8e593] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-he-khach-hang-ca-nhan-doanh-nghiep-cr1cb7cl40
+              - link "Việc làm Thiết kế đồ họa (Graphic Design)" [ref=f8e594] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thiet-ke-do-hoa-graphic-design-cr826cb827cl835
+              - link "Việc làm Kiểm soát chất lượng (QC)" [ref=f8e595] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kiem-soat-chat-luong-qc-cr417cb425cl458
+              - link "Việc làm Giám sát dự án/công trình/thi công" [ref=f8e596] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-sat-du-an-cong-trinh-thi-cong-cr1080cb334cl342
+              - link "Việc làm Chuyên môn khác" [ref=f8e597] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-khac-cr899cb940cl941
+              - link "Việc làm Giáo viên tiếng Anh" [ref=f8e598] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-tieng-anh-cr477cb478cl493
+              - link "Việc làm Kế toán thuế" [ref=f8e599] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-thue-cr392cb393cl399
+              - link "Việc làm Vận hành sàn thương mại điện tử" [ref=f8e600] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-van-hanh-san-thuong-mai-dien-tu-cr158cb160cl170
+              - link "Việc làm Dự toán công trình" [ref=f8e601] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-du-toan-cong-trinh-cr1080cb334cl341
+              - link "Việc làm Kế toán nội bộ" [ref=f8e602] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-noi-bo-cr392cb393cl397
+              - link "Việc làm Kỹ sư cơ điện" [ref=f8e603] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-co-dien-cr644cb645cl360
+              - link "Việc làm Kế toán trưởng" [ref=f8e604] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-truong-cr392cb393cl410
+              - link "Việc làm Chăm sóc khách hàng" [ref=f8e605] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cham-soc-khach-hang-cr158cb159cl164
+              - link "Việc làm Content Creator" [ref=f8e606] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-content-creator-cr92cb99cl103
+              - link "Việc làm Trợ lý/Thư ký" [ref=f8e607] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tro-ly-thu-ky-cr177cb179cl199
+              - link "Việc làm Sales Bán lẻ/Dịch vụ tiêu dùng khác" [ref=f8e608] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-ban-le-dich-vu-tieu-dung-khac-cr1cb2cl30
+              - link "Việc làm Sales Manager/Trưởng phòng kinh doanh" [ref=f8e609] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-manager-truong-phong-kinh-doanh-cr1cb17cl83
+              - link "Việc làm Nhân viên kho" [ref=f8e610] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-kho-cr711cb716cl741
+              - link "Việc làm Quản lý cửa hàng/Cửa hàng trưởng" [ref=f8e611] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-cua-hang-cua-hang-truong-cr1cb17cl86
+              - link "Việc làm Hành chính nhân sự" [ref=f8e612] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-hanh-chinh-nhan-su-cr177cb179cl191
+              - link "Việc làm Sales Representative/Phát triển kinh doanh" [ref=f8e613] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-representative-phat-trien-kinh-doanh-cr1cb18cl81
+              - link "Việc làm Chuyên môn Marketing" [ref=f8e614] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-marketing-cr92cb99cl147
+              - link "Việc làm Chuyên môn Xuất nhập khẩu/Logistics" [ref=f8e615] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-xuat-nhap-khau-logistics-cr711cb712cl719
+              - link "Việc làm Kinh doanh phần mềm" [ref=f8e616] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-phan-mem-cr1cb5cl34
+              - link "Việc làm Quản lý chất lượng (QA)" [ref=f8e617] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-chat-luong-qa-cr417cb425cl457
+              - link "Việc làm Kỹ sư cơ khí" [ref=f8e618] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-co-khi-cr417cb419cl434
+              - link "Việc làm Kế toán khác" [ref=f8e619] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-khac-cr392cb393cl964
+              - link "Việc làm Kỹ sư xây dựng" [ref=f8e620] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-xay-dung-cr1080cb335cl358
+              - link "Việc làm Kỹ sư an toàn lao động (HSE)" [ref=f8e621] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-an-toan-lao-dong-hse-cr883cb885cl473
+              - link "Việc làm Kinh doanh sàn thương mại điện tử" [ref=f8e622] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-san-thuong-mai-dien-tu-cr1cb14cl73
+              - link "Việc làm Thủ kho/Quản lý kho" [ref=f8e623] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thu-kho-quan-ly-kho-cr417cb426cl469
+              - link "Việc làm Bán hàng thời trang" [ref=f8e624] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-thoi-trang-cr1cb2cl24
+              - link "Việc làm Kế toán kho/nguyên vật liệu" [ref=f8e625] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-kho-nguyen-vat-lieu-cr392cb393cl407
+              - link "Việc làm Kế toán công nợ" [ref=f8e626] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-cong-no-cr392cb393cl398
+              - link "Việc làm Kỹ thuật điện/điện tử" [ref=f8e627] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-dien-dien-tu-cr644cb646cl910
+              - link "Việc làm Thiết kế nội thất" [ref=f8e628] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thiet-ke-noi-that-cr826cb828cl356
+              - link "Việc làm Sửa chữa/Bảo trì máy công nghiệp" [ref=f8e629] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sua-chua-bao-tri-may-cong-nghiep-cr417cb427cl471
+              - link "Việc làm Social Media" [ref=f8e630] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-social-media-cr92cb99cl110
+              - link "Việc làm Kỹ sư điện" [ref=f8e631] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-dien-cr644cb645cl653
+              - link "Việc làm Kiến trúc sư" [ref=f8e632] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kien-truc-su-cr1080cb335cl357
+              - link "Việc làm Kinh doanh thiết bị/vật liệu xây dựng" [ref=f8e633] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-thiet-bi-vat-lieu-xay-dung-cr1cb1081cl37
+              - link "Việc làm Quản lý dự án thi công xây dựng" [ref=f8e634] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-du-an-thi-cong-xay-dung-cr1080cb334cl340
+              - link "Việc làm Host Livestream/Streamer" [ref=f8e635] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-host-livestream-streamer-cr92cb99cl617
+              - link "Việc làm Y tá/Điều dưỡng" [ref=f8e636] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-y-ta-dieu-duong-cr781cb782cl788
+              - link "Việc làm Kế toán bán hàng" [ref=f8e637] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-ban-hang-cr392cb393cl401
+              - link "Việc làm Sales Tour/Kinh doanh du lịch" [ref=f8e638] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-tour-kinh-doanh-du-lich-cr1cb13cl68
+              - link "Việc làm Chạy Ads" [ref=f8e639] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chay-ads-cr92cb99cl913
+              - link "Việc làm Quản lý nhà hàng" [ref=f8e640] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-nha-hang-cr857cb858cl872
+              - link "Việc làm Marketing Manager" [ref=f8e641] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-marketing-manager-cr92cb99cl1028
+              - link "Việc làm Kế toán thanh toán" [ref=f8e642] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-thanh-toan-cr392cb393cl406
+              - link "Việc làm Chuyên môn Dịch vụ khách hàng/Vận hành khác" [ref=f8e643] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-dich-vu-khach-hang-van-hanh-khac-cr158cb163cl176
+              - link "Việc làm Kỹ sư thiết kế cơ khí" [ref=f8e644] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-thiet-ke-co-khi-cr417cb419cl438
+              - link "Việc làm Chuyên môn Marketing/PR/Quảng cáo khác" [ref=f8e645] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-marketing-pr-quang-cao-khac-cr92cb100cl157
+              - link "Việc làm Brand Marketing" [ref=f8e646] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-brand-marketing-cr92cb99cl149
+              - link "Việc làm Bán hàng siêu thị/cửa hàng tiện ích/tiện lợi" [ref=f8e647] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-sieu-thi-cua-hang-tien-ich-tien-loi-cr1cb2cl21
+              - link "Việc làm Sales bất động sản/Môi giới bất động sản" [ref=f8e648] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-bat-dong-san-moi-gioi-bat-dong-san-cr1cb6cl36
+              - link "Việc làm Sales Director/Giám đốc kinh doanh" [ref=f8e649] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-director-giam-doc-kinh-doanh-cr1cb17cl87
+              - link "Việc làm Kỹ sư kết cấu công trình" [ref=f8e650] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-ket-cau-cong-trinh-cr1080cb335cl354
+              - link "Việc làm SEO" [ref=f8e651] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-seo-cr92cb99cl107
+              - link "Việc làm Đào tạo" [ref=f8e652] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dao-tao-cr177cb178cl184
+              - link "Việc làm Kinh doanh nội thất" [ref=f8e653] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-noi-that-cr1cb1081cl38
+              - link "Việc làm Biên phiên dịch tiếng Trung" [ref=f8e654] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bien-phien-dich-tieng-trung-cr1013cb753cl771
+              - link "Việc làm KOL/KOC Manager" [ref=f8e655] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kol-koc-manager-cr92cb99cl114
+              - link "Việc làm Phục vụ" [ref=f8e656] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phuc-vu-cr857cb858cl862
+              - link "Việc làm Kỹ sư hiện trường" [ref=f8e657] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-hien-truong-cr1080cb334cl348
+              - link "Việc làm Kế hoạch sản xuất" [ref=f8e658] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-hoach-san-xuat-cr417cb426cl468
+              - link "Việc làm Trade Marketing" [ref=f8e659] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-trade-marketing-cr92cb99cl151
+              - link "Việc làm Sales Logistics" [ref=f8e660] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-logistics-cr1cb4cl33
+              - link "Việc làm Kỹ sư tự động hóa" [ref=f8e661] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-tu-dong-hoa-cr644cb645cl433
+              - link "Việc làm Sales Marketing" [ref=f8e662] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-marketing-cr1cb11cl90
+              - link "Việc làm Kinh doanh thực phẩm" [ref=f8e663] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-thuc-pham-cr1cb2cl27
+              - link "Việc làm Sales Dược/Y tế/Sức khoẻ/Làm đẹp khác" [ref=f8e664] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-duoc-y-te-suc-khoe-lam-dep-khac-cr1cb10cl932
+              - link "Việc làm Business Analyst (Phân tích nghiệp vụ)" [ref=f8e665] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-business-analyst-phan-tich-nghiep-vu-cr257cb268cl322
+              - link "Việc làm Kinh doanh kênh GT" [ref=f8e666] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-kenh-gt-cr1cb2cl20
+              - link "Việc làm Chuyên môn Công nghệ thông tin khác" [ref=f8e667] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-cong-nghe-thong-tin-khac-cr257cb270cl329
+              - link "Việc làm Kinh doanh ô tô/xe máy/xe điện" [ref=f8e668] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-o-to-xe-may-xe-dien-cr1cb9cl51
+              - link "Việc làm Nhân sự tổng hợp" [ref=f8e669] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-su-tong-hop-cr177cb178cl188
+              - link "Việc làm Bán hàng kỹ thuật cơ khí" [ref=f8e670] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-ky-thuat-co-khi-cr1cb15cl75
+              - link "Việc làm Trưởng phòng nhân sự" [ref=f8e671] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-truong-phong-nhan-su-cr177cb178cl189
+              - link "Việc làm Payroll/C&B (Lương/Thưởng/Phúc lợi)" [ref=f8e672] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-payroll-c-b-luong-thuong-phuc-loi-cr177cb178cl187
+              - link "Việc làm Chuyên môn Tài chính" [ref=f8e673] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-tai-chinh-cr206cb207cl214
+              - link "Việc làm Kinh doanh thiết bị/vật tư y tế" [ref=f8e674] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-thiet-bi-vat-tu-y-te-cr1cb10cl53
+              - link "Việc làm Giám sát/Điều phối vận tải" [ref=f8e675] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-sat-dieu-phoi-van-tai-cr711cb1003cl724
+              - link "Việc làm Hành chính tổng hợp" [ref=f8e676] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-hanh-chinh-tong-hop-cr177cb179cl192
+              - link "Việc làm ASM/Quản lý khu vực/vùng miền" [ref=f8e677] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-asm-quan-ly-khu-vuc-vung-mien-cr1cb17cl85
+              - link "Việc làm Lễ tân/Đón tiếp" [ref=f8e678] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-le-tan-don-tiep-cr177cb179cl863
+              - link "Việc làm Nhân viên hồ sơ xây dựng" [ref=f8e679] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-ho-so-xay-dung-cr1080cb334cl344
+              - link "Việc làm Trình dược viên" [ref=f8e680] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-trinh-duoc-vien-cr1cb10cl54
+              - link "Việc làm Pháp chế" [ref=f8e681] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phap-che-cr206cb210cl237
+              - link "Việc làm Trưởng kho/Giám sát kho" [ref=f8e682] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-truong-kho-giam-sat-kho-cr711cb716cl743
+              - link "Việc làm Tư vấn thẩm mỹ/Spa" [ref=f8e683] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-tham-my-spa-cr1cb10cl56
+              - link "Việc làm Vận hành chung" [ref=f8e684] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-van-hanh-chung-cr158cb161cl171
+              - link "Việc làm Kinh doanh kênh MT" [ref=f8e685] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-kenh-mt-cr1cb2cl19
+              - link "Việc làm Bán hàng kỹ thuật Điện/Điện tử/Viễn thông" [ref=f8e686] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-ky-thuat-dien-dien-tu-vien-thong-cr1cb15cl74
+              - link "Việc làm Product Owner/Product Manager" [ref=f8e687] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-product-owner-product-manager-cr257cb268cl321
+              - link "Việc làm Sửa chữa/Bảo trì điện tử/viễn thông" [ref=f8e688] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sua-chua-bao-tri-dien-tu-vien-thong-cr644cb646cl662
+              - link "Việc làm Chuyên môn Kế toán/Kiểm toán/Thuế khác" [ref=f8e689] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-ke-toan-kiem-toan-thue-khac-cr392cb395cl416
+              - link "Việc làm Sales Supervisor/Giám sát bán hàng" [ref=f8e690] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-supervisor-giam-sat-ban-hang-cr1cb17cl82
+              - link "Việc làm Bán hàng mỹ phẩm" [ref=f8e691] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-my-pham-cr1cb2cl26
+              - link "Việc làm Trợ lý kinh doanh" [ref=f8e692] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tro-ly-kinh-doanh-cr1cb18cl920
+              - link "Việc làm Chuyên môn May mặc/Dệt may/Da khác" [ref=f8e693] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-may-mac-det-may-da-khac-cr417cb421cl947
+              - link "Việc làm Tư vấn tài chính" [ref=f8e694] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-tai-chinh-cr1cb7cl757
+              - link "Việc làm Kỹ thuật viên lắp đặt" [ref=f8e695] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-vien-lap-dat-cr417cb427cl472
+              - link "Việc làm Bảo trì, sửa chữa khác" [ref=f8e696] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bao-tri-sua-chua-khac-cr417cb427cl922
+              - link "Việc làm Social Content" [ref=f8e697] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-social-content-cr92cb99cl105
+              - link "Việc làm Thu hồi nợ" [ref=f8e698] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thu-hoi-no-cr206cb210cl241
+              - link "Việc làm Chuyên môn Vận hành và bảo trì/Hỗ trợ kỹ thuật khác" [ref=f8e699] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-van-hanh-va-bao-tri-ho-tro-ky-thuat-khac-cr644cb651cl984
+              - link "Việc làm Nghiên cứu và phát triển (R&D) thực phẩm/đồ uống" [ref=f8e700] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nghien-cuu-va-phat-trien-r-d-thuc-pham-do-uong-cr417cb420cl444
+              - link "Việc làm Quản lý/Vận hành lớp học" [ref=f8e701] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-van-hanh-lop-hoc-cr477cb483cl530
+              - link "Việc làm Chuyên môn Ngân hàng khác" [ref=f8e702] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-ngan-hang-khac-cr206cb208cl957
+              - link "Việc làm Account Manager (Quản lý khách hàng)" [ref=f8e703] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-account-manager-quan-ly-khach-hang-cr1cb18cl80
+              - link "Việc làm Kế toán chi phí/giá thành" [ref=f8e704] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-chi-phi-gia-thanh-cr392cb393cl400
+              - link "Việc làm Công nhân vận hành máy" [ref=f8e705] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-van-hanh-may-cr1080cb336cl1061
+              - link "Việc làm Chuyên môn Giáo dục/Đào tạo khác" [ref=f8e706] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-giao-duc-dao-tao-khac-cr477cb484cl543
+              - link "Việc làm Thu ngân" [ref=f8e707] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thu-ngan-cr544cb545cl202
+              - link "Việc làm Sales Sản xuất khác" [ref=f8e708] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-san-xuat-khac-cr1cb9cl919
+              - link "Việc làm Kinh doanh thiết bị/linh kiện điện" [ref=f8e709] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-thiet-bi-linh-kien-dien-cr1cb12cl62
+              - link "Việc làm Thợ cơ khí" [ref=f8e710] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-co-khi-cr417cb418cl429
+              - link "Việc làm Quản lý chất lượng công trình" [ref=f8e711] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-chat-luong-cong-trinh-cr1080cb334cl350
+              - link "Việc làm Chuyên môn Dược/Y tế/Sức khoẻ/Công nghệ sinh học khác" [ref=f8e712] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-duoc-y-te-suc-khoe-cong-nghe-sinh-hoc-khac-cr781cb787cl825
+              - link "Việc làm Vận hành Livestream" [ref=f8e713] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-van-hanh-livestream-cr1cb8cl618
+              - link "Việc làm Chuyên môn Xây dựng khác" [ref=f8e714] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-xay-dung-khac-cr1080cb1082cl1084
+              - link "Việc làm Tài xế lái xe văn phòng" [ref=f8e715] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-lai-xe-van-phong-cr544cb549cl198
+              - link "Việc làm Chuyên môn Nhà hàng/Khách sạn/Du lịch khác" [ref=f8e716] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-nha-hang-khach-san-du-lich-khac-cr857cb861cl882
+              - link "Việc làm Sales Giáo dục/Khoá học khác" [ref=f8e717] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-giao-duc-khoa-hoc-khac-cr1cb3cl934
+              - link "Việc làm Sales Kỹ thuật khác" [ref=f8e718] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-ky-thuat-khac-cr1cb15cl931
+              - link "Việc làm Chuyên môn Vận hành sản xuất khác" [ref=f8e719] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-van-hanh-san-xuat-khac-cr417cb426cl970
+              - link "Việc làm Phụ bếp" [ref=f8e720] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phu-bep-cr857cb858cl867
+              - link "Việc làm Kỹ sư HVAC" [ref=f8e721] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-hvac-cr644cb647cl362
+              - link "Việc làm Backend Developer" [ref=f8e722] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-backend-developer-cr257cb258cl272
+              - link "Việc làm Kỹ sư thiết kế điện" [ref=f8e723] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-thiet-ke-dien-cr644cb645cl654
+              - link "Việc làm TikTok Content" [ref=f8e724] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tiktok-content-cr92cb99cl104
+              - link "Việc làm Chuyên môn Thiết kế Thời trang" [ref=f8e725] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-thiet-ke-thoi-trang-cr826cb830cl847
+              - link "Việc làm Kiểm soát tuân thủ" [ref=f8e726] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kiem-soat-tuan-thu-cr206cb210cl235
+              - link "Việc làm Giáo viên tiếng Trung" [ref=f8e727] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-tieng-trung-cr477cb478cl496
+              - link "Việc làm Kinh doanh dịch vụ quảng cáo" [ref=f8e728] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-dich-vu-quang-cao-cr1cb11cl58
+              - link "Việc làm Kỹ sư cấp thoát nước" [ref=f8e729] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-cap-thoat-nuoc-cr1080cb335cl361
+              - link "Việc làm Bảo trì tòa nhà" [ref=f8e730] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bao-tri-toa-nha-cr333cb337cl377
+              - link "Việc làm Pha chế (Barista)" [ref=f8e731] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-pha-che-barista-cr857cb858cl870
+              - link "Việc làm Account Executive" [ref=f8e732] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-account-executive-cr1cb18cl1031
+              - link "Việc làm Kinh doanh thiết bị công nghiệp" [ref=f8e733] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-thiet-bi-cong-nghiep-cr1cb12cl63
+              - link "Việc làm Giáo viên Toán" [ref=f8e734] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-toan-cr477cb478cl488
+              - link "Việc làm Bán hàng điện máy" [ref=f8e735] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-dien-may-cr1cb2cl23
+              - link "Việc làm IT Helpdesk/IT support" [ref=f8e736] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-it-helpdesk-it-support-cr257cb262cl287
+              - link "Việc làm Kinh doanh hoá chất" [ref=f8e737] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-hoa-chat-cr1cb9cl50
+              - link "Việc làm Đầu bếp" [ref=f8e738] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dau-bep-cr857cb858cl865
+              - link "Việc làm Sales Xuất nhập khẩu/Logistics khác" [ref=f8e739] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-xuat-nhap-khau-logistics-khac-cr1cb4cl942
+              - link "Việc làm Theo dõi đơn hàng" [ref=f8e740] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-theo-doi-don-hang-cr417cb426cl722
+              - link "Việc làm Điều hành tour" [ref=f8e741] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dieu-hanh-tour-cr857cb860cl880
+              - link "Việc làm Chuyên môn Logistics khác" [ref=f8e742] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-logistics-khac-cr711cb718cl749
+              - link "Việc làm Đấu thầu xây dựng" [ref=f8e743] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dau-thau-xay-dung-cr1080cb334cl1085
+              - link "Việc làm Quản lý/Trưởng phòng vận hành" [ref=f8e744] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-truong-phong-van-hanh-cr158cb162cl173
+              - link "Việc làm Fullstack Developer" [ref=f8e745] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-fullstack-developer-cr257cb258cl275
+              - link "Việc làm Chuyên môn Sản xuất khác" [ref=f8e746] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-san-xuat-khac-cr417cb428cl476
+              - link "Việc làm Chứng từ xuất nhập khẩu" [ref=f8e747] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chung-tu-xuat-nhap-khau-cr711cb712cl735
+              - link "Việc làm Kỹ thuật viên phòng thí nghiệm" [ref=f8e748] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-vien-phong-thi-nghiem-cr417cb420cl442
+              - link "Việc làm Chuyên môn Nhà hàng/Dịch vụ ăn uống khác" [ref=f8e749] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-nha-hang-dich-vu-an-uong-khac-cr857cb858cl996
+              - link "Việc làm Tư vấn du học/định cư" [ref=f8e750] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-du-hoc-dinh-cu-cr1cb3cl32
+              - link "Việc làm Quản lý Kinh doanh khác" [ref=f8e751] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-kinh-doanh-khac-cr1cb17cl960
+              - link "Việc làm Thợ kỹ thuật khác" [ref=f8e752] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-ky-thuat-khac-cr417cb423cl923
+              - link "Việc làm Sửa chữa/Bảo trì điện nước" [ref=f8e753] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sua-chua-bao-tri-dien-nuoc-cr544cb550cl366
+              - link "Việc làm Truyền thông nội bộ" [ref=f8e754] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-truyen-thong-noi-bo-cr177cb178cl120
+              - link "Việc làm Kế toán tài chính" [ref=f8e755] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tai-chinh-cr392cb393cl402
+              - link "Việc làm Chuyên môn Bất động sản khác" [ref=f8e756] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-bat-dong-san-khac-cr333cb339cl391
+              - link "Việc làm IT Project Manager" [ref=f8e757] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-it-project-manager-cr257cb265cl305
+              - link "Việc làm Giám sát sản xuất" [ref=f8e758] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-sat-san-xuat-cr417cb426cl465
+              - link "Việc làm Trưởng chuyền/Tổ trưởng sản xuất" [ref=f8e759] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-truong-chuyen-to-truong-san-xuat-cr417cb426cl463
+              - link "Việc làm Khai báo hải quan và kiểm dịch" [ref=f8e760] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-khai-bao-hai-quan-va-kiem-dich-cr711cb713cl736
+              - link "Việc làm Affiliate Marketing" [ref=f8e761] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-affiliate-marketing-cr92cb99cl111
+              - link "Việc làm Kỹ sư môi trường" [ref=f8e762] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-moi-truong-cr883cb885cl891
+              - link "Việc làm Kế toán doanh thu" [ref=f8e763] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-doanh-thu-cr392cb393cl1041
+              - link "Việc làm Công nhân sản xuất" [ref=f8e764] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-san-xuat-cr417cb426cl466
+              - link "Việc làm UI/UX Design" [ref=f8e765] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ui-ux-design-cr257cb267cl317
+              - link "Việc làm Kinh doanh dịch vụ y tế" [ref=f8e766] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-dich-vu-y-te-cr1cb10cl905
+              - link "Việc làm Software Engineer" [ref=f8e767] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-software-engineer-cr257cb258cl271
+              - link "Việc làm Quản lý hàng hoá (Merchandiser)" [ref=f8e768] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-hang-hoa-merchandiser-cr711cb713cl732
+              - link "Việc làm Software Tester (Automation & Manual)" [ref=f8e769] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-software-tester-automation-manual-cr257cb259cl277
+              - link "Việc làm Kỹ sư PCCC" [ref=f8e770] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-pccc-cr1080cb335cl364
+              - link "Việc làm Chuyên môn Điện/Tự động hoá khác" [ref=f8e771] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-dien-tu-dong-hoa-khac-cr644cb645cl978
+              - link "Việc làm Chuyên môn chuỗi cung ứng" [ref=f8e772] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-chuoi-cung-ung-cr711cb717cl745
+              - link "Việc làm Chuyên viên đấu thầu" [ref=f8e773] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-dau-thau-cr711cb713cl48
+              - link "Việc làm Xử lý hồ sơ" [ref=f8e774] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-xu-ly-ho-so-cr177cb179cl1020
+              - link "Việc làm Giáo viên bộ môn khác" [ref=f8e775] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-bo-mon-khac-cr477cb478cl499
+              - link "Việc làm Quản lý chất lượng khác" [ref=f8e776] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-chat-luong-khac-cr417cb425cl969
+              - link "Việc làm Các vị trí tư vấn khác" [ref=f8e777] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cac-vi-tri-tu-van-khac-cr750cb751cl765
+              - link "Việc làm Nhân viên trắc đạc" [ref=f8e778] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-trac-dac-cr1080cb334cl346
+              - link "Việc làm Chuyên môn Thiết kế khác" [ref=f8e779] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-thiet-ke-khac-cr826cb834cl856
+              - link "Việc làm Chuyên môn Quảng cáo/Sáng tạo khác" [ref=f8e780] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-quang-cao-sang-tao-khac-cr92cb97cl951
+              - link "Việc làm Chuyên môn Nhân sự/Hành chính/Pháp chế khác" [ref=f8e781] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-nhan-su-hanh-chinh-phap-che-khac-cr177cb181cl205
+              - link "Việc làm Quản lý tòa nhà" [ref=f8e782] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-toa-nha-cr333cb337cl376
+              - link "Việc làm Thiết kế rập" [ref=f8e783] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thiet-ke-rap-cr417cb421cl446
+              - link "Việc làm Đóng gói hàng hóa" [ref=f8e784] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dong-goi-hang-hoa-cr417cb428cl474
+              - link "Việc làm Call Center/Trực tổng đài" [ref=f8e785] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-call-center-truc-tong-dai-cr158cb159cl166
+              - link "Việc làm Quản đốc phân xưởng/nhà máy" [ref=f8e786] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-doc-phan-xuong-nha-may-cr417cb426cl462
+              - link "Việc làm Bán hàng điện thoại" [ref=f8e787] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-dien-thoai-cr1cb2cl22
+              - link "Việc làm Chuyên môn Hành chính khác" [ref=f8e788] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-hanh-chinh-khac-cr177cb179cl955
+              - link "Việc làm Product Marketing" [ref=f8e789] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-product-marketing-cr92cb99cl150
+              - link "Việc làm Chuyên môn Tài chính/Ngân hàng/Bảo hiểm khác" [ref=f8e790] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-tai-chinh-ngan-hang-bao-hiem-khac-cr206cb213cl256
+              - link "Việc làm AI Engineer" [ref=f8e791] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ai-engineer-cr257cb260cl283
+              - link "Việc làm Kinh doanh dịch vụ viễn thông" [ref=f8e792] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-dich-vu-vien-thong-cr1cb12cl64
+              - link "Việc làm Nghiên cứu thị trường (Market Research)" [ref=f8e793] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nghien-cuu-thi-truong-market-research-cr92cb98cl139
+              - link "Việc làm DevOps Engineer" [ref=f8e794] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-devops-engineer-cr257cb262cl288
+              - link "Việc làm Chăm sóc/Hỗ trợ học viên" [ref=f8e795] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cham-soc-ho-tro-hoc-vien-cr477cb483cl532
+              - link "Việc làm Chuyên môn Điện/Điện tử/Viễn thông khác" [ref=f8e796] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-dien-dien-tu-vien-thong-khac-cr644cb652cl710
+              - link "Việc làm Giám sát thi công nội thất" [ref=f8e797] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-sat-thi-cong-noi-that-cr1080cb334cl352
+              - link "Việc làm Đối tác nhân sự (HRBP)" [ref=f8e798] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-doi-tac-nhan-su-hrbp-cr177cb178cl183
+              - link "Việc làm Biên phiên dịch tiếng Hàn" [ref=f8e799] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bien-phien-dich-tieng-han-cr1013cb753cl773
+              - link "Việc làm Quản lý bếp" [ref=f8e800] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-bep-cr857cb858cl868
+              - link "Việc làm Giám sát/Điều phối hàng hoá và kho vận" [ref=f8e801] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-sat-dieu-phoi-hang-hoa-va-kho-van-cr711cb712cl723
+              - link "Việc làm Chuyên môn Kho vận khác" [ref=f8e802] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-kho-van-khac-cr711cb716cl987
+              - link "Việc làm Phát triển học liệu/Thiết kế khóa học" [ref=f8e803] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phat-trien-hoc-lieu-thiet-ke-khoa-hoc-cr477cb484cl539
+              - link "Việc làm Kiểm soát và báo cáo tài chính" [ref=f8e804] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kiem-soat-va-bao-cao-tai-chinh-cr206cb207cl217
+              - link "Việc làm Manual Tester" [ref=f8e805] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-manual-tester-cr257cb259cl279
+              - link "Việc làm System Administrator" [ref=f8e806] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-system-administrator-cr257cb262cl291
+              - link "Việc làm Dược sĩ/Bán thuốc" [ref=f8e807] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-duoc-si-ban-thuoc-cr1cb10cl55
+              - link "Việc làm Giám sát an ninh" [ref=f8e808] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-sat-an-ninh-cr544cb550cl582
+              - link "Việc làm Kỹ thuật viên nông nghiệp/trồng trọt" [ref=f8e809] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-vien-nong-nghiep-trong-trot-cr883cb886cl893
+              - link "Việc làm Dịch vụ khách hàng/Chăm sóc khách hàng khác" [ref=f8e810] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dich-vu-khach-hang-cham-soc-khach-hang-khac-cr158cb159cl953
+              - link "Việc làm Trợ giảng tiếng Anh" [ref=f8e811] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tro-giang-tieng-anh-cr477cb482cl523
+              - link "Việc làm Quản lý học vụ" [ref=f8e812] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-hoc-vu-cr477cb481cl517
+              - link "Việc làm Sales Tài chính/Ngân hàng/Bảo hiểm khác" [ref=f8e813] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-tai-chinh-ngan-hang-bao-hiem-khac-cr1cb7cl933
+              - link "Việc làm Kinh doanh phụ tùng ô tô/xe máy/xe điện" [ref=f8e814] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-phu-tung-o-to-xe-may-xe-dien-cr1cb9cl52
+              - link "Việc làm Quản lý giảng dạy" [ref=f8e815] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-giang-day-cr477cb481cl521
+              - link "Việc làm Quản trị rủi ro" [ref=f8e816] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-tri-rui-ro-cr206cb210cl234
+              - link "Việc làm Chuyên viên pháp lý" [ref=f8e817] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-phap-ly-cr1014cb752cl767
+              - link "Việc làm Thợ điện" [ref=f8e818] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-dien-cr644cb645cl655
+              - link "Việc làm Event Marketing" [ref=f8e819] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-event-marketing-cr92cb99cl152
+              - link "Việc làm Quản lý trạm giao nhận/bưu cục" [ref=f8e820] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-tram-giao-nhan-buu-cuc-cr711cb715cl740
+              - link "Việc làm Sales Nhà hàng/Khách sạn/Du lịch khác" [ref=f8e821] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-nha-hang-khach-san-du-lich-khac-cr1cb13cl946
+              - link "Việc làm Sales IT Phần mềm khác" [ref=f8e822] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-it-phan-mem-khac-cr1cb5cl943
+              - link "Việc làm Chuyên viên xử lý nợ" [ref=f8e823] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-xu-ly-no-cr206cb208cl220
+              - link "Việc làm Giao dịch viên" [ref=f8e824] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-dich-vien-cr206cb208cl219
+              - link "Việc làm Biên phiên dịch tiếng Nhật" [ref=f8e825] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bien-phien-dich-tieng-nhat-cr1013cb753cl772
+              - link "Việc làm Kỹ sư hạ tầng đô thị" [ref=f8e826] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-ha-tang-do-thi-cr1080cb335cl388
+              - link "Việc làm Kỹ thuật viên Spa" [ref=f8e827] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-vien-spa-cr544cb546cl560
+              - link "Việc làm Kế toán mua hàng" [ref=f8e828] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-mua-hang-cr392cb393cl405
+              - link "Việc làm System Engineer" [ref=f8e829] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-system-engineer-cr257cb262cl290
+              - link "Việc làm Game Design" [ref=f8e830] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-game-design-cr257cb269cl326
+              - link "Việc làm Kiểm toán viên" [ref=f8e831] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kiem-toan-vien-cr392cb394cl411
+              - link "Việc làm Network Engineer" [ref=f8e832] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-network-engineer-cr257cb262cl289
+              - link "Việc làm Vẽ AutoCAD" [ref=f8e833] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ve-autocad-cr826cb828cl841
+              - link "Việc làm Data Analyst" [ref=f8e834] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-data-analyst-cr257cb261cl145
+              - link "Việc làm Kỹ sư cầu đường" [ref=f8e835] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-cau-duong-cr1080cb335cl365
+              - link "Việc làm Bảo vệ" [ref=f8e836] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bao-ve-cr544cb550cl200
+              - link "Việc làm Giáo viên mầm non" [ref=f8e837] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-mam-non-cr477cb478cl485
+              - link "Việc làm Sales Điện/Điện tử/Viễn thông khác" [ref=f8e838] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-dien-dien-tu-vien-thong-khac-cr1cb12cl930
+              - link "Việc làm Quản lý dự án kỹ thuật" [ref=f8e839] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-du-an-ky-thuat-cr644cb649cl684
+              - link "Việc làm Kỹ thuật viễn thông" [ref=f8e840] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-vien-thong-cr644cb650cl692
+              - link "Việc làm Chuyên môn Thiết kế và Kiến trúc khác" [ref=f8e841] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-thiet-ke-va-kien-truc-khac-cr1080cb335cl962
+              - link "Việc làm Shipper (Nhân viên giao hàng)" [ref=f8e842] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-shipper-nhan-vien-giao-hang-cr711cb715cl574
+              - link "Việc làm Kỹ sư hóa học" [ref=f8e843] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-hoa-hoc-cr417cb420cl443
+              - link "Việc làm Mobile Developer" [ref=f8e844] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-mobile-developer-cr257cb258cl274
+              - link "Việc làm Kiểm toán nội bộ" [ref=f8e845] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kiem-toan-noi-bo-cr392cb394cl412
+              - link "Việc làm Tư vấn nha khoa" [ref=f8e846] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-nha-khoa-cr1cb10cl57
+              - link "Việc làm Kế toán sản xuất" [ref=f8e847] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-san-xuat-cr392cb393cl926
+              - link "Việc làm Trợ lý/Thư ký sản xuất" [ref=f8e848] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tro-ly-thu-ky-san-xuat-cr417cb428cl999
+              - link "Việc làm Marketing Planner" [ref=f8e849] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-marketing-planner-cr92cb99cl148
+              - link "Việc làm Biên tập viên" [ref=f8e850] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bien-tap-vien-cr612cb614cl619
+              - link "Việc làm Tư vấn thiết kế xây dựng" [ref=f8e851] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-thiet-ke-xay-dung-cr1cb1081cl1087
+              - link "Việc làm Chuyên môn Nhân sự khác" [ref=f8e852] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-nhan-su-khac-cr177cb178cl954
+              - link "Việc làm Thợ điện lạnh" [ref=f8e853] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-dien-lanh-cr644cb647cl367
+              - link "Việc làm Văn thư" [ref=f8e854] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-van-thu-cr177cb179cl196
+              - link "Việc làm Kỹ sư khuôn mẫu" [ref=f8e855] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-khuon-mau-cr417cb419cl437
+              - link "Việc làm Trưởng phòng sản xuất" [ref=f8e856] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-truong-phong-san-xuat-cr417cb426cl461
+              - link "Việc làm Tổ chức sự kiện (Event Planner)" [ref=f8e857] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-to-chuc-su-kien-event-planner-cr544cb554cl906
+              - link "Việc làm Hành chính kho" [ref=f8e858] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-hanh-chinh-kho-cr711cb716cl742
+              - link "Việc làm Kỹ sư lập trình máy" [ref=f8e859] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-lap-trinh-may-cr417cb419cl432
+              - link "Việc làm Quản lý/Giám sát mua hàng" [ref=f8e860] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-giam-sat-mua-hang-cr711cb713cl729
+              - link "Việc làm Bán hàng trang sức đá quý" [ref=f8e861] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-trang-suc-da-quy-cr1cb2cl25
+              - link "Việc làm Vận hành hệ thống xử lý nước thải" [ref=f8e862] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-van-hanh-he-thong-xu-ly-nuoc-thai-cr883cb885cl1018
+              - link "Việc làm Data Engineer" [ref=f8e863] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-data-engineer-cr257cb261cl285
+              - link "Việc làm Nhân viên vật tư" [ref=f8e864] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-vat-tu-cr1080cb334cl345
+              - link "Việc làm Copywriter" [ref=f8e865] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-copywriter-cr92cb99cl102
+              - link "Việc làm Quản lý chất lượng giáo dục" [ref=f8e866] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-chat-luong-giao-duc-cr477cb481cl522
+              - link "Việc làm Trưởng ca" [ref=f8e867] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-truong-ca-cr417cb426cl464
+              - link "Việc làm Kỹ sư điện tử" [ref=f8e868] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-dien-tu-cr644cb646cl659
+              - link "Việc làm Animation Design" [ref=f8e869] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-animation-design-cr826cb831cl637
+              - link "Việc làm Bác sĩ da liễu" [ref=f8e870] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bac-si-da-lieu-cr781cb783cl793
+              - link "Việc làm Kế toán ngân hàng" [ref=f8e871] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-ngan-hang-cr392cb393cl929
+              - link "Việc làm Kế toán dự án" [ref=f8e872] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-du-an-cr392cb393cl927
+              - link "Việc làm Lái xe cho sếp" [ref=f8e873] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-lai-xe-cho-sep-cr544cb549cl1073
+              - link "Việc làm Kinh doanh bao bì" [ref=f8e874] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-bao-bi-cr1cb2cl28
+              - link "Việc làm Kinh doanh Domain/Hosting/Server" [ref=f8e875] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-domain-hosting-server-cr1cb5cl35
+              - link "Việc làm Phát triển mặt bằng" [ref=f8e876] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phat-trien-mat-bang-cr333cb338cl386
+              - link "Việc làm Điều phối giao hàng" [ref=f8e877] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dieu-phoi-giao-hang-cr711cb715cl1007
+              - link "Việc làm BIM Engineer" [ref=f8e878] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bim-engineer-cr1080cb335cl332
+              - link "Việc làm Giáo viên chủ nhiệm" [ref=f8e879] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-chu-nhiem-cr477cb481cl520
+              - link "Việc làm Bán hàng kỹ thuật IT" [ref=f8e880] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-ky-thuat-it-cr1cb15cl76
+              - link "Việc làm Kinh doanh tiệc/sự kiện/hội nghị" [ref=f8e881] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-tiec-su-kien-hoi-nghi-cr1cb11cl60
+              - link "Việc làm Chuyên môn R&D/Sản xuất ô tô khác" [ref=f8e882] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-r-d-san-xuat-o-to-khac-cr417cb422cl924
+              - link "Việc làm Chuyên môn Thiết bị y tế khác" [ref=f8e883] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-thiet-bi-y-te-khac-cr781cb786cl991
+              - link "Việc làm Kỹ sư điện lạnh" [ref=f8e884] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-dien-lanh-cr644cb647cl673
+              - link "Việc làm Quản lý sản xuất/Quản lý nguyên vật liệu (PMC)" [ref=f8e885] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-san-xuat-quan-ly-nguyen-vat-lieu-pmc-cr711cb717cl748
+              - link "Việc làm Xây dựng và bảo vệ thương hiệu" [ref=f8e886] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-xay-dung-va-bao-ve-thuong-hieu-cr92cb95cl119
+              - link "Việc làm Media Planner/Buyer Executive" [ref=f8e887] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-media-planner-buyer-executive-cr92cb97cl131
+              - link "Việc làm Tư vấn bảo hiểm" [ref=f8e888] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-bao-hiem-cr1cb7cl39
+              - link "Việc làm IT Consultant" [ref=f8e889] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-it-consultant-cr257cb270cl330
+              - link "Việc làm Sản xuất dược phẩm" [ref=f8e890] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-san-xuat-duoc-pham-cr781cb785cl817
+              - link "Việc làm Chuyên viên dự án kỹ thuật" [ref=f8e891] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-du-an-ky-thuat-cr644cb649cl686
+              - link "Việc làm Dịch vụ ô tô/xe máy/xe điện khác" [ref=f8e892] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dich-vu-o-to-xe-may-xe-dien-khac-cr544cb552cl975
+              - link "Việc làm Quản lý dự án bất động sản" [ref=f8e893] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-du-an-bat-dong-san-cr333cb338cl384
+              - link "Việc làm Kỹ thuật viên xét nghiệm" [ref=f8e894] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-vien-xet-nghiem-cr781cb783cl801
+              - link "Việc làm Kinh doanh HORECA" [ref=f8e895] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-horeca-cr1cb13cl67
+              - link "Việc làm Phát triển tổ chức" [ref=f8e896] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phat-trien-to-chuc-cr177cb178cl186
+              - link "Việc làm Embedded Engineer/Lập trình nhúng" [ref=f8e897] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-embedded-engineer-lap-trinh-nhung-cr257cb264cl304
+              - link "Việc làm Bếp trưởng" [ref=f8e898] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bep-truong-cr857cb858cl866
+              - link "Việc làm Kế toán công trình" [ref=f8e899] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-cong-trinh-cr392cb393cl925
+              - link "Việc làm Kinh doanh nông sản" [ref=f8e900] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-nong-san-cr1cb18cl89
+              - link "Việc làm Creative Planner" [ref=f8e901] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-creative-planner-cr92cb97cl133
+              - link "Việc làm Kỹ sư điện mặt trời" [ref=f8e902] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-dien-mat-troi-cr883cb884cl889
+              - link "Việc làm Nhân viên môi trường" [ref=f8e903] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-moi-truong-cr883cb885cl892
+              - link "Việc làm Trực page" [ref=f8e904] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-truc-page-cr158cb159cl167
+              - link "Việc làm R&D y dược" [ref=f8e905] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-r-d-y-duoc-cr781cb785cl815
+              - link "Việc làm Tư vấn đầu tư" [ref=f8e906] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-dau-tu-cr1cb7cl44
+              - link "Việc làm Buồng phòng" [ref=f8e907] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-buong-phong-cr857cb859cl874
+              - link "Việc làm Kỹ sư xây dựng dân dụng và công nghiệp" [ref=f8e908] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-xay-dung-dan-dung-va-cong-nghiep-cr1080cb335cl1109
+              - link "Việc làm Phát triển cộng đồng" [ref=f8e909] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phat-trien-cong-dong-cr92cb95cl121
+              - link "Việc làm Kỹ sư hệ thống điện nhẹ" [ref=f8e910] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-he-thong-dien-nhe-cr1080cb335cl359
+              - link "Việc làm Kinh doanh quà tặng/in ấn" [ref=f8e911] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-qua-tang-in-an-cr1cb18cl1089
+              - link "Việc làm Thư ký công trình" [ref=f8e912] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thu-ky-cong-trinh-cr1080cb334cl343
+              - link "Việc làm Giám đốc sản xuất" [ref=f8e913] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-doc-san-xuat-cr417cb426cl460
+              - link "Việc làm Concept Artist" [ref=f8e914] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-concept-artist-cr826cb831cl325
+              - link "Việc làm Chỉ huy trưởng dự án xây dựng" [ref=f8e915] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chi-huy-truong-du-an-xay-dung-cr1080cb334cl1110
+              - link "Việc làm Kỹ sư công nghiệp (IE)" [ref=f8e916] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-cong-nghiep-ie-cr417cb419cl440
+              - link "Việc làm Kỹ sư điện tử viễn thông" [ref=f8e917] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-dien-tu-vien-thong-cr644cb650cl691
+              - link "Việc làm Chuyên môn Pháp chế khác" [ref=f8e918] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-phap-che-khac-cr177cb180cl956
+              - link "Việc làm Nghiên cứu và phát triển (R&D) mỹ phẩm" [ref=f8e919] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nghien-cuu-va-phat-trien-r-d-my-pham-cr417cb420cl445
+              - link "Việc làm Trưởng phòng hành chính" [ref=f8e920] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-truong-phong-hanh-chinh-cr177cb179cl193
+              - link "Việc làm Giáo viên tiếng Nhật" [ref=f8e921] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-tieng-nhat-cr477cb478cl494
+              - link "Việc làm Quản lý giáo dục khác" [ref=f8e922] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-giao-duc-khac-cr477cb481cl935
+              - link "Việc làm Kinh doanh khách sạn" [ref=f8e923] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-khach-san-cr1cb13cl71
+              - link "Việc làm Kỹ thuật IT" [ref=f8e924] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-it-cr257cb262cl911
+              - link "Việc làm Marketing Operations" [ref=f8e925] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-marketing-operations-cr92cb99cl1030
+              - link "Việc làm Tư vấn CNTT/IT consultant" [ref=f8e926] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-cntt-it-consultant-cr750cb751cl758
+              - link "Việc làm PR Specialist" [ref=f8e927] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-pr-specialist-cr92cb95cl115
+              - link "Việc làm Technical Leader" [ref=f8e928] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-technical-leader-cr257cb266cl311
+              - link "Việc làm Bác sĩ nha khoa" [ref=f8e929] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bac-si-nha-khoa-cr781cb783cl807
+              - link "Việc làm Sales Xây dựng khác" [ref=f8e930] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-xay-dung-khac-cr1cb1081cl1083
+              - link "Việc làm Vận hành tòa nhà" [ref=f8e931] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-van-hanh-toa-nha-cr333cb337cl1088
+              - link "Việc làm Kế toán quản trị" [ref=f8e932] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-quan-tri-cr392cb393cl409
+              - link "Việc làm Nhân viên visa" [ref=f8e933] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-visa-cr857cb860cl881
+              - link "Việc làm Giám đốc vận hành/COO" [ref=f8e934] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-doc-van-hanh-coo-cr158cb162cl174
+              - link "Việc làm Quản lý dự án xây dựng khác" [ref=f8e935] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-du-an-xay-dung-khac-cr1080cb334cl961
+              - link "Việc làm Bán vé máy bay (Ticketing/Booker)" [ref=f8e936] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-ve-may-bay-ticketing-booker-cr1cb13cl70
+              - link "Việc làm Chuyên môn Pháp lý khác" [ref=f8e937] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-phap-ly-khac-cr1014cb752cl988
+              - link "Việc làm Chuyên môn Dược phẩm/Công nghệ sinh học khác" [ref=f8e938] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-duoc-pham-cong-nghe-sinh-hoc-khac-cr781cb785cl990
+              - link "Việc làm Quản lý/Giám sát chuỗi cung ứng" [ref=f8e939] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-giam-sat-chuoi-cung-ung-cr711cb717cl746
+              - link "Việc làm Tài xế xe tải" [ref=f8e940] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-xe-tai-cr711cb1003cl578
+              - link "Việc làm Quản lý cơ sở vật chất" [ref=f8e941] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-co-so-vat-chat-cr177cb179cl197
+              - link "Việc làm Chuyên môn Nghệ thuật/Hoạt hình/Game khác" [ref=f8e942] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-nghe-thuat-hoat-hinh-game-khac-cr826cb831cl994
+              - link "Việc làm Biên phiên dịch tiếng Anh" [ref=f8e943] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bien-phien-dich-tieng-anh-cr1013cb753cl770
+              - link "Việc làm Game Developer" [ref=f8e944] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-game-developer-cr257cb269cl324
+              - link "Việc làm Data Labeling (Gán nhãn dữ liệu)" [ref=f8e945] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-data-labeling-gan-nhan-du-lieu-cr257cb260cl172
+              - link "Việc làm Chuyên môn Nông/Lâm/Ngư nghiệp khác" [ref=f8e946] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-nong-lam-ngu-nghiep-khac-cr883cb886cl938
+              - link "Việc làm Chuyên môn Thiết kế/chế tạo máy khác" [ref=f8e947] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-thiet-ke-che-tao-may-khac-cr417cb419cl967
+              - link "Việc làm Quan hệ đối ngoại" [ref=f8e948] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-he-doi-ngoai-cr92cb96cl122
+              - link "Việc làm Chuyên môn Quan hệ Công chúng" [ref=f8e949] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-quan-he-cong-chung-cr92cb95cl950
+              - link "Việc làm Giám đốc điều hành" [ref=f8e950] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-doc-dieu-hanh-cr177cb179cl1037
+              - link "Việc làm Kỹ sư triển khai" [ref=f8e951] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-trien-khai-cr644cb649cl687
+              - link "Việc làm Quan hệ lao động" [ref=f8e952] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-he-lao-dong-cr177cb178cl185
+              - link "Việc làm Giám đốc nhân sự" [ref=f8e953] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-doc-nhan-su-cr177cb178cl190
+              - link "Việc làm Quản lý thiết bị sản xuất" [ref=f8e954] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-thiet-bi-san-xuat-cr417cb426cl470
+              - link "Việc làm Thợ Gia công cơ khí khác" [ref=f8e955] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-gia-cong-co-khi-khac-cr417cb418cl966
+              - link "Việc làm Customer Experience (Trải nghiệm khách hàng)" [ref=f8e956] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-customer-experience-trai-nghiem-khach-hang-cr158cb159cl169
+              - link "Việc làm Process Quality Assurance (PQA)" [ref=f8e957] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-process-quality-assurance-pqa-cr257cb259cl282
+              - link "Việc làm Kế toán tiền lương" [ref=f8e958] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tien-luong-cr392cb393cl408
+              - link "Việc làm Thẩm định tín dụng" [ref=f8e959] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tham-dinh-tin-dung-cr206cb210cl238
+              - link "Việc làm Chuyên môn Market Research and Analysis khác" [ref=f8e960] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-market-research-and-analysis-khac-cr92cb98cl952
+              - link "Việc làm Giáo viên STEAM/STEM" [ref=f8e961] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-steam-stem-cr477cb479cl504
+              - link "Việc làm Thợ sửa xe" [ref=f8e962] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-sua-xe-cr544cb552cl594
+              - link "Việc làm Kinh doanh điện mặt trời" [ref=f8e963] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-dien-mat-troi-cr1cb12cl65
+              - link "Việc làm Frontend Developer" [ref=f8e964] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-cr257cb258cl273
+              - link "Việc làm Thợ làm bánh" [ref=f8e965] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-lam-banh-cr857cb858cl869
+              - link "Việc làm Giáo viên tiếng Hàn" [ref=f8e966] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-tieng-han-cr477cb478cl495
+              - link "Việc làm Chuyên viên thuế" [ref=f8e967] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-thue-cr392cb1000cl415
+              - link "Việc làm Quản lý thiết bị y tế" [ref=f8e968] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-thiet-bi-y-te-cr781cb786cl821
+              - link "Việc làm Giáo viên tiểu học" [ref=f8e969] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-tieu-hoc-cr477cb478cl487
+              - link "Việc làm Marketing Admin" [ref=f8e970] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-marketing-admin-cr92cb99cl1023
+              - link "Việc làm Kinh doanh OTA" [ref=f8e971] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-ota-cr1cb13cl72
+              - link "Việc làm Nhân viên hiện trường Logistics" [ref=f8e972] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-hien-truong-logistics-cr711cb712cl725
+              - link "Việc làm QA Engineer" [ref=f8e973] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-qa-engineer-cr257cb259cl281
+              - link "Việc làm Thợ hàn" [ref=f8e974] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-han-cr417cb418cl368
+              - link "Việc làm Kỹ sư lập trình PLC/SCADA" [ref=f8e975] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-lap-trinh-plc-scada-cr644cb645cl657
+              - link "Việc làm Chuyên viên hồ sơ thầu" [ref=f8e976] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-ho-so-thau-cr711cb713cl734
+              - link "Việc làm Chuyên môn Thiết kế Đồ hoạ/Giao diện/Trải nghiệm khác" [ref=f8e977] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-thiet-ke-do-hoa-giao-dien-trai-nghiem-khac-cr826cb827cl992
+              - link "Việc làm Giảng viên thỉnh giảng" [ref=f8e978] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giang-vien-thinh-giang-cr477cb478cl492
+              - link "Việc làm Chuyên viên kế hoạch" [ref=f8e979] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-ke-hoach-cr206cb213cl1026
+              - link "Việc làm Vẽ kỹ thuật" [ref=f8e980] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ve-ky-thuat-cr826cb829cl846
+              - link "Việc làm Kỹ sư quy trình (PE)" [ref=f8e981] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-quy-trinh-pe-cr417cb419cl436
+              - link "Việc làm Giám đốc tài chính" [ref=f8e982] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-doc-tai-chinh-cr206cb207cl1029
+              - link "Việc làm Kỹ thuật viên chẩn đoán hình ảnh" [ref=f8e983] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-vien-chan-doan-hinh-anh-cr781cb783cl802
+              - link "Việc làm Chuyên viên Cyber Security" [ref=f8e984] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-cyber-security-cr257cb263cl294
+              - link "Việc làm Chuyên môn Năng lượng/Môi trường/Nông nghiệp khác" [ref=f8e985] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-nang-luong-moi-truong-nong-nghiep-khac-cr883cb887cl898
+              - link "Việc làm Thợ may" [ref=f8e986] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-may-cr417cb421cl448
+              - link "Việc làm Chuyên môn Dịch vụ du lịch khác" [ref=f8e987] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-dich-vu-du-lich-khac-cr857cb860cl998
+              - link "Việc làm Giám sát vệ sinh" [ref=f8e988] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-sat-ve-sinh-cr544cb548cl571
+              - link "Việc làm Thiết kế bao bì" [ref=f8e989] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thiet-ke-bao-bi-cr826cb829cl844
+              - link "Việc làm Solution Architect" [ref=f8e990] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-solution-architect-cr257cb266cl310
+              - link "Việc làm Growth Hacker" [ref=f8e991] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-growth-hacker-cr92cb99cl113
+              - link "Việc làm Kỹ sư cầu nối BrSE" [ref=f8e992] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-cau-noi-brse-cr257cb265cl307
+              - link "Việc làm Kỹ sư phần cứng" [ref=f8e993] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-phan-cung-cr644cb646cl661
+              - link "Việc làm Giám đốc Marketing (CMO)" [ref=f8e994] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-doc-marketing-cmo-cr92cb99cl155
+              - link "Việc làm Định giá tài sản" [ref=f8e995] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dinh-gia-tai-san-cr206cb210cl240
+              - link "Việc làm Luật sư" [ref=f8e996] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-luat-su-cr1014cb752cl766
+              - link "Việc làm Kế toán tài sản cố định" [ref=f8e997] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tai-san-co-dinh-cr392cb393cl404
+              - link "Việc làm Chuyên môn Hàng hải" [ref=f8e998] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-hang-hai-cr899cb900cl902
+              - link "Việc làm Sales dịch vụ Quảng cáo/Triển lãm/Sự kiện khác" [ref=f8e999] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-dich-vu-quang-cao-trien-lam-su-kien-khac-cr1cb11cl945
+              - link "Việc làm Quản lý khách sạn" [ref=f8e1000] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-khach-san-cr857cb859cl877
+              - link "Việc làm Quản trị và vận hành bảo mật" [ref=f8e1001] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-tri-va-van-hanh-bao-mat-cr257cb263cl297
+              - link "Việc làm Trợ lý dự án kỹ thuật" [ref=f8e1002] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tro-ly-du-an-ky-thuat-cr644cb649cl685
+              - link "Việc làm Project Administrator" [ref=f8e1003] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-project-administrator-cr177cb179cl1019
+              - link "Việc làm Customer Success" [ref=f8e1004] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-customer-success-cr1cb8cl49
+              - link "Việc làm Sales Bất động sản khác" [ref=f8e1005] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-bat-dong-san-khac-cr1cb6cl944
+              - link "Việc làm Quản lý dự án điện" [ref=f8e1006] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-du-an-dien-cr644cb649cl683
+              - link "Việc làm Chuyên môn Nhiệt/Gió/Điều hoà (HVAC-R)" [ref=f8e1007] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-nhiet-gio-dieu-hoa-hvac-r-cr644cb647cl980
+              - link "Việc làm Giáo viên Tiếng Việt/Ngữ văn" [ref=f8e1008] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-tieng-viet-ngu-van-cr477cb478cl489
+              - link "Việc làm Chuyên môn Hoá chất/Hoá mỹ phẩm khác" [ref=f8e1009] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-hoa-chat-hoa-my-pham-khac-cr417cb420cl948
+              - link "Việc làm Phân tích dữ liệu" [ref=f8e1010] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phan-tich-du-lieu-cr750cb751cl764
+              - link "Việc làm Database Administrator (DBA)" [ref=f8e1011] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-database-administrator-dba-cr257cb262cl292
+              - link "Việc làm 3D Modeler" [ref=f8e1012] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-3d-modeler-cr826cb827cl1039
+              - link "Việc làm Tác nghiệp tín dụng" [ref=f8e1013] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tac-nghiep-tin-dung-cr206cb208cl1040
+              - link "Việc làm Điều phối hàng hóa" [ref=f8e1014] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dieu-phoi-hang-hoa-cr711cb713cl731
+              - link "Việc làm Ad Operations Manager" [ref=f8e1015] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ad-operations-manager-cr92cb97cl135
+              - link "Việc làm Bancassurance" [ref=f8e1016] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bancassurance-cr1cb7cl43
+              - link "Việc làm Biên kịch" [ref=f8e1017] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bien-kich-cr612cb615cl633
+              - link "Việc làm Tích hợp hệ thống" [ref=f8e1018] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tich-hop-he-thong-cr644cb646cl668
+              - link "Việc làm Thiết kế cảnh quan" [ref=f8e1019] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thiet-ke-canh-quan-cr826cb828cl355
+              - link "Việc làm Kế toán thống kê" [ref=f8e1020] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-thong-ke-cr392cb393cl1099
+              - link "Việc làm Chuyên môn Thiết kế Nhà/Nội thất/Môi trường khác" [ref=f8e1021] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-thiet-ke-nha-noi-that-moi-truong-khac-cr826cb828cl993
+              - link "Việc làm Thẩm định giá bất động sản" [ref=f8e1022] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tham-dinh-gia-bat-dong-san-cr333cb338cl387
+              - link "Việc làm Hoạch định tài chính" [ref=f8e1023] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-hoach-dinh-tai-chinh-cr206cb207cl215
+              - link "Việc làm Chuyên môn Điện tử/Phần cứng khác" [ref=f8e1024] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-dien-tu-phan-cung-khac-cr644cb646cl979
+              - link "Việc làm Thợ tiện" [ref=f8e1025] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-tien-cr417cb419cl431
+              - link "Việc làm Giải phóng mặt bằng" [ref=f8e1026] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giai-phong-mat-bang-cr333cb338cl1025
+              - link "Việc làm Chuyên môn Thiết kế Công nghiệp" [ref=f8e1027] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-thiet-ke-cong-nghiep-cr826cb829cl843
+              - link "Việc làm Phân tích đầu tư" [ref=f8e1028] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phan-tich-dau-tu-cr206cb211cl244
+              - link "Việc làm Giám sát bảo trì tòa nhà" [ref=f8e1029] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-sat-bao-tri-toa-nha-cr333cb337cl378
+              - link "Việc làm Phân tích đầu tư chứng khoán" [ref=f8e1030] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phan-tich-dau-tu-chung-khoan-cr206cb209cl231
+              - link "Việc làm Chuyên môn Khách sạn/Dịch vụ cư trú khác" [ref=f8e1031] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-khach-san-dich-vu-cu-tru-khac-cr857cb859cl997
+              - link "Việc làm Kinh doanh chuyển phát nhanh" [ref=f8e1032] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-chuyen-phat-nhanh-cr1cb4cl1111
+              - link "Việc làm Kỹ sư địa chất" [ref=f8e1033] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-dia-chat-cr883cb884cl351
+              - link "Việc làm Thợ phay" [ref=f8e1034] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-phay-cr417cb418cl430
+              - link "Việc làm Hỗ trợ lớp học" [ref=f8e1035] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ho-tro-lop-hoc-cr477cb483cl531
+              - link "Việc làm Vận hành thiết bị nặng/phụ trợ" [ref=f8e1036] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-van-hanh-thiet-bi-nang-phu-tro-cr417cb424cl456
+              - link "Việc làm Công nhân lắp ráp" [ref=f8e1037] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-lap-rap-cr1080cb336cl1060
+              - link "Việc làm Các vị trí bác sĩ khác" [ref=f8e1038] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cac-vi-tri-bac-si-khac-cr781cb783cl810
+              - link "Việc làm Chuyên gia dinh dưỡng/quản lý sức khoẻ" [ref=f8e1039] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-gia-dinh-duong-quan-ly-suc-khoe-cr781cb784cl811
+              - link "Việc làm Vận hành điện" [ref=f8e1040] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-van-hanh-dien-cr644cb651cl709
+              - link "Việc làm Đăng ký dược phẩm" [ref=f8e1041] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dang-ky-duoc-pham-cr781cb785cl818
+              - link "Việc làm Giáo viên tiếng Đức" [ref=f8e1042] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-tieng-duc-cr477cb478cl497
+              - link "Việc làm Kỹ sư chất lượng (QE)" [ref=f8e1043] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-chat-luong-qe-cr417cb425cl730
+              - link "Việc làm Chuyên môn Quản lý/Vận hành dự án kỹ thuật khác" [ref=f8e1044] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-quan-ly-van-hanh-du-an-ky-thuat-khac-cr644cb649cl982
+              - link "Việc làm Chuyên môn Bảo hiểm khác" [ref=f8e1045] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-bao-hiem-khac-cr206cb212cl949
+              - link "Việc làm Vệ sinh/Tạp vụ" [ref=f8e1046] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ve-sinh-tap-vu-cr544cb548cl201
+              - link "Việc làm Giáo viên Tin học" [ref=f8e1047] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-tin-hoc-cr477cb478cl490
+              - link "Việc làm Kỹ sư mạng" [ref=f8e1048] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-mang-cr644cb650cl706
+              - link "Việc làm Tư vấn chiến lược" [ref=f8e1049] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-chien-luoc-cr750cb751cl756
+              - link "Việc làm Chuyên môn Chứng khoán khác" [ref=f8e1050] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-chung-khoan-khac-cr206cb209cl958
+              - link "Việc làm Chuyên viên IT Security" [ref=f8e1051] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-it-security-cr257cb263cl295
+              - link "Việc làm Chuyên viên hợp đồng" [ref=f8e1052] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-hop-dong-cr177cb179cl1035
+              - link "Việc làm Lắp đặt/bảo trì thang máy" [ref=f8e1053] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-lap-dat-bao-tri-thang-may-cr1080cb336cl372
+              - link "Việc làm Kỹ sư thiết kế nhôm kính" [ref=f8e1054] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-thiet-ke-nhom-kinh-cr1080cb335cl363
+              - link "Việc làm Kinh doanh nguồn vốn" [ref=f8e1055] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-nguon-von-cr206cb208cl222
+              - link "Việc làm Kỹ sư vật liệu" [ref=f8e1056] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-vat-lieu-cr417cb419cl439
+              - link "Việc làm Việc làm Bán lẻ/Dịch vụ đời sống khác" [ref=f8e1057] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-viec-lam-ban-le-dich-vu-doi-song-khac-cr544cb554cl611
+              - link "Việc làm Kỹ sư nhiệt lạnh" [ref=f8e1058] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-su-nhiet-lanh-cr644cb647cl672
+              - link "Việc làm Cloud Engineer" [ref=f8e1059] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cloud-engineer-cr257cb262cl293
+              - link "Việc làm Kiểm thử và đánh giá bảo mật" [ref=f8e1060] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kiem-thu-va-danh-gia-bao-mat-cr257cb263cl302
+              - link "Việc làm Data Scientist" [ref=f8e1061] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-data-scientist-cr257cb261cl286
+              - link "Việc làm Nghiên cứu sinh học" [ref=f8e1062] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nghien-cuu-sinh-hoc-cr781cb785cl814
+              - link "Việc làm Quản lý y tế" [ref=f8e1063] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-y-te-cr781cb783cl809
+              - link "Việc làm Giáo viên ngoại ngữ khác" [ref=f8e1064] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giao-vien-ngoai-ngu-khac-cr477cb478cl498
+              - link "Việc làm Kinh doanh khách đoàn (MICE)" [ref=f8e1065] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kinh-doanh-khach-doan-mice-cr1cb13cl69
+              - link "Việc làm Dịch vụ vận tải khác" [ref=f8e1066] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dich-vu-van-tai-khac-cr711cb1003cl973
+              - link "Việc làm Huy động vốn" [ref=f8e1067] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-huy-dong-von-cr206cb207cl1033
+              - link "Việc làm Thiết kế sản phẩm nội thất" [ref=f8e1068] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thiet-ke-san-pham-noi-that-cr826cb829cl842
+              - link "Việc làm Bác sĩ nội khoa" [ref=f8e1069] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bac-si-noi-khoa-cr781cb783cl792
+              - link "Việc làm Quản lý cửa hàng sửa chữa và bảo trì ô tô/xe máy/xe điện" [ref=f8e1070] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-cua-hang-sua-chua-va-bao-tri-o-to-xe-may-xe-dien-cr544cb552cl597
+              - link "Việc làm Kiểm toán độc lập" [ref=f8e1071] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-kiem-toan-doc-lap-cr392cb394cl413
+              - link "Việc làm Phân loại/Sắp xếp hàng hoá" [ref=f8e1072] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phan-loai-sap-xep-hang-hoa-cr711cb715cl737
+              - link "Việc làm Producer (Sản xuất phim)" [ref=f8e1073] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-producer-san-xuat-phim-cr612cb615cl634
+              - link "Việc làm Marketing Director" [ref=f8e1074] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-marketing-director-cr92cb99cl154
+              - link "Việc làm Kế toán xuất nhập khẩu" [ref=f8e1075] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-xuat-nhap-khau-cr392cb393cl928
+              - link "Việc làm Tư vấn quản lý doanh nghiệp" [ref=f8e1076] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tu-van-quan-ly-doanh-nghiep-cr750cb751cl755
+              - link "Việc làm Giám đốc pháp chế" [ref=f8e1077] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giam-doc-phap-che-cr177cb180cl204
+              - link "Việc làm Sales Dịch vụ kế toán" [ref=f8e1078] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sales-dich-vu-ke-toan-cr1cb18cl1032
+              - link "Việc làm Biên phiên dịch ngôn ngữ khác" [ref=f8e1079] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bien-phien-dich-ngon-ngu-khac-cr1013cb753cl778
+              - link "Việc làm Chuyên viên điều phối giáo viên" [ref=f8e1080] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-vien-dieu-phoi-giao-vien-cr477cb481cl518
+              - link "Việc làm Quản lý/Hỗ trợ lớp học khác" [ref=f8e1081] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-quan-ly-ho-tro-lop-hoc-khac-cr477cb483cl971
+              - link "Việc làm Tài xế lái xe nâng" [ref=f8e1082] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-lai-xe-nang-cr417cb424cl454
+              - link "Việc làm Bốc xếp hàng hóa" [ref=f8e1083] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-boc-xep-hang-hoa-cr711cb715cl475
+          - generic [ref=f8e1087]:
+            - generic "Việc làm phổ thông" [ref=f8e1088]
+            - generic [ref=f8e1091]:
+              - link "Việc làm Tài xế" [ref=f8e1092] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-cr1042cb1049
+              - link "Việc làm Bảo vệ" [ref=f8e1093] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bao-ve
+              - link "Việc làm Công nhân" [ref=f8e1094] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-cr1042cb1045
+              - link "Việc làm Nhân viên kho" [ref=f8e1095] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-kho-cr1042cb1047cl741
+              - link "Việc làm Shipper (Nhân viên giao hàng)" [ref=f8e1096] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-shipper-nhan-vien-giao-hang-cr1042cb1047cl574
+              - link "Việc làm Thu ngân" [ref=f8e1097] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-thu-ngan-cr1042cb1053cl202
+              - link "Việc làm Lễ tân/Đón tiếp" [ref=f8e1098] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-le-tan-don-tiep-cr177cb179cl863
+              - link "Việc làm Pha chế (Barista)" [ref=f8e1099] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-pha-che-barista-cr1042cb1048cl870
+              - link "Việc làm Trực page" [ref=f8e1100] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-truc-page-cr1042cb1053cl167
+              - link "Việc làm Thợ may" [ref=f8e1101] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-may-cr1042cb1051cl448
+              - link "Việc làm Thợ cơ khí" [ref=f8e1102] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-co-khi-cr1042cb1050cl429
+              - link "Việc làm Công nhân xây dựng" [ref=f8e1103] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-xay-dung-cr1042cb1045cl1068
+              - link "Việc làm Công nhân thời vụ" [ref=f8e1104] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-thoi-vu-cr1042cb1045cl1057
+              - link "Việc làm Bốc xếp hàng hóa" [ref=f8e1105] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-boc-xep-hang-hoa-cr1042cb1047cl475
+              - link "Việc làm Đóng gói hàng hóa" [ref=f8e1106] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dong-goi-hang-hoa-cr1042cb1047cl474
+              - link "Việc làm Nhân viên môi trường" [ref=f8e1107] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-moi-truong-cr1042cb1045cl892
+              - link "Việc làm Công nhân chăn nuôi" [ref=f8e1108] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-chan-nuoi-cr1042cb1045cl895
+              - link "Việc làm Công nhân làm nước đá" [ref=f8e1109] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-lam-nuoc-da-cr1042cb1045cl1066
+              - link "Việc làm Công nhân xưởng gỗ" [ref=f8e1110] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-xuong-go-cr1042cb1045cl1059
+              - link "Việc làm Công nhân bao bì" [ref=f8e1111] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-bao-bi-cr1042cb1045cl1064
+              - link "Việc làm Công nhân điện tử" [ref=f8e1112] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-dien-tu-cr1042cb1045cl1067
+              - link "Việc làm Công nhân sản xuất" [ref=f8e1113] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-san-xuat-cr1042cb1045cl466
+              - link "Việc làm Công nhân ép nhựa" [ref=f8e1114] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-ep-nhua-cr1042cb1045cl1065
+              - link "Việc làm Công nhân giày da" [ref=f8e1115] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-giay-da-cr1042cb1045cl1063
+              - link "Việc làm Công nhân vận hành máy" [ref=f8e1116] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-van-hanh-may-cr1042cb1045cl1061
+              - link "Việc làm Công nhân khai thác than" [ref=f8e1117] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-khai-thac-than-cr1042cb1045cl1058
+              - link "Việc làm Công nhân lắp ráp" [ref=f8e1118] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-lap-rap-cr1042cb1045cl1060
+              - link "Việc làm Công nhân xếp quần áo" [ref=f8e1119] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nhan-xep-quan-ao-cr1042cb1045cl1062
+              - link "Việc làm Việc làm Công nhân khác" [ref=f8e1120] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-viec-lam-cong-nhan-khac-cr1042cb336cl1069
+              - link "Việc làm Tài xế taxi" [ref=f8e1121] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-taxi-cr1042cb1049cl576
+              - link "Việc làm Tài xế B2" [ref=f8e1122] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-b2-cr1042cb1049cl1072
+              - link "Việc làm Tài xế xe tải" [ref=f8e1123] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-xe-tai-cr1042cb1049cl578
+              - link "Việc làm Phụ xe" [ref=f8e1124] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phu-xe-cr1042cb1049cl726
+              - link "Việc làm Lái xe cho sếp" [ref=f8e1125] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-lai-xe-cho-sep-cr1042cb1049cl1073
+              - link "Việc làm Tài xế công nghệ" [ref=f8e1126] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-cong-nghe-cr1042cb1049cl1009
+              - link "Việc làm Tài xế container" [ref=f8e1127] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-container-cr1042cb1049cl1071
+              - link "Việc làm Tài xế lái xe văn phòng" [ref=f8e1128] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-lai-xe-van-phong-cr1042cb1049cl198
+              - link "Việc làm Tài xế xe khách" [ref=f8e1129] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-xe-khach-cr1042cb1049cl579
+              - link "Việc làm Tài xế lái xe nâng" [ref=f8e1130] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-lai-xe-nang-cr1042cb1049cl454
+              - link "Việc làm Tài xế lái xe đường dài" [ref=f8e1131] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-lai-xe-duong-dai-cr1010cb1003cl1004
+              - link "Việc làm Tài xế lái máy công trình" [ref=f8e1132] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-lai-may-cong-trinh-cr1042cb424cl455
+              - link "Việc làm Tài xế lái xe thuê" [ref=f8e1133] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-lai-xe-thue-cr1010cb1011cl575
+              - link "Việc làm Tài xế lái xe chuyên dụng" [ref=f8e1134] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-lai-xe-chuyen-dung-cr1010cb1003cl1005
+              - link "Việc làm Dịch vụ đưa đón khác" [ref=f8e1135] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dich-vu-dua-don-khac-cr1042cb1011cl1008
+              - link "Việc làm Bốc xếp hàng hóa" [ref=f8e1136] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-boc-xep-hang-hoa-cr1042cb1047cl475
+              - link "Việc làm Bưu tá" [ref=f8e1137] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-buu-ta-cr711cb715cl1006
+              - link "Việc làm Phân loại/Sắp xếp hàng hoá" [ref=f8e1138] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phan-loai-sap-xep-hang-hoa-cr1042cb1047cl737
+              - link "Việc làm Đóng gói hàng hóa" [ref=f8e1139] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dong-goi-hang-hoa-cr1042cb1047cl474
+              - link "Việc làm Nhân viên cân" [ref=f8e1140] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-can-cr1042cb716cl1090
+              - link "Việc làm Sửa chữa điện thoại" [ref=f8e1141] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sua-chua-dien-thoai-cr1042cb1043cl585
+              - link "Việc làm Bảo vệ" [ref=f8e1142] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bao-ve-cr1042cb1043cl200
+              - link "Việc làm Sửa chữa/Bảo trì điện nước" [ref=f8e1143] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sua-chua-bao-tri-dien-nuoc-cr1042cb1043cl366
+              - link "Việc làm Thợ sửa khoá" [ref=f8e1144] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-sua-khoa-cr1042cb1043cl590
+              - link "Việc làm Thợ điện" [ref=f8e1145] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-dien-cr1042cb1043cl655
+              - link "Việc làm Thợ điện lạnh" [ref=f8e1146] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-dien-lanh-cr1042cb1043cl367
+              - link "Việc làm Bảo trì tòa nhà" [ref=f8e1147] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bao-tri-toa-nha-cr1042cb1043cl377
+              - link "Việc làm Thợ sửa xe" [ref=f8e1148] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-sua-xe-cr1042cb1043cl594
+              - link "Việc làm Nhân viên rửa xe" [ref=f8e1149] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-rua-xe-cr1042cb1043cl595
+              - link "Việc làm Sửa chữa máy tính và máy in" [ref=f8e1150] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sua-chua-may-tinh-va-may-in-cr1042cb1043cl586
+              - link "Việc làm Lắp đặt/bảo trì thang máy" [ref=f8e1151] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-lap-dat-bao-tri-thang-may-cr1042cb1043cl372
+              - link "Việc làm Nhân viên cảnh quan" [ref=f8e1152] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-canh-quan-cr1042cb337cl380
+              - link "Việc làm Sửa chữa thiết bị gia dụng" [ref=f8e1153] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sua-chua-thiet-bi-gia-dung-cr1042cb550cl584
+              - link "Việc làm Thợ độ xe ô tô/xe máy/xe điện" [ref=f8e1154] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-do-xe-o-to-xe-may-xe-dien-cr1042cb552cl596
+              - link "Việc làm Thợ kỹ thuật khác" [ref=f8e1155] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-ky-thuat-khac-cr1042cb423cl923
+              - link "Việc làm Việc làm Bảo vệ/Bảo trì/Sửa chữa khác" [ref=f8e1156] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-viec-lam-an-ninh-bao-tri-sua-chua-khac-cr1042cb1043cl1055
+              - link "Việc làm Vệ sinh/Tạp vụ" [ref=f8e1157] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ve-sinh-tap-vu-cr1042cb1054cl201
+              - link "Việc làm Giúp việc" [ref=f8e1158] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giup-viec-cr1042cb1054cl572
+              - link "Việc làm Bảo mẫu/Người trông trẻ" [ref=f8e1159] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bao-mau-nguoi-trong-tre-cr1042cb1054cl591
+              - link "Việc làm Nhân viên dọn vệ sinh" [ref=f8e1160] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-don-ve-sinh-cr1042cb1054cl570
+              - link "Việc làm Sắp xếp tủ quần áo và nhà cửa" [ref=f8e1161] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-sap-xep-tu-quan-ao-va-nha-cua-cr1042cb548cl573
+              - link "Việc làm Dịch vụ vệ sinh/nhà cửa khác" [ref=f8e1162] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dich-vu-ve-sinh-nha-cua-khac-cr1042cb1054cl972
+              - link "Việc làm Phun xăm thẩm mỹ" [ref=f8e1163] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phun-xam-tham-my-cr1042cb1044cl563
+              - link "Việc làm Thợ xăm (Tattoo Artist)" [ref=f8e1164] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-xam-tattoo-artist-cr1042cb1044cl937
+              - link "Việc làm Kỹ thuật viên Spa" [ref=f8e1165] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ky-thuat-vien-spa-cr1042cb1044cl560
+              - link "Việc làm Thợ cắt tóc" [ref=f8e1166] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-cat-toc-cr1042cb1044cl564
+              - link "Việc làm Thợ nail/mi" [ref=f8e1167] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-nail-mi-cr1042cb1044cl562
+              - link "Việc làm Nhân viên massage" [ref=f8e1168] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-massage-cr1042cb1044cl569
+              - link "Việc làm Dịch vụ làm đẹp khác" [ref=f8e1169] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dich-vu-lam-dep-khac-cr1042cb1044cl917
+              - link "Việc làm Đầu bếp" [ref=f8e1170] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-dau-bep-cr1042cb1048cl865
+              - link "Việc làm Phục vụ" [ref=f8e1171] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phuc-vu-cr1042cb1048cl862
+              - link "Việc làm Phụ bếp" [ref=f8e1172] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-phu-bep-cr1042cb1048cl867
+              - link "Việc làm Thợ làm bánh" [ref=f8e1173] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-lam-banh-cr1042cb1048cl869
+              - link "Việc làm Chuyên môn Nhà hàng/Dịch vụ ăn uống khác" [ref=f8e1174] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-chuyen-mon-nha-hang-dich-vu-an-uong-khac-cr857cb858cl996
+              - link "Việc làm Giặt là" [ref=f8e1175] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-giat-la-cr1042cb1046cl875
+              - link "Việc làm Bellman (nhân viên hành lý)" [ref=f8e1176] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-bellman-nhan-vien-hanh-ly-cr1042cb1046cl873
+              - link "Việc làm Buồng phòng" [ref=f8e1177] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-buong-phong-cr1042cb1046cl874
+              - link "Việc làm Nhân viên đỗ xe (Valet Parking)" [ref=f8e1178] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-do-xe-valet-parking-cr1042cb1046cl876
+              - link "Việc làm PG" [ref=f8e1179] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-pg-cr1042cb1053cl1077
+              - link "Việc làm Hiệu đính và nhập liệu" [ref=f8e1180] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-hieu-dinh-va-nhap-lieu-cr1042cb614cl623
+              - link "Việc làm Nhân viên siêu thị" [ref=f8e1181] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-sieu-thi-cr1042cb1053cl556
+              - link "Việc làm Bán hàng siêu thị/cửa hàng tiện ích/tiện lợi" [ref=f8e1182] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-sieu-thi-cua-hang-tien-ich-tien-loi-cr1042cb1053cl21
+              - link "Việc làm Nhân viên phát tờ rơi" [ref=f8e1183] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-phat-to-roi-cr1042cb1053cl1076
+              - link "Việc làm Bán hàng điện thoại" [ref=f8e1184] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-hang-dien-thoai-cr1042cb1053cl22
+              - link "Việc làm Nhân viên cây xăng" [ref=f8e1185] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-cay-xang-cr1042cb1053cl608
+              - link "Việc làm Nhân viên rạp chiếu phim" [ref=f8e1186] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-rap-chieu-phim-cr1042cb554cl607
+              - link "Việc làm Thợ may" [ref=f8e1187] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-may-cr1042cb1051cl448
+              - link "Việc làm Thợ cắm hoa" [ref=f8e1188] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-cam-hoa-cr1042cb1051cl602
+              - link "Việc làm Thợ cắt vải" [ref=f8e1189] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-cat-vai-cr1042cb1051cl449
+              - link "Việc làm Thợ thủ công mỹ nghệ" [ref=f8e1190] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-thu-cong-my-nghe-cr1042cb1051cl1074
+              - link "Việc làm Thợ thủ công khác" [ref=f8e1191] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-thu-cong-khac-cr1042cb1051cl1075
+              - link "Việc làm Thợ hàn" [ref=f8e1192] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-han-cr1042cb1050cl368
+              - link "Việc làm Thợ cơ khí" [ref=f8e1193] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-co-khi-cr1042cb1050cl429
+              - link "Việc làm Thợ tiện" [ref=f8e1194] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-tien-cr1042cb1050cl431
+              - link "Việc làm Thợ khoan" [ref=f8e1195] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-khoan-cr1042cb1050cl1078
+              - link "Việc làm Thợ mài" [ref=f8e1196] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-mai-cr1042cb1050cl1079
+              - link "Việc làm Thợ phay" [ref=f8e1197] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-phay-cr1042cb1050cl430
+              - link "Việc làm Thợ Gia công cơ khí khác" [ref=f8e1198] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-gia-cong-co-khi-khac-cr1042cb1050cl966
+              - link "Việc làm Thợ xây/Thợ nề/Thợ hồ" [ref=f8e1199] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-xay-tho-ne-tho-ho-cr1042cb1052cl373
+              - link "Việc làm Thợ mộc" [ref=f8e1200] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-moc-cr1042cb1052cl369
+              - link "Việc làm Thợ sơn" [ref=f8e1201] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-son-cr1042cb1052cl371
+              - link "Việc làm Thợ nhôm kính" [ref=f8e1202] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-nhom-kinh-cr1042cb1052cl374
+              - link "Việc làm Thợ xây dựng khác" [ref=f8e1203] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tho-xay-dung-khac-cr1042cb1052cl375
+    - text: × 💼 ×  × 🔍 × ✓ — › ✓ — 〉 ✓ —  × 🕓 💼 👤 📅   
+    - generic: ⚠
+    - text: × ×
+  - contentinfo [ref=f8e1206]:
+    - generic [ref=f8e1209]:
+      - link "Việc làm ," [ref=f8e1210] [cursor=pointer]:
+        - /url: https://www.topcv.vn/viec-lam
+      - link "Việc làm Hà Nội ," [ref=f8e1211] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ha-noi-l1
+      - link "Việc làm TP. HCM ," [ref=f8e1212] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2
+      - link "Việc làm Cần Thơ ," [ref=f8e1213] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-can-tho-l20
+      - link "Việc làm Đà Nẵng ," [ref=f8e1214] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-da-nang-l8
+      - link "Việc làm Hải Phòng ," [ref=f8e1215] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hai-phong-l9
+      - link "Việc làm Thanh Hóa ," [ref=f8e1216] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-thanh-hoa-l60
+      - link "Việc làm Bình Dương ," [ref=f8e1217] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-duong-l3
+      - link "Việc làm Đồng Nai ," [ref=f8e1218] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-dong-nai-l5
+      - link "Việc làm Tây Ninh ," [ref=f8e1219] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-tay-ninh-l57
+      - link "Việc làm Đà Lạt ," [ref=f8e1220] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-tp-da-lat-l37d3701
+      - link "Việc làm Gia Lai ," [ref=f8e1221] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-gia-lai-l27
+      - link "Việc làm Nha Trang ," [ref=f8e1222] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-tp-nha-trang-l33d3301
+      - link "Việc làm Bà Rịa - Vũng Tàu ," [ref=f8e1223] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ba-ria-vung-tau-l11
+      - link "Việc làm Huế ," [ref=f8e1224] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-thua-thien-hue-l61
+      - link "Việc làm Gia sư tại Hà Nội ," [ref=f8e1225] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-gia-su-tai-ha-noi-kl1
+      - link "Việc làm Lái xe tại Hà Nội ," [ref=f8e1226] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lai-xe-tai-ha-noi-kl1
+      - link "Việc làm Tài xế tại Cần Thơ ," [ref=f8e1227] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-tai-can-tho-kl20
+      - link "Việc làm Tài xế tại TP. HCM ," [ref=f8e1228] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-tai-ho-chi-minh-kl2
+      - link "Việc làm Tài xế B2 tại TP. HCM ," [ref=f8e1229] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-b2-tai-ho-chi-minh-kl2
+      - link "Việc làm Kế toán tại Hà Nội ," [ref=f8e1230] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tai-ha-noi-kl1
+      - link "Việc làm Kế toán tại TP. HCM ," [ref=f8e1231] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tai-ho-chi-minh-kl2
+      - link "Việc làm Kế toán tại Đà Nẵng ," [ref=f8e1232] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tai-da-nang-kl8
+      - link "Việc làm Marketing tại Hà Nội ," [ref=f8e1233] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-marketing-tai-ha-noi-kl1
+      - link "Việc làm Marketing tại TP. HCM ," [ref=f8e1234] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-marketing-tai-ho-chi-minh-kl2
+      - link "Việc làm Marketing tại Đà Nẵng ," [ref=f8e1235] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-marketing-tai-da-nang-kl8
+      - link "Việc làm Ngân hàng tại Hà Nội ," [ref=f8e1236] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ngan-hang-tai-ha-noi-kl1
+      - link "Việc làm Ngân hàng tại TP. HCM ," [ref=f8e1237] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ngan-hang-tai-ho-chi-minh-kl2
+      - link "Việc làm Ngân hàng tại Đà Nẵng ," [ref=f8e1238] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ngan-hang-tai-da-nang-kl8
+      - link "Việc làm Nhân viên kinh doanh ," [ref=f8e1239] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-kinh-doanh
+      - link "Việc làm Marketing ," [ref=f8e1240] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-marketing
+      - link "Việc làm Nhân viên Marketing ," [ref=f8e1241] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-marketing
+      - link "Việc làm Content Marketing ," [ref=f8e1242] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-content-marketing
+      - link "Việc làm Kế toán ," [ref=f8e1243] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ke-toan
+      - link "Việc làm Tài chính/Ngân hàng/Bảo hiểm ," [ref=f8e1244] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-chinh-ngan-hang-bao-hiem-cr206
+      - link "Việc làm Ngân hàng ," [ref=f8e1245] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ngan-hang
+      - link "Việc làm Hành chính nhân sự ," [ref=f8e1246] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-hanh-chinh-nhan-su
+      - link "Việc làm Logistics ," [ref=f8e1247] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-logistics
+      - link "Việc làm Sales Logistics ," [ref=f8e1248] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-sales-logistics
+      - link "Việc làm Xây dựng ," [ref=f8e1249] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-xay-dung
+      - link "Việc làm Kỹ sư xây dựng ," [ref=f8e1250] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ky-su-xay-dung
+      - link "Việc làm Tester ," [ref=f8e1251] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tester
+      - link "Việc làm Lập trình viên .Net ," [ref=f8e1252] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-net
+      - link "Việc làm Lập trình viên Java ," [ref=f8e1253] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-java
+      - link "Việc làm Lập trình viên PHP ," [ref=f8e1254] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-php
+      - link "Việc làm Lao động phổ thông ," [ref=f8e1255] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lao-dong-pho-thong
+      - link "Việc làm Sản xuất ," [ref=f8e1256] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-san-xuat-cr417
+      - link "Việc làm Chăm sóc khách hàng ," [ref=f8e1257] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-cham-soc-khach-hang
+      - link "Việc làm Online tại nhà ," [ref=f8e1258] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-online-tai-nha
+      - link "Tra cứu mức lương tại Việt Nam ," [ref=f8e1259] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tra-cuu-muc-luong-tai-viet-nam
+      - link "Tính lương Gross - Net ," [ref=f8e1260] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tinh-luong-gross-net
+      - link "Tính thuế thu nhập cá nhân ," [ref=f8e1261] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tinh-thue-thu-nhap-ca-nhan
+      - link "Trắc nghiệm tính cách MBTI ," [ref=f8e1262] [cursor=pointer]:
+        - /url: https://www.topcv.vn/trac-nghiem-tinh-cach-mbti
+      - link "Mẫu CV ," [ref=f8e1263] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv
+      - link "Mẫu CV theo vị trí công việc ," [ref=f8e1264] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-theo-vi-tri-cong-viec
+      - link "Mẫu CV tiếng Anh ," [ref=f8e1265] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-anh
+      - link "Mẫu CV tiếng Nhật ," [ref=f8e1266] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-nhat
+      - link "Mẫu CV tiếng Trung ," [ref=f8e1267] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-trung
+      - link "Mẫu CV Kế toán ," [ref=f8e1268] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-viet/mau-cv-nhan-vien-ke-toan
+      - link "Mẫu CV Nhân viên kinh doanh ," [ref=f8e1269] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-viet/mau-cv-nhan-vien-kinh-doanh
+      - link "Mẫu CV Hành chính nhân sự ," [ref=f8e1270] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-viet/mau-cv-nhan-vien-hanh-chinh-nhan-su
+      - link "Mẫu CV Lập trình viên ," [ref=f8e1271] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tong-hop-cv-tham-khao-cho-lap-trinh-vien
+      - link "Mẫu CV cho sinh viên/thực tập sinh ," [ref=f8e1272] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-viet/mau-cv-thuc-tap-sinh
+      - link "CV là gì? ," [ref=f8e1273] [cursor=pointer]:
+        - /url: https://www.topcv.vn/cv-la-gi
+      - link "Cách viết CV xin việc ," [ref=f8e1274] [cursor=pointer]:
+        - /url: https://www.topcv.vn/viet-cv-the-nao-cho-chuan
+      - link "Cách viết CV cho sinh viên chưa tốt nghiệp ," [ref=f8e1275] [cursor=pointer]:
+        - /url: https://www.topcv.vn/cv-cho-sinh-vien-chua-tot-nghiep
+      - link "Cách viết CV Tiếng Anh ," [ref=f8e1276] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-xin-viec-tieng-anh
+      - link "Cách viết CV Tiếng Hàn ," [ref=f8e1277] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-tieng-han
+      - link "Cách viết CV Tiếng Nhật ," [ref=f8e1278] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-tieng-nhat
+      - link "Cách viết CV Tiếng Trung ," [ref=f8e1279] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-tieng-trung
+      - link "Cách viết CV xin học bổng du học ," [ref=f8e1280] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-xin-hoc-bong
+      - link "Sửa lỗi gõ tiếng Việt trên Unikey khi viết CV ," [ref=f8e1281] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-sua-loi-go-tieng-viet-unikey
+      - link "Mẫu Cover Letter ," [ref=f8e1282] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cover-letter-thu-xin-viec
+      - link "Mẫu bộ hồ sơ xin việc ," [ref=f8e1283] [cursor=pointer]:
+        - /url: https://www.topcv.vn/giay-to-thu-tuc-ho-so-xin-viec
+      - link "Mẫu sơ yếu lý lịch ," [ref=f8e1284] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tai-mau-so-yeu-ly-lich-chuan-mien-phi
+      - link "Mẫu đơn xin nghỉ phép ," [ref=f8e1285] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-don-xin-nghi-phep
+      - link "Mẫu đơn xin nghỉ việc ," [ref=f8e1286] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-don-xin-nghi-viec
+      - link "Mẫu đơn xin thực tập ," [ref=f8e1287] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-don-xin-thuc-tap-chuan-cho-sinh-vien
+      - link "Mẫu đơn xin việc ," [ref=f8e1288] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-don-xin-viec
+      - link "Mẫu email xin việc bằng tiếng Anh ," [ref=f8e1289] [cursor=pointer]:
+        - /url: https://www.topcv.vn/cach-viet-email-xin-viec-bang-tieng-anh
+      - link "Cẩm nang ngành Công nghệ thông tin ," [ref=f8e1290] [cursor=pointer]:
+        - /url: https://www.topcv.vn/xin-viec-nganh-cong-nghe-thong-tin
+      - link "Cẩm nang ngành Công nghệ thực phẩm ," [ref=f8e1291] [cursor=pointer]:
+        - /url: https://www.topcv.vn/xin-viec-nganh-cong-nghe-thuc-pham
+      - link "Cẩm nang ngành Du lịch ," [ref=f8e1292] [cursor=pointer]:
+        - /url: https://www.topcv.vn/nganh-du-lich-lam-nhung-cong-viec-gi
+      - link "Cẩm nang ngành Logistics" [ref=f8e1293] [cursor=pointer]:
+        - /url: https://www.topcv.vn/cong-viec-nganh-logistic
+    - generic [ref=f8e1294]:
+      - generic [ref=f8e1296]:
+        - generic [ref=f8e1297]:
+          - link "TopCV tuyển dụng tại TopCV" [ref=f8e1298] [cursor=pointer]:
+            - /url: https://www.topcv.vn
+          - link "DMCA.com Protection Status" [ref=f8e1300] [cursor=pointer]:
+            - /url: https://www.dmca.com/Protection/Status.aspx?ID=8be40718-7da1-4b43-875a-3efb819100c9&refurl=https://www.topcv.vn/viec-lam/frontend-developer-fresher-reactjs/1498997.html
+          - generic [ref=f8e1301]:
+            - paragraph [ref=f8e1302]: Liên hệ
+            - text: "Hotline:"
+            - link "1900 068 889 | Nhánh 2 (Giờ hành chính)" [ref=f8e1303] [cursor=pointer]:
+              - /url: tel:1900068889
+            - text: "Email:"
+            - link "hotro@topcv.vn" [ref=f8e1304] [cursor=pointer]:
+              - /url: mailto:hotro@topcv.vn
+            - text: "Zalo hỗ trợ ứng viên:"
+            - link "Kết nối ngay →" [ref=f8e1305] [cursor=pointer]:
+              - /url: https://zalo.me/946504486043251830
+              - text: Kết nối ngay
+              - generic [ref=f8e1306]: →
+            - text: "Fanpage:"
+            - link "TopCV Vietnam" [ref=f8e1307] [cursor=pointer]:
+              - /url: https://www.facebook.com/topcv.vn
+            - text: "LinkedIn:"
+            - link "TopCV Vietnam" [ref=f8e1308] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/topcv-vietnam/posts/?feedView=all
+            - text: "Thread:"
+            - link "TopCV Vietnam" [ref=f8e1309] [cursor=pointer]:
+              - /url: https://www.threads.com/@topcvvietnam
+            - text: "Tiktok:"
+            - link "TopCV Vietnam" [ref=f8e1310] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@topcv?lang=en
+          - generic [ref=f8e1311]:
+            - paragraph [ref=f8e1312]: Ứng dụng tải xuống
+            - generic [ref=f8e1313]:
+              - link "Tải app TopCV tại App Store" [ref=f8e1314] [cursor=pointer]:
+                - /url: https://itunes.apple.com/us/app/topcv-t%E1%BA%A1o-cv-t%C3%ACm-vi%E1%BB%87c-l%C3%A0m/id1455928592?ls=1&mt=8
+              - link "Tải app TopCV tại Google Play" [ref=f8e1315] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.topcv
+          - generic [ref=f8e1316]:
+            - paragraph [ref=f8e1317]: Cộng đồng TopCV
+            - generic [ref=f8e1318]:
+              - link "facebook" [ref=f8e1319] [cursor=pointer]:
+                - /url: https://www.facebook.com/topcv.vn/
+              - link "youtube" [ref=f8e1320] [cursor=pointer]:
+                - /url: https://www.youtube.com/c/TopCVpro
+              - link "linkedin" [ref=f8e1321] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/topcv-vietnam
+              - link "tiktok" [ref=f8e1322] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@topcv
+        - generic [ref=f8e1323]:
+          - generic [ref=f8e1324]:
+            - generic [ref=f8e1325]: Về TopCV
+            - generic [ref=f8e1326]:
+              - link "Giới thiệu" [ref=f8e1327] [cursor=pointer]:
+                - /url: https://topcv.com.vn/
+              - link "Góc báo chí" [ref=f8e1328] [cursor=pointer]:
+                - /url: https://www.topcv.vn/gioi-thieu#bao-chi
+              - link "Tuyển dụng" [ref=f8e1329] [cursor=pointer]:
+                - /url: https://www.topcv.vn/cong-ty/cong-ty-co-phan-topcv-viet-nam/105.html
+              - link "Liên hệ" [ref=f8e1330] [cursor=pointer]:
+                - /url: https://www.topcv.vn/gioi-thieu#lien-he
+              - link "Hỏi đáp" [ref=f8e1331] [cursor=pointer]:
+                - /url: https://www.topcv.vn/faqs
+              - link "Chính sách quyền riêng tư" [ref=f8e1332] [cursor=pointer]:
+                - /url: https://www.topcv.vn/dieu-khoan-bao-mat
+              - link "Cài đặt Cookie" [ref=f8e1333] [cursor=pointer]:
+                - /url: javascript:showMenuSettingCookie()
+              - link "Điều khoản dịch vụ" [ref=f8e1334] [cursor=pointer]:
+                - /url: https://www.topcv.vn/terms-of-service
+          - generic [ref=f8e1335]:
+            - generic [ref=f8e1336]: Đối tác
+            - generic [ref=f8e1337]:
+              - link "TestCenter" [ref=f8e1338] [cursor=pointer]:
+                - /url: https://www.testcenter.vn/
+              - link "TopHR" [ref=f8e1339] [cursor=pointer]:
+                - /url: https://tophr.vn
+              - link "ViecNgay" [ref=f8e1340] [cursor=pointer]:
+                - /url: https://www.viecngay.vn/
+              - link "Happy Time" [ref=f8e1341] [cursor=pointer]:
+                - /url: https://happytime.vn/
+        - generic [ref=f8e1342]:
+          - generic [ref=f8e1343]:
+            - generic [ref=f8e1344]: Hồ sơ và CV
+            - generic [ref=f8e1345]:
+              - link "Quản lý CV của bạn" [ref=f8e1346] [cursor=pointer]:
+                - /url: https://www.topcv.vn/quan-ly-cv
+              - link "Hướng dẫn viết CV" [ref=f8e1347] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viet-cv-the-nao-cho-chuan
+              - link "Thư viện CV theo ngành nghề" [ref=f8e1348] [cursor=pointer]:
+                - /url: https://www.topcv.vn/mau-cv-theo-vi-tri-cong-viec
+          - generic [ref=f8e1349]:
+            - generic [ref=f8e1350]: Khám phá
+            - generic [ref=f8e1351]:
+              - link "Ứng dụng di động TopCV" [ref=f8e1352] [cursor=pointer]:
+                - /url: https://www.topcv.vn/app
+              - link "Tính lương Gross - Net" [ref=f8e1353] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tinh-luong-gross-net
+              - link "Tính lãi suất kép" [ref=f8e1354] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tinh-lai-kep
+              - link "Lập kế hoạch tiết kiệm" [ref=f8e1355] [cursor=pointer]:
+                - /url: https://www.topcv.vn/lap-ke-hoach-tiet-kiem
+              - link "Tính bảo hiểm thất nghiệp" [ref=f8e1356] [cursor=pointer]:
+                - /url: https://www.topcv.vn/cong-cu-tinh-muc-huong-bao-hiem-that-nghiep
+              - link "Tính bảo hiểm xã hội một lần" [ref=f8e1357] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tinh-bao-hiem-xa-hoi-mot-lan
+              - link "Trắc nghiệm MBTI" [ref=f8e1358] [cursor=pointer]:
+                - /url: https://www.topcv.vn/trac-nghiem-tinh-cach-mbti
+              - link "Trắc nghiệm MI" [ref=f8e1359] [cursor=pointer]:
+                - /url: https://www.topcv.vn/trac-nghiem-da-tri-thong-minh-multiple-intelligences-test
+        - generic [ref=f8e1360]:
+          - generic [ref=f8e1361]:
+            - generic [ref=f8e1362]: Xây dựng sự nghiệp
+            - generic [ref=f8e1363]:
+              - link "Việc làm nổi bật" [ref=f8e1364] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-tot-nhat
+              - link "Việc làm lương cao" [ref=f8e1365] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-luong-cao
+              - link "Việc làm quản lý" [ref=f8e1366] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-quan-ly
+              - link "Việc làm IT" [ref=f8e1367] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-it
+              - link "Việc làm Senior" [ref=f8e1368] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-senior
+              - link "Việc làm bán thời gian" [ref=f8e1369] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-thoi-gian-t3
+          - generic [ref=f8e1370]:
+            - generic [ref=f8e1371]: Quy tắc chung
+            - generic [ref=f8e1372]:
+              - link "Điều kiện giao dịch chung" [ref=f8e1373] [cursor=pointer]:
+                - /url: https://www.topcv.vn/dieu-kien-giao-dich-chung
+              - link "Giá dịch vụ & Cách thanh toán" [ref=f8e1374] [cursor=pointer]:
+                - /url: https://www.topcv.vn/thong-tin-ve-gia-dich-vu-va-phuong-thuc-thanh-toan
+              - link "Thông tin về vận chuyển" [ref=f8e1375] [cursor=pointer]:
+                - /url: https://www.topcv.vn/thong-tin-ve-van-chuyen
+      - generic [ref=f8e1378]:
+        - generic [ref=f8e1379]:
+          - generic [ref=f8e1380]: Công ty Cổ phần TopCV Việt Nam
+          - generic [ref=f8e1381]:
+            - generic [ref=f8e1382]:
+              - generic [ref=f8e1383]: 🖩
+              - generic [ref=f8e1384]: "Giấy phép đăng ký kinh doanh số: 0107307178cấp ngày 21/01/2016, thay đổi lần thứ 17 ngày 03/04/2025 tại Sở Tài chính Thành phố Hà Nội"
+            - generic [ref=f8e1385]:
+              - generic [ref=f8e1386]: 📄
+              - generic [ref=f8e1387]: "Giấy phép hoạt động dịch vụ việc làm số:"
+              - strong [ref=f8e1388]: 44/2024/SLĐTBXH-GP
+            - generic [ref=f8e1389]:
+              - generic [ref=f8e1390]: 
+              - generic [ref=f8e1391]: "Trụ sở HN:"
+              - strong [ref=f8e1392]: Tòa FS - GoldSeason số 47 Nguyễn Tuân, Phường Thanh Xuân, Thành phố Hà Nội, Việt Nam
+            - generic [ref=f8e1393]:
+              - generic [ref=f8e1394]: 
+              - generic [ref=f8e1395]: "Chi nhánh HCM:"
+              - strong [ref=f8e1396]: Tòa nhà Dali, 24C Phan Đăng Lưu, Phường Gia Định, TP HCM
+        - link "topcv.com.vn" [ref=f8e1399] [cursor=pointer]:
+          - /url: https://topcv.com.vn
+        - generic [ref=f8e1401]:
+          - generic [ref=f8e1402]: Hệ sinh thái HR Tech của TopCV
+          - generic [ref=f8e1403]:
+            - link "Nền tảng công nghệ tuyển dụng thông minh TopCV.vn" [ref=f8e1404] [cursor=pointer]:
+              - /url: https://www.topcv.vn
+            - link "Nền tảng quản lý & gia tăng trải nghiệm nhân viên HappyTime.vn" [ref=f8e1406] [cursor=pointer]:
+              - /url: https://happytime.vn/
+            - link "Nền tảng thiết lập và đánh giá năng lực nhân viên TestCenter.vn" [ref=f8e1408] [cursor=pointer]:
+              - /url: https://www.testcenter.vn/
+            - link "Giải pháp quản trị tuyển dụng hiệu suất cao SHiring.ai" [ref=f8e1410] [cursor=pointer]:
+              - /url: https://www.shiring.ai/
+        - paragraph [ref=f8e1413]: © 2014-2026 TopCV Vietnam JSC. All rights reserved.
+  - text: ×  → ✉   → → × ×      × × × × × × × × ✓

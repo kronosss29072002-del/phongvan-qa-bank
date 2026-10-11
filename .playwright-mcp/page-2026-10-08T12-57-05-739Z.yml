@@ -1,0 +1,180 @@
+- main [ref=f62e2]:
+  - generic [ref=f62e5]:
+    - generic [ref=f62e6] [cursor=pointer]
+    - 'heading "Chapter 15 - Postmortem Culture: Learning from Failure" [level=2] [ref=f62e7]'
+  - main [ref=f62e8]:
+    - generic [ref=f62e9]:
+      - 'heading "Postmortem Culture: Learning from Failure" [level=1] [ref=f62e10]'
+      - paragraph [ref=f62e11]: Written by John Lunney and Sue LuederEdited by Gary O’ Connor
+      - blockquote [ref=f62e12]:
+        - paragraph [ref=f62e13]: The cost of failure is education.
+        - paragraph [ref=f62e14]: Devin Carraway
+      - paragraph [ref=f62e15]: As SREs, we work with large-scale, complex, distributed systems. We constantly enhance our services with new features and add new systems. Incidents and outages are inevitable given our scale and velocity of change. When an incident occurs, we fix the underlying issue, and services return to their normal operating conditions. Unless we have some formalized process of learning from these incidents in place, they may recur ad infinitum. Left unchecked, incidents can multiply in complexity or even cascade, overwhelming a system and its operators and ultimately impacting our users. Therefore, postmortems are an essential tool for SRE.
+      - paragraph [ref=f62e16]:
+        - text: The postmortem concept is well known in the technology industry
+        - link "[All12]" [ref=f62e17] [cursor=pointer]:
+          - /url: /sre-book/bibliography#All12
+        - text: . A postmortem is a written record of an incident, its impact, the actions taken to mitigate or resolve it, the root cause(s), and the follow-up actions to prevent the incident from recurring. This chapter describes criteria for deciding when to conduct postmortems, some best practices around postmortems, and advice on how to cultivate a postmortem culture based on the experience we’ve gained over the years.
+      - heading "Google’s Postmortem Philosophy" [level=2] [ref=f62e18]
+      - paragraph [ref=f62e19]:
+        - text: The primary goals of
+        - link "writing a postmortem" [ref=f62e20] [cursor=pointer]:
+          - /url: ../../sre-book/example-postmortem/
+        - text: are to ensure that the incident is documented, that all contributing root cause(s) are well understood, and, especially, that effective preventive actions are put in place to reduce the likelihood and/or impact of recurrence. A detailed survey of root-cause analysis techniques is beyond the scope of this chapter (instead, see
+        - link "[Roo04]" [ref=f62e21] [cursor=pointer]:
+          - /url: /sre-book/bibliography#Roo04
+        - text: ); however, articles, best practices, and tools abound in the system quality domain. Our teams use a variety of techniques for root-cause analysis and choose the technique best suited to their services. Postmortems are expected after any significant undesirable event. Writing a postmortem is not punishment—it is a learning opportunity for the entire company. The postmortem process does present an inherent cost in terms of time or effort, so we are deliberate in choosing when to write one. Teams have some internal flexibility, but common
+        - link "postmortem triggers" [ref=f62e22] [cursor=pointer]:
+          - /url: /workbook/postmortem-analysis/
+        - text: "include:"
+      - list [ref=f62e23]:
+        - listitem [ref=f62e24]: User-visible downtime or degradation beyond a certain threshold
+        - listitem [ref=f62e25]: Data loss of any kind
+        - listitem [ref=f62e26]: On-call engineer intervention (release rollback, rerouting of traffic, etc.)
+        - listitem [ref=f62e27]: A resolution time above some threshold
+        - listitem [ref=f62e28]: A monitoring failure (which usually implies manual incident discovery)
+      - paragraph [ref=f62e29]: It is important to define postmortem criteria before an incident occurs so that everyone knows when a postmortem is necessary. In addition to these objective triggers, any stakeholder may request a postmortem for an event.
+      - paragraph [ref=f62e30]: Blameless postmortems are a tenet of SRE culture. For a postmortem to be truly blameless, it must focus on identifying the contributing causes of the incident without indicting any individual or team for bad or inappropriate behavior. A blamelessly written postmortem assumes that everyone involved in an incident had good intentions and did the right thing with the information they had. If a culture of finger pointing and shaming individuals or teams for doing the "wrong" thing prevails, people will not bring issues to light for fear of punishment.
+      - paragraph [ref=f62e31]: Blameless culture originated in the healthcare and avionics industries where mistakes can be fatal. These industries nurture an environment where every "mistake" is seen as an opportunity to strengthen the system. When postmortems shift from allocating blame to investigating the systematic reasons why an individual or team had incomplete or incorrect information, effective prevention plans can be put in place. You can’t "fix" people, but you can fix systems and processes to better support people making the right choices when designing and maintaining complex systems.
+      - paragraph [ref=f62e32]:
+        - text: When an outage does occur, a postmortem is not written as a formality to be forgotten. Instead the postmortem is seen by engineers as an opportunity not only to fix a weakness, but to make Google more resilient as a whole. While a blameless postmortem doesn’t simply vent frustration by pointing fingers, it
+        - emphasis [ref=f62e33]: should
+        - text: "call out where and how services can be improved. Here are two examples:"
+      - generic [ref=f62e34]:
+        - term [ref=f62e35]: Pointing fingers
+        - definition [ref=f62e36]: "\"We need to rewrite the entire complicated backend system! It’s been breaking weekly for the last three quarters and I’m sure we’re all tired of fixing things onesy-twosy. Seriously, if I get paged one more time I’ll rewrite it myself…\""
+        - term [ref=f62e37]: Blameless
+        - definition [ref=f62e38]: "\"An action item to rewrite the entire backend system might actually prevent these annoying pages from continuing to happen, and the maintenance manual for this version is quite long and really difficult to be fully trained up on. I’m sure our future on-callers will thank us!\""
+      - 'heading "Best Practice: Avoid Blame and Keep It Constructive" [level=5] [ref=f62e39]'
+      - paragraph [ref=f62e40]:
+        - text: Blameless postmortems can be challenging to write, because the postmortem format clearly identifies the actions that led to the incident. Removing blame from a postmortem gives people the confidence to escalate issues without fear. It is also important not to stigmatize frequent production of postmortems by a person or team. An atmosphere of blame risks creating a culture in which incidents and issues are swept under the rug, leading to greater risk for the organization
+        - link "[Boy13]" [ref=f62e41] [cursor=pointer]:
+          - /url: /sre-book/bibliography#Boy13
+        - text: .
+      - heading "Collaborate and Share Knowledge" [level=1] [ref=f62e42]
+      - paragraph [ref=f62e43]: We value collaboration, and the postmortem process is no exception. The postmortem workflow includes collaboration and knowledge-sharing at every stage.
+      - paragraph [ref=f62e44]:
+        - text: Our postmortem documents are Google Docs, with an in-house template (see
+        - link "Example Postmortem" [ref=f62e45] [cursor=pointer]:
+          - /url: /sre-book/example-postmortem/
+        - text: "). Regardless of the specific tool you use, look for the following key features:"
+      - generic [ref=f62e46]:
+        - term [ref=f62e47]: Real-time collaboration
+        - definition [ref=f62e48]: Enables the rapid collection of data and ideas. Essential during the early creation of a postmortem.
+        - term [ref=f62e49]: An open commenting/annotation system
+        - definition [ref=f62e50]: Makes crowdsourcing solutions easy and improves coverage.
+        - term [ref=f62e51]: Email notifications
+        - definition [ref=f62e52]: Can be directed at collaborators within the document or used to loop in others to provide input.
+      - paragraph [ref=f62e53]: "Writing a postmortem also involves formal review and publication. In practice, teams share the first postmortem draft internally and solicit a group of senior engineers to assess the draft for completeness. Review criteria might include:"
+      - list [ref=f62e54]:
+        - listitem [ref=f62e55]: Was key incident data collected for posterity?
+        - listitem [ref=f62e56]: Are the impact assessments complete?
+        - listitem [ref=f62e57]: Was the root cause sufficiently deep?
+        - listitem [ref=f62e58]: Is the action plan appropriate and are resulting bug fixes at appropriate priority?
+        - listitem [ref=f62e59]: Did we share the outcome with relevant stakeholders?
+      - paragraph [ref=f62e60]:
+        - text: Once the initial review is complete, the postmortem is shared more broadly, typically with the larger engineering team or on an internal mailing list. Our goal is to share postmortems to the widest possible audience that would benefit from the knowledge or lessons imparted. Google has stringent rules around access to any piece of information that might identify an end-user,
+        - superscript [ref=f62e61]:
+          - link "80" [ref=f62e62] [cursor=pointer]:
+            - /url: "#id-D04I1SPc1iK"
+        - text: and even internal documents like postmortems never include such information.
+      - 'heading "Best Practice: No Postmortem Left Unreviewed" [level=5] [ref=f62e63]'
+      - paragraph [ref=f62e64]: An unreviewed postmortem might as well never have existed. To ensure that each completed draft is reviewed, we encourage regular review sessions for postmortems. In these meetings, it is important to close out any ongoing discussions and comments, to capture ideas, and to finalize the state.
+      - paragraph [ref=f62e65]:
+        - text: Once those involved are satisfied with the document and its action items, the postmortem is added to a team or organization repository of past incidents.
+        - superscript [ref=f62e66]:
+          - link "81" [ref=f62e67] [cursor=pointer]:
+            - /url: "#id-4DBuqSVu9iy"
+        - text: Transparent sharing makes it easier for others to find and learn from the postmortem.
+      - heading "Introducing a Postmortem Culture" [level=1] [ref=f62e68]
+      - paragraph [ref=f62e69]: "Introducing a postmortem culture to your organization is easier said than done; such an effort requires continuous cultivation and reinforcement. We reinforce a collaborative postmortem culture through senior management’s active participation in the review and collaboration process. Management can encourage this culture, but blameless postmortems are ideally the product of engineer self-motivation. In the spirit of nurturing the postmortem culture, SREs proactively create activities that disseminate what we learn about system infrastructure. Some example activities include:"
+      - generic [ref=f62e70]:
+        - term [ref=f62e71]: Postmortem of the month
+        - definition [ref=f62e72]: In a monthly newsletter, an interesting and well-written postmortem is shared with the entire organization.
+        - term [ref=f62e73]: Google+ postmortem group
+        - definition [ref=f62e74]: This group shares and discusses internal and external postmortems, best practices, and commentary about postmortems.
+        - term [ref=f62e75]: Postmortem reading clubs
+        - definition [ref=f62e76]: Teams host regular postmortem reading clubs, in which an interesting or impactful postmortem is brought to the table (along with some tasty refreshments) for an open dialogue with participants, nonparticipants, and new Googlers about what happened, what lessons the incident imparted, and the aftermath of the incident. Often, the postmortem being reviewed is months or years old!
+        - term [ref=f62e77]: Wheel of Misfortune
+        - definition [ref=f62e78]:
+          - text: New SREs are often treated to the Wheel of Misfortune exercise (see
+          - link "Disaster Role Playing" [ref=f62e79] [cursor=pointer]:
+            - /url: /sre-book/accelerating-sre-on-call#xref_training_disaster-rpg
+          - text: ), in which a previous postmortem is reenacted with a cast of engineers playing roles as laid out in the postmortem. The original incident commander attends to help make the experience as "real" as possible.
+      - paragraph [ref=f62e80]: "One of the biggest challenges of introducing postmortems to an organization is that some may question their value given the cost of their preparation. The following strategies can help in facing this challenge:"
+      - list [ref=f62e81]:
+        - listitem [ref=f62e82]: Ease postmortems into the workflow. A trial period with several complete and successful postmortems may help prove their value, in addition to helping to identify what criteria should initiate a postmortem.
+        - listitem [ref=f62e83]: Make sure that writing effective postmortems is a rewarded and celebrated practice, both publicly through the social methods mentioned earlier, and through individual and team performance management.
+        - listitem [ref=f62e84]: Encourage senior leadership’s acknowledgment and participation. Even Larry Page talks about the high value of postmortems!
+      - 'heading "Best Practice: Visibly Reward People for Doing the Right Thing" [level=5] [ref=f62e85]'
+      - paragraph [ref=f62e86]:
+        - text: Google’s founders Larry Page and Sergey Brin host TGIF, a weekly all-hands held live at our headquarters in Mountain View, California, and broadcast to Google offices around the world. A 2014 TGIF focused on "The Art of the Postmortem," which featured SRE discussion of high-impact incidents. One SRE discussed a release he had recently pushed; despite thorough testing, an unexpected interaction inadvertently took down a critical service for four minutes. The incident only lasted four minutes because the SRE had the presence of mind to roll back the change immediately, averting a much longer and larger-scale outage. Not only did this engineer receive two peer bonuses
+        - superscript [ref=f62e87]:
+          - link "82" [ref=f62e88] [cursor=pointer]:
+            - /url: "#id-JJ7umIlF2Tyuq"
+        - text: immediately afterward in recognition of his quick and level-headed handling of the incident, but he also received a huge round of applause from the TGIF audience, which included the company’s founders and an audience of Googlers numbering in the thousands. In addition to such a visible forum, Google has an array of internal social networks that drive peer praise toward well-written
+        - link "postmortems" [ref=f62e89] [cursor=pointer]:
+          - /url: /sre-book/managing-incidents/
+        - text: and exceptional incident handling. This is one example of many where recognition of these contributions comes from peers, CEOs, and everyone in between.
+        - superscript [ref=f62e90]:
+          - link "83" [ref=f62e91] [cursor=pointer]:
+            - /url: "#id-9vbuDtvF7TXuQ"
+      - 'heading "Best Practice: Ask for Feedback on Postmortem Effectiveness" [level=5] [ref=f62e92]'
+      - paragraph [ref=f62e93]:
+        - text: "At Google, we strive to address problems as they arise and share innovations internally. We regularly survey our teams on how the postmortem process is supporting their goals and how the process might be improved. We ask questions such as: Is the culture supporting your work? Does writing a postmortem entail too much toil (see"
+        - link "Eliminating Toil" [ref=f62e94] [cursor=pointer]:
+          - /url: /sre-book/eliminating-toil/
+        - text: )? What best practices does your team recommend for other teams? What kinds of tools would you like to see developed? The survey results give the SREs in the trenches the opportunity to ask for improvements that will increase the effectiveness of the postmortem culture.
+      - paragraph [ref=f62e95]: "Beyond the operational aspects of incident management and follow-up, postmortem practice has been woven into the culture at Google: it’s now a cultural norm that any significant incident is followed by a comprehensive postmortem."
+      - heading "Conclusion and Ongoing Improvements" [level=1] [ref=f62e96]
+      - paragraph [ref=f62e97]: "We can say with confidence that thanks to our continuous investment in cultivating a postmortem culture, Google weathers fewer outages and fosters a better user experience. Our \"Postmortems at Google\" working group is one example of our commitment to the culture of blameless postmortems. This group coordinates postmortem efforts across the company: pulling together postmortem templates, automating postmortem creation with data from tools used during an incident, and helping automate data extraction from postmortems so we can perform trend analysis. We’ve been able to collaborate on best practices from products as disparate as YouTube, Google Fiber, Gmail, Google Cloud, AdWords, and Google Maps. While these products are quite diverse, they all conduct postmortems with the universal goal of learning from our darkest hours."
+      - paragraph [ref=f62e98]:
+        - text: With a large number of postmortems produced each month across Google, tools to aggregate postmortems are becoming more and more useful. These tools help us identify common themes and areas for improvement across product boundaries. To facilitate comprehension and automated analysis, we have recently enhanced our postmortem template (see
+        - link "Example Postmortem" [ref=f62e99] [cursor=pointer]:
+          - /url: /sre-book/example-postmortem/
+        - text: ) with additional metadata fields. Future work in this domain includes machine learning to help predict our weaknesses, facilitate real-time incident investigation, and reduce duplicate incidents.
+      - generic [ref=f62e100]:
+        - paragraph [ref=f62e101]:
+          - superscript [ref=f62e102]:
+            - link "80" [ref=f62e103] [cursor=pointer]:
+              - /url: "#id-D04I1SPc1iK-marker"
+          - text: See
+          - link [ref=f62e104] [cursor=pointer]:
+            - /url: https://www.google.com/policies/privacy/
+            - emphasis [ref=f62e105]: https://www.google.com/policies/privacy/
+          - text: .
+        - paragraph [ref=f62e106]:
+          - superscript [ref=f62e107]:
+            - link "81" [ref=f62e108] [cursor=pointer]:
+              - /url: "#id-4DBuqSVu9iy-marker"
+          - text: If you’d like to start your own repository, Etsy has released
+          - link [ref=f62e109] [cursor=pointer]:
+            - /url: https://github.com/etsy/morgue
+            - emphasis [ref=f62e110]: Morgue
+          - text: ", a tool for managing postmortems."
+        - paragraph [ref=f62e111]:
+          - superscript [ref=f62e112]:
+            - link "82" [ref=f62e113] [cursor=pointer]:
+              - /url: "#id-JJ7umIlF2Tyuq-marker"
+          - text: Google’s Peer Bonus program is a way for fellow Googlers to recognize colleagues for exceptional efforts and involves a token cash reward.
+        - paragraph [ref=f62e114]:
+          - superscript [ref=f62e115]:
+            - link "83" [ref=f62e116] [cursor=pointer]:
+              - /url: "#id-9vbuDtvF7TXuQ-marker"
+          - text: For further discussion of this particular incident, see
+          - link "Emergency Response" [ref=f62e117] [cursor=pointer]:
+            - /url: /sre-book/emergency-response/
+          - text: .
+  - generic [ref=f62e119]:
+    - link [ref=f62e121] [cursor=pointer]:
+      - /url: /sre-book/managing-incidents/
+      - paragraph [ref=f62e122]: Previous
+      - paragraph [ref=f62e123]: Chapter 14 - Managing Incidents
+    - link [ref=f62e125] [cursor=pointer]:
+      - /url: /sre-book/tracking-outages/
+      - paragraph [ref=f62e126]: Next
+      - paragraph [ref=f62e127]: Chapter 16 - Tracking Outages
+    - paragraph [ref=f62e128]:
+      - text: Copyright © 2017 Google, Inc. Published by O'Reilly Media, Inc. Licensed under
+      - link "CC BY-NC-ND 4.0" [ref=f62e129] [cursor=pointer]:
+        - /url: https://creativecommons.org/licenses/by-nc-nd/4.0/

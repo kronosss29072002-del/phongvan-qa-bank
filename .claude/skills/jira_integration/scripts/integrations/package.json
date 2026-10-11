@@ -1,0 +1,19 @@
+{
+  "name": "jira-xray-integrations",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CLI tools: fetch Jira requirements, authenticate with Xray, import test results",
+  "type": "module",
+  "scripts": {
+    "fetch": "node jira/jira_fetcher.js",
+    "auth": "node jira/xray_auth.js",
+    "import": "node jira/xray_importer.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7"
+  }
+}

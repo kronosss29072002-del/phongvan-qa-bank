@@ -1,0 +1,680 @@
+- generic [ref=f51e4]:
+  - banner "AWS Documentation site header" [ref=f51e5]:
+    - link "Skip to main content" [ref=f51e6] [cursor=pointer]:
+      - /url: "#skip-link"
+    - generic [ref=f51e10]:
+      - 'link "Language Selector. Currently set to: English" [ref=f51e14] [cursor=pointer]':
+        - /url: "#"
+        - generic [ref=f51e15]: English
+      - link "preferences" [ref=f51e20]:
+        - /url: "#"
+        - generic [ref=f51e21]: Preferences
+      - link "Contact Us" [ref=f51e25]:
+        - /url: https://aws.amazon.com/contact-us/?cmpid=docs_headercta_contactus
+      - link "Feedback" [ref=f51e28]:
+        - /url: https://docs.aws.amazon.com/feedback/doc-feedback.html?feedback_destination_id=a0d18259-7974-4e8f-8382-0a4be53f4374&topic_url=https%3A%2F%2Fdocs.aws.amazon.com%2Fwhitepapers%2Flatest%2Fdisaster-recovery-workloads-on-aws%2Fdisaster-recovery-options-in-the-cloud.html
+    - generic [ref=f51e30]:
+      - link [ref=f51e33] [cursor=pointer]:
+        - /url: https://docs.aws.amazon.com
+        - img "AWS Documentation" [ref=f51e34]
+      - generic [ref=f51e36]:
+        - button "Scroll left" [disabled] [ref=f51e38]
+        - generic [ref=f51e39]:
+          - link "Get started" [ref=f51e43] [cursor=pointer]:
+            - /url: "#"
+          - link "Service guides" [ref=f51e49] [cursor=pointer]:
+            - /url: "#"
+          - link "Developer tools" [ref=f51e55] [cursor=pointer]:
+            - /url: "#"
+          - link "AI resources" [ref=f51e61] [cursor=pointer]:
+            - /url: "#"
+        - button "Scroll right" [disabled] [ref=f51e65]
+      - button "Open search" [ref=f51e68] [cursor=pointer]
+  - main [ref=f51e71]:
+    - generic:
+      - navigation "Side navigation":
+        - button "Open side navigation" [ref=f51e74] [cursor=pointer]
+    - generic [ref=f51e79]:
+      - navigation "Breadcrumbs-vr" [ref=f51e83]:
+        - list [ref=f51e84]:
+          - listitem [ref=f51e85]:
+            - link "Documentation" [ref=f51e87] [cursor=pointer]:
+              - /url: https://docs.aws.amazon.com/index.html
+          - listitem [ref=f51e91]:
+            - link "AWS Whitepapers" [ref=f51e93] [cursor=pointer]:
+              - /url: https://aws.amazon.com/whitepapers/
+          - listitem [ref=f51e97]:
+            - link "AWS Well-Architected Framework" [disabled] [ref=f51e99]
+        - list [aria-hidden] [ref=f51e101]:
+          - listitem [ref=f51e102]:
+            - link [ref=f51e104] [cursor=pointer]:
+              - /url: https://docs.aws.amazon.com/index.html
+              - generic [ref=f51e105]: Documentation
+          - listitem [ref=f51e108]:
+            - link [ref=f51e110] [cursor=pointer]:
+              - /url: https://aws.amazon.com/whitepapers/
+              - generic [ref=f51e111]: AWS Whitepapers
+          - listitem [ref=f51e114]:
+            - generic [ref=f51e115]: AWS Well-Architected Framework
+      - generic [ref=f51e119]:
+        - generic:
+          - heading "Disaster recovery options in the cloud" [level=1] [ref=f51e121]
+          - generic [ref=f51e124]:
+            - link "PDF" [ref=f51e126] [cursor=pointer]:
+              - /url: /pdfs/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.pdf#disaster-recovery-options-in-the-cloud
+            - link "RSS" [ref=f51e130] [cursor=pointer]:
+              - /url: disaster-recovery-workloads-on-aws.rss
+            - link "Download Markdown" [ref=f51e134] [cursor=pointer]:
+              - /url: disaster-recovery-options-in-the-cloud.md
+              - generic [ref=f51e135]: Markdown
+            - button "Agent Setup" [ref=f51e139] [cursor=pointer]
+            - generic [ref=f51e147]:
+              - checkbox "Focus mode" [ref=f51e150]
+              - generic [ref=f51e151]: Focus mode
+      - generic [ref=f51e159]:
+        - heading [level=3] [ref=f51e165] [cursor=pointer]:
+          - button "On this page" [ref=f51e166]
+        - list [ref=f51e170]:
+          - listitem [ref=f51e171]:
+            - generic [ref=f51e178]:
+              - paragraph [ref=f51e179]: Disaster recovery strategies available to you within AWS can be broadly categorized into four approaches, ranging from the low cost and low complexity of making backups to more complex strategies using multiple active Regions. Active/passive strategies use an active site (such as an AWS Region) to host the workload and serve traffic. The passive site (such as a different AWS Region) is used for recovery. The passive site does not actively serve traffic until a failover event is triggered.
+              - paragraph [ref=f51e180]:
+                - text: It is critical to regularly assess and test your disaster recovery strategy so that you have confidence in invoking it, should it become necessary. Use
+                - link [ref=f51e181] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/resilience-hub/
+                  - text: AWS Resilience Hub
+                  - generic "Opens in a new tab" [ref=f51e183]
+                - text: to continuously validate and track the resilience of your AWS workloads, including whether you are likely to meet your RTO and RPO targets.
+              - generic [ref=f51e185]:
+                - img "Graph showing disaster recovery strategies and highlights of each strategy." [ref=f51e186]
+                - button "Open image magnifier" [ref=f51e188] [cursor=pointer]
+              - paragraph [ref=f51e190]:
+                - emphasis [ref=f51e191]: Figure 6 - Disaster recovery strategies
+              - paragraph [ref=f51e192]:
+                - text: For a disaster event based on disruption or loss of one physical data center for a
+                - link [ref=f51e193] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/architecture/well-architected/
+                  - text: well-architected
+                  - generic "Opens in a new tab" [ref=f51e195]
+                - text: ", highly available workload, you may only require a backup and restore approach to disaster recovery. If your definition of a disaster goes beyond the disruption or loss of a physical data center to that of a Region or if you are subject to regulatory requirements that require it, then you should consider Pilot Light, Warm Standby, or Multi-Site Active/Active."
+              - paragraph [ref=f51e197]:
+                - text: When choosing your strategy, and the AWS resources to implement it, keep in mind that within AWS, we commonly divide services into the
+                - emphasis [ref=f51e198]: data plane
+                - text: and the
+                - emphasis [ref=f51e199]: control plane
+                - text: . The data plane is responsible for delivering real-time service while control planes are used to configure the environment. For maximum resiliency, you should use only data plane operations as part of your failover operation. This is because the data planes typically have higher availability design goals than the control planes.
+              - heading [level=2] [ref=f51e200]:
+                - text: Backup and restore
+                - button "Copy link to the section" [ref=f51e208] [cursor=pointer]
+              - paragraph [ref=f51e210]:
+                - text: Backup and restore is a suitable approach for mitigating against data loss or corruption. This approach can also be used to mitigate against a regional disaster by replicating data to other AWS Regions, or to mitigate lack of redundancy for workloads deployed to a single Availability Zone. In addition to data, you must redeploy the infrastructure, configuration, and application code in the recovery Region. To enable infrastructure to be redeployed quickly without errors, you should always deploy using infrastructure as code (IaC) using services such as
+                - link [ref=f51e211] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/cloudformation
+                  - text: AWS CloudFormation
+                  - generic "Opens in a new tab" [ref=f51e213]
+                - text: or the
+                - link [ref=f51e215] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/cdk
+                  - text: AWS Cloud Development Kit (AWS CDK)
+                  - generic "Opens in a new tab" [ref=f51e217]
+                - text: . Without IaC, it may be complex to restore workloads in the recovery Region, which will lead to increased recovery times and possibly exceed your RTO. In addition to user data, be sure to also back up code and configuration, including
+                - link "Amazon Machine Images (AMIs)" [ref=f51e219] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
+                - text: you use to create Amazon EC2 instances. You can use
+                - link [ref=f51e220] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/codepipeline
+                  - text: AWS CodePipeline
+                  - generic "Opens in a new tab" [ref=f51e222]
+                - text: to automate redeployment of application code and configuration.
+              - generic [ref=f51e224]:
+                - img "Architecture diagram showing backup and restore architecture" [ref=f51e225]
+                - button "Open image magnifier" [ref=f51e227] [cursor=pointer]
+              - paragraph [ref=f51e229]:
+                - emphasis [ref=f51e230]: Figure 7 - Backup and restore architecture
+              - heading "AWS services" [level=3] [ref=f51e231]
+              - paragraph [ref=f51e232]: "Your workload data will require a backup strategy that runs periodically or is continuous. How often you run your backup will determine your achievable recovery point (which should align to meet your RPO). The backup should also offer a way to restore it to the point in time in which it was taken. Backup with point-in-time recovery is available through the following services and resources:"
+              - list [ref=f51e234]:
+                - listitem [ref=f51e235]:
+                  - paragraph [ref=f51e236]:
+                    - link "Amazon Elastic Block Store (Amazon EBS) snapshot" [ref=f51e237] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html
+                - listitem [ref=f51e238]:
+                  - paragraph [ref=f51e239]:
+                    - link "Amazon DynamoDB backup" [ref=f51e240] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/PointInTimeRecovery.html
+                - listitem [ref=f51e241]:
+                  - paragraph [ref=f51e242]:
+                    - link "Amazon RDS snapshot" [ref=f51e243] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.BackupRestore.html
+                - listitem [ref=f51e244]:
+                  - paragraph [ref=f51e245]:
+                    - link "Amazon Aurora DB snapshot" [ref=f51e246] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CreateSnapshotCluster.html
+                - listitem [ref=f51e247]:
+                  - paragraph [ref=f51e248]:
+                    - link "Amazon EFS backup" [ref=f51e249] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/efs/latest/ug/awsbackup.html
+                    - text: (when using AWS Backup)
+                - listitem [ref=f51e250]:
+                  - paragraph [ref=f51e251]:
+                    - link "Amazon Redshift snapshot" [ref=f51e252] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html
+                - listitem [ref=f51e253]:
+                  - paragraph [ref=f51e254]:
+                    - link "Amazon Neptune snapshot" [ref=f51e255] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/neptune/latest/userguide/backup-restore-overview.html
+                - listitem [ref=f51e256]:
+                  - paragraph [ref=f51e257]:
+                    - link "Amazon DocumentDB" [ref=f51e258] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/documentdb/latest/developerguide/backup_restore.html
+                - listitem [ref=f51e259]:
+                  - paragraph [ref=f51e260]:
+                    - link "Amazon FSx for Windows File Server" [ref=f51e261] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html
+                    - text: ","
+                    - link "Amazon FSx for Lustre" [ref=f51e262] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html
+                    - text: ","
+                    - link "Amazon FSx for NetApp ONTAP" [ref=f51e263] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-backups.html
+                    - text: ", and"
+                    - link "Amazon FSx for OpenZFS" [ref=f51e264] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/using-backups.html
+              - paragraph [ref=f51e265]:
+                - text: For Amazon Simple Storage Service (Amazon S3), you can use
+                - link [ref=f51e266] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/s3/features/replication/
+                  - text: Amazon S3 Cross-Region Replication (CRR)
+                  - generic "Opens in a new tab" [ref=f51e268]
+                - text: to asynchronously copy objects to an S3 bucket in the DR region continuously, while providing versioning for the stored objects so that you can choose your restoration point. Continuous replication of data has the advantage of being the shortest time (near zero) to back up your data, but may not protect against disaster events such as data corruption or malicious attack (such as unauthorized data deletion) as well as point-in-time backups. Continuous replication is covered in the
+                - link "AWS Services for Pilot Light" [ref=f51e270] [cursor=pointer]:
+                  - /url: "#aws-services-1"
+                - text: section.
+              - paragraph [ref=f51e271]:
+                - link [ref=f51e272] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/backup
+                  - text: AWS Backup
+                  - generic "Opens in a new tab" [ref=f51e274]
+                - text: "provides a centralized location to configure, schedule, and monitor AWS backup capabilities for the following services and resources:"
+              - list [ref=f51e277]:
+                - listitem [ref=f51e278]:
+                  - paragraph [ref=f51e279]:
+                    - link [ref=f51e280] [cursor=pointer]:
+                      - /url: https://aws.amazon.com/ebs/
+                      - text: Amazon Elastic Block Store (Amazon EBS)
+                      - generic "Opens in a new tab" [ref=f51e282]
+                    - text: volumes
+                - listitem [ref=f51e284]:
+                  - paragraph [ref=f51e285]:
+                    - link [ref=f51e286] [cursor=pointer]:
+                      - /url: https://aws.amazon.com/ec2/
+                      - text: Amazon EC2
+                      - generic "Opens in a new tab" [ref=f51e288]
+                    - text: instances
+                - listitem [ref=f51e290]:
+                  - paragraph [ref=f51e291]:
+                    - link [ref=f51e292] [cursor=pointer]:
+                      - /url: https://aws.amazon.com/rds/
+                      - text: Amazon Relational Database Service (Amazon RDS)
+                      - generic "Opens in a new tab" [ref=f51e294]
+                    - text: databases (including
+                    - link [ref=f51e296] [cursor=pointer]:
+                      - /url: https://aws.amazon.com/rds/aurora/
+                      - text: Amazon Aurora
+                      - generic "Opens in a new tab" [ref=f51e298]
+                    - text: databases)
+                - listitem [ref=f51e300]:
+                  - paragraph [ref=f51e301]:
+                    - link [ref=f51e302] [cursor=pointer]:
+                      - /url: https://aws.amazon.com/dynamodb/
+                      - text: Amazon DynamoDB
+                      - generic "Opens in a new tab" [ref=f51e304]
+                    - text: tables
+                - listitem [ref=f51e306]:
+                  - paragraph [ref=f51e307]:
+                    - link [ref=f51e308] [cursor=pointer]:
+                      - /url: https://aws.amazon.com/efs/
+                      - text: Amazon Elastic File System (Amazon EFS)
+                      - generic "Opens in a new tab" [ref=f51e310]
+                    - text: file systems
+                - listitem [ref=f51e312]:
+                  - paragraph [ref=f51e313]:
+                    - link [ref=f51e314] [cursor=pointer]:
+                      - /url: https://aws.amazon.com/storagegateway/
+                      - text: AWS Storage Gateway
+                      - generic "Opens in a new tab" [ref=f51e316]
+                    - text: volumes
+                - listitem [ref=f51e318]:
+                  - paragraph [ref=f51e319]:
+                    - link "Amazon FSx for Windows File Server" [ref=f51e320] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html
+                    - text: ","
+                    - link "Amazon FSx for Lustre" [ref=f51e321] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html
+                    - text: ","
+                    - link "Amazon FSx for NetApp ONTAP" [ref=f51e322] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-backups.html
+                    - text: ", and"
+                    - link "Amazon FSx for OpenZFS" [ref=f51e323] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/aws-backup-and-fsx.html
+              - paragraph [ref=f51e324]: AWS Backup supports copying backups across Regions, such as to a disaster recovery Region.
+              - paragraph [ref=f51e325]:
+                - text: As an additional disaster recovery strategy for your Amazon S3 data, enable
+                - link "S3 object versioning" [ref=f51e326] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html
+                - text: . Object versioning protects your data in S3 from the consequences of deletion or modification actions by retaining the original version before the action. Object versioning can be a useful mitigation for human-error type disasters. If you are using S3 replication to back up data to your DR region, then, by default, when an object is deleted in the source bucket,
+                - link "Amazon S3 adds a delete marker in the source bucket only" [ref=f51e327] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AmazonS3/latest/dev/delete-marker-replication.html
+                - text: . This approach protects data in the DR Region from malicious deletions in the source Region.
+              - paragraph [ref=f51e328]:
+                - text: In addition to data, you must also back up the configuration and infrastructure necessary to redeploy your workload and meet your Recovery Time Objective (RTO).
+                - link [ref=f51e329] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/cloudformation
+                  - text: AWS CloudFormation
+                  - generic "Opens in a new tab" [ref=f51e331]
+                - text: provides Infrastructure as Code (IaC), and enables you to define all of the AWS resources in your workload so you can reliably deploy and redeploy to multiple AWS accounts and AWS Regions. You can back up Amazon EC2 instances used by your workload as Amazon Machine Images (AMIs). The AMI is created from snapshots of your instance's root volume and any other EBS volumes attached to your instance. You can use this AMI to launch a restored version of the EC2 instance. An
+                - link "AMI can be copied" [ref=f51e333] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/CopyingAMIs.html
+                - text: within or across Regions. Or, you can use
+                - link [ref=f51e334] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/backup
+                  - text: AWS Backup
+                  - generic "Opens in a new tab" [ref=f51e336]
+                - text: "to copy backups across accounts and to other AWS Regions. The cross-account backup capability helps protect from disaster events that include insider threats or account compromise. AWS Backup also adds additional capabilities for EC2 backup—in addition to the instance’s individual EBS volumes, AWS Backup also stores and tracks the following metadata: instance type, configured virtual private cloud (VPC), security group,"
+                - link "IAM role" [ref=f51e338] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
+                - text: ", monitoring configuration, and tags. However, this additional metadata is only used when restoring the EC2 backup to the same AWS Region."
+              - paragraph [ref=f51e339]:
+                - text: Any data stored in the disaster recovery Region as backups must be restored at time of failover. AWS Backup offers restore capability, but does not currently enable scheduled or automatic restoration. You can implement automatic restore to the DR region using the AWS SDK to call APIs for AWS Backup. You can set this up as a regularly recurring job or trigger restoration whenever a backup is completed. The following figure shows an example of automatic restoration using
+                - link [ref=f51e340] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/sns/
+                  - text: Amazon Simple Notification Service (Amazon SNS)
+                  - generic "Opens in a new tab" [ref=f51e342]
+                - text: and
+                - link [ref=f51e344] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/lambda/
+                  - text: AWS Lambda
+                  - generic "Opens in a new tab" [ref=f51e346]
+                - text: . Implementing a scheduled periodic data restore is a good idea as data restore from backup is a control plane operation. If this operation was not available during a disaster, you would still have operable data stores created from a recent backup.
+              - generic [ref=f51e348]:
+                - img "Diagram showing workflow of restoring and testing backups." [ref=f51e349]
+                - button "Open image magnifier" [ref=f51e351] [cursor=pointer]
+              - paragraph [ref=f51e353]:
+                - emphasis [ref=f51e354]: Figure 8 - Restoring and testing backups
+              - generic [ref=f51e355]:
+                - heading "Note" [level=6] [ref=f51e359]
+                - paragraph [ref=f51e361]:
+                  - text: Your backup strategy must include testing your backups. See the
+                  - link "Testing Disaster Recovery" [ref=f51e362] [cursor=pointer]:
+                    - /url: ./testing-disaster-recovery.html
+                  - text: section for more information. Refer to the
+                  - link [ref=f51e363] [cursor=pointer]:
+                    - /url: https://wellarchitectedlabs.com/reliability/200_labs/200_testing_backup_and_restore_of_data/
+                    - text: "AWS Well-Architected Lab: Testing Backup and Restore of Data"
+                    - generic "Opens in a new tab" [ref=f51e365]
+                  - text: for a hands-on demonstration of implementation.
+              - heading [level=2] [ref=f51e367]:
+                - text: Pilot light
+                - button "Copy link to the section" [ref=f51e375] [cursor=pointer]
+              - paragraph [ref=f51e377]:
+                - text: With the
+                - emphasis [ref=f51e378]: pilot light
+                - text: approach, you replicate your data from one Region to another and provision a copy of your core workload infrastructure. Resources required to support data replication and backup, such as databases and object storage, are always on. Other elements, such as application servers, are loaded with application code and configurations, but are "switched off" and are only used during testing or when disaster recovery failover is invoked. In the cloud, you have the flexibility to deprovision resources when you do not need them, and provision them when you do. A best practice for “switched off” is to not deploy the resource, and then create the configuration and capabilities to deploy it (“switch on”) when needed. Unlike the backup and restore approach, your core infrastructure is always available and you always have the option to quickly provision a full scale production environment by switching on and scaling out your application servers.
+              - generic [ref=f51e379]:
+                - img "Reference architecture diagram for pilot light architecture" [ref=f51e380]
+                - button "Open image magnifier" [ref=f51e382] [cursor=pointer]
+              - paragraph [ref=f51e384]:
+                - emphasis [ref=f51e385]: Figure 9 - Pilot light architecture
+              - paragraph [ref=f51e386]: A pilot light approach minimizes the ongoing cost of disaster recovery by minimizing the active resources, and simplifies recovery at the time of a disaster because the core infrastructure requirements are all in place. This recovery option requires you to change your deployment approach. You need to make core infrastructure changes to each Region and deploy workload (configuration, code) changes simultaneously to each Region. This step can be simplified by automating your deployments and using infrastructure as code (IaC) to deploy infrastructure across multiple accounts and Regions (full infrastructure deployment to the primary Region and scaled down/switched-off infrastructure deployment to DR regions). It is recommended you use a different account per Region to provide the highest level of resource and security isolation (in the case compromised credentials are part of your disaster recovery plans as well).
+              - paragraph [ref=f51e387]: With this approach, you must also mitigate against a data disaster. Continuous data replication protects you against some types of disaster, but it may not protect you against data corruption or destruction unless your strategy also includes versioning of stored data or options for point-in-time recovery. You can back up the replicated data in the disaster Region to create point-in-time backups in that same Region.
+              - heading "AWS services" [level=3] [ref=f51e388]
+              - paragraph [ref=f51e389]:
+                - text: In addition to using the AWS services covered in the
+                - link "Backup and Restore" [ref=f51e390] [cursor=pointer]:
+                  - /url: "#backup-and-restore"
+                - text: section to create point-in-time backups, also consider the following services for your pilot light strategy.
+              - paragraph [ref=f51e391]: "For pilot light, continuous data replication to live databases and data stores in the DR region is the best approach for low RPO (when used in addition to the point-in-time backups discussed previously). AWS provides continuous, cross-region, asynchronous data replication for data using the following services and resources:"
+              - list [ref=f51e393]:
+                - listitem [ref=f51e394]:
+                  - paragraph [ref=f51e395]:
+                    - link [ref=f51e396] [cursor=pointer]:
+                      - /url: https://aws.amazon.com/s3/features/replication/
+                      - text: Amazon Simple Storage Service (Amazon S3) Replication
+                      - generic "Opens in a new tab" [ref=f51e398]
+                - listitem [ref=f51e400]:
+                  - paragraph [ref=f51e401]:
+                    - link "Amazon RDS read replicas" [ref=f51e402] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html#USER_ReadRepl.XRgn.Cnsdr
+                - listitem [ref=f51e403]:
+                  - paragraph [ref=f51e404]:
+                    - link "Amazon Aurora global databases" [ref=f51e405] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html
+                - listitem [ref=f51e406]:
+                  - paragraph [ref=f51e407]:
+                    - link "Amazon DynamoDB global tables" [ref=f51e408] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html
+                - listitem [ref=f51e409]:
+                  - paragraph [ref=f51e410]:
+                    - link "Amazon DocumentDB global clusters" [ref=f51e411] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/documentdb/latest/developerguide/global-clusters.html
+                - listitem [ref=f51e412]:
+                  - paragraph [ref=f51e413]:
+                    - link "Global Datastore for Amazon ElastiCache (Redis OSS)" [ref=f51e414] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/Redis-Global-Datastore.html
+              - paragraph [ref=f51e415]:
+                - text: With continuous replication, versions of your data are available almost immediately in your DR Region. Actual replication times can be monitored using service features like
+                - link "S3 Replication Time Control (S3 RTC)" [ref=f51e416] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-time-control.html
+                - text: for S3 objects and
+                - link "management features of Amazon Aurora global databases" [ref=f51e417] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-managing.html
+                - text: .
+              - paragraph [ref=f51e418]:
+                - text: When failing over to run your read/write workload from the disaster recovery Region, you must promote an RDS read replica to become the primary instance. For
+                - link "DB instances other than Aurora, the process" [ref=f51e419] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html#USER_ReadRepl.Promote
+                - text: takes a few minutes to complete and rebooting is part of the process. For Cross-Region Replication (CRR) and failover with RDS, using
+                - link "Amazon Aurora global database" [ref=f51e420] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html
+                - text: provides several advantages. Global database uses dedicated infrastructure that leaves your databases entirely available to serve your application, and can replicate to the secondary Region with typical latency of under a second (and within an AWS Region is much less than 100 milliseconds). With Amazon Aurora global database, if your primary Region suffers a performance degradation or outage, you can promote one of the secondary regions to take read/write responsibilities in less than one minute even in the event of a complete regional outage. You can also configure Aurora to monitor the RPO lag time of all secondary clusters to make sure that at least one secondary cluster stays within your target RPO window.
+              - paragraph [ref=f51e421]:
+                - text: A scaled down version of your core workload infrastructure with fewer or smaller resources must be deployed in your DR Region. Using AWS CloudFormation, you can define your infrastructure and deploy it consistently across AWS accounts and across AWS Regions. AWS CloudFormation uses predefined
+                - link "pseudo parameters" [ref=f51e422] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html
+                - text: to identify the AWS account and AWS Region in which it is deployed. Therefore, you can implement
+                - link "condition logic in your CloudFormation templates" [ref=f51e423] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section-structure.html
+                - text: to deploy only the scaled-down version of your infrastructure in the DR Region. For EC2 instance deployments, an Amazon Machine Image (AMI) supplies information such as hardware configuration and installed software. You can implement an
+                - link "Image Builder" [ref=f51e424] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/imagebuilder/latest/userguide/what-is-image-builder.html
+                - text: pipeline that creates the AMIs you need and copy these to both your primary and backup Regions. This helps to ensure that these
+                - emphasis [ref=f51e425]: golden AMIs
+                - text: have everything you need to re-deploy or scale-out your workload in a new region, in case of a disaster event. Amazon EC2 instances are deployed in a scaled-down configuration (less instances than in your primary Region). To scale-out the infrastructure to support production traffic, see
+                - link [ref=f51e426] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/ec2/autoscaling
+                  - text: Amazon EC2 Auto Scaling
+                  - generic "Opens in a new tab" [ref=f51e428]
+                - text: in the
+                - link "Warm Standby" [ref=f51e430] [cursor=pointer]:
+                  - /url: "#warm-standby"
+                - text: section.
+              - paragraph [ref=f51e431]: For an active/passive configuration such as pilot light, all traffic initially goes to the primary Region and switches to the disaster recovery Region if the primary Region is no longer available. This failover operation can be initiated either automatically or manually. Automatically initiated failover based on health checks or alarms should be used with caution. Even using the best practices discussed here, recovery time and recovery point will be greater than zero, incurring some loss of availability and data. If you fail over when you don’t need to (false alarm), then you incur those losses. Manually initiated failover is therefore often used. In this case, you should still automate the steps for failover, so that the manual initiation is like the push of a button.
+              - paragraph [ref=f51e432]: There are several traffic management options to consider when using AWS services.
+              - paragraph [ref=f51e433]:
+                - text: One option is to use
+                - link [ref=f51e434] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/route53
+                  - text: Amazon Route 53
+                  - generic "Opens in a new tab" [ref=f51e436]
+                - text: . Using Amazon Route 53, you can associate multiple IP endpoints in one or more AWS Regions with a Route 53 domain name. Then, you can route traffic to the appropriate endpoint under that domain name. On failover you need to switch traffic to the recovery endpoint, and away from the primary endpoint. Amazon Route 53 health checks monitor these endpoints. Using these health checks, you can configure automatically initiated DNS failover to ensure traffic is sent only to healthy endpoints, which is a highly reliable operation done on the data plane. To implement this using manually initiated failover you can use
+                - link [ref=f51e438] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/route53/application-recovery-controller/
+                  - text: Amazon Application Recovery Controller (ARC)
+                  - generic "Opens in a new tab" [ref=f51e440]
+                - text: . With ARC, you can create Route 53 health checks that do not actually check health, but instead act as on/off switches that you have full control over. Using the AWS CLI or AWS SDK, you can script failover using this highly available, data plane API. Your script toggles these switches (the Route 53 health checks) telling Route 53 to send traffic to the recovery Region instead of the primary Region. Another option for manually initiated failover that some have used is to use a weighted routing policy and change the weights of the primary and recovery Regions so that all traffic goes to the recovery Region. However, be aware this is a control plane operation and therefore not as resilient as the data plane approach using Amazon Application Recovery Controller (ARC).
+              - paragraph [ref=f51e442]:
+                - text: Another option is to use
+                - link [ref=f51e443] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/global-accelerator/
+                  - text: AWS Global Accelerator
+                  - generic "Opens in a new tab" [ref=f51e445]
+                - text: . Using AnyCast IP, you can associate multiple endpoints in one or more AWS Regions with the same static public IP address or addresses. AWS Global Accelerator then routes traffic to the appropriate endpoint associated with that address.
+                - link "Global Accelerator health checks" [ref=f51e447] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-health-check-options.html
+                - text: monitor endpoints. Using these health checks, AWS Global Accelerator checks the health of your applications and routes user traffic automatically to the healthy application endpoint. For manually initiated failover, you can adjust which endpoint receives traffic using traffic dials, but note this is a control plane operation. Global Accelerator offers lower latencies to the application endpoint since it makes use of the extensive AWS edge network to put traffic on the AWS network backbone as soon as possible. Global Accelerator also avoids caching issues that can occur with DNS systems (like Route 53).
+              - paragraph [ref=f51e448]:
+                - link [ref=f51e449] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/cloudfront/
+                  - text: Amazon CloudFront
+                  - generic "Opens in a new tab" [ref=f51e451]
+                - text: offers origin failover, where if a given request to the primary endpoint fails, CloudFront routes the request to the secondary endpoint. Unlike the failover operations described previously, all subsequent requests still go to the primary endpoint, and failover is done per each request.
+              - heading "AWS Elastic Disaster Recovery" [level=3] [ref=f51e453]
+              - paragraph [ref=f51e454]:
+                - link [ref=f51e455] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/disaster-recovery/
+                  - text: AWS Elastic Disaster Recovery
+                  - generic "Opens in a new tab" [ref=f51e457]
+                - text: (DRS) continuously replicates server-hosted applications and server- hosted databases from any source into AWS using block-level replication of the underlying server. Elastic Disaster Recovery enables you to use a Region in AWS Cloud as a disaster recovery target for a workload hosted on-premises or on another cloud provider, and its environment. It can also be used for disaster recovery of AWS hosted workloads if they consist only of applications and databases hosted on EC2 (that is, not RDS). Elastic Disaster Recovery uses the Pilot Light strategy, maintaining a copy of data and “switched-off” resources in an
+                - link [ref=f51e459] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/vpc/
+                  - text: Amazon Virtual Private Cloud (Amazon VPC)
+                  - generic "Opens in a new tab" [ref=f51e461]
+                - text: used as a staging area. When a failover event is triggered, the staged resources are used to automatically create a full-capacity deployment in the target Amazon VPC used as the recovery location.
+              - generic [ref=f51e463]:
+                - img "Architecture diagram showing AWS Elastic Disaster Recovery architecture." [ref=f51e464]
+                - button "Open image magnifier" [ref=f51e466] [cursor=pointer]
+              - paragraph [ref=f51e468]:
+                - emphasis [ref=f51e469]: Figure 10 - AWS Elastic Disaster Recovery architecture
+              - heading [level=2] [ref=f51e470]:
+                - text: Warm standby
+                - button "Copy link to the section" [ref=f51e478] [cursor=pointer]
+              - paragraph [ref=f51e480]:
+                - text: The
+                - emphasis [ref=f51e481]: warm standby
+                - text: approach involves ensuring that there is a scaled down, but fully functional, copy of your production environment in another Region. This approach extends the pilot light concept and decreases the time to recovery because your workload is always-on in another Region. This approach also allows you to more easily perform testing or implement continuous testing to increase confidence in your ability to recover from a disaster.
+              - generic [ref=f51e482]:
+                - img "Architecture diagram showing warm standby architecture." [ref=f51e483]
+                - button "Open image magnifier" [ref=f51e485] [cursor=pointer]
+              - paragraph [ref=f51e487]:
+                - emphasis [ref=f51e488]: Figure 11 - Warm standby architecture
+              - paragraph [ref=f51e489]:
+                - text: "Note: The difference between"
+                - link "pilot light" [ref=f51e490] [cursor=pointer]:
+                  - /url: "#pilot-light"
+                - text: and warm standby can sometimes be difficult to understand. Both include an environment in your DR Region with copies of your primary Region assets. The distinction is that pilot light cannot process requests without additional action taken first, whereas warm standby can handle traffic (at reduced capacity levels) immediately. The pilot light approach requires you to “turn on” servers, possibly deploy additional (non-core) infrastructure, and scale up, whereas warm standby only requires you to scale up (everything is already deployed and running). Use your RTO and RPO needs to help you choose between these approaches.
+              - heading "AWS services" [level=3] [ref=f51e491]
+              - paragraph [ref=f51e492]:
+                - text: All of the AWS services covered under
+                - link "backup and restore" [ref=f51e493] [cursor=pointer]:
+                  - /url: "#backup-and-restore"
+                - text: and
+                - link "pilot light" [ref=f51e494] [cursor=pointer]:
+                  - /url: "#pilot-light"
+                - text: are also used in warm standby for data backup, data replication, active/passive traffic routing, and deployment of infrastructure including EC2 instances.
+              - paragraph [ref=f51e495]:
+                - link [ref=f51e496] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/ec2/autoscaling/
+                  - text: Amazon EC2 Auto Scaling
+                  - generic "Opens in a new tab" [ref=f51e498]
+                - text: is used to scale resources including Amazon EC2 instances, Amazon ECS tasks, Amazon DynamoDB throughput, and Amazon Aurora replicas within an AWS Region.
+                - link [ref=f51e500] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/ec2/autoscaling/
+                  - text: Amazon EC2 Auto Scaling
+                  - generic "Opens in a new tab" [ref=f51e502]
+                - text: scales deployment of EC2 instance across Availability Zones within an AWS Region, providing resiliency within that Region. Use Auto Scaling to scale out your DR Region to full production capability, as part of a pilot light or warm standby strategies. For example, for EC2, increase the
+                - emphasis [ref=f51e504]: desired capacity
+                - text: setting on the Auto Scaling group. You can adjust this setting manually through the AWS Management Console, automatically through the AWS SDK, or by redeploying your AWS CloudFormation template using the new desired capacity value. You can use AWS CloudFormation parameters to make redeploying the CloudFormation template easier. Ensure that
+                - link "service quotas" [ref=f51e505] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html
+                - text: in your DR Region are set high enough so as to not limit you from scaling up to production capacity.
+              - paragraph [ref=f51e506]:
+                - text: Because Auto Scaling is a control plane activity, taking a dependency on it will lower the resiliency of your overall recovery strategy. It is a trade-off. You can choose to provision sufficient capacity such that the recovery Region can handle the full production load as deployed. This statically stable configuration is called
+                - emphasis [ref=f51e507]: hot standby
+                - text: (see the next section). Or you may choose to provision fewer resources which will cost less, but take a dependency on Auto Scaling. Some DR implementations will deploy enough resources to handle initial traffic, ensuring low RTO, and then rely on Auto Scaling to ramp up for subsequent traffic.
+              - heading [level=2] [ref=f51e508]:
+                - text: Multi-site active/active
+                - button "Copy link to the section" [ref=f51e516] [cursor=pointer]
+              - paragraph [ref=f51e518]:
+                - text: You can run your workload simultaneously in multiple Regions as part of a
+                - emphasis [ref=f51e519]: multi-site active/active
+                - text: or
+                - emphasis [ref=f51e520]: hot standby active/passive
+                - text: strategy. Multi-site active/active serves traffic from all regions to which it is deployed, whereas hot standby serves traffic only from a single region, and the other Region(s) are only used for disaster recovery. With a multi-site active/active approach, users are able to access your workload in any of the Regions in which it is deployed. This approach is the most complex and costly approach to disaster recovery, but it can reduce your recovery time to near zero for most disasters with the correct technology choices and implementation (however data corruption may need to rely on backups, which usually results in a non-zero recovery point). Hot standby uses an active/passive configuration where users are only directed to a single region and DR regions do not take traffic. Most customers find that if they are going to stand up a full environment in the second Region, it makes sense to use it active/active. Alternatively, if you do not want to use both Regions to handle user traffic, then Warm Standby offers a more economical and operationally less complex approach.
+              - generic [ref=f51e521]:
+                - img "Architecture diagram showing multi-site active/active architecture (change one Active path to Inactive for hot standby)" [ref=f51e522]
+                - button "Open image magnifier" [ref=f51e524] [cursor=pointer]
+              - paragraph [ref=f51e526]:
+                - emphasis [ref=f51e527]: Figure 12 - Multi-site active/active architecture (change one Active path to Inactive for hot standby)
+              - paragraph [ref=f51e528]: "With multi-site active/active, because the workload is running in more than one Region, there is no such thing as failover in this scenario. Disaster recovery testing in this case would focus on how the workload reacts to loss of a Region: Is traffic routed away from the failed Region? Can the other Region(s) handle all the traffic? Testing for a data disaster is also required. Backup and recovery are still required and should be tested regularly. It should also be noted that recovery times for a data disaster involving data corruption, deletion, or obfuscation will always be greater than zero and the recovery point will always be at some point before the disaster was discovered. If the additional complexity and cost of a multi-site active/active (or hot standby) approach is required to maintain near zero recovery times, then additional efforts should be made to maintain security and to prevent human error to mitigate against human disasters."
+              - heading "AWS services" [level=3] [ref=f51e529]
+              - paragraph [ref=f51e530]:
+                - text: All of the AWS services covered under
+                - link "backup and restore" [ref=f51e531] [cursor=pointer]:
+                  - /url: "#backup-and-restore"
+                - text: ","
+                - link "pilot light" [ref=f51e532] [cursor=pointer]:
+                  - /url: "#pilot-light"
+                - text: ", and"
+                - link "warm standby" [ref=f51e533] [cursor=pointer]:
+                  - /url: "#warm-standby"
+                - text: also are used here for point-in-time data backup, data replication, active/active traffic routing, and deployment and scaling of infrastructure including EC2 instances.
+              - paragraph [ref=f51e534]:
+                - text: For the active/passive scenarios discussed earlier (Pilot Light and Warm Standby), both Amazon Route 53 and AWS Global Accelerator can be used for route network traffic to the active region. For the active/active strategy here, both of these services also enable the definition of policies that determine which users go to which active regional endpoint. With AWS Global Accelerator you set a
+                - link "traffic dial to control the percentage of traffic" [ref=f51e535] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-traffic-dial.html
+                - text: that is directed to each application endpoint. Amazon Route 53 supports this percentage approach, and also
+                - link "multiple other available policies" [ref=f51e536] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html
+                - text: including geoproximity and latency based ones.
+                - link "Global Accelerator automatically leverages the extensive network of AWS edge servers" [ref=f51e537] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/global-accelerator/latest/dg/introduction-ip-ranges.html
+                - text: ", to onboard traffic to the AWS network backbone as soon as possible, resulting in lower request latencies."
+              - paragraph [ref=f51e538]:
+                - text: Asynchronous data replication with this strategy enables near-zero RPO. AWS services like
+                - link "Amazon Aurora global database" [ref=f51e539] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html
+                - text: use dedicated infrastructure that leaves your databases entirely available to serve your application, and can replicate to up to five secondary Region with typical latency of under a second. With active/passive strategies, writes occur only to the primary Region. The difference with active/active is designing how data consistency with writes to each active Region are handled. It is common to design user reads to be served from the Region closest to them, known as
+                - emphasis [ref=f51e540]: read local
+                - text: ". With writes, you have several options:"
+              - list [ref=f51e542]:
+                - listitem [ref=f51e543]:
+                  - paragraph [ref=f51e544]:
+                    - text: A
+                    - emphasis [ref=f51e545]: write global
+                    - text: strategy routes all writes to a single Region. In case of failure of that Region, another Region would be promoted to accept writes.
+                    - link "Aurora global database" [ref=f51e546] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html
+                    - text: is a good fit for
+                    - emphasis [ref=f51e547]: write global
+                    - text: ", as it supports synchronization with read-replicas across Regions, and you can promote one of the secondary Regions to take read/write responsibilities in less than one minute. Aurora also supports write forwarding, which lets secondary clusters in an Aurora global database forward SQL statements that perform write operations to the primary cluster."
+                - listitem [ref=f51e548]:
+                  - paragraph [ref=f51e549]:
+                    - text: A
+                    - emphasis [ref=f51e550]: write local
+                    - text: strategy routes writes to the closest Region (just like reads).
+                    - link "Amazon DynamoDB global tables" [ref=f51e551] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html
+                    - text: enables such a strategy, allowing read and writes from every region your global table is deployed to. Amazon DynamoDB global tables use a
+                    - emphasis [ref=f51e552]: last writer wins
+                    - text: reconciliation between concurrent updates.
+                - listitem [ref=f51e553]:
+                  - paragraph [ref=f51e554]:
+                    - text: A
+                    - emphasis [ref=f51e555]: write partitioned
+                    - text: strategy assigns writes to a specific Region based on a partition key (like user ID) to avoid write conflicts. Amazon S3 replication
+                    - link [ref=f51e556] [cursor=pointer]:
+                      - /url: https://wellarchitectedlabs.com/reliability/200_labs/200_bidirectional_replication_for_s3/
+                      - text: configured bi-directionally
+                      - generic "Opens in a new tab" [ref=f51e558]
+                    - text: can be used for this case, and currently supports replication between two Regions. When implementing this approach, make sure to enable
+                    - link "replica modification sync" [ref=f51e560] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-for-metadata-changes.html
+                    - text: on both buckets A and B to replicate replica metadata changes like object access control lists (ACLs), object tags, or object locks on the replicated objects. You can also configure whether or not to
+                    - link "replicate delete markers" [ref=f51e561] [cursor=pointer]:
+                      - /url: https://docs.aws.amazon.com/AmazonS3/latest/dev/delete-marker-replication.html
+                    - text: between buckets in your active Regions. In addition to replication, your strategy must also include point-in-time backups to protect against data corruption or destruction events.
+              - paragraph [ref=f51e562]:
+                - text: AWS CloudFormation is a powerful tool to enforce consistently deployed infrastructure among AWS accounts in multiple AWS Regions.
+                - link "AWS CloudFormation StackSets" [ref=f51e563] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html
+                - text: extends this functionality by enabling you to create, update, or delete CloudFormation stacks across multiple accounts and Regions with a single operation. Although AWS CloudFormation uses YAML or JSON to define Infrastructure as Code,
+                - link [ref=f51e564] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/cdk/
+                  - text: AWS Cloud Development Kit (AWS CDK)
+                  - generic "Opens in a new tab" [ref=f51e566]
+                - text: allows you to define Infrastructure as Code using familiar programming languages. Your code is converted to CloudFormation which is then used to deploy resources in AWS.
+          - listitem [ref=f51e568]:
+            - generic [ref=f51e571]:
+              - generic [ref=f51e573]:
+                - generic [ref=f51e574]: Did this page help you?
+                - generic [ref=f51e578]:
+                  - button "Yes-This page is helpful." [ref=f51e580] [cursor=pointer]: "Yes"
+                  - button "No-This page is not helpful." [ref=f51e583] [cursor=pointer]: "No"
+              - link "Provide feedback" [ref=f51e588]:
+                - /url: https://docs.aws.amazon.com/feedback/doc-feedback.html?feedback_destination_id=a0d18259-7974-4e8f-8382-0a4be53f4374&topic_url=https%3A%2F%2Fdocs.aws.amazon.com%2Fwhitepapers%2Flatest%2Fdisaster-recovery-workloads-on-aws%2Fdisaster-recovery-options-in-the-cloud.html
+        - generic [ref=f51e591]:
+          - generic [ref=f51e592]:
+            - heading "Next topic:" [level=4] [ref=f51e593]
+            - link "Detection" [ref=f51e595]:
+              - /url: ./detection.html
+          - generic [ref=f51e596]:
+            - heading "Previous topic:" [level=4] [ref=f51e597]
+            - link "Disaster recovery is different in the cloud" [ref=f51e599]:
+              - /url: ./disaster-recovery-is-different-in-the-cloud.html
+  - contentinfo [ref=f51e600]:
+    - generic [ref=f51e602]:
+      - generic [ref=f51e603]:
+        - generic [ref=f51e604]:
+          - generic:
+            - generic [ref=f51e606]:
+              - heading "Get Started" [level=2] [ref=f51e607]
+              - generic [ref=f51e609]:
+                - link [ref=f51e612]:
+                  - /url: https://aws.amazon.com/getting-started/hands-on/
+                  - text: AWS Hands-On Tutorials
+                  - img "Opens in a new tab" [ref=f51e614]
+                - link [ref=f51e618]:
+                  - /url: https://aws.amazon.com/solutions/
+                  - text: AWS Solutions Library
+                  - img "Opens in a new tab" [ref=f51e620]
+                - link "AWS Decision Guides" [ref=f51e624]:
+                  - /url: https://docs.aws.amazon.com/decision-guides/
+            - generic [ref=f51e626]:
+              - heading "Service Guides" [level=2] [ref=f51e627]
+              - generic [ref=f51e629]:
+                - link "Choosing a generative AI service" [ref=f51e632]:
+                  - /url: https://docs.aws.amazon.com/decision-guides/latest/decision-guides/genai-guide.html
+                - link "AWS service guides" [ref=f51e635]:
+                  - /url: https://docs.aws.amazon.com/#products
+                - link [ref=f51e638]:
+                  - /url: https://github.com/aws-samples/sample-developer-tutorials
+                  - text: AWS CLI Tutorials on GitHub
+                  - img "Opens in a new tab" [ref=f51e640]
+            - generic [ref=f51e643]:
+              - heading "Developer Tools" [level=2] [ref=f51e644]
+              - generic [ref=f51e646]:
+                - link "AWS Code Example Library" [ref=f51e649]:
+                  - /url: https://docs.aws.amazon.com/code-library/latest/ug/what-is-code-library.html
+                - link "AWS CLI" [ref=f51e652]:
+                  - /url: https://docs.aws.amazon.com/cli/
+                - link [ref=f51e655]:
+                  - /url: https://builder.aws.com/
+                  - text: AWS Builder Center
+                  - img "Opens in a new tab" [ref=f51e657]
+                - link [ref=f51e661]:
+                  - /url: https://aws.amazon.com/blogs/developer/
+                  - text: AWS Developer Tools Blog
+                  - img "Opens in a new tab" [ref=f51e663]
+            - generic [ref=f51e666]:
+              - heading "Helpful Links" [level=2] [ref=f51e667]
+              - generic [ref=f51e669]:
+                - link [ref=f51e672]:
+                  - /url: https://github.com/awslabs/mcp/tree/main/src/aws-documentation-mcp-server
+                  - text: Download the AWS Docs MCP Server
+                  - img "Opens in a new tab" [ref=f51e674]
+                - link [ref=f51e678]:
+                  - /url: https://console.aws.amazon.com/
+                  - text: Sign into the AWS Console
+                  - img "Opens in a new tab" [ref=f51e680]
+                - link [ref=f51e684]:
+                  - /url: https://repost.aws/
+                  - text: AWS re:Post
+                  - img "Opens in a new tab" [ref=f51e686]
+        - generic [ref=f51e688]:
+          - generic [ref=f51e689]:
+            - generic [ref=f51e690]:
+              - link "Privacy" [ref=f51e692]:
+                - /url: https://aws.amazon.com/privacy
+              - text: "|"
+            - generic [ref=f51e693]:
+              - link "Site terms" [ref=f51e695]:
+                - /url: https://aws.amazon.com/terms
+              - text: "|"
+            - generic [ref=f51e696]:
+              - link "Cookie preferences" [ref=f51e698]:
+                - /url: "#"
+              - text: "|"
+            - text: © 2026, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+          - button "Language selector English" [ref=f51e703]:
+            - generic "English" [ref=f51e704]
+      - button "Top" [ref=f51e711] [cursor=pointer]

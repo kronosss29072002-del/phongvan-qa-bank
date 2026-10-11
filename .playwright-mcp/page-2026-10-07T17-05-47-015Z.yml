@@ -1,0 +1,874 @@
+- generic [active] [ref=f15e1]:
+  - text: ×
+  - generic [ref=f15e3]:
+    - generic [ref=f15e4]:
+      - heading "Trải nghiệm của bạn là ưu tiên của chúng tôi" [level=4] [ref=f15e5]
+      - paragraph [ref=f15e6]: TopCV sử dụng cookie để đảm bảo tính năng thiết yếu và cải thiện trải nghiệm của bạn.
+    - generic [ref=f15e7]:
+      - button "Tùy chỉnh cookie" [ref=f15e8] [cursor=pointer]
+      - button "Chấp nhận tất cả" [ref=f15e9] [cursor=pointer]
+  - generic [ref=f15e10]:
+    - generic [ref=f15e11]:
+      - heading "Cài đặt cookie" [level=3] [ref=f15e12]
+      - button "×" [ref=f15e13] [cursor=pointer]
+    - generic [ref=f15e15]:
+      - generic [ref=f15e16]:
+        - paragraph [ref=f15e17]: Cookie là công cụ giúp chúng tôi lưu trữ hoặc truy xuất các thông tin cần thiết từ trình duyệt của bạn. Thông tin này có thể liên quan đến bạn, sở thích của bạn hoặc thiết bị của bạn và chủ yếu được sử dụng để giúp trang web hoạt động như bạn mong đợi.
+        - paragraph [ref=f15e18]:
+          - strong [ref=f15e19]: Vì chúng tôi tôn trọng quyền riêng tư của bạn
+          - text: ", bạn có thể chọn không cho phép một số loại cookie bên dưới. Tuy nhiên, việc chặn một số loại cookie có thể ảnh hưởng đến trải nghiệm của bạn trên trang web và các dịch vụ mà chúng tôi có thể cung cấp."
+        - link "Xem mô tả chi tiết" [ref=f15e20] [cursor=pointer]:
+          - /url: https://static.topcv.vn/docs/cookie-policy.pdf
+      - generic [ref=f15e21]:
+        - generic [ref=f15e22]:
+          - generic [ref=f15e23]:
+            - heading "Cookie thiết yếu" [level=4] [ref=f15e24]
+            - generic [ref=f15e25]:
+              - generic [ref=f15e26]: ✓
+              - text: Luôn hoạt động
+          - generic [ref=f15e27]:
+            - generic [ref=f15e28]: Các cookie này thực hiện nhiều hoạt động cần thiết để điều hướng trang web và sử dụng các chức năng của trang. Bạn sẽ không thể sử dụng trang web của chúng tôi nếu không cho phép cookie này hoạt động.
+            - link "Thu gọn" [ref=f15e29] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f15e30]:
+          - generic [ref=f15e31]:
+            - heading "Cookie hiệu năng (khuyên dùng)" [level=4] [ref=f15e32]
+            - generic [ref=f15e33]:
+              - generic [ref=f15e34]: Tắt
+              - generic [ref=f15e37]: Bật
+          - generic [ref=f15e40]:
+            - generic [ref=f15e41]: Những cookie này cho chúng tôi biết cách bạn sử dụng trang web và giúp chúng tôi cải thiện trang web. Ví dụ giúp tăng tốc độ tải trang để trải nghiệm của bạn tốt hơn, hoặc cá nhân hoá các tính năng để bạn tìm việc, tạo CV, sử dụng các công cụ hiệu quả hơn.
+            - link "Xem thêm" [ref=f15e42] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f15e43]:
+          - generic [ref=f15e44]:
+            - heading "Cookie quảng cáo" [level=4] [ref=f15e45]
+            - generic [ref=f15e46]:
+              - generic [ref=f15e47]: Tắt
+              - generic [ref=f15e50]: Bật
+          - generic [ref=f15e53]:
+            - generic [ref=f15e54]: Cookie quảng cáo giúp các bên thứ ba như LinkedIn, Facebook, Google,... hiển thị các quảng cáo, cơ hội việc làm hoặc nội dung phù hợp với nhu cầu và sở thích thực tế của bạn trên thay vì những quảng cáo ngẫu nhiên không liên quan. Chúng tôi cùng chịu trách nhiệm với nền tảng thứ ba về việc thu thập dữ liệu từ TopCV. Sau khi thu thập, nền tảng thứ ba sẽ xử lý dữ liệu theo chính sách quyền riêng tư của họ.
+            - link "Xem thêm" [ref=f15e55] [cursor=pointer]:
+              - /url: "#"
+    - generic [ref=f15e56]:
+      - button "Xác nhận lựa chọn" [ref=f15e57] [cursor=pointer]
+      - button "Chấp nhận tất cả" [ref=f15e58] [cursor=pointer]
+  - generic [ref=f15e59]:
+    - link "♥ 0" [ref=f15e61] [cursor=pointer]:
+      - /url: https://www.topcv.vn/viec-lam-da-luu
+      - generic [ref=f15e62]: ♥
+      - generic [ref=f15e63]: "0"
+    - link "" [ref=f15e65] [cursor=pointer]:
+      - /url: https://www.topcv.vn/connect-to-employer/list?ta_source=RemindIcon
+    - generic [ref=f15e67]:
+      - generic [ref=f15e68] [cursor=pointer]:
+        - generic [ref=f15e69]: 💬
+        - generic [ref=f15e70]: Góp ý
+      - generic [ref=f15e71] [cursor=pointer]:
+        - generic [ref=f15e72]: 
+        - generic [ref=f15e73]: Hỗ trợ
+      - text: × 📞 ✉ → ×
+  - text: × ×    × × ×  × × → → ← → ← → ← → → ×      × × × × × × × ×
+  - generic [ref=f15e74]:
+    - banner [ref=f15e75]:
+      - generic [ref=f15e79]:
+        - generic [ref=f15e81]:
+          - link [ref=f15e82] [cursor=pointer]:
+            - /url: https://www.topcv.vn/brand/smartosc?id=84788
+            - heading "CÔNG TY CỔ PHẦN SMARTOSC" [level=1] [ref=f15e83]
+          - link "Pro Company" [ref=f15e89] [cursor=pointer]:
+            - /url: https://www.topcv.vn/pro
+        - link "+ Theo dõi" [ref=f15e91] [cursor=pointer]:
+          - /url: javascript:showLoginPopup(null, null);
+          - generic [ref=f15e92]: +
+          - text: Theo dõi
+      - list [ref=f15e96]:
+        - listitem [ref=f15e97]:
+          - link "Trang chủ" [ref=f15e98] [cursor=pointer]:
+            - /url: https://www.topcv.vn/brand/smartosc?id=84788
+        - listitem [ref=f15e99]:
+          - link "Tin tuyển dụng" [ref=f15e100] [cursor=pointer]:
+            - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung?id=84788
+        - listitem [ref=f15e101]:
+          - link "Giới thiệu công ty" [ref=f15e102] [cursor=pointer]:
+            - /url: https://www.topcv.vn/brand/smartosc/gioi-thieu?id=84788
+    - text: × + × ×
+    - generic [ref=f15e104]:
+      - generic [ref=f15e105]:
+        - generic [ref=f15e106]:
+          - generic [ref=f15e107]:
+            - generic [ref=f15e108]:
+              - heading [level=2] [ref=f15e109]:
+                - link "Fresher" [ref=f15e110] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-fresher
+                - link "Frontend Developer" [ref=f15e111] [cursor=pointer]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer
+              - generic [ref=f15e112]:
+                - generic [ref=f15e118]:
+                  - generic [ref=f15e119]: Mức lương
+                  - generic [ref=f15e120]: Thoả thuận
+                - generic [ref=f15e125]:
+                  - generic [ref=f15e126]: Địa điểm
+                  - link "Hồ Chí Minh" [ref=f15e129] [cursor=pointer]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2
+                - generic [ref=f15e135]:
+                  - generic [ref=f15e136]: Kinh nghiệm
+                  - generic [ref=f15e137]: Dưới 1 năm
+              - link "Xem mức lương thị trường cho vị trí này " [ref=f15e139] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tra-cuu-muc-luong-tai-viet-nam/frontend-developer
+                - text: Xem mức lương thị trường cho vị trí này
+                - generic [ref=f15e140]: 
+              - link "👁 Xem số người đã ứng tuyển ✨ New" [ref=f15e142] [cursor=pointer]:
+                - /url: javascript:showLoginPopup('https://www.topcv.vn/viec-lam/smartosc/1648822.html', 'Đăng nhập hoặc Đăng ký để xem thông tin!')
+                - generic [ref=f15e143]: 👁
+                - generic [ref=f15e145]: Xem số người đã ứng tuyển
+                - text: 
+                - generic [ref=f15e146]:
+                  - generic [ref=f15e147]: ✨
+                  - text: New
+            - generic [ref=f15e148]:
+              - generic [ref=f15e149]:
+                - generic [ref=f15e150]: 
+                - text: Hết hạn ứng tuyển (11/04/2025)
+              - link "Xem việc làm cùng công ty " [ref=f15e152] [cursor=pointer]:
+                - /url: "#tab-job"
+                - text: Xem việc làm cùng công ty
+                - generic [ref=f15e153]: 
+            - text: ↻
+          - generic [ref=f15e155]:
+            - img "Tin đăng đã được kiểm duyệt" [ref=f15e156]
+            - paragraph [ref=f15e157]:
+              - text: 100% tin đăng tải trên TopCV được
+              - strong [ref=f15e158]: cung cấp bởi các Nhà tuyển dụng đã được xác thực thông tin
+              - text: .
+          - generic [ref=f15e159]:
+            - generic [ref=f15e160]:
+              - generic [ref=f15e161]:
+                - generic [ref=f15e162]: "Yêu cầu:"
+                - generic [ref=f15e164]:
+                  - generic [ref=f15e165]: Dưới 1 năm kinh nghiệm chuyên môn
+                  - generic [ref=f15e166]: Đại Học trở lên
+                  - link "Tiếng Anh IELTS 6.5" [ref=f15e167] [cursor=pointer]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-tieng-anh-ielts-6-5
+              - generic [ref=f15e168]:
+                - generic [ref=f15e169]: "Chuyên môn:"
+                - generic [ref=f15e171]:
+                  - link "Chuyên môn Frontend Developer" [ref=f15e172] [cursor=pointer]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-cr257cb258cl273
+                  - link "IT - Phần mềm" [ref=f15e173] [cursor=pointer]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat?domain_knowledge=3
+            - generic [ref=f15e174]:
+              - generic [ref=f15e175]:
+                - heading "Mô tả công việc" [level=2] [ref=f15e176]
+                - list [ref=f15e178]:
+                  - listitem [ref=f15e179]: Participate in developing web applications using modern technologies (Next.js, React, Vue.js, Angular or similar frameworks)
+                  - listitem [ref=f15e180]: Collaborate with the design team to ensure the best user experience
+                  - listitem [ref=f15e181]: Optimize application performance and usability
+                  - listitem [ref=f15e182]: Apply AI tools effectively in the development process
+                  - listitem [ref=f15e183]: Participate in code reviews and contribute constructive feedback
+              - generic [ref=f15e184]:
+                - heading "Yêu cầu ứng viên" [level=2] [ref=f15e185]
+                - generic [ref=f15e186]:
+                  - paragraph [ref=f15e187]:
+                    - strong [ref=f15e188]: 1) Foundational Knowledge
+                  - list [ref=f15e189]:
+                    - listitem [ref=f15e190]: Basic knowledge of HTML, CSS, JavaScript
+                    - listitem [ref=f15e191]: Understanding of responsive design principles
+                    - listitem [ref=f15e192]: Basic knowledge of at least one JavaScript framework (Next.js, React, Vue.js, Angular) or willingness to learn
+                    - listitem [ref=f15e193]: Understanding of APIs (REST, GraphQL) and how to interact with backend systems
+                    - listitem [ref=f15e194]: Experience with git and working in an agile process is an advantage
+                  - paragraph [ref=f15e195]:
+                    - strong [ref=f15e196]: 2) Thinking and Working Methods
+                  - list [ref=f15e197]:
+                    - listitem [ref=f15e198]: Flexible and logical problem-solving mindset
+                    - listitem [ref=f15e199]: Self-learning ability and solution-seeking skills
+                    - listitem [ref=f15e200]: Ability to analyze and evaluate AI-suggested solutions
+                    - listitem [ref=f15e201]: Continuous improvement mindset and readiness to adopt new technologies
+                  - paragraph [ref=f15e202]:
+                    - strong [ref=f15e203]: 3) AI Skills in Development
+                  - list [ref=f15e204]:
+                    - listitem [ref=f15e205]: Ability to create effective prompts to maximize AI tool benefits
+                    - listitem [ref=f15e206]: Knowledge of using AI for research, debugging, and code optimization
+                    - listitem [ref=f15e207]: Ability to evaluate and refine AI-generated code
+                    - listitem [ref=f15e208]: Understanding of AI limitations and knowing when to rely on personal knowledge
+                  - paragraph [ref=f15e209]:
+                    - strong [ref=f15e210]: 4) Soft Skills
+                  - list [ref=f15e211]:
+                    - listitem [ref=f15e212]: Good English skills, both written and spoken
+                    - listitem [ref=f15e213]: Eager to learn and proactive attitude
+              - generic [ref=f15e214]:
+                - heading "Quyền lợi được hưởng" [level=2] [ref=f15e215]
+                - list [ref=f15e217]:
+                  - listitem [ref=f15e218]: Attractive monthly allowances based on performance during the training period.
+                  - listitem [ref=f15e219]: 6 months on-the-job training program designed to enhance your skills and knowledge in software development.
+                  - listitem [ref=f15e220]: Guidance from experienced mentors and hands-on experience in real projects.
+                  - listitem [ref=f15e221]: Clear career development path with opportunities for advancement within SmartOSC.
+                  - listitem [ref=f15e222]: Working in One of the largest digital transformation agencies – A professional English environment
+                  - listitem [ref=f15e223]: Free English, Japanese, and professional training packages
+                  - listitem [ref=f15e224]: "Other fun activities: happy hour, quarterly team building, football club, yoga club, swimming club, charity activities, etc."
+                  - listitem [ref=f15e225]: "Free entertainment parties: Birthday party, Anniversary party, Sum-up Party, Year-End Party, etc."
+              - generic [ref=f15e226]:
+                - heading "Địa điểm làm việc" [level=2] [ref=f15e227]
+                - generic [ref=f15e229]:
+                  - text: "-"
+                  - strong [ref=f15e230]: Hồ Chí Minh
+                  - text: ": Tòa nhà Báo Tuổi Trẻ, 60A Hoàng Văn Thụ, Phường 9, Phú Nhuận"
+              - generic [ref=f15e231]:
+                - heading "Thời gian làm việc" [level=2] [ref=f15e232]
+                - generic [ref=f15e233]: • Thứ 2 - Thứ 6 (từ 09:00 đến 18:15)
+              - generic [ref=f15e235]:
+                - heading "Cách thức ứng tuyển" [level=2] [ref=f15e236]
+                - text: ↻
+                - generic [ref=f15e237]: Hết hạn ứng tuyển
+                - link "👁 Xem số người đã ứng tuyển ✨ New" [ref=f15e238] [cursor=pointer]:
+                  - /url: javascript:showLoginPopup('https://www.topcv.vn/viec-lam/smartosc/1648822.html', 'Đăng nhập hoặc Đăng ký để xem thông tin!')
+                  - generic [ref=f15e239]: 👁
+                  - generic [ref=f15e241]: Xem số người đã ứng tuyển
+                  - text: 
+                  - generic [ref=f15e242]:
+                    - generic [ref=f15e243]: ✨
+                    - text: New
+        - generic [ref=f15e244]:
+          - heading "Việc làm cùng công ty" [level=2] [ref=f15e245]
+          - generic [ref=f15e248]:
+            - generic [ref=f15e249]:
+              - textbox "Tên công việc, vị trí bạn muốn ứng tuyển ..." [ref=f15e250]
+              - generic [ref=f15e252]:
+                - generic [ref=f15e253]: 
+                - combobox [aria-hidden] [ref=f15e255]
+                - combobox "Tất cả tỉnh/thành phố cũ trước 1/7/2025" [ref=f15e258] [cursor=pointer]
+            - button "Tìm kiếm" [ref=f15e261] [cursor=pointer]
+          - generic [ref=f15e264]:
+            - generic [ref=f15e265] [cursor=pointer]:
+              - link [ref=f15e267]:
+                - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/senior-process-quality-assurance-j2258871.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2258871%3A%3A1
+                - img "CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e268]
+              - generic [ref=f15e269]:
+                - generic [ref=f15e271]:
+                  - generic [ref=f15e272]:
+                    - heading [level=3] [ref=f15e273]:
+                      - link "Senior Process Quality Assurance" [ref=f15e274]:
+                        - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/senior-process-quality-assurance-j2258871.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2258871%3A%3A1
+                    - link "Pro CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e275]:
+                      - /url: https://www.topcv.vn/brand/smartosc?id=84788
+                      - generic [ref=f15e276]: Pro
+                      - generic [ref=f15e278]: CÔNG TY CỔ PHẦN SMARTOSC
+                    - text: ⭐ ⭐
+                  - generic [ref=f15e280]:
+                    - generic [ref=f15e281]: 
+                    - text: Thoả thuận
+                - generic [ref=f15e282]:
+                  - generic [ref=f15e283]:
+                    - generic [ref=f15e284]: Hà Nội
+                    - generic [ref=f15e285]:
+                      - text: Còn
+                      - strong [ref=f15e286]: "53"
+                      - text: ngày để ứng tuyển
+                    - generic [ref=f15e287]: Cập nhật 3 tuần trước
+                  - generic [ref=f15e288]:
+                    - button "Ứng tuyển" [ref=f15e289]
+                    - button "♥" [ref=f15e292]
+            - generic [ref=f15e294] [cursor=pointer]:
+              - link [ref=f15e296]:
+                - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/senior-ai-engineer-good-english-j2258880.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2258880%3A%3A2
+                - img "CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e297]
+              - generic [ref=f15e298]:
+                - generic [ref=f15e300]:
+                  - generic [ref=f15e301]:
+                    - heading [level=3] [ref=f15e302]:
+                      - link "Senior AI Engineer (Good English)" [ref=f15e303]:
+                        - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/senior-ai-engineer-good-english-j2258880.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2258880%3A%3A2
+                    - link "Pro CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e304]:
+                      - /url: https://www.topcv.vn/brand/smartosc?id=84788
+                      - generic [ref=f15e305]: Pro
+                      - generic [ref=f15e307]: CÔNG TY CỔ PHẦN SMARTOSC
+                    - text: ⭐ ⭐
+                  - generic [ref=f15e309]:
+                    - generic [ref=f15e310]: 
+                    - text: Thoả thuận
+                - generic [ref=f15e311]:
+                  - generic [ref=f15e312]:
+                    - generic [ref=f15e313]: Hà Nội
+                    - generic [ref=f15e314]:
+                      - text: Còn
+                      - strong [ref=f15e315]: "83"
+                      - text: ngày để ứng tuyển
+                    - generic [ref=f15e316]: Cập nhật 1 tuần trước
+                  - generic [ref=f15e317]:
+                    - button "Ứng tuyển" [ref=f15e318]
+                    - button "♥" [ref=f15e321]
+            - generic [ref=f15e323] [cursor=pointer]:
+              - link [ref=f15e325]:
+                - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/data-engineer-english-speaking-j2277876.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2277876%3A%3A3
+                - img "CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e326]
+              - generic [ref=f15e327]:
+                - generic [ref=f15e329]:
+                  - generic [ref=f15e330]:
+                    - heading [level=3] [ref=f15e331]:
+                      - link "Data Engineer - English Speaking" [ref=f15e332]:
+                        - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/data-engineer-english-speaking-j2277876.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2277876%3A%3A3
+                    - link "Pro CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e333]:
+                      - /url: https://www.topcv.vn/brand/smartosc?id=84788
+                      - generic [ref=f15e334]: Pro
+                      - generic [ref=f15e336]: CÔNG TY CỔ PHẦN SMARTOSC
+                    - text: ⭐ ⭐
+                  - generic [ref=f15e337]: 40 - 85 triệu
+                - generic [ref=f15e339]:
+                  - generic [ref=f15e340]:
+                    - generic [ref=f15e341]: Đà Nẵng (mới) & Hồ Chí Minh (mới)
+                    - generic [ref=f15e342]:
+                      - text: Còn
+                      - strong [ref=f15e343]: "13"
+                      - text: ngày để ứng tuyển
+                    - generic [ref=f15e344]: Cập nhật 2 ngày trước
+                  - generic [ref=f15e345]:
+                    - button "Ứng tuyển" [ref=f15e346]
+                    - button "♥" [ref=f15e349]
+            - generic [ref=f15e351] [cursor=pointer]:
+              - link [ref=f15e353]:
+                - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/technical-lead-node-js-j2294090.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2294090%3A%3A4
+                - img "CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e354]
+              - generic [ref=f15e355]:
+                - generic [ref=f15e357]:
+                  - generic [ref=f15e358]:
+                    - heading [level=3] [ref=f15e359]:
+                      - link "Technical Lead (Node.Js)" [ref=f15e360]:
+                        - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/technical-lead-node-js-j2294090.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2294090%3A%3A4
+                    - link "Pro CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e361]:
+                      - /url: https://www.topcv.vn/brand/smartosc?id=84788
+                      - generic [ref=f15e362]: Pro
+                      - generic [ref=f15e364]: CÔNG TY CỔ PHẦN SMARTOSC
+                  - generic [ref=f15e365]: 50 - 70 triệu
+                - generic [ref=f15e367]:
+                  - generic [ref=f15e368]:
+                    - generic [ref=f15e369]: Hà Nội
+                    - generic [ref=f15e370]:
+                      - text: Còn
+                      - strong [ref=f15e371]: "23"
+                      - text: giờ để ứng tuyển
+                    - generic [ref=f15e372]: Cập nhật 2 tuần trước
+                  - generic [ref=f15e373]:
+                    - button "Ứng tuyển" [ref=f15e374]
+                    - button "♥" [ref=f15e377]
+            - generic [ref=f15e379] [cursor=pointer]:
+              - link [ref=f15e381]:
+                - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/operation-executive-site-operations-j2302541.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2302541%3A%3A5
+                - img "CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e382]
+              - generic [ref=f15e383]:
+                - generic [ref=f15e385]:
+                  - generic [ref=f15e386]:
+                    - heading [level=3] [ref=f15e387]:
+                      - link "Operation Executive – Site Operations" [ref=f15e388]:
+                        - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/operation-executive-site-operations-j2302541.html?ta_source=JobBrandSameCompany_LinkDetail&jr_i=rule-based-v0%3A%3A1791392745877%3A%3A2302541%3A%3A5
+                    - link "Pro CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e389]:
+                      - /url: https://www.topcv.vn/brand/smartosc?id=84788
+                      - generic [ref=f15e390]: Pro
+                      - generic [ref=f15e392]: CÔNG TY CỔ PHẦN SMARTOSC
+                    - text: ⭐ ⭐
+                  - generic [ref=f15e394]:
+                    - generic [ref=f15e395]: 
+                    - text: Thoả thuận
+                - generic [ref=f15e396]:
+                  - generic [ref=f15e397]:
+                    - generic [ref=f15e398]: Hà Nội
+                    - generic [ref=f15e399]:
+                      - text: Còn
+                      - strong [ref=f15e400]: "7"
+                      - text: ngày để ứng tuyển
+                    - generic [ref=f15e401]: Cập nhật 3 tuần trước
+                  - generic [ref=f15e402]:
+                    - button "Ứng tuyển" [ref=f15e403]
+                    - button "♥" [ref=f15e406]
+          - link "Xem thêm công việc →" [ref=f15e408] [cursor=pointer]:
+            - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung
+            - text: Xem thêm công việc
+            - generic [ref=f15e409]: →
+      - generic [ref=f15e410]:
+        - generic [ref=f15e411]:
+          - heading "Thông tin chung" [level=2] [ref=f15e412]
+          - generic [ref=f15e413]:
+            - generic [ref=f15e418]:
+              - generic [ref=f15e419]: Cấp bậc
+              - generic [ref=f15e420]: Thực tập sinh
+            - generic [ref=f15e425]:
+              - generic [ref=f15e426]: Học vấn
+              - generic [ref=f15e427]: Đại Học trở lên
+            - generic [ref=f15e432]:
+              - generic [ref=f15e433]: Số lượng tuyển
+              - generic [ref=f15e434]: 1 người
+            - generic [ref=f15e439]:
+              - generic [ref=f15e440]: Loại hình làm việc
+              - generic [ref=f15e441]: Toàn thời gian
+        - generic [ref=f15e443]:
+          - generic [ref=f15e444]:
+            - heading [level=2] [ref=f15e447]:
+              - text: Phân tích mức độ phù hợp của bạn với công việc
+              - generic [ref=f15e448]: New
+            - generic [ref=f15e451]:
+              - generic [ref=f15e453]:
+                - generic [ref=f15e454]: 
+                - generic [ref=f15e457]:
+                  - text: Toppy Ai chưa thể đưa ra đánh giá vì chưa có đủ hiểu biết về năng lực của bạn. Vui lòng
+                  - link "Đăng nhập" [ref=f15e458] [cursor=pointer]:
+                    - /url: javascript:showLoginPopup(null, 'Đăng nhập hoặc Đăng ký để ứng tuyển công việc này!')
+                  - text: để giúp mình hiểu thêm và đánh giá giúp bạn nhé.
+              - text:     
+          - text: 👍 👍 × ×
+        - generic [ref=f15e459]:
+          - generic [ref=f15e460]:
+            - heading "Danh mục Nghề liên quan" [level=2] [ref=f15e461]
+            - generic [ref=f15e462]:
+              - link "Công nghệ Thông tin" [ref=f15e463] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-cong-nghe-thong-tin-cr257
+              - link "Software Engineering" [ref=f15e464] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-software-engineering-cr257cb258
+              - link "Frontend Developer" [ref=f15e465] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-cr257cb258cl273
+              - link "Việc làm IT" [ref=f15e466] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-it
+          - generic [ref=f15e467]:
+            - heading "Kỹ năng cần có" [level=2] [ref=f15e468]
+            - generic [ref=f15e469]:
+              - generic [ref=f15e470]: VueJS
+              - generic [ref=f15e471]: ReactJS
+              - generic [ref=f15e472]: Angular
+              - generic [ref=f15e473]: AI tools
+              - generic [ref=f15e474]: HTML
+              - generic [ref=f15e475]: CSS
+            - generic [ref=f15e476] [cursor=pointer]:
+              - generic [ref=f15e477]: Xem thêm
+              - generic [ref=f15e478]: ⌄
+            - text: ⌃
+          - generic [ref=f15e480]:
+            - heading "Tìm việc theo địa giới trước sáp nhập" [level=2] [ref=f15e481]
+            - generic [ref=f15e482]:
+              - link "Hồ Chí Minh" [ref=f15e484] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2
+              - link "Việc làm Frontend Developer tại Hồ Chí Minh" [ref=f15e486] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2
+              - link "Bình Dương" [ref=f15e488] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-duong-l3
+              - link "Việc làm Frontend Developer tại Bình Dương" [ref=f15e490] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-binh-duong-kl3
+              - link "Bà Rịa-Vũng Tàu" [ref=f15e492] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ba-ria-vung-tau-l11
+              - link "Việc làm Frontend Developer tại Bà Rịa-Vũng Tàu" [ref=f15e494] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ba-ria-vung-tau-kl11
+            - generic [ref=f15e495] [cursor=pointer]: Xem thêm
+          - generic [ref=f15e496]:
+            - heading "Tìm việc theo địa giới sau sáp nhập" [level=2] [ref=f15e497]
+            - generic [ref=f15e498]:
+              - link "Hồ Chí Minh" [ref=f15e500] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2lv2
+              - link "Việc làm Frontend Developer tại Hồ Chí Minh" [ref=f15e502] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2lv2
+              - link "Phú Nhuận - TP HCM" [ref=f15e504] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-tai-phu-nhuan-l2d218lv2
+              - link "Việc làm Frontend Developer tại Phú Nhuận - TP HCM" [ref=f15e506] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-phu-nhuan-kl2d218lv2
+            - generic [ref=f15e507] [cursor=pointer]: Xem thêm
+        - generic [ref=f15e508]:
+          - generic [ref=f15e509]:
+            - heading "Báo cáo tin tuyển dụng" [level=2] [ref=f15e510]
+            - generic [ref=f15e511]: Nếu bạn thấy rằng tin tuyển dụng này không đúng, hãy phản ánh với chúng tôi
+          - link "Báo cáo tin tuyển dụng không chính xác" [ref=f15e513] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f15e514]:
+          - generic [ref=f15e515]:
+            - text: Vị trí Fresher
+            - link "Frontend Developer" [ref=f15e516] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer
+            - text: tuyển dụng bởi công ty
+            - link "CÔNG TY CỔ PHẦN SMARTOSC" [ref=f15e517] [cursor=pointer]:
+              - /url: https://www.topcv.vn/brand/smartosc?id=84788
+            - text: tại Hồ Chí Minh, Phú Nhuận - TP HCM với mức lương Thoả thuận yêu cầu loại hình làm việc Toàn thời gian. Bạn có thể tham khảo thêm các vị trí tuyển dụng
+            - link "Frontend Developer tại Hồ Chí Minh, Phú Nhuận - TP HCM" [ref=f15e518] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2
+            - text: khác trên kênh tuyển dụng việc làm topcv.
+          - generic [ref=f15e519] [cursor=pointer]: Xem thêm
+        - generic [ref=f15e520]:
+          - generic [ref=f15e521]:
+            - link "web developer" [ref=f15e522] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-web-developer-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "reactjs developer" [ref=f15e523] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-reactjs-developer-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "lập trình php" [ref=f15e524] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-php-tai-ho-chi-minh-kl2
+            - text: ","
+            - link ".net developer" [ref=f15e525] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-net-developer-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "backend developer" [ref=f15e526] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-backend-developer-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "golang developer" [ref=f15e527] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-golang-developer-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "java developer" [ref=f15e528] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-java-developer-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "angular developer" [ref=f15e529] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-angular-developer-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "full stack developer" [ref=f15e530] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-full-stack-developer-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "lập trình viên java" [ref=f15e531] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-java-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "frontend" [ref=f15e532] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-frontend-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "nodejs developer" [ref=f15e533] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-nodejs-developer-tai-ho-chi-minh-kl2
+            - text: ","
+            - link "lập trình viên" [ref=f15e534] [cursor=pointer]:
+              - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-tai-ho-chi-minh-kl2
+          - generic [ref=f15e535] [cursor=pointer]: Xem thêm
+    - text: 🕓 💼 👤 📅   ×     ←   💼 🎓  ←   ← ←  ⚠
+    - generic: ⚠
+    - generic: ×
+    - text: 
+  - contentinfo [ref=f15e536]:
+    - generic [ref=f15e539]:
+      - link "Việc làm ," [ref=f15e540] [cursor=pointer]:
+        - /url: https://www.topcv.vn/viec-lam
+      - link "Việc làm Hà Nội ," [ref=f15e541] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ha-noi-l1
+      - link "Việc làm TP. HCM ," [ref=f15e542] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2
+      - link "Việc làm Cần Thơ ," [ref=f15e543] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-can-tho-l20
+      - link "Việc làm Đà Nẵng ," [ref=f15e544] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-da-nang-l8
+      - link "Việc làm Hải Phòng ," [ref=f15e545] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hai-phong-l9
+      - link "Việc làm Thanh Hóa ," [ref=f15e546] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-thanh-hoa-l60
+      - link "Việc làm Bình Dương ," [ref=f15e547] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-duong-l3
+      - link "Việc làm Đồng Nai ," [ref=f15e548] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-dong-nai-l5
+      - link "Việc làm Tây Ninh ," [ref=f15e549] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-tay-ninh-l57
+      - link "Việc làm Đà Lạt ," [ref=f15e550] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-tp-da-lat-l37d3701
+      - link "Việc làm Gia Lai ," [ref=f15e551] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-gia-lai-l27
+      - link "Việc làm Nha Trang ," [ref=f15e552] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-tp-nha-trang-l33d3301
+      - link "Việc làm Bà Rịa - Vũng Tàu ," [ref=f15e553] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ba-ria-vung-tau-l11
+      - link "Việc làm Huế ," [ref=f15e554] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-thua-thien-hue-l61
+      - link "Việc làm Gia sư tại Hà Nội ," [ref=f15e555] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-gia-su-tai-ha-noi-kl1
+      - link "Việc làm Lái xe tại Hà Nội ," [ref=f15e556] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lai-xe-tai-ha-noi-kl1
+      - link "Việc làm Tài xế tại Cần Thơ ," [ref=f15e557] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-tai-can-tho-kl20
+      - link "Việc làm Tài xế tại TP. HCM ," [ref=f15e558] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-tai-ho-chi-minh-kl2
+      - link "Việc làm Tài xế B2 tại TP. HCM ," [ref=f15e559] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-xe-b2-tai-ho-chi-minh-kl2
+      - link "Việc làm Kế toán tại Hà Nội ," [ref=f15e560] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tai-ha-noi-kl1
+      - link "Việc làm Kế toán tại TP. HCM ," [ref=f15e561] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tai-ho-chi-minh-kl2
+      - link "Việc làm Kế toán tại Đà Nẵng ," [ref=f15e562] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ke-toan-tai-da-nang-kl8
+      - link "Việc làm Marketing tại Hà Nội ," [ref=f15e563] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-marketing-tai-ha-noi-kl1
+      - link "Việc làm Marketing tại TP. HCM ," [ref=f15e564] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-marketing-tai-ho-chi-minh-kl2
+      - link "Việc làm Marketing tại Đà Nẵng ," [ref=f15e565] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-marketing-tai-da-nang-kl8
+      - link "Việc làm Ngân hàng tại Hà Nội ," [ref=f15e566] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ngan-hang-tai-ha-noi-kl1
+      - link "Việc làm Ngân hàng tại TP. HCM ," [ref=f15e567] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ngan-hang-tai-ho-chi-minh-kl2
+      - link "Việc làm Ngân hàng tại Đà Nẵng ," [ref=f15e568] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ngan-hang-tai-da-nang-kl8
+      - link "Việc làm Nhân viên kinh doanh ," [ref=f15e569] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-kinh-doanh
+      - link "Việc làm Marketing ," [ref=f15e570] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-marketing
+      - link "Việc làm Nhân viên Marketing ," [ref=f15e571] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-nhan-vien-marketing
+      - link "Việc làm Content Marketing ," [ref=f15e572] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-content-marketing
+      - link "Việc làm Kế toán ," [ref=f15e573] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ke-toan
+      - link "Việc làm Tài chính/Ngân hàng/Bảo hiểm ," [ref=f15e574] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tai-chinh-ngan-hang-bao-hiem-cr206
+      - link "Việc làm Ngân hàng ," [ref=f15e575] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ngan-hang
+      - link "Việc làm Hành chính nhân sự ," [ref=f15e576] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-hanh-chinh-nhan-su
+      - link "Việc làm Logistics ," [ref=f15e577] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-logistics
+      - link "Việc làm Sales Logistics ," [ref=f15e578] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-sales-logistics
+      - link "Việc làm Xây dựng ," [ref=f15e579] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-xay-dung
+      - link "Việc làm Kỹ sư xây dựng ," [ref=f15e580] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-ky-su-xay-dung
+      - link "Việc làm Tester ," [ref=f15e581] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-tester
+      - link "Việc làm Lập trình viên .Net ," [ref=f15e582] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-net
+      - link "Việc làm Lập trình viên Java ," [ref=f15e583] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-java
+      - link "Việc làm Lập trình viên PHP ," [ref=f15e584] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-php
+      - link "Việc làm Lao động phổ thông ," [ref=f15e585] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-lao-dong-pho-thong
+      - link "Việc làm Sản xuất ," [ref=f15e586] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-san-xuat-cr417
+      - link "Việc làm Chăm sóc khách hàng ," [ref=f15e587] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-cham-soc-khach-hang
+      - link "Việc làm Online tại nhà ," [ref=f15e588] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tim-viec-lam-online-tai-nha
+      - link "Tra cứu mức lương tại Việt Nam ," [ref=f15e589] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tra-cuu-muc-luong-tai-viet-nam
+      - link "Tính lương Gross - Net ," [ref=f15e590] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tinh-luong-gross-net
+      - link "Tính thuế thu nhập cá nhân ," [ref=f15e591] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tinh-thue-thu-nhap-ca-nhan
+      - link "Trắc nghiệm tính cách MBTI ," [ref=f15e592] [cursor=pointer]:
+        - /url: https://www.topcv.vn/trac-nghiem-tinh-cach-mbti
+      - link "Mẫu CV ," [ref=f15e593] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv
+      - link "Mẫu CV theo vị trí công việc ," [ref=f15e594] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-theo-vi-tri-cong-viec
+      - link "Mẫu CV tiếng Anh ," [ref=f15e595] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-anh
+      - link "Mẫu CV tiếng Nhật ," [ref=f15e596] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-nhat
+      - link "Mẫu CV tiếng Trung ," [ref=f15e597] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-trung
+      - link "Mẫu CV Kế toán ," [ref=f15e598] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-viet/mau-cv-nhan-vien-ke-toan
+      - link "Mẫu CV Nhân viên kinh doanh ," [ref=f15e599] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-viet/mau-cv-nhan-vien-kinh-doanh
+      - link "Mẫu CV Hành chính nhân sự ," [ref=f15e600] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-viet/mau-cv-nhan-vien-hanh-chinh-nhan-su
+      - link "Mẫu CV Lập trình viên ," [ref=f15e601] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tong-hop-cv-tham-khao-cho-lap-trinh-vien
+      - link "Mẫu CV cho sinh viên/thực tập sinh ," [ref=f15e602] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cv-tieng-viet/mau-cv-thuc-tap-sinh
+      - link "CV là gì? ," [ref=f15e603] [cursor=pointer]:
+        - /url: https://www.topcv.vn/cv-la-gi
+      - link "Cách viết CV xin việc ," [ref=f15e604] [cursor=pointer]:
+        - /url: https://www.topcv.vn/viet-cv-the-nao-cho-chuan
+      - link "Cách viết CV cho sinh viên chưa tốt nghiệp ," [ref=f15e605] [cursor=pointer]:
+        - /url: https://www.topcv.vn/cv-cho-sinh-vien-chua-tot-nghiep
+      - link "Cách viết CV Tiếng Anh ," [ref=f15e606] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-xin-viec-tieng-anh
+      - link "Cách viết CV Tiếng Hàn ," [ref=f15e607] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-tieng-han
+      - link "Cách viết CV Tiếng Nhật ," [ref=f15e608] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-tieng-nhat
+      - link "Cách viết CV Tiếng Trung ," [ref=f15e609] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-tieng-trung
+      - link "Cách viết CV xin học bổng du học ," [ref=f15e610] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-viet-cv-xin-hoc-bong
+      - link "Sửa lỗi gõ tiếng Việt trên Unikey khi viết CV ," [ref=f15e611] [cursor=pointer]:
+        - /url: https://www.topcv.vn/huong-dan-sua-loi-go-tieng-viet-unikey
+      - link "Mẫu Cover Letter ," [ref=f15e612] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-cover-letter-thu-xin-viec
+      - link "Mẫu bộ hồ sơ xin việc ," [ref=f15e613] [cursor=pointer]:
+        - /url: https://www.topcv.vn/giay-to-thu-tuc-ho-so-xin-viec
+      - link "Mẫu sơ yếu lý lịch ," [ref=f15e614] [cursor=pointer]:
+        - /url: https://www.topcv.vn/tai-mau-so-yeu-ly-lich-chuan-mien-phi
+      - link "Mẫu đơn xin nghỉ phép ," [ref=f15e615] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-don-xin-nghi-phep
+      - link "Mẫu đơn xin nghỉ việc ," [ref=f15e616] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-don-xin-nghi-viec
+      - link "Mẫu đơn xin thực tập ," [ref=f15e617] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-don-xin-thuc-tap-chuan-cho-sinh-vien
+      - link "Mẫu đơn xin việc ," [ref=f15e618] [cursor=pointer]:
+        - /url: https://www.topcv.vn/mau-don-xin-viec
+      - link "Mẫu email xin việc bằng tiếng Anh ," [ref=f15e619] [cursor=pointer]:
+        - /url: https://www.topcv.vn/cach-viet-email-xin-viec-bang-tieng-anh
+      - link "Cẩm nang ngành Công nghệ thông tin ," [ref=f15e620] [cursor=pointer]:
+        - /url: https://www.topcv.vn/xin-viec-nganh-cong-nghe-thong-tin
+      - link "Cẩm nang ngành Công nghệ thực phẩm ," [ref=f15e621] [cursor=pointer]:
+        - /url: https://www.topcv.vn/xin-viec-nganh-cong-nghe-thuc-pham
+      - link "Cẩm nang ngành Du lịch ," [ref=f15e622] [cursor=pointer]:
+        - /url: https://www.topcv.vn/nganh-du-lich-lam-nhung-cong-viec-gi
+      - link "Cẩm nang ngành Logistics" [ref=f15e623] [cursor=pointer]:
+        - /url: https://www.topcv.vn/cong-viec-nganh-logistic
+    - generic [ref=f15e624]:
+      - generic [ref=f15e626]:
+        - generic [ref=f15e627]:
+          - link "TopCV tuyển dụng tại TopCV" [ref=f15e628] [cursor=pointer]:
+            - /url: https://www.topcv.vn
+          - link "DMCA.com Protection Status" [ref=f15e630] [cursor=pointer]:
+            - /url: https://www.dmca.com/Protection/Status.aspx?ID=8be40718-7da1-4b43-875a-3efb819100c9&refurl=https://www.topcv.vn/brand/smartosc/tuyen-dung/fresher-frontend-developer-j1648822.html
+          - generic [ref=f15e631]:
+            - paragraph [ref=f15e632]: Liên hệ
+            - text: "Hotline:"
+            - link "1900 068 889 | Nhánh 2 (Giờ hành chính)" [ref=f15e633] [cursor=pointer]:
+              - /url: tel:1900068889
+            - text: "Email:"
+            - link "hotro@topcv.vn" [ref=f15e634] [cursor=pointer]:
+              - /url: mailto:hotro@topcv.vn
+            - text: "Zalo hỗ trợ ứng viên:"
+            - link "Kết nối ngay →" [ref=f15e635] [cursor=pointer]:
+              - /url: https://zalo.me/946504486043251830
+              - text: Kết nối ngay
+              - generic [ref=f15e636]: →
+            - text: "Fanpage:"
+            - link "TopCV Vietnam" [ref=f15e637] [cursor=pointer]:
+              - /url: https://www.facebook.com/topcv.vn
+            - text: "LinkedIn:"
+            - link "TopCV Vietnam" [ref=f15e638] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/topcv-vietnam/posts/?feedView=all
+            - text: "Thread:"
+            - link "TopCV Vietnam" [ref=f15e639] [cursor=pointer]:
+              - /url: https://www.threads.com/@topcvvietnam
+            - text: "Tiktok:"
+            - link "TopCV Vietnam" [ref=f15e640] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@topcv?lang=en
+          - generic [ref=f15e641]:
+            - paragraph [ref=f15e642]: Ứng dụng tải xuống
+            - generic [ref=f15e643]:
+              - link "Tải app TopCV tại App Store" [ref=f15e644] [cursor=pointer]:
+                - /url: https://itunes.apple.com/us/app/topcv-t%E1%BA%A1o-cv-t%C3%ACm-vi%E1%BB%87c-l%C3%A0m/id1455928592?ls=1&mt=8
+              - link "Tải app TopCV tại Google Play" [ref=f15e645] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.topcv
+          - generic [ref=f15e646]:
+            - paragraph [ref=f15e647]: Cộng đồng TopCV
+            - generic [ref=f15e648]:
+              - link "facebook" [ref=f15e649] [cursor=pointer]:
+                - /url: https://www.facebook.com/topcv.vn/
+              - link "youtube" [ref=f15e650] [cursor=pointer]:
+                - /url: https://www.youtube.com/c/TopCVpro
+              - link "linkedin" [ref=f15e651] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/topcv-vietnam
+              - link "tiktok" [ref=f15e652] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@topcv
+        - generic [ref=f15e653]:
+          - generic [ref=f15e654]:
+            - generic [ref=f15e655]: Về TopCV
+            - generic [ref=f15e656]:
+              - link "Giới thiệu" [ref=f15e657] [cursor=pointer]:
+                - /url: https://topcv.com.vn/
+              - link "Góc báo chí" [ref=f15e658] [cursor=pointer]:
+                - /url: https://www.topcv.vn/gioi-thieu#bao-chi
+              - link "Tuyển dụng" [ref=f15e659] [cursor=pointer]:
+                - /url: https://www.topcv.vn/cong-ty/cong-ty-co-phan-topcv-viet-nam/105.html
+              - link "Liên hệ" [ref=f15e660] [cursor=pointer]:
+                - /url: https://www.topcv.vn/gioi-thieu#lien-he
+              - link "Hỏi đáp" [ref=f15e661] [cursor=pointer]:
+                - /url: https://www.topcv.vn/faqs
+              - link "Chính sách quyền riêng tư" [ref=f15e662] [cursor=pointer]:
+                - /url: https://www.topcv.vn/dieu-khoan-bao-mat
+              - link "Cài đặt Cookie" [ref=f15e663] [cursor=pointer]:
+                - /url: javascript:showMenuSettingCookie()
+              - link "Điều khoản dịch vụ" [ref=f15e664] [cursor=pointer]:
+                - /url: https://www.topcv.vn/terms-of-service
+          - generic [ref=f15e665]:
+            - generic [ref=f15e666]: Đối tác
+            - generic [ref=f15e667]:
+              - link "TestCenter" [ref=f15e668] [cursor=pointer]:
+                - /url: https://www.testcenter.vn/
+              - link "TopHR" [ref=f15e669] [cursor=pointer]:
+                - /url: https://tophr.vn
+              - link "ViecNgay" [ref=f15e670] [cursor=pointer]:
+                - /url: https://www.viecngay.vn/
+              - link "Happy Time" [ref=f15e671] [cursor=pointer]:
+                - /url: https://happytime.vn/
+        - generic [ref=f15e672]:
+          - generic [ref=f15e673]:
+            - generic [ref=f15e674]: Hồ sơ và CV
+            - generic [ref=f15e675]:
+              - link "Quản lý CV của bạn" [ref=f15e676] [cursor=pointer]:
+                - /url: https://www.topcv.vn/quan-ly-cv
+              - link "Hướng dẫn viết CV" [ref=f15e677] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viet-cv-the-nao-cho-chuan
+              - link "Thư viện CV theo ngành nghề" [ref=f15e678] [cursor=pointer]:
+                - /url: https://www.topcv.vn/mau-cv-theo-vi-tri-cong-viec
+          - generic [ref=f15e679]:
+            - generic [ref=f15e680]: Khám phá
+            - generic [ref=f15e681]:
+              - link "Ứng dụng di động TopCV" [ref=f15e682] [cursor=pointer]:
+                - /url: https://www.topcv.vn/app
+              - link "Tính lương Gross - Net" [ref=f15e683] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tinh-luong-gross-net
+              - link "Tính lãi suất kép" [ref=f15e684] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tinh-lai-kep
+              - link "Lập kế hoạch tiết kiệm" [ref=f15e685] [cursor=pointer]:
+                - /url: https://www.topcv.vn/lap-ke-hoach-tiet-kiem
+              - link "Tính bảo hiểm thất nghiệp" [ref=f15e686] [cursor=pointer]:
+                - /url: https://www.topcv.vn/cong-cu-tinh-muc-huong-bao-hiem-that-nghiep
+              - link "Tính bảo hiểm xã hội một lần" [ref=f15e687] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tinh-bao-hiem-xa-hoi-mot-lan
+              - link "Trắc nghiệm MBTI" [ref=f15e688] [cursor=pointer]:
+                - /url: https://www.topcv.vn/trac-nghiem-tinh-cach-mbti
+              - link "Trắc nghiệm MI" [ref=f15e689] [cursor=pointer]:
+                - /url: https://www.topcv.vn/trac-nghiem-da-tri-thong-minh-multiple-intelligences-test
+        - generic [ref=f15e690]:
+          - generic [ref=f15e691]:
+            - generic [ref=f15e692]: Xây dựng sự nghiệp
+            - generic [ref=f15e693]:
+              - link "Việc làm nổi bật" [ref=f15e694] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-tot-nhat
+              - link "Việc làm lương cao" [ref=f15e695] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-luong-cao
+              - link "Việc làm quản lý" [ref=f15e696] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-quan-ly
+              - link "Việc làm IT" [ref=f15e697] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-it
+              - link "Việc làm Senior" [ref=f15e698] [cursor=pointer]:
+                - /url: https://www.topcv.vn/viec-lam-senior
+              - link "Việc làm bán thời gian" [ref=f15e699] [cursor=pointer]:
+                - /url: https://www.topcv.vn/tim-viec-lam-ban-thoi-gian-t3
+          - generic [ref=f15e700]:
+            - generic [ref=f15e701]: Quy tắc chung
+            - generic [ref=f15e702]:
+              - link "Điều kiện giao dịch chung" [ref=f15e703] [cursor=pointer]:
+                - /url: https://www.topcv.vn/dieu-kien-giao-dich-chung
+              - link "Giá dịch vụ & Cách thanh toán" [ref=f15e704] [cursor=pointer]:
+                - /url: https://www.topcv.vn/thong-tin-ve-gia-dich-vu-va-phuong-thuc-thanh-toan
+              - link "Thông tin về vận chuyển" [ref=f15e705] [cursor=pointer]:
+                - /url: https://www.topcv.vn/thong-tin-ve-van-chuyen
+      - generic [ref=f15e708]:
+        - generic [ref=f15e709]:
+          - generic [ref=f15e710]: Công ty Cổ phần TopCV Việt Nam
+          - generic [ref=f15e711]:
+            - generic [ref=f15e712]:
+              - generic [ref=f15e713]: 🖩
+              - generic [ref=f15e714]: "Giấy phép đăng ký kinh doanh số: 0107307178cấp ngày 21/01/2016, thay đổi lần thứ 17 ngày 03/04/2025 tại Sở Tài chính Thành phố Hà Nội"
+            - generic [ref=f15e715]:
+              - generic [ref=f15e716]: 📄
+              - generic [ref=f15e717]: "Giấy phép hoạt động dịch vụ việc làm số:"
+              - strong [ref=f15e718]: 44/2024/SLĐTBXH-GP
+            - generic [ref=f15e719]:
+              - generic [ref=f15e720]: 
+              - generic [ref=f15e721]: "Trụ sở HN:"
+              - strong [ref=f15e722]: Tòa FS - GoldSeason số 47 Nguyễn Tuân, Phường Thanh Xuân, Thành phố Hà Nội, Việt Nam
+            - generic [ref=f15e723]:
+              - generic [ref=f15e724]: 
+              - generic [ref=f15e725]: "Chi nhánh HCM:"
+              - strong [ref=f15e726]: Tòa nhà Dali, 24C Phan Đăng Lưu, Phường Gia Định, TP HCM
+        - link "topcv.com.vn" [ref=f15e729] [cursor=pointer]:
+          - /url: https://topcv.com.vn
+        - generic [ref=f15e731]:
+          - generic [ref=f15e732]: Hệ sinh thái HR Tech của TopCV
+          - generic [ref=f15e733]:
+            - link "Nền tảng công nghệ tuyển dụng thông minh TopCV.vn" [ref=f15e734] [cursor=pointer]:
+              - /url: https://www.topcv.vn
+            - link "Nền tảng quản lý & gia tăng trải nghiệm nhân viên HappyTime.vn" [ref=f15e736] [cursor=pointer]:
+              - /url: https://happytime.vn/
+            - link "Nền tảng thiết lập và đánh giá năng lực nhân viên TestCenter.vn" [ref=f15e738] [cursor=pointer]:
+              - /url: https://www.testcenter.vn/
+            - link "Giải pháp quản trị tuyển dụng hiệu suất cao SHiring.ai" [ref=f15e740] [cursor=pointer]:
+              - /url: https://www.shiring.ai/
+        - paragraph [ref=f15e743]: © 2014-2026 TopCV Vietnam JSC. All rights reserved.
+  - text: ×  → ✉   → → ×
+  - status [ref=f15e744]
+  - text: ✓

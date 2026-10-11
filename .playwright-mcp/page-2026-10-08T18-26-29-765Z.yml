@@ -1,0 +1,863 @@
+- generic [active] [ref=f147e1]:
+  - generic [ref=f147e3]:
+    - complementary [ref=f147e5]:
+      - iframe [ref=f147e11]:
+        - generic [ref=f148e3]:
+          - link "Ads by PQC" [ref=f148e4] [cursor=pointer]:
+            - /url: https://phanquang.vn
+          - iframe [ref=f148e11]:
+            - generic [ref=f180e1]:
+              - generic [ref=f180e2] [cursor=pointer]
+              - button [ref=f180e7] [cursor=pointer]
+              - iframe [ref=f180e16]:
+                - generic [ref=f181e3]:
+                  - generic [ref=f181e4]:
+                    - link "Tìm kiếm thông tin trường học" [ref=f181e6] [cursor=pointer]:
+                      - /url: https://kiemtruong.vn
+                    - generic [ref=f181e8]:
+                      - heading [level=2] [ref=f181e10]:
+                        - link "Đại học Duy Tân" [ref=f181e11] [cursor=pointer]:
+                          - /url: https://kiemtruong.vn/truong/672/Dai-hoc-Duy-Tan.html
+                      - generic [ref=f181e12]:
+                        - generic [ref=f181e13]:
+                          - heading [level=3] [ref=f181e14]:
+                            - link "ĐH Duy Tân tiếp tục trong Top 500 thế giới trên Bảng QS World University Rankings 2026" [ref=f181e15] [cursor=pointer]:
+                              - /url: https://kiemtruong.vn/tin-tuyen-sinh/7185/672/1/DH-Duy-Tan-tiep-tuc-trong-Top-500-the-gioi-tren-Bang-QS-World-University-Rankings-2026.html
+                          - generic [ref=f181e16]: Tổ chức Giáo dục Quacquarelli Symonds (QS) - Anh Quốc ngày 19.6.2025 đã công bố Bảng xếp hạng các ...
+                        - link [ref=f181e17] [cursor=pointer]:
+                          - /url: https://kiemtruong.vn/tin-tuyen-sinh/7185/672/1/DH-Duy-Tan-tiep-tuc-trong-Top-500-the-gioi-tren-Bang-QS-World-University-Rankings-2026.html
+                  - generic [ref=f181e19]:
+                    - heading [level=2] [ref=f181e21]:
+                      - link "Trường Song ngữ Quốc tế Hoàng Gia (Royal School)" [ref=f181e22] [cursor=pointer]:
+                        - /url: https://kiemtruong.vn/truong/782/Truong-Song-ngu-Quoc-te-Hoang-Gia---Royal-School--.html
+                    - generic [ref=f181e23]:
+                      - link [ref=f181e25] [cursor=pointer]:
+                        - /url: https://kiemtruong.vn/tin-tuc/7265/782/Doi-ngu-giao-vien-Royal-School--Khoi-mo-tu-duy-trong-lop-hoc-Cambridge.html
+                        - 'img "Đội ngũ giáo viên Royal School: Khơi mở tư duy trong lớp học Cambridge" [ref=f181e26]'
+                      - heading [level=3] [ref=f181e28]:
+                        - 'link "Đội ngũ giáo viên Royal School: Khơi mở tư duy trong lớp ..." [ref=f181e29] [cursor=pointer]':
+                          - /url: https://kiemtruong.vn/tin-tuc/7265/782/Doi-ngu-giao-vien-Royal-School--Khoi-mo-tu-duy-trong-lop-hoc-Cambridge.html
+                  - generic [ref=f181e30]:
+                    - heading [level=2] [ref=f181e32]:
+                      - link "Trường Đại học FPT" [ref=f181e33] [cursor=pointer]:
+                        - /url: https://kiemtruong.vn/truong/680/Truong-Dai-hoc-FPT.html
+                    - generic [ref=f181e34]:
+                      - link [ref=f181e36] [cursor=pointer]:
+                        - /url: https://kiemtruong.vn/tin-tuc/7264/680/Co-hoi-nghien-cuu-AI---dien-toan-luong-tu-va-an-ninh-mang-tai-FPT.html
+                        - img "Cơ hội nghiên cứu AI, điện toán lượng tử và an ninh mạng tại FPT" [ref=f181e37]
+                      - heading [level=3] [ref=f181e39]:
+                        - link "Cơ hội nghiên cứu AI, điện toán lượng tử và an ninh ..." [ref=f181e40] [cursor=pointer]:
+                          - /url: https://kiemtruong.vn/tin-tuc/7264/680/Co-hoi-nghien-cuu-AI---dien-toan-luong-tu-va-an-ninh-mang-tai-FPT.html
+                  - generic [ref=f181e41]:
+                    - heading [level=2] [ref=f181e43]:
+                      - link "Đại học Kinh tế TP.HCM (UEH)" [ref=f181e44] [cursor=pointer]:
+                        - /url: https://kiemtruong.vn/truong/682/Dai-hoc-Kinh-te-TP--HCM---UEH--.html
+                    - generic [ref=f181e45]:
+                      - link [ref=f181e47] [cursor=pointer]:
+                        - /url: https://kiemtruong.vn/tin-tuc/7263/682/UEH-va-buoc-chuyen-dong-sang-tao--Dua-tri-thuc-thanh-giai-phap-thuc-tien.html
+                        - 'img "UEH và bước chuyển đồng sáng tạo: Đưa tri thức thành giải pháp thực tiễn" [ref=f181e48]'
+                      - heading [level=3] [ref=f181e50]:
+                        - 'link "UEH và bước chuyển đồng sáng tạo: Đưa tri thức thành ..." [ref=f181e51] [cursor=pointer]':
+                          - /url: https://kiemtruong.vn/tin-tuc/7263/682/UEH-va-buoc-chuyen-dong-sang-tao--Dua-tri-thuc-thanh-giai-phap-thuc-tien.html
+                  - generic [ref=f181e52]:
+                    - heading [level=2] [ref=f181e54]:
+                      - link "Trường Song ngữ Quốc tế Hoàng Gia (Royal School)" [ref=f181e55] [cursor=pointer]:
+                        - /url: https://kiemtruong.vn/truong/782/Truong-Song-ngu-Quoc-te-Hoang-Gia---Royal-School--.html
+                    - generic [ref=f181e56]:
+                      - link [ref=f181e58] [cursor=pointer]:
+                        - /url: https://kiemtruong.vn/tin-tuc/7262/782/Phat-trien-toan-dien-trong-moi-truong-giao-duc-chuan-Cambridge-tai-Royal-School.html
+                        - img "Phát triển toàn diện trong môi trường giáo dục chuẩn Cambridge tại Royal School" [ref=f181e59]
+                      - heading [level=3] [ref=f181e61]:
+                        - link "Phát triển toàn diện trong môi trường giáo dục chuẩn ..." [ref=f181e62] [cursor=pointer]:
+                          - /url: https://kiemtruong.vn/tin-tuc/7262/782/Phat-trien-toan-dien-trong-moi-truong-giao-duc-chuan-Cambridge-tai-Royal-School.html
+    - generic [ref=f147e13]:
+      - generic [ref=f147e16]:
+        - link [ref=f147e18] [cursor=pointer]:
+          - /url: /
+          - img "Tin tức, tin nóng, đọc báo điện tử - Tuổi Trẻ Online" [ref=f147e19]
+        - generic [ref=f147e20]:
+          - list [ref=f147e22]:
+            - listitem [ref=f147e23]:
+              - link [ref=f147e24] [cursor=pointer]:
+                - /url: https://podcast.tuoitre.vn/
+            - listitem [ref=f147e28]:
+              - link [ref=f147e29] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UC47WI-kZXFf0H_f7pvaNCEQ
+            - listitem [ref=f147e34]:
+              - link [ref=f147e35] [cursor=pointer]:
+                - /url: https://tuoitre.vn/can-biet.htm
+            - listitem [ref=f147e39]:
+              - link [ref=f147e40] [cursor=pointer]:
+                - /url: https://quangcao.tuoitre.vn/ratecard/
+          - generic [ref=f147e46]:
+            - generic [ref=f147e47]:
+              - generic "tìm kiếm" [ref=f147e48]
+              - generic "tìm kiếm" [ref=f147e52]
+            - button "Đăng nhập" [ref=f147e58]
+            - link "Đăng ký Tuổi Trẻ Sao" [ref=f147e63] [cursor=pointer]:
+              - /url: https://sso.tuoitre.vn/dang-ky-tuoi-tre-sao
+            - button "Giới thiệu Tuổi Trẻ Sao" [ref=f147e64]
+      - navigation "Menu chính" [ref=f147e70]:
+        - list [ref=f147e73]:
+          - listitem [ref=f147e74]:
+            - link "Trang chủ" [ref=f147e75] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f147e78]:
+            - link "Mới nhất" [ref=f147e79] [cursor=pointer]:
+              - /url: /tin-moi-nhat.htm
+          - listitem [ref=f147e80]:
+            - link "Zoom" [ref=f147e81] [cursor=pointer]:
+              - /url: /short-video.htm
+          - listitem [ref=f147e82]:
+            - link "Xem nhiều" [ref=f147e83] [cursor=pointer]:
+              - /url: /tin-xem-nhieu.htm
+          - listitem [ref=f147e84]:
+            - link "Video" [ref=f147e85] [cursor=pointer]:
+              - /url: /video.htm
+          - listitem [ref=f147e86]:
+            - link "Thời sự" [ref=f147e87] [cursor=pointer]:
+              - /url: /thoi-su.htm
+          - listitem [ref=f147e88]:
+            - link "Thế giới" [ref=f147e89] [cursor=pointer]:
+              - /url: /the-gioi.htm
+          - listitem [ref=f147e90]:
+            - link "Pháp luật" [ref=f147e91] [cursor=pointer]:
+              - /url: /phap-luat.htm
+          - listitem [ref=f147e92]:
+            - link "Kinh doanh" [ref=f147e93] [cursor=pointer]:
+              - /url: /kinh-doanh.htm
+          - listitem [ref=f147e94]:
+            - link "Công nghệ" [ref=f147e95] [cursor=pointer]:
+              - /url: /cong-nghe.htm
+          - listitem [ref=f147e96]:
+            - link "Xe" [ref=f147e97] [cursor=pointer]:
+              - /url: /xe.htm
+          - listitem [ref=f147e98]:
+            - link "Du lịch" [ref=f147e99] [cursor=pointer]:
+              - /url: /du-lich.htm
+          - listitem [ref=f147e100]:
+            - link "Văn hóa" [ref=f147e101] [cursor=pointer]:
+              - /url: /van-hoa.htm
+          - listitem [ref=f147e102]:
+            - link "Giải trí" [ref=f147e103] [cursor=pointer]:
+              - /url: /giai-tri.htm
+          - listitem [ref=f147e104]:
+            - link "Thể thao" [ref=f147e105] [cursor=pointer]:
+              - /url: /the-thao.htm
+          - listitem [ref=f147e106]:
+            - link "Giáo dục" [ref=f147e107] [cursor=pointer]:
+              - /url: /giao-duc.htm
+          - listitem [ref=f147e108]:
+            - link "Nhà đất" [ref=f147e109] [cursor=pointer]:
+              - /url: /nha-dat.htm
+          - listitem [ref=f147e110]:
+            - link "Sức khỏe" [ref=f147e111] [cursor=pointer]:
+              - /url: /suc-khoe.htm
+          - listitem [ref=f147e112]:
+            - link "Giả thật" [ref=f147e113] [cursor=pointer]:
+              - /url: /gia-that.htm
+          - listitem [ref=f147e114]:
+            - link "Cộng đồng" [ref=f147e115] [cursor=pointer]:
+              - /url: /cong-dong.htm
+          - listitem [ref=f147e116] [cursor=pointer]
+    - main [ref=f147e120]:
+      - generic [ref=f147e123]:
+        - generic [ref=f147e125]:
+          - generic [ref=f147e126]:
+            - button "Tăng cỡ chữ" [ref=f147e127]
+            - generic "Copy link" [ref=f147e141]
+            - generic "Chia sẻ Facebook" [ref=f147e146]
+            - generic "Comment" [ref=f147e150]: "88"
+            - generic "Lưu" [ref=f147e158]
+            - link "In bài viết" [ref=f147e162] [cursor=pointer]:
+              - /url: /print/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm
+          - generic:
+            - generic:
+              - img:
+                - generic [ref=f147e166] [cursor=pointer]
+                - generic [ref=f147e167] [cursor=pointer]
+        - generic [ref=f147e168]:
+          - generic [ref=f147e169]:
+            - generic [ref=f147e170]:
+              - generic [ref=f147e171]:
+                - link "Trở lại chủ đề" [ref=f147e172] [cursor=pointer]:
+                  - /url: /nhom-chu-de.htm
+                - navigation "Breadcrumb" [ref=f147e174]:
+                  - link "Giáo dục" [ref=f147e175] [cursor=pointer]:
+                    - /url: /giao-duc.htm
+              - time [ref=f147e177]: 30/05/2024 08:50 GMT+7
+            - 'heading "Trẻ mầm non chết do bị bỏ quên trên xe: Bài học cũ, nỗi đau mới! 88" [level=1] [ref=f147e178]':
+              - text: "Trẻ mầm non chết do bị bỏ quên trên xe: Bài học cũ, nỗi đau mới!"
+              - generic [ref=f147e179] [cursor=pointer]: "88"
+            - generic [ref=f147e186]:
+              - generic [ref=f147e187] [cursor=pointer]:
+                - link [ref=f147e188]:
+                  - /url: javascript:;
+                  - img "tác giả" [ref=f147e189]
+                - link "VĨNH HÀ" [ref=f147e191]:
+                  - /url: javascript:;
+                - generic [ref=f147e195]:
+                  - link [ref=f147e197]:
+                    - /url: javascript:;
+                    - img "VĨNH HÀ" [ref=f147e198]
+                  - link "VĨNH HÀ" [ref=f147e200]:
+                    - /url: javascript:;
+              - generic [ref=f147e201]:
+                - region "Audio Player" [ref=f147e205]:
+                  - region "video player" [ref=f147e207]:
+                    - generic [ref=f147e208] [cursor=pointer]:
+                      - button ""
+                      - button ""
+                - link [ref=f147e212] [cursor=pointer]:
+                  - /url: https://news.google.com/publications/CAAqJAgKIh5DQklTRUFnTWFnd0tDblIxYjJsMGNtVXVkbTRvQUFQAQ?ceid=VN:vi&oc=3
+                  - img "news google" [ref=f147e213]
+            - paragraph [ref=f147e214]: Cháu bé bị bỏ quên trên xe đưa đón cả chục giờ đồng hồ dưới cái nóng gần 40 độ, và người phát hiện ra vẫn không phải lái xe, cô giáo...
+            - generic [ref=f147e215]:
+              - generic [ref=f147e216]:
+                - figure [ref=f147e217]:
+                  - link [ref=f147e219] [cursor=pointer]:
+                    - /url: https://cdn.tuoitre.vn/471584752817336320/2024/5/29/hien-truong-bo-quen-3-17169996058391568249818.jpg
+                    - 'img "Chiếc xe trong vụ bỏ quên bé mầm non ở TP Thái Bình - Ảnh: KHÁNH LINH" [ref=f147e220]'
+                  - paragraph [ref=f147e228]: "Chiếc xe trong vụ bỏ quên bé mầm non ở TP Thái Bình - Ảnh: KHÁNH LINH"
+                - paragraph [ref=f147e229]: Thêm một đứa trẻ bị cướp đi cuộc sống chỉ vì sự vô trách nhiệm của người lớn. Vào ngày đi học cuối năm, những đứa trẻ háo hức đến trường dự liên hoan, chụp hình và bắt đầu kỳ nghỉ hè vui vẻ. Còn cậu bé ấy thì đã mãi mãi dừng lại chỉ vì một sai sót của người lớn.
+                - paragraph [ref=f147e230]:
+                  - text: Bé bị
+                  - link "bỏ quên trên xe đưa đón" [ref=f147e231] [cursor=pointer]:
+                    - /url: /mot-tre-mam-non-chet-nghi-bi-bo-quen-tren-xe-dua-don-20240529205214584.htm
+                  - text: cả chục giờ đồng hồ dưới cái nóng gần 40 độ và người phát hiện ra điều này vẫn không phải lái xe, cô giáo phụ trách trên xe đưa đón, giáo viên chủ nhiệm. Người thân chỉ biết chuyện vào giờ đón cháu buổi chiều và anh cũng là người phá cửa xe, với hy vọng mong manh cứu được cháu mình.
+                - paragraph [ref=f147e232]: "Niềm hy vọng đó đã tắt. Và điều đau đớn nhất của gia đình, của bất cứ ai chứng kiến, biết đến sự việc này là sự hình dung về những giây phút cuối cùng của bé: hoảng loạn, sợ hãi, có thể gào khóc tuyệt vọng trong sự đơn độc."
+                - paragraph [ref=f147e233]:
+                  - text: Câu chuyện đau lòng xảy ra tại Thái Bình vào ngày hôm qua gợi lại nỗi kinh hoàng hơn 4 năm về trước khi một học sinh lớp 1
+                  - link "trường Gateway" [ref=f147e234] [cursor=pointer]:
+                    - /url: /be-lop-1-tu-vong-tren-oto-truong-gateway-xac-nhan-chau-bi-bo-quen-tren-xe-20190806214141997.htm
+                  - text: (Hà Nội) cũng bị bỏ quên trên ô tô gần 10 tiếng ngay trong ngày đầu tiên tựu trường khiến bé tử vong.
+                - generic [ref=f147e235]:
+                  - region "Video Player" [ref=f147e237]:
+                    - region "video player" [ref=f147e240]:
+                      - generic [ref=f147e241] [cursor=pointer]
+                      - generic [ref=f147e245] [cursor=pointer]:
+                        - button ""
+                        - button ""
+                      - text:    
+                      - generic [ref=f147e248]:
+                        - generic [ref=f147e249]:
+                          - generic [ref=f147e250]: 
+                          - text: 00:01:16
+                        - generic:
+                          - generic:
+                            - button ""
+                            - generic [ref=f147e251] [cursor=pointer]
+                          - button ""
+                      - text:  
+                  - paragraph [ref=f147e256]: Diễn biến vụ bé 5 tuổi bị bỏ quên, tử vong trong ô tô đưa đón của trường
+                - paragraph [ref=f147e257]: Sự việc kinh hoàng này đã khiến hầu hết các trường có dịch vụ xe đưa đón học sinh phải kiểm soát lại quy trình, siết chặt quản lý. Nhiều trường ở thời kỳ đó còn xây dựng thành văn bản giấy trắng mực đen quy định về việc kiểm soát, bàn giao học sinh, trách nhiệm của người phụ trách ở từng khâu đón, trả và quản lý học sinh tại trường. Có trường còn cài đặt app để lập tức báo cho phụ huynh khi trẻ vào lớp...
+                - paragraph [ref=f147e258]: Nhưng chuyện "bỏ quên trẻ trên ô tô" vẫn diễn ra rải rác ở Hà Nội, Bắc Ninh… Chỉ có điều sự việc được phát hiện sớm nên trẻ đã được cứu. Không có thương vong, chuyện "bỏ quên" đã mờ nhạt. Người ta quên dần câu chuyện bỏ quên, chỉ có nỗi đau âm ỉ trong lòng những người đã mất đi người thân.
+                - iframe [ref=f147e267]
+                - list [ref=f147e270]:
+                  - listitem [ref=f147e271]:
+                    - heading [level=4] [ref=f147e272]:
+                      - 'link "Vụ trẻ 5 tuổi bị quên trên xe đưa đón: ''Cháu luôn ngồi đầu ngay sau tài xế''" [ref=f147e273] [cursor=pointer]':
+                        - /url: /vu-tre-5-tuoi-bi-quen-tren-xe-dua-don-chau-luon-ngoi-dau-ngay-sau-tai-xe-20240530112528976.htm
+                - paragraph [ref=f147e274]: Sự cẩn trọng, trách nhiệm của những người làm công việc liên quan tới trẻ em đã có bài học cũ, nhưng thật đáng tiếc, phải khi có thêm nỗi đau mới, nó mới được nhiều người nhìn nhận lại.
+                - paragraph [ref=f147e275]:
+                  - link "Truy cứu trách nhiệm" [ref=f147e276] [cursor=pointer]:
+                    - /url: /khoi-to-vu-an-be-5-tuoi-bi-bo-quen-chet-trong-o-to-dua-don-cua-truong-mam-non-20240529233405663.htm
+                  - text: của những người liên quan là việc phải làm bây giờ và có thể nhiều nhà trường sẽ lại kiểm tra nghiêm ngặt hơn, tăng cường trách nhiệm hơn trong việc đưa đón học sinh, bàn giao, quản lý học sinh.
+                - paragraph [ref=f147e277]: Nhưng để bài học này chuyển hóa thành ý thức trách nhiệm của những người làm trong môi trường giáo dục và có liên quan tới môi trường giáo dục, trước hết, việc bảo vệ trẻ em phải trở thành nguyên tắc bắt buộc đặt lên hàng đầu trong tất cả các nhiệm vụ, ở tất cả mọi vị trí công việc và cần được kiểm soát thường xuyên, cần các bộ phận kiểm tra chéo, cần xử lý nghiêm khắc ngay với những sai phạm còn chưa để lại hậu quả lớn.
+                - paragraph [ref=f147e278]: Những đứa trẻ cần ở người lớn một thứ trách nhiệm xuất phát từ nhận thức và trái tim chứ không phải những việc mang tính thời vụ, giải quyết tình thế như nhiều nhà trường đã làm. Vì nếu không như vậy, vẫn là bài học cũ nhưng sẽ còn có những nỗi đau mới…
+                - figure [ref=f147e279]:
+                  - link [ref=f147e281] [cursor=pointer]:
+                    - /url: https://cdn.tuoitre.vn/471584752817336320/2024/5/30/bo-quen-hoc-sinh-1717036201533778648683.jpg
+                    - 'img "Trẻ mầm non chết do bị bỏ quên trên xe: Bài học cũ, nỗi đau mới!- Ảnh 2." [ref=f147e282]'
+                - generic [ref=f147e283]:
+                  - link "Chủ tịch tỉnh Thái Bình chỉ đạo điều tra vụ trẻ mầm non bị bỏ quên, chết trong xe đưa đón":
+                    - /url: /chu-tich-tinh-thai-binh-chi-dao-dieu-tra-vu-tre-mam-non-bi-bo-quen-chet-trong-xe-dua-don-20240529223201999.htm
+                    - img "Chủ tịch tỉnh Thái Bình chỉ đạo điều tra vụ trẻ mầm non bị bỏ quên, chết trong xe đưa đón" [ref=f147e284] [cursor=pointer]
+                  - link "Chủ tịch tỉnh Thái Bình chỉ đạo điều tra vụ trẻ mầm non bị bỏ quên, chết trong xe đưa đón" [ref=f147e285] [cursor=pointer]:
+                    - /url: /chu-tich-tinh-thai-binh-chi-dao-dieu-tra-vu-tre-mam-non-bi-bo-quen-chet-trong-xe-dua-don-20240529223201999.htm
+                  - paragraph [ref=f147e286]: Tối 29-5, ông Nguyễn Khắc Thận - chủ tịch UBND tỉnh Thái Bình - chủ trì cuộc họp khẩn, chỉ đạo điều tra vụ trẻ mầm non chết trong xe ô tô đưa đón do bị bỏ quên.
+              - generic [ref=f147e288]:
+                - link "Trở lại chủ đề" [ref=f147e290] [cursor=pointer]:
+                  - /url: /nhom-chu-de.htm
+                - link "VĨNH HÀ" [ref=f147e294] [cursor=pointer]:
+                  - /url: javascript:;
+            - generic [ref=f147e297]:
+              - generic [ref=f147e298]:
+                - generic [ref=f147e299] [cursor=pointer]: "0"
+                - generic [ref=f147e311] [cursor=pointer]: "26"
+                - generic [ref=f147e316] [cursor=pointer]: "25"
+              - generic [ref=f147e321]:
+                - generic [ref=f147e322]: Tặng sao cho bài viết hay
+                - generic [ref=f147e325]:
+                  - generic [ref=f147e326]: Chia sẻ
+                  - button "Chia sẻ qua Facebook" [ref=f147e327] [cursor=pointer]
+                  - button "Copy link bài viết" [ref=f147e330] [cursor=pointer]
+                  - button "Chia sẻ qua các mạng xã hội" [ref=f147e335] [cursor=pointer]
+                  - text: 𝕏
+                - link [ref=f147e343] [cursor=pointer]:
+                  - /url: https://www.google.com/preferences/source?q=tuoitre.vn
+                  - img "google" [ref=f147e344]
+                  - text: Nguồn ưu tiên trên Google
+            - generic [ref=f147e346]:
+              - generic [ref=f147e347]:
+                - generic [ref=f147e348]: Bình luận (88)
+                - generic [ref=f147e349]:
+                  - img "thông tin tài khoản" [ref=f147e350]
+                  - generic [ref=f147e351]:
+                    - generic [ref=f147e352]:
+                      - textbox "Để lại bình luận của bạn..." [ref=f147e353]
+                      - generic [ref=f147e354] [cursor=pointer]
+                    - generic:
+                      - button "Đăng nhập"
+              - generic [ref=f147e355]:
+                - generic [ref=f147e356]:
+                  - generic [ref=f147e357]:
+                    - generic [ref=f147e358] [cursor=pointer]: Được quan tâm nhất
+                    - generic [ref=f147e359] [cursor=pointer]: Mới nhất
+                  - list [ref=f147e360]:
+                    - listitem [ref=f147e361]:
+                      - generic [ref=f147e363]:
+                        - generic [ref=f147e364]: Sumo
+                        - generic [ref=f147e366]: Đơn giản khâu cuối cùng của đón trẻ là điểm danh. Hôm nay bé nào vắng thì hãy gọi điện hỏi bố mẹ tại sao hôm nay con vắng. Nếu không liên hệ được bố mẹ thì phải kiểm tra lại việc đưa đón.
+                        - list [ref=f147e367]:
+                          - listitem [ref=f147e368]:
+                            - button "Trả lời" [ref=f147e369] [cursor=pointer]
+                            - generic [ref=f147e370] [cursor=pointer]: Chia sẻ
+                            - generic "2024-05-30T09:05:57" [ref=f147e371]: 2 năm trước
+                          - listitem [ref=f147e372]:
+                            - generic [ref=f147e373] [cursor=pointer]: "107"
+                            - button [ref=f147e389] [cursor=pointer]
+                        - button "Xem tất cả 4 trả lời" [ref=f147e391] [cursor=pointer]
+                    - listitem [ref=f147e393]:
+                      - generic [ref=f147e395]:
+                        - generic [ref=f147e396]: Lan Anh
+                        - generic [ref=f147e399]:
+                          - text: Khi đã dừng xe lại, tài xế làm ơn đi một vòng trên xe để xem xét, có mất bao nhiêu thời gian đâu mà có thể tránh được những chuyện đau lòng như vầy.Chiếc xe lớn như vậy, mỗi khi lăn bánh đều phải đi...
+                          - link "Xem thêm +" [ref=f147e400] [cursor=pointer]:
+                            - /url: javascript:;
+                        - list [ref=f147e401]:
+                          - listitem [ref=f147e402]:
+                            - button "Trả lời" [ref=f147e403] [cursor=pointer]
+                            - generic [ref=f147e404] [cursor=pointer]: Chia sẻ
+                            - generic "2024-05-30T10:55:59" [ref=f147e405]: 2 năm trước
+                          - listitem [ref=f147e406]:
+                            - generic [ref=f147e407] [cursor=pointer]: "40"
+                            - button [ref=f147e421] [cursor=pointer]
+                    - listitem [ref=f147e423]:
+                      - generic [ref=f147e425]:
+                        - generic [ref=f147e426]: Tôi yêu Việt Nam
+                        - generic [ref=f147e429]:
+                          - text: Tôi thực sự không hiểu nổi giáo viên phụ trách đưa đón trẻ và lái xe đã làm gì khi cháu đến trường mà chẳng thèm điểm danh các cháu. Cô chủ nhiệm thì chẳng thèm đếm xỉa đến sự có mặt hay vắng mặt của...
+                          - link "Xem thêm +" [ref=f147e430] [cursor=pointer]:
+                            - /url: javascript:;
+                        - list [ref=f147e431]:
+                          - listitem [ref=f147e432]:
+                            - button "Trả lời" [ref=f147e433] [cursor=pointer]
+                            - generic [ref=f147e434] [cursor=pointer]: Chia sẻ
+                            - generic "2024-05-30T09:56:29" [ref=f147e435]: 2 năm trước
+                          - listitem [ref=f147e436]:
+                            - generic [ref=f147e437] [cursor=pointer]: "38"
+                            - button [ref=f147e449] [cursor=pointer]
+                    - listitem [ref=f147e451]:
+                      - generic [ref=f147e453]:
+                        - generic [ref=f147e454]: Duong mạnh nguyen
+                        - generic [ref=f147e456]: Thật không thể hiểu nổi sự vô trách nhiệm với tính mạng một con người.
+                        - list [ref=f147e457]:
+                          - listitem [ref=f147e458]:
+                            - button "Trả lời" [ref=f147e459] [cursor=pointer]
+                            - generic [ref=f147e460] [cursor=pointer]: Chia sẻ
+                            - generic "2024-05-30T10:44:29" [ref=f147e461]: 2 năm trước
+                          - listitem [ref=f147e462]:
+                            - generic [ref=f147e463] [cursor=pointer]: "37"
+                            - button [ref=f147e475] [cursor=pointer]
+                    - listitem [ref=f147e477]:
+                      - generic [ref=f147e479]:
+                        - generic [ref=f147e480]: Phụ huynh có 2 con
+                        - generic [ref=f147e482]: Cần phải trang bị nút bấm khẩn cấp hú còi trên tất cả các xe và các bé buộc phải được huấn luyện để biết sử dụng nút này, hoặc là huấn luyện bấm còi cho bé.
+                        - list [ref=f147e483]:
+                          - listitem [ref=f147e484]:
+                            - button "Trả lời" [ref=f147e485] [cursor=pointer]
+                            - generic [ref=f147e486] [cursor=pointer]: Chia sẻ
+                            - generic "2024-05-30T10:54:21" [ref=f147e487]: 2 năm trước
+                          - listitem [ref=f147e488]:
+                            - generic [ref=f147e489] [cursor=pointer]: "34"
+                            - button [ref=f147e503] [cursor=pointer]
+                        - button "Xem tất cả 3 trả lời" [ref=f147e505] [cursor=pointer]
+                - button "Xem tất cả bình luận" [ref=f147e510] [cursor=pointer]
+            - generic [ref=f147e516]:
+              - text: "Chủ đề:"
+              - link "bỏ quên học sinh trên xe" [ref=f147e517] [cursor=pointer]:
+                - /url: /bo-quen-hoc-sinh-tren-xe.html
+              - link "bỏ quên trẻ trên xe đưa đón" [ref=f147e518] [cursor=pointer]:
+                - /url: /bo-quen-tre-tren-xe-dua-don.html
+              - link "xe đưa đón" [ref=f147e519] [cursor=pointer]:
+                - /url: /xe-dua-don.html
+              - link "trẻ mầm non" [ref=f147e520] [cursor=pointer]:
+                - /url: /tre-mam-non.html
+              - link "Thái Bình" [ref=f147e521] [cursor=pointer]:
+                - /url: /thai-binh.html
+            - generic [ref=f147e523]:
+              - heading [level=2] [ref=f147e525]:
+                - text: "Dòng sự kiện:"
+                - link "Vụ trẻ mầm non chết do bị bỏ quên trên xe" [ref=f147e526] [cursor=pointer]:
+                  - /url: /vu-tre-mam-non-chet-do-bi-bo-quen-tren-xe-e1806.htm
+              - generic [ref=f147e527]:
+                - generic [ref=f147e528]:
+                  - heading [level=3] [ref=f147e529]:
+                    - 'link "Sau vụ bỏ quên trẻ trên xe: Bộ Giao thông vận tải đề nghị tăng cường an toàn xe đưa đón học sinh" [ref=f147e530] [cursor=pointer]':
+                      - /url: /sau-vu-bo-quen-tre-tren-xe-bo-giao-thong-van-tai-de-nghi-tang-cuong-an-toan-xe-dua-don-hoc-sinh-20240607174621386.htm
+                  - paragraph [ref=f147e531]: 07/06
+                - generic [ref=f147e532]:
+                  - heading [level=3] [ref=f147e533]:
+                    - 'link "Từ vụ bỏ quên học sinh trên xe: Nên trang bị cho trẻ đồng hồ định vị" [ref=f147e534] [cursor=pointer]':
+                      - /url: /tu-vu-bo-quen-hoc-sinh-tren-xe-nen-trang-bi-cho-tre-dong-ho-dinh-vi-20240601075953744.htm
+                  - paragraph [ref=f147e535]: 01/06
+                - generic [ref=f147e536]:
+                  - heading [level=3] [ref=f147e537]:
+                    - link "'Lỗ hổng' xe đưa đón học sinh, phải quy định trách nhiệm rõ ràng" [ref=f147e538] [cursor=pointer]:
+                      - /url: /lo-hong-xe-dua-don-hoc-sinh-phai-quy-dinh-trach-nhiem-ro-rang-20240531224140392.htm
+                  - paragraph [ref=f147e539]: 01/06
+                - generic [ref=f147e540]:
+                  - heading [level=3] [ref=f147e541]:
+                    - 'link "Vụ trẻ mầm non bị bỏ quên trên xe đưa đón: Cần tập trung giải pháp với người lớn" [ref=f147e542] [cursor=pointer]':
+                      - /url: /vu-tre-mam-non-bi-bo-quen-tren-xe-dua-don-can-tap-trung-giai-phap-voi-nguoi-lon-20240531154402832.htm
+                  - paragraph [ref=f147e543]: 31/05
+                - generic [ref=f147e544]:
+                  - heading [level=3] [ref=f147e545]:
+                    - 'link "Vụ trẻ chết trên xe đưa đón: Khởi tố thêm tài xế và hai giáo viên" [ref=f147e546] [cursor=pointer]':
+                      - /url: /vu-tre-chet-tren-xe-dua-don-khoi-to-them-tai-xe-va-hai-giao-vien-20240531160529054.htm
+                  - paragraph [ref=f147e547]: 31/05
+              - link "Xem thêm" [ref=f147e548] [cursor=pointer]:
+                - /url: /vu-tre-mam-non-chet-do-bi-bo-quen-tren-xe-e1806.htm
+            - generic [ref=f147e550]:
+              - heading "Tin liên quan" [level=3] [ref=f147e552]
+              - generic [ref=f147e553]:
+                - article [ref=f147e554]:
+                  - link [ref=f147e555] [cursor=pointer]:
+                    - /url: /be-3-tuoi-bi-bo-quen-tren-xe-duoc-cuu-song-la-truong-hop-hi-huu-20190916121805858.htm
+                    - img "Bé 3 tuổi bị bỏ quên trên xe được cứu sống là 'trường hợp hi hữu'" [ref=f147e556]
+                  - heading [level=4] [ref=f147e558]:
+                    - link "Bé 3 tuổi bị bỏ quên trên xe được cứu sống là 'trường hợp hi hữu'" [ref=f147e559] [cursor=pointer]:
+                      - /url: /be-3-tuoi-bi-bo-quen-tren-xe-duoc-cuu-song-la-truong-hop-hi-huu-20190916121805858.htm
+                - article [ref=f147e560]:
+                  - link [ref=f147e561] [cursor=pointer]:
+                    - /url: /nguoi-than-bo-quen-be-19-thang-tuoi-tren-xe-hoi-ngoai-nang-be-hon-me-20200609175343174.htm
+                    - img "Người thân bỏ quên bé 19 tháng tuổi trên xe hơi ngoài nắng, bé hôn mê" [ref=f147e562]
+                  - heading [level=4] [ref=f147e564]:
+                    - link "Người thân bỏ quên bé 19 tháng tuổi trên xe hơi ngoài nắng, bé hôn mê" [ref=f147e565] [cursor=pointer]:
+                      - /url: /nguoi-than-bo-quen-be-19-thang-tuoi-tren-xe-hoi-ngoai-nang-be-hon-me-20200609175343174.htm
+                - article [ref=f147e566]:
+                  - link [ref=f147e567] [cursor=pointer]:
+                    - /url: /ngu-quen-hoc-sinh-lop-4-bi-bo-quen-tren-xe-dua-don-20200610153056692.htm
+                    - img "Ngủ quên, học sinh lớp 4 bị bỏ quên trên xe đưa đón" [ref=f147e568]
+                  - heading [level=4] [ref=f147e570]:
+                    - link "Ngủ quên, học sinh lớp 4 bị bỏ quên trên xe đưa đón" [ref=f147e571] [cursor=pointer]:
+                      - /url: /ngu-quen-hoc-sinh-lop-4-bi-bo-quen-tren-xe-dua-don-20200610153056692.htm
+            - generic [ref=f147e577]:
+              - heading "Tuổi Trẻ Online Newsletters" [level=3] [ref=f147e578]
+              - generic [ref=f147e583]:
+                - generic [ref=f147e584]:
+                  - heading "Đăng ký ngay để nhận gói tin tức mới" [level=3] [ref=f147e585]
+                  - paragraph [ref=f147e586]: Tuổi Trẻ Online sẽ gởi đến bạn những tin tức nổi bật nhất
+                - generic [ref=f147e587]:
+                  - link "Đăng ký":
+                    - /url: https://sso.tuoitre.vn/dang-ky-ban-tin
+                    - img "Đăng ký"
+            - generic:
+              - complementary
+            - complementary
+          - generic [ref=f147e590]:
+            - heading [level=2] [ref=f147e592]:
+              - paragraph [ref=f147e593]: Đừng bỏ lỡ
+            - generic [ref=f147e594]:
+              - generic [ref=f147e595]:
+                - generic [ref=f147e596]:
+                  - link [ref=f147e597] [cursor=pointer]:
+                    - /url: /bo-cong-an-thong-bao-ve-doi-tuong-khung-bo-nguyen-van-dai-100261008151405428.htm
+                    - img "Bộ Công an thông báo về đối tượng khủng bố Nguyễn Văn Đài" [ref=f147e598]
+                  - heading [level=3] [ref=f147e601]:
+                    - link "Bộ Công an thông báo về đối tượng khủng bố Nguyễn Văn Đài" [ref=f147e602] [cursor=pointer]:
+                      - /url: /bo-cong-an-thong-bao-ve-doi-tuong-khung-bo-nguyen-van-dai-100261008151405428.htm
+                - generic [ref=f147e603]:
+                  - link [ref=f147e604] [cursor=pointer]:
+                    - /url: /nga-cong-bo-ket-qua-5000-xet-nghiem-lien-quan-ca-tu-vong-nghi-do-dich-hach-100261008193541253.htm
+                    - img "Nga công bố kết quả 5.000 xét nghiệm liên quan ca tử vong nghi do dịch hạch" [ref=f147e605]
+                  - heading [level=3] [ref=f147e608]:
+                    - link "Nga công bố kết quả 5.000 xét nghiệm liên quan ca tử vong nghi do dịch hạch" [ref=f147e609] [cursor=pointer]:
+                      - /url: /nga-cong-bo-ket-qua-5000-xet-nghiem-lien-quan-ca-tu-vong-nghi-do-dich-hach-100261008193541253.htm
+                - generic [ref=f147e610]:
+                  - link [ref=f147e611] [cursor=pointer]:
+                    - /url: /luu-diec-phi-mat-nhieu-hop-dong-quang-cao-lon-100261008202857793.htm
+                    - img "Lưu Diệc Phi mất nhiều hợp đồng quảng cáo lớn" [ref=f147e612]
+                  - heading [level=3] [ref=f147e615]:
+                    - link "Lưu Diệc Phi mất nhiều hợp đồng quảng cáo lớn" [ref=f147e616] [cursor=pointer]:
+                      - /url: /luu-diec-phi-mat-nhieu-hop-dong-quang-cao-lon-100261008202857793.htm
+              - generic [ref=f147e617]:
+                - generic [ref=f147e618]:
+                  - link [ref=f147e619] [cursor=pointer]:
+                    - /url: /xuat-hien-tinh-tiet-moi-vu-kien-hiep-dam-tap-the-tai-dai-hoc-cornell-100261008121552594.htm
+                    - img "Xuất hiện tình tiết mới vụ kiện hiếp dâm tập thể tại Đại học Cornell" [ref=f147e620]
+                  - heading [level=3] [ref=f147e623]:
+                    - link "Xuất hiện tình tiết mới vụ kiện hiếp dâm tập thể tại Đại học Cornell" [ref=f147e624] [cursor=pointer]:
+                      - /url: /xuat-hien-tinh-tiet-moi-vu-kien-hiep-dam-tap-the-tai-dai-hoc-cornell-100261008121552594.htm
+                - generic [ref=f147e625]:
+                  - link [ref=f147e626] [cursor=pointer]:
+                    - /url: /nu-tu-tu-bi-tiem-thuoc-ma-khong-chet-noi-gi-sau-khi-tinh-lai-100261008064354923.htm
+                    - img "Nữ tử tù bị tiêm thuốc mà không chết nói gì sau khi tỉnh lại?" [ref=f147e627]
+                  - heading [level=3] [ref=f147e630]:
+                    - link "Nữ tử tù bị tiêm thuốc mà không chết nói gì sau khi tỉnh lại?" [ref=f147e631] [cursor=pointer]:
+                      - /url: /nu-tu-tu-bi-tiem-thuoc-ma-khong-chet-noi-gi-sau-khi-tinh-lai-100261008064354923.htm
+                - generic [ref=f147e632]:
+                  - link [ref=f147e633] [cursor=pointer]:
+                    - /url: /viet-nam-lao-khang-dinh-uu-tien-cao-nhat-cho-viec-vun-dap-quan-he-dac-biet-100261008210654875.htm
+                    - img "Việt Nam - Lào khẳng định ưu tiên cao nhất cho việc vun đắp quan hệ đặc biệt" [ref=f147e634]
+                  - heading [level=3] [ref=f147e637]:
+                    - link "Việt Nam - Lào khẳng định ưu tiên cao nhất cho việc vun đắp quan hệ đặc biệt" [ref=f147e638] [cursor=pointer]:
+                      - /url: /viet-nam-lao-khang-dinh-uu-tien-cao-nhat-cho-viec-vun-dap-quan-he-dac-biet-100261008210654875.htm
+          - generic:
+            - complementary
+          - generic [ref=f147e640]:
+            - paragraph [ref=f147e643]: Tin cùng chuyên mục
+            - generic [ref=f147e644]:
+              - generic [ref=f147e645]:
+                - article [ref=f147e646]:
+                  - link [ref=f147e647] [cursor=pointer]:
+                    - /url: /huong-nghiep-tu-lop-9-de-tranh-thi-diem-cao-nhung-chon-sai-nghe-100261008204337336.htm
+                    - img "Hướng nghiệp từ lớp 9 để tránh 'thi điểm cao nhưng chọn sai nghề'" [ref=f147e648]
+                  - heading [level=3] [ref=f147e650]:
+                    - link "Hướng nghiệp từ lớp 9 để tránh 'thi điểm cao nhưng chọn sai nghề'" [ref=f147e651] [cursor=pointer]:
+                      - /url: /huong-nghiep-tu-lop-9-de-tranh-thi-diem-cao-nhung-chon-sai-nghe-100261008204337336.htm
+                - article [ref=f147e652]:
+                  - link [ref=f147e653] [cursor=pointer]:
+                    - /url: /danh-muc-dao-tao-nghe-them-loat-nghe-la-kham-chua-tau-dien-hlv-yoga-nghe-thuat-so-hoa-di-san-100261008193709866.htm
+                    - 'img "Danh mục đào tạo nghề thêm loạt ''nghề lạ'': khám chữa tàu điện, HLV yoga nghệ thuật, số hóa di sản" [ref=f147e654]'
+                  - heading [level=3] [ref=f147e656]:
+                    - 'link "Danh mục đào tạo nghề thêm loạt ''nghề lạ'': khám chữa tàu điện, HLV yoga nghệ thuật, số hóa di sản" [ref=f147e657] [cursor=pointer]':
+                      - /url: /danh-muc-dao-tao-nghe-them-loat-nghe-la-kham-chua-tau-dien-hlv-yoga-nghe-thuat-so-hoa-di-san-100261008193709866.htm
+                - article [ref=f147e658]:
+                  - link [ref=f147e659] [cursor=pointer]:
+                    - /url: /ung-dung-chatgpt-day-khoa-hoc-tieu-hoc-ai-chi-la-tro-luc-hoc-sinh-la-trung-tam-100261008172904428.htm
+                    - 'img "Ứng dụng ChatGPT dạy khoa học tiểu học: AI chỉ là trợ lực, học sinh là trung tâm" [ref=f147e660]'
+                  - heading [level=3] [ref=f147e662]:
+                    - 'link "Ứng dụng ChatGPT dạy khoa học tiểu học: AI chỉ là trợ lực, học sinh là trung tâm" [ref=f147e663] [cursor=pointer]':
+                      - /url: /ung-dung-chatgpt-day-khoa-hoc-tieu-hoc-ai-chi-la-tro-luc-hoc-sinh-la-trung-tam-100261008172904428.htm
+              - generic [ref=f147e664]:
+                - article [ref=f147e665]:
+                  - link [ref=f147e666] [cursor=pointer]:
+                    - /url: /hdbank-va-dai-hoc-quoc-gia-tphcm-hop-tac-toan-dien-100261008181215275.htm
+                    - img "HDBank và Đại học Quốc gia TP.HCM hợp tác toàn diện" [ref=f147e667]
+                  - heading [level=3] [ref=f147e669]:
+                    - link "HDBank và Đại học Quốc gia TP.HCM hợp tác toàn diện" [ref=f147e670] [cursor=pointer]:
+                      - /url: /hdbank-va-dai-hoc-quoc-gia-tphcm-hop-tac-toan-dien-100261008181215275.htm
+                - article [ref=f147e671]:
+                  - link [ref=f147e672] [cursor=pointer]:
+                    - /url: /chang-trai-lao-dung-tieng-viet-noi-cau-huu-nghi-1002610070856276.htm
+                    - img "Chàng trai Lào dùng tiếng Việt nối cầu hữu nghị" [ref=f147e673]
+                  - heading [level=3] [ref=f147e675]:
+                    - link "Chàng trai Lào dùng tiếng Việt nối cầu hữu nghị" [ref=f147e676] [cursor=pointer]:
+                      - /url: /chang-trai-lao-dung-tieng-viet-noi-cau-huu-nghi-1002610070856276.htm
+                - article [ref=f147e677]:
+                  - link [ref=f147e678] [cursor=pointer]:
+                    - /url: /bo-gd-dt-nghiem-cam-truong-hoc-thu-tien-hoat-dong-giao-duc-tang-cuong-100261008172431565.htm
+                    - 'img "Bộ GD-ĐT: Nghiêm cấm trường học thu tiền hoạt động giáo dục tăng cường" [ref=f147e679]'
+                  - heading [level=3] [ref=f147e681]:
+                    - 'link "Bộ GD-ĐT: Nghiêm cấm trường học thu tiền hoạt động giáo dục tăng cường" [ref=f147e682] [cursor=pointer]':
+                      - /url: /bo-gd-dt-nghiem-cam-truong-hoc-thu-tien-hoat-dong-giao-duc-tang-cuong-100261008172431565.htm
+          - generic [ref=f147e685]:
+            - heading "Đọc thêm" [level=2] [ref=f147e687]
+            - generic [ref=f147e688]:
+              - generic [ref=f147e689]:
+                - link [ref=f147e690] [cursor=pointer]:
+                  - /url: /sang-tat-bat-di-lam-trua-moi-nguoi-mot-noi-toi-ve-muon-bua-com-gia-dinh-sao-kho-qua-100261008084756084.htm
+                  - img "Sáng tất bật đi làm, trưa mỗi người một nơi, tối về muộn, bữa cơm gia đình sao khó quá" [ref=f147e691]
+                - generic [ref=f147e692]:
+                  - link:
+                    - /url: undefined
+                  - heading [level=3] [ref=f147e694]:
+                    - link "Sáng tất bật đi làm, trưa mỗi người một nơi, tối về muộn, bữa cơm gia đình sao khó quá" [ref=f147e695] [cursor=pointer]:
+                      - /url: /sang-tat-bat-di-lam-trua-moi-nguoi-mot-noi-toi-ve-muon-bua-com-gia-dinh-sao-kho-qua-100261008084756084.htm
+                  - paragraph [ref=f147e696]: "Sống giữa thành phố đông đúc, tôi tin chắc, đã có nhiều người tự hỏi: Có bao nhiêu gia đình vẫn giữ được thói quen ngồi ăn cơm cùng nhau mỗi ngày?"
+              - generic [ref=f147e697]:
+                - link [ref=f147e698] [cursor=pointer]:
+                  - /url: /chung-ta-da-thuc-su-biet-cach-cham-soc-ban-than-100261008150812791.htm
+                  - img "Chúng ta đã thực sự biết cách chăm sóc bản thân?" [ref=f147e699]
+                - generic [ref=f147e700]:
+                  - link "Biết để khỏe" [ref=f147e701] [cursor=pointer]:
+                    - /url: /suc-khoe/biet-de-khoe.htm
+                  - heading [level=3] [ref=f147e703]:
+                    - link "Chúng ta đã thực sự biết cách chăm sóc bản thân?" [ref=f147e704] [cursor=pointer]:
+                      - /url: /chung-ta-da-thuc-su-biet-cach-cham-soc-ban-than-100261008150812791.htm
+                  - paragraph [ref=f147e705]: Trong nhịp sống hiện đại, nhiều người dành phần lớn thời gian cho công việc, gia đình và những trách nhiệm khác, trong khi sức khỏe cá nhân thường bị lãng quên.
+              - generic [ref=f147e706]:
+                - link [ref=f147e707] [cursor=pointer]:
+                  - /url: /danh-vat-voi-ngap-nuoc-ket-xe-toi-cang-yeu-metro-100261008090643734.htm
+                  - img "'Đánh vật' với ngập nước, kẹt xe, tôi càng yêu metro" [ref=f147e708]
+                - generic [ref=f147e709]:
+                  - link:
+                    - /url: undefined
+                  - heading [level=3] [ref=f147e711]:
+                    - link "'Đánh vật' với ngập nước, kẹt xe, tôi càng yêu metro" [ref=f147e712] [cursor=pointer]:
+                      - /url: /danh-vat-voi-ngap-nuoc-ket-xe-toi-cang-yeu-metro-100261008090643734.htm
+                  - paragraph [ref=f147e713]: Những ngày qua trời mưa to. Ra đường gặp phải tình trạng kẹt xe, ngập nước, tôi càng thấy giá trị của metro.
+              - generic [ref=f147e719]:
+                - link [ref=f147e720] [cursor=pointer]:
+                  - /url: https://lg1.logging.admicro.vn/cpx_cms?dmn=https%3A%2F%2Ftuoitre.vn%2Ftre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm&zid=jw8n4365&pli=muuxt4zl&cmpg=jn4ax0v3&items=muuxt57d&cat=%2Fgiao-duc%2Fdetail%2F&cov=1&pgid=1791483978105517300&uid=1791483978105517300&re=https%3A%2F%2Fwww.kfucoidan.com.vn%2F%3Futmsource%3DTUOITRE%26utm_medium%3Dbanner%26utm_campaign%3Dbranding&lc=5
+                - generic [ref=f147e721]:
+                  - link "Tài trợ | UMI NO SHIZUKU" [ref=f147e722] [cursor=pointer]:
+                    - /url: https://lg1.logging.admicro.vn/cpx_cms?dmn=https%3A%2F%2Ftuoitre.vn%2Ftre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm&zid=jw8n4365&pli=muuxt4zl&cmpg=jn4ax0v3&items=muuxt57d&cat=%2Fgiao-duc%2Fdetail%2F&cov=1&pgid=1791483978105517300&uid=1791483978105517300&re=https%3A%2F%2Fwww.kfucoidan.com.vn%2F%3Futmsource%3DTUOITRE%26utm_medium%3Dbanner%26utm_campaign%3Dbranding&lc=5
+                  - heading [level=3] [ref=f147e724]:
+                    - link "Lựa chọn Fucoidan Umi No Shizuku chính hãng để an tâm sử dụng" [ref=f147e725] [cursor=pointer]:
+                      - /url: https://lg1.logging.admicro.vn/cpx_cms?dmn=https%3A%2F%2Ftuoitre.vn%2Ftre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm&zid=jw8n4365&pli=muuxt4zl&cmpg=jn4ax0v3&items=muuxt57d&cat=%2Fgiao-duc%2Fdetail%2F&cov=1&pgid=1791483978105517300&uid=1791483978105517300&re=https%3A%2F%2Fwww.kfucoidan.com.vn%2F%3Futmsource%3DTUOITRE%26utm_medium%3Dbanner%26utm_campaign%3Dbranding&lc=5
+                  - paragraph [ref=f147e726]: Chúng tôi đã và sẽ tiếp tục mang tới sức khỏe cho tất cả mọi người với UMI NO SHIZUKU.
+              - generic [ref=f147e727]:
+                - link [ref=f147e728] [cursor=pointer]:
+                  - /url: /vi-sao-cu-buoi-chieu-toi-troi-hay-mua-100261008111738011.htm
+                  - img "Vì sao cứ buổi chiều tối trời hay mưa?" [ref=f147e729]
+                - generic [ref=f147e730]:
+                  - link "Lẩu thập cẩm" [ref=f147e731] [cursor=pointer]:
+                    - /url: /tuoi-tre-cuoi/lau-thap-cam.htm
+                  - heading [level=3] [ref=f147e733]:
+                    - link "Vì sao cứ buổi chiều tối trời hay mưa?" [ref=f147e734] [cursor=pointer]:
+                      - /url: /vi-sao-cu-buoi-chieu-toi-troi-hay-mua-100261008111738011.htm
+                  - paragraph [ref=f147e735]: Sáng nắng, trưa oi, đến xế chiều mây đen kéo tới rợp trời rồi mưa. Đây không chỉ là cảm giác của người đi đường. Thực tế, một nghiên cứu về chế độ mưa ở Việt Nam cho thấy Nam Bộ có xu hướng mưa vào cuối buổi chiều qua nhiều mùa trong năm.
+              - generic [ref=f147e736]:
+                - link [ref=f147e737] [cursor=pointer]:
+                  - /url: /phat-tai-xe-o-to-de-dau-tran-ra-duong-khien-nhieu-nguoi-di-xe-may-bi-nga-100261008204950875.htm
+                  - img "Phạt tài xế ô tô để dầu tràn ra đường khiến nhiều người đi xe máy bị ngã" [ref=f147e738]
+                - generic [ref=f147e739]:
+                  - link "Bạn đọc làm báo" [ref=f147e740] [cursor=pointer]:
+                    - /url: /ban-doc-lam-bao.htm
+                  - heading [level=3] [ref=f147e742]:
+                    - link "Phạt tài xế ô tô để dầu tràn ra đường khiến nhiều người đi xe máy bị ngã" [ref=f147e743] [cursor=pointer]:
+                      - /url: /phat-tai-xe-o-to-de-dau-tran-ra-duong-khien-nhieu-nguoi-di-xe-may-bi-nga-100261008204950875.htm
+                  - paragraph [ref=f147e744]: Mặc dù đã phát hiện sự cố và biết dầu đang rò rỉ, tài xế không dừng xe để kiểm tra, khắc phục hoặc thực hiện biện pháp cảnh báo mà tiếp tục di chuyển. Dầu theo đó tiếp tục chảy xuống mặt đường, kéo dài hàng chục mét, gây trơn trượt, khiến nhiều...
+              - generic [ref=f147e748]:
+                - generic:
+                  - insertion
+              - generic [ref=f147e749]:
+                - link [ref=f147e750] [cursor=pointer]:
+                  - /url: /con-gai-14-tuoi-chay-mo-to-bi-tai-nan-chet-nguoi-cha-la-chu-xe-bi-khoi-to-100261008191254883.htm
+                  - img "Con gái 14 tuổi chạy xe mô tô bị tai nạn chết, người cha là chủ xe bị khởi tố" [ref=f147e751]
+                - generic [ref=f147e752]:
+                  - link "Pháp luật" [ref=f147e753] [cursor=pointer]:
+                    - /url: /phap-luat.htm
+                  - heading [level=3] [ref=f147e755]:
+                    - link "Con gái 14 tuổi chạy xe mô tô bị tai nạn chết, người cha là chủ xe bị khởi tố" [ref=f147e756] [cursor=pointer]:
+                      - /url: /con-gai-14-tuoi-chay-mo-to-bi-tai-nan-chet-nguoi-cha-la-chu-xe-bi-khoi-to-100261008191254883.htm
+                  - paragraph [ref=f147e757]: 2 nữ sinh chưa đủ tuổi lái xe mô tô tự gây tai nạn khiến 1 em chết, 1 em bị thương ở phường Sông Cầu, Đắk Lắk. Người cha nữ sinh tử vong cũng là chủ xe, đã bị cơ quan chức năng khởi tố.
+              - generic [ref=f147e758]:
+                - link [ref=f147e759] [cursor=pointer]:
+                  - /url: /o-to-dien-sieu-mini-khien-ai-cung-phai-ngoai-nhin-duoc-di-tren-duong-cua-nguoi-di-bo-100261007163850158.htm
+                  - img "Ô tô điện siêu mini khiến ai cũng phải ngoái nhìn, được đi trên đường của người đi bộ" [ref=f147e760]
+                - generic [ref=f147e761]:
+                  - link "Xe" [ref=f147e762] [cursor=pointer]:
+                    - /url: /xe.htm
+                  - heading [level=3] [ref=f147e764]:
+                    - link "Ô tô điện siêu mini khiến ai cũng phải ngoái nhìn, được đi trên đường của người đi bộ" [ref=f147e765] [cursor=pointer]:
+                      - /url: /o-to-dien-sieu-mini-khien-ai-cung-phai-ngoai-nhin-duoc-di-tren-duong-cua-nguoi-di-bo-100261007163850158.htm
+                  - paragraph [ref=f147e766]: Một chiếc xe có hình dáng giống ô tô điện mini bất ngờ gây chú ý khi xuất hiện trên làn đường dành cho người đi bộ ở New Zealand. Cứ ngỡ một vụ vi phạm giao thông, nhưng danh tính thực sự của chiếc xe có thể khiến nhiều người ngỡ ngàng.
+              - generic [ref=f147e767]:
+                - link [ref=f147e768] [cursor=pointer]:
+                  - /url: /dung-ai-cung-lo-khong-dung-cung-lo-10026100800381908.htm
+                  - img "Dùng AI cũng lo, không dùng cũng lo" [ref=f147e769]
+                - generic [ref=f147e770]:
+                  - link:
+                    - /url: undefined
+                  - heading [level=3] [ref=f147e772]:
+                    - link "Dùng AI cũng lo, không dùng cũng lo" [ref=f147e773] [cursor=pointer]:
+                      - /url: /dung-ai-cung-lo-khong-dung-cung-lo-10026100800381908.htm
+                  - paragraph [ref=f147e774]: Nhiều học sinh cho biết ai trong lớp cũng dùng AI hỗ trợ cho việc học, đến mức 'không dùng AI thì thấy mình lạc nhịp'. Cái khó là không biết mình đang đúng hay sai khi dùng AI cho chuyện học hành.
+              - generic [ref=f147e775]:
+                - link [ref=f147e776] [cursor=pointer]:
+                  - /url: /cu-ngu-day-la-ai-lai-co-cai-moi-hoc-the-nao-de-khong-hut-hoi-100261008113535688.htm
+                  - 'img "Cứ ngủ dậy là AI lại có cái mới: Học thế nào để không hụt hơi?" [ref=f147e777]'
+                - generic [ref=f147e778]:
+                  - link "Giáo dục" [ref=f147e779] [cursor=pointer]:
+                    - /url: /giao-duc.htm
+                  - heading [level=3] [ref=f147e781]:
+                    - 'link "Cứ ngủ dậy là AI lại có cái mới: Học thế nào để không hụt hơi?" [ref=f147e782] [cursor=pointer]':
+                      - /url: /cu-ngu-day-la-ai-lai-co-cai-moi-hoc-the-nao-de-khong-hut-hoi-100261008113535688.htm
+                  - paragraph [ref=f147e783]: Theo chuyên gia, tốc độ ra mắt mô hình và cập nhật ứng dụng AI tạo cảm giác người dùng phải học lại liên tục, đặc biệt với sinh viên.
+              - generic [ref=f147e784]:
+                - link [ref=f147e785] [cursor=pointer]:
+                  - /url: /20-nam-duy-tri-lich-sinh-hoat-de-ren-tinh-ky-luat-toi-co-qua-khat-khe-voi-con-100261008101138879.htm
+                  - img "20 năm duy trì lịch sinh hoạt để rèn tính kỷ luật, tôi có quá khắt khe với con?" [ref=f147e786]
+                - generic [ref=f147e787]:
+                  - link:
+                    - /url: undefined
+                  - heading [level=3] [ref=f147e789]:
+                    - link "20 năm duy trì lịch sinh hoạt để rèn tính kỷ luật, tôi có quá khắt khe với con?" [ref=f147e790] [cursor=pointer]:
+                      - /url: /20-nam-duy-tri-lich-sinh-hoat-de-ren-tinh-ky-luat-toi-co-qua-khat-khe-voi-con-100261008101138879.htm
+                  - paragraph [ref=f147e791]: Gần 20 năm, người mẹ duy trì một thời gian biểu sinh hoạt trong gia đình để rèn cho con tính kỷ luật và trách nhiệm.
+        - generic [ref=f147e811]:
+          - complementary [ref=f147e812]:
+            - generic [ref=f147e819]:
+              - link "Ads by PQC" [ref=f147e820] [cursor=pointer]:
+                - /url: https://phanquang.vn
+              - iframe [ref=f147e825]:
+                - generic [ref=f150e1]:
+                  - link "Ads by PQC" [ref=f150e2] [cursor=pointer]:
+                    - /url: http://phanquang.vn
+                  - iframe [ref=f150e10]:
+                    - generic [ref=f154e1]:
+                      - generic [ref=f154e2] [cursor=pointer]
+                      - button [ref=f154e7] [cursor=pointer]
+                      - iframe [ref=f154e18]
+          - generic [ref=f147e827]:
+            - heading [level=2] [ref=f147e829]:
+              - link "Quảng cáo" [ref=f147e830] [cursor=pointer]:
+                - /url: https://raovat.tuoitre.vn/
+            - generic [ref=f147e832]:
+              - link [ref=f147e833] [cursor=pointer]:
+                - /url: https://raovat.tuoitre.vn/hoc-hanh/nhan-day-cac-mon-toan-ly-hoa-ngoai-ngu-voi-27-nam-kinh-nghiem-65121
+                - img "Nhận dạy các môn toán, lý, hoá, ngoại ngữ với 27 năm kinh nghiệm" [ref=f147e834]
+              - generic [ref=f147e835]:
+                - heading [level=3] [ref=f147e837]:
+                  - link "Nhận dạy các môn toán, lý, hoá, ngoại ngữ với 27 năm kinh nghiệm" [ref=f147e838] [cursor=pointer]:
+                    - /url: https://raovat.tuoitre.vn/hoc-hanh/nhan-day-cac-mon-toan-ly-hoa-ngoai-ngu-voi-27-nam-kinh-nghiem-65121
+                - paragraph [ref=f147e839]: 600.000 VNĐ
+                - paragraph [ref=f147e840]: Thành phố Hồ Chí Minh
+          - complementary
+          - complementary
+          - iframe [ref=f147e847]:
+            - generic [ref=f151e2]:
+              - link "Ads by PQC" [ref=f151e3] [cursor=pointer]:
+                - /url: https://kiemtruong.vn
+              - link "Chọn trường" [ref=f151e9] [cursor=pointer]:
+                - /url: https://kiemtruong.vn
+              - text: 
+              - generic [ref=f151e10]:
+                - heading [level=2] [ref=f151e11]:
+                  - link "Đại học Duy Tân" [ref=f151e12] [cursor=pointer]:
+                    - /url: https://kiemtruong.vn/truong/672/Dai-hoc-Duy-Tan.html
+                - generic [ref=f151e13]:
+                  - heading " ĐH Duy Tân tiếp tục trong Top 500 thế giới trên Bảng QS World University Rankings 2026" [level=3] [ref=f151e14]:
+                    - generic [ref=f151e15]: 
+                    - link "ĐH Duy Tân tiếp tục trong Top 500 thế giới trên Bảng QS World University Rankings 2026" [ref=f151e16] [cursor=pointer]:
+                      - /url: https://kiemtruong.vn/tin-tuyen-sinh/7185/672/1/DH-Duy-Tan-tiep-tuc-trong-Top-500-the-gioi-tren-Bang-QS-World-University-Rankings-2026.html
+                  - link [ref=f151e17] [cursor=pointer]:
+                    - /url: https://kiemtruong.vn/truong/672/Dai-hoc-Duy-Tan.html
+              - text: 
+              - generic [ref=f151e19]:
+                - heading [level=2] [ref=f151e20]:
+                  - link "Trường Song ngữ Quốc tế Hoàng Gia (Royal School)" [ref=f151e21] [cursor=pointer]:
+                    - /url: https://kiemtruong.vn/truong/782/Truong-Song-ngu-Quoc-te-Hoang-Gia---Royal-School--.html
+                - generic [ref=f151e22]:
+                  - 'heading " Đội ngũ giáo viên Royal School: Khơi mở tư duy trong lớp học Cambridge" [level=3] [ref=f151e23]':
+                    - generic [ref=f151e24]: 
+                    - 'link "Đội ngũ giáo viên Royal School: Khơi mở tư duy trong lớp học Cambridge" [ref=f151e25] [cursor=pointer]':
+                      - /url: https://kiemtruong.vn/tin-tuc/7265/782/Doi-ngu-giao-vien-Royal-School--Khoi-mo-tu-duy-trong-lop-hoc-Cambridge.html
+                  - link [ref=f151e26] [cursor=pointer]:
+                    - /url: https://kiemtruong.vn/truong/782/Truong-Song-ngu-Quoc-te-Hoang-Gia---Royal-School--.html
+              - text: 
+              - generic [ref=f151e28]:
+                - heading [level=2] [ref=f151e29]:
+                  - link "Trường Đại học FPT" [ref=f151e30] [cursor=pointer]:
+                    - /url: https://kiemtruong.vn/truong/680/Truong-Dai-hoc-FPT.html
+                - generic [ref=f151e31]:
+                  - heading " Cơ hội nghiên cứu AI, điện toán lượng tử và an ninh mạng tại FPT" [level=3] [ref=f151e32]:
+                    - generic [ref=f151e33]: 
+                    - link "Cơ hội nghiên cứu AI, điện toán lượng tử và an ninh mạng tại FPT" [ref=f151e34] [cursor=pointer]:
+                      - /url: https://kiemtruong.vn/tin-tuc/7264/680/Co-hoi-nghien-cuu-AI---dien-toan-luong-tu-va-an-ninh-mang-tai-FPT.html
+                  - link [ref=f151e35] [cursor=pointer]:
+                    - /url: https://kiemtruong.vn/truong/680/Truong-Dai-hoc-FPT.html
+              - link "Xem thêm" [ref=f151e38] [cursor=pointer]:
+                - /url: https://kiemtruong.vn
+          - generic:
+            - complementary
+    - contentinfo [ref=f147e848]:
+      - list [ref=f147e852]:
+        - listitem [ref=f147e853]:
+          - link "Trang chủ" [ref=f147e854] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f147e855]:
+          - link "Mới nhất" [ref=f147e856] [cursor=pointer]:
+            - /url: /tin-moi-nhat.htm
+        - listitem [ref=f147e857]:
+          - link "Xem nhiều" [ref=f147e858] [cursor=pointer]:
+            - /url: /tin-xem-nhieu.htm
+        - listitem [ref=f147e859]:
+          - link "Video" [ref=f147e860] [cursor=pointer]:
+            - /url: /video.htm
+        - listitem [ref=f147e861]:
+          - link "Thời sự" [ref=f147e862] [cursor=pointer]:
+            - /url: /thoi-su.htm
+        - listitem [ref=f147e863]:
+          - link "Thế giới" [ref=f147e864] [cursor=pointer]:
+            - /url: /the-gioi.htm
+        - listitem [ref=f147e865]:
+          - link "Pháp luật" [ref=f147e866] [cursor=pointer]:
+            - /url: /phap-luat.htm
+        - listitem [ref=f147e867]:
+          - link "Kinh doanh" [ref=f147e868] [cursor=pointer]:
+            - /url: /kinh-doanh.htm
+        - listitem [ref=f147e869]:
+          - link "Công nghệ" [ref=f147e870] [cursor=pointer]:
+            - /url: /cong-nghe.htm
+        - listitem [ref=f147e871]:
+          - link "Xe" [ref=f147e872] [cursor=pointer]:
+            - /url: /xe.htm
+        - listitem [ref=f147e873]:
+          - link "Du lịch" [ref=f147e874] [cursor=pointer]:
+            - /url: /du-lich.htm
+        - listitem [ref=f147e875]:
+          - link "Văn hóa" [ref=f147e876] [cursor=pointer]:
+            - /url: /van-hoa.htm
+        - listitem [ref=f147e877]:
+          - link "Giải trí" [ref=f147e878] [cursor=pointer]:
+            - /url: /giai-tri.htm
+        - listitem [ref=f147e879]:
+          - link "Thể thao" [ref=f147e880] [cursor=pointer]:
+            - /url: /the-thao.htm
+        - listitem [ref=f147e881]:
+          - link "Giáo dục" [ref=f147e882] [cursor=pointer]:
+            - /url: /giao-duc.htm
+        - listitem [ref=f147e883]:
+          - link "Nhà đất" [ref=f147e884] [cursor=pointer]:
+            - /url: /nha-dat.htm
+        - listitem [ref=f147e885]:
+          - link "Sức khỏe" [ref=f147e886] [cursor=pointer]:
+            - /url: /suc-khoe.htm
+        - listitem [ref=f147e887]:
+          - link "Giả thật" [ref=f147e888] [cursor=pointer]:
+            - /url: /gia-that.htm
+        - listitem [ref=f147e889]:
+          - link "Cộng đồng" [ref=f147e890] [cursor=pointer]:
+            - /url: /cong-dong.htm
+      - generic [ref=f147e893]:
+        - link "Tuổi Trẻ Online" [ref=f147e895] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f147e896]:
+          - generic [ref=f147e897]:
+            - paragraph [ref=f147e898]: "Tổng biên tập: TRẦN XUÂN TOÀN"
+            - paragraph [ref=f147e899]: Báo điện tử Tuổi Trẻ (tuoitre.vn)Cơ quan Báo và Phát thanh, Truyền hình TP.HCM
+            - paragraph [ref=f147e900]: Giấy phép hoạt động báo điện tử tiếng Việt, tiếng Anh Số 561/GP-BTTTT, cấp ngày 25-11-2022.
+            - generic [ref=f147e901]:
+              - link "Thông tin tòa soạn" [ref=f147e902] [cursor=pointer]:
+                - /url: /thong-tin-toa-soan.htm
+              - link "Cơ quan Báo và Phát thanh, Truyền hình TP.HCM" [ref=f147e903] [cursor=pointer]:
+                - /url: /co-quan-bao-va-phat-thanh-truyen-hinh-tp-hcm.htm
+          - generic [ref=f147e904]:
+            - paragraph [ref=f147e905]: "Địa chỉ: 60A Hoàng Văn Thụ, phường Đức Nhuận, Tp. Hồ Chí Minh"
+            - paragraph [ref=f147e906]: "Hotline: 0918.033.133 - Email: tto@tuoitre.com.vn"
+            - paragraph [ref=f147e907]: "Quảng cáo: 028.39974848"
+            - generic [ref=f147e908]:
+              - link "Dịch vụ truyền thông" [ref=f147e909] [cursor=pointer]:
+                - /url: https://quangcao.tuoitre.vn
+              - text: Điều khoản bảo mật
+              - link "Liên hệ góp ý" [ref=f147e910] [cursor=pointer]:
+                - /url: https://docs.google.com/forms/d/e/1FAIpQLScSRj-Bxm1t6roko_ocQlUSZCnei3a03IdoOpPQ9-lp2McaKw/viewform
+              - link "RSS" [ref=f147e911] [cursor=pointer]:
+                - /url: /rss.htm
+        - generic [ref=f147e913]:
+          - link "Quan tâm Tuổi Trẻ trên Youtube" [ref=f147e914] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCrwJa6KRHWnJpJPZNeKKcvA
+          - link "Quan tâm Tuổi Trẻ trên Facebook" [ref=f147e918] [cursor=pointer]:
+            - /url: https://www.facebook.com/baotuoitre
+      - paragraph [ref=f147e925]: © Copyright 2026 Bao dien tu Tuoi Tre, All rights reserved ® Báo điện tử Tuổi Trẻ giữ bản quyền nội dung trên website này
+      - generic:
+        - complementary:
+          - iframe [ref=f147e930]:
+            - link "Ads by PQC" [ref=f149e2] [cursor=pointer]:
+              - /url: https://phanquang.vn
+  - text: 𝕏

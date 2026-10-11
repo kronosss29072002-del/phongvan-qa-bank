@@ -1,0 +1,401 @@
+{
+  "entries": [
+    {
+      "term": "Abstract Factory pattern",
+      "aliases": [
+        "abstract factory",
+        "bộ factory"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Hệ thống chạy hai môi trường AWS và self-hosted; nếu mỗi chỗ tự gọi new S3Client() hoặc new MinioClient() thì thêm nhà cung cấp thứ ba phải sửa mọi call site, một lần quên đồng bộ là queue dùng SQS còn storage dùng MinIO. Cần tạo cả một bộ object liên quan khớp nhau theo cùng cấu hình.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Định nghĩa abstract factory với interface cho từng loại sản phẩm (storage, queue, mail); mỗi nhà cung cấp có concrete factory riêng trả về cả bộ cùng họ. Client chỉ giữ abstract factory và chọn nhà cung cấp lúc khởi động, không chỗ nào tự new sản phẩm cụ thể.",
+      "related": [
+        "Factory Method (factory pattern)",
+        "SOLID",
+        "Dependency Injection (DI) & IoC container"
+      ]
+    },
+    {
+      "term": "Prototype pattern",
+      "aliases": [
+        "prototype pattern",
+        "clone pattern",
+        "nhân bản object"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Config object cho worker chứa hàng trăm trường; mỗi job tạo mới từ đầu phải chạy lại validation và merge mặc định, tốn hàng chục ms. Muốn giữ template instance đã cấu hình sẵn để nhân ra cho từng job nhưng tạo lại không cho copy nguyên trạng.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Object tự implement clone() trả bản sao; với cấu trúc lồng nhau phải quyết định shallow (dùng chung object con) hay deep copy (tách hẳn), và vòng tham chiếu khiến deep copy cần xử lý riêng. Backend dùng để tạo template request hoặc giữ pool object đã warm.",
+      "related": [
+        "Builder pattern (fluent builder)",
+        "Copy-on-write",
+        "Cache"
+      ]
+    },
+    {
+      "term": "Iterator pattern",
+      "aliases": [
+        "iterator pattern",
+        "mẫu duyệt"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Vòng lặp duyệt dữ liệu tự biết chi tiết bên trong là mảng hay cursor; đổi từ find() sang streaming phải sửa mọi nơi, còn tải cả bảng vào RAM để duyệt thì OOM khi bảng lớn. Giao diện duyệt gắn chặt với cấu trúc dữ liệu là gốc của vấn đề.",
+      "origin": "Gang of Four, 'Design Patterns' (1994); ý tưởng iterator có trước trong CLU (1974).",
+      "how": "Tách việc duyệt khỏi cấu trúc dữ liệu: iterator chỉ lộ next/hasNext (hoặc giao thức iterable của ngôn ngữ), giấu chi tiết bên trong. Cùng một interface đó phục vụ mảng, linked list, generator, cursor DB trả từng batch, nên đổi nguồn dữ liệu không đụng vòng lặp.",
+      "related": [
+        "Pagination (offset vs cursor/keyset)",
+        "Lazy vs eager loading / lazy evaluation",
+        "Batching"
+      ]
+    },
+    {
+      "term": "Identity Map",
+      "aliases": [
+        "identity map pattern",
+        "object identity map"
+      ],
+      "level": "advanced",
+      "domain": "OOP & Design Patterns",
+      "problem": "Trong một request, cùng một user được load ba lần qua ba query khác nhau nên mỗi lần trả instance mới; so sánh tham chiếu trả false, cập nhật ở một chỗ không thấy ở chỗ khác, và hai lần save chồng lấn ghi đè thay đổi của nhau. ORM ghi lặp ba lần cho cùng một row.",
+      "origin": "Martin Fowler, 'Patterns of Enterprise Application Architecture' (2002).",
+      "how": "Lưu object đã load theo khóa chính trong scope của session/transaction; mọi lần load sau trả đúng instance đã tồn tại thay vì tạo mới, nên so sánh tham chiếu và merge thay đổi hoạt động đúng. Scope phải theo request; giữ map toàn cục thì memory phình và dữ liệu cũ rò rỉ giữa các request.",
+      "related": [
+        "Unit of Work",
+        "ORM",
+        "Active Record vs Data Mapper"
+      ]
+    },
+    {
+      "term": "Value Object (DDD)",
+      "aliases": [
+        "value object",
+        "VO",
+        "đối tượng giá trị"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Tiền tệ biểu diễn bằng number trần: cộng hai giá trị khác đơn vị không ai chặn, đổi chỗ tham số trong hàm nhận tiền mà compiler im lặng, một chỗ lỡ sửa in-place làm hỏng dữ liệu ở nơi khác đang tham chiếu cùng object.",
+      "origin": "Eric Evans, 'Domain-Driven Design' (2003).",
+      "how": "Đóng gói giá trị thành object bất biến, so sánh theo nội dung (equals/hashCode) thay vì tham chiếu: Money(amount, currency), EmailAddress, DateRange. Không có setter nên thao tác tạo instance mới, an toàn khi chia sẻ giữa thread và không lo bị sửa ngoài ý muốn.",
+      "related": [
+        "Aggregate Root",
+        "DDD (Domain-Driven Design)",
+        "Copy-on-write"
+      ]
+    },
+    {
+      "term": "Aggregate Root",
+      "aliases": [
+        "aggregate root",
+        "root entity",
+        "ranh giới nhất quán"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Database cho phép sửa từng bảng riêng lẻ; code cập nhật OrderItem không kiểm tra tổng tiền có khớp với các item còn lại nên invariant 'tổng bằng tổng các item' vỡ dần. Không có ranh giới rõ nên cũng không biết transaction cần gồm những bảng nào.",
+      "origin": "Eric Evans, 'Domain-Driven Design' (2003).",
+      "how": "Gom các entity/value object có invariant chung thành aggregate, chọn một root làm cửa vào duy nhất: mọi thay đổi đi qua root, root kiểm tra rồi mới cho sửa phần trong. Một transaction ghi trọn một aggregate; aggregate khác cập nhật qua event thay vì sửa chung transaction.",
+      "related": [
+        "DDD (Domain-Driven Design)",
+        "Unit of Work",
+        "Transactional outbox"
+      ]
+    },
+    {
+      "term": "Anti-corruption Layer",
+      "aliases": [
+        "anti-corruption layer",
+        "ACL",
+        "lớp dịch chống lây nhiễm"
+      ],
+      "level": "advanced",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Tích hợp hệ billing cũ trả status bằng chuỗi mã lạ và throw exception theo phong cách riêng; đội copy nguyên cách xử lý đó vào domain của mình. Vài tháng sau legacy đổi format là toàn bộ service vỡ theo dù nghiệp vụ chẳng liên quan.",
+      "origin": "Eric Evans, 'Domain-Driven Design' (2003).",
+      "how": "Chèn một lớp dịch ở biên: dịch model, lỗi, đơn vị của hệ ngoài sang model của domain theo cả hai chiều, và chặn domain gọi thẳng API legacy. Legacy đổi thì chỉ sửa adapter; domain không chứa khái niệm của hệ ngoài.",
+      "related": [
+        "Bounded Context",
+        "Hexagonal Architecture / Ports & Adapters",
+        "Adapter pattern (wrapper interface)"
+      ]
+    },
+    {
+      "term": "Clean Architecture",
+      "aliases": [
+        "clean architecture",
+        "dependency rule",
+        "vòng tầng"
+      ],
+      "level": "intermediate",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Logic nghiệp vụ gọi ORM trực tiếp, framework inject khắp nơi; muốn unit test cho hàm tính giá phải dựng cả database và HTTP server, còn đổi kênh chạy từ REST sang worker thì phần lớn code phải viết lại.",
+      "origin": "Robert C. Martin tổng hợp từ Hexagonal, Onion và DCI trong bài 'The Clean Architecture' (2012).",
+      "how": "Các vòng tầng: entities/use case trong cùng, adapter (controller, repository) ở giữa, framework/DB ngoài cùng; dependency rule chỉ trỏ vào trong nên domain không import framework. Test use case chỉ cần fake ở biên, đổi framework không đụng domain.",
+      "related": [
+        "Hexagonal Architecture / Ports & Adapters",
+        "Layered Architecture",
+        "Repository & DAO pattern"
+      ]
+    },
+    {
+      "term": "Layered Architecture",
+      "aliases": [
+        "layered architecture",
+        "n-tier",
+        "kiến trúc phân tầng"
+      ],
+      "level": "basic",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Không có quy ước tầng, controller truy vấn SQL trực tiếp, service gọi chéo repository của module khác; một thay đổi schema lan ra controller và code review không biết call nào được phép gọi call nào.",
+      "origin": "Phân tầng có từ hệ điều hành THE của Dijkstra (1968); mẫu 'layers' hệ thống hóa trong 'Patterns of Enterprise Application Architecture' (Fowler, 2002).",
+      "how": "Tách thành presentation, application/service, domain, persistence; mỗi tầng chỉ gọi tầng liền dưới qua interface rõ ràng. Quy tắc này chặn SQL rò lên controller, nhưng lạm dụng sẽ tạo tầng pass-through chỉ chuyển tiếp, thêm file mà không thêm giá trị.",
+      "related": [
+        "Clean Architecture",
+        "Hexagonal Architecture / Ports & Adapters",
+        "Repository & DAO pattern"
+      ]
+    },
+    {
+      "term": "Anemic Domain Model",
+      "aliases": [
+        "anemic domain model",
+        "mô hình domain thiếu máu",
+        "data bag entity"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Entity chỉ gồm getter/setter, mọi quy tắc nghiệp vụ nằm trong service; hai service cập nhật một trạng thái theo hai cách khác nhau, không ai đảm bảo thứ tự trạng thái hợp lệ, bug lặp lại mỗi khi thêm luồng mới. Đặt tên sai chỗ nên sửa cũng khó.",
+      "origin": "Martin Fowler, bliki 'AnemicDomainModel' (2003).",
+      "how": "Triệu chứng: class domain chỉ có field và getter/setter, invariant không nơi nào giữ, logic nằm rải trong service. Chẩn đoán bằng câu hỏi: nếu thay entity bằng Map/dict mà code vẫn chạy thì đó là data bag; hướng sửa là đưa hành vi về entity, không cần DDD đầy đủ.",
+      "related": [
+        "DDD (Domain-Driven Design)",
+        "Value Object (DDD)",
+        "Repository & DAO pattern"
+      ]
+    },
+    {
+      "term": "Circular Dependency",
+      "aliases": [
+        "circular dependency",
+        "phụ thuộc vòng",
+        "dependency cycle",
+        "vòng import"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Module A import B, B import A; bundler fail hoặc trả undefined khi module của nhau chưa chạy xong, DI container của NestJS báo lỗi khởi động còn runtime thì stack trace chỉ vào chỗ không liên quan. Lỗi xuất hiện muộn và khó lần ra gốc.",
+      "origin": "",
+      "how": "Phá vòng bằng ba cách chính: tách phần dùng chung ra module thứ ba, dùng dependency inversion (một bên phụ thuộc interface/abstract class thay vì class cụ thể), hoặc trì hoãn giải phóng phụ thuộc (forwardRef ở NestJS). Kiểm soát bằng công cụ tĩnh như madge, dependency-cruiser.",
+      "related": [
+        "Dependency Injection (DI) & IoC container",
+        "Tight vs Loose Coupling",
+        "refactoring"
+      ]
+    },
+    {
+      "term": "ADRs (Architecture Decision Record)",
+      "aliases": [
+        "ADR",
+        "architecture decision record",
+        "decision log"
+      ],
+      "level": "intermediate",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Sáu tháng sau không ai nhớ vì sao chọn RabbitMQ thay vì Kafka, vì sao bỏ một index; người mới đọc code chỉ thấy kết quả, mỗi lần muốn đổi phải khảo sát lại từ đầu, và quyết định cũ bị đảo ngược mà không ai biết lý do gốc.",
+      "origin": "Michael Nygard đề xuất trong bài 'Documenting Architecture Decisions' (2011).",
+      "how": "Mỗi ADR là file ngắn trong repo: context, quyết định, trade-off đã cân nhắc, hệ quả; đánh số và giữ vĩnh viễn, ADR thay thế không xóa cái cũ mà đánh dấu superseded. Nằm cạnh code để review theo diff qua git.",
+      "related": [
+        "code review",
+        "refactoring",
+        "technical debt"
+      ]
+    },
+    {
+      "term": "Antipattern (god object, golden hammer)",
+      "aliases": [
+        "anti-pattern",
+        "antipattern",
+        "god object",
+        "golden hammer"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Đội nào cũng gặp vài mẫu quen mặt: một class ôm gần hết logic, dùng Kafka cho mọi bài toán vì đã quen tay (golden hammer). Không có tên chung thì mỗi lần nêu ra trong review lại mất nửa buổi giải thích, vấn đề bị coi là sở thích cá nhân.",
+      "origin": "Andrew Koenig đặt từ 'antipattern' năm 1995 trên tạp chí JOOP.",
+      "how": "Antipattern mô tả mẫu giải pháp trông có lợi trước mắt nhưng để lại hệ quả xấu, kèm dấu hiệu nhận biết và giải pháp thay thế: god object, golden hammer, copy-paste programming, spaghetti code. Biết tên giúp review nhanh vì cả đội dùng chung một ngôn ngữ gọi sự việc.",
+      "related": [
+        "Singleton",
+        "technical debt",
+        "refactoring"
+      ]
+    },
+    {
+      "term": "YAGNI & DRY (rule of three)",
+      "aliases": [
+        "YAGNI",
+        "DRY",
+        "rule of three",
+        "You Aren't Gonna Need It",
+        "Don't Repeat Yourself"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Hai lỗi ngược nhau: xây sẵn tầng abstraction cho plugin chưa ai dùng khiến code chết, hoặc copy logic tính phí ra mười chỗ rồi khi giá đổi thì sót một chỗ. Không có lằn ranh nào cho biết lúc nào nên trừu tượng hóa.",
+      "origin": "YAGNI từ Ron Jeffries trong thực hành Extreme Programming (cuối 1990s); DRY do Hunt và Thomas đặt trong 'The Pragmatic Programmer' (1999).",
+      "how": "YAGNI: chỉ xây khi có nhu cầu thật, tránh abstraction trước. DRY: khi cùng một kiến thức lặp đến lần thứ ba thì trích xuất (Rule of Three); tách ở lần thứ hai là quá sớm vì chưa thấy điểm chung thật. Hai nguyên tắc cùng chi phối quyết định refactor.",
+      "related": [
+        "refactoring",
+        "technical debt",
+        "SOLID"
+      ]
+    },
+    {
+      "term": "i18n/l10n (internationalization, localization, locale, Accept-Language)",
+      "aliases": [
+        "i18n",
+        "l10n",
+        "internationalization",
+        "localization",
+        "Accept-Language"
+      ],
+      "level": "basic",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Ra mắt thị trường thứ hai, backend ghép chuỗi tiếng Anh vào email, định dạng ngày và tiền theo thói quen lập trình viên; Accept-Language của client bị bỏ qua nên không cách nào biết người dùng muốn ngôn ngữ nào, sửa muộn phải luồn locale qua hàng trăm hàm.",
+      "origin": "Thuật ngữ i18n/l10n (18/10 ký tự giữa chữ cái đầu và cuối) dùng từ cuối thập niên 1980; khuôn khổ dữ liệu locale chuẩn hóa qua ICU (1999).",
+      "how": "Chuỗi, định dạng và pluralization tách khỏi code: bundle dịch theo locale, resolve qua Accept-Language với fallback, dùng thư viện CLDR/ICU MessageFormat cho số, tiền, ngày; ghi ngôn ngữ đã dùng vào response qua Content-Language.",
+      "related": [
+        "Content negotiation",
+        "ISO 8601 & timezone handling (lưu UTC, DST)",
+        "UTF-8 & Unicode (code point, BOM)"
+      ]
+    },
+    {
+      "term": "Domain Event (sự kiện miền)",
+      "aliases": [
+        "domain event",
+        "sự kiện miền"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Thay đổi trong một aggregate (đơn hàng đặt, thanh toán thành công) là thông tin mà các BC khác hoặc hệ thống ngoài cần phản ứng — nếu các phần khác query trực tiếp trạng thái sau mỗi thay đổi, kiến trúc trở thành chuỗi phụ thuộc ngầm và vi phạm ranh giới Bounded Context.",
+      "origin": "",
+      "how": "Aggregate publish Domain Event (tên quá khứ: OrderPlaced, PaymentCaptured) vào unit of work khi thay đổi trạng thái; outbox pattern hoặc event bus phát tán cho các context subscribe. Sự kiện là dữ liệu đã xảy ra, không phải lệnh — ghi vào event store nếu cần audit trail hoặc rebuild projection.",
+      "related": [
+        "Event-driven architecture",
+        "Transactional outbox",
+        "Aggregate Root"
+      ]
+    },
+    {
+      "term": "Ubiquitous Language (ngôn ngữ dùng chung)",
+      "aliases": [
+        "ubiquitous language",
+        "ngôn ngữ dùng chung",
+        "UL"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Business dùng từ 'cancel' (hủy đơn), code dùng từ 'abort'/'void' — hai từ cùng nghĩa nhưng khác ngữ cảnh; khi business và code nói khác tiếng, yêu cầu bị diễn đạt sai thành implementation và bug logic chỉ lộ ra khi vận hành.",
+      "origin": "Thuật ngữ trong Domain-Driven Design (Eric Evans, 2003)",
+      "how": "Chốt một từ vựng chung cho từng Bounded Context, dùng đúng từ đó trong code, DB column, API field, tài liệu và cả trong meeting — thay đổi tên trong code khi business đổi từ. Kiểm tra bằng code review: tên biến/fixture có đúng từ business dùng không.",
+      "related": [
+        "Bounded Context",
+        "Anemic Domain Model",
+        "DDD (Domain-Driven Design)"
+      ]
+    },
+    {
+      "term": "Domain Service (service miền)",
+      "aliases": [
+        "domain service",
+        "service miền"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Một số thao tác (tính thuế theo nhiều rule, kiểm tra giới hạn credit) không thuộc tự nhiên về một Aggregate nào nhưng vẫn là nghiệp vụ cốt lõi — nhét vào entity làm phình class, đưa ra application service làm mất nghiệp vụ vào tầng dùng chung.",
+      "origin": "Pattern trong Domain-Driven Design (Eric Evans, 2003)",
+      "how": "Domain Service là class stateless, nằm trong domain layer, nhận Aggregate/Value Object làm tham số và trả kết quả nghiệp vụ, không trả DTO hay gọi repository trực tiếp. Phân biệt với application service (điều phối use case, gọi repository + transaction).",
+      "related": [
+        "DDD (Domain-Driven Design)",
+        "Value Object (DDD)",
+        "Repository & DAO pattern"
+      ]
+    },
+    {
+      "term": "Bridge pattern (mẫu cầu nối)",
+      "aliases": [
+        "bridge",
+        "mẫu Bridge"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Trong backend, khi một abstraction như NotificationService cần hỗ trợ đồng thời nhiều kênh gửi (email, SMS, push) và nhiều nhà cung cấp (provider A/B), việc dùng kế thừa tạo ra ma trận lớp khổng lồ. Mỗi khi thêm kênh hoặc provider đều buộc phải chỉnh sửa nhiều lớp con, làm tăng độ phức tạp bảo trì.",
+      "how": "Tách abstraction khỏi implementation bằng cách để abstraction giữ tham chiếu đến một interface implementation. Hai nhánh (logic nghiệp vụ và kỹ thuật kết nối) tiến hóa độc lập. Ví dụ JDBC với Connection/Statement tách giao diện khỏi từng driver DB, giúp thêm driver mới mà không sửa code nghiệp vụ.",
+      "origin": "GoF 1994 (Gang of Four, Design Patterns)",
+      "related": [
+        "Adapter pattern (wrapper interface)",
+        "Composition over Inheritance & Law of Demeter",
+        "Facade pattern (mặt tiền)"
+      ]
+    },
+    {
+      "term": "Flyweight pattern (mẫu đối tượng nhẹ)",
+      "aliases": [
+        "flyweight",
+        "mẫu Flyweight"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Trong một dịch vụ backend xử lý hàng triệu bản ghi văn bản hoặc đối tượng định dạng lặp lại, việc tạo instance mới cho mỗi phần tử tốn bộ nhớ lớn. Với khối lượng cao, heap tăng nhanh gây GC dồn, làm tăng độ trễ và tiêu tốn tài nguyên hệ thống.",
+      "how": "Chia trạng thái thành intrinsic (bất biến, có thể chia sẻ) và extrinsic (thay đổi, truyền vào). Lưu các đối tượng intrinsic trong một pool (flyweight factory) và tái sử dụng thay vì tạo mới. Kỹ thuật này áp dụng cho interning, cache định dạng hoặc gom nhóm dữ liệu lặp lại trong xử lý batch.",
+      "origin": "GoF 1994 (Gang of Four, Design Patterns)",
+      "related": [
+        "Cache",
+        "Memoization",
+        "Copy-on-write"
+      ]
+    },
+    {
+      "term": "Memento pattern (mẫu lưu trạng thái)",
+      "aliases": [
+        "memento",
+        "mẫu Memento"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Nhiều tính năng backend cần khôi phục trạng thái trước đó (undo/redo cấu hình API, rollback phiên chỉnh sửa biểu mẫu phức tạp) nhưng trực tiếp sao chép trường nội bộ sẽ phá vỡ encapsulation. Việc để caller truy cập toàn bộ state làm rò rỉ thiết kế và khó bảo trì khi model thay đổi.",
+      "how": "Originator tạo một memento chứa snapshot trạng thái cần lưu. Caretaker giữ memento đó mà không đọc nội dung bên trong. Khi cần khôi phục, originator đọc lại memento để trả về trạng thái cũ. Cách này giữ quyền kiểm soát state trong originator, đồng thời cho phép undo/redo hoặc checkpoint workflow.",
+      "origin": "GoF 1994 (Gang of Four, Design Patterns)",
+      "related": [
+        "Command pattern (command object)",
+        "Transaction",
+        "Checkpoint"
+      ]
+    },
+    {
+      "term": "Visitor pattern (mẫu khách thăm)",
+      "aliases": [
+        "visitor",
+        "mẫu Visitor"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Trong backend, cấu trúc cây như AST (Abstract Syntax Tree), cây rule engine hoặc cây cấu hình thường có nhiều loại node khác nhau. Khi cần thêm thao tác mới (validate, serialize, transform) lên toàn bộ cây, việc thêm method vào từng lớp node dẫn đến thay đổi rộng khắp và vi phạm nguyên tắc mở-đóng.",
+      "how": "Tách thao tác khỏi lớp node bằng cách định nghĩa interface Visitor với method riêng cho từng loại node. Mỗi node triển khai accept(visitor) để gọi đúng method tương ứng. Nhờ cơ chế double-dispatch, thao tác mới chỉ cần thêm một lớp Visitor mà không sửa code các node hiện có.",
+      "origin": "GoF 1994 (Gang of Four, Design Patterns)",
+      "related": [
+        "Composite pattern (cây đối tượng)",
+        "Builder pattern (fluent builder)",
+        "Template Method pattern"
+      ]
+    }
+  ],
+  "skipped": [
+    "Aggregate & Aggregate Root (DDD)",
+    "Anti-Corruption Layer (DDD)"
+  ]
+}

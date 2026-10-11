@@ -1,0 +1,39 @@
+[     629ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:0
+[     629ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:0
+[     629ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:0
+[     955ms] [LOG] Hello Alice @ :1
+[     956ms] [LOG] %2Fgiao-duc%2Fdetail%2F @ :2
+[    1008ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://sso.tuoitre.vn/api/front/v1/auth/info:0
+[    1031ms] [LOG] initSendComment:  20240530084427723 https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm VHIlZTElYmElYmIrbSVlMSViYSVhN20rbm9uK2NoJWUxJWJhJWJmdCtkbytiJWUxJWJiJThiK2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbit4ZSUzYStCJWMzJWEwaStoJWUxJWJiJThkYytjJWM1JWE5JTJjK24lZTElYmIlOTdpKyVjNCU5MWF1K20lZTElYmIlOWJpIQ== 13   @ https://static-tuoitre.tuoitre.vn/tuoitre/web_js/tuoitrecloud.detail.06102026v1.min.js:25
+[    1034ms] [LOG] initListComment:  20240530084427723 VHIlZTElYmElYmIrbSVlMSViYSVhN20rbm9uK2NoJWUxJWJhJWJmdCtkbytiJWUxJWJiJThiK2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbit4ZSUzYStCJWMzJWEwaStoJWUxJWJiJThkYytjJWM1JWE5JTJjK24lZTElYmIlOTdpKyVjNCU5MWF1K20lZTElYmIlOWJpIQ== 13 true   2 @ https://static-tuoitre.tuoitre.vn/tuoitre/web_js/tuoitrecloud.detail.06102026v1.min.js:25
+[    1049ms] [LOG] guestsend guestsendbt p.fn.init @ https://static-tuoitre.tuoitre.vn/tuoitre/web_js/corecommentv2.plugin.15092026v3.min.js:0
+[    1087ms] [LOG] Service Worker Force Unregister true @ :0
+[    1340ms] [LOG] {wrapper: .detail-player, cookieName: embedTTS, primaryColor: #f2586e, newsId: 20240530084427723, distributionDate: 2024/05/30} @ https://static-tuoitre.tuoitre.vn/common/js/tto-embedTTSv15.js:0
+[    1501ms] [LOG] Đã chạy vào file check biến ADMStorageFileCDN_123 @ :82
+[    1521ms] [LOG] UrlExists:  {status: 1, data: Requested, message: Success} @ https://static-tuoitre.tuoitre.vn/common/js/tto-embedTTSv15.js:0
+[    1584ms] [WARNING] [GPT] PubAdsService.disableInitialLoad is deprecated, use googletag.setConfig({disableInitialLoad: ...}) instead.
+https://goo.gle/gpt-message#170 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202610050101/pubads_impl.js?cb=122881430:22
+[    1773ms] [INFO] Smartech Initiated @ https://osjs.netcoresmartech.com/v1/js-versioning?clientkey=ADGMOT35CHFLVDHBJNIG50K969QTIFK7EP259O47STRRQ8QM3FS0&siteid=5001f9cce3f1c631ff8bde0c5e9a1cca&rc=s&tk1=20261006151359&tk2=20240819012235:1
+[    1812ms] [LOG] cross asset stitching enabled @ https://osjs.netcoresmartech.com/v1/js-versioning?clientkey=ADGMOT35CHFLVDHBJNIG50K969QTIFK7EP259O47STRRQ8QM3FS0&siteid=5001f9cce3f1c631ff8bde0c5e9a1cca&rc=s&tk1=20261006151359&tk2=20240819012235:1
+[    3601ms] [LOG] Load Kiem Truong Iframe @ https://quangcao.phanquang.vn/ad_script/pqc_kiemtruong_tto_include.js:16
+[    3717ms] [LOG] showCustomBanner: false @ https://quangcao.phanquang.vn/runscript/pqc/300x600-tuoitre.html:64
+[    3760ms] [LOG] Inside height: 627 @ https://kiemtruong.vn/cachettos/list_tin_horizontal_nhung_tto.html:212
+[    3839ms] [LOG] Content height from event: 627 @ https://quangcao.phanquang.vn/ad_script/pqc_kiemtruong_tto_include.js:31
+[    6507ms] [LOG] {type: 7k, zidlog: 523164, sspid: 2011116, size: 0x0, format: 165} @ https://media1.admicro.vn/core/sspcallback.js:0
+[    7298ms] [LOG] Insert before middle node JSHandle@node @ https://static-tuoitre.tuoitre.vn/tuoitre/web_js/tuoitrecloud.detail.06102026v1.min.js:25
+[    7399ms] [LOG] Service Worker is registered ServiceWorkerRegistration @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:3929
+[    7452ms] [ERROR] Not signed in with the identity provider. @ https://tuoitre.vn/tre-mam-non-chet-do-bi-bo-quen-tren-xe-bai-hoc-cu-noi-dau-moi-20240530084427723.htm:0
+[    7574ms] [LOG] null get chkid @ https://static.amcdn.vn/core/persist.js:175
+[    9184ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ https://pro.ip-api.com/json/?fields=country,countryCode,countryCode3,region,regionName,city,district,zip,lat,lon,isp,query&key=umJEfPhjzmg4sUU:0
+[    9290ms] [INFO] %c Branch: vt-31179 error (main branch used)  →  WIDGET: 1836416_00293  →  library:   →  cli: d00c6b6e76f88e410de7ecdd20f4f41835df9ed4  →  widgetBuilder: 3800e9ac  →  VIDEO_LIB: 1.11.257   color: gold; font: 1rem/1 Tahoma; background: #1d1d1d; padding: 10px; @ https://jsc.mgid.com/t/u/tuoitre.vn.1836416.es6.js:39
+[    9651ms] [LOG] {type: 7k, zidlog: 521623, sspid: 2028326, size: 300x600, format: 8} @ https://media1.admicro.vn/core/sspcallback.js:0
+[    9686ms] [LOG] {type: 7k, zidlog: 522669, sspid: 2028485, size: 300x600, format: 111} @ https://media1.admicro.vn/core/sspcallback.js:0
+[    9698ms] [LOG] {type: 7k, zidlog: 522670, sspid: 2028486, size: 300x600, format: 161} @ https://media1.admicro.vn/core/sspcallback.js:0
+[   13032ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ https://sync.outbrain.com/cookie-sync?p=rubicon&uid=MUZVAWOY-13-L0BF&obUid=&initiator=&gdpr=0&us_privacy={CCPA_CONSENT}:0
+[   14350ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ https://csync.loopme.me/?redirect=https%3A%2F%2Fid5-sync.com%2Fc%2F231%2F821%2F4%2F5.gif%3Fpuid%3D%7Bdevice_id%7D%26gdpr%3D0%26gdpr_consent%3D:0
+[   20524ms] [DIR] SyntaxError @ https://js.ad-score.com/score.min.js?pid=1000942&tt=g:1
+[   20923ms] Failed to read a named property 'document' from 'Window': Blocked a frame with origin "https://e874012a17a8b3b204ad01083e323560.safeframe.googlesyndication.com" from accessing a frame with origin "https://tuoitre.vn". Protocols, domains, and ports must match.
+[   21005ms] [WARNING] No available adapters. @ https://e874012a17a8b3b204ad01083e323560.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html:0
+[   21006ms] [WARNING] No available adapters. @ https://e874012a17a8b3b204ad01083e323560.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html:0
+[   21007ms] [WARNING] No available adapters. @ https://e874012a17a8b3b204ad01083e323560.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html:0
+[   21130ms] [TIMEEND] a: 0.003173828125 ms @ https://static.adsafeprotected.com/sca.17.6.4.js:31

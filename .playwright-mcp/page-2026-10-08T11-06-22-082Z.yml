@@ -1,0 +1,54 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - button "Skip to content" [ref=f6e3] [cursor=pointer]
+    - button "Accessibility Feedback" [ref=f6e6] [cursor=pointer]
+    - generic [ref=f6e9]:
+      - link [ref=f6e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Back to Bing search" [level=1] [ref=f6e11]
+      - search [ref=f6e12]:
+        - generic [ref=f6e14] [cursor=pointer]
+        - searchbox "Enter your search here - Search suggestions will show as you type" [ref=f6e17]: "\"delivery app\" portfolio project recruiter impress OR oversaturated clone"
+        - button "Search using an image" [ref=f6e20] [cursor=pointer]
+        - button "Search" [ref=f6e22] [cursor=pointer]
+    - complementary "Account Rewards and Preferences" [ref=f6e24]:
+      - button "Microsoft Rewards" [ref=f6e25] [cursor=pointer]
+      - link "Sign in" [ref=f6e26] [cursor=pointer]:
+        - /url: javascript:void(0)
+    - navigation "Search Filter" [ref=f6e28]:
+      - list [ref=f6e29]:
+        - listitem [ref=f6e30]:
+          - link "All" [ref=f6e31] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f6e32]:
+          - link "Web" [ref=f6e33] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=47da7178d2daa1cb9c5fa56dd4a657fcee9da1d4c84372f6511b4ac01baea804JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=27df4c7b-16ea-65f7-1128-5b9017fd6486&u=a1L3NlYXJjaD9xPSUyMmRlbGl2ZXJ5K2FwcCUyMitwb3J0Zm9saW8rcHJvamVjdCtyZWNydWl0ZXIraW1wcmVzcytPUitvdmVyc2F0dXJhdGVkK2Nsb25lJndlYnNjcD0xJkZPUk09SERSV1ND&ntb=1
+        - listitem [ref=f6e34]:
+          - link "Search" [ref=f6e35] [cursor=pointer]:
+            - /url: /copilotsearch?q=%22delivery+app%22+portfolio+project+recruiter+impress+OR+oversaturated+clone&FORM=CSSCOP
+        - listitem [ref=f6e38]:
+          - link "Images" [ref=f6e39] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9a0b70e2166b221c1a955fb8bca3d0ab08f8c5180f93705fcd69900cbf764856JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=27df4c7b-16ea-65f7-1128-5b9017fd6486&u=a1L2ltYWdlcy9zZWFyY2g_cT0lMjJkZWxpdmVyeSthcHAlMjIrcG9ydGZvbGlvK3Byb2plY3QrcmVjcnVpdGVyK2ltcHJlc3MrT1Irb3ZlcnNhdHVyYXRlZCtjbG9uZSZGT1JNPUhEUlNDMg&ntb=1
+        - listitem [ref=f6e40]:
+          - link "Videos" [ref=f6e41] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=80b892cb7f3b396d33a86bc38f65736ba7fc05951990a243d8a8cce70c88d413JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=27df4c7b-16ea-65f7-1128-5b9017fd6486&u=a1L3ZpZGVvcy9zZWFyY2g_cT0lMjJkZWxpdmVyeSthcHAlMjIrcG9ydGZvbGlvK3Byb2plY3QrcmVjcnVpdGVyK2ltcHJlc3MrT1Irb3ZlcnNhdHVyYXRlZCtjbG9uZSZGT1JNPUhEUlNDMw&ntb=1
+        - listitem [ref=f6e42]:
+          - button [ref=f6e43] [cursor=pointer]
+  - contentinfo [ref=f6e47]:
+    - generic [ref=f6e48]:
+      - generic [ref=f6e49]: © 2026 Microsoft
+      - list:
+        - listitem [ref=f6e50]:
+          - link "Privacy and Cookies" [ref=f6e51] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=5b45d6f2b9770173f221239c116721c54bf80a2f9a025ba288afb152f57f866eJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=27df4c7b-16ea-65f7-1128-5b9017fd6486&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f6e52]:
+          - link "Legal" [ref=f6e53] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=d5649c437ac709a0d2f737a25576941bf8e9bc481dce6b4856c844502530ed62JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=27df4c7b-16ea-65f7-1128-5b9017fd6486&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1
+        - listitem [ref=f6e54]:
+          - link "Advertise" [ref=f6e55] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=a80d828f591d236b71bf60387ece81c5eb4ea45db198966d77be618ad7bb67b6JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=27df4c7b-16ea-65f7-1128-5b9017fd6486&u=a1aHR0cHM6Ly9nby5taWNyb3NvZnQuY29tL2Z3bGluay8_bGlua2lkPTg2ODkyMg&ntb=1
+        - listitem [ref=f6e56]:
+          - link "Help" [ref=f6e57] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ab0e90ca8c82b83fddb44bb5a00bd2b82c464363e2ec49714f0ace44a0e8af6bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=27df4c7b-16ea-65f7-1128-5b9017fd6486&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vdG9waWMvODJkMjA3MjEtMmQ2Zi00MDEyLWExM2QtZDE5MTBjY2YyMDNm&ntb=1
+        - listitem [ref=f6e58]:
+          - button "Feedback" [ref=f6e59] [cursor=pointer]

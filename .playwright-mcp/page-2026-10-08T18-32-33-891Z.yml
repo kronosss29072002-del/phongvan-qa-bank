@@ -1,0 +1,103 @@
+- generic [active] [ref=f279e1]:
+  - dialog [ref=f279e2]:
+    - generic [ref=f279e7]:
+      - generic [ref=f279e8]:
+        - paragraph [ref=f279e9]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+        - paragraph [ref=f279e10]:
+          - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+          - link "Điều khoản về quyền riêng tư" [ref=f279e11] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+      - generic [ref=f279e12]:
+        - link "Chấp nhận" [ref=f279e14] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+        - link "Từ chối" [ref=f279e16] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+      - link "Các lựa chọn khác" [ref=f279e18] [cursor=pointer]:
+        - /url: "javascript: void(0)"
+  - banner [ref=f279e19]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f279e20] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f279e23] [cursor=pointer]
+    - generic [ref=f279e26]:
+      - link [ref=f279e27] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f279e28]
+      - search [ref=f279e29]:
+        - button "Tìm kiếm" [ref=f279e32] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f279e33]: tuyển dị nhân viên web backend "quản lý người dùng" "phân quyền" CRUD Java Freshers
+        - generic [ref=f279e34] [cursor=pointer]
+        - generic [ref=f279e36] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f279e41] [cursor=pointer]
+      - link [ref=f279e43] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=9157f6dfbdd3261a140e28af41447c0156b78b5d44ca86d2458fc97c47ad0979JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT10dXklZTElYmIlODNuK2QlZTElYmIlOGIrbmglYzMlYTJuK3ZpJWMzJWFhbit3ZWIrYmFja2VuZCslMjJxdSVlMSViYSVhM24rbCVjMyViZCtuZyVjNiViMCVlMSViYiU5ZGkrZCVjMyViOW5nJTIyKyUyMnBoJWMzJWEybitxdXklZTElYmIlODFuJTIyK0NSVUQrSmF2YStGcmVzaGVycyZzZW5kcXVlcnk9MSZmb3JtPUhFQ09EWA&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f279e44]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f279e46]:
+      - link "Đăng nhập" [ref=f279e47] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f279e49] [cursor=pointer]:
+        - generic [ref=f279e50]: Rewards
+    - navigation "Bộ lọc Tìm kiếm" [ref=f279e66]:
+      - list [ref=f279e67]:
+        - listitem [ref=f279e68]:
+          - link "Tất cả" [ref=f279e69] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f279e71]:
+          - link "Web" [ref=f279e72] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4a04842a15eee0fb9e38a92b815557016eec18462d8a7e4343813c93b60e0f47JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXR1eSVlMSViYiU4M24rZCVlMSViYiU4YituaCVjMyVhMm4rdmklYzMlYWFuK3dlYitiYWNrZW5kKyUyMnF1JWUxJWJhJWEzbitsJWMzJWJkK25nJWM2JWIwJWUxJWJiJTlkaStkJWMzJWI5bmclMjIrJTIycGglYzMlYTJuK3F1eSVlMSViYiU4MW4lMjIrQ1JVRCtKYXZhK0ZyZXNoZXJzJndlYnNjcD0xJkZPUk09SERSV1ND&ntb=1
+        - listitem [ref=f279e73]:
+          - link "Tìm kiếm" [ref=f279e74] [cursor=pointer]:
+            - /url: /copilotsearch?q=tuy%e1%bb%83n+d%e1%bb%8b+nh%c3%a2n+vi%c3%aan+web+backend+%22qu%e1%ba%a3n+l%c3%bd+ng%c6%b0%e1%bb%9di+d%c3%b9ng%22+%22ph%c3%a2n+quy%e1%bb%81n%22+CRUD+Java+Freshers&FORM=CSSCOP
+        - listitem [ref=f279e77]:
+          - link "Hình ảnh" [ref=f279e78] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=362418a9eccffcb7247a366b3af5107ca4697051d7c29a589a90fe664afb44c9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT10dXklZTElYmIlODNuK2QlZTElYmIlOGIrbmglYzMlYTJuK3ZpJWMzJWFhbit3ZWIrYmFja2VuZCslMjJxdSVlMSViYSVhM24rbCVjMyViZCtuZyVjNiViMCVlMSViYiU5ZGkrZCVjMyViOW5nJTIyKyUyMnBoJWMzJWEybitxdXklZTElYmIlODFuJTIyK0NSVUQrSmF2YStGcmVzaGVycyZGT1JNPUhEUlNDMw&ntb=1
+        - listitem [ref=f279e79]:
+          - link "Video" [ref=f279e80] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=3dbdf0a37c518f4c871a38d8fb77ee1d23b7ec7dc79986d9f95b9bab21263afbJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT10dXklZTElYmIlODNuK2QlZTElYmIlOGIrbmglYzMlYTJuK3ZpJWMzJWFhbit3ZWIrYmFja2VuZCslMjJxdSVlMSViYSVhM24rbCVjMyViZCtuZyVjNiViMCVlMSViYiU5ZGkrZCVjMyViOW5nJTIyKyUyMnBoJWMzJWEybitxdXklZTElYmIlODFuJTIyK0NSVUQrSmF2YStGcmVzaGVycyZGT1JNPUhEUlNDNA&ntb=1
+        - listitem [ref=f279e81]:
+          - link "Bản đồ" [ref=f279e82] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=aca3199e4634c77db40afd7c10baf9c40809dd265b428b298a6273cc0237a922JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT10dXklZTElYmIlODNuK2QlZTElYmIlOGIrbmglYzMlYTJuK3ZpJWMzJWFhbit3ZWIrYmFja2VuZCslMjJxdSVlMSViYSVhM24rbCVjMyViZCtuZyVjNiViMCVlMSViYiU5ZGkrZCVjMyViOW5nJTIyKyUyMnBoJWMzJWEybitxdXklZTElYmIlODFuJTIyK0NSVUQrSmF2YStGcmVzaGVycyZGT1JNPUhEUlNDNg&ntb=1
+        - listitem [ref=f279e83]:
+          - button [ref=f279e84] [cursor=pointer]
+  - generic [ref=f279e88]:
+    - main "Kết quả Tìm kiếm" [ref=f279e89]:
+      - list [ref=f279e90]:
+        - listitem [ref=f279e91]:
+          - link "Viblo" [ref=f279e93] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=67f46ad3621baf3c94984c0b3b9c63befbc5b291027a607035636ef643fe3307JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLWhhaS1PZVZLQmtReVprVw&ntb=1
+            - generic [ref=f279e98]:
+              - generic [ref=f279e99]: Viblo
+              - generic [ref=f279e100]: https://viblo.asia › xay-dung-ung-dung-web-crud...
+          - heading [level=2] [ref=f279e103]:
+            - link "Xây dựng ứng dụng web CRUD với Python và Flask - Phần hai" [ref=f279e104] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=67f46ad3621baf3c94984c0b3b9c63befbc5b291027a607035636ef643fe3307JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLWhhaS1PZVZLQmtReVprVw&ntb=1
+          - generic [ref=f279e107]:
+            - generic [ref=f279e109]:
+              - link "Create Admin User" [ref=f279e110] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=acbcc9eef9ba8d214f2729bd5d3c9b6c6a545ce9a1ae79a405ec0f51da8a49f9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLWhhaS1PZVZLQmtReVprVyM6fjp0ZXh0PU3DrG5oIHPhur0gYuG6r3QgxJHhuqd1IGLhurFuZw&ntb=1
+              - generic [ref=f279e112]:
+                - heading "Create Admin User" [level=2] [ref=f279e114]
+                - paragraph [ref=f279e119]: Mình sẽ bắt đầu bằng cách tạo người dùng quản trị thông qua dòng lệnh. Flask có cung cấp một lệnh rất tiện dụng, flask shell cho phép chúng ta sử dụng một interactivePython shell để sử dụng với các ứng dụng Flask. Mình vừa tạo một user a…
+            - link "Xem thông tin chi tiết" [ref=f279e124] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=acbcc9eef9ba8d214f2729bd5d3c9b6c6a545ce9a1ae79a405ec0f51da8a49f9JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLWhhaS1PZVZLQmtReVprVyM6fjp0ZXh0PU3DrG5oIHPhur0gYuG6r3QgxJHhuqd1IGLhurFuZw&ntb=1
+            - generic [ref=f279e127]:
+              - link "Dashboard Dành Cho Admin" [ref=f279e128] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=049c4de45c999d5e0bbcfef91a8c20a97f5cd6be490e4147cdabe0d3f703c57dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLWhhaS1PZVZLQmtReVprVyM6fjp0ZXh0PULDonkgZ2nhu50gbcOsbmggxJHDoyBjw7MgdQ&ntb=1
+              - generic [ref=f279e130]:
+                - heading "Dashboard Dành Cho Admin" [level=2] [ref=f279e132]
+                - paragraph [ref=f279e137]: Bây giờ mình đã có user admin, mình cần thêm chế độ xem cho trang tổng quan quản trị. Mình cần đảm bảo rằng sau khi user admin login, họ sẽ được chuyển hướng đến dashboard dành cho admin chứ không phải trang dashboard dành cho user thư…
+            - generic [ref=f279e139]:
+              - link "Phòng Ban" [ref=f279e140] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=d50587856d228615619710ae4670a7ebc6e23978a68c96933ed2b8fbdf772958JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWJsby5hc2lhL3AveGF5LWR1bmctdW5nLWR1bmctd2ViLWNydWQtdm9pLXB5dGhvbi12YS1mbGFzay1waGFuLWhhaS1PZVZLQmtReVprVyM6fjp0ZXh0PULDonkgZ2nhu50gbcOsbmggc-G6vSBi4bqvdCA&ntb=1
+              - generic [ref=f279e142]:
+                - heading "Phòng Ban" [level=2] [ref=f279e144]
+                - paragraph [ref=f279e149]: Bây giờ mình sẽ bắt đầu làm việc trên admin blueprint, có phần lớn chức năng trong ứng dụng. Mình sẽ bắt đầu bằng cách xây dựng chức năng CRUD cho các phòng ban.
+    - complementary "Kết quả bổ sung" [ref=f279e150]:
+      - list
+  - contentinfo [ref=f279e151]:
+    - generic [ref=f279e152]:
+      - list:
+        - listitem [ref=f279e153]:
+          - link "Quyền riêng tư" [ref=f279e154] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f279e155]:
+          - link "Điều khoản" [ref=f279e156] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

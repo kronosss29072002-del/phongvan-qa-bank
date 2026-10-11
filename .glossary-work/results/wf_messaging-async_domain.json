@@ -1,0 +1,489 @@
+{
+  "domain": "MESSAGING & ASYNC PATTERNS",
+  "entries": [
+    {
+      "term": "Message queue",
+      "aliases": [
+        "hàng đợi tin nhắn",
+        "message-oriented middleware",
+        "MOM",
+        "Queue"
+      ],
+      "level": "basic",
+      "problem": "Team làm API gửi email xác nhận ngay trong luồng request HTTP: lúc traffic cao, SMTP chậm khiến request treo và timeout, user thấy lỗi dù đơn hàng đã lưu. Gọi thẳng sang service khác thì service đó sập là mất việc kèm theo, không ai giữ hộ tin nhắn chờ.",
+      "how": "Producer đẩy tin nhắn vào hàng đợi giữa chừng rồi trả lời client ngay; worker tách riêng lấy tin ra xử lý — áp lực đỉnh bị hàng đợi giữ (buffer), việc xử lý nền không kéo sập request path.",
+      "origin": "IBM MQ (MQSeries) là thương mại hóa sớm nhất; hàng đợi tin nhắn đã có trong RTOS thập niên 1980 (VRTX, pSOS+)",
+      "related": [
+        "Message broker",
+        "Pub/Sub",
+        "Competing consumers",
+        "Dead letter queue"
+      ]
+    },
+    {
+      "term": "Message broker",
+      "aliases": [
+        "broker",
+        "trung gian tin nhắn",
+        "message-oriented middleware"
+      ],
+      "level": "basic",
+      "problem": "5 service giao tiếp trực tiếp thì mỗi cặp giữ kết nối riêng, phải biết địa chỉ nhau; một service đổi địa chỉ hoặc crash thì các bên gửi treo hoặc mất dữ liệu — không ai lưu hộ tin nhắn chờ người nhận quay lại.",
+      "how": "Broker (RabbitMQ, Kafka, SQS) đứng giữa: nhận, lưu (store-and-forward) và route tin nhắn theo queue/topic tới người nhận sẵn sàng — mọi thứ chỉ kết nối tới một điểm trung tâm.",
+      "origin": "Message-oriented middleware xuất hiện từ thập niên 1980; IBM MQSeries (1993) thương mại hóa sớm nhất. Các broker hiện đại như RabbitMQ (2007) và Apache Kafka (LinkedIn, 2011) chuẩn hóa store-and-forward và routing theo queue/topic.",
+      "related": [
+        "Message queue",
+        "RabbitMQ (AMQP)",
+        "Apache Kafka",
+        "Pub/Sub"
+      ]
+    },
+    {
+      "term": "Pub/Sub",
+      "aliases": [
+        "publish-subscribe",
+        "đăng ký phát",
+        "topic"
+      ],
+      "level": "basic",
+      "problem": "Log service muốn ghi log mọi sự kiện, search indexer và analytics cũng muốn; nếu mỗi sự kiện gọi thẳng từng consumer thì service sinh sự kiện phải biết và sửa code mỗi khi thêm consumer mới — coupling 1-1 tăng theo số người đọc.",
+      "how": "Publisher publish vào topic chung, subscriber tự đăng ký topic mình cần — một publish chạm n subscriber, bên gửi không cần biết bên nhận là ai hay đã tồn tại chưa.",
+      "origin": "Hệ thống 'news' của Isis Toolkit (Birman & Joseph, trình bày tại SOSP '87) là một trong những pub/sub công khai đầu tiên",
+      "related": [
+        "Message broker",
+        "Fan-out / Fan-in",
+        "Event-driven architecture",
+        "Apache Kafka"
+      ]
+    },
+    {
+      "term": "FIFO / Message ordering",
+      "aliases": [
+        "FIFO queue",
+        "message ordering",
+        "thứ tự tin nhắn"
+      ],
+      "level": "basic",
+      "problem": "Worker xử lý song song khiến event 'khách đã chuyển khoản' đến TRƯỚC event 'đơn được tạo' do hai luồng khác lane, xử lý đảo thứ tự nên đơn bị tính sai trạng thái; queue chuẩn (standard queue) còn không giữ thứ tự qua các lần redelivery.",
+      "how": "Gom tin nhắn cùng khoá (message group, partition) và ép tuần tự trong nhóm đó — tin sau chờ tin trước xong; đánh đổi: tiến độ nhóm bị chặn bởi nút chậm nhất (head-of-line blocking).",
+      "origin": "",
+      "related": [
+        "Kafka topic / partition / consumer group",
+        "Idempotent consumer",
+        "Message queue"
+      ]
+    },
+    {
+      "term": "Polling",
+      "aliases": [
+        "hỏi thăm",
+        "long polling",
+        "Busy polling",
+        "polling loop"
+      ],
+      "level": "basic",
+      "problem": "Trang cần hiển thị notification mới nhưng HTTP là request/response — không ai báo khi server có gì; client hỏi mỗi giây thì server gánh hàng nghìn GET rỗng, hỏi thưa thì user thấy trễ.",
+      "how": "Client định kỳ GET kiểm tra thay đổi (dùng ETag/If-None-Match cho nhẹ); long polling giữ request mở tới khi có dữ liệu hoặc timeout để giảm số lần hỏi.",
+      "origin": "",
+      "related": [
+        "Webhook",
+        "Server-Sent Events (SSE)",
+        "WebSocket"
+      ]
+    },
+    {
+      "term": "Webhook",
+      "aliases": [
+        "HTTP callback",
+        "web hook"
+      ],
+      "level": "basic",
+      "problem": "Ứng dụng cần biết ngay khi Stripe trừ tiền thành công hay GitHub push code — polling Stripe mỗi 5 giây thì vừa trễ vừa tốn quota, trong khi bạn không muốn giữ kết nối dài hạn tới từng nhà cung cấp.",
+      "how": "Bạn đăng ký URL callback; khi sự kiện xảy ra, server bên kia tự POST HTTP tới URL đó — push đúng lúc, chỉ dùng HTTP nên không cần hạ tầng mới; cần ký HMAC để chống giả mạo và replay.",
+      "origin": "Jeff Lindsay, 2007 — bài blog 'Web hook to revolutionize the web'",
+      "related": [
+        "Polling",
+        "Event-driven architecture",
+        "Idempotency"
+      ]
+    },
+    {
+      "term": "Idempotency",
+      "aliases": [
+        "idempotent",
+        "bất biến lặp",
+        "idempotency key"
+      ],
+      "level": "basic",
+      "problem": "Response của POST /transfer bị timeout do mạng — client không biết tiền đã chuyển chưa nên phải retry; nếu endpoint xử lý y hệt lần nữa thì khách bị trừ 2 lần. Không có khoá dedupe thì mọi retry đều nguy hiểm.",
+      "how": "Gắn idempotency key (hoặc dùng thao tác vốn idempotent như PUT, ghi giá trị tuyệt đối thay vì cộng dồn): server tra key đã xử lý chưa, nếu có thì trả lại kết quả cũ thay vì làm lại side effect.",
+      "origin": "Quy ước HTTP (RFC 7231): GET/PUT/DELETE phải idempotent",
+      "related": [
+        "Idempotent consumer",
+        "Exponential Backoff",
+        "Exactly-once semantics"
+      ]
+    },
+    {
+      "term": "Fan-out / Fan-in",
+      "aliases": [
+        "scatter-gather",
+        "fanout",
+        "rải tụ",
+        "fan-in"
+      ],
+      "level": "basic",
+      "problem": "Tweet mới phải vào timeline của 500k follower — xử lý tuần tự trong request thì mất hàng phút, follower không thấy gì; hoặc job index 10 triệu bản ghi chạy một thread thì nửa đêm vẫn chưa xong.",
+      "how": "Fan-out rải việc (hoặc bản sao tin nhắn) cho nhiều worker xử lý song song (scatter), fan-in gom kết quả các nhánh về một nơi (gather) để trả kết quả hoặc ghi tổng hợp.",
+      "origin": "",
+      "related": [
+        "Pub/Sub",
+        "Message queue",
+        "Competing consumers",
+        "Stream processing vs batch"
+      ]
+    },
+    {
+      "term": "Cron / Job scheduler",
+      "aliases": [
+        "crontab",
+        "job scheduler",
+        "định kỳ công việc"
+      ],
+      "level": "basic",
+      "problem": "Backup lúc 3 giờ sáng, gửi báo cáo hàng ngày phải tự chạy — để người bấm thì quên; khi vài chục job phụ thuộc nhau, chạy trên nhiều máy, cron một máy không có retry/phụ thuộc/giám sát, hai instance cùng bật còn chạy trùng.",
+      "how": "Cron đọc crontab (5 trường phút/giờ/ngày/tháng/thứ) và chạy lệnh định kỳ; job scheduler phân tán (Quartz, Celery beat, Airflow — gốc từ JCL trên mainframe) thêm dependency, retry, distributed lock chống chạy trùng; task queue (Celery) nhận job kèm dữ liệu xử lý nền thay vì chỉ theo lịch.",
+      "origin": "AT&T Bell Laboratories, Unix phát hành 5/1975; Vixie cron của Paul Vixie ra đời 1987",
+      "related": [
+        "Delayed queue",
+        "Priority queue",
+        "Message queue"
+      ]
+    },
+    {
+      "term": "Competing consumers",
+      "aliases": [
+        "competing-consumers",
+        "visibility timeout",
+        "PeekLock"
+      ],
+      "level": "intermediate",
+      "problem": "Một consumer duy nhất bị chặn bởi một máy: đỉnh 500 msg/s trong khi worker xử lý 50/s thì backlog phình; thêm instance thứ hai mà không cơ chế phân phát thì hai đứa cùng lấy cùng một tin nhắn → xử lý trùng.",
+      "how": "Nhiều consumer cùng pull một queue, broker phân phát mỗi tin nhắn cho đúng một người; SQS dùng visibility timeout (ẩn tin nhắn trong lúc xử lý, hết timeout mà chưa ack thì hiện lại), Service Bus dùng PeekLock.",
+      "origin": "",
+      "related": [
+        "Message queue",
+        "Idempotent consumer",
+        "RabbitMQ (AMQP)"
+      ]
+    },
+    {
+      "term": "RabbitMQ (AMQP)",
+      "aliases": [
+        "RabbitMQ",
+        "AMQP"
+      ],
+      "level": "intermediate",
+      "problem": "Team cần broker tin cậy tự host với ack rõ ràng, routing linh động, failover khi node chết — nhưng middleware thời trước mỗi hãng một giao thức proprietary, team Java mua MQ của hãng này thì team Go không nối được (lock-in vendor).",
+      "how": "Broker viết bằng Erlang implement AMQP: exchange route tin theo binding vào queue, consumer ack khi xử lý xong (không ack → redeliver), clustering failover; plugin mở rộng STOMP/MQTT/management.",
+      "origin": "Rabbit Technologies Ltd. (liên doanh LShift + CohesiveFT), 2007, viết bằng Erlang; giao thức AMQP do John O'Hara khởi xướng tại JPMorgan Chase London năm 2003",
+      "related": [
+        "Message broker",
+        "Dead letter queue",
+        "Apache Kafka",
+        "Pub/Sub"
+      ]
+    },
+    {
+      "term": "Dead letter queue",
+      "aliases": [
+        "DLQ",
+        "dead-letter queue",
+        "hàng đợi thư chết"
+      ],
+      "level": "intermediate",
+      "problem": "Tin nhắn JSON hỏng bị worker từ chối rồi broker trả lại mãi — nó quay vòng vô hạn, chiếm slot xử lý, log tràn và cảnh báo spam trong khi các tin tốt phía sau không được đụng tới.",
+      "how": "Đếm số lần nhận thất bại, quá ngưỡng (maxReceiveCount) thì chuyển tin sang DLQ riêng; operator inspect log, chẩn đoán, fix root cause rồi redrive về queue chính.",
+      "origin": "",
+      "related": [
+        "Poison message",
+        "Exponential Backoff",
+        "Idempotent consumer"
+      ]
+    },
+    {
+      "term": "Poison message",
+      "aliases": [
+        "tin nhắn độc",
+        "message độc"
+      ],
+      "level": "intermediate",
+      "problem": "Một tin sai schema làm worker throw ngay từ dòng parse — mỗi lần redelivery là mỗi lần crash hoặc treo, consumer group không tiến lên vì lặp mãi lỗi y hệt, chặn cả partition/queue phía sau.",
+      "how": "Đánh dấu poison sau N lần fail, tách hẳn khỏi luồng chính (chuyển DLQ + báo alert), chờ fix dữ liệu hoặc fix code rồi xử lý lại có kiểm soát.",
+      "origin": "",
+      "related": [
+        "Dead letter queue",
+        "Exponential Backoff",
+        "Message queue"
+      ]
+    },
+    {
+      "term": "Idempotent consumer",
+      "aliases": [
+        "dedup consumer",
+        "inbox pattern",
+        "người tiêu thụ bất biến"
+      ],
+      "level": "intermediate",
+      "problem": "Broker giao at-least-once: worker trừ tiền xong nhưng crash trước khi ack → instance khác nhận lại tin và trừ lần nữa. Producer retry, ack mất, lock timeout đều tạo bản sao — trùng lặp là mặc định của distributed messaging, không phải sự cố hiếm.",
+      "how": "Ghi dedup key (messageId/idempotency key) và marker 'đã xử lý' cùng transaction với side effect; chống race bằng unique constraint (insert conflict = bản sao); side effect ngoài DB (gọi API bên thứ ba) thì ghi trạng thái in-progress/completed rồi reconcile.",
+      "origin": "",
+      "related": [
+        "Idempotency",
+        "Exactly-once semantics",
+        "Transactional outbox"
+      ]
+    },
+    {
+      "term": "WebSocket",
+      "aliases": [
+        "ws://",
+        "giao thức WebSocket"
+      ],
+      "level": "intermediate",
+      "problem": "Chat và collaborative cursor cần hai chiều realtime: polling HTTP mỗi 200ms thì server gánh hàng nghìn request rỗng mà vẫn trễ; mỗi sự kiện một HTTP request thì không giữ được ngữ cảnh phiên hội thoại.",
+      "how": "Handshake HTTP upgrade rồi giữ kết nối full-duplex — hai bên gửi frame bất kỳ lúc nào trên cùng kết nối, độ trễ thấp, không lặp header như HTTP.",
+      "origin": "",
+      "related": [
+        "Server-Sent Events (SSE)",
+        "Polling",
+        "Backpressure & rate shaping"
+      ]
+    },
+    {
+      "term": "Server-Sent Events (SSE)",
+      "aliases": [
+        "SSE",
+        "Server-Sent Events",
+        "EventSource",
+        "text/event-stream"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Server cần đẩy dữ liệu một chiều xuống client (bảng giá, log, token LLM, notification, tiến trình build). WebSocket quá nặng cho việc này: phải tự viết handshake upgrade, framing, heartbeat, reconnect, và proxy cũ có thể cắt kết nối; polling thì chậm, tốn request và băng thông. Cần cơ chế push đơn giản chỉ dựa trên HTTP thông thường.",
+      "origin": "Ian Hickson, WHATWG 'Web Applications 1.0', bắt đầu 2004; Opera thử nghiệm 9/2006; W3C Recommendation 3/2015.",
+      "how": "Server trả response với Content-Type: text/event-stream rồi ghi các event liên tục theo dòng định dạng 'data: ...'. Trình duyệt dùng EventSource API để giữ kết nối, tự parse, tự reconnect và gửi header Last-Event-ID để tiếp tục từ chỗ đứt, không cần thư viện bên ngoài. HTTP/2 cho phép multiplex nhiều stream trên cùng một kết nối.",
+      "related": [
+        "Polling",
+        "WebSocket",
+        "Fan-out / Fan-in",
+        "HTTP",
+        "Stream processing vs batch"
+      ]
+    },
+    {
+      "term": "Delayed queue",
+      "aliases": [
+        "scheduled message",
+        "delay queue",
+        "tin nhắn hẹn giờ"
+      ],
+      "level": "intermediate",
+      "problem": "Đơn hết hạn thanh toán sau 30 phút phải tự hủy — worker sleep 30 phút thì chiếm thread và mất job khi crash; poll DB mỗi phút thì tốn query và trễ tùy tần suất.",
+      "how": "Đặt thời gian available trên tin nhắn (hoặc queue riêng có độ trễ), broker/worker chỉ trả tin về khi tới hạn — không chiếm tài nguyên trong lúc chờ.",
+      "origin": "",
+      "related": [
+        "Cron / Job scheduler",
+        "Message queue",
+        "Priority queue"
+      ]
+    },
+    {
+      "term": "Priority queue",
+      "aliases": [
+        "hàng đợi ưu tiên",
+        "priority queue"
+      ],
+      "level": "intermediate",
+      "problem": "Khi backlog 10 nghìn job, FIFO xử lý log crawl 200MB trước trong khi request thanh toán của khách chờ phía sau — coi mọi job ngang hàng là sai khi chúng không ngang giá trị.",
+      "how": "Xếp theo mức ưu tiên, dequeue phần tử cao nhất trước (heap); broker thì tách channel ưu tiên cao/thấp hoặc dùng field priority — chấp nhận starve job thấp nếu job cao đến liên tục.",
+      "origin": "",
+      "related": [
+        "Message queue",
+        "Cron / Job scheduler",
+        "FIFO / Message ordering"
+      ]
+    },
+    {
+      "term": "Event-driven architecture",
+      "aliases": [
+        "event",
+        "sự kiện",
+        "event-driven",
+        "EDA",
+        "kiến trúc hướng sự kiện"
+      ],
+      "level": "intermediate",
+      "problem": "Kiến trúc gọi nhau tuần tự A→B→C: thêm bước D phải sửa service A, service B chậm làm timeout cả chuỗi, và mọi service phải biết địa chỉ service khác — coupling tăng theo mỗi bước và khó test.",
+      "how": "Service phát event (điều đã xảy ra, ví dụ 'đơn đã tạo') vào kênh; consumer tự subscribe và phản ứng — thêm consumer mới không sửa producer, thất bại phía consumer không kéo sập phía sinh event; đánh đổi: phức tạp và khó test hơn request/response.",
+      "origin": "Brenda M. Michelson viết tổng quan EDA có ảnh hưởng (2006); Udi Dahan gắn EDA với SOA",
+      "related": [
+        "Pub/Sub",
+        "Event sourcing",
+        "Saga",
+        "Transactional outbox"
+      ]
+    },
+    {
+      "term": "Apache Kafka",
+      "aliases": [
+        "Kafka",
+        "event log",
+        "distributed log"
+      ],
+      "level": "advanced",
+      "problem": "Queue truyền thống consume xong là xóa tin nhắn: mỗi loại người đọc cần một queue riêng (nhân bản dữ liệu), muốn đọc lại lịch sử hay replay sau bug thì không được — LinkedIn có luồng dữ liệu tỉ event/ngày cần nhiều team đọc cùng một luồng và đọc lại được.",
+      "how": "Log append-only phân tán giữ dữ liệu theo retention; nhiều consumer group đọc độc lập từ offset của riêng mình; throughput cao nhờ ghi tuần tự trên đĩa + zero-copy — queue 'không xóa, chỉ trỏ tới'.",
+      "origin": "LinkedIn — Jay Kreps, Neha Narkhede, Jun Rao; open-source đầu 2011, tốt nghiệp Apache Incubator 23/10/2012",
+      "related": [
+        "Kafka topic / partition / consumer group",
+        "Stream processing vs batch",
+        "Exactly-once semantics",
+        "Event sourcing"
+      ]
+    },
+    {
+      "term": "Kafka topic / partition / consumer group",
+      "aliases": [
+        "partition",
+        "consumer group",
+        "offset",
+        "topic"
+      ],
+      "level": "advanced",
+      "problem": "Cần vừa giữ thứ tự theo từng người dùng (10 event cùng user không được đảo) vừa xử lý song song triệu msg/s — ép thứ tự toàn topic thì chặn hết, hoàn toàn không thứ tự thì sai business; số consumer vượt số partition thì phần dư không có việc.",
+      "how": "Topic chia partition — đơn vị của thứ tự lẫn song song; trong một consumer group mỗi partition gán độc quyền cho đúng một consumer (vừa giữ thứ tự vừa chia tải), group mới đọc lại từ offset đầu; xử lý fail thì giữ offset chưa commit để đọc lại.",
+      "origin": "Cùng nguồn với Kafka — LinkedIn, 2011",
+      "related": [
+        "Apache Kafka",
+        "FIFO / Message ordering",
+        "Stream processing vs batch"
+      ]
+    },
+    {
+      "term": "Event sourcing",
+      "aliases": [
+        "event sourcing",
+        "lưu nguồn sự kiện",
+        "event replay"
+      ],
+      "level": "advanced",
+      "problem": "Chỉ lưu state hiện tại (UPDATE số dư = 100): không trả lời được 'lúc 10h số dư bao nhiêu', không audit ai đổi khi nào, bug ghi nhầm thì dữ liệu quá khứ vĩnh viễn mất — không còn gì để tra hay replay khi debug.",
+      "how": "Ghi mọi thay đổi thành dãy event bất biến (append-only); state hiện tại là kết quả fold(events); rebuild từ đầu, query tại thời điểm quá khứ, phát lại event cũ vào môi trường test đều được.",
+      "origin": "Martin Fowler, bài 'Event Sourcing' ngày 12/12/2005",
+      "related": [
+        "Event-driven architecture",
+        "CQRS",
+        "Apache Kafka",
+        "Stream processing vs batch"
+      ]
+    },
+    {
+      "term": "CQRS",
+      "aliases": [
+        "Command Query Responsibility Segregation",
+        "tách đọc-ghi"
+      ],
+      "level": "advanced",
+      "problem": "Một model kiêm hai việc: command phải validate business rule phức tạp, query dashboard phải đọc triệu dòng (đọc gấp viết 10-100 lần) — chung một table thì indexes/phép tắc phục vụ cả hai và mỗi bên làm yếu bên kia; read replica chỉ tăng sức đọc chứ không tách được model.",
+      "how": "Tách model ghi (bảo toàn business rule) và model đọc (denormalize/cache riêng), scale độc lập, đồng bộ qua event — chi phí là eventual consistency và hai codebase model, Fowler cảnh báo chỉ dùng trong Bounded Context hẹp.",
+      "origin": "Greg Young đặt thuật ngữ CQRS (Martin Fowler ghi nhận nghe mô tả đầu 2011), kế thừa CQS của Bertrand Meyer",
+      "related": [
+        "Event sourcing",
+        "Event-driven architecture",
+        "Apache Kafka"
+      ]
+    },
+    {
+      "term": "Transactional outbox",
+      "aliases": [
+        "outbox pattern",
+        "dual-write fix",
+        "transactional outbox"
+      ],
+      "level": "advanced",
+      "problem": "Dual write: một business transaction phải vừa ghi database vừa publish event cho broker — không có transaction chung: gửi giữa transaction thì event sống sót cả khi rollback, gửi sau commit thì crash đúng giữa hai bước là event mất vĩnh viễn; 2PC với broker thì không thực tế.",
+      "how": "Ghi event vào bảng outbox CÙNG transaction với row business; relay (polling bảng hoặc CDC đọc transaction log) đẩy outbox ra broker — database là nguồn sự thật duy nhất; consumer vẫn cần idempotent vì relay crash giữa 'đã gửi' và 'đã đánh dấu' có thể gửi trùng.",
+      "origin": "Chris Richardson — microservices.io",
+      "related": [
+        "Idempotent consumer",
+        "Event-driven architecture",
+        "Event sourcing",
+        "Exactly-once semantics"
+      ]
+    },
+    {
+      "term": "Saga",
+      "aliases": [
+        "saga pattern",
+        "compensating transaction",
+        "choreography vs orchestration"
+      ],
+      "level": "advanced",
+      "problem": "Microservices mỗi service một database: tạo đơn = trừ hàng kho + trừ tiền khách ở ba service riêng — 2PC giữ lock xuyên mạng thì quá chậm và đòi mọi service cùng hỗ trợ; fail giữa chừng thì đã trừ tiền chưa giữ hàng, data các service lệch nhau không ai rollback cho.",
+      "how": "Chạy chuỗi local transaction, mỗi bước phát event lệnh bước sau; nếu fail ở bước sau thì chạy compensating transaction (đổi màu đơn, hoàn tiền) để undo — choreography để service tự phản ứng event, orchestration có orchestrator điều phối trung tâm và dễ kiểm soát luồng hơn.",
+      "origin": "Ý tưởng gốc: bài 'Sagas' của H. Garcia-Molina & K. Salem (SIGMOD 1987); Chris Richardson phổ biến trong Microservices Patterns",
+      "related": [
+        "Event-driven architecture",
+        "Transactional outbox",
+        "Idempotent consumer"
+      ]
+    },
+    {
+      "term": "Stream processing vs batch",
+      "aliases": [
+        "streaming",
+        "stream vs batch",
+        "Lambda architecture",
+        "Kappa architecture"
+      ],
+      "level": "advanced",
+      "problem": "Batch (Hadoop/ETL đêm) cho kết quả đúng trên toàn bộ dữ liệu nhưng dashboard trễ hàng giờ — không kịp phát hiện gian lận realtime; xử lý stream từng event thì state chỉ một phần và khó đảm bảo độ đúng, mặt khác phải duy trì hai codebase xử lý hoàn toàn khác nhau.",
+      "how": "Stream xử lý liên tục theo window + checkpoint (Flink, Kafka Streams, Storm) cho độ trễ thấp; batch xử lý toàn bộ cho chính xác — Lambda architecture xếp hai lớp (batch + speed) còn Kappa bỏ lớp batch, chạy thuần stream một codebase.",
+      "origin": "Lambda architecture — Nathan Marz, blog 2011 (gốc gọi là 'batch/realtime architecture'); Kappa do Jay Kreps đề xuất",
+      "related": [
+        "Apache Kafka",
+        "Event sourcing",
+        "Backpressure & rate shaping"
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Message_queue",
+    "https://github.com/donnemartin/system-design-primer",
+    "https://en.wikipedia.org/wiki/Apache_Kafka",
+    "https://microservices.io/patterns/data/transactional-outbox.html",
+    "https://microservices.io/patterns/data/saga.html",
+    "https://martinfowler.com/eaaDev/EventSourcing.html",
+    "https://martinfowler.com/bliki/CQRS.html",
+    "https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern",
+    "https://en.wikipedia.org/wiki/RabbitMQ",
+    "https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol",
+    "https://en.wikipedia.org/wiki/Cron",
+    "https://en.wikipedia.org/wiki/Webhook",
+    "https://en.wikipedia.org/wiki/Amazon_Simple_Queue_Service",
+    "https://en.wikipedia.org/wiki/Idempotence",
+    "https://en.wikipedia.org/wiki/Actor_model",
+    "https://en.wikipedia.org/wiki/Event-driven_architecture",
+    "https://en.wikipedia.org/wiki/Lambda_architecture",
+    "https://en.wikipedia.org/wiki/Stream_processing",
+    "https://en.wikipedia.org/wiki/Backpressure",
+    "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events",
+    "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html",
+    "https://learn.microsoft.com/en-us/azure/architecture/patterns/competing-consumers",
+    "https://learn.microsoft.com/en-us/azure/architecture/patterns/idempotent-consumer",
+    "https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling",
+    "https://docs.cloud.google.com/pubsub/docs/overview",
+    "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter"
+  ]
+}

@@ -1,0 +1,732 @@
+{
+  "domain": "API & APPLICATION DESIGN",
+  "entries": [
+    {
+      "term": "REST (Representational State Transfer)",
+      "aliases": [
+        "RESTful",
+        "RESTful API"
+      ],
+      "level": "basic",
+      "problem": "Trước 2000 web API thiết kế tùy tiện: mỗi hệ thống tự đặt quy ước URL/verb/định dạng riêng, client phải hardcode cấu trúc máy chủ và vỡ khi hệ thống thay đổi.",
+      "origin": "Roy Fielding, luận án tiến sĩ 'Architectural Styles and the Design of Network-based Software Architectures', UC Irvine, 2000.",
+      "how": "Kiểu kiến trúc gồm 6 ràng buộc: client-server, statelessness, cache, uniform interface (tài nguyên định danh bằng URI, thao tác qua representation, message tự mô tả, HATEOAS), layered system, code on demand (tùy chọn). Client chỉ cần URI khởi đầu và tự khám phá phần còn lại qua hypermedia nên ít khớp chặt với máy chủ.",
+      "related": [
+        "Representational state (resource vs representation)",
+        "Statelessness",
+        "HATEOAS",
+        "HTTP methods semantics"
+      ]
+    },
+    {
+      "term": "Representational state (resource vs representation)",
+      "aliases": [
+        "resource-oriented design",
+        "resource",
+        "representation"
+      ],
+      "level": "basic",
+      "problem": "Khi API trả về 'đối tượng' như gửi trực tiếp object, client phụ thuộc format cụ thể; đổi trường dữ liệu hay đổi format là phá mọi client.",
+      "origin": "Fielding dissertation 2000 - phân biệt resource (khái niệm được định danh) và representation (dữ liệu mô tả trạng thái tại thời điểm gửi, theo định dạng JSON/XML...).",
+      "how": "Resource có nhiều representation; client chọn qua content negotiation. Server gửi trạng thái hiện tại, client thay đổi trạng thái bằng PUT/POST/PATCH; thao tác dựa trên giao thức không lưu trạng thái phía client.",
+      "related": [
+        "REST",
+        "Content negotiation",
+        "HTTP methods semantics"
+      ]
+    },
+    {
+      "term": "Statelessness",
+      "aliases": [
+        "stateless server",
+        "server stateless",
+        "stateless"
+      ],
+      "level": "basic",
+      "problem": "Server giữ session trên memory khiến không scale ngang (request phải về đúng node giữ session), client nghỉ mà server vẫn tốn tài nguyên lưu trạng thái.",
+      "origin": "Ràng buộc thứ 2 của REST, Fielding 2000: 'A specific client does not consume server storage when the client is at rest'.",
+      "how": "Mỗi request mang đủ thông tin để xử lý độc lập (auth token, context); server không lưu phiên. Trạng thái nằm ở client hoặc resource, mọi node xử lý được mọi request, dễ load balance và chịu lỗi.",
+      "related": [
+        "REST",
+        "Idempotency"
+      ]
+    },
+    {
+      "term": "HTTP methods semantics",
+      "aliases": [
+        "HTTP verbs",
+        "GET/POST/PUT/PATCH/DELETE semantics"
+      ],
+      "level": "basic",
+      "problem": "Dùng POST cho mọi thứ làm mất khả năng cache, mất retry an toàn, proxy/CDN không biết request có an toàn để lặp lại không.",
+      "origin": "RFC 9110 (STD 97, 2022, Fielding/Nottingham/Reschke) section 9 - kế thừa RFC 7231/2616.",
+      "how": "GET/HEAD = đọc (safe); POST = tạo/submit, không an toàn; PUT = thay thế toàn bộ resource (idempotent); DELETE = xóa (idempotent); PATCH = sửa một phần (không idempotent); OPTIONS = hỏi khả năng. Trả status code đúng ngữ nghĩa: 201 khi tạo, 204 khi xóa thành công.",
+      "related": [
+        "Safe & idempotent methods",
+        "Status codes (2xx/4xx/5xx)",
+        "PUT vs PATCH"
+      ]
+    },
+    {
+      "term": "Safe & idempotent methods",
+      "aliases": [
+        "safe methods",
+        "idempotent methods"
+      ],
+      "level": "basic",
+      "problem": "Khi kết nối sập giữa chừng client không biết request đã xử lý chưa; retry bừa có thể tạo trùng (double charge, record trùng).",
+      "origin": "RFC 9110 section 9.2: safe = không đổi trạng thái server (GET/HEAD/OPTIONS); idempotent = làm N lần giống 1 lần về hiệu ứng (PUT/DELETE, GET).",
+      "how": "Client chỉ tự động retry method an toàn/idempotent khi mạng lỗi; với POST phải dùng idempotency key hoặc cho người dùng xác nhận. Azure REST guidelines còn yêu cầu mọi method phải idempotent, POST tạo resource cũng idempotent nhờ header Repeatability-Request-ID.",
+      "related": [
+        "Idempotency",
+        "Retry guidance (safe methods)",
+        "HTTP methods semantics"
+      ]
+    },
+    {
+      "term": "Status codes (2xx/4xx/5xx)",
+      "aliases": [
+        "HTTP status codes",
+        "response status"
+      ],
+      "level": "basic",
+      "problem": "Luôn trả 200 kèm lỗi trong body làm client khó phân biệt thành công/thất bại, cache và monitoring hiểu sai, debug tốn thời gian.",
+      "origin": "RFC 9110 section 15 (2022) định nghĩa bảng status code; RFC 6585 (2012, Nottingham & Fielding) bổ sung 428/429/431/511.",
+      "how": "2xx thành công (200 OK, 201 Created, 202 Accepted, 204 No Content); 4xx lỗi phía client (400, 401, 403, 404, 409, 412, 415, 422, 429); 5xx lỗi server (500, 503). Mã lạ client coi như nhóm tương ứng (499 lạ coi như 400).",
+      "related": [
+        "Error response shape",
+        "RFC 7807 problem+json",
+        "Rate limit headers (429 + Retry-After + RateLimit)"
+      ]
+    },
+    {
+      "term": "Idempotency",
+      "aliases": [
+        "idempotent operation",
+        "Idempotency-Key"
+      ],
+      "level": "basic",
+      "problem": "Retry sau timeout mạng có thể tạo đối tượng thứ hai hoặc charge hai lần; client không phân biệt 'mạng lỗi' với 'chưa xử lý'.",
+      "origin": "Khái niệm từ HTTP spec (idempotent methods, RFC 9110 section 9.2.2); mẫu Idempotency-Key phổ biến hóa bởi Stripe API.",
+      "how": "Server ghi kết quả của lần đầu theo key; lần retry cùng key trả về đúng kết quả cũ thay vì thực thi lại. Stripe lưu status code + body của lần đầu với key, cho phép dùng lại tối đa khoảng 24h, tham số khác key cũ gây lỗi để tránh dùng nhầm.",
+      "related": [
+        "Idempotency key (Stripe pattern)",
+        "Safe & idempotent methods",
+        "Exactly-once semantics"
+      ]
+    },
+    {
+      "term": "PUT vs PATCH",
+      "aliases": [
+        "full update vs partial update",
+        "replace vs merge"
+      ],
+      "level": "basic",
+      "problem": "Gửi PUT với body thiếu trường sẽ xóa mất dữ liệu do PUT là thay thế toàn bộ; còn PATCH không chuẩn thì mỗi API tự định nghĩa format, client không đoán được.",
+      "origin": "RFC 5789 'PATCH Method for HTTP' (2010, Lisa Dusseault & James M. Snell) - PUT chỉ thay thế toàn bộ nên không dùng được cho sửa một phần.",
+      "how": "PUT gửi full representation, idempotent; PATCH gửi instruction sửa một phần (JSON Merge Patch RFC 7396 hoặc JSON Patch RFC 6902), không idempotent. PATCH trả 204/200, lỗi 400 (patch sai), 409 (xung đột), 412 (precondition fail), 415 (không hỗ trợ format), 422 (syntax đúng nhưng không áp được).",
+      "related": [
+        "HTTP methods semantics",
+        "Optimistic concurrency (ETag/If-Match)"
+      ]
+    },
+    {
+      "term": "Optimistic concurrency (ETag/If-Match)",
+      "aliases": [
+        "conditional request",
+        "lost update prevention",
+        "optimistic locking"
+      ],
+      "level": "intermediate",
+      "problem": "Hai client cùng đọc rồi cùng ghi, bản ghi sau đè lên bản trước mà không ai báo (lost update); pessimistic lock giữ khóa quá lâu giảm throughput.",
+      "origin": "ETag từ RFC 2616/7232, nay RFC 9110 section 8.8.3; Azure REST API Guidelines khuyến nghị mạnh ETag thay Last-Modified vì ngày không phân biệt cập nhật dưới giây.",
+      "how": "Server trả ETag (version/validator) kèm resource; client ghi kèm If-Match: ETag. Server thấy ETag cũ trả 412 Precondition Failed. GET kèm If-None-Match khớp trả 304. Nếu server muốn chặn ghi thiếu conditional thì trả 428 Precondition Required (RFC 6585).",
+      "related": [
+        "Conditional requests & 304 Not Modified",
+        "ETag/Last-Modified caching",
+        "PUT vs PATCH",
+        "Lock & deadlock"
+      ]
+    },
+    {
+      "term": "Pagination (offset vs cursor/keyset)",
+      "aliases": [
+        "Cursor / keyset pagination",
+        "Pagination cost & keyset pagination",
+        "phân trang con trỏ",
+        "keyset pagination",
+        "seek pagination",
+        "pagination không OFFSET",
+        "offset pagination",
+        "LIMIT OFFSET",
+        "seek method",
+        "cursor pagination",
+        "page token",
+        "phân trang",
+        "Pagination (offset vs cursor)"
+      ],
+      "level": "intermediate",
+      "domain": "Thiết kế API",
+      "problem": "Trả nguyên collection trong một response làm response phình to và timeout; phân trang bằng OFFSET sâu (ví dụ LIMIT 20 OFFSET 100.000 hay OFFSET 1.000.000) buộc DB quét qua và vứt đi số dòng tương ứng trước khi trả 20 dòng, trang càng sâu càng chậm (chi phí O(offset)). Khi dòng bị chèn/xóa giữa hai lần lấy trang, vị trí offset trôi (offset drift) khiến item lặp, nhảy cóc hoặc mất.",
+      "origin": "Google AIP-158 (page_size/page_token/next_page_token); Amazon, Microsoft Azure guidelines (nextLink) đều chuẩn hóa cursor. Offset pagination là kiểu SQL LIMIT/OFFSET truyền thống. Keyset pagination không rõ tác giả, được phổ biến trong cộng đồng web (các bài về keyset pagination, thập niên 2010).",
+      "how": "Với offset: client gửi page/limit, server chạy LIMIT/OFFSET — dễ nhảy trang tự do nhưng chi phí O(offset) và không ổn định khi có ghi chèn, nên chỉ hợp lý cho trang đầu hoặc khi user cần nhảy tới trang N tự do. Với keyset/cursor: nhớ khóa dòng cuối làm cursor (id + sort key) rồi WHERE id > cursor, hoặc WHERE (updated_at, id) < cursor, ORDER BY ... LIMIT n; luôn đi tiếp từ chỗ cũ nên chi phí O(log n + page) nhờ index dẫn xuất trên sort key, ổn định dù trang số bao nhiêu, phù hợp với feed/scroll vô hạn. Ở tầng API, server trả page token opaque trỏ tới vị trí thay cho số trang; client gửi lại token cho trang sau. AIP-158 yêu cầu token phải opaque, không cho user parse (base64 che thông tin là không đủ), không được cấp quyền truy cập, token có thời hạn tối hậu khoảng 3 ngày; thêm pagination vào API cũ là breaking change.",
+      "related": [
+        "Index (B-tree, hash, composite)",
+        "Query plan / EXPLAIN",
+        "SQL",
+        "N+1 query",
+        "Query batching (IN / bulk)",
+        "Cursor stability",
+        "Pagination token expiry",
+        "Filtering/sorting query params",
+        "Hot path",
+        "QPS (Queries Per Second)",
+        "In-memory cache"
+      ]
+    },
+    {
+      "term": "Filtering/sorting query params",
+      "aliases": [
+        "query filter",
+        "sort parameter",
+        "filter syntax"
+      ],
+      "level": "intermediate",
+      "problem": "Mỗi client tự tạo endpoint con ('/users/active', '/users/banned') làm số endpoint bùng nổ và không mở rộng được khi thêm tiêu chí lọc.",
+      "origin": "Google AIP-160 (filter string syntax với EBNF grammar); cộng đồng REST dùng query param như ?status=active&sort=-created_at.",
+      "how": "API nhận filter dạng chuỗi có ngữ pháp: so sánh (=, !=, <, >, <=, >=), AND/OR, NOT, wildcard, traversal dấu chấm (a.b), toán tử has ':'. Sort qua param riêng (vd sort=-created_at). Validate trả INVALID_ARGUMENT/400 khi field không tồn tại hoặc sai kiểu. Filter kết hợp pagination: đổi tham số ngoài filter giữa các trang thì lỗi.",
+      "related": [
+        "Pagination (offset vs cursor/keyset)",
+        "Query parameter design",
+        "N+1 at API layer (sparse fieldsets)"
+      ]
+    },
+    {
+      "term": "Partial response (fields param)",
+      "aliases": [
+        "fields parameter",
+        "sparse fieldsets",
+        "read_mask",
+        "partial responses"
+      ],
+      "level": "intermediate",
+      "problem": "Resource lớn (user 50 field) trả đầy đủ làm response nặng, mobile tốn data, compute lãng phí; client chỉ cần 3 field.",
+      "origin": "Google APIs 'fields' query param, chuẩn hóa trong AIP-157 (Partial Responses) và AIP-161 (Field Masks).",
+      "how": "Client truyền danh sách field cần (vd fields=id,name,email hoặc FieldMask proto qua query/header). Mặc định '*' (lấy tất cả) - đổi default này là breaking change. AIP-157: thay vì read_mask trên request nên để qua system parameter; cách khác là enum view (BASIC/FULL) khi chỉ có vài tổ hợp cố định.",
+      "related": [
+        "Field masks",
+        "N+1 at API layer (sparse fieldsets)",
+        "Envelope pattern"
+      ]
+    },
+    {
+      "term": "Field masks",
+      "aliases": [
+        "google.protobuf.FieldMask",
+        "update_mask",
+        "mask parameter"
+      ],
+      "level": "intermediate",
+      "problem": "PATCH với body đầy đủ làm client phải đọc-modify-write; server không biết field nào client cố tình sửa so với field chỉ vô tình gửi kèm.",
+      "origin": "Google AIP-161 (Field Masks) - dùng google.protobuf.FieldMask làm syntax chuẩn cho cả đọc và ghi.",
+      "how": "Mask liệt kê đường dẫn field tương đối với resource (title, author.given_name), traversal dấu chấm, wildcard '*' trên repeated/map, backquote cho key lạ. Update kèm update_mask thì server chỉ sửa field trong mask. Mask đọc phải khớp mask ghi (đọc rồi ghi lại = no-op), field output-only bị bỏ qua khi ghi.",
+      "related": [
+        "Partial response (fields param)",
+        "PUT vs PATCH"
+      ]
+    },
+    {
+      "term": "Envelope pattern",
+      "aliases": [
+        "response wrapper",
+        "data envelope",
+        "API wrapper"
+      ],
+      "level": "basic",
+      "problem": "Mỗi endpoint tự shape response (đôi khi là object, đôi khi là array), client phải viết code khác nhau cho từng chỗ; thêm metadata (pagination, requestId) không có chỗ đặt.",
+      "origin": "Không có 1 RFC - là convention phổ biến (AWS ApiResponse {data, error, requestId}; Azure object {value, nextLink}).",
+      "how": "Bọc payload trong object cố định vd {data, meta, error}. Meta chứa cursor, tổng số, requestId; error chứa mã lỗi thống nhất. Downsides: không đúng chuẩn REST lắm (mỗi resource là 1 representation), đôi khi gây dư thừa; nhiều API chọn không envelope để giữ đơn giản.",
+      "related": [
+        "Error response shape",
+        "RFC 7807 problem+json",
+        "Pagination (offset vs cursor/keyset)"
+      ]
+    },
+    {
+      "term": "Error response shape",
+      "aliases": [
+        "error object",
+        "error format",
+        "standard error"
+      ],
+      "level": "basic",
+      "problem": "Lỗi trả tùy hứng (string, {message}, {errors:[]}...) khiến client không viết được 1 chỗ xử lý lỗi chung, monitoring không phân loại được.",
+      "origin": "Azure REST API Guidelines: body {error: {code, message, target, details[], innererror}} + header x-ms-error-code khớp code trong body; Microsoft Graph, Google (google.rpc.Status) đều có format chuẩn.",
+      "how": "Chuẩn hóa: code máy đọc (stable, không đổi), message người đọc, field lỗi chi tiết (per-field validation), requestId để truy vết. Code khác nhau cho lỗi runtime-recoverable vs lỗi dùng sai; thêm code mới ở top-level cần bump version.",
+      "related": [
+        "RFC 7807 problem+json",
+        "Envelope pattern",
+        "Request correlation ID"
+      ]
+    },
+    {
+      "term": "RFC 7807/9457 problem+json",
+      "aliases": [
+        "application/problem+json",
+        "problem details",
+        "RFC 9457"
+      ],
+      "level": "intermediate",
+      "problem": "403 hay 400 đơn lẻ không nói vì sao bị từ chối và cách sửa; mỗi API tự bịa format lỗi riêng gây fragment hóa.",
+      "origin": "RFC 7807 (2016, Mark Nottingham & Erik Wilde), bị thay thế bởi RFC 9457 (2023, Nottingham, Wilde, S. Dalal) thêm registry problem type URI.",
+      "how": "Media type application/problem+json với member: type (URI định dạng lỗi, mặc định about:blank), title (mô tả loại), status (bản sao HTTP status), detail (giải thích cho lần này), instance (URI occurrence cụ thể). Extension member tùy ý (vd balance) - client MUST bỏ qua field không nhận ra. Dùng thay vì tự bịa envelope lỗi.",
+      "related": [
+        "Error response shape",
+        "Status codes (2xx/4xx/5xx)",
+        "Envelope pattern"
+      ]
+    },
+    {
+      "term": "API versioning (URL/header/media type)",
+      "aliases": [
+        "versioning strategy",
+        "api-version",
+        "breaking version"
+      ],
+      "level": "intermediate",
+      "problem": "Đổi shape API mà không version thì client cũ vỡ; version sai cách (mọi thay đổi đều bump) thì client phải nâng liên tục.",
+      "origin": "Azure: query param api-version dạng YYYY-MM-DD (preview thêm -preview); Microsoft Graph: segment /v1.0 và /beta; Stripe: header Stripe-Version pin theo ngày (2015-02-16); RFC 9110 media type versioning (application/vnd.company.v2+json) hiếm dùng.",
+      "how": "URL prefix dễ thấy, dễ cache nhưng chia đôi codebase; header gọn hơn nhưng khó discover/test; media type đúng chuẩn content negotiation nhưng client phức tạp. Bất kỳ cách nào cũng phải có policy deprecation rõ. Stripe: mỗi request nên pin version thay vì dựa default của account.",
+      "related": [
+        "Breaking vs non-breaking change",
+        "Semantic versioning for APIs",
+        "API deprecation policy"
+      ]
+    },
+    {
+      "term": "API deprecation policy",
+      "aliases": [
+        "deprecation",
+        "sunset policy"
+      ],
+      "level": "intermediate",
+      "problem": "Xóa endpoint/change shape đột ngột làm client đang chạy production chết; không có thời gian chuyển thì quan hệ đối tác/người dùng phá vỡ.",
+      "origin": "Microsoft Graph: element deprecated GA phải hỗ trợ tối thiểu 36 tháng hoặc 24 tháng khi chứng minh không còn dùng. Draft IETF draft-ietf-httpapi-sunset (HTTPAPI WG) chuẩn hóa header Sunset.",
+      "how": "Công bố sớm: header Sunset (ngày ngừng hoạt động theo HTTP-date), header Deprecation, link rel=sunset; log usage để biết client nào còn gọi. Breaking change bắt buộc qua version mới, version cũ giữ trong cửa sổ deprecation. Stripe hướng dẫn migrate từng bước qua 2 endpoint webhook song song.",
+      "related": [
+        "Deprecation/sunset headers",
+        "API versioning (URL/header/media type)",
+        "Breaking vs non-breaking change"
+      ]
+    },
+    {
+      "term": "Deprecation/sunset headers",
+      "aliases": [
+        "Sunset header",
+        "Deprecation header",
+        "rel=sunset"
+      ],
+      "level": "intermediate",
+      "problem": "Client chỉ biết API bị gỡ khi nó hỏng 500/404 giữa đêm; không có tín hiệu máy đọc để cảnh báo trước.",
+      "origin": "draft-ietf-httpapi-sunset (IETF HTTPAPI WG - Internet-Draft, chưa thành RFC khi research; Roberto Polli và cộng sự trong nhóm HTTPAPI liên quan).",
+      "how": "Server trả header Deprecation (thời điểm công bố deprecated) và Sunset: <HTTP-date> (thời điểm tắt hẳn) trên response; link relation ' Sunset' chỉ trang thông báo. Client/SDK đọc được thì log warning và lên kế hoạch migrate thay vì chờ outage.",
+      "related": [
+        "API deprecation policy",
+        "Rate limit headers (429 + Retry-After + RateLimit)"
+      ]
+    },
+    {
+      "term": "Rate limit headers (429 + Retry-After + RateLimit)",
+      "aliases": [
+        "throttling headers",
+        "X-RateLimit",
+        "RateLimit-Policy"
+      ],
+      "level": "intermediate",
+      "problem": "Client vượt quota thì server trả 429 nhưng client không biết khi nào được thử lại, hoặc cả nghìn client retry cùng lúc gây sập tiếp (thundering herd).",
+      "origin": "429 Too Many Requests từ RFC 6585 (2012, Nottingham & Fielding); Retry-After định nghĩa ở RFC 9110 section 10.2.3 (delta-seconds hoặc HTTP-date); header chuẩn RateLimit/RateLimit-Policy từ draft-ietf-httpapi-ratelimit-headers (Polli & Martínez Ruiz, 2022+).",
+      "how": "429 + Retry-After: client chờ đúng ngần đó giây. Draft chuẩn hóa: RateLimit-Limit (giới hạn đang tới hạn), RateLimit-Remaining (còn bao nhiêu), RateLimit-Reset (giây tới reset - dạng delay tránh lệch đồng hồ), RateLimit-Policy (100;w=60 nghĩa 100 req/60s). Giá trị là gợi ý không phải guarantee; nếu có cả Retry-After và RateLimit-Reset thì Retry-After thắng.",
+      "related": [
+        "Rate limiting vs throttling vs quota",
+        "Exponential Backoff",
+        "Status codes (2xx/4xx/5xx)"
+      ]
+    },
+    {
+      "term": "HATEOAS",
+      "aliases": [
+        "Hypermedia as the engine of application state",
+        "hypermedia controls"
+      ],
+      "level": "advanced",
+      "problem": "Client hardcode URL và luồng chuyển trạng thái (biết trước PUT /orders/5/cancel); server đổi route hay quy tắc nghiệp vụ là client chết, không phân biệt được 'tài nguyên cho phép gì' theo trạng thái.",
+      "origin": "Roy Fielding, luận án 2000 - ràng buộc của uniform interface trong REST. Ví dụ ngân hàng: account bị overdraft thì link 'withdraw' biến mất, chỉ còn 'deposit'.",
+      "how": "Mỗi response kèm link (rel) nói hành động kế tiếp và nơi thực hiện; client đi theo link thay vì nhớ route. Định dạng: JSON-HAL, JSON-LD+Hydra, Siren, Collection+JSON, JSON:API. Thực tế ít API đạt mức này vì JSON không phải hypermedia format tự nhiên như HTML.",
+      "related": [
+        "REST",
+        "Hyperlink media types",
+        "Richardson Maturity Model"
+      ]
+    },
+    {
+      "term": "Content negotiation",
+      "aliases": [
+        "Accept header",
+        "proactive negotiation",
+        "media type selection"
+      ],
+      "level": "intermediate",
+      "problem": "Muốn trả XML cho client cũ, JSON cho client mới, bản in PDF cho in... nếu tạo endpoint riêng thì nhân đôi API và khó duy trì.",
+      "origin": "RFC 9110 section 12 (Content Negotiation) - kế thừa framework negotiation từ HTTP/1.1 (RFC 2616).",
+      "how": "Proactive: client gửi Accept, Accept-Language, Accept-Encoding (kèm q value ưu tiên); server chọn representation và trả kèm Vary để cache phân biệt. Reactive: server trả 406/415 kèm list option. Nếu response phụ thuộc Accept thì PHẢI có Vary: Accept, không cache lẫn.",
+      "related": [
+        "Vary header",
+        "HTTP caching semantics (Cache-Control)",
+        "Representational state (resource vs representation)"
+      ]
+    },
+    {
+      "term": "HTTP caching semantics (Cache-Control)",
+      "aliases": [
+        "Cache-Control",
+        "max-age",
+        "no-store",
+        "private/public"
+      ],
+      "level": "intermediate",
+      "problem": "Response chứa dữ liệu cá nhân bị shared cache/CDN lưu và trả cho người khác; hoặc response không cache được làm tốn bandwidth và làm chậm.",
+      "origin": "RFC 9111 HTTP Caching (STD 98, 2022, Fielding/Nottingham/Reschke) - kế thừa RFC 7234.",
+      "how": "max-age: hết hạn sau N giây (s-maxage ưu tiên cho shared cache); no-store: không được lưu gì; private: chỉ browser cache được, shared cache cấm; public: force cacheable kể cả kèm Authorization; stale-while-revalidate (RFC 5861): phục vụ bản cũ khi đang revalidate. Hết hạn thì revalidate bằng conditional request.",
+      "related": [
+        "Conditional requests & 304 Not Modified",
+        "ETag/Last-Modified caching",
+        "Vary header"
+      ]
+    },
+    {
+      "term": "Conditional requests & 304 Not Modified",
+      "aliases": [
+        "If-None-Match",
+        "If-Modified-Since",
+        "revalidation"
+      ],
+      "level": "intermediate",
+      "problem": "Reload trang trả lại toàn bộ body dù dữ liệu không đổi - lãng phí băng thông, chậm, đặc biệt với asset/API lớn.",
+      "origin": "RFC 9110 section 13 (conditional requests) + RFC 9111 (caching) - 304 dùng để cập nhật metadata cache.",
+      "how": "Client gửi If-None-Match: <etag> (hoặc If-Modified-Since); nếu validator khớp server trả 304 không body, client dùng bản cache. GET tĩnh còn dùng If-Match để chặn ghi đè. Cache nhận 304 MUST cập nhật header trường từ response 304 đó.",
+      "related": [
+        "ETag/Last-Modified caching",
+        "Optimistic concurrency (ETag/If-Match)",
+        "HTTP caching semantics (Cache-Control)"
+      ]
+    },
+    {
+      "term": "ETag/Last-Modified caching",
+      "aliases": [
+        "entity tag",
+        "strong/weak validator",
+        "Last-Modified"
+      ],
+      "level": "intermediate",
+      "problem": "Không có validator thì không phân biệt được 'response cũ' với 'response mới giống hệt', conditional request không hoạt động.",
+      "origin": "RFC 9110 section 8.8.3-8.8.4: ETag strong (bản byte-different) vs weak (semantic khác); Last-Modified chỉ có độ phân giải tới giây nên không đủ với update sub-second (Azure guidelines cảnh báo).",
+      "how": "Server trả ETag mỗi khi trả/update resource; dùng làm validator cho 304 và làm khóa optimistic cho If-Match. Weak etag (W/ prefix) dùng khi content negotiation/ghi gzip làm byte thay đổi nhưng ngữ nghĩa không đổi.",
+      "related": [
+        "Optimistic concurrency (ETag/If-Match)",
+        "Conditional requests & 304 Not Modified",
+        "HTTP caching semantics (Cache-Control)"
+      ]
+    },
+    {
+      "term": "Vary header",
+      "aliases": [
+        "Vary header / content negotiation cache",
+        "Vary: Accept-Encoding",
+        "Vary: Origin",
+        "cache key variance",
+        "cache variant"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Cache mặc định chỉ key theo URL, nhưng cùng một URL có thể trả body khác nhau tùy request header: Accept-Encoding (gzip/br), Accept-Language (tiếng Đức/tiếng Anh), User-Agent (mobile/desktop) hay Origin (CORS). Thiếu Vary, cache và CDN sẽ trả sai biến thể — bản tiếng Đức cho client yêu cầu tiếng Anh, bản nén cho client không hỗ trợ, hoặc response CORS sai origin; đây là loại bug 'phục vụ sai biến thể' rất khó debug.",
+      "origin": "RFC 9110 section 8.4 + RFC 9111 section 4.1: response có Vary không được dùng lại nếu header được nêu không khớp; RFC 2616 (1997), hiện là RFC 9110 § field.vary.",
+      "how": "Vary liệt kê các request header mà response phụ thuộc; cache mở rộng key từ URL thành URL + các header đó và lưu nhiều biến thể riêng. Vary: Accept-Encoding, Accept-Language, Origin; Vary: * nghĩa là không bao giờ match, tức cấm cache. Content negotiation bắt buộc kèm Vary, CORS nên kèm Vary: Origin khi trả origin cụ thể. Cạm bẫy là cache fragmentation: mỗi chiều Vary nhân lên số entry (10 ngôn ngữ × 3 encoding × 50 UA = 1500 key), hit rate sập; chỉ liệt kê header thực sự đổi bytes và giữ giá trị Vary nhất quán giữa 200 và 304.",
+      "related": [
+        "Content negotiation",
+        "HTTP caching semantics (Cache-Control)",
+        "CORS",
+        "CDN cache key",
+        "ETag / conditional requests (If-None-Match → 304)",
+        "HTTP caching với Cache-Control (freshness)"
+      ]
+    },
+    {
+      "term": "CORS",
+      "aliases": [
+        "Cross-Origin Resource Sharing",
+        "chính sách cùng nguồn",
+        "CORS preflight (OPTIONS)",
+        "preflight request",
+        "Access-Control-Allow-*"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Same-origin policy (Netscape, 1995) chặn JS/Ajax đọc tài nguyên khác domain: site ở foo.com không fetch được api.bar.com, trong khi tách frontend và API thành hai domain là chuyện bình thường. Lối cũ JSONP chỉ chạy GET và nhúng script nên dễ XSS. Cần cơ chế để server cho phép cross-origin có kiểm soát; nếu server không trả header phù hợp, browser nuốt response và JS không thấy lỗi chi tiết.",
+      "origin": "Đề xuất ban đầu 3/2004 (Matt Oshry, Brad Porter, Michael Bodell — Tellme Networks); W3C Recommendation 1/2014; hiện sống trong WHATWG Fetch Living Standard; W3C CORS cũ đã obsolete; browser hỗ trợ rộng từ 7/2015.",
+      "how": "Browser gắn header Origin vào request; server trả Access-Control-Allow-Origin (kèm Allow-Credentials nếu cần). Request \"đơn giản\" (GET/HEAD/POST với header safelisted, Content-Type text/plain...) không preflight, đi thẳng. Request \"phức tạp\" (method khác, custom header) bị browser gửi OPTIONS trước kèm Origin và Access-Control-Request-Method; server trả Allow-Methods/Allow-Headers, kết quả cache qua Access-Control-Max-Age, xác nhận xong browser mới gửi request thật. Request kèm credential không được dùng *, phải chỉ định origin cụ thể + Allow-Credentials: true.",
+      "related": [
+        "Cookie vs session token",
+        "HTTP",
+        "HTTPS",
+        "Preflight",
+        "Same-origin policy (SOP, chính sách cùng nguồn)",
+        "Vary header",
+        "Status codes (2xx/4xx/5xx)"
+      ]
+    },
+    {
+      "term": "Retry guidance (safe methods)",
+      "aliases": [
+        "automatic retry",
+        "retryable status codes"
+      ],
+      "level": "intermediate",
+      "problem": "Client retry tùy hứng: retry cả POST (tạo trùng), retry 400 vô hạn, hoặc không retry gì khi 503 thoáng qua làm mất availability.",
+      "origin": "RFC 9110 section 9.2.2: 'Some requests can be automatically retried by a client in the event of an underlying connection failure' - áp cho method an toàn/idempotent.",
+      "how": "Retry an toàn: GET/HEAD khi lỗi kết nối (chưa nhận response); PUT/DELETE (idempotent) retry được; POST chỉ retry khi có idempotency key. Không retry 4xx (lỗi request thật). Với 429/503 tôn trọng Retry-After. Áp backoff + jitter để không dồn dập.",
+      "related": [
+        "Safe & idempotent methods",
+        "Exponential Backoff",
+        "Idempotency key (Stripe pattern)"
+      ]
+    },
+    {
+      "term": "Exponential Backoff",
+      "aliases": [
+        "Exponential Backoff",
+        "Retry với exponential backoff & jitter",
+        "exponential backoff with jitter",
+        "backoff with jitter",
+        "Exponential backoff + jitter (client)",
+        "backoff mũ",
+        "full jitter",
+        "decorrelated jitter",
+        "jitter",
+        "retry",
+        "thử lại có lùi giờ"
+      ],
+      "level": "intermediate",
+      "domain": "Bền vững & Chị tải",
+      "problem": "Nhiều client cùng fail rồi retry đồng loạt khiến backend vừa hồi phục bị dồn dập đánh gục (retry storm). Backoff thuần vẫn đồng bộ giữa các client nên các burst retry trùng thời điểm (thundering herd), server không có khoảng lặng để hồi.",
+      "origin": "Ethernet binary exponential backoff (Metcalfe & Boggs, 1976, CSMA/CD); biến thể exponential + jitter cho service do Marc Brooker phổ biến qua AWS Builders Library ('Timeouts, retries and backoff with jitter') và AWS Architecture Blog ('Exponential Backoff And Jitter', 2015), với bằng chứng đo trên 100 client contention: jitter giảm hơn một nửa số call.",
+      "how": "Mỗi lần retry tiếp theo, thời gian chờ tăng theo cấp số nhân có cap: sleep = min(base * 2^n, cap) (1s, 2s, 4s...), rồi thêm jitter ngẫu nhiên hóa thời điểm retry để phá đồng bộ. Biến thể: full jitter = random(0, backoff), giảm tải nhất; equal jitter = backoff/2 + random(0, backoff/2); decorrelated jitter = random(base, prev*3). AWS khuyên kết hợp token bucket giới hạn retry locally thay vì chỉ cap; hầu hết AWS SDK bật sẵn standard/adaptive retry mode (từ 2023). Số liệu AWS đo trên 100 client contention cho thấy jitter giảm hơn một nửa số call.",
+      "related": [
+        "Retry",
+        "Retry Budget",
+        "Thundering Herd",
+        "Rate limit headers (429 + Retry-After + RateLimit)",
+        "Retry guidance (safe methods)",
+        "Timeout",
+        "Idempotency",
+        "Dead letter queue",
+        "Message queue"
+      ]
+    },
+    {
+      "term": "Idempotency key (Stripe pattern)",
+      "aliases": [
+        "Idempotency-Key header",
+        "request deduplication"
+      ],
+      "level": "advanced",
+      "problem": "POST /charges không idempotent: client timeout rồi retry = charge hai lần; refund sai thì mất tiền thật của khách.",
+      "origin": "Stripe API 'Idempotent requests' - client sinh key (khuyến nghị UUIDv4), gửi header Idempotency-Key; server lưu kết quả lần đầu.",
+      "how": "Lần đầu thực thi và lưu status+body theo key; retry cùng key trả y chang kết quả (kể cả 500). Key ≤255 ký tự, không chứa PII; server prune key ≥24h - sau prune mà dùng lại thì coi là request mới nhưng so tham số, khác thì báo lỗi (chống dùng nhầm). Validation fail hoặc conflict trước khi thực thi thì KHÔNG lưu - được retry. Chỉ áp cho POST; GET/DELETE đã idempotent.",
+      "related": [
+        "Idempotency",
+        "Exactly-once semantics",
+        "Dedup window"
+      ]
+    },
+    {
+      "term": "Exactly-once semantics",
+      "aliases": [
+        "Idempotency & delivery semantics",
+        "Exactly-once illusion vs at-least-once",
+        "delivery semantics",
+        "at-least-once",
+        "at-most-once",
+        "exactly-once",
+        "effectively-once",
+        "đúng một lần"
+      ],
+      "level": "advanced",
+      "domain": "Messaging & Bất đồng bộ",
+      "problem": "Client gọi API trừ tiền rồi timeout nên không biết server đã xử lý hay chưa, buộc phải retry; endpoint không idempotent thì retry sinh giao dịch trừ tiền thứ hai, và timeout cũng khiến producer gửi lại tạo bản sao. Phía broker: at-most-once (gửi rồi quên) làm mất event khi crash giữa chừng; at-least-once thì redelivery khiến consumer xử lý hai lần, và consumer xử lý xong nhưng crash trước khi commit offset cũng đọc lại rồi xử lý lần hai. Mạng không cho biết chắc 'gói tin đã đến hay chưa', nên lời hứa exactly-once khiến team viết code lơ là trong khi side effect (gửi email, charge thẻ) bị lặp — trùng giao dịch thẻ là hậu quả thật của niềm tin sai này.",
+      "origin": "Thuật ngữ idempotence do nhà toán học Benjamin Peirce đặt năm 1870; ngữ nghĩa HTTP (GET/PUT/DELETE idempotent, POST không) do RFC 9110 §9.2.2 quy định (trước đây là RFC 7231). Delivery semantics là khái niệm trong tài liệu hệ thống phân tán/messaging (Kafka, SQS), không có một RFC duy nhất; không rõ tác giả đầu tiên.",
+      "how": "Transport thực tế chỉ bảo đảm at-most-once (mất) hoặc at-least-once (trùng); exactly-once end-to-end không đảm bảo được thuần, phải ghép idempotent consumer (dedupe theo message ID hoặc Idempotency-Key ghi lại kết quả cũ) với side effect nằm trong transaction, kết quả gọi là 'effectively once'. Trong phạm vi broker kiểm soát: idempotent producer dùng sequence number loại bản trùng khi retry, transaction ghi output và commit offset atomically (consumer read_committed); side effect ngoài broker vẫn phải idempotent. At-most-once chỉ dùng khi mất nhẹ hơn lặp (metrics, log); Stripe coi webhook gửi lại là bình thường nên consumer dedup theo event id; API thiết kế theo PUT/DELETE trên ID để retry vẫn cho cùng kết quả.",
+      "related": [
+        "Idempotent consumer",
+        "Transactional outbox",
+        "Dedup window",
+        "Webhook (delivery, retries, signature)",
+        "Apache Kafka",
+        "Saga",
+        "2PC/3PC & distributed transaction",
+        "Lock & deadlock",
+        "Idempotency",
+        "At-least-once vs at-most-once trade-off"
+      ]
+    },
+    {
+      "term": "Dedup window",
+      "aliases": [
+        "deduplication window",
+        "idempotency window",
+        "message dedup"
+      ],
+      "level": "advanced",
+      "problem": "Trùng event cách nhau vài phút thì check 'đã thấy trong RAM' không còn; lưu mãi thì tốn bộ nhớ - cần cửa sổ thời gian rõ ràng.",
+      "origin": "Thực hành từ pattern idempotent consumer; AWS SQS FIFO có MessageDeduplicationId (cửa sổ 5 phút), Stripe idempotency key giữ 24h.",
+      "how": "Lưu key/event id kèm timestamp trong cửa sổ N (24h với idempotency API, vài phút với MQ). Quá cửa sổ mà message đến nữa thì coi là mới - tradeoff: tăng cửa sổ = tăng bộ nhớ, giảm rủi ro trùng lặp muộn. Cửa sổ phải ≥ thời gian retry tối đa của producer.",
+      "related": [
+        "Exactly-once semantics",
+        "Idempotency key (Stripe pattern)",
+        "Idempotent consumer"
+      ]
+    },
+    {
+      "term": "Webhook (delivery, retries, signature)",
+      "aliases": [
+        "webhook callback",
+        "HTTP callback",
+        "push notification"
+      ],
+      "level": "intermediate",
+      "problem": "Polling hỏi server 'có gì mới?' liên tục tốn resources và chậm; tự dựng message bus riêng giữa 2 công ty thì không thực tế.",
+      "origin": "Thuật ngữ 'webhook' do Jeff Lindsay đặt năm 2007 (theo Wikipedia, derive từ programming term 'hook').",
+      "how": "Khi event xảy ra, source HTTP POST JSON tới URL đã đăng ký. Bắt buộc: verify chữ ký (Stripe-Signature HMAC-SHA256 với timestamp chống replay, tolerance 5 phút; IP allowlist), trả 2xx NGẮN trước khi xử lý nặng, retry với backoff (Stripe: tới 3 ngày, exponential backoff; sandbox 3 lần trong vài giờ), consumer idempotent vì event gửi lại, KHÔNG phụ thuộc thứ tự event (Stripe không guarantee order).",
+      "related": [
+        "Webhook subscription",
+        "Idempotent consumer",
+        "Exactly-once semantics"
+      ]
+    },
+    {
+      "term": "Webhook subscription",
+      "aliases": [
+        "webhook endpoint registration",
+        "event destination",
+        "subscribe events"
+      ],
+      "level": "intermediate",
+      "problem": "Server không biết URL nào của khách để gửi event; khách đổi URL thì event gửi vào chỗ cũ mất; gửi tất cả event cho mọi người thì lãng phí và đè nặng receiver.",
+      "origin": "Mẫu đăng ký endpoint có trong Stripe Webhooks/Dashboard, GitHub webhooks, AWS EventDestinations.",
+      "how": "Client đăng ký URL + danh sách event type cần (webhook endpoint phải HTTPS public). Server cấp signing secret (vd whsec_...) để verify. Nên subscribe đúng event cần, xử lý bất đồng bộ qua queue, exempt route khỏi CSRF, bật TLS. Roll secret định kỳ (cho phép overlap 24h để rotate không downtime).",
+      "related": [
+        "Webhook (delivery, retries, signature)",
+        "API gateway pattern"
+      ]
+    },
+    {
+      "term": "Idempotent consumer",
+      "aliases": [
+        "idempotent handler",
+        "deduplicating consumer"
+      ],
+      "level": "advanced",
+      "problem": "At-least-once delivery đảm bảo không mất nhưng đảm bảo trùng; handler charge 2 lần hoặc insert 2 row khi redelivery.",
+      "origin": "Pattern phổ biến trong event-driven microservices (Chris Richardson - Microservices Patterns; liên quan outbox và saga).",
+      "how": "Ghi event id (hoặc business key) đã xử lý trong DB (unique constraint) trước/с cùng side effect trong 1 transaction; lần sau thấy id trùng thì skip. Webhook Stripe hướng dẫn log event id rồi bỏ qua id đã có. Đôi khi kết hợp natural idempotency (UPSERT theo business key).",
+      "related": [
+        "Exactly-once semantics",
+        "Transactional outbox",
+        "Webhook (delivery, retries, signature)"
+      ]
+    },
+    {
+      "term": "API gateway pattern",
+      "aliases": [
+        "gateway",
+        "edge service",
+        "single entry point"
+      ],
+      "level": "intermediate",
+      "problem": "Microservice expose hàng chục endpoint nội bộ: client phải tự discovery, tự auth từng service, gộp data từ 10 service = 10 round-trip, giao thức internal (gRPC) không nói chuyện được với browser.",
+      "origin": "microservices.io - Chris Richardson (tác giả 'Microservices Patterns'), có dẫn Netflix API gateway làm ví dụ; cùng pattern có trong Sam Newman 'Building Microservices'.",
+      "how": "Gateway là single entry point: proxy route tới service phù hợp, fan-out gộp nhiều service (aggregation), kiểm tra auth, dịch giao thức public (HTTPS/JSON) sang internal (gRPC), expose API khác nhau cho client khác nhau (BFF variant). Cost: thêm hop (latency) + thêm component quản lý.",
+      "related": [
+        "BFF (Backend for Frontend)",
+        "Rate limiting vs throttling vs quota",
+        "Strangler Fig pattern"
+      ]
+    },
+    {
+      "term": "BFF (Backend for Frontend)",
+      "aliases": [
+        "Backend for Frontend",
+        "per-client BFF"
+      ],
+      "level": "intermediate",
+      "problem": "1 API chung cho web + iOS + Android: web cần 15 field, mobile cần 5 field; mỗi client đòi endpoint riêng làm API phình, team backend thành bottleneck chung.",
+      "origin": "Thuật ngữ do Phil Calçado (SoundCloud) đặt; Sam Newman mô tả trong bài 'Pattern: Backends For Frontend' ngày 18/11/2015, dẫn feedback của Stewart Gleadow ('one experience, one BFF').",
+      "how": "Deploy 1 server-side component cho mỗi loại client (BFF cho iOS, BFF cho web...), đặt trong perimeter cạnh client, do team làm UI đó duy trì (Conway's Law). BFF gộp call nhiều downstream (catalog + inventory + wishlist cho 1 trang) song song, degrade graceful. Chấp nhận trùng lặp giữa các BFF; trích xuất abstraction tới lần 3.",
+      "related": [
+        "API gateway pattern",
+        "API-first design",
+        "Query parameter design"
+      ]
+    },
+    {
+      "term": "API-first design",
+      "aliases": [
+        "API-driven design",
+        "design-first API"
+      ],
+      "level": "intermediate",
+      "problem": "Code xong rồi mới vẽ swagger: backend/frontend/qa mỗi bên tự hiểu contract khác nhau, integration test fail cuối sprint, đổi contract lúc đó đã tốn.",
+      "origin": "Phong trào API-first phổ biến cùng thời OpenAPI; AWS API Gateway và các platform (Stoplight, Postman) quảng bá 'design before implementation'.",
+      "how": "Chốt contract (OpenAPI/proto) TRƯỚC khi implement: backend code theo contract, frontend mock được ngay, contract test chặn drift, SDK tự sinh. Dùng contract làm single source of truth giữa các team và các language.",
+      "related": [
+        "OpenAPI/Swagger",
+        "Contract-first",
+        "SDK/codegen"
+      ]
+    },
+    {
+      "term": "OpenAPI/Swagger",
+      "aliases": [
+        "OpenAPI Specification",
+        "OAS",
+        "Swagger",
+        "OpenAPI Description"
+      ],
+      "level": "basic",
+      "problem": "Document API bằng wiki/Excel nhanh lạc hậu; không có format machine-readable thì không tự sinh SDK, không mock, không test contract tự động.",
+      "origin": "Swagger do Tony Tam tạo khi ở Wordnik, spec đầu tiên phát hành 10/8/2011; 11/2015 SmartBear donate cho OpenAPI Initiative dưới Linux Foundation (Google, IBM, Microsoft, PayPal); 1/1/2016 đổi tên OpenAPI Specification.",
+      "how": "File YAML/JSON mô tả paths, operations, parameters, schemas (JSON Schema), security, servers. Tools đọc spec để sinh docs (Swagger UI/Redoc), client SDK, server stub, contract tests. Spec language-agnostic nên team khác nhau dùng chung 1 nguồn.",
+      "related": [
+        "API-first design",
+        "Contract-first",
+        "SDK/codegen"
+      ]
+    },
+    {
+      "term": "Contract-first",
+      "aliases": [
+        "contract-first development",
+        "schema-first",
+        "design by contract"
+      ],
+      "level": "intermediate",
+      "problem": "Implement trước rồi sinh spec từ code: spec là ảnh chụp cái đã có, không ai review được contract trước khi code; schema drift giữa các service im lặng.",
+      "origin": "Thuật ngữ gắn với OpenAPI/gRPC (define .proto trước khi viết service) - thực hành chuẩn của API-first.",
+      "how": "Soạn contract (OpenAPI hay protobuf) → review + version nó như sản phẩm → sinh stub/mock → backend implement, frontend viết theo mock → CI chạy contract test (khớp implementation với spec). Breaking change bị chặn ngay ở vòng review contract.",
+      "related": [
+        "OpenAPI/Swagger",
+        "API-first design",
+        "gRPC"
+      ]
+    }
+  ]
+}

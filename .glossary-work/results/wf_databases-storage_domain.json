@@ -1,0 +1,441 @@
+{
+  "domain": "DATABASE & STORAGE",
+  "entries": [
+    {
+      "term": "Relational database (RDBMS)",
+      "aliases": [
+        "Cơ sở dữ liệu quan hệ",
+        "RDBMS"
+      ],
+      "level": "basic",
+      "problem": "Trước khi có mô hình quan hệ, dữ liệu doanh nghiệp nằm trong file phẳng hoặc mô hình mạng/phân cấp: mỗi ứng dụng tự lưu file riêng, dữ liệu trùng lặp khắp nơi, đổi cấu trúc là phải sửa hàng loạt chương trình và các bản sao rất dễ mâu thuẫn với nhau.",
+      "how": "Dữ liệu tổ chức thành bảng có schema cố định, truy cập qua ngôn ngữ khai báo (SQL); quan hệ giữa bảng giữ bằng khóa chính/khóa ngoại thay vì hardcode cấu trúc con trỏ trong code.",
+      "origin": "Edgar F. Codd (IBM), 1970 — paper \"A Relational Model of Data for Large Shared Data Banks\"",
+      "related": [
+        "SQL",
+        "Normalization",
+        "Primary key & Foreign key",
+        "Transaction"
+      ]
+    },
+    {
+      "term": "SQL",
+      "aliases": [
+        "Structured Query Language",
+        "ngôn ngữ truy vấn có cấu trúc"
+      ],
+      "level": "basic",
+      "problem": "Khi dữ liệu đã tổ chức thành bảng, programmer vẫn phải viết code imperative từng bước (mở dữ liệu, lặp, lọc, map) để lấy kết quả — chậm, dễ sai, mỗi người viết một kiểu và không ai tối ưu tập trung được.",
+      "how": "Ngôn ngữ khai báo: nói \"muốn gì\" (SELECT ... WHERE ... JOIN), bộ query planner của DB tự chọn cách thực hiện — người viết không cần biết dữ liệu nằm ở đâu hay index nào được dùng.",
+      "origin": "IBM System R, đầu thập niên 1970 — ban đầu gọi SEQUEL (Chamberlin & Boyce), đổi thành SQL vì lý do tên thương mại",
+      "related": [
+        "Relational database (RDBMS)",
+        "Query plan / EXPLAIN",
+        "Index (B-tree, hash, composite)"
+      ]
+    },
+    {
+      "term": "Schema",
+      "aliases": [
+        "lớp sơ đồ dữ liệu",
+        "database schema"
+      ],
+      "level": "basic",
+      "problem": "Nếu mỗi developer tự quyết dữ liệu lưu kiểu gì (cột tên lung tung, kiểu dữ liệu mỗi nơi một khác) thì dữ liệu trao đổi giữa các service hỏng ngầm — app này ghi \"age\", app kia đọc \"tuoi\", không ai biết bản nào là đúng.",
+      "how": "Schema là bản khai báo cứng: tên bảng/cột, kiểu dữ liệu, ràng buộc (NOT NULL, unique...). DB enforce schema lúc ghi vào, dữ liệu sai cấu trúc bị từ chối ngay ở cửa vào thay vì lan vào bảng.",
+      "origin": "Không rõ (đi kèm mô hình quan hệ của Codd 1970 và các hệ DB thương mại đầu thập niên 1970-80)",
+      "related": [
+        "Relational database (RDBMS)",
+        "Migration",
+        "ORM"
+      ]
+    },
+    {
+      "term": "Primary key & Foreign key",
+      "aliases": [
+        "khóa chính",
+        "khóa ngoại",
+        "PK",
+        "FK"
+      ],
+      "level": "basic",
+      "problem": "Cùng một thông tin ghi ở nhiều bảng (địa chỉ khách nằm cả ở orders lẫn invoices) thì sửa 1 chỗ không ăn thua chỗ khác — trùng lặp, mâu thuẫn, không biết bản nào là thật. Thêm dòng tham chiếu tới bản không tồn tại (đặt hàng cho khách không có) cũng không ai chặn.",
+      "how": "PK định danh duy nhất 1 dòng; FK tham chiếu về PK bảng khác và DB chặn ghi có FK trỏ vào chỗ không tồn tại — mối quan hệ được cưỡng chế ở tầng dữ liệu thay vì hy vọng application luôn đúng.",
+      "origin": "Gắn với mô hình quan hệ của Edgar F. Codd, 1970",
+      "related": [
+        "Relational database (RDBMS)",
+        "Normalization",
+        "ORM"
+      ]
+    },
+    {
+      "term": "Normalization",
+      "aliases": [
+        "chuẩn hoá dữ liệu",
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF"
+      ],
+      "level": "basic",
+      "problem": "Bảng chưa chuẩn hoá thì cùng một sự thật nằm ở nhiều dòng: đổi địa chỉ 1 khách phải UPDATE 50 dòng, sót dòng nào là dữ liệu mâu thuẫn ngay (update anomaly); xoá đúng 1 dòng lại mất luôn thông tin không liên quan (delete anomaly).",
+      "how": "Chia bảng nhỏ, mỗi sự thật chỉ lưu 1 lần, quan hệ qua FK. Đánh đổi nhiều JOIN khi đọc — sau này denormalize lại khi JOIN thật sự chậm.",
+      "origin": "Edgar F. Codd — 1NF (1970), 2NF/3NF (1971); BCNF do Codd & Boyce, 1974",
+      "related": [
+        "Primary key & Foreign key",
+        "N+1 query",
+        "Index (B-tree, hash, composite)"
+      ]
+    },
+    {
+      "term": "Index (B-tree, hash, composite)",
+      "aliases": [
+        "chỉ mục",
+        "B-tree index",
+        "hash index",
+        "composite index"
+      ],
+      "level": "basic",
+      "problem": "Bảng 10 triệu dòng mà WHERE email = 'x' phải quét toàn table (full table scan) — truy vấn vài chục ms biến thành vài giây, sập dưới tải thật. Không index thì tìm kiếm, lọc, phân trang đều chậm theo kích thước dữ liệu.",
+      "how": "Cấu trúc dữ liệu phụ (B-tree cho so sánh =, <, >, range và giữ thứ tự; hash chỉ cho =; composite gộp nhiều cột cho WHERE dùng 2+ cột) để tìm dòng đúng gần O(log n) thay vì O(n). Đánh đổi: đọc nhanh hơn nhưng ghi chậm hơn vì phải cập nhật index.",
+      "origin": "Cây B-tree do Bayer & McCreight (Boeing Research Labs) công bố 1970/1972; hash index và composite index có trong các hệ DB thương mại thập niên 1980",
+      "related": [
+        "Query plan / EXPLAIN",
+        "Normalization",
+        "GIN / GiST index"
+      ]
+    },
+    {
+      "term": "ORM",
+      "aliases": [
+        "Object-Relational Mapping",
+        "Prisma",
+        "TypeORM",
+        "Hibernate",
+        "Sequelize"
+      ],
+      "level": "basic",
+      "problem": "Code app làm việc với object/struct, DB làm việc với hàng/cột — mỗi chỗ tự viết tay SELECT/INSERT rồi map về object rất lặp và dễ sai; đổi schema là sửa hàng chục chỗ SQL rải rác, thiếu type safety.",
+      "how": "ORM ánh xạ model class sang bảng, cho phép thao tác mức object (user.findMany()) và tự sinh SQL; đổi tên cột chỉ sửa 1 chỗ model. Đánh đổi: dễ tạo query ẩn kém tối ưu, dẫn tới N+1.",
+      "origin": "Không rõ tác giả duy nhất; kỹ thuật bắt nguồn từ object database thập niên 1980-90, phổ biến cùng các framework web (Hibernate 2001, ActiveRecord của Rails)",
+      "related": [
+        "N+1 query",
+        "Migration",
+        "Schema"
+      ]
+    },
+    {
+      "term": "Isolation level",
+      "aliases": [
+        "mức cách ly",
+        "Read Committed",
+        "Repeatable Read",
+        "Serializable",
+        "dirty read",
+        "non-repeatable read",
+        "phantom read"
+      ],
+      "level": "intermediate",
+      "problem": "Cô lập hoàn toàn giữa các transaction khiến hệ thống chậm và khó mở rộng, nhưng để tự do quá mức thì các transaction lại đọc được kết quả chưa ổn định của nhau, nên cần nõi lường có kiểm soát từng mức.",
+      "how": "DB cho chọn mức đánh đổi: Read Committed (chặn dirty read), Repeatable Read (1 snapshot cho cả transaction), Serializable (giống chạy tuần tự, chậm nhất) — từng mức loại một loại anomaly cụ thể thay vì khóa hết.",
+      "origin": "Phân loại anomaly gắn với công việc của James Gray về locking (thập niên 1970-80); chuẩn hóa trong SQL-92 — không rõ người/năm đặt tên chính xác",
+      "related": [
+        "Transaction",
+        "MVCC",
+        "Lock & deadlock"
+      ]
+    },
+    {
+      "term": "Lock & deadlock",
+      "aliases": [
+        "khóa dữ liệu",
+        "row lock",
+        "table lock",
+        "deadlock",
+        "SELECT FOR UPDATE",
+        "optimistic locking",
+        "Optimistic vs pessimistic locking",
+        "pessimistic locking",
+        "version field"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Nhiều transaction cùng ghi một bản ghi dẫn tới lost update (bản ghi sau đè bản trước mà không ai báo) hoặc đọc phải trạng thái trung gian. Khóa bi quan giữ lock từ đầu nên dưới tải cao, các transaction khác xếp hàng chỉ để đọc và throughput tụt. Deadlock xảy ra khi A giữ lock dòng 1 chờ lock dòng 2 còn B giữ dòng 2 chờ dòng 1: hai bên chờ nhau vĩnh viễn, transaction treo, connection pool cạn dần. Khóa lạc quan đọc-tính-ghi rồi kiểm tra lúc commit, nhưng khi hai bên cùng sửa một dòng thì một bên phải làm lại toàn bộ và client không hiểu vì sao phải retry.",
+      "origin": "Không rõ tác giả duy nhất; locking/mutex là nền tảng computer science, deadlock detection có trong DB từ thập niên 1970 (System R, IBM)",
+      "how": "Khóa bi quan (row lock/table lock, SELECT FOR UPDATE) khóa trước khi sửa, chặn ghi đè khi có transaction khác đang xử lý; an toàn nhưng dễ tắc khi xung đột nhiều. DB phát hiện deadlock qua đồ thị chờ có chu trình và abort một transaction để giải, application phải retry. Khóa lạc quan đọc không khóa, kèm version/ETag, phát hiện version cũ tại thời điểm commit thì reject và retry, phù hợp khi xung đột hiếm.",
+      "related": [
+        "Isolation level",
+        "MVCC (Multiversion Concurrency Control)",
+        "Transaction",
+        "Atomic operation & CAS",
+        "Race condition",
+        "Exactly-once semantics"
+      ]
+    },
+    {
+      "term": "Query plan / EXPLAIN",
+      "aliases": [
+        "kế hoạch thực thi",
+        "EXPLAIN ANALYZE",
+        "execution plan",
+        "query planner"
+      ],
+      "level": "intermediate",
+      "problem": "Cùng 1 câu SQL chạy nhanh khi table nhỏ, chậm gấp 1000x khi data tăng — vì planner chọn sai cách (dùng index sai, quét bảng full, join sai thứ tự). Không xem được plan thì tối ưu query là đoán mò.",
+      "how": "EXPLAIN cho planner giải thích: scan table hay index, ước tính bao nhiêu dòng, join thế nào; EXPLAIN ANALYZE chạy thật và đo thời gian từng bước — chỉ ra chính xác bước nào tốn nhất để sửa.",
+      "origin": "Có từ các hệ sớm như IBM System R (thập niên 1970) — không rõ người/năm cụ thể",
+      "related": [
+        "Index (B-tree, hash, composite)",
+        "SQL",
+        "N+1 query"
+      ]
+    },
+    {
+      "term": "Partitioning (horizontal / vertical)",
+      "aliases": [
+        "phân mảnh dữ liệu",
+        "horizontal partitioning",
+        "vertical partitioning",
+        "table partition"
+      ],
+      "level": "intermediate",
+      "problem": "Bảng orders 500 triệu dòng thì index phình to, backup/quét dữ liệu chậm, query chạm mọi partition dù chỉ cần tháng này — 1 table quá lớn làm mọi thao tác trên nó đều chậm và khó quản lý.",
+      "how": "Horizontal: chia dòng theo khoá (user_id, date) — mỗi phần nằm ở file/segment riêng, query lọc theo khoá chỉ đụng đúng partition. Vertical: chia cột (tách field ít dùng sang bảng riêng). Giảm kích thước đơn vị thao tác.",
+      "origin": "Không rõ tác giả — tính năng partitioning xuất hiện sớm trong Oracle (1996-97) và DB2, trước khi có khái niệm sharding phân tán",
+      "related": [
+        "Sharding & consistent hashing",
+        "Index (B-tree, hash, composite)",
+        "Query plan / EXPLAIN"
+      ]
+    },
+    {
+      "term": "WAL (Write-Ahead Log)",
+      "aliases": [
+        "nhật ký ghi trước",
+        "redo log",
+        "transaction log"
+      ],
+      "level": "intermediate",
+      "problem": "Ghi trực tiếp data page vào disk rồi mất nguồn giữa chừng thì page có thể ghi dở (torn page) — DB không biết phần nào đã ghi, không thể khôi phục, dữ liệu hỏng vĩnh viễn. Ghi toàn bộ data page mỗi thao tác cũng quá chậm.",
+      "how": "Ghi thay đổi nhỏ vào log append-only TRƯỚC khi chạm data page; crash thì replay log (redo) hoặc undo thao tác chưa commit. Checkpoint định kỳ đổ log ra data file, page chỉ cần ghi nền.",
+      "origin": "Không rõ người/năm đầu tiên; thuật toán ARIES (Mohan, Haderle, Lindsay, IBM, 1992) là chuẩn mực của họ WAL",
+      "related": [
+        "Transaction",
+        "MVCC",
+        "2PC/3PC & distributed transaction"
+      ]
+    },
+    {
+      "term": "Materialized view",
+      "aliases": [
+        "view vật lý",
+        "precomputed view",
+        "bảng tổng hợp",
+        "View & materialized view (VIEW vs MATERIALIZED VIEW, refresh)",
+        "SQL view",
+        "VIEW",
+        "REFRESH MATERIALIZED VIEW",
+        "bảng ảo",
+        "khung nhìn",
+        "view ảo",
+        "indexed view",
+        "view vật lý hóa"
+      ],
+      "level": "intermediate",
+      "problem": "Dashboard phải JOIN bảng triệu dòng + aggregate mỗi lần user mở — query 3-5 giây, mỗi lượt xem là gánh nặng y hệt, không ai dùng nổi báo cáo khi data lớn.",
+      "how": "Tính sẵn kết quả query và LƯU vào bảng vật lý; đọc từ view = đọc bảng nhỏ. Đánh đổi: dữ liệu cũ tới lần refresh — cần strategy refresh (periodic/on-demand) và tốn dung lượng lưu.",
+      "origin": "Không rõ tác giả đầu tiên; có trong Oracle từ thập niên 1990 (materialized view chính thức từ Oracle 8i, 1998)",
+      "related": [
+        "Denormalization",
+        "Replication (master-slave / read replica)",
+        "Query plan / EXPLAIN"
+      ]
+    },
+    {
+      "term": "MVCC (Multiversion Concurrency Control)",
+      "aliases": [
+        "điều khiển đồng thời đa phiên bản",
+        "Multi-Version Concurrency Control"
+      ],
+      "level": "advanced",
+      "problem": "Với locking đơn thuần, reader chặn writer và ngược lại — transaction đọc dài (báo cáo) giữ lock làm writer chờ hàng giây, hoặc transaction ghi lâu làm reader chờ. Dưới tải nhiều client, lock contention làm throughput sập; đọc được dữ liệu nửa vời của transaction chưa commit thì hỏng consistency.",
+      "how": "Mỗi ghi tạo version mới thay vì ghi đè; mỗi transaction thấy snapshot dữ liệu tại thời điểm bắt đầu — reader không chặn writer, writer không chặn reader. Version cũ được VACUUM/garbage-collect khi không transaction nào còn thấy. Đánh đổi: tốn storage + overhead dọn dẹp.",
+      "origin": "David P. Reed, dissertation MIT 1978; chi tiết hóa bởi Phil Bernstein & Goodman (1981); sản phẩm thương mại đầu tiên VAX Rdb/ELN (DEC, 1984, Jim Starkey)",
+      "related": [
+        "Isolation level",
+        "Lock & deadlock",
+        "WAL",
+        "Snapshot isolation"
+      ]
+    },
+    {
+      "term": "2PC/3PC & distributed transaction",
+      "aliases": [
+        "2PC/3PC & distributed transaction",
+        "two-phase commit",
+        "2PC",
+        "three-phase commit",
+        "3PC",
+        "distributed transaction",
+        "Two-phase commit (2PC)",
+        "giao dịch hai pha",
+        "XA transaction",
+        "giao dịch phân tán",
+        "transaction phân tán"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Transaction trải qua hai database khác nhau (trừ tiền ở DB A, ghi sổ ở DB B): mỗi bên commit riêng lẻ thì A commit xong mà B fail là tiền biến mất, không cơ chế nào tự biết phía bên kia đã làm gì. Cần một giao thức để tất cả participant cùng quyết định commit hoặc abort, nhưng 2PC lại blocking: sau khi participant đã vote yes mà coordinator chết, participant giữ lock chờ vô hạn, dòng dữ liệu bị khóa cả chục phút.",
+      "origin": "không rõ (Bernstein, Hadzilacos & Goodman, 'Concurrency Control and Recovery in Database Systems' 1987 tài liệu hóa; thường ghi nhận từ công việc của Jim Gray cuối thập niên 1970, chưa verify trực tiếp).",
+      "how": "2PC chia hai pha: pha 1 prepare/vote, coordinator hỏi mọi participant đã sẵn sàng chưa, participant ghi WAL sẵn commit nhưng chưa thực hiện; pha 2 broadcast commit nếu tất cả trả YES, có một nơi NO thì rollback tất cả. Đánh đổi là tính blocking nên 3PC thêm pha pre-commit với timeout để participant tự quyết định khi coordinator mất, giảm blocking nhưng vẫn không an toàn tuyệt đối khi network partition.",
+      "related": [
+        "Saga",
+        "Consensus",
+        "Paxos",
+        "Transaction",
+        "WAL (Write-Ahead Logging)",
+        "Split brain"
+      ]
+    },
+    {
+      "term": "CAP theorem",
+      "aliases": [
+        "định lý CAP",
+        "Brewer's conjecture",
+        "Consistency-Availability-Partition tolerance"
+      ],
+      "level": "advanced",
+      "problem": "Hệ phân tán chạy nhiều node, mạng giữa chúng chắc chắn sẽ chập chờn (mất gói, partition). Lúc partition xảy ra, ta muốn vừa trả lời mọi request (Availability) vừa đảm bảo mọi client thấy dữ liệu mới nhất (Consistency) — định lý chỉ ra không thể đồng thời, nên kiến trúc phải chọn thay vì mơ có tất cả.",
+      "how": "Khi partition: chọn C (từ chối request để giữ nhất quán — CP) hoặc chọn A (phản hồi dữ liệu có thể cũ — AP). Mọi quyết định thiết kế NoSQL/replication đều nằm quanh tradeoff này.",
+      "origin": "Eric Brewer đưa ra giả thuyết 1998/2000 (PODC); Seth Gilbert & Nancy Lynch (MIT) chứng minh năm 2002",
+      "related": [
+        "PACELC",
+        "Eventual consistency",
+        "Replication (master-slave / read replica)"
+      ]
+    },
+    {
+      "term": "PACELC",
+      "aliases": [
+        "PACELC theorem"
+      ],
+      "level": "advanced",
+      "problem": "CAP chỉ nói về lúc có partition — nhưng partition hiếm, phần lớn thời gian hệ thống chạy bình thường, khi đó vẫn phải chọn giữa latency và consistency (đọc từ replica trả lời nhanh nhưng có thể cũ; đợi replica đồng bộ thì đúng nhưng chậm). CAP không mô tả đánh đổi này nên kiến trúc đánh giá chưa đủ.",
+      "how": "If Partition thì chọn A hay C; Else (không partition) thì chọn L (latency) hay C. Bắt trọn 4 kịch bản: PA/EL (Dynamo-style), PC/EC (transaction DB)... Chọn P/C/A/L cho đúng case thật thay vì label CP/AP chung chung.",
+      "origin": "Daniel Abadi (Yale University) — blog 2010, paper làm rõ 2012; chứng minh hình thức bởi Wojciech Golab, ACM SIGACT News 2018",
+      "related": [
+        "CAP theorem",
+        "Eventual consistency",
+        "Replication (master-slave / read replica)"
+      ]
+    },
+    {
+      "term": "Eventual consistency",
+      "aliases": [
+        "BASE",
+        "BASE / Eventual consistency",
+        "eventual consistency",
+        "nhất quán cuối cùng",
+        "anti-entropy",
+        "basically available soft state"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Ghi đa vùng (multi-region, tải hàng triệu request/giây) phải chọn giữa hai cực. Nếu buộc mọi nút đồng bộ đồng thời (strong consistency), replica chậm hay partition sẽ làm hệ thống unavailable, latency liên miền tăng hàng trăm ms và một region chết có thể làm cả hệ thống sập; ACID đi theo hướng này đánh đổi availability lấy tính đúng tức thời. Còn nhận ghi bất đồng bộ thì người ở London đọc được giá cũ mà người ở Tokyo vừa sửa. Giữ đồng thời cả availability lẫn đồng nhất tại mọi thời điểm là bất khả thi, trong khi availability thường là yêu cầu sinh tồn.",
+      "origin": "Hệ thống Bayou (Terry et al., 1995) là ví dụ sớm; thuật ngữ được Werner Vogels phổ biến qua \"Eventually Consistent\" (ACM Queue 2008 / CACM 2009); thuật ngữ BASE do Danny Pritchett (eBay) phổ biến trong \"BASE: An Acid Alternative\" (ACM Queue, 2008); ý tưởng eventual consistency đi kèm hệ Dynamo (Amazon, 2007).",
+      "how": "Ghi cục bộ rồi lan truyền bất đồng bộ (gossip, anti-entropy, read/write repair); xung đột phân xử bằng last-writer-wins hoặc CRDT. Cam kết duy nhất là khi ngừng ghi, mọi replica hội tụ về cùng kết quả, còn trong lúc chờ client có thể đọc giá trị trung gian (đọc cũ trong khoảng trễ). Đây là chữ E trong BASE: Basically Available (luôn trả lời được), Soft state (trạng thái thay đổi không cần input), Eventual consistency. DNS và email là ví dụ kinh điển của mô hình này.",
+      "related": [
+        "CAP theorem",
+        "Gossip protocol",
+        "CRDT",
+        "PACELC",
+        "Multi-master replication"
+      ]
+    },
+    {
+      "term": "Sharding & consistent hashing",
+      "aliases": [
+        "phân mảnh phân tán",
+        "shard",
+        "hash partitioning"
+      ],
+      "level": "advanced",
+      "problem": "1 node DB chạm giới hạn ghi/RAM/disk — thêm read replica chỉ giải load đọc, còn ghi vẫn kẹt 1 nơi. Đặt hết data 1 máy thì không scale write và chết là mất sạch. Hash data theo mod N node thì đổi N (thêm/bớt node) là phải remap gần toàn bộ key — không mở rộng nổi.",
+      "how": "Sharding: chia data thành shard theo shard key, mỗi shard 1 DB riêng, thêm node = thêm shard. Consistent hashing: key và node cùng nằm trên vòng hash, node chết/thêm chỉ ảnh hưởng key của node đó (~1/N) thay vì remap tất cả. Đánh đổi: JOIN cross-shard khó, hot shard, rebalancing phức tạp.",
+      "origin": "Consistent hashing: David Karger et al. (MIT), 1997. Sharding: thuật ngữ phổ biến cộng đồng MySQL scalability đầu thập niên 2000 — không rõ tác giả duy nhất",
+      "related": [
+        "Partitioning (horizontal / vertical)",
+        "CAP theorem",
+        "Split brain"
+      ]
+    },
+    {
+      "term": "Multi-master replication",
+      "aliases": [
+        "multi-primary",
+        "master-master",
+        "đa master ghi"
+      ],
+      "level": "advanced",
+      "problem": "Master-slave: master chết thì chỉ nhận read, không ghi được (hoặc failover trễ gây downtime ghi); ghi cho người dùng châu Á phải về master ở Mỹ — latency ghi cao. 1 nút ghi duy nhất là single point of failure và bottleneck địa lý.",
+      "how": "Nhiều nút cùng nhận ghi, đồng bộ sang nhau; node nào chết thì client chuyển node khác. Vấn đề mới sinh ra: conflict resolution — 2 nút cùng sửa 1 dòng thì phân giải thế nào (last-write-wins, vector clock, CRDT)? Dễ vi phạm ACID hơn, thường phải chấp nhận eventual consistency.",
+      "origin": "Không rõ tác giả — có trong các clustered DB thương mại (Oracle RAC, MySQL multi-master) từ thập niên 2000",
+      "related": [
+        "Replication (master-slave / read replica)",
+        "Split brain",
+        "Eventual consistency"
+      ]
+    },
+    {
+      "term": "Geospatial index",
+      "aliases": [
+        "chỉ mục địa lý",
+        "spatial index",
+        "R-tree",
+        "geohash",
+        "H3",
+        "quadtree",
+        "PostGIS"
+      ],
+      "level": "advanced",
+      "problem": "Tìm \"nhà hàng trong bán kính 5km\" trên bảng triệu điểm mà WHERE lat/lon so sánh range thì không đủ — lat/lon là 2 chiều, phải quét O(n) mọi điểm rồi tính khoảng cách từng cái, tốn hàng giây và sai vì lat/lon không linear (1 độ lon khác nhau theo vĩ độ).",
+      "how": "Chỉ mục không gian (R-tree gộp bounding box theo cây, quadtree, geohash/H3 mã hoá toạ độ thành chuỗi prefix) cho phép query theo vùng (ST_DWithin, CONTAINS) chỉ chạm các vùng không gian liên quan — giảm từ O(n) xuống gần O(log n).",
+      "origin": "R-tree: Antonin Guttman, 1984 (paper gốc UC Berkeley). Geohash: Gustavo Niemeyer, 2008",
+      "related": [
+        "GIN / GiST index",
+        "Index (B-tree, hash, composite)",
+        "Query plan / EXPLAIN"
+      ]
+    },
+    {
+      "term": "GIN / GiST index",
+      "aliases": [
+        "generalized inverted index",
+        "generalized search tree",
+        "inverted index",
+        "PostgreSQL GIN",
+        "PostgreSQL GiST"
+      ],
+      "level": "advanced",
+      "problem": "B-tree không phục vụ được kiểu truy vấn \"chứa\", \"giao\", \"toạ độ gần\": WHERE tags @> '{db}' (mảng chứa phần tử), full-text search 'apple & banana', tìm điểm trong vùng... — dữ liệu JSONb/array/full-text ngày càng nhiều mà B-tree sinh ra cho so sánh thứ tự của 1 giá trị scalar.",
+      "how": "GIN (inverted): index theo từng phần tử bên trong giá trị phức (mỗi tag/array element dẫn về danh sách row chứa nó) — trả lời \"chứa X\" gần O(log n). GiST: khung search tree tổng quát chứa cả R-tree (spatial), trigram... dùng cho nearest-neighbor, containment. Postgres chọn type bằng USING clause.",
+      "origin": "GiST: Hellerstein, Naughton & Pfeiffer, 1998 (\"Generalized Search Trees for Database Systems\"). GIN: O'Neil, Cheng, Gawlick & O'Neil, 2006 (\"The GIN Inverted Index\")",
+      "related": [
+        "Index (B-tree, hash, composite)",
+        "Geospatial index",
+        "Query plan / EXPLAIN"
+      ]
+    }
+  ],
+  "sources": [
+    "https://github.com/donnemartin/system-design-primer",
+    "https://en.wikipedia.org/wiki/CAP_theorem",
+    "https://en.wikipedia.org/wiki/Multiversion_concurrency_control",
+    "https://en.wikipedia.org/wiki/Write-ahead_logging",
+    "https://en.wikipedia.org/wiki/Database_normalization",
+    "https://en.wikipedia.org/wiki/Two-phase_commit_protocol",
+    "https://en.wikipedia.org/wiki/PACELC_theorem",
+    "https://www.postgresql.org/docs/current/mvcc.html",
+    "https://www.postgresql.org/docs/current/indexes-types.html"
+  ]
+}

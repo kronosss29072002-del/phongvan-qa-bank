@@ -1,0 +1,331 @@
+- generic [active] [ref=f6e1]:
+  - generic [ref=f6e2]:
+    - generic [ref=f6e4]:
+      - generic [ref=f6e6]:
+        - link "DuckDuckGo home" [ref=f6e7] [cursor=pointer]:
+          - /url: /?t=h_
+          - generic [ref=f6e8]: DuckDuckGo
+        - generic [ref=f6e15]:
+          - combobox "Search privately" [ref=f6e17]: site:topcv.vn fresher frontend developer tuyển dụng
+          - button "Search" [ref=f6e19] [cursor=pointer]
+      - navigation [ref=f6e26]:
+        - list [ref=f6e27]:
+          - listitem [ref=f6e28]:
+            - link [ref=f6e29] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+frontend+developer+tuy%E1%BB%83n+d%E1%BB%A5ng&t=h_&ia=web
+              - strong [ref=f6e30]: All
+          - listitem [ref=f6e33]:
+            - link [ref=f6e34] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+frontend+developer+tuy%E1%BB%83n+d%E1%BB%A5ng&t=h_&ia=images&iax=images
+              - strong [ref=f6e35]: Images
+          - listitem [ref=f6e36]:
+            - link [ref=f6e37] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+frontend+developer+tuy%E1%BB%83n+d%E1%BB%A5ng&t=h_&ia=videos&iax=videos
+              - strong [ref=f6e38]: Videos
+          - listitem [ref=f6e39]:
+            - link [ref=f6e40] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+frontend+developer+tuy%E1%BB%83n+d%E1%BB%A5ng&t=h_&ia=news&iar=news
+              - strong [ref=f6e41]: News
+          - listitem [ref=f6e42]:
+            - link [ref=f6e43] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+frontend+developer+tuy%E1%BB%83n+d%E1%BB%A5ng&t=h_&iaxm=maps
+              - strong [ref=f6e44]: Maps
+        - list [ref=f6e45]:
+          - listitem [ref=f6e46]:
+            - link "Duck.ai" [ref=f6e48] [cursor=pointer]:
+              - /url: /?q=site%3Atopcv.vn+fresher+frontend+developer+tuy%E1%BB%83n+d%E1%BB%A5ng&t=h_&ia=chat&entry=serp
+          - listitem [ref=f6e52]:
+            - button "Search Settings ✀" [ref=f6e54] [cursor=pointer]:
+              - generic [ref=f6e57]: Search Settings
+              - generic [ref=f6e58]: ✀
+    - generic [ref=f6e65]:
+      - navigation [ref=f6e67]:
+        - button [ref=f6e69] [cursor=pointer]:
+          - strong [ref=f6e76]: Private
+        - generic [ref=f6e80]:
+          - switch "Filter by the selected region" [ref=f6e84]
+          - button "Vietnam (en)" [ref=f6e86] [cursor=pointer]
+        - button [ref=f6e91] [cursor=pointer]:
+          - strong [ref=f6e93]: "Safe search: moderate"
+        - button [ref=f6e97] [cursor=pointer]:
+          - strong [ref=f6e99]: Any time
+      - generic [ref=f6e103]:
+        - list [ref=f6e104]:
+          - listitem [ref=f6e105]:
+            - generic [ref=f6e106]:
+              - generic [ref=f6e109]:
+                - text: Only showing results from
+                - generic [ref=f6e110]: topcv.vn
+              - button "Show all results" [ref=f6e112] [cursor=pointer]
+          - listitem [ref=f6e113]:
+            - article [ref=f6e114] [cursor=pointer]:
+              - button [ref=f6e116]
+              - generic [ref=f6e120]:
+                - link "Search domain topcv.vn" [ref=f6e122]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e125]:
+                  - paragraph [ref=f6e126]: TopCV
+                  - link "https://www.topcv.vn › tim-viec-lam-frontend-developer" [ref=f6e127]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer
+                    - paragraph [ref=f6e129]:
+                      - generic [ref=f6e130]: https://www.topcv.vn
+                      - generic [ref=f6e131]: › tim-viec-lam-frontend-developer
+              - heading [level=2] [ref=f6e133]:
+                - link "Tuyển dụng 47 việc làm Frontend Developer [Update 07/10/2026]" [ref=f6e134]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer
+              - generic [ref=f6e136]: Khám phá 47 việc làm Frontend Developer từ những Nhà tuyển dụng uy tín cùng TopCV ngay hôm nay.
+          - listitem [ref=f6e141]:
+            - article [ref=f6e142] [cursor=pointer]:
+              - button [ref=f6e144]
+              - generic [ref=f6e148]:
+                - link "Search domain topcv.vn" [ref=f6e150]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e153]:
+                  - paragraph [ref=f6e154]: TopCV
+                  - link "https://www.topcv.vn › tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2" [ref=f6e155]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2
+                    - paragraph [ref=f6e157]:
+                      - generic [ref=f6e158]: https://www.topcv.vn
+                      - generic [ref=f6e159]: › tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2
+              - heading [level=2] [ref=f6e161]:
+                - link "Tuyển dụng 13 việc làm Frontend Developer tại Hồ ... - TopCV" [ref=f6e162]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-frontend-developer-tai-ho-chi-minh-kl2
+              - generic [ref=f6e164]: Khám phá 13 việc làm Frontend Developer tại Hồ Chí Minh từ những Nhà tuyển dụng uy tín cùng TopCV ngay hôm nay.
+          - listitem [ref=f6e169]:
+            - article [ref=f6e170] [cursor=pointer]:
+              - button [ref=f6e172]
+              - generic [ref=f6e176]:
+                - link "Search domain topcv.vn" [ref=f6e178]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e181]:
+                  - paragraph [ref=f6e182]: TopCV
+                  - link "https://www.topcv.vn › tim-viec-lam-front-end-developer" [ref=f6e183]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-front-end-developer
+                    - paragraph [ref=f6e185]:
+                      - generic [ref=f6e186]: https://www.topcv.vn
+                      - generic [ref=f6e187]: › tim-viec-lam-front-end-developer
+              - heading [level=2] [ref=f6e189]:
+                - link "Tuyển dụng 44 việc làm Front End Developer [Update 05/10/2026]" [ref=f6e190]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-front-end-developer
+              - generic [ref=f6e192]: Khám phá 44 việc làm Front End Developer từ những Nhà tuyển dụng uy tín cùng TopCV ngay hôm nay.
+          - listitem [ref=f6e197]:
+            - article [ref=f6e198] [cursor=pointer]:
+              - button [ref=f6e200]
+              - generic [ref=f6e204]:
+                - link "Search domain topcv.vn" [ref=f6e206]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e209]:
+                  - paragraph [ref=f6e210]: TopCV
+                  - link "https://www.topcv.vn › tim-viec-lam-fresher-tai-ho-chi-minh-kl2" [ref=f6e211]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-fresher-tai-ho-chi-minh-kl2
+                    - paragraph [ref=f6e213]:
+                      - generic [ref=f6e214]: https://www.topcv.vn
+                      - generic [ref=f6e215]: › tim-viec-lam-fresher-tai-ho-chi-minh-kl2
+              - heading [level=2] [ref=f6e217]:
+                - link "Tuyển dụng 54 việc làm Fresher tại Hồ Chí Minh ... - TopCV" [ref=f6e218]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-fresher-tai-ho-chi-minh-kl2
+              - generic [ref=f6e220]: Khám phá 54 việc làm Fresher tại Hồ Chí Minh từ những Nhà tuyển dụng uy tín cùng TopCV ngay hôm nay.
+          - listitem [ref=f6e225]:
+            - article [ref=f6e226] [cursor=pointer]:
+              - button [ref=f6e228]
+              - generic [ref=f6e232]:
+                - link "Search domain topcv.vn" [ref=f6e234]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e237]:
+                  - paragraph [ref=f6e238]: TopCV
+                  - link "https://www.topcv.vn › brand › smartosc › tuyen-dung › fresher-frontend-developer-j1648822.html" [ref=f6e239]:
+                    - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/fresher-frontend-developer-j1648822.html
+                    - paragraph [ref=f6e241]:
+                      - generic [ref=f6e242]: https://www.topcv.vn
+                      - generic [ref=f6e243]: › brand › smartosc › tuyen-dung › fresher-frontend-developer-j1648822.html
+              - heading [level=2] [ref=f6e245]:
+                - link "Tuyển Fresher Frontend Developer làm việc tại CÔNG TY ... - TopCV" [ref=f6e246]:
+                  - /url: https://www.topcv.vn/brand/smartosc/tuyen-dung/fresher-frontend-developer-j1648822.html
+              - generic [ref=f6e248]: Vị trí Fresher Frontend Developer tuyển dụng bởi công ty CÔNG TY CỔ PHẦN SMARTOSC tại Hồ Chí Minh, Phú Nhuận với mức lương Thoả thuận yêu cầu hình thức làm việc Toàn thời gian. Bạn có thể tham khảo thêm các vị trí tuyển dụng Frontend Developer tại Hồ Chí Minh, Phú Nhuận khác trên kênh tuyển dụng việc làm topcv.
+          - listitem [ref=f6e253]:
+            - article [ref=f6e254] [cursor=pointer]:
+              - button [ref=f6e256]
+              - generic [ref=f6e260]:
+                - link "Search domain topcv.vn" [ref=f6e262]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e265]:
+                  - paragraph [ref=f6e266]: TopCV
+                  - link "https://www.topcv.vn › tim-viec-lam-fresher" [ref=f6e267]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-fresher
+                    - paragraph [ref=f6e269]:
+                      - generic [ref=f6e270]: https://www.topcv.vn
+                      - generic [ref=f6e271]: › tim-viec-lam-fresher
+              - heading [level=2] [ref=f6e273]:
+                - link "Tuyển dụng 155 việc làm Fresher [Update 07/10/2026] - TopCV" [ref=f6e274]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-fresher
+              - generic [ref=f6e276]: Khám phá 155 việc làm Fresher từ những Nhà tuyển dụng uy tín cùng TopCV ngay hôm nay.
+          - listitem [ref=f6e281]:
+            - article [ref=f6e282] [cursor=pointer]:
+              - button [ref=f6e284]
+              - generic [ref=f6e288]:
+                - link "Search domain topcv.vn" [ref=f6e290]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e293]:
+                  - paragraph [ref=f6e294]: TopCV
+                  - link "https://www.topcv.vn › tim-viec-lam-lap-trinh-front-end" [ref=f6e295]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-front-end
+                    - paragraph [ref=f6e297]:
+                      - generic [ref=f6e298]: https://www.topcv.vn
+                      - generic [ref=f6e299]: › tim-viec-lam-lap-trinh-front-end
+              - heading [level=2] [ref=f6e301]:
+                - link "Tuyển dụng 45 việc làm Lập Trình Front End [Update 02/10/2026]" [ref=f6e302]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-lap-trinh-front-end
+              - generic [ref=f6e304]: Khám phá 45 việc làm Lập Trình Front End từ những Nhà tuyển dụng uy tín cùng TopCV ngay hôm nay.
+          - listitem [ref=f6e309]:
+            - article [ref=f6e310] [cursor=pointer]:
+              - button [ref=f6e312]
+              - generic [ref=f6e316]:
+                - link "Search domain topcv.vn" [ref=f6e318]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e321]:
+                  - paragraph [ref=f6e322]: TopCV
+                  - link "https://www.topcv.vn › tim-viec-lam-front-end-developer-kt1" [ref=f6e323]:
+                    - /url: https://www.topcv.vn/tim-viec-lam-front-end-developer-kt1
+                    - paragraph [ref=f6e325]:
+                      - generic [ref=f6e326]: https://www.topcv.vn
+                      - generic [ref=f6e327]: › tim-viec-lam-front-end-developer-kt1
+              - heading [level=2] [ref=f6e329]:
+                - link "Tuyển dụng 63 việc làm Front End Developer (Toàn thời ... - TopCV" [ref=f6e330]:
+                  - /url: https://www.topcv.vn/tim-viec-lam-front-end-developer-kt1
+              - generic [ref=f6e332]: Khám phá 63 việc làm Front End Developer (Toàn thời gian) từ những Nhà tuyển dụng uy tín cùng TopCV ngay hôm nay.
+          - listitem [ref=f6e337]:
+            - article [ref=f6e338] [cursor=pointer]:
+              - button [ref=f6e340]
+              - generic [ref=f6e344]:
+                - link "Search domain topcv.vn" [ref=f6e346]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e349]:
+                  - paragraph [ref=f6e350]: TopCV
+                  - link "https://www.topcv.vn › viec-lam › frontend-developer-fresher-reactjs › 1498997.html" [ref=f6e351]:
+                    - /url: https://www.topcv.vn/viec-lam/frontend-developer-fresher-reactjs/1498997.html
+                    - paragraph [ref=f6e353]:
+                      - generic [ref=f6e354]: https://www.topcv.vn
+                      - generic [ref=f6e355]: › viec-lam › frontend-developer-fresher-reactjs › 1498997.html
+              - heading [level=2] [ref=f6e357]:
+                - link "Tuyển Frontend Developer Fresher (ReactJS) làm việc tại ... - TopCV" [ref=f6e358]:
+                  - /url: https://www.topcv.vn/viec-lam/frontend-developer-fresher-reactjs/1498997.html
+              - generic [ref=f6e360]: Vị trí Frontend Developer Fresher (ReactJS) tuyển dụng bởi công ty CÔNG TY CỔ PHẦN ESTUARY tại Hồ Chí Minh, Quận 3 - TP HCM với mức lương Thoả thuận yêu cầu hình thức làm việc Toàn thời gian. Bạn có thể tham khảo thêm các vị trí tuyển dụng Frontend Developer tại Hồ Chí Minh, Quận 3 - TP HCM khác trên kênh tuyển dụng ...
+          - listitem [ref=f6e365]:
+            - article [ref=f6e366] [cursor=pointer]:
+              - button [ref=f6e368]
+              - generic [ref=f6e372]:
+                - link "Search domain topcv.vn" [ref=f6e374]:
+                  - /url: /?q=site%3Atopcv.vn%20fresher%20frontend%20developer%20tuy%E1%BB%83n%20d%E1%BB%A5ng&t=h_
+                - generic [ref=f6e377]:
+                  - paragraph [ref=f6e378]: TopCV
+                  - link "https://www.topcv.vn › viec-lam › fresher-frontend-developer-javascript › 1265302.html" [ref=f6e379]:
+                    - /url: https://www.topcv.vn/viec-lam/fresher-frontend-developer-javascript/1265302.html
+                    - paragraph [ref=f6e381]:
+                      - generic [ref=f6e382]: https://www.topcv.vn
+                      - generic [ref=f6e383]: › viec-lam › fresher-frontend-developer-javascript › 1265302.html
+              - heading [level=2] [ref=f6e385]:
+                - link "Tuyển Fresher Frontend Developer (Javascript) làm việc ... - TopCV" [ref=f6e386]:
+                  - /url: https://www.topcv.vn/viec-lam/fresher-frontend-developer-javascript/1265302.html
+              - generic [ref=f6e388]: Vị trí Fresher Frontend Developer (Javascript) tuyển dụng bởi công ty Công ty Cổ phần HouseNow tại Hồ Chí Minh, Tân Bình - TP HCM với mức lương 7 - 12 triệu yêu cầu hình thức làm việc Toàn thời gian. Bạn có thể tham khảo thêm các vị trí tuyển dụng Frontend Developer tại Hồ Chí Minh, Tân Bình - TP HCM khác trên kênh tuyển ...
+        - button "More results" [ref=f6e395] [cursor=pointer]
+    - list [ref=f6e398]:
+      - button "Close menu" [ref=f6e399] [cursor=pointer]
+      - list [ref=f6e403]:
+        - listitem [ref=f6e404]: Search
+        - listitem [ref=f6e405]:
+          - link "Homepage" [ref=f6e406] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f6e407]:
+          - link "Themes" [ref=f6e408] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f6e409]:
+          - link "Settings" [ref=f6e410] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f6e411]:
+        - listitem [ref=f6e412]: Share Feedback
+        - listitem [ref=f6e413]:
+          - generic [ref=f6e416]:
+            - button "Positive feedback" [ref=f6e417] [cursor=pointer]
+            - button "Negative feedback" [ref=f6e421] [cursor=pointer]
+      - list [ref=f6e425]:
+        - listitem [ref=f6e426]: Downloads
+        - listitem [ref=f6e427]:
+          - link "iOS Browser" [ref=f6e428] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f6e429]:
+          - link "Android Browser" [ref=f6e430] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f6e431]:
+          - link "Mac Browser" [ref=f6e432] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f6e433]:
+          - link "Windows Browser" [ref=f6e434] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f6e435]:
+          - link "Browser Extensions" [ref=f6e436] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f6e437]:
+        - listitem [ref=f6e438]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f6e439]:
+          - link "Duck.ai" [ref=f6e440] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f6e441]:
+          - link "Email Protection" [ref=f6e442] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f6e443]:
+          - link "Newsletter" [ref=f6e444] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f6e445]:
+          - link "Blog" [ref=f6e446] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f6e447]:
+          - link "Podcast" [ref=f6e448] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f6e449]:
+          - link "Collaborations" [ref=f6e450] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f6e451]:
+        - listitem [ref=f6e452]: Learn More
+        - listitem [ref=f6e453]:
+          - link "What’s New" [ref=f6e454] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f6e455]:
+          - link "Compare Privacy" [ref=f6e456] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f6e457]:
+          - link "About Our Browser" [ref=f6e458] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f6e459]:
+          - link "About DuckDuckGo" [ref=f6e460] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f6e461]:
+        - listitem [ref=f6e462]: Other Resources
+        - listitem [ref=f6e463]:
+          - link "Help" [ref=f6e464] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f6e465]:
+          - link "Community" [ref=f6e466] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f6e467]:
+          - link "Careers" [ref=f6e468] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f6e469]:
+          - link "Privacy Policy" [ref=f6e470] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f6e471]:
+          - link "Terms of Service" [ref=f6e472] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f6e473]:
+          - link "Press Kit" [ref=f6e474] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f6e475]:
+          - link "Advertise on Search" [ref=f6e476] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f6e482]:
+    - generic [ref=f6e493]:
+      - heading "See What’s DuckDuckNew" [level=3] [ref=f6e494]
+      - paragraph [ref=f6e495]: Explore DuckDuckGo’s latest product updates.
+    - link "Learn More" [ref=f6e496] [cursor=pointer]:
+      - /url: https://duckduckgo.com/updates
+  - button "Share Feedback" [ref=f6e501] [cursor=pointer]

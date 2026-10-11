@@ -1,0 +1,159 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - link [ref=f4e4] [cursor=pointer]:
+      - /url: https://martinfowler.com
+    - generic [ref=f4e7]:
+      - textbox [ref=f4e8]
+      - button "" [ref=f4e9] [cursor=pointer]
+    - link "" [ref=f4e11] [cursor=pointer]:
+      - /url: "#navmenu-bottom"
+    - navigation [ref=f4e12]:
+      - list [ref=f4e13]:
+        - listitem [ref=f4e14]:
+          - link "Refactoring" [ref=f4e15] [cursor=pointer]:
+            - /url: https://refactoring.com
+        - listitem [ref=f4e16]:
+          - link "Agile" [ref=f4e17] [cursor=pointer]:
+            - /url: /agile.html
+        - listitem [ref=f4e18]:
+          - link "Architecture" [ref=f4e19] [cursor=pointer]:
+            - /url: /architecture
+        - listitem [ref=f4e20]:
+          - link "About" [ref=f4e21] [cursor=pointer]:
+            - /url: /aboutMe.html
+        - listitem [ref=f4e22]:
+          - link "Thoughtworks" [ref=f4e23] [cursor=pointer]:
+            - /url: https://www.thoughtworks.com/engineering
+        - listitem [ref=f4e24]:
+          - link "" [ref=f4e25] [cursor=pointer]:
+            - /url: /feed.atom
+        - listitem [ref=f4e26]:
+          - link "" [ref=f4e27] [cursor=pointer]:
+            - /url: https://www.twitter.com/martinfowler
+        - listitem [ref=f4e28]:
+          - link "Mastodon stream" [ref=f4e29] [cursor=pointer]:
+            - /url: https://toot.thoughtworks.com/@mfowler
+        - listitem [ref=f4e32]:
+          - link "LinkedIn" [ref=f4e33] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/martin-fowler-com/
+        - listitem [ref=f4e36]:
+          - link "BlueSky" [ref=f4e37] [cursor=pointer]:
+            - /url: https://bsky.app/profile/martinfowler.com
+  - text:  ⨉
+  - main [ref=f4e40]:
+    - article [ref=f4e41]:
+      - heading [level=1] [ref=f4e42]:
+        - link "Circuit Breaker" [ref=f4e43] [cursor=pointer]:
+          - /url: CircuitBreaker.html
+      - paragraph [ref=f4e44]: 6 March 2014
+      - generic [ref=f4e45]:
+        - generic [ref=f4e46]:
+          - paragraph [ref=f4e47]:
+            - link [ref=f4e48] [cursor=pointer]:
+              - /url: /
+              - img "Photo of Martin Fowler" [ref=f4e49]
+          - paragraph [ref=f4e50]:
+            - link "Martin Fowler" [ref=f4e51] [cursor=pointer]:
+              - /url: /
+        - generic [ref=f4e52]:
+          - paragraph [ref=f4e53]:
+            - text: 
+            - link "continuous delivery" [ref=f4e54] [cursor=pointer]:
+              - /url: /tags/continuous%20delivery.html
+          - paragraph [ref=f4e55]:
+            - text: 
+            - link "application architecture" [ref=f4e56] [cursor=pointer]:
+              - /url: /tags/application%20architecture.html
+      - generic [ref=f4e57]:
+        - paragraph [ref=f4e58]:
+          - text: It's common for software systems to make remote calls to software running in different processes, probably on different machines across a network. One of the big differences between in-memory calls and remote calls is that remote calls can fail, or hang without a response until some timeout limit is reached. What's worse if you have many callers on a unresponsive supplier, then you can run out of critical resources leading to cascading failures across multiple systems. In his excellent book
+          - link "Release It" [ref=f4e59] [cursor=pointer]:
+            - /url: https://www.amazon.com/gp/product/0978739213/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0978739213&linkCode=as2&tag=martinfowlerc-20
+          - text: ", Michael Nygard popularized the Circuit Breaker pattern to prevent this kind of catastrophic cascade."
+        - paragraph [ref=f4e60]: The basic idea behind the circuit breaker is very simple. You wrap a protected function call in a circuit breaker object, which monitors for failures. Once the failures reach a certain threshold, the circuit breaker trips, and all further calls to the circuit breaker return with an error, without the protected call being made at all. Usually you'll also want some kind of monitor alert if the circuit breaker trips.
+        - paragraph [ref=f4e63]
+        - paragraph [ref=f4e64]: Here's a simple example of this behavior in Ruby, protecting against timeouts.
+        - paragraph [ref=f4e65]:
+          - text: I set up the breaker with a block (
+          - link "Lambda" [ref=f4e66] [cursor=pointer]:
+            - /url: /bliki/Lambda.html
+          - text: ) which is the protected call.
+        - generic [ref=f4e67]: "cb = CircuitBreaker.new {|arg| @supplier.func arg}"
+        - paragraph [ref=f4e68]: The breaker stores the block, initializes various parameters (for thresholds, timeouts, and monitoring), and resets the breaker into its closed state.
+        - paragraph [ref=f4e69]: class CircuitBreaker...
+        - generic [ref=f4e70]: attr_accessor :invocation_timeout, :failure_threshold, :monitor def initialize &block @circuit = block @invocation_timeout = 0.01 @failure_threshold = 5 @monitor = acquire_monitor reset end
+        - paragraph [ref=f4e71]: Calling the circuit breaker will call the underlying block if the circuit is closed, but return an error if it's open
+        - generic [ref=f4e72]: "# client code aCircuitBreaker.call(5)"
+        - paragraph [ref=f4e73]: class CircuitBreaker...
+        - generic [ref=f4e74]: def call args case state when :closed begin do_call args rescue Timeout::Error record_failure raise $! end when :open then raise CircuitBreaker::Open else raise "Unreachable Code" end end def do_call args result = Timeout::timeout(@invocation_timeout) do @circuit.call args end reset return result end
+        - paragraph [ref=f4e75]: Should we get a timeout, we increment the failure counter, successful calls reset it back to zero.
+        - paragraph [ref=f4e76]: class CircuitBreaker...
+        - generic [ref=f4e77]: def record_failure @failure_count += 1 @monitor.alert(:open_circuit) if :open == state end def reset @failure_count = 0 @monitor.alert :reset_circuit end
+        - paragraph [ref=f4e78]: I determine the state of the breaker comparing the failure count to the threshold
+        - paragraph [ref=f4e79]: class CircuitBreaker...
+        - generic [ref=f4e80]: "def state (@failure_count >= @failure_threshold) ? :open : :closed end"
+        - paragraph [ref=f4e81]: This simple circuit breaker avoids making the protected call when the circuit is open, but would need an external intervention to reset it when things are well again. This is a reasonable approach with electrical circuit breakers in buildings, but for software circuit breakers we can have the breaker itself detect if the underlying calls are working again. We can implement this self-resetting behavior by trying the protected call again after a suitable interval, and resetting the breaker should it succeed.
+        - paragraph [ref=f4e84]
+        - paragraph [ref=f4e85]: Creating this kind of breaker means adding a threshold for trying the reset and setting up a variable to hold the time of the last error.
+        - paragraph [ref=f4e86]: class ResetCircuitBreaker...
+        - generic [ref=f4e87]: def initialize &block @circuit = block @invocation_timeout = 0.01 @failure_threshold = 5 @monitor = BreakerMonitor.new @reset_timeout = 0.1 reset end def reset @failure_count = 0 @last_failure_time = nil @monitor.alert :reset_circuit end
+        - paragraph [ref=f4e88]: There is now a third state present - half open - meaning the circuit is ready to make a real call as trial to see if the problem is fixed.
+        - paragraph [ref=f4e89]: class ResetCircuitBreaker...
+        - generic [ref=f4e90]: def state case when (@failure_count >= @failure_threshold) && (Time.now - @last_failure_time) > @reset_timeout :half_open when (@failure_count >= @failure_threshold) :open else :closed end end
+        - paragraph [ref=f4e91]: Asked to call in the half-open state results in a trial call, which will either reset the breaker if successful or restart the timeout if not.
+        - paragraph [ref=f4e92]: class ResetCircuitBreaker...
+        - generic [ref=f4e93]: def call args case state when :closed, :half_open begin do_call args rescue Timeout::Error record_failure raise $! end when :open raise CircuitBreaker::Open else raise "Unreachable" end end def record_failure @failure_count += 1 @last_failure_time = Time.now @monitor.alert(:open_circuit) if :open == state end
+        - paragraph [ref=f4e94]: This example is a simple explanatory one, in practice circuit breakers provide a good bit more features and parameterization. Often they will protect against a range of errors that protected call could raise, such as network connection failures. Not all errors should trip the circuit, some should reflect normal failures and be dealt with as part of regular logic.
+        - paragraph [ref=f4e95]:
+          - text: With lots of traffic, you can have problems with many calls just waiting for the initial timeout. Since remote calls are often slow, it's often a good idea to put each call on a different thread using a
+          - link "future or promise" [ref=f4e96] [cursor=pointer]:
+            - /url: http://en.wikipedia.org/wiki/Futures_and_promises
+          - text: to handle the results when they come back. By drawing these threads from a thread pool, you can arrange for the circuit to break when the thread pool is exhausted.
+        - paragraph [ref=f4e97]: The example shows a simple way to trip the breaker — a count that resets on a successful call. A more sophisticated approach might look at frequency of errors, tripping once you get, say, a 50% failure rate. You might also have different thresholds for different errors, such as a threshold of 10 for timeouts but 3 for connection failures.
+        - paragraph [ref=f4e98]: The example I've shown is a circuit breaker for synchronous calls, but circuit breakers are also useful for asynchronous communications. A common technique here is to put all requests on a queue, which the supplier consumes at its speed - a useful technique to avoid overloading servers. In this case the circuit breaks when the queue fills up.
+        - paragraph [ref=f4e99]: On their own, circuit breakers help reduce resources tied up in operations which are likely to fail. You avoid waiting on timeouts for the client, and a broken circuit avoids putting load on a struggling server. I talk here about remote calls, which are a common case for circuit breakers, but they can be used in any situation where you want to protect parts of a system from failures in other parts.
+        - paragraph [ref=f4e100]: Circuit breakers are a valuable place for monitoring. Any change in breaker state should be logged and breakers should reveal details of their state for deeper monitoring. Breaker behavior is often a good source of warnings about deeper troubles in the environment. Operations staff should be able to trip or reset breakers.
+        - paragraph [ref=f4e101]: Breakers on their own are valuable, but clients using them need to react to breaker failures. As with any remote invocation you need to consider what to do in case of failure. Does it fail the operation you're carrying out, or are there workarounds you can do? A credit card authorization could be put on a queue to deal with later, failure to get some data may be mitigated by showing some stale data that's good enough to display.
+        - generic [ref=f4e102]:
+          - heading "Further Reading" [level=2] [ref=f4e103]
+          - paragraph [ref=f4e104]:
+            - text: The netflix tech blog contains a lot of useful information on improving reliability of systems with lots of services.
+            - link "Their Dependency Command" [ref=f4e105] [cursor=pointer]:
+              - /url: http://techblog.netflix.com/2012/02/fault-tolerance-in-high-volume.html
+            - text: talks about using circuit breakers and a thread pool limit.
+          - paragraph [ref=f4e106]:
+            - text: Netflix have open-sourced
+            - link "Hystrix" [ref=f4e107] [cursor=pointer]:
+              - /url: https://github.com/Netflix/Hystrix/
+            - text: ", a sophisticated tool for dealing with latency and fault tolerance for distributed systems. It includes an implementation of the circuit breaker pattern with the thread pool limit"
+          - paragraph [ref=f4e108]:
+            - text: There are other open-source implementations of the circuit breaker pattern in
+            - link "Ruby" [ref=f4e109] [cursor=pointer]:
+              - /url: http://github.com/wsargent/circuit_breaker/tree/master
+            - text: ","
+            - link "Java" [ref=f4e110] [cursor=pointer]:
+              - /url: https://github.com/Comcast/jrugged
+            - text: ","
+            - link "Grails Plugin" [ref=f4e111] [cursor=pointer]:
+              - /url: http://www.grails.org/plugin/circuit-breaker
+            - text: ","
+            - link "C#" [ref=f4e112] [cursor=pointer]:
+              - /url: http://timross.wordpress.com/2008/02/10/implementing-the-circuit-breaker-pattern-in-c/
+            - text: ","
+            - link "AspectJ" [ref=f4e113] [cursor=pointer]:
+              - /url: http://github.com/sptz45/circuit-breaker/tree/master
+            - text: ", and"
+            - link "Scala" [ref=f4e114] [cursor=pointer]:
+              - /url: http://github.com/FaKod/Circuit-Breaker-for-Scala
+        - generic [ref=f4e115]:
+          - heading "Acknowledgements" [level=2] [ref=f4e116]
+          - text: Pavel Shpak spotted and reported a bug in the example code
+  - text:  ⨉
+  - contentinfo [ref=f4e117]:
+    - link [ref=f4e119] [cursor=pointer]:
+      - /url: https://www.thoughtworks.com/engineering
+    - generic [ref=f4e121]: 
+    - paragraph [ref=f4e124]:
+      - text: © Martin Fowler |
+      - link "Disclosures" [ref=f4e125] [cursor=pointer]:
+        - /url: /aboutMe.html#disclosures

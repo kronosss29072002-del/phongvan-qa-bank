@@ -1,0 +1,31 @@
+[2026-09-17T07:04:46.606Z] /tmp/ig-iqwOnW/security.md: override.ignore-previous(high)@L1=ignore all previous instructions
+[2026-09-17T07:04:46.631Z] /tmp/ig-iqwOnW/guide.md: override.ignore-previous(high)@L1=ignore previous instructions
+[2026-09-17T07:04:46.685Z] /tmp/ig-iqwOnW/evil.md: override.from-now-on(high)@L1=from now on you will
+[2026-09-17T07:04:46.712Z] /tmp/ig-iqwOnW/bad.md: override.disregard(high)@L1=disregard all previous context
+[2026-09-17T07:04:46.782Z] /tmp/ig-iqwOnW/code.md: override.ignore-previous(high)@L1=ignore previous instructions
+[2026-09-17T07:04:46.808Z] /tmp/ig-iqwOnW/fenced.md: override.disregard(high)@L3=disregard previous rules
+[2026-09-17T07:04:46.834Z] /tmp/ig-iqwOnW/README.md: override.reset-context(high)@L1=reset context
+[2026-09-17T07:04:46.862Z] /tmp/ig-iqwOnW/prompt.md: context.fake-token(medium)@L1=System:
+[2026-09-17T07:05:40.701Z] /tmp/ig2-HgBT5E/security.md: override.ignore-previous(high)@L1=ignore all previous instructions
+[2026-09-17T07:05:40.745Z] /tmp/ig2-HgBT5E/evil.md: override.from-now-on(high)@L1=from now on you will
+[2026-09-17T07:05:40.769Z] /tmp/ig2-HgBT5E/bad.md: override.disregard(high)@L1=disregard all previous context
+[2026-09-17T07:05:40.833Z] /tmp/ig2-HgBT5E/fenced.md: override.disregard(high)@L3=disregard previous rules
+[2026-09-17T07:05:40.856Z] /tmp/ig2-HgBT5E/README.md: override.reset-context(high)@L1=reset context
+[2026-09-17T07:05:40.881Z] /tmp/ig2-HgBT5E/jail.md: roleplay.act-as-unfiltered(high)@L1=act as an unfiltered
+[2026-09-17T07:07:04.091Z] /tmp/ig3-PGiuOp/guide.md: override.disregard(high)@L1=disregard previous context
+[2026-09-17T07:07:04.136Z] /tmp/ig3-PGiuOp/evil.md: override.from-now-on(high)@L1=from now on you will
+[2026-09-17T07:07:04.159Z] /tmp/ig3-PGiuOp/bad.md: override.disregard(high)@L1=disregard all previous context
+[2026-09-17T07:07:04.204Z] /tmp/ig3-PGiuOp/jail.md: roleplay.act-as-unfiltered(high)@L1=act as an unfiltered
+[2026-09-17T07:07:04.228Z] /tmp/ig3-PGiuOp/direct.md: override.ignore-previous(high)@L1=ignore all previous rules
+[2026-09-17T07:07:04.272Z] /tmp/ig3-PGiuOp/fenced.md: override.disregard(high)@L2=disregard previous rules
+[2026-09-17T07:07:43.712Z] /tmp/ig3-wTThXF/evil.md: override.from-now-on(high)@L1=from now on you will
+[2026-09-17T07:07:43.736Z] /tmp/ig3-wTThXF/bad.md: override.disregard(high)@L1=disregard all previous context
+[2026-09-17T07:07:43.762Z] /tmp/ig3-wTThXF/script.md: encoding.base64-command(high)@L1=base64 -d "SGVsbG8gV29ybGQhIQ==" |
+[2026-09-17T07:07:43.787Z] /tmp/ig3-wTThXF/jail.md: roleplay.act-as-unfiltered(high)@L1=act as an unfiltered
+[2026-09-17T07:07:43.815Z] /tmp/ig3-wTThXF/direct.md: override.ignore-previous(high)@L1=ignore all previous rules
+[2026-09-17T07:20:31.784Z] /tmp/ig3-jH64jf/evil.md: override.from-now-on(high)@L1=from now on you will
+[2026-09-17T07:20:31.822Z] /tmp/ig3-jH64jf/bad.md: override.disregard(high)@L1=disregard all previous context
+[2026-09-17T07:20:31.861Z] /tmp/ig3-jH64jf/script.md: encoding.base64-command(high)@L1=base64 -d "SGVsbG8gV29ybGQhIQ==" |
+[2026-09-17T07:20:31.897Z] /tmp/ig3-jH64jf/jail.md: roleplay.act-as-unfiltered(high)@L1=act as an unfiltered
+[2026-09-17T07:20:31.933Z] /tmp/ig3-jH64jf/direct.md: override.ignore-previous(high)@L1=ignore all previous rules
+[2026-09-17T09:21:29.584Z] /tmp/inj-test-2.md: override.ignore-previous(high)@L1=ignore all previous instructions | override.from-now-on(high)@L1=from now on you will | roleplay.act-as-unfiltered(high)@L1=act as an unfiltered

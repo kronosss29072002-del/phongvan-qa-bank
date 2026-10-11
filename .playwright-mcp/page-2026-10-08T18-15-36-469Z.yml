@@ -1,0 +1,728 @@
+- generic [active] [ref=f3e1]:
+  - link "Bỏ tới nội dung" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - paragraph [ref=f3e5]: Tham chiếu
+      - heading "Thuật ngữ Backend & System" [level=1] [ref=f3e6]
+      - paragraph [ref=f3e7]:
+        - text: "Mỗi mục trả lời hai câu:"
+        - strong [ref=f3e8]: vấn đề gì khiến thuật ngữ này được sinh ra
+        - text: ", và"
+        - strong [ref=f3e9]: nó giải quyết thế nào
+        - text: . Sắp từ cơ bản đến nâng cao.
+      - paragraph [ref=f3e10]: 576 mục · 3 phần · 13 lĩnh vực · 477 có nguồn gốc
+      - 'img "Phân bố mức độ: cơ bản, trung cấp, nâng cao" [ref=f3e11]':
+        - generic "Nền tảng 172" [ref=f3e12]
+        - generic "Trung cấp 272" [ref=f3e13]
+        - generic "Nâng cao 132" [ref=f3e14]
+  - search [ref=f3e15]:
+    - generic [ref=f3e16]:
+      - generic [ref=f3e17]:
+        - generic [ref=f3e18]: Tìm thuật ngữ
+        - searchbox "Tìm thuật ngữ" [ref=f3e19]
+      - group "Lọc theo mức độ" [ref=f3e20]:
+        - button "Tất cả 576" [ref=f3e21] [cursor=pointer]
+        - button "Nền tảng 172" [ref=f3e22] [cursor=pointer]
+        - button "Trung cấp 272" [pressed] [ref=f3e23] [cursor=pointer]
+        - button "Nâng cao 132" [ref=f3e24] [cursor=pointer]
+      - generic [ref=f3e25]: Lọc theo lĩnh vực
+      - combobox "Lọc theo lĩnh vực" [ref=f3e26]:
+        - option "Tất cả lĩnh vực"
+        - option "Mạng & Giao thức (47)"
+        - option "Thiết kế API (40)"
+        - option "Cơ sở dữ liệu & Lưu trữ (70)"
+        - option "Caching & Hiệu năng (25)"
+        - option "Hiệu năng (64)"
+        - option "Phân tán & Đồng thời (31)" [selected]
+        - option "Messaging & Bất đồng bộ (23)"
+        - option "Kiến trúc & Khả năng mở rộng (27)"
+        - option "Độ tin cậy & Quan sát được (60)"
+        - option "Bền vững & Chị tải (36)"
+        - option "Bảo mật & Xác thực (58)"
+        - option "Kiểm thử & Chất lượng (67)"
+        - option "DevOps & Triển khai (28)"
+      - status [ref=f3e27]: Đang hiển thị 15 / 576 mục
+      - 'button "Giao diện: tối. Nhấn để đổi." [ref=f3e28] [cursor=pointer]': tối
+  - generic [ref=f3e29]:
+    - group [ref=f3e30]:
+      - navigation "Mục lục" [ref=f3e31]:
+        - paragraph [ref=f3e32]: Mục lục
+        - list [ref=f3e33]:
+          - listitem [ref=f3e34]:
+            - link "I Nền tảng 172" [ref=f3e35] [cursor=pointer]:
+              - /url: "#p-basic"
+              - generic [ref=f3e36]: I
+              - generic [ref=f3e37]: Nền tảng
+              - generic [ref=f3e38]: "172"
+            - list [ref=f3e39]:
+              - listitem [ref=f3e40]:
+                - link "Mạng & Giao thức 20" [ref=f3e41] [cursor=pointer]:
+                  - /url: "#dom-d00"
+                  - generic [ref=f3e42]: Mạng & Giao thức
+                  - generic [ref=f3e43]: "20"
+              - listitem [ref=f3e44]:
+                - link "Thiết kế API 11" [ref=f3e45] [cursor=pointer]:
+                  - /url: "#dom-d01"
+                  - generic [ref=f3e46]: Thiết kế API
+                  - generic [ref=f3e47]: "11"
+              - listitem [ref=f3e48]:
+                - link "Cơ sở dữ liệu & Lưu trữ 17" [ref=f3e49] [cursor=pointer]:
+                  - /url: "#dom-d02"
+                  - generic [ref=f3e50]: Cơ sở dữ liệu & Lưu trữ
+                  - generic [ref=f3e51]: "17"
+              - listitem [ref=f3e52]:
+                - link "Caching & Hiệu năng 8" [ref=f3e53] [cursor=pointer]:
+                  - /url: "#dom-d03"
+                  - generic [ref=f3e54]: Caching & Hiệu năng
+                  - generic [ref=f3e55]: "8"
+              - listitem [ref=f3e56]:
+                - link "Hiệu năng 19" [ref=f3e57] [cursor=pointer]:
+                  - /url: "#dom-d04"
+                  - generic [ref=f3e58]: Hiệu năng
+                  - generic [ref=f3e59]: "19"
+              - listitem [ref=f3e60]:
+                - link "Phân tán & Đồng thời 7" [ref=f3e61] [cursor=pointer]:
+                  - /url: "#dom-d05"
+                  - generic [ref=f3e62]: Phân tán & Đồng thời
+                  - generic [ref=f3e63]: "7"
+              - listitem [ref=f3e64]:
+                - link "Messaging & Bất đồng bộ 7" [ref=f3e65] [cursor=pointer]:
+                  - /url: "#dom-d06"
+                  - generic [ref=f3e66]: Messaging & Bất đồng bộ
+                  - generic [ref=f3e67]: "7"
+              - listitem [ref=f3e68]:
+                - link "Kiến trúc & Khả năng mở rộng 10" [ref=f3e69] [cursor=pointer]:
+                  - /url: "#dom-d07"
+                  - generic [ref=f3e70]: Kiến trúc & Khả năng mở rộng
+                  - generic [ref=f3e71]: "10"
+              - listitem [ref=f3e72]:
+                - link "Độ tin cậy & Quan sát được 11" [ref=f3e73] [cursor=pointer]:
+                  - /url: "#dom-d08"
+                  - generic [ref=f3e74]: Độ tin cậy & Quan sát được
+                  - generic [ref=f3e75]: "11"
+              - listitem [ref=f3e76]:
+                - link "Bền vững & Chị tải 11" [ref=f3e77] [cursor=pointer]:
+                  - /url: "#dom-d09"
+                  - generic [ref=f3e78]: Bền vững & Chị tải
+                  - generic [ref=f3e79]: "11"
+              - listitem [ref=f3e80]:
+                - link "Bảo mật & Xác thực 17" [ref=f3e81] [cursor=pointer]:
+                  - /url: "#dom-d10"
+                  - generic [ref=f3e82]: Bảo mật & Xác thực
+                  - generic [ref=f3e83]: "17"
+              - listitem [ref=f3e84]:
+                - link "Kiểm thử & Chất lượng 25" [ref=f3e85] [cursor=pointer]:
+                  - /url: "#dom-d11"
+                  - generic [ref=f3e86]: Kiểm thử & Chất lượng
+                  - generic [ref=f3e87]: "25"
+              - listitem [ref=f3e88]:
+                - link "DevOps & Triển khai 9" [ref=f3e89] [cursor=pointer]:
+                  - /url: "#dom-d12"
+                  - generic [ref=f3e90]: DevOps & Triển khai
+                  - generic [ref=f3e91]: "9"
+          - listitem [ref=f3e92]:
+            - link "II Trung cấp 272" [ref=f3e93] [cursor=pointer]:
+              - /url: "#p-intermediate"
+              - generic [ref=f3e94]: II
+              - generic [ref=f3e95]: Trung cấp
+              - generic [ref=f3e96]: "272"
+            - list [ref=f3e97]:
+              - listitem [ref=f3e98]:
+                - link "Mạng & Giao thức 19" [ref=f3e99] [cursor=pointer]:
+                  - /url: "#dom-d00"
+                  - generic [ref=f3e100]: Mạng & Giao thức
+                  - generic [ref=f3e101]: "19"
+              - listitem [ref=f3e102]:
+                - link "Thiết kế API 24" [ref=f3e103] [cursor=pointer]:
+                  - /url: "#dom-d01"
+                  - generic [ref=f3e104]: Thiết kế API
+                  - generic [ref=f3e105]: "24"
+              - listitem [ref=f3e106]:
+                - link "Cơ sở dữ liệu & Lưu trữ 31" [ref=f3e107] [cursor=pointer]:
+                  - /url: "#dom-d02"
+                  - generic [ref=f3e108]: Cơ sở dữ liệu & Lưu trữ
+                  - generic [ref=f3e109]: "31"
+              - listitem [ref=f3e110]:
+                - link "Caching & Hiệu năng 11" [ref=f3e111] [cursor=pointer]:
+                  - /url: "#dom-d03"
+                  - generic [ref=f3e112]: Caching & Hiệu năng
+                  - generic [ref=f3e113]: "11"
+              - listitem [ref=f3e114]:
+                - link "Hiệu năng 31" [ref=f3e115] [cursor=pointer]:
+                  - /url: "#dom-d04"
+                  - generic [ref=f3e116]: Hiệu năng
+                  - generic [ref=f3e117]: "31"
+              - listitem [ref=f3e118]:
+                - link "Phân tán & Đồng thời 15" [ref=f3e119] [cursor=pointer]:
+                  - /url: "#dom-d05"
+                  - generic [ref=f3e120]: Phân tán & Đồng thời
+                  - generic [ref=f3e121]: "15"
+              - listitem [ref=f3e122]:
+                - link "Messaging & Bất đồng bộ 8" [ref=f3e123] [cursor=pointer]:
+                  - /url: "#dom-d06"
+                  - generic [ref=f3e124]: Messaging & Bất đồng bộ
+                  - generic [ref=f3e125]: "8"
+              - listitem [ref=f3e126]:
+                - link "Kiến trúc & Khả năng mở rộng 9" [ref=f3e127] [cursor=pointer]:
+                  - /url: "#dom-d07"
+                  - generic [ref=f3e128]: Kiến trúc & Khả năng mở rộng
+                  - generic [ref=f3e129]: "9"
+              - listitem [ref=f3e130]:
+                - link "Độ tin cậy & Quan sát được 28" [ref=f3e131] [cursor=pointer]:
+                  - /url: "#dom-d08"
+                  - generic [ref=f3e132]: Độ tin cậy & Quan sát được
+                  - generic [ref=f3e133]: "28"
+              - listitem [ref=f3e134]:
+                - link "Bền vững & Chị tải 21" [ref=f3e135] [cursor=pointer]:
+                  - /url: "#dom-d09"
+                  - generic [ref=f3e136]: Bền vững & Chị tải
+                  - generic [ref=f3e137]: "21"
+              - listitem [ref=f3e138]:
+                - link "Bảo mật & Xác thực 36" [ref=f3e139] [cursor=pointer]:
+                  - /url: "#dom-d10"
+                  - generic [ref=f3e140]: Bảo mật & Xác thực
+                  - generic [ref=f3e141]: "36"
+              - listitem [ref=f3e142]:
+                - link "Kiểm thử & Chất lượng 25" [ref=f3e143] [cursor=pointer]:
+                  - /url: "#dom-d11"
+                  - generic [ref=f3e144]: Kiểm thử & Chất lượng
+                  - generic [ref=f3e145]: "25"
+              - listitem [ref=f3e146]:
+                - link "DevOps & Triển khai 14" [ref=f3e147] [cursor=pointer]:
+                  - /url: "#dom-d12"
+                  - generic [ref=f3e148]: DevOps & Triển khai
+                  - generic [ref=f3e149]: "14"
+          - listitem [ref=f3e150]:
+            - link "III Nâng cao 132" [ref=f3e151] [cursor=pointer]:
+              - /url: "#p-advanced"
+              - generic [ref=f3e152]: III
+              - generic [ref=f3e153]: Nâng cao
+              - generic [ref=f3e154]: "132"
+            - list [ref=f3e155]:
+              - listitem [ref=f3e156]:
+                - link "Mạng & Giao thức 8" [ref=f3e157] [cursor=pointer]:
+                  - /url: "#dom-d00"
+                  - generic [ref=f3e158]: Mạng & Giao thức
+                  - generic [ref=f3e159]: "8"
+              - listitem [ref=f3e160]:
+                - link "Thiết kế API 5" [ref=f3e161] [cursor=pointer]:
+                  - /url: "#dom-d01"
+                  - generic [ref=f3e162]: Thiết kế API
+                  - generic [ref=f3e163]: "5"
+              - listitem [ref=f3e164]:
+                - link "Cơ sở dữ liệu & Lưu trữ 22" [ref=f3e165] [cursor=pointer]:
+                  - /url: "#dom-d02"
+                  - generic [ref=f3e166]: Cơ sở dữ liệu & Lưu trữ
+                  - generic [ref=f3e167]: "22"
+              - listitem [ref=f3e168]:
+                - link "Caching & Hiệu năng 6" [ref=f3e169] [cursor=pointer]:
+                  - /url: "#dom-d03"
+                  - generic [ref=f3e170]: Caching & Hiệu năng
+                  - generic [ref=f3e171]: "6"
+              - listitem [ref=f3e172]:
+                - link "Hiệu năng 14" [ref=f3e173] [cursor=pointer]:
+                  - /url: "#dom-d04"
+                  - generic [ref=f3e174]: Hiệu năng
+                  - generic [ref=f3e175]: "14"
+              - listitem [ref=f3e176]:
+                - link "Phân tán & Đồng thời 9" [ref=f3e177] [cursor=pointer]:
+                  - /url: "#dom-d05"
+                  - generic [ref=f3e178]: Phân tán & Đồng thời
+                  - generic [ref=f3e179]: "9"
+              - listitem [ref=f3e180]:
+                - link "Messaging & Bất đồng bộ 8" [ref=f3e181] [cursor=pointer]:
+                  - /url: "#dom-d06"
+                  - generic [ref=f3e182]: Messaging & Bất đồng bộ
+                  - generic [ref=f3e183]: "8"
+              - listitem [ref=f3e184]:
+                - link "Kiến trúc & Khả năng mở rộng 8" [ref=f3e185] [cursor=pointer]:
+                  - /url: "#dom-d07"
+                  - generic [ref=f3e186]: Kiến trúc & Khả năng mở rộng
+                  - generic [ref=f3e187]: "8"
+              - listitem [ref=f3e188]:
+                - link "Độ tin cậy & Quan sát được 21" [ref=f3e189] [cursor=pointer]:
+                  - /url: "#dom-d08"
+                  - generic [ref=f3e190]: Độ tin cậy & Quan sát được
+                  - generic [ref=f3e191]: "21"
+              - listitem [ref=f3e192]:
+                - link "Bền vững & Chị tải 4" [ref=f3e193] [cursor=pointer]:
+                  - /url: "#dom-d09"
+                  - generic [ref=f3e194]: Bền vững & Chị tải
+                  - generic [ref=f3e195]: "4"
+              - listitem [ref=f3e196]:
+                - link "Bảo mật & Xác thực 5" [ref=f3e197] [cursor=pointer]:
+                  - /url: "#dom-d10"
+                  - generic [ref=f3e198]: Bảo mật & Xác thực
+                  - generic [ref=f3e199]: "5"
+              - listitem [ref=f3e200]:
+                - link "Kiểm thử & Chất lượng 17" [ref=f3e201] [cursor=pointer]:
+                  - /url: "#dom-d11"
+                  - generic [ref=f3e202]: Kiểm thử & Chất lượng
+                  - generic [ref=f3e203]: "17"
+              - listitem [ref=f3e204]:
+                - link "DevOps & Triển khai 5" [ref=f3e205] [cursor=pointer]:
+                  - /url: "#dom-d12"
+                  - generic [ref=f3e206]: DevOps & Triển khai
+                  - generic [ref=f3e207]: "5"
+    - main [ref=f3e208]:
+      - generic [ref=f3e209]:
+        - generic [ref=f3e210]:
+          - paragraph [aria-hidden] [ref=f3e211]: II
+          - generic [ref=f3e212]:
+            - paragraph [ref=f3e213]: Phần 2
+            - heading "Trung cấp" [level=2] [ref=f3e214]
+            - paragraph [ref=f3e215]: Độ sâu của người đã chạy service thật. Đây là nơi phân biệt người viết code với người vận hành hệ thống.
+            - paragraph [ref=f3e216]: 272 thuật ngữ · 13 chủ đề
+        - generic [ref=f3e217]:
+          - heading "Phân tán & Đồng thời 15" [level=3] [ref=f3e218]:
+            - text: Phân tán & Đồng thời
+            - generic [ref=f3e219]: "15"
+          - article [ref=f3e220]:
+            - generic [aria-hidden] [ref=f3e221]:
+              - generic [ref=f3e222]: № 174
+              - generic [ref=f3e223]: I
+              - generic [ref=f3e224]: Trung cấp
+            - generic [ref=f3e225]:
+              - generic [ref=f3e226]:
+                - heading "2PC/3PC & distributed transaction" [level=4] [ref=f3e227]
+                - button "Liên kết tới 2PC/3PC & distributed transaction" [ref=f3e228] [cursor=pointer]: "#"
+                - generic [ref=f3e229]: Phân tán & Đồng thời
+              - paragraph [ref=f3e230]: Haytwo-phase commit · 2PC · three-phase commit · 3PC · distributed transaction
+              - paragraph [ref=f3e231]:
+                - generic [ref=f3e232]: Vấn đề
+                - text: "Transaction trải qua hai database/service (trừ tiền ở DB A, ghi sổ ở DB B): commit riêng lẻ thì A commit xong B fail là tiền biến mất. Cần tất cả cùng quyết định commit hoặc abort — nhưng 2PC blocking: sau khi participant đã vote yes mà coordinator chết, participant giữ lock chờ vô hạn, dòng đó bị khóa cả chục phút."
+              - paragraph [ref=f3e233]:
+                - generic [ref=f3e234]: Nguồn gốc
+                - text: không rõ (được Bernstein, Hadzilacos & Goodman, 'Concurrency Control and Recovery in Database Systems' 1987 tài liệu hóa; thường ghi nhận từ công việc của Jim Gray cuối thập niên 1970, chưa verify trực tiếp).
+              - paragraph [ref=f3e235]:
+                - generic [ref=f3e236]: Xử lý
+                - text: "2PC: phase 1 prepare/vote, phase 2 broadcast commit/abort — an toàn nhưng blocking; 3PC thêm phase pre-commit với timeout để participant tự quyết định khi coordinator mất, giảm blocking (vẫn không an toàn tuyệt đối khi network partition)."
+              - paragraph [ref=f3e237]:
+                - text: Liên quan
+                - link "Saga" [ref=f3e238] [cursor=pointer]:
+                  - /url: "#e-saga"
+                - text: ·
+                - link "Consensus" [ref=f3e239] [cursor=pointer]:
+                  - /url: "#e-consensus"
+                - text: ·
+                - link "Paxos" [ref=f3e240] [cursor=pointer]:
+                  - /url: "#e-paxos"
+          - article [ref=f3e241]:
+            - generic [aria-hidden] [ref=f3e242]:
+              - generic [ref=f3e243]: № 188
+              - generic [ref=f3e244]: I
+              - generic [ref=f3e245]: Trung cấp
+            - generic [ref=f3e246]:
+              - generic [ref=f3e247]:
+                - heading "Atomic operation & CAS" [level=4] [ref=f3e248]
+                - button "Liên kết tới Atomic operation & CAS" [ref=f3e249] [cursor=pointer]: "#"
+                - generic [ref=f3e250]: Phân tán & Đồng thời
+              - paragraph [ref=f3e251]: Hayatomic · compare-and-swap · CMPXCHG · vận động nguyên tử
+              - paragraph [ref=f3e252]:
+                - generic [ref=f3e253]: Vấn đề
+                - text: "Muốn tăng biến đếm không cần mutex (mutex quá nặng hoặc muốn lock-free): đọc → +1 → ghi ba bước này bị ngắt giữa chừng thì hai thread đọc cùng giá trị cũ rồi ghi đè, mất lần tăng. Cần một thao tác mà CPU đảm bảo đọc-so sánh-ghi là một bước không thể chen ngang."
+              - paragraph [ref=f3e254]:
+                - generic [ref=f3e255]: Nguồn gốc
+                - text: Có sẵn trong kiến trúc IBM 370 từ 1970; trên x86 là lệnh CMPXCHG; Maurice Herlihy (1991) chứng minh CAS mạnh hơn read/write/fetch-and-add đơn thuần.
+              - paragraph [ref=f3e256]:
+                - generic [ref=f3e257]: Xử lý
+                - text: CAS đọc giá trị hiện tại, nếu còn bằng giá trị mong đợi thì ghi giá trị mới, ngược lại báo thất bại để thread đọc lại và thử tiếp — mọi thao đổi luôn tính trên dữ liệu 'mới nhất', từ đó dựng được cấu trúc dữ liệu lock-free.
+              - paragraph [ref=f3e258]:
+                - text: Liên quan
+                - link "Optimistic vs pessimistic locking" [ref=f3e259] [cursor=pointer]:
+                  - /url: "#e-optimistic-vs-pessimistic-locking"
+                - text: ·
+                - link "Atomic operation & CAS" [ref=f3e260] [cursor=pointer]:
+                  - /url: "#e-atomic-operation-cas"
+                - text: ·
+                - link "Race condition" [ref=f3e261] [cursor=pointer]:
+                  - /url: "#e-race-condition"
+          - article [ref=f3e262]:
+            - generic [aria-hidden] [ref=f3e263]:
+              - generic [ref=f3e264]: № 228
+              - generic [ref=f3e265]: I
+              - generic [ref=f3e266]: Trung cấp
+            - generic [ref=f3e267]:
+              - generic [ref=f3e268]:
+                - heading "Consistent hashing & virtual node" [level=4] [ref=f3e269]
+                - button "Liên kết tới Consistent hashing & virtual node" [ref=f3e270] [cursor=pointer]: "#"
+                - generic [ref=f3e271]: Phân tán & Đồng thời
+              - paragraph [ref=f3e272]: Hayconsistent hashing · băm nhất quán · virtual node · vnode · hash ring
+              - paragraph [ref=f3e273]:
+                - generic [ref=f3e274]: Vấn đề
+                - text: "Distribute cache bằng key % N: thêm 1 node thì N đổi → gần như toàn bộ key phải rehash, cache rỗng cùng lúc, request dồn vào DB (cache stampede); node chết cũng vậy. Thêm nữa, 10 node mạnh yếu không đều nhưng hash đều nhau dẫn đến load lệch — node yếu chết chìm."
+              - paragraph [ref=f3e275]:
+                - generic [ref=f3e276]: Nguồn gốc
+                - text: "David Karger và cộng sự (MIT), 'Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web', STOC 1997; virtual node nằm ngay trong paper này để giảm variance phân phối."
+              - paragraph [ref=f3e277]:
+                - generic [ref=f3e278]: Xử lý
+                - text: Đặt node và key lên một vòng tròn, key gán cho node kế tiếp theo chiều kim đồng hồ — thêm/bớt node chỉ di chuyển khoảng 1/N key; virtual node (nhiều điểm ảo cho mỗi máy vật lý) san đều load giữa node khác sức mạnh và khi node chết, key giao cho nhiều node thay.
+              - paragraph [ref=f3e279]:
+                - text: Liên quan
+                - link "Gossip protocol" [ref=f3e280] [cursor=pointer]:
+                  - /url: "#e-gossip-protocol"
+                - text: ·
+                - link "Split brain & quorum" [ref=f3e281] [cursor=pointer]:
+                  - /url: "#e-split-brain-quorum"
+          - article [ref=f3e282]:
+            - generic [aria-hidden] [ref=f3e283]:
+              - generic [ref=f3e284]: № 252
+              - generic [ref=f3e285]: I
+              - generic [ref=f3e286]: Trung cấp
+            - generic [ref=f3e287]:
+              - generic [ref=f3e288]:
+                - heading "Distributed lock & fencing token" [level=4] [ref=f3e289]
+                - button "Liên kết tới Distributed lock & fencing token" [ref=f3e290] [cursor=pointer]: "#"
+                - generic [ref=f3e291]: Phân tán & Đồng thời
+              - paragraph [ref=f3e292]: Haydistributed lock · fencing token · Redlock · lease
+              - paragraph [ref=f3e293]:
+                - generic [ref=f3e294]: Vấn đề
+                - text: "Lock trong process local vô ích khi có nhiều instance cùng chạy job định kỳ. Đặt distributed lock vẫn chưa đủ: client giữ lock rồi bị GC pause hàng chục giây (trường hợp GitHub thực tế, packet delay ~90s), lease hết hạn, client khác acquire — hai bên cùng tin mình giữ lock và cùng ghi. Kiểm tra lease ngay trước khi ghi cũng vô dụng vì pause có thể xảy ra đúng thời điểm đó."
+              - paragraph [ref=f3e295]:
+                - generic [ref=f3e296]: Nguồn gốc
+                - text: Martin Kleppmann, 'How to do distributed locking' (2016); lease phân tán do Cary Gray & David Cheriton đặt tên, paper SOSP 1989 về cache coherence.
+              - paragraph [ref=f3e297]:
+                - generic [ref=f3e298]: Xử lý
+                - text: Lock service cấp fencing token tăng dần theo mỗi lần acquire; storage từ chối mọi ghi có token nhỏ hơn token đã xử lý — client 'đông băng' cũ thức dậy cũng không thể ghi đè. ZooKeeper dùng zxid làm token; Redlock không có cơ chế này nên không an toàn cho critical section.
+              - paragraph [ref=f3e299]:
+                - text: Liên quan
+                - link "Mutex & Semaphore" [ref=f3e300] [cursor=pointer]:
+                  - /url: "#e-mutex-semaphore"
+                - text: ·
+                - link "Starvation & livelock" [ref=f3e301] [cursor=pointer]:
+                  - /url: "#e-starvation-livelock"
+                - text: ·
+                - link "Split brain & quorum" [ref=f3e302] [cursor=pointer]:
+                  - /url: "#e-split-brain-quorum"
+          - article [ref=f3e303]:
+            - generic [aria-hidden] [ref=f3e304]:
+              - generic [ref=f3e305]: № 263
+              - generic [ref=f3e306]: I
+              - generic [ref=f3e307]: Trung cấp
+            - generic [ref=f3e308]:
+              - generic [ref=f3e309]:
+                - heading "Eventual consistency" [level=4] [ref=f3e310]
+                - button "Liên kết tới Eventual consistency" [ref=f3e311] [cursor=pointer]: "#"
+                - generic [ref=f3e312]: Phân tán & Đồng thời
+              - paragraph [ref=f3e313]: Haynhất quán cuối cùng · anti-entropy
+              - paragraph [ref=f3e314]:
+                - generic [ref=f3e315]: Vấn đề
+                - text: "Ghi đa vùng: đồng bộ đồng nghĩa mỗi lần ghi phải chờ đủ replica — replica nào chậm hay partition là unavailable; không đồng bộ thì người ở London đọc được giá cũ mà người ở Tokyo vừa sửa. Giữ cả availability lẫn đồng nhất tại mọi thời điểm là bất khả thi."
+              - paragraph [ref=f3e316]:
+                - generic [ref=f3e317]: Nguồn gốc
+                - text: Hệ thống Bayou (Terry et al., 1995) là ví dụ sớm; thuật ngữ được Werner Vogels phổ biến qua 'Eventually Consistent' (ACM Queue 2008 / CACM 2009).
+              - paragraph [ref=f3e318]:
+                - generic [ref=f3e319]: Xử lý
+                - text: Ghi cục bộ rồi lan truyền bất đồng bộ (gossip, anti-entropy, read/write repair), xung đột phân xử bằng last-writer-wins hoặc CRDT — cam kết duy nhất là khi ngừng ghi, mọi replica hội tụ; trong lúc chờ thì đọc được giá trị trung gian.
+              - paragraph [ref=f3e320]:
+                - text: Liên quan
+                - link "CAP theorem" [ref=f3e321] [cursor=pointer]:
+                  - /url: "#e-cap-theorem"
+                - text: ·
+                - link "Gossip protocol" [ref=f3e322] [cursor=pointer]:
+                  - /url: "#e-gossip-protocol"
+                - text: ·
+                - link "CRDT" [ref=f3e323] [cursor=pointer]:
+                  - /url: "#e-crdt"
+          - article [ref=f3e324]:
+            - generic [aria-hidden] [ref=f3e325]:
+              - generic [ref=f3e326]: № 277
+              - generic [ref=f3e327]: I
+              - generic [ref=f3e328]: Trung cấp
+            - generic [ref=f3e329]:
+              - generic [ref=f3e330]:
+                - heading "Gossip protocol" [level=4] [ref=f3e331]
+                - button "Liên kết tới Gossip protocol" [ref=f3e332] [cursor=pointer]: "#"
+                - generic [ref=f3e333]: Phân tán & Đồng thời
+              - paragraph [ref=f3e334]: Haygossip · epidemic protocol · anti-entropy · phân phối lan truyền
+              - paragraph [ref=f3e335]:
+                - generic [ref=f3e336]: Vấn đề
+                - text: "Cluster vài trăm node cần lan truyền membership/tình trạng: mỗi node broadcast O(n) tin nhắn thì tổng O(n²), một node chết làm cả push gãy; còn đặt coordinator trung tâm thì nó thành điểm lỗi đơn (SPOF) và bottleneck."
+              - paragraph [ref=f3e337]:
+                - generic [ref=f3e338]: Nguồn gốc
+                - text: Demers, Greene, Hauser, Irish & Larson, 'Epidemic algorithms for replicated database maintenance', PODC 1987.
+              - paragraph [ref=f3e339]:
+                - generic [ref=f3e340]: Xử lý
+                - text: Mỗi vòng, node chọn ngẫu nhiên vài peer để trao đổi/chênh lệch state — thông tin lan như dịch bệnh, đến mọi node trong O(log n) lượt, chấp nhận packet loss và membership thay đổi (AWS S3, Cassandra, Serf).
+              - paragraph [ref=f3e341]:
+                - text: Liên quan
+                - link "Consistent hashing & virtual node" [ref=f3e342] [cursor=pointer]:
+                  - /url: "#e-consistent-hashing-virtual-node"
+                - text: ·
+                - link "Eventual consistency" [ref=f3e343] [cursor=pointer]:
+                  - /url: "#e-eventual-consistency"
+                - text: ·
+                - link "Leader election" [ref=f3e344] [cursor=pointer]:
+                  - /url: "#e-leader-election"
+          - article [ref=f3e345]:
+            - generic [aria-hidden] [ref=f3e346]:
+              - generic [ref=f3e347]: № 293
+              - generic [ref=f3e348]: I
+              - generic [ref=f3e349]: Trung cấp
+            - generic [ref=f3e350]:
+              - generic [ref=f3e351]:
+                - heading "Idempotency & delivery semantics" [level=4] [ref=f3e352]
+                - button "Liên kết tới Idempotency & delivery semantics" [ref=f3e353] [cursor=pointer]: "#"
+                - generic [ref=f3e354]: Phân tán & Đồng thời
+              - paragraph [ref=f3e355]: Hayidempotency · idempotent · at-least-once · at-most-once · exactly-once · Idempotency-Key
+              - paragraph [ref=f3e356]:
+                - generic [ref=f3e357]: Vấn đề
+                - text: "Client gọi API trừ tiền rồi timeout — không biết server đã xử lý hay chưa nên phải retry; nếu endpoint không idempotent thì retry sinh 2 lần trừ tiền. Tương tự với broker: at-most-once (gửi rồi quên) thì mất event khi crash giữa chừng; at-least-once thì redelivery làm consumer xử lý 2 lần. Mạng không bao giờ cho biết chắc 'gói tin đã đến hay chưa'."
+              - paragraph [ref=f3e358]:
+                - generic [ref=f3e359]: Nguồn gốc
+                - text: "Thuật ngữ idempotence do nhà toán học Benjamin Peirce đặt năm 1870; ngữ nghĩa HTTP (GET/PUT/DELETE idempotent, POST không) do RFC 7231 quy định. Delivery semantics: không rõ tác giả đầu tiên."
+              - paragraph [ref=f3e360]:
+                - generic [ref=f3e361]: Xử lý
+                - text: At-least-once + idempotent consumer (dedupe theo message ID hoặc Idempotency-Key ghi lại kết quả cũ) cho praktikal exactly-once; at-most-once chỉ dùng khi mất nhẹ hơn lặp (metrics, log). Thiết kế API theo PUT/DELETE theo ID để lặp vẫn cho cùng kết quả.
+              - paragraph [ref=f3e362]:
+                - text: Liên quan
+                - link "Saga" [ref=f3e363] [cursor=pointer]:
+                  - /url: "#e-saga"
+                - text: · 2PC/3PC ·
+                - link "Optimistic vs pessimistic locking" [ref=f3e364] [cursor=pointer]:
+                  - /url: "#e-optimistic-vs-pessimistic-locking"
+          - article [ref=f3e365]:
+            - generic [aria-hidden] [ref=f3e366]:
+              - generic [ref=f3e367]: № 308
+              - generic [ref=f3e368]: I
+              - generic [ref=f3e369]: Trung cấp
+            - generic [ref=f3e370]:
+              - generic [ref=f3e371]:
+                - heading "Leader election" [level=4] [ref=f3e372]
+                - button "Liên kết tới Leader election" [ref=f3e373] [cursor=pointer]: "#"
+                - generic [ref=f3e374]: Phân tán & Đồng thời
+              - paragraph [ref=f3e375]: Haybầu lãnh đạo · single master
+              - paragraph [ref=f3e376]:
+                - generic [ref=f3e377]: Vấn đề
+                - text: Cluster cần một coordinator duy nhất (ghi log, điều phối job) nhưng không node nào biết leader hiện tại còn sống hay đã chết — nếu hai node cùng tự nhận là leader thì write đi hai hướng, duplication job; không ai nhận thì cluster bất động.
+              - paragraph [ref=f3e378]:
+                - generic [ref=f3e379]: Nguồn gốc
+                - text: LeLann chuẩn thức化 bài toán (mất token trong ring); Chang & Roberts 1979 (ring, highest-ID); GHS (Gallager, Humblet, Spira) 1983 — đoạt Dijkstra Prize.
+              - paragraph [ref=f3e380]:
+                - generic [ref=f3e381]: Xử lý
+                - text: "Thuật toán bầu chọn đảm bảo hai điều kiện: uniqueness (đúng một node tự nhận là leader) và agreement (các node còn lại都知道 leader là ai) — qua token ring, hay lease-based (ZooKeeper ephemeral node, etcd lease) để leader chết thì lease hết hạn và bầu lại."
+              - paragraph [ref=f3e382]:
+                - text: Liên quan
+                - link "Consensus" [ref=f3e383] [cursor=pointer]:
+                  - /url: "#e-consensus"
+                - text: ·
+                - link "Raft" [ref=f3e384] [cursor=pointer]:
+                  - /url: "#e-raft"
+                - text: ·
+                - link "Distributed lock & fencing token" [ref=f3e385] [cursor=pointer]:
+                  - /url: "#e-distributed-lock-fencing-token"
+          - article [ref=f3e386]:
+            - generic [aria-hidden] [ref=f3e387]:
+              - generic [ref=f3e388]: № 339
+              - generic [ref=f3e389]: I
+              - generic [ref=f3e390]: Trung cấp
+            - generic [ref=f3e391]:
+              - generic [ref=f3e392]:
+                - heading "Optimistic vs pessimistic locking" [level=4] [ref=f3e393]
+                - button "Liên kết tới Optimistic vs pessimistic locking" [ref=f3e394] [cursor=pointer]: "#"
+                - generic [ref=f3e395]: Phân tán & Đồng thời
+              - paragraph [ref=f3e396]: Hayoptimistic locking · pessimistic locking · SELECT FOR UPDATE · version field
+              - paragraph [ref=f3e397]:
+                - generic [ref=f3e398]: Vấn đề
+                - text: "Ghi cùng một bản ghi: pessimistic lock (SELECT FOR UPDATE) giữ lock từ đầu → dưới tải cao, các transaction khác xếp hàng chỉ để đọc, throughput tụt. Optimistic thì cứ đọc-tính-ghi rồi kiểm tra ở commit — nhưng hai bên cùng sửa một dòng thì một bên phải làm lại toàn bộ, client không hiểu vì sao retry."
+              - paragraph [ref=f3e399]:
+                - generic [ref=f3e400]: Nguồn gốc
+                - text: không rõ
+              - paragraph [ref=f3e401]:
+                - generic [ref=f3e402]: Xử lý
+                - text: "Pessimistic: khóa trước khi sửa, an toàn nhưng dễ tắc khi xung đột nhiều; optimistic: đọc không khóa, kèm version/ETag, lúc ghi phát hiện version cũ thì reject và retry — phù hợp xung đột hiếm."
+              - paragraph [ref=f3e403]:
+                - text: Liên quan
+                - link "Atomic operation & CAS" [ref=f3e404] [cursor=pointer]:
+                  - /url: "#e-atomic-operation-cas"
+                - text: ·
+                - link "Race condition" [ref=f3e405] [cursor=pointer]:
+                  - /url: "#e-race-condition"
+                - text: ·
+                - link "Idempotency & delivery semantics" [ref=f3e406] [cursor=pointer]:
+                  - /url: "#e-idempotency-delivery-semantics"
+          - article [ref=f3e407]:
+            - generic [aria-hidden] [ref=f3e408]:
+              - generic [ref=f3e409]: № 368
+              - generic [ref=f3e410]: I
+              - generic [ref=f3e411]: Trung cấp
+            - generic [ref=f3e412]:
+              - generic [ref=f3e413]:
+                - heading "Reader-Writer lock" [level=4] [ref=f3e414]
+                - button "Liên kết tới Reader-Writer lock" [ref=f3e415] [cursor=pointer]: "#"
+                - generic [ref=f3e416]: Phân tán & Đồng thời
+              - paragraph [ref=f3e417]: HayRWLock · shared-exclusive lock · khóa đọc-ghi
+              - paragraph [ref=f3e418]:
+                - generic [ref=f3e419]: Vấn đề
+                - text: "Config chỉ để đọc mà mỗi lần đọc cũng exclusive-lock thì 1000 request đọc xếp hàng vào nhau, an toàn nhưng throughput không hơn lock độc quyền. Server database cũng thế: 200 session chỉ SELECT mà mỗi cái cũng phải xin lock ghi thì chẳng ai hơn ai."
+              - paragraph [ref=f3e420]:
+                - generic [ref=f3e421]: Xử lý
+                - text: "RWLock cho nhiều reader giữ đồng thời (shared) XOR đúng một writer (exclusive): reader vào được khi không có writer, writer đợi hết reader. Đổi lại writer có thể bị đói khi reader vào liên tục, nên cần biến thể ưu tiên writer hoặc hàng đợi writer; nâng cấp từ read sang write khi đang giữ shared thì dễ deadlock, pattern an toàn là thả read rồi xin lại exclusive."
+              - paragraph [ref=f3e422]:
+                - text: Liên quan
+                - link "Mutex & Semaphore" [ref=f3e423] [cursor=pointer]:
+                  - /url: "#e-mutex-semaphore"
+                - text: ·
+                - link "Starvation & livelock" [ref=f3e424] [cursor=pointer]:
+                  - /url: "#e-starvation-livelock"
+                - text: ·
+                - link "Row lock vs Table lock" [ref=f3e425] [cursor=pointer]:
+                  - /url: "#e-row-lock-vs-table-lock"
+          - article [ref=f3e426]:
+            - generic [aria-hidden] [ref=f3e427]:
+              - generic [ref=f3e428]: № 370
+              - generic [ref=f3e429]: I
+              - generic [ref=f3e430]: Trung cấp
+            - generic [ref=f3e431]:
+              - generic [ref=f3e432]:
+                - heading "Redis lock (SET NX PX)" [level=4] [ref=f3e433]
+                - button "Liên kết tới Redis lock (SET NX PX)" [ref=f3e434] [cursor=pointer]: "#"
+                - generic [ref=f3e435]: Phân tán & Đồng thời
+              - paragraph [ref=f3e436]: HaySET NX PX · Redis distributed lock · khóa Redis
+              - paragraph [ref=f3e437]:
+                - generic [ref=f3e438]: Vấn đề
+                - text: "Nhiều instance cùng chạy một job định kỳ (cron quét đơn hàng, worker gửi email) thì mỗi chu kỳ có thể chạy 3 lần. Lấy lock trên Redis là cách rẻ nhất, nhưng bẫy dễ rơi vào: tách SET rồi EXPIRE thành hai lệnh, client chết giữa hai lệnh thì lock treo cho tới lúc Redis xóa key; process chết sau khi SET cũng y như vậy. Gộp thành một lệnh SET NX PX thì an toàn hơn, nhưng TTL vẫn hữu hạn: TTL hết giữa lúc critical section đang chạy thì instance khác acquire được ngay, hai bên cùng ghi."
+              - paragraph [ref=f3e439]:
+                - generic [ref=f3e440]: Xử lý
+                - text: "Một lệnh atomic: `SET lock:job <token> NX PX 30000`, token là UUID sinh riêng cho từng lần giữ lock. Giải phóng bằng script Lua so token rồi DEL, để không xóa nhầm lock của người khác. Holder còn sống thì watchdog timer tự gia hạn TTL ở khoảng 1/3 giá trị (Redisson làm thế). Đổi lại, nếu TTL hết thật giữa chừng thì exclusivity mất, nên section nào bắt buộc không bị ghi chồng vẫn cần fencing token ở tầng storage."
+              - paragraph [ref=f3e441]:
+                - text: Liên quan
+                - link "Distributed lock & fencing token" [ref=f3e442] [cursor=pointer]:
+                  - /url: "#e-distributed-lock-fencing-token"
+                - text: ·
+                - link "Redis" [ref=f3e443] [cursor=pointer]:
+                  - /url: "#e-redis"
+                - text: ·
+                - link "Race condition" [ref=f3e444] [cursor=pointer]:
+                  - /url: "#e-race-condition"
+          - article [ref=f3e445]:
+            - generic [aria-hidden] [ref=f3e446]:
+              - generic [ref=f3e447]: № 385
+              - generic [ref=f3e448]: I
+              - generic [ref=f3e449]: Trung cấp
+            - generic [ref=f3e450]:
+              - generic [ref=f3e451]:
+                - heading "Saga" [level=4] [ref=f3e452]
+                - button "Liên kết tới Saga" [ref=f3e453] [cursor=pointer]: "#"
+                - generic [ref=f3e454]: Phân tán & Đồng thời
+              - paragraph [ref=f3e455]: Haysaga pattern · compensating transaction · giao dịch bù trừ · choreography vs orchestration
+              - paragraph [ref=f3e456]:
+                - generic [ref=f3e457]: Vấn đề
+                - text: Microservices mỗi service một database riêng nên không dùng ACID xuyên services; mà giữ lock kiểu 2PC suốt một business flow dài (đặt vé → thanh toán → xuất vé) thì lock giữ hàng giây-phút, block dữ liệu khác, và coordinator chết là cả flow treo chờ.
+              - paragraph [ref=f3e458]:
+                - generic [ref=f3e459]: Nguồn gốc
+                - text: Hector Garcia-Molina & Kenneth Salem, 'Sagas', SIGMOD 1987 (Princeton, 1/1987).
+              - paragraph [ref=f3e460]:
+                - generic [ref=f3e461]: Xử lý
+                - text: "Chia transaction thành chuỗi local transaction, bước sau chạy khi bước trước phát event báo thành công; nếu bước nào fail thì chạy compensating transaction (hoàn tiền, hủy chỗ) để bù trừ về trạng thái nhất quán — thay vì rollback. Trao đổi: không có isolation, phải chống xung đột giữa các saga chạy song song."
+              - paragraph [ref=f3e462]:
+                - text: Liên quan2PC/3PC ·
+                - link "Idempotency & delivery semantics" [ref=f3e463] [cursor=pointer]:
+                  - /url: "#e-idempotency-delivery-semantics"
+                - text: ·
+                - link "Eventual consistency" [ref=f3e464] [cursor=pointer]:
+                  - /url: "#e-eventual-consistency"
+                - text: ·
+                - link "Event-driven architecture" [ref=f3e465] [cursor=pointer]:
+                  - /url: "#e-event-driven-architecture"
+                - text: ·
+                - link "Transactional outbox" [ref=f3e466] [cursor=pointer]:
+                  - /url: "#e-transactional-outbox"
+                - text: ·
+                - link "Idempotent consumer" [ref=f3e467] [cursor=pointer]:
+                  - /url: "#e-idempotent-consumer"
+          - article [ref=f3e468]:
+            - generic [aria-hidden] [ref=f3e469]:
+              - generic [ref=f3e470]: № 403
+              - generic [ref=f3e471]: I
+              - generic [ref=f3e472]: Trung cấp
+            - generic [ref=f3e473]:
+              - generic [ref=f3e474]:
+                - heading "Split brain & quorum" [level=4] [ref=f3e475]
+                - button "Liên kết tới Split brain & quorum" [ref=f3e476] [cursor=pointer]: "#"
+                - generic [ref=f3e477]: Phân tán & Đồng thời
+              - paragraph [ref=f3e478]: Haysplit-brain · brain split · quorum · majority quorum
+              - paragraph [ref=f3e479]:
+                - generic [ref=f3e480]: Vấn đề
+                - text: "HA cluster mất nhau vì đường heartbeat chết nhưng process vẫn sống: hai node tự cho mình là master, cùng nhận ghi, dữ liệu hai bên lệch nhau — lúc heal là corrupt, phải operator can thiệp tay. Cụm 2 node không có witness thì không ai quyết định được ai là 'đúng'."
+              - paragraph [ref=f3e481]:
+                - generic [ref=f3e482]: Nguồn gốc
+                - text: Quorum (weighted voting) do David Gifford đề xuất, 'Weighted voting for replicated data', 1979; thuật ngữ split-brain thuộc vận hành cluster HA, không rõ tác giả đầu tiên.
+              - paragraph [ref=f3e483]:
+                - generic [ref=f3e484]: Xử lý
+                - text: "Quorum: chỉ nhóm giữ đa số phiếu mới được active, nhóm còn lại auto-fence; điều kiện Vw > N/2 khiến hai nhóm 'đa số' không thể cùng tồn tại (MongoDB replica set, Galera). Hy sinh availability của nhóm thiểu số để giữ consistency."
+              - paragraph [ref=f3e485]:
+                - text: Liên quan
+                - link "CAP theorem" [ref=f3e486] [cursor=pointer]:
+                  - /url: "#e-cap-theorem"
+                - text: ·
+                - link "Consensus" [ref=f3e487] [cursor=pointer]:
+                  - /url: "#e-consensus"
+                - text: ·
+                - link "Distributed lock & fencing token" [ref=f3e488] [cursor=pointer]:
+                  - /url: "#e-distributed-lock-fencing-token"
+          - article [ref=f3e489]:
+            - generic [aria-hidden] [ref=f3e490]:
+              - generic [ref=f3e491]: № 411
+              - generic [ref=f3e492]: I
+              - generic [ref=f3e493]: Trung cấp
+            - generic [ref=f3e494]:
+              - generic [ref=f3e495]:
+                - heading "Starvation & livelock" [level=4] [ref=f3e496]
+                - button "Liên kết tới Starvation & livelock" [ref=f3e497] [cursor=pointer]: "#"
+                - generic [ref=f3e498]: Phân tán & Đồng thời
+              - paragraph [ref=f3e499]: Haystarvation · livelock · đói · treo động
+              - paragraph [ref=f3e500]:
+                - generic [ref=f3e501]: Vấn đề
+                - text: "Lock không fair: thread cũ bị thread mới liên tục giành mất nên không bao giờ được chạy (starvation) — ví dụ worker mãi không nhận được job. Livelock thì ngược lại: hai thread liên tục nhường nhau, cùng thả lock rồi retry cùng lúc, đổi trạng thái mãi nhưng không ai tiến — giống hai người tránh nhau cùng nghiêng cùng hướng."
+              - paragraph [ref=f3e502]:
+                - generic [ref=f3e503]: Nguồn gốc
+                - text: không rõ
+              - paragraph [ref=f3e504]:
+                - generic [ref=f3e505]: Xử lý
+                - text: "Starvation: hàng đợi fair/fifo, chia đều tài nguyên, aging ưu tiên dần; livelock: thêm ngẫu nhiên hoặc backoff (exponential + jitter) khi retry để phá nhịp đồng bộ."
+              - paragraph [ref=f3e506]:
+                - text: Liên quan
+                - link "Deadlock" [ref=f3e507] [cursor=pointer]:
+                  - /url: "#e-deadlock"
+                - text: ·
+                - link "Race condition" [ref=f3e508] [cursor=pointer]:
+                  - /url: "#e-race-condition"
+                - text: ·
+                - link "Distributed lock & fencing token" [ref=f3e509] [cursor=pointer]:
+                  - /url: "#e-distributed-lock-fencing-token"
+          - article [ref=f3e510]:
+            - generic [aria-hidden] [ref=f3e511]:
+              - generic [ref=f3e512]: № 426
+              - generic [ref=f3e513]: I
+              - generic [ref=f3e514]: Trung cấp
+            - generic [ref=f3e515]:
+              - generic [ref=f3e516]:
+                - heading "Thread pool & pool exhaustion" [level=4] [ref=f3e517]
+                - button "Liên kết tới Thread pool & pool exhaustion" [ref=f3e518] [cursor=pointer]: "#"
+                - generic [ref=f3e519]: Phân tán & Đồng thời
+              - paragraph [ref=f3e520]: Haythread pool · hàng đợi luồng · pool exhaustion · cạn kiệt thread
+              - paragraph [ref=f3e521]:
+                - generic [ref=f3e522]: Vấn đề
+                - text: "Mỗi request tạo một thread mới: 10k request đồng thời thì RAM cạn vì mỗi thread chiếm stack, kernel tay trắng với context switch. Nhưng set pool quá nhỏ thì request xếp hàng timeout; tệ hơn — pool cạn kiệt khi mọi thread cùng mắc trên I/O chậm (DB treo), không còn thread nào cho request mới, toàn service đứng im dù CPU còn rảnh."
+              - paragraph [ref=f3e523]:
+                - generic [ref=f3e524]: Nguồn gốc
+                - text: không rõ
+              - paragraph [ref=f3e525]:
+                - generic [ref=f3e526]: Xử lý
+                - text: Giữ cố định N thread làm việc từ hàng đợi task; hàng đợi có giới hạn (bounded) + backpressure để từ chối/đẩy chậm khi quá tải thay vì nhận vô hạn và OOM.
+              - paragraph [ref=f3e527]:
+                - text: Liên quan
+                - link "Event loop" [ref=f3e528] [cursor=pointer]:
+                  - /url: "#e-event-loop"
+                - text: ·
+                - link "Concurrency vs Parallelism" [ref=f3e529] [cursor=pointer]:
+                  - /url: "#e-concurrency-vs-parallelism"
+                - text: ·
+                - link "Deadlock" [ref=f3e530] [cursor=pointer]:
+                  - /url: "#e-deadlock"
+  - contentinfo [ref=f3e531]:
+    - paragraph [ref=f3e532]: 576 mục · 477 có nguồn gốc · dữ liệu tĩnh, không theo dõi, một file HTML.
+  - generic [ref=f3e533]:
+    - button "Về đầu trang": ↑

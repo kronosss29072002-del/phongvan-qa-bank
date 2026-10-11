@@ -1,0 +1,98 @@
+{
+  "gaps": [
+    {
+      "theme": "Observability & monitoring",
+      "missingTerms": [
+        "Structured logging & log aggregation (ELK/Loki)",
+        "Metrics & Prometheus scrape model (time-series)",
+        "Distributed tracing & OpenTelemetry (span, context propagation)",
+        "Metric cardinality",
+        "SLI / SLO / error budget",
+        "RED / USE methods",
+        "Alerting, on-call & alert fatigue"
+      ],
+      "why": "Section này trống hoàn toàn — không có bất kỳ term nào về log/metric/trace. Không có observability thì không vận hành backend production được: không biết request chậm ở đâu, không biết lỗi đang xảy ra, không có SLO để quyết định khi nào phải thức đêm fix. Senior backend phỏng vấn gần như luôn hỏi 'lam sao bạn biết service mình đang healthy?'."
+    },
+    {
+      "theme": "Security & Authentication/Authorization",
+      "missingTerms": [
+        "OAuth 2.0 flows (authorization code + PKCE)",
+        "OpenID Connect (OIDC)",
+        "JWT vs opaque token (rotation, revocation)",
+        "RBAC / ABAC",
+        "Password hashing: bcrypt/Argon2 + salting vs rainbow table",
+        "CSRF",
+        "Injection classes: SQL injection / XSS / command injection",
+        "mTLS & certificate management"
+      ],
+      "why": "Gần như trống — chỉ có 1 term 'Cookie vs session token'. Authn/AuthZ là lãnh thổ bắt buộc của backend: mọi endpoint đều nhận input không tin cậy, mọi hệ thống đều cần login/permission. Thiếu OAuth/PKCE/JWT thì người học không phân biệt được session vs token trade-off, không biết vì sao password phải hash kèm salt."
+    },
+    {
+      "theme": "Testing & quality engineering",
+      "missingTerms": [
+        "Test pyramid (unit / integration / e2e)",
+        "TDD / BDD",
+        "Mock / stub / spy / fake",
+        "Contract testing (Pact)",
+        "Flaky test & test isolation",
+        "Code coverage, mutation testing",
+        "Property-based testing",
+        "Regression test & test data management"
+      ],
+      "why": "Section trống hoàn toàn, trong khi test là thứ backend viết EVERY ngày. Người học không có framework để trả lời: test nào nên viết (pyramid), integration test khác gì unit test, mock khi nào là quá mức, tại sao coverage 100% vẫn miss bug — đây là câu hỏi senior hỏi gần như chắc chắn."
+    },
+    {
+      "theme": "Resilience & capacity under load",
+      "missingTerms": [
+        "Circuit breaker",
+        "Bulkhead",
+        "Health check & liveness/readiness probe",
+        "Timeout budget / deadline propagation",
+        "Load shedding",
+        "Amdahl's law",
+        "p95/p99 percentile latency vs average",
+        "Load / stress / soak testing & capacity planning"
+      ],
+      "why": "List có retry, idempotency, backpressure nhưng thiếu nửa còn lại của câu chuyện 'phụ thuộc sập thì sao' và 'load tăng thì sao'. Circuit breaker/health check là pattern production-standard; Amdahl's law + p99 + load testing là cách senior phân biệt người biết 'nhanh' với người biết đo lường đúng (trung bình che giấu tail latency)."
+    },
+    {
+      "theme": "Database internals & storage engines",
+      "missingTerms": [
+        "Postgres vacuum / autovacuum",
+        "TOAST & WAL replication slot / logical replication",
+        "Buffer pool, page & checkpoint",
+        "Replication lag & read-your-writes consistency",
+        "LSM-tree vs B-tree & compaction",
+        "Journaling / fsync / group commit (durability trade-off)",
+        "Polyglot persistence & SQL vs NoSQL decision framework"
+      ],
+      "why": "Section DB mạnh về lý thuyết phân phối (CAP, MVCC, sharding) nhưng thiếu 'why is my Postgres slow' thực tế: autovacuum không chạy → bloat, replication slot không quản lý → WAL đầy disk, replication lag → đọc dữ liệu cũ. Đây là những gì senior backend hỏi khi bạn nói 'em đã dùng index' mà latency vẫn cao."
+    },
+    {
+      "theme": "OS & network request-path internals",
+      "missingTerms": [
+        "epoll / kqueue / I/O multiplexing",
+        "Reactor / Proactor pattern",
+        "io_uring & async syscall overhead",
+        "Non-blocking I/O & context switch cost",
+        "Zero-copy (sendfile)",
+        "DNS resolution chain (recursive resolver, TTL, negative caching)",
+        "TCP congestion control / RTT / slow start",
+        "CDN cache key & HTTP caching headers (Cache-Control, ETag, Vary)"
+      ],
+      "why": "Có 'event loop' và 'HTTP/2/3' ở mức khái niệm nhưng không có cơ chế bên dưới giải thích TẠI SAO Node/Nginx handle được 10k connections, request đi qua những bước nào từ DNS đến socket. Đây là ranh giới 'biết dùng framework' vs 'hiểu hệ thống' mà senior backend dùng để phân biệt ứng viên."
+    }
+  ],
+  "shallowTerms": [
+    "CAP theorem",
+    "Exactly-once semantics",
+    "Cache invalidation",
+    "CORS",
+    "Rollback",
+    "N+1 problem",
+    "Autoscaling",
+    "MVCC"
+  ],
+  "verdict": "List có xương mạng/distributed/phân phối mạnh nhưng trống hoàn toàn observability, testing và gần trống security — 3 mảng senior backend hỏi gần như chắc chắn — nên ưu tiên 6 gap này trước; đồng thời các term kiểu CAP/exactly-once/cache invalidation cần cảnh giác giải thích chỉ ở mức slogan chứ không đi tới trade-off thật.",
+  "entries": []
+}

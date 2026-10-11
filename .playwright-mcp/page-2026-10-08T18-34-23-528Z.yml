@@ -1,0 +1,117 @@
+- generic [active] [ref=f286e1]:
+  - dialog [ref=f286e2]:
+    - generic [ref=f286e7]:
+      - generic [ref=f286e8]:
+        - paragraph [ref=f286e9]: Microsoft và các nhà cung cấp bên thứ ba của chúng tôi sử dụng cookie và các công nghệ tương tự để phân phối, duy trì và cải thiện các dịch vụ và quảng cáo của chúng tôi. Nếu bạn đồng ý, chúng tôi sẽ sử dụng dữ liệu này để cá nhân hóa quảng cáo và thực hiện các phân tích liên quan.
+        - paragraph [ref=f286e10]:
+          - text: Bạn có thể chọn ‘Chấp nhận’ để đồng ý với các mục đích sử dụng này, ‘Từ chối’ để từ chối các mục đích sử dụng này hoặc nhấp vào ‘Tùy chọn khác’ để xem xét các tùy chọn của bạn. Bạn có thể thay đổi lựa chọn của mình trong phần ‘Quản lý Tùy chọn Cookie’ ở cuối trang này.
+          - link "Điều khoản về quyền riêng tư" [ref=f286e11] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+      - generic [ref=f286e12]:
+        - link "Chấp nhận" [ref=f286e14] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+        - link "Từ chối" [ref=f286e16] [cursor=pointer]:
+          - /url: "javascript: void(0)"
+      - link "Các lựa chọn khác" [ref=f286e18] [cursor=pointer]:
+        - /url: "javascript: void(0)"
+  - banner [ref=f286e19]:
+    - button "Bỏ qua tới phần Nội dung" [ref=f286e20] [cursor=pointer]
+    - button "Phản hồi trợ năng" [ref=f286e23] [cursor=pointer]
+    - generic [ref=f286e26]:
+      - link [ref=f286e27] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Trở về Bing tìm kiếm" [level=1] [ref=f286e28]
+      - search [ref=f286e29]:
+        - button "Tìm kiếm" [ref=f286e32] [cursor=pointer]
+        - searchbox "Nhập tìm kiếm của bạn ở đây - Gợi ý tìm kiếm sẽ hiển thị khi bạn nhập" [ref=f286e33]: Nghị định xe đưa đón trị "cạnh báo" bỏ quên thiết bị 01/01/2025
+        - generic [ref=f286e34] [cursor=pointer]
+        - generic [ref=f286e36] [cursor=pointer]
+        - button "Tìm kiếm bằng hình ảnh" [ref=f286e41] [cursor=pointer]
+      - link [ref=f286e43] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=1371647a97927ec3e4d89d4b21d909fce9548c6a3696011e0d40577342719122JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT1OZ2glZTElYmIlOGIrJWM0JTkxJWUxJWJiJThibmgreGUrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK3RyJWUxJWJiJThiKyUyMmMlZTElYmElYTFuaCtiJWMzJWExbyUyMitiJWUxJWJiJThmK3F1JWMzJWFhbit0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrMDElMmYwMSUyZjIwMjUmc2VuZHF1ZXJ5PTEmZm9ybT1IRUNPRFg&ntb=1
+        - button "Trò chuyện với Copilot" [ref=f286e44]
+    - complementary "Phần thưởng và Tùy chọn Tài khoản" [ref=f286e46]:
+      - link "Đăng nhập" [ref=f286e47] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f286e49] [cursor=pointer]:
+        - generic [ref=f286e50]: Rewards
+    - navigation "Bộ lọc Tìm kiếm" [ref=f286e66]:
+      - list [ref=f286e67]:
+        - listitem [ref=f286e68]:
+          - link "Tất cả" [ref=f286e69] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f286e71]:
+          - link "Web" [ref=f286e72] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=14a5c904e36968feda0c1d2db0dd492722998f67026b46f1406f67560346f50aJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPU5naCVlMSViYiU4YislYzQlOTElZTElYmIlOGJuaCt4ZSslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24rdHIlZTElYmIlOGIrJTIyYyVlMSViYSVhMW5oK2IlYzMlYTFvJTIyK2IlZTElYmIlOGYrcXUlYzMlYWFuK3RoaSVlMSViYSViZnQrYiVlMSViYiU4YiswMSUyZjAxJTJmMjAyNSZ3ZWJzY3A9MSZGT1JNPUhEUldTQw&ntb=1
+        - listitem [ref=f286e73]:
+          - link "Tìm kiếm" [ref=f286e74] [cursor=pointer]:
+            - /url: /copilotsearch?q=Ngh%e1%bb%8b+%c4%91%e1%bb%8bnh+xe+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%e1%bb%8b+%22c%e1%ba%a1nh+b%c3%a1o%22+b%e1%bb%8f+qu%c3%aan+thi%e1%ba%bft+b%e1%bb%8b+01%2f01%2f2025&FORM=CSSCOP
+        - listitem [ref=f286e77]:
+          - link "Hình ảnh" [ref=f286e78] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=2807a62472bb63c95ee57b8fc649e754b73adeba7748154a767d3817bde10476JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1OZ2glZTElYmIlOGIrJWM0JTkxJWUxJWJiJThibmgreGUrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK3RyJWUxJWJiJThiKyUyMmMlZTElYmElYTFuaCtiJWMzJWExbyUyMitiJWUxJWJiJThmK3F1JWMzJWFhbit0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrMDElMmYwMSUyZjIwMjUmRk9STT1IRFJTQzM&ntb=1
+        - listitem [ref=f286e79]:
+          - link "Video" [ref=f286e80] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ad5b3c3d25bbf2d4889dae63c69c5d4164b20481d1b8e67321c8926ad00655a3JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT1OZ2glZTElYmIlOGIrJWM0JTkxJWUxJWJiJThibmgreGUrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK3RyJWUxJWJiJThiKyUyMmMlZTElYmElYTFuaCtiJWMzJWExbyUyMitiJWUxJWJiJThmK3F1JWMzJWFhbit0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrMDElMmYwMSUyZjIwMjUmRk9STT1IRFJTQzQ&ntb=1
+        - listitem [ref=f286e81]:
+          - link "Bản đồ" [ref=f286e82] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=1765ef3d961bc2aa3550dd0f5ef748fd1eb4daca0f1d96852d81afc65f3bb210JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT1OZ2glZTElYmIlOGIrJWM0JTkxJWUxJWJiJThibmgreGUrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK3RyJWUxJWJiJThiKyUyMmMlZTElYmElYTFuaCtiJWMzJWExbyUyMitiJWUxJWJiJThmK3F1JWMzJWFhbit0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrMDElMmYwMSUyZjIwMjUmRk9STT1IRFJTQzY&ntb=1
+        - listitem [ref=f286e83]:
+          - button [ref=f286e84] [cursor=pointer]
+  - generic [ref=f286e88]:
+    - main "Kết quả Tìm kiếm" [ref=f286e89]:
+      - list [ref=f286e90]:
+        - listitem [ref=f286e91]:
+          - generic [ref=f286e93]:
+            - heading [level=2] [ref=f286e95]:
+              - link "Video của Nghị định xe Đưa Đón Trị Cạnh Báo Bỏ Quên Thiết bị 01 0…" [ref=f286e96] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=c6fbfad22ff80d6e42d9c9a529939ff6f87390e3c9139378ae37edc4b0737425JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT1OZ2glZTElYmIlOGIrJWM0JTkxJWUxJWJiJThibmgreGUrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK3RyJWUxJWJiJThiKyUyMmMlZTElYmElYTFuaCtiJWMzJWExbyUyMitiJWUxJWJiJThmK3F1JWMzJWFhbit0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrMDElMmYwMSUyZjIwMjUmcXB2dD1OZ2glZTElYmIlOGIrJWM0JTkxJWUxJWJiJThibmgreGUrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK3RyJWUxJWJiJThiKyUyMmMlZTElYmElYTFuaCtiJWMzJWExbyUyMitiJWUxJWJiJThmK3F1JWMzJWFhbit0aGklZTElYmElYmZ0K2IlZTElYmIlOGIrMDElMmYwMSUyZjIwMjUmRk9STT1WRFJF&ntb=1
+            - generic [ref=f286e102]:
+              - 'link "Bố trí sạc xe điện sai quy định có thể bị phạt tới 50 triệu, chủ nhà trọ lưu ý! | TTGĐ từ YouTube · Thời lượng: 1 phút 7 giây · tải lên vào 2 ngày trước · tải lên bởi Tiếp thị và Gia đình · Bấm để phát. · Bố trí sạc xe điện sai quy định có thể bị phạt tới 50 triệu, chủ nhà trọ lưu ý! #tintuc #tiepthigiadinh #tiepthivagiadinh #ttgd ★ ĐĂNG KÝ TT&GĐ tại: https://bit.ly/DangKyTiepThiGiaDinh ------------------------------------------ Đồng hành cùng Tiếp thị và Gia đình tại: - Website: https ..." [ref=f286e105] [cursor=pointer]':
+                - /url: https://www.bing.com/ck/a?!&&p=3cccca00d2e9b9d782f498c69b44ca3dccd4a5713f1ab8c40c1dcbec75d95343JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9TmdoJWUxJWJiJThiKyVjNCU5MSVlMSViYiU4Ym5oK3hlKyVjNCU5MSVjNiViMGErJWM0JTkxJWMzJWIzbit0ciVlMSViYiU4YislMjJjJWUxJWJhJWExbmgrYiVjMyVhMW8lMjIrYiVlMSViYiU4ZitxdSVjMyVhYW4rdGhpJWUxJWJhJWJmdCtiJWUxJWJiJThiKzAxJTJmMDElMmYyMDI1Jm1pZD0zMjlBNzU3RkU4QjI0RDc2ODM0RTMyOUE3NTdGRThCMjRENzY4MzRFJmNodXJsPSZGT1JNPVZJUkU&ntb=1
+                - generic [ref=f286e106]:
+                  - generic [ref=f286e107]: 1:07
+                  - generic [ref=f286e116]:
+                    - generic "Bố trí sạc xe điện sai quy định có thể bị phạt tới 50 triệu, chủ nhà trọ lưu ý! | TTGĐ" [ref=f286e117]:
+                      - text: Bố trí sạc
+                      - strong [ref=f286e118]: xe
+                      - text: điện sai quy
+                      - strong [ref=f286e119]: định
+                      - text: có thể
+                      - strong [ref=f286e120]: bị
+                      - text: phạt tới 50 triệu, chủ nhà trọ lưu ý! | TTGĐ
+                    - generic [ref=f286e121]:
+                      - generic [ref=f286e122]:
+                        - img "Trang web nguồn video" [ref=f286e123]
+                        - text: YouTube · Tiếp thị và Gia đình
+                      - generic [ref=f286e124]: 2 ngày trước
+              - 'link "Xe tải chở pin - cứu cánh cho ôtô điện khi trạm sạc vỡ trận từ vnexpress.net · Thời lượng: 11 giây · tải lên vào 1 ngày trước · tải lên bởi @VnEnews · Bấm để phát. · Xe tải trang bị pin dung lượng cao trở thành cục sạc khổng lồ giúp giải quyết tình trạng ùn tắc ở các trạm sạc dịp nghỉ lễ." [ref=f286e127] [cursor=pointer]':
+                - /url: https://www.bing.com/ck/a?!&&p=f73ae2cf8977dd91368189395984311d6e15678ce3bdf966287908c9507cdabdJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92bmV4cHJlc3MubmV0L3hlLXRhaS1jaG8tcGluLWN1dS1jYW5oLWNoby1vdG8tZGllbi1raGktdHJhbS1zYWMtdm8tdHJhbi01MTI4OTIwLmh0bWw&ntb=1
+                - generic [ref=f286e128]:
+                  - generic [ref=f286e129]: 0:11
+                  - generic [ref=f286e138]:
+                    - generic "Xe tải chở pin - cứu cánh cho ôtô điện khi trạm sạc vỡ trận" [ref=f286e139]:
+                      - strong [ref=f286e140]: Xe
+                      - text: tải chở pin - cứu cánh cho ôtô điện khi trạm sạc vỡ trận
+                    - generic [ref=f286e141]:
+                      - generic [ref=f286e142]: vnexpress.net · @VnEnews
+                      - generic [ref=f286e143]: 1 ngày trước
+              - link "Xe tải chở pin - cứu cánh cho ôtô điện khi trạm sạc vỡ trận từ MSN · tải lên vào 20 giờ trước · tải lên bởi Mỹ Anh · Bấm để phát. · Xe tải trang bị pin dung lượng cao trở thành cục sạc khổng lồ giúp giải quyết tình trạng ùn tắc ở các trạm sạc dịp nghỉ lễ." [ref=f286e146] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=7bbdb29a5a6bc748c32fef30948d0110d84e2c77bce945da1a290ee4f06819ebJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly93d3cubXNuLmNvbS92aS12bi9hdXRvcy9nZW5lcmFsL3hlLXQlRTElQkElQTNpLWNoJUUxJUJCJTlGLXBpbi1jJUUxJUJCJUE5dS1jJUMzJUExbmgtY2hvLSVDMyVCNHQlQzMlQjQtJUM0JTkxaSVFMSVCQiU4N24ta2hpLXRyJUUxJUJBJUExbS1zJUUxJUJBJUExYy12JUUxJUJCJUExLXRyJUUxJUJBJUFEbi9hci1BQTJkTFh2OA&ntb=1
+                - generic [ref=f286e153]:
+                  - generic "Xe tải chở pin - cứu cánh cho ôtô điện khi trạm sạc vỡ trận" [ref=f286e154]:
+                    - strong [ref=f286e155]: Xe
+                    - text: tải chở pin - cứu cánh cho ôtô điện khi trạm sạc vỡ trận
+                  - generic [ref=f286e156]:
+                    - generic [ref=f286e157]: MSN · Mỹ Anh
+                    - generic [ref=f286e158]: 20 giờ trước
+    - complementary "Kết quả bổ sung" [ref=f286e159]:
+      - list
+  - contentinfo [ref=f286e160]:
+    - generic [ref=f286e161]:
+      - list:
+        - listitem [ref=f286e162]:
+          - link "Quyền riêng tư" [ref=f286e163] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f286e164]:
+          - link "Điều khoản" [ref=f286e165] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

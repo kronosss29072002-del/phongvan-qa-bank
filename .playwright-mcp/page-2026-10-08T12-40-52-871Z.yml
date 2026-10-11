@@ -1,0 +1,449 @@
+- generic [active] [ref=f16e1]:
+  - generic [aria-hidden] [ref=f16e2]: "For AI agents: the site's llms.txt is at /llms.txt. This page has a Markdown version at /docs/concepts/context-propagation/index.md."
+  - banner:
+    - navigation [ref=f16e3]:
+      - generic [ref=f16e4]:
+        - link [ref=f16e5] [cursor=pointer]:
+          - /url: /
+          - img "The OpenTelemetry Logo" [ref=f16e7]
+        - list [ref=f16e10]:
+          - listitem [ref=f16e11]:
+            - link "Docs" [ref=f16e12] [cursor=pointer]:
+              - /url: /docs/
+          - listitem [ref=f16e13]:
+            - link "Ecosystem" [ref=f16e14] [cursor=pointer]:
+              - /url: /ecosystem/
+          - listitem [ref=f16e15]:
+            - link "Status" [ref=f16e16] [cursor=pointer]:
+              - /url: /status/
+          - listitem [ref=f16e17]:
+            - link "Community" [ref=f16e18] [cursor=pointer]:
+              - /url: /community/
+          - listitem [ref=f16e19]:
+            - link "Training" [ref=f16e20] [cursor=pointer]:
+              - /url: /training/
+          - listitem [ref=f16e21]:
+            - link "Blog" [ref=f16e22] [cursor=pointer]:
+              - /url: /blog/
+          - listitem [ref=f16e23]:
+            - generic [ref=f16e24]:
+              - button " EN" [ref=f16e25] [cursor=pointer]
+              - text: 
+          - listitem [ref=f16e26]:
+            - button "Toggle theme (Light)" [ref=f16e28] [cursor=pointer]:
+              - generic [ref=f16e31]: Toggle theme
+        - text: 
+  - generic [ref=f16e32]:
+    - generic [ref=f16e34]:
+      - complementary [ref=f16e35]:
+        - generic [ref=f16e36]:
+          - generic [ref=f16e38]:
+            - generic [ref=f16e39]:
+              - generic [aria-hidden]: 
+              - searchbox "Ask AI or search…" [ref=f16e40]
+            - text: 
+          - navigation [ref=f16e41]:
+            - list [ref=f16e42]:
+              - listitem [ref=f16e43]:
+                - link "Docs" [ref=f16e44] [cursor=pointer]:
+                  - /url: /docs/
+                - list [ref=f16e45]:
+                  - listitem [ref=f16e46]:
+                    - link "What is OpenTelemetry?" [ref=f16e48] [cursor=pointer]:
+                      - /url: /docs/what-is-opentelemetry/
+                  - listitem [ref=f16e49]:
+                    - generic [ref=f16e50]:
+                      - text: 
+                      - link "Getting Started" [ref=f16e51] [cursor=pointer]:
+                        - /url: /docs/getting-started/
+                  - listitem [ref=f16e52]:
+                    - generic [ref=f16e53]:
+                      - text: 
+                      - link "Concepts" [ref=f16e54] [cursor=pointer]:
+                        - /url: /docs/concepts/
+                    - list [ref=f16e55]:
+                      - listitem [ref=f16e56]:
+                        - link "Observability primer" [ref=f16e58] [cursor=pointer]:
+                          - /url: /docs/concepts/observability-primer/
+                      - listitem [ref=f16e59]:
+                        - link "Context propagation" [ref=f16e61] [cursor=pointer]:
+                          - /url: /docs/concepts/context-propagation/
+                      - listitem [ref=f16e62]:
+                        - generic [ref=f16e63]:
+                          - text: 
+                          - link "Signals" [ref=f16e64] [cursor=pointer]:
+                            - /url: /docs/concepts/signals/
+                      - listitem [ref=f16e65]:
+                        - generic [ref=f16e66]:
+                          - text: 
+                          - link "Instrumentation" [ref=f16e67] [cursor=pointer]:
+                            - /url: /docs/concepts/instrumentation/
+                      - listitem [ref=f16e68]:
+                        - link "Components" [ref=f16e70] [cursor=pointer]:
+                          - /url: /docs/concepts/components/
+                      - listitem [ref=f16e71]:
+                        - link "Semantic Conventions" [ref=f16e73] [cursor=pointer]:
+                          - /url: /docs/concepts/semantic-conventions/
+                      - listitem [ref=f16e74]:
+                        - link "Resources" [ref=f16e76] [cursor=pointer]:
+                          - /url: /docs/concepts/resources/
+                      - listitem [ref=f16e77]:
+                        - link "Instrumentation scope" [ref=f16e79] [cursor=pointer]:
+                          - /url: /docs/concepts/instrumentation-scope/
+                      - listitem [ref=f16e80]:
+                        - link "Sampling" [ref=f16e82] [cursor=pointer]:
+                          - /url: /docs/concepts/sampling/
+                      - listitem [ref=f16e83]:
+                        - link "Distributions" [ref=f16e85] [cursor=pointer]:
+                          - /url: /docs/concepts/distributions/
+                      - listitem [ref=f16e86]:
+                        - link "Glossary" [ref=f16e88] [cursor=pointer]:
+                          - /url: /docs/concepts/glossary/
+                  - listitem [ref=f16e89]:
+                    - generic [ref=f16e90]:
+                      - text: 
+                      - link "Demo" [ref=f16e91] [cursor=pointer]:
+                        - /url: /docs/demo/
+                    - text:     
+                  - listitem [ref=f16e92]:
+                    - generic [ref=f16e93]:
+                      - text: 
+                      - link "Language APIs & SDKs" [ref=f16e94] [cursor=pointer]:
+                        - /url: /docs/languages/
+                    - text:                                       
+                  - listitem [ref=f16e95]:
+                    - generic [ref=f16e96]:
+                      - text: 
+                      - link "Platforms" [ref=f16e97] [cursor=pointer]:
+                        - /url: /docs/platforms/
+                    - text:        
+                  - listitem [ref=f16e98]:
+                    - generic [ref=f16e99]:
+                      - text: 
+                      - link "Zero-code Instrumentation" [ref=f16e100] [cursor=pointer]:
+                        - /url: /docs/zero-code/
+                    - text:                 
+                  - listitem [ref=f16e101]:
+                    - generic [ref=f16e102]:
+                      - text: 
+                      - link "Collector" [ref=f16e103] [cursor=pointer]:
+                        - /url: /docs/collector/
+                    - text:        
+                  - listitem [ref=f16e104]:
+                    - generic [ref=f16e105]:
+                      - text: 
+                      - link "Blueprints and reference implementations" [ref=f16e106] [cursor=pointer]:
+                        - /url: /docs/guidance/
+                    - text:  
+                  - listitem [ref=f16e107]:
+                    - generic [ref=f16e108]:
+                      - text: 
+                      - link "Compatibility" [ref=f16e109] [cursor=pointer]:
+                        - /url: /docs/compatibility/
+                    - text:  
+                  - listitem [ref=f16e110]:
+                    - generic [ref=f16e111]:
+                      - text: 
+                      - link "Specs" [ref=f16e112] [cursor=pointer]:
+                        - /url: /docs/specs/
+                    - text:                                                          
+                  - listitem [ref=f16e113]:
+                    - generic [ref=f16e114]:
+                      - text: 
+                      - link "Security" [ref=f16e115] [cursor=pointer]:
+                        - /url: /docs/security/
+                  - listitem [ref=f16e116]:
+                    - generic [ref=f16e117]:
+                      - text: 
+                      - link "Contributing" [ref=f16e118] [cursor=pointer]:
+                        - /url: /docs/contributing/
+      - main [ref=f16e119]:
+        - navigation "breadcrumb" [ref=f16e120]:
+          - list [ref=f16e121]:
+            - listitem [ref=f16e122]:
+              - link "Docs" [ref=f16e123] [cursor=pointer]:
+                - /url: /docs/
+            - listitem [ref=f16e124]:
+              - text: /
+              - link "Concepts" [ref=f16e125] [cursor=pointer]:
+                - /url: /docs/concepts/
+            - listitem [ref=f16e126]: / Context propagation
+        - generic [ref=f16e127]:
+          - heading "Context propagation" [level=1] [ref=f16e128]
+          - generic [ref=f16e129]: Learn about the concept that enables Distributed Tracing.
+          - paragraph [ref=f16e130]:
+            - text: With context propagation,
+            - link "signals" [ref=f16e131] [cursor=pointer]:
+              - /url: ../signals/
+            - text: (
+            - link "traces" [ref=f16e132] [cursor=pointer]:
+              - /url: ../signals/traces/
+            - text: ","
+            - link "metrics" [ref=f16e133] [cursor=pointer]:
+              - /url: ../signals/metrics/
+            - text: ", and"
+            - link "logs" [ref=f16e134] [cursor=pointer]:
+              - /url: ../signals/logs/
+            - text: ) can be correlated with each other, regardless of where they are generated. Although not limited to tracing, context propagation allows
+            - link "traces" [ref=f16e135] [cursor=pointer]:
+              - /url: ../signals/traces/
+            - text: to build causal information about a system across services that are arbitrarily distributed across process and network boundaries.
+          - paragraph [ref=f16e136]: "To understand context propagation, you need to understand two separate concepts: context and propagation."
+          - heading "Context" [level=2] [ref=f16e137]
+          - paragraph [ref=f16e138]:
+            - text: Context is an object that contains the information for the sending and receiving service, or
+            - link "execution unit" [ref=f16e139] [cursor=pointer]:
+              - /url: /docs/specs/otel/glossary/#execution-unit
+            - text: ", to correlate one signal with another."
+          - paragraph [ref=f16e140]: When Service A calls Service B, Service A includes a trace ID and a span ID as part of the context. Service B uses these values to create a new span that belongs to the same trace, setting the span from Service A as its parent. This makes it possible to track the full flow of a request across service boundaries.
+          - heading "Propagation" [level=2] [ref=f16e141]
+          - paragraph [ref=f16e142]: Propagation is the mechanism that moves context between services and processes. It serializes or deserializes the context object and provides the relevant information to be propagated from one service to another.
+          - paragraph [ref=f16e143]:
+            - text: Propagation is usually handled by instrumentation libraries and is transparent to the user. In the event that you need to manually propagate context, you can use the
+            - link "Propagators API" [ref=f16e144] [cursor=pointer]:
+              - /url: /docs/specs/otel/context/api-propagators/
+            - text: .
+          - paragraph [ref=f16e145]:
+            - text: OpenTelemetry maintains several official propagators. The default propagator uses the headers specified by the
+            - link "W3C TraceContext " [ref=f16e146] [cursor=pointer]:
+              - /url: https://www.w3.org/TR/trace-context/
+            - text: specification.
+          - heading "Example" [level=2] [ref=f16e147]
+          - paragraph [ref=f16e148]:
+            - text: A service called
+            - code [ref=f16e149]: Frontend
+            - text: that provides different HTTP endpoints such as
+            - code [ref=f16e150]: POST /cart/add
+            - text: and
+            - code [ref=f16e151]: GET /checkout/
+            - text: reaches out to a downstream service
+            - code [ref=f16e152]: Product Catalog
+            - text: via an HTTP endpoint
+            - code [ref=f16e153]: GET /product
+            - text: to receive details on products that a user wants to add to the cart or that are part of the checkout. To understand activities in the
+            - code [ref=f16e154]: Product Catalog
+            - text: service within the context of requests coming from
+            - code [ref=f16e155]: Frontend
+            - text: ", the context (here: Trace ID and Span ID as “Parent ID”) is propagated using the"
+            - code [ref=f16e156]: traceparent
+            - text: "header as it is defined in the W3C TraceContext specification. This means the IDs are embedded in the fields of the header:"
+          - generic [ref=f16e158]:
+            - button "Copy to clipboard" [ref=f16e159] [cursor=pointer]
+            - code [ref=f16e160]:
+              - generic [ref=f16e161]: <version>-<trace-id>-<parent-id>-<trace-flags>
+          - paragraph [ref=f16e163]: "For example:"
+          - generic [ref=f16e165]:
+            - button "Copy to clipboard" [ref=f16e166] [cursor=pointer]
+            - code [ref=f16e167]:
+              - generic [ref=f16e168]: 00-a0892f3577b34da6a3ce929d0e0e4736-f03067aa0ba902b7-01
+          - heading "Traces" [level=3] [ref=f16e170]
+          - paragraph [ref=f16e171]:
+            - text: As mentioned, context propagation allows traces to build causal information across services. In this example, the two calls to the HTTP endpoint
+            - code [ref=f16e172]: GET /product
+            - text: of service
+            - code [ref=f16e173]: Product Catalog
+            - text: can be correlated with their upstream calls in service
+            - code [ref=f16e174]: Frontend
+            - text: by extracting the remote context from the
+            - code [ref=f16e175]: traceparent
+            - text: header and injecting it into the local context to set the Trace ID and Parent ID. With that, it is possible in a
+            - link "backend" [ref=f16e176] [cursor=pointer]:
+              - /url: /ecosystem/vendors/
+            - text: like
+            - link "Jaeger " [ref=f16e177] [cursor=pointer]:
+              - /url: https://jaegertracing.io
+            - text: to see two requests as spans of one trace.
+          - button "Context propagation example showing trace correlation across services" [ref=f16e178]
+          - heading "Logs" [level=3] [ref=f16e179]
+          - paragraph [ref=f16e180]: OpenTelemetry SDKs are able to automatically correlate logs with traces. This means they can inject context (Trace ID, Span ID) into a log record. This not only enables you to see logs in the context of the trace and span they belong to, but it also enables you to see logs that belong together across service or execution unit boundaries.
+          - heading "Metrics" [level=3] [ref=f16e181]
+          - paragraph [ref=f16e182]:
+            - text: In the case of metrics, context propagation enables you to aggregate measurements in that context. For example, instead of only looking at the response time of all the
+            - code [ref=f16e183]: GET /product
+            - text: requests, you can also get metrics for combinations of
+            - code [ref=f16e184]: POST /cart/add > GET /product
+            - text: and
+            - code [ref=f16e185]: GET /checkout > GET /product
+            - text: .
+          - table [ref=f16e186]:
+            - rowgroup [ref=f16e187]:
+              - row [ref=f16e188]:
+                - columnheader "Name" [ref=f16e189]
+                - columnheader "Calls Per Second" [ref=f16e190]
+                - columnheader "Average Response Time" [ref=f16e191]
+            - rowgroup [ref=f16e192]:
+              - row [ref=f16e193]:
+                - cell [ref=f16e194]:
+                  - code [ref=f16e195]: "* > GET /product"
+                - cell "370" [ref=f16e196]
+                - cell "300ms" [ref=f16e197]
+              - row [ref=f16e198]:
+                - cell [ref=f16e199]:
+                  - code [ref=f16e200]: POST /cart/add > GET /product
+                - cell "330" [ref=f16e201]
+                - cell "130ms" [ref=f16e202]
+              - row [ref=f16e203]:
+                - cell [ref=f16e204]:
+                  - code [ref=f16e205]: GET /checkout > GET /product
+                - cell "40" [ref=f16e206]
+                - cell "1703ms" [ref=f16e207]
+          - heading "Custom Context Propagation" [level=2] [ref=f16e208]
+          - paragraph [ref=f16e209]:
+            - text: For most use cases, you will find
+            - link "instrumentation libraries or native library instrumentation" [ref=f16e210] [cursor=pointer]:
+              - /url: /docs/concepts/instrumentation/libraries/
+            - text: "that handle the context propagation for you. In some cases no such support is available and you want to create that support for yourself. To do so you need to leverage the previously mentioned Propagators API:"
+          - list [ref=f16e211]:
+            - listitem [ref=f16e212]:
+              - text: On the side of the sender, the context is
+              - link "injected" [ref=f16e213] [cursor=pointer]:
+                - /url: /docs/specs/otel/context/api-propagators/#inject
+              - text: into the carrier, for example, into the headers of an HTTP request. In other cases, you need to find a place that can store metadata for your request.
+            - listitem [ref=f16e214]:
+              - text: On the receiving side, the context is
+              - link "extracted" [ref=f16e215] [cursor=pointer]:
+                - /url: /docs/specs/otel/context/api-propagators/#extract
+              - text: from the carrier. Again, in the case of HTTP, this is retrieved from the headers. In other cases, you pick the place you chose on the sending side to store the context.
+          - paragraph [ref=f16e216]: Note that it is possible to propagate context in protocols that do not have a dedicated field for metadata, but you have to make sure that on the receiving side they are extracted and removed before the data is processed, otherwise you may create undefined behavior.
+          - paragraph [ref=f16e217]: "For the following languages a step-by-step tutorial exists for custom context propagation:"
+          - list [ref=f16e218]:
+            - listitem [ref=f16e219]:
+              - link "Erlang" [ref=f16e220] [cursor=pointer]:
+                - /url: /docs/languages/erlang/propagation/#manual-context-propagation
+            - listitem [ref=f16e221]:
+              - link "JavaScript" [ref=f16e222] [cursor=pointer]:
+                - /url: /docs/languages/js/propagation/#manual-context-propagation
+            - listitem [ref=f16e223]:
+              - link "PHP" [ref=f16e224] [cursor=pointer]:
+                - /url: /docs/languages/php/propagation/#manual-context-propagation
+            - listitem [ref=f16e225]:
+              - link "Python" [ref=f16e226] [cursor=pointer]:
+                - /url: /docs/languages/python/propagation/#manual-context-propagation
+          - heading "Security best practices" [level=2] [ref=f16e227]
+          - paragraph [ref=f16e228]: Propagation involves sending and receiving data across service boundaries, which can have security implications.
+          - heading "External services" [level=3] [ref=f16e229]
+          - paragraph [ref=f16e230]: "When your service interacts with external services (services you do not own or trust), consider the following:"
+          - list [ref=f16e231]:
+            - listitem [ref=f16e232]:
+              - strong [ref=f16e233]: Incoming context
+              - text: ": Be cautious when accepting context from external sources. Malicious actors could send forged trace headers to manipulate your tracing data or potentially exploit vulnerabilities in context parsing. You might want to ignore or sanitize incoming context from untrusted sources."
+            - listitem [ref=f16e234]:
+              - strong [ref=f16e235]: Outgoing context
+              - text: ": Be mindful of what you propagate to external services. Internal trace IDs, span IDs, or baggage items might reveal sensitive information about your internal architecture or business logic. You may want to configure your propagators to not send context to external or public-facing endpoints."
+          - heading "Baggage" [level=3] [ref=f16e236]
+          - paragraph [ref=f16e237]:
+            - link "Baggage" [ref=f16e238] [cursor=pointer]:
+              - /url: ../signals/baggage/
+            - text: allows you to propagate arbitrary key-value pairs. Since this data is propagated across service boundaries, avoid putting sensitive information (like user credentials, API keys, or PII) in baggage, as it might be logged or sent to untrusted downstream services.
+          - heading "Support in Language SDKs" [level=2] [ref=f16e239]
+          - paragraph [ref=f16e240]: "For the individual language-specific implementations of the OpenTelemetry API & SDK, you will find details on the support of context propagation in the respective documentation pages:"
+          - list [ref=f16e241]:
+            - listitem [ref=f16e242]:
+              - link "C++" [ref=f16e243] [cursor=pointer]:
+                - /url: /docs/languages/cpp/instrumentation/#context-propagation
+            - listitem [ref=f16e244]: .NET
+            - listitem [ref=f16e245]:
+              - link "Erlang" [ref=f16e246] [cursor=pointer]:
+                - /url: /docs/languages/erlang/propagation/
+            - listitem [ref=f16e247]:
+              - link "Go" [ref=f16e248] [cursor=pointer]:
+                - /url: /docs/languages/go/instrumentation/#propagators-and-context
+            - listitem [ref=f16e249]:
+              - link "Java" [ref=f16e250] [cursor=pointer]:
+                - /url: /docs/languages/java/api/#context-api
+            - listitem [ref=f16e251]:
+              - link "JavaScript" [ref=f16e252] [cursor=pointer]:
+                - /url: /docs/languages/js/propagation/
+            - listitem [ref=f16e253]:
+              - link "PHP" [ref=f16e254] [cursor=pointer]:
+                - /url: /docs/languages/php/propagation/
+            - listitem [ref=f16e255]:
+              - link "Python" [ref=f16e256] [cursor=pointer]:
+                - /url: /docs/languages/python/propagation/
+            - listitem [ref=f16e257]:
+              - link "Ruby" [ref=f16e258] [cursor=pointer]:
+                - /url: /docs/languages/ruby/instrumentation/#context-propagation
+            - listitem [ref=f16e259]: Rust
+            - listitem [ref=f16e260]: Swift
+          - alert [ref=f16e261]:
+            - heading "Help wanted" [ref=f16e262]
+            - paragraph [ref=f16e264]:
+              - text: For languages .NET, Rust, and Swift, the language-specific documentation for context propagation is missing. If you know any of those languages and are interested to help,
+              - link "learn how you can contribute" [ref=f16e265] [cursor=pointer]:
+                - /url: /docs/contributing/
+              - text: "!"
+          - heading "Specification" [level=2] [ref=f16e266]
+          - paragraph [ref=f16e267]:
+            - text: To learn more about context propagation, see the
+            - link "Context specification" [ref=f16e268] [cursor=pointer]:
+              - /url: /docs/specs/otel/context/
+            - text: .
+          - generic [ref=f16e269]:
+            - heading "Feedback" [level=2] [ref=f16e270]
+            - paragraph [ref=f16e271]: Was this page helpful?
+            - button "Yes" [ref=f16e272] [cursor=pointer]
+            - button "No" [ref=f16e273] [cursor=pointer]
+            - text: 
+          - generic [ref=f16e274]:
+            - text: "Last modified August 10, 2026:"
+            - link "Fix context propagation example direction (#11254) (89a269b1)" [ref=f16e275] [cursor=pointer]:
+              - /url: https://github.com/open-telemetry/opentelemetry.io/commit/89a269b12093690dd47ccc32d7f8b22ff7f946d8
+    - contentinfo [ref=f16e276]:
+      - generic [ref=f16e278]:
+        - list [ref=f16e280]:
+          - listitem "Mailing Lists" [ref=f16e281]:
+            - link "Mailing Lists" [ref=f16e282] [cursor=pointer]:
+              - /url: https://github.com/open-telemetry/community#mailing-lists
+          - listitem "Bluesky" [ref=f16e284]:
+            - link "Bluesky" [ref=f16e285] [cursor=pointer]:
+              - /url: https://bsky.app/profile/opentelemetry.io
+          - listitem "Mastodon" [ref=f16e287]:
+            - link "Mastodon" [ref=f16e288] [cursor=pointer]:
+              - /url: https://fosstodon.org/@opentelemetry
+          - listitem "Stack Overflow" [ref=f16e290]:
+            - link "Stack Overflow" [ref=f16e291] [cursor=pointer]:
+              - /url: https://stackoverflow.com/questions/tagged/open-telemetry
+          - listitem "OTel logos" [ref=f16e293]:
+            - link "OTel logos" [ref=f16e294] [cursor=pointer]:
+              - /url: https://github.com/cncf/artwork/tree/master/projects/opentelemetry
+          - listitem "Meeting Recordings" [ref=f16e296]:
+            - link "Meeting Recordings" [ref=f16e297] [cursor=pointer]:
+              - /url: https://docs.google.com/spreadsheets/d/1SYKfjYhZdm2Wh2Cl6KVQalKg_m4NhTPZqq-8SzEVO6s
+          - listitem "Site analytics" [ref=f16e299]:
+            - link "Site analytics" [ref=f16e300] [cursor=pointer]:
+              - /url: https://lookerstudio.google.com/s/tSTKxK1ECeU
+        - list [ref=f16e303]:
+          - listitem "GitHub" [ref=f16e304]:
+            - link "GitHub" [ref=f16e305] [cursor=pointer]:
+              - /url: https://github.com/open-telemetry
+          - 'listitem "Slack #opentelemetry-new-contributors" [ref=f16e307]':
+            - 'link "Slack #opentelemetry-new-contributors" [ref=f16e308] [cursor=pointer]':
+              - /url: https://cloud-native.slack.com/archives/C09H3MNMBQV
+          - 'listitem "Slack #opentelemetry" [ref=f16e310]':
+            - 'link "Slack #opentelemetry" [ref=f16e311] [cursor=pointer]':
+              - /url: https://cloud-native.slack.com/archives/CJFCJHG4Q
+          - listitem "CNCF DevStats" [ref=f16e313]:
+            - link "CNCF DevStats" [ref=f16e314] [cursor=pointer]:
+              - /url: https://opentelemetry.devstats.cncf.io/d/8/dashboards?orgId=1&refresh=15m
+          - listitem "Privacy Policy" [ref=f16e316]:
+            - link "Privacy Policy" [ref=f16e317] [cursor=pointer]:
+              - /url: https://www.linuxfoundation.org/legal/privacy-policy
+          - listitem "Trademark Usage" [ref=f16e319]:
+            - link "Trademark Usage" [ref=f16e320] [cursor=pointer]:
+              - /url: https://www.linuxfoundation.org/legal/trademark-usage
+          - listitem "Marketing Guidelines" [ref=f16e322]:
+            - link "Marketing Guidelines" [ref=f16e323] [cursor=pointer]:
+              - /url: /community/marketing-guidelines/
+          - listitem "Site-build info" [ref=f16e325]:
+            - link "Site-build info" [ref=f16e326] [cursor=pointer]:
+              - /url: /site/
+        - generic [ref=f16e329]:
+          - text: © 2019–present
+          - generic [ref=f16e330]:
+            - text: OpenTelemetry Authors | Docs
+            - link "CC BY 4.0" [ref=f16e331] [cursor=pointer]:
+              - /url: https://creativecommons.org/licenses/by/4.0
+  - button [ref=f16e332] [cursor=pointer]:
+    - generic [ref=f16e335]:
+      - img "Project Logo" [ref=f16e336]
+      - paragraph [ref=f16e337]: Ask AI

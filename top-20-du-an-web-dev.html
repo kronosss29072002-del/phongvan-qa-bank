@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 20 Dự Án Web Dev — Fresher đến Middle</title>
+<meta name="description" content="20 dự án web nên làm từ fresher đến middle, xếp theo thứ tự học: nghiên cứu lấy mẫu GitHub + internet, xác minh đối kháng, repo mẫu kèm license kiểm ngày 08.10.2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:wght@400;600;700&display=swap">
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:#F2F7FA; --surface:#FFFFFF; --text:#0F202B; --text-muted:#506878;
+  --primary:#046688; --primary-btn:#025F7F; --fg-on-primary:#F3F8FA;
+  --accent:#A65A07; --accent-bg:#FFE4D0; --accent-ink:#743D04;
+  --border-subtle:#CDD6DB; --border-strong:#818E97; --focus:#AD5D00;
+  --font-sans:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-serif:"Lora",Georgia,"Times New Roman",serif;
+  --font-mono:ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#081016; --surface:#131C24; --text:#E2E9EE; --text-muted:#8E9CA5;
+    --primary:#4FBAE8; --primary-btn:#4FBAE8; --fg-on-primary:#081016;
+    --accent:#FEB379; --accent-bg:#4A2604; --accent-ink:#FEE2CD;
+    --border-subtle:#2C373F; --border-strong:#5A6C79; --focus:#FFA65F;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#081016; --surface:#131C24; --text:#E2E9EE; --text-muted:#8E9CA5;
+  --primary:#4FBAE8; --primary-btn:#4FBAE8; --fg-on-primary:#081016;
+  --accent:#FEB379; --accent-bg:#4A2604; --accent-ink:#FEE2CD;
+  --border-subtle:#2C373F; --border-strong:#5A6C79; --focus:#FFA65F;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{overflow-x:clip}
+body{
+  margin:0; overflow-x:clip;
+  background:var(--bg); color:var(--text);
+  font-family:var(--font-sans); font-size:1rem; line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+a{color:var(--primary)}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus); outline-offset:2px; border-radius:inherit}
+.wrap{max-width:1200px; margin-inline:auto; padding-inline:1rem}
+@media (min-width:768px){.wrap{padding-inline:clamp(1.5rem,4vw,2.5rem)}}
+.skip{
+  position:absolute; left:1rem; top:-100px; z-index:10;
+  background:var(--surface); color:var(--text);
+  padding:.5rem .75rem; border:1px solid var(--border-strong); border-radius:.375rem;
+}
+.skip:focus{top:.5rem}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:clamp(1.5rem,4vw,3rem)}
+.kicker{
+  font-family:var(--font-mono); font-size:.8rem; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--text-muted); margin:0 0 .75rem;
+}
+h1{
+  font-family:var(--font-serif); font-weight:700;
+  font-size:clamp(1.75rem,5vw,2.75rem); line-height:1.2;
+  margin:0 0 1rem; color:var(--text); max-width:26ch;
+}
+.deck{
+  margin:0 0 1.5rem; color:var(--text-muted);
+  font-size:clamp(1rem,2vw,1.125rem); max-width:64ch;
+}
+.tools{display:flex; gap:.75rem; flex-wrap:wrap; margin:0 0 1.25rem}
+.stats{
+  list-style:none; margin:0; padding:0;
+  display:flex; flex-wrap:wrap; gap:.5rem 1.75rem;
+}
+.stats li{display:flex; flex-direction:column; gap:.125rem}
+.stats b{
+  font-family:var(--font-mono); font-variant-numeric:tabular-nums;
+  font-size:1.25rem; font-weight:600; color:var(--primary);
+}
+.stats span{font-size:.8125rem; color:var(--text-muted)}
+@media (min-width:1024px){
+  .masthead .inner{
+    display:grid; grid-template-columns:1fr auto;
+    grid-template-areas:"words tools" "stats stats";
+    column-gap:2.5rem; row-gap:1.25rem;
+  }
+  .masthead .words{grid-area:words}
+  .masthead .tools{grid-area:tools; margin:0; align-self:start}
+  .masthead .stats{grid-area:stats}
+}
+
+/* ---------- buttons / chips / inputs ---------- */
+.btn{
+  font:inherit; font-size:.875rem; padding:.375rem .75rem;
+  border:1px solid var(--border-strong); border-radius:.375rem;
+  background:var(--surface); color:var(--text); cursor:pointer;
+}
+.btn:hover{background:color-mix(in oklch,var(--primary) 88%,black); color:var(--fg-on-primary); border-color:var(--primary-btn)}
+.btn:active{filter:brightness(.92)}
+.btn:disabled{opacity:.45; cursor:default}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .btn:hover{
+    background:color-mix(in oklch,var(--primary) 88%,white); color:var(--bg);
+  }
+}
+:root[data-theme="dark"] .btn:hover{
+  background:color-mix(in oklch,var(--primary) 88%,white); color:var(--bg);
+}
+.chip{
+  font:inherit; font-size:.875rem; padding:.3rem .8rem;
+  border:1px solid var(--border-strong); border-radius:999px;
+  background:var(--surface); color:var(--text); cursor:pointer;
+}
+.chip:hover{background:color-mix(in oklch,var(--primary) 88%,black); color:var(--fg-on-primary); border-color:var(--primary-btn)}
+.chip:active{filter:brightness(.92)}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .chip:hover{
+    background:color-mix(in oklch,var(--primary) 88%,white); color:var(--bg);
+  }
+}
+:root[data-theme="dark"] .chip:hover{
+  background:color-mix(in oklch,var(--primary) 88%,white); color:var(--bg);
+}
+.chip[aria-pressed="true"]{
+  background:var(--primary-btn); color:var(--fg-on-primary);
+  border-color:var(--primary-btn);
+}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:var(--fg-on-primary)}
+
+/* ---------- filter bar ---------- */
+.filterbar{
+  padding-block:1rem;
+  display:flex; flex-wrap:wrap; align-items:center; gap:.75rem 1rem;
+}
+.filterbar .chips{display:flex; flex-wrap:wrap; gap:.5rem}
+.filterbar input[type="search"]{
+  font:inherit; font-size:.9375rem; padding:.375rem .75rem;
+  min-width:min(100%,16rem); flex:1 1 12rem;
+  background:var(--surface); color:var(--text);
+  border:1px solid var(--border-strong); border-radius:.375rem;
+}
+.filterbar input::placeholder{color:var(--text-muted); opacity:1}
+.count{
+  font-family:var(--font-mono); font-size:.875rem; color:var(--text-muted);
+  white-space:nowrap;
+}
+
+/* ---------- sections ---------- */
+main{padding-bottom:3rem}
+section{margin-top:2.75rem; scroll-margin-top:1rem}
+h2{
+  font-family:var(--font-serif); font-weight:700;
+  font-size:clamp(1.25rem,3vw,1.625rem); line-height:1.3;
+  margin:0 0 .75rem; color:var(--text);
+}
+h3{
+  font-family:var(--font-serif); font-weight:600;
+  font-size:1.0625rem; line-height:1.35; margin:0 0 .375rem; color:var(--text);
+}
+p{margin:.375rem 0 .75rem; max-width:72ch}
+.lede{color:var(--text-muted)}
+ul.plain{margin:.375rem 0 .75rem; padding-left:1.25rem; max-width:80ch}
+ul.plain li{margin:.25rem 0; overflow-wrap:anywhere}
+
+/* ---------- summary table ---------- */
+.tablewrap{overflow-x:auto; margin-top:.75rem}
+table{border-collapse:collapse; width:100%; min-width:44rem; font-size:.9375rem}
+caption{
+  text-align:left; font-size:.875rem; color:var(--text-muted);
+  padding-bottom:.5rem;
+}
+th,td{text-align:left; vertical-align:top; padding:.5rem .75rem; border-bottom:1px solid var(--border-subtle)}
+thead th{
+  font-family:var(--font-mono); font-size:.75rem; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-muted); font-weight:600;
+}
+tbody th{
+  font-family:var(--font-mono); font-variant-numeric:tabular-nums;
+  color:var(--primary); font-weight:600; white-space:nowrap;
+}
+td.name a{font-weight:600; text-decoration:none}
+td.name a:hover{text-decoration:underline}
+td.prob{color:var(--text-muted)}
+
+/* ---------- ranked list ---------- */
+#projects{
+  list-style:none; margin:.75rem 0 0; padding:0;
+  display:grid; gap:clamp(1rem,2vw,2rem);
+}
+@media (min-width:768px){#projects{grid-template-columns:1fr 1fr}}
+.rank{
+  background:var(--surface); border-radius:.5rem;
+  padding:clamp(1rem,2vw,1.5rem);
+  display:grid; grid-template-columns:minmax(2.5rem,auto) 1fr;
+  gap:.5rem clamp(.75rem,1.5vw,1.25rem);
+  align-content:start;
+  overflow-wrap:anywhere;
+}
+.rank .num{
+  font-family:var(--font-mono); font-variant-numeric:tabular-nums;
+  font-size:1rem; font-weight:600; color:var(--primary); display:block;
+}
+.rank .content{display:grid; grid-template-rows:auto 1fr auto; gap:.625rem; min-width:0}
+.rank .head{display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem .75rem}
+.rank .head h3{margin:0}
+.rank .lvl{
+  font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-muted);
+  border:1px solid var(--border-strong); border-radius:999px; padding:.125rem .5rem;
+}
+.problem{margin:0; font-size:.9375rem}
+.why{margin:0; font-size:.875rem; color:var(--text-muted)}
+.stack{list-style:none; display:flex; flex-wrap:wrap; gap:.375rem; margin:0; padding:0}
+.stack li{
+  font-size:.75rem; background:var(--bg); color:var(--text);
+  border-radius:999px; padding:.1875rem .625rem;
+}
+.repos{list-style:none; margin:0; padding:0; display:grid; gap:.375rem}
+.repos li{
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:.375rem .5rem;
+  font-size:.8125rem;
+}
+.repos a{
+  font-family:var(--font-mono); font-size:.8125rem;
+  word-break:break-all; text-decoration:none;
+}
+.repos a:hover{text-decoration:underline}
+.lic{
+  font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.04em;
+  border-radius:999px; padding:.0625rem .5rem; white-space:nowrap;
+}
+.lic-ok{color:var(--primary); border:1px solid var(--border-strong)}
+.lic-warn{background:var(--accent-bg); color:var(--accent-ink)}
+.lic-neutral{color:var(--text-muted); border:1px solid var(--border-subtle)}
+.stars{font-family:var(--font-mono); font-size:.75rem; color:var(--text-muted)}
+.note{color:var(--text-muted); font-size:.8125rem}
+
+/* band: hero (rank 1) */
+.rank-hero{grid-column:1/-1}
+.rank-hero .problem{
+  font-family:var(--font-serif); font-size:clamp(1.5rem,4vw,2.25rem);
+  line-height:1.3; color:var(--text); margin:.25rem 0 .5rem;
+}
+.rank-hero .head h3{font-size:clamp(1.25rem,3vw,1.5rem)}
+/* band: strips (ranks 2-4) */
+.rank-strip{grid-column:1/-1; padding-block:clamp(.875rem,1.5vw,1.125rem)}
+@media (min-width:768px){
+  .rank-strip .content{
+    grid-template-rows:none;
+    grid-template-columns:minmax(14rem,1fr) 2fr;
+    gap:.375rem 1.5rem; align-items:baseline;
+  }
+  .rank-strip .head{grid-column:1}
+  .rank-strip .body{grid-column:2; display:grid; gap:.375rem}
+  .rank-strip .foot{grid-column:1/-1}
+}
+/* band: cards (ranks 5-10), 2-col on wide screens */
+.rank-card{grid-column:span 1}
+.rank-card.wide{grid-column:1/-1}
+/* band: rows (ranks 11-20) — dense */
+.rank-row{grid-column:1/-1; padding-block:clamp(.75rem,1.2vw,1rem)}
+.rank-row .content{gap:.375rem}
+.rank-row .problem{font-size:.875rem}
+.rank-row .why{font-size:.8125rem}
+.rank-row .repos li{font-size:.75rem}
+#empty{
+  background:var(--surface); border-radius:.5rem;
+  padding:1.25rem 1.5rem; margin-top:.75rem; color:var(--text-muted);
+}
+
+/* ---------- scoped-scope list ---------- */
+.scope{
+  list-style:none; margin:.5rem 0 1rem; padding:0;
+  display:grid; gap:.375rem; max-width:64ch;
+}
+.scope li{
+  display:flex; justify-content:space-between; gap:1rem;
+  background:var(--surface); border-radius:.375rem;
+  padding:.5rem .75rem; font-size:.875rem;
+}
+.scope .w{font-family:var(--font-mono); color:var(--primary); white-space:nowrap}
+
+/* ---------- callouts ---------- */
+.callout{
+  background:var(--accent-bg); color:var(--accent-ink);
+  border-radius:.5rem; padding:.875rem 1.125rem; margin:.75rem 0;
+  font-size:.9375rem; max-width:72ch;
+}
+.callout p{margin:0; color:inherit}
+.note-line{font-size:.875rem; color:var(--text-muted)}
+
+/* ---------- sources ---------- */
+details{margin:.5rem 0; max-width:90ch}
+summary{cursor:pointer; font-weight:600; font-size:.9375rem}
+details ul{margin:.375rem 0 .75rem; padding-left:1.25rem}
+details li{font-size:.8125rem; margin:.1875rem 0; word-break:break-all}
+details a{color:var(--primary)}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--border-subtle);
+  padding-block:1.5rem 2.5rem; margin-top:1rem;
+}
+footer p{font-size:.8125rem; color:var(--text-muted); max-width:80ch; margin:.25rem 0}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    transition-duration:.01ms !important; animation-duration:.01ms !important;
+    animation-iteration-count:1 !important; scroll-behavior:auto !important;
+  }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Bỏ qua nội dung chính</a>
+
+<header class="masthead">
+  <div class="wrap inner">
+    <div class="words">
+      <p class="kicker">Nghiên cứu dự án web · 08.10.2026 · 192 lượt agent</p>
+      <h1>20 dự án web nên làm từ fresher đến middle, xếp theo đúng thứ tự học</h1>
+      <p class="deck">Thứ tự này đến từ hai workflow quét GitHub và web: 179 ứng viên gộp còn 123, 34 cái vượt xác minh đối kháng, 20 cái chốt lại. Đây là nghiên cứu lấy mẫu, không phải quét toàn bộ internet — mục Phương pháp nêu rõ chỗ nào còn hổng, và mọi repo mẫu đều ghi license kiểm ngày 08.10.2026.</p>
+    </div>
+    <div class="tools">
+      <button type="button" class="btn" id="theme" aria-live="polite">Giao diện: hệ thống</button>
+    </div>
+    <ul class="stats">
+      <li><b>179</b><span>ứng viên thô</span></li>
+      <li><b>34</b><span>vượt xác minh đối kháng</span></li>
+      <li><b>192</b><span>lượt agent, 2 workflow</span></li>
+      <li><b>28</b><span>repo sửa lại sau audit license</span></li>
+    </ul>
+  </div>
+</header>
+
+<nav class="filterbar wrap" aria-label="Lọc dự án">
+  <div class="chips" role="group" aria-label="Lọc theo bậc">
+    <button type="button" class="chip" data-level="all" aria-pressed="true">Tất cả</button>
+    <button type="button" class="chip" data-level="fresher" aria-pressed="false">Fresher</button>
+    <button type="button" class="chip" data-level="junior" aria-pressed="false">Junior</button>
+    <button type="button" class="chip" data-level="middle" aria-pressed="false">Middle</button>
+  </div>
+  <input type="search" id="q" placeholder="Tìm: phòng trọ, webhook, Leaflet…" aria-label="Tìm trong danh sách dự án">
+  <span class="count" id="count" role="status" aria-live="polite">20 / 20 dự án</span>
+</nav>
+
+<main id="main" class="wrap">
+  <section aria-labelledby="tongquat">
+    <h2 id="tongquat">Tóm tắt 20 dự án</h2>
+    <p class="lede">Bấm tên dự án để nhảy tới thẻ chi tiết. Bộ lọc phía trên tác động cả bảng này lẫn danh sách chi tiết.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Bảng tóm tắt 20 dự án, cuộn ngang được">
+      <table>
+        <caption>20 dự án xếp theo thứ tự học, dữ liệu 08.10.2026</caption>
+        <thead>
+          <tr><th scope="col">#</th><th scope="col">Dự án</th><th scope="col">Bậc</th><th scope="col">Vấn đề cần giải</th></tr>
+        </thead>
+        <tbody id="summary-body">
+        </tbody>
+      </table>
+    </div>
+    <p id="table-empty" class="note-line" hidden>Không dự án nào khớp bộ lọc.</p>
+  </section>
+
+  <section aria-labelledby="chitiet">
+    <h2 id="chitiet">Chi tiết từng dự án</h2>
+    <p class="lede">Thẻ đầu tiên là bậc fresher cỡ lớn; 2-4 là dải ngang; 5-10 xếp hai cột; 11-20 là hàng gọn. “Vấn đề” nói vì sao dự án tồn tại, “Vì sao đáng làm” nói tín hiệu nó tạo ra khi phỏng vấn.</p>
+    <ol id="projects"></ol>
+    <p id="empty" hidden>Không dự án nào khớp bộ lọc hiện tại.</p>
+  </section>
+
+  <section aria-labelledby="lotrinh">
+    <h2 id="lotrinh">Lộ trình fresher → middle</h2>
+    <p class="lede">Thứ tự trong bảng là thứ tự học: 6 fresher → 8 junior → 6 middle. Ba đợt dưới đây là cách nghiên cứu giải thích cáchleo đó.</p>
+
+    <h3>Đợt 1 · Fresher — 6 dự án</h3>
+    <p>Container → CRUD → design-to-code → async API → deliverable agency → open-data viz (thứ 1-6). Phạm vi chung của đợt là lát cắt dọc deploy được: code chạy, README có hướng dẫn chạy, site live. Deploy-to-live là một phần của “done”, không phải phần sau.</p>
+
+    <h3>Đợt 2 · Junior — 8 dự án</h3>
+    <p>Bậc backend systems cộng 5 workflow Việt Nam/thành phố đã xác minh (thứ 7-14). URL shortener giữ #7 vì là ứng viên được nhắc nhiều nhất vòng 1 (8 lần). Admin dashboard lùi xuống sau bốn workflow thật vì không có judge nào chấm nó ở vòng 1. Phòng khám, nhà trọ, hồ sơ, lớp thêm vào đúng bậc đã xác minh, không phải điểm thô.</p>
+
+    <h3>Đợt 3 · Middle — 6 dự án</h3>
+    <p>Concurrency → domain vận hành → thanh toán → AI → CRDT capstone (thứ 15-20). Chat đứng trước dispatch để bậc concurrency đầu tiên đến trước concurrency gán việc. Bán hàng dẫn đầu vì là điểm real-world cao nhất (90,5).</p>
+
+    <h3>Quy mô fresher đã chốt cho 6/20 dự án</h3>
+    <p>Scope sizing chỉ có cho 6 dự án; 14 dự án còn lại chưa có delta phạm vi. Các con số dưới đây là lát cắt tối thiểu ở bậc fresher:</p>
+    <ul class="scope">
+      <li><span>URL shortener — 5 REST endpoint sạch</span><span class="w">2-3 tuần</span></li>
+      <li><span>Backoffice 2 role, admin seed sẵn</span><span class="w">2 tuần</span></li>
+      <li><span>Chat Socket.IO 1 phòng, persist + deploy</span><span class="w">3-4 tuần</span></li>
+      <li><span>E-commerce API-first, Stripe test-mode + webhook tạo đơn</span><span class="w">6 tuần</span></li>
+      <li><span>RAG chatbot 1 thư mục tài liệu + vector store</span><span class="w">3-4 tuần</span></li>
+      <li><span>Editor Yjs, undo theo người dùng + presence</span><span class="w">4 tuần</span></li>
+    </ul>
+    <p>Delta lên middle luôn là 1-2× thời gian đó và không bao giờ là thêm UI. Nó là reliability, chống lạm dụng và đo lường: audit log + soft delete trên dashboard; delivery ack + Redis pub/sub + smoke test load với chat; webhook signature verification + atomic stock decrement bằng row lock + state machine đơn hàng chặt với e-commerce; eval-as-code + A/B chunking với RAG; ACL + version snapshot với editor; custom slug + rate limit + cache hit-metric với shortener.</p>
+    <div class="callout"><p>Pitfall lặp lại ở cả 6 scope: nhảy vào auth/workspace, search/Elasticsearch, microservices hay IaC trước khi MVP xong. Ranh giới là một cache cộng một queue — không bao giờ Kafka kèm sharding.</p></div>
+  </section>
+
+  <section aria-labelledby="portfolio">
+    <h2 id="portfolio">Đọc portfolio theo cách nhà tuyển dụng Việt Nam</h2>
+    <p class="lede">Ba hành vi lặp lại trong các cụm tín hiệu tiếng Việt mà enrichment đã đọc. Đây là tín hiệu định tính từ nội dung TopDev, ITviec, Viblo, CareerBuilder — không phải dữ liệu recruiter ẩn danh.</p>
+
+    <h3>Bằng chứng nặng hơn số năm</h3>
+    <p>Recruiter chấm theo thứ tự tư duy giải quyết vấn đề → cách trình bày → chất lượng code → kết quả, thay cho “1 năm = junior, 3 năm = middle”. Định dạng được chấp nhận: case study 300-500 chữ (problem → constraints → solution → results → improve) cộng 1-3 repo sạch, README và commit đọc được. “Code demo không để khoe, mà để chứng minh bạn biết mình đang làm gì.”</p>
+
+    <h3>Title gắn với stack</h3>
+    <p>Mỗi title trên CareerBuilder đi kèm stack của nó: Java Backend = Java/SQL/Spring Boot, Web Developer = NodeJS/ReactJS, fullstack MBBank = Oracle/Java/MongoDB. TopDev cảnh báo dev PHP apply vào shop Java là bất lợi — “nhà tuyển dụng họ thường xem xét tuyển người phù hợp hơn là người giỏi”. Nhóm React mà TopDev nêu đang có nhu cầu: social, e-commerce ngách, video, messaging realtime, productivity.</p>
+
+    <h3>Khác biệt bằng bài toán Việt</h3>
+    <p>Thay vì một CRUD/auth clone nữa, phần khác biệt đến từ vấn đề bản địa: bảng tìm phòng trọ, xác nhận đơn COD, tracking đa hãng GHN/GHTK/Viettel Post, hồ sơ hành chính kèm mã PA-2026-XXXX. Ở mấy chỗ này, copy tiếng Việt chính là moat — đối thủ quốc tế không thèm đánh.</p>
+
+    <p class="note-line">Mốc lương các bạn junior hay cite (TopDev 2024): Frontend 10-15 triệu, Backend 10-25 triệu, Fullstack 12-30 triệu VND. Vòng phỏng vấn web còn probe IntersectionObserver, Beacon, Fetch, Service Workers và RUM — nên một tính năng offline-first PWA hoặc SSE đọc là platform depth, không phải framework-following.</p>
+  </section>
+
+  <section aria-labelledby="tieptheo">
+    <h2 id="tieptheo">Ứng viên tiếp theo, chưa vào top 20</h2>
+    <p class="lede">Vòng micro cuối sinh 35 ứng viên, 10 vượt xác minh. Đúng một cái nên có chỗ đứng, một cái có điều kiện.</p>
+
+    <h3>ticket-refund-flow — nên vào</h3>
+    <p>Điểm 81, bậc middle, hiring signal STRONG. Idempotent refund webhook, state machine khung chính sách hoàn tiền và coupling refund → danh sách chờ giữ chỗ là bài probe backend mid-level chuẩn; tài liệu production của pretix nói thẳng (“isn't it sad if those seats stay empty?”, rollover danh sách chờ 2 ngày). Vị trí trong catalog: nối tiếp backend-depth sau e-commerce (#18), không phải bản song song — judge có trừ điểm trùng chủ đề nhẹ.</p>
+
+    <h3>offline-qr-checkin-app — có điều kiện</h3>
+    <p>Điểm 79, bậc junior. Hàng chờ quét offline + sync khi có mạng + chặn trùng + audit trail là thứ chưa dự án nào trong top 20 cover, và nỗi đau tiếng Việt trích nguyên văn trên eventos.vn. Chỉ thêm nếu catalog muốn một ca offline-first PWA; conflict đa thiết bị là mức stretch, và độ khó verify offline trong phỏng vấn là thật.</p>
+
+    <p class="note-line">Các ứng viên sống sót còn lại bị đánh trượt có lý do cụ thể: multi-channel-order-inbox (75) trùng skill dashboard carrier; cafe-kds-ticket-screen (73) dạy cùng bài queue/DLQ như COD Confirm/ShipTrack; reserved-seat-ticketing (71) ngồi trong bể 19k repo “cinema seat booking” — chỉ bán được làm nâng depth cho dự án có sẵn; hawker-qr-kitchen-hybrid (67) — chính verifier phát hiện eatlah đã lấp khoảng trống; conference-workshop-pass (66) tín hiệu yếu; qr-table-ordering (62) — 84% trong 1.046 repo “qr menu” sinh sau 01/2025. meetup-registration-waitlist bị verifier 429 chứ không bị phản bác — cơ chế danh sách chờ gộp thẳng vào phạm vi ticket-refund-flow.</p>
+  </section>
+
+  <section aria-labelledby="loai">
+    <h2 id="loai">Bị loại và vì sao</h2>
+    <ul class="plain">
+      <li>Social media clone — judge vòng real-world xếp thứ 31, không có đau người dùng cụ thể; Clone-Wars bão hòa.</li>
+      <li>Ba biến thể blog gộp thành một bậc CMS vì lặp nhau.</li>
+      <li>Expense tracker — 239k repo trên GitHub, tự đánh nhau từ đầu.</li>
+      <li>Browser game — tín hiệu toy.</li>
+      <li>Chia hóa đơn ở trọ — đau Việt Nam thật nhưng không đủ lớn để gánh một portfolio.</li>
+      <li>Tìm phòng trọ dạng listing — hấp thụ vào quản lý nhà trọ (#8).</li>
+      <li>Markdown notes — CRUD lặp lại bậc to-do.</li>
+      <li>PR OSS đầu tiên — meta-skill, không phải một build.</li>
+      <li>Quản lý nhà thờ — fit Việt Nam yếu, junior chứ không phải middle.</li>
+      <li>Pomodoro và quiz — trivial, tín hiệu yếu.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="phuongphap">
+    <h2 id="phuongphap">Phương pháp và giới hạn</h2>
+
+    <h3>Thứ tự đã chạy</h3>
+    <p>Workflow 1 (99 lượt agent): 12 góc quét → 24 xác minh đối kháng → panel judge; vòng real-world riêng 11 sweep + 25 xác minh + judge 2 người; một critic đọc lại toàn bộ. Workflow 2 (93 lượt agent): 45 lượt audit repo (chốt 28 bản sửa ví dụ), 6 cụm tin tiếng Việt, 6 brief phạm vi, 4 đề xuất thiết kế, micro-round 35 ứng viên → 10 xác minh, cộng bước package. Tổng 192 lượt agent, 167 lần trả StructuredOutput thành công. Kết quả: 179 ứng viên thô → 123 không trùng → 34 vượt xác minh (24 vòng 1 + 10 vòng real-world) → 20 vào danh sách.</p>
+    <p>Critic độc lập tái dựng khoảng 20 trích dẫn trong báo cáo — medusa 36.6k, saleor 23.4k, yjs 22.9k, open-webui 154.1k, realworld 84.3k, TodoMVC 29.0k, Clone-Wars 37.0k; các topic GitHub: chat-app 1.312, ecommerce 30.252, “chatgpt clone” 7.800; bậc roadmap.sh. 0 ứng viên bị phản bác toàn tập trong vòng xác minh.</p>
+
+    <h3>Lỗ hổng đã biết</h3>
+    <ul class="plain">
+      <li>JD Việt Nam làm ground truth còn mỏng: enrichment đọc đủ 1 cụm (vn-crud-ecom), 5 cụm còn lại chỉ sample — phần portfolio Việt Nam dựa nhiều vào cluster e-commerce.</li>
+      <li>Hình thức đóng góp OSS (issue/PR thật) không có trong danh sách — cả 20 đều là build riêng.</li>
+      <li>PWA/offline-first chưa có dự án nào trong top 20; ứng viên offline-qr-checkin chờ ở mục trước.</li>
+      <li>Bằng chứng collab editor mạnh nhưng cũ: một quote 2010 (leif), clone tutorial đọc như boilerplate.</li>
+      <li>Số repo ở các mục bị loại (expense tracker 239k…) không reproduce được khi chạy lại.</li>
+      <li>Scope sizing fresher-vs-middle chỉ có cho 6/20 dự án.</li>
+    </ul>
+
+    <h3>Cảnh báo dữ liệu và giấy phép</h3>
+    <ul class="plain">
+      <li>Star và pushed_at là snapshot API 08.10.2026 — dữ liệu lúc đó, không phải hợp đồng.</li>
+      <li>Repo không license (adrianhajdin/*, bradtraversy/url_shortener_service, minhquan0802/QuanLyVuaCa, hiendanang-ai/theodoihoso, Baavanadhaz/Air-Quality-… và vài repo khác) = tham khảo/học, không fork-and-publish; license đọc từ field API, không đối chiếu SPDX từng file.</li>
+      <li>MIT-claimed nhưng không có file LICENSE (demo-phong-tro-master) = chỉ là claim.</li>
+      <li>FSL-1.1-ALv2 của saleor/storefront và license riêng của open-webui không phải OSI — không phải open-source chuẩn, đã flag ngay trên thẻ.</li>
+      <li>Tỷ lệ contrast đến từ contrast_calc.py chạy 08.10.2026 (32/32 PASS), không phải prose của agent thiết kế.</li>
+      <li>Lương TopDev 2024 và mức hoa hồng giao hàng 25-30% là mốc điểm thời gian.</li>
+      <li>Có 11 lượt agent lỗi trong hai workflow; enrich-result.json từng chết một lần vì Cloudflare 524 rồi retry — cấu trúc file vẫn nguyên khi đọc.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="nguon">
+    <h2 id="nguon">Nguồn</h2>
+    <p class="lede">URL theo từng ứng viên xác minh, do chính các verify agent trả về. Mở từng nhóm để xem.</p>
+<details><summary>ai chatbot wrapper (3)</summary><ul><li><a href="https://github.com/search?q=chatbot&type=repositories&s=stars" rel="noopener">https://github.com/search?q=chatbot&type=repositories&s=stars</a></li>
+<li><a href="https://github.com/search?q=chatgpt+clone&type=repositories" rel="noopener">https://github.com/search?q=chatgpt+clone&type=repositories</a></li>
+<li><a href="https://github.com/open-webui/open-webui" rel="noopener">https://github.com/open-webui/open-webui</a></li></ul></details>
+<details><summary>blog platform with cms (7)</summary><ul><li><a href="https://roadmap.sh/projects" rel="noopener">https://roadmap.sh/projects</a></li>
+<li><a href="https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl" rel="noopener">https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl</a></li>
+<li><a href="https://buildideas.co/projects/portfolio" rel="noopener">https://buildideas.co/projects/portfolio</a></li>
+<li><a href="https://lifedev.net/2024/06/best-portfolio-projects-for-junior-developers" rel="noopener">https://lifedev.net/2024/06/best-portfolio-projects-for-junior-developers</a></li>
+<li><a href="https://github.com/adrianhajdin/collaborative-editor" rel="noopener">https://github.com/adrianhajdin/collaborative-editor</a></li>
+<li><a href="https://github.com/florinpop17/app-ideas" rel="noopener">https://github.com/florinpop17/app-ideas</a></li>
+<li><a href="https://www.topcv.vn/viec-lam/frontend-developer-fresher-reactjs/1498997.html" rel="noopener">https://www.topcv.vn/viec-lam/frontend-developer-fresher-reactjs/1498997.html</a></li></ul></details>
+<details><summary>blogging platform (1)</summary><ul><li><a href="https://www.upgrad.com/blog/mern-stack-project-ideas/" rel="noopener">https://www.upgrad.com/blog/mern-stack-project-ideas/</a></li></ul></details>
+<details><summary>browser game (7)</summary><ul><li><a href="https://api.pullpush.io/reddit/comment/search?link_id=saxtiw&size=100" rel="noopener">https://api.pullpush.io/reddit/comment/search?link_id=saxtiw&size=100</a></li>
+<li><a href="https://api.pullpush.io/reddit/comment/search?link_id=wtpvj7&size=100" rel="noopener">https://api.pullpush.io/reddit/comment/search?link_id=wtpvj7&size=100</a></li>
+<li><a href="https://api.pullpush.io/reddit/submission/search?ids=saxtiw" rel="noopener">https://api.pullpush.io/reddit/submission/search?ids=saxtiw</a></li>
+<li><a href="https://news.ycombinator.com/item?id=15025578" rel="noopener">https://news.ycombinator.com/item?id=15025578</a></li>
+<li><a href="https://news.ycombinator.com/item?id=1534335" rel="noopener">https://news.ycombinator.com/item?id=1534335</a></li>
+<li><a href="https://github.com/yyx990803/vue-wordle" rel="noopener">https://github.com/yyx990803/vue-wordle</a></li>
+<li><a href="https://github.com/WebDevSimplified/Javascript-Snake-Game" rel="noopener">https://github.com/WebDevSimplified/Javascript-Snake-Game</a></li></ul></details>
+<details><summary>e commerce storefront (5)</summary><ul><li><a href="https://roadmap.sh/projects" rel="noopener">https://roadmap.sh/projects</a></li>
+<li><a href="https://lifedev.net/2024/06/best-portfolio-projects-for-junior-developers" rel="noopener">https://lifedev.net/2024/06/best-portfolio-projects-for-junior-developers</a></li>
+<li><a href="https://dev.to/dhruvjoshi9/top-10-portfolio-project-ideas-for-beginner-developers-each-with-real-world-use-cases-1emb" rel="noopener">https://dev.to/dhruvjoshi9/top-10-portfolio-project-ideas-for-beginner-developers-each-with-real-world-use-cases-1emb</a></li>
+<li><a href="https://buildideas.co/projects/portfolio" rel="noopener">https://buildideas.co/projects/portfolio</a></li>
+<li><a href="https://www.freecodecamp.org/news/5-react-projects-you-need-in-your-portfolio/" rel="noopener">https://www.freecodecamp.org/news/5-react-projects-you-need-in-your-portfolio/</a></li></ul></details>
+<details><summary>expense tracker (10)</summary><ul><li><a href="https://roadmap.sh/backend/projects" rel="noopener">https://roadmap.sh/backend/projects</a></li>
+<li><a href="https://dev.to/dhruvjoshi9/top-10-portfolio-project-ideas-for-beginner-developers-each-with-real-world-use-cases-1emb" rel="noopener">https://dev.to/dhruvjoshi9/top-10-portfolio-project-ideas-for-beginner-developers-each-with-real-world-use-cases-1emb</a></li>
+<li><a href="https://www.upgrad.com/blog/mern-stack-project-ideas/" rel="noopener">https://www.upgrad.com/blog/mern-stack-project-ideas/</a></li>
+<li><a href="https://www.freecodecamp.org/news/build-19-web-dev-projects-using-html-css-javascript/" rel="noopener">https://www.freecodecamp.org/news/build-19-web-dev-projects-using-html-css-javascript/</a></li>
+<li><a href="https://www.frontendmentor.io/articles/full-stack-project-ideas" rel="noopener">https://www.frontendmentor.io/articles/full-stack-project-ideas</a></li>
+<li><a href="https://github.com/search?q=expense+tracker&type=repositories&s=stars&o=desc" rel="noopener">https://github.com/search?q=expense+tracker&type=repositories&s=stars&o=desc</a></li>
+<li><a href="https://github.com/bradtraversy/expense-tracker-react" rel="noopener">https://github.com/bradtraversy/expense-tracker-react</a></li>
+<li><a href="https://github.com/king04aman/MERN-Project-Ideas" rel="noopener">https://github.com/king04aman/MERN-Project-Ideas</a></li>
+<li><a href="https://github.com/ZOUHAIRFGRA/100-Project-Ideas-for-Full-Stack-Developers" rel="noopener">https://github.com/ZOUHAIRFGRA/100-Project-Ideas-for-Full-Stack-Developers</a></li>
+<li><a href="https://lifedev.net/2024/06/best-portfolio-projects-for-junior-developers" rel="noopener">https://lifedev.net/2024/06/best-portfolio-projects-for-junior-developers</a></li></ul></details>
+<details><summary>markdown note taking app (9)</summary><ul><li><a href="https://roadmap.sh/nodejs/projects" rel="noopener">https://roadmap.sh/nodejs/projects</a></li>
+<li><a href="https://github.com/florinpop17/app-ideas" rel="noopener">https://github.com/florinpop17/app-ideas</a></li>
+<li><a href="https://github.com/john-smilga/react-projects" rel="noopener">https://github.com/john-smilga/react-projects</a></li>
+<li><a href="https://github.com/search?q=markdown+previewer&type=repositories" rel="noopener">https://github.com/search?q=markdown+previewer&type=repositories</a></li>
+<li><a href="https://github.com/search?q=markdown+notes+app&type=repositories" rel="noopener">https://github.com/search?q=markdown+notes+app&type=repositories</a></li>
+<li><a href="https://news.ycombinator.com/item?id=43134745" rel="noopener">https://news.ycombinator.com/item?id=43134745</a></li>
+<li><a href="https://hn.algolia.com/api/v1/search?query=%22todo%20app%22%20portfolio&tags=comment" rel="noopener">https://hn.algolia.com/api/v1/search?query=%22todo%20app%22%20portfolio&tags=comment</a></li>
+<li><a href="https://github.com/dullage/flatnotes" rel="noopener">https://github.com/dullage/flatnotes</a></li>
+<li><a href="https://github.com/notea-org/notea" rel="noopener">https://github.com/notea-org/notea</a></li></ul></details>
+<details><summary>personal blog (2)</summary><ul><li><a href="https://roadmap.sh/projects/personal-blog" rel="noopener">https://roadmap.sh/projects/personal-blog</a></li>
+<li><a href="https://www.frontendmentor.io/challenges/personal-blog-lJpVCnmozL" rel="noopener">https://www.frontendmentor.io/challenges/personal-blog-lJpVCnmozL</a></li></ul></details>
+<details><summary>personal portfolio website (13)</summary><ul><li><a href="https://roadmap.sh/frontend/projects" rel="noopener">https://roadmap.sh/frontend/projects</a></li>
+<li><a href="https://roadmap.sh/projects" rel="noopener">https://roadmap.sh/projects</a></li>
+<li><a href="https://github.com/emmabostian/developer-portfolios" rel="noopener">https://github.com/emmabostian/developer-portfolios</a></li>
+<li><a href="https://hn.algolia.com/api/v1/search?query=portfolio%20first%20job%20junior%20developer&tags=comment" rel="noopener">https://hn.algolia.com/api/v1/search?query=portfolio%20first%20job%20junior%20developer&tags=comment</a></li>
+<li><a href="https://hn.algolia.com/api/v1/search?query=best%20way%20to%20find%20a%20good%20dev%20for%20your%20startup&tags=story" rel="noopener">https://hn.algolia.com/api/v1/search?query=best%20way%20to%20find%20a%20good%20dev%20for%20your%20startup&tags=story</a></li>
+<li><a href="https://hn.algolia.com/api/v1/search?query=portfolio&tags=comment,story_41057524" rel="noopener">https://hn.algolia.com/api/v1/search?query=portfolio&tags=comment,story_41057524</a></li>
+<li><a href="https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl" rel="noopener">https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl</a></li>
+<li><a href="https://dev.to/jtrevdev/junior-developer-portfolio-best-practices-4bj2" rel="noopener">https://dev.to/jtrevdev/junior-developer-portfolio-best-practices-4bj2</a></li>
+<li><a href="https://www.webportfolios.dev/blog/portfolio-projects-guide" rel="noopener">https://www.webportfolios.dev/blog/portfolio-projects-guide</a></li>
+<li><a href="https://api.github.com/search/repositories?q=portfolio+projects+beginner+in:name,description&sort=stars&order=desc&per_page=10" rel="noopener">https://api.github.com/search/repositories?q=portfolio+projects+beginner+in:name,description&sort=stars&order=desc&per_page=10</a></li>
+<li><a href="https://www.youtube.com/watch?v=WMeFisMUZi8" rel="noopener">https://www.youtube.com/watch?v=WMeFisMUZi8</a></li>
+<li><a href="https://www.youtube.com/watch?v=b7yW9HL2DUU" rel="noopener">https://www.youtube.com/watch?v=b7yW9HL2DUU</a></li>
+<li><a href="https://www.youtube.com/watch?v=bOTadUAiDBA" rel="noopener">https://www.youtube.com/watch?v=bOTadUAiDBA</a></li></ul></details>
+<details><summary>pomodoro timer (3)</summary><ul><li><a href="https://github.com/florinpop17/app-ideas" rel="noopener">https://github.com/florinpop17/app-ideas</a></li>
+<li><a href="https://roadmap.sh/frontend/projects" rel="noopener">https://roadmap.sh/frontend/projects</a></li>
+<li><a href="https://roadmap.sh/react/projects" rel="noopener">https://roadmap.sh/react/projects</a></li></ul></details>
+<details><summary>portfolio website (7)</summary><ul><li><a href="https://roadmap.sh/frontend/projects" rel="noopener">https://roadmap.sh/frontend/projects</a></li>
+<li><a href="https://www.freecodecamp.org/news/coding-projects-to-include-in-your-frontend-portfolio/" rel="noopener">https://www.freecodecamp.org/news/coding-projects-to-include-in-your-frontend-portfolio/</a></li>
+<li><a href="https://www.codecademy.com/resources/blog/projects-for-a-front-end-developer-portfolio" rel="noopener">https://www.codecademy.com/resources/blog/projects-for-a-front-end-developer-portfolio</a></li>
+<li><a href="https://dev.to/kafeel_ahmad/75-frontend-development-projects-ideas-for-2025-3gp1" rel="noopener">https://dev.to/kafeel_ahmad/75-frontend-development-projects-ideas-for-2025-3gp1</a></li>
+<li><a href="https://github.com/arifszn/gitprofile" rel="noopener">https://github.com/arifszn/gitprofile</a></li>
+<li><a href="https://news.ycombinator.com/item?id=45821059" rel="noopener">https://news.ycombinator.com/item?id=45821059</a></li>
+<li><a href="https://news.ycombinator.com/item?id=14848267" rel="noopener">https://news.ycombinator.com/item?id=14848267</a></li></ul></details>
+<details><summary>real time chat app (3)</summary><ul><li><a href="https://github.com/Serkanbyx/junior-to-senior-web-projects-roadmap" rel="noopener">https://github.com/Serkanbyx/junior-to-senior-web-projects-roadmap</a></li>
+<li><a href="https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl" rel="noopener">https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl</a></li>
+<li><a href="https://roadmap.sh/backend/projects" rel="noopener">https://roadmap.sh/backend/projects</a></li></ul></details>
+<details><summary>real time chat application (9)</summary><ul><li><a href="https://raw.githubusercontent.com/florinpop17/app-ideas/master/README.md" rel="noopener">https://raw.githubusercontent.com/florinpop17/app-ideas/master/README.md</a></li>
+<li><a href="https://roadmap.sh/nodejs/projects" rel="noopener">https://roadmap.sh/nodejs/projects</a></li>
+<li><a href="https://www.upgrad.com/blog/mern-stack-project-ideas/" rel="noopener">https://www.upgrad.com/blog/mern-stack-project-ideas/</a></li>
+<li><a href="https://www.freecodecamp.org/news/5-react-projects-you-need-in-your-portfolio/" rel="noopener">https://www.freecodecamp.org/news/5-react-projects-you-need-in-your-portfolio/</a></li>
+<li><a href="https://dev.to/code_2/20-fullstack-project-ideas-that-will-land-you-a-job-in-2025-3h35" rel="noopener">https://dev.to/code_2/20-fullstack-project-ideas-that-will-land-you-a-job-in-2025-3h35</a></li>
+<li><a href="https://www.webportfolios.dev/blog/portfolio-projects-guide" rel="noopener">https://www.webportfolios.dev/blog/portfolio-projects-guide</a></li>
+<li><a href="https://api.github.com/search/repositories?q=topic:chat-app" rel="noopener">https://api.github.com/search/repositories?q=topic:chat-app</a></li>
+<li><a href="https://api.github.com/repos/adrianhajdin/project_chat_application" rel="noopener">https://api.github.com/repos/adrianhajdin/project_chat_application</a></li>
+<li><a href="https://api.github.com/repos/koolkishan/chat-app-react-nodejs" rel="noopener">https://api.github.com/repos/koolkishan/chat-app-react-nodejs</a></li></ul></details>
+<details><summary>real time collaborative editor (5)</summary><ul><li><a href="https://news.ycombinator.com/item?id=31393215" rel="noopener">https://news.ycombinator.com/item?id=31393215</a></li>
+<li><a href="https://hn.algolia.com/api/v1/search?query=%22real-time%20collaboration%22%20portfolio&tags=comment" rel="noopener">https://hn.algolia.com/api/v1/search?query=%22real-time%20collaboration%22%20portfolio&tags=comment</a></li>
+<li><a href="https://github.com/adrianhajdin/collaborative-editor" rel="noopener">https://github.com/adrianhajdin/collaborative-editor</a></li>
+<li><a href="https://github.com/conclave-team/conclave" rel="noopener">https://github.com/conclave-team/conclave</a></li>
+<li><a href="https://github.com/toeverything/blocksuite" rel="noopener">https://github.com/toeverything/blocksuite</a></li></ul></details>
+<details><summary>to do list app (5)</summary><ul><li><a href="https://roadmap.sh/projects" rel="noopener">https://roadmap.sh/projects</a></li>
+<li><a href="https://www.freecodecamp.org/news/coding-projects-to-include-in-your-frontend-portfolio/" rel="noopener">https://www.freecodecamp.org/news/coding-projects-to-include-in-your-frontend-portfolio/</a></li>
+<li><a href="https://www.frontendmentor.io/articles/full-stack-project-ideas" rel="noopener">https://www.frontendmentor.io/articles/full-stack-project-ideas</a></li>
+<li><a href="https://www.freecodecamp.org/news/build-19-web-dev-projects-using-html-css-javascript/" rel="noopener">https://www.freecodecamp.org/news/build-19-web-dev-projects-using-html-css-javascript/</a></li>
+<li><a href="https://github.com/tastejs/todomvc" rel="noopener">https://github.com/tastejs/todomvc</a></li></ul></details>
+<details><summary>todo list task tracker (7)</summary><ul><li><a href="https://roadmap.sh/backend/projects" rel="noopener">https://roadmap.sh/backend/projects</a></li>
+<li><a href="https://roadmap.sh/frontend/projects" rel="noopener">https://roadmap.sh/frontend/projects</a></li>
+<li><a href="https://github.com/king04aman/MERN-Project-Ideas" rel="noopener">https://github.com/king04aman/MERN-Project-Ideas</a></li>
+<li><a href="https://github.com/HuXn-WebDev/HTML-CSS-JavaScript-100-Projects" rel="noopener">https://github.com/HuXn-WebDev/HTML-CSS-JavaScript-100-Projects</a></li>
+<li><a href="https://github.com/florinpop17/app-ideas" rel="noopener">https://github.com/florinpop17/app-ideas</a></li>
+<li><a href="https://www.geeksforgeeks.org/top-10-javascript-project-ideas-for-beginners/" rel="noopener">https://www.geeksforgeeks.org/top-10-javascript-project-ideas-for-beginners/</a></li>
+<li><a href="https://www.upgrad.com/blog/mern-stack-project-ideas/" rel="noopener">https://www.upgrad.com/blog/mern-stack-project-ideas/</a></li></ul></details>
+<details><summary>url shortener (7)</summary><ul><li><a href="https://roadmap.sh/backend/projects" rel="noopener">https://roadmap.sh/backend/projects</a></li>
+<li><a href="https://github.com/ZOUHAIRFGRA/100-Project-Ideas-for-Full-Stack-Developers" rel="noopener">https://github.com/ZOUHAIRFGRA/100-Project-Ideas-for-Full-Stack-Developers</a></li>
+<li><a href="https://github.com/Serkanbyx/junior-to-senior-web-projects-roadmap" rel="noopener">https://github.com/Serkanbyx/junior-to-senior-web-projects-roadmap</a></li>
+<li><a href="https://github.com/RealToughCandy/project-ideas-for-web-developers" rel="noopener">https://github.com/RealToughCandy/project-ideas-for-web-developers</a></li>
+<li><a href="https://www.frontendmentor.io/articles/full-stack-project-ideas" rel="noopener">https://www.frontendmentor.io/articles/full-stack-project-ideas</a></li>
+<li><a href="https://news.ycombinator.com/item?id=1534335" rel="noopener">https://news.ycombinator.com/item?id=1534335</a></li>
+<li><a href="https://raw.githubusercontent.com/awesome-selfhosted/awesome-selfhosted/master/README.md" rel="noopener">https://raw.githubusercontent.com/awesome-selfhosted/awesome-selfhosted/master/README.md</a></li></ul></details>
+<details><summary>weather app (5)</summary><ul><li><a href="https://api.github.com/search/repositories?q=weather+app&sort=stars&order=desc" rel="noopener">https://api.github.com/search/repositories?q=weather+app&sort=stars&order=desc</a></li>
+<li><a href="https://api.github.com/search/repositories?q=weather+app+react&sort=stars&order=desc" rel="noopener">https://api.github.com/search/repositories?q=weather+app+react&sort=stars&order=desc</a></li>
+<li><a href="https://www.freecodecamp.org/news/coding-projects-to-include-in-your-frontend-portfolio/" rel="noopener">https://www.freecodecamp.org/news/coding-projects-to-include-in-your-frontend-portfolio/</a></li>
+<li><a href="https://dev.to/dhruvjoshi9/top-10-portfolio-project-ideas-for-beginner-developers-each-with-real-world-use-cases-1emb" rel="noopener">https://dev.to/dhruvjoshi9/top-10-portfolio-project-ideas-for-beginner-developers-each-with-real-world-use-cases-1emb</a></li>
+<li><a href="https://github.com/Serkanbyx/junior-to-senior-web-projects-roadmap" rel="noopener">https://github.com/Serkanbyx/junior-to-senior-web-projects-roadmap</a></li></ul></details>
+<details><summary>weather dashboard (5)</summary><ul><li><a href="https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl" rel="noopener">https://dev.to/avishek_chandradas_7e892/15-web-development-project-ideas-for-your-portfolio-30jl</a></li>
+<li><a href="https://roadmap.sh/frontend/projects" rel="noopener">https://roadmap.sh/frontend/projects</a></li>
+<li><a href="https://roadmap.sh/projects" rel="noopener">https://roadmap.sh/projects</a></li>
+<li><a href="https://github.com/gauravghai/weatherApp-Reactjs" rel="noopener">https://github.com/gauravghai/weatherApp-Reactjs</a></li>
+<li><a href="https://github.com/iondrimba/react-weather-app" rel="noopener">https://github.com/iondrimba/react-weather-app</a></li></ul></details>
+<details><summary>weather web app (5)</summary><ul><li><a href="https://raw.githubusercontent.com/florinpop17/app-ideas/master/Projects/1-Beginner/Weather-App.md" rel="noopener">https://raw.githubusercontent.com/florinpop17/app-ideas/master/Projects/1-Beginner/Weather-App.md</a></li>
+<li><a href="https://roadmap.sh/frontend/projects" rel="noopener">https://roadmap.sh/frontend/projects</a></li>
+<li><a href="https://www.frontendmentor.io/use-cases/api-integration-projects" rel="noopener">https://www.frontendmentor.io/use-cases/api-integration-projects</a></li>
+<li><a href="https://github.com/stage88/react-weather" rel="noopener">https://github.com/stage88/react-weather</a></li>
+<li><a href="https://github.com/adrianhajdin/project_weather_pwa" rel="noopener">https://github.com/adrianhajdin/project_weather_pwa</a></li></ul></details>
+<details><summary>website clone (7)</summary><ul><li><a href="https://www.frontendmentor.io/" rel="noopener">https://www.frontendmentor.io/</a></li>
+<li><a href="https://github.com/GorvGoyl/Clone-Wars (37k stars, 100+ clones)" rel="noopener">https://github.com/GorvGoyl/Clone-Wars (37k stars, 100+ clones)</a></li>
+<li><a href="https://www.freecodecamp.org/news/coding-projects-to-include-in-your-frontend-portfolio/ (verified entry-level + HTML/CSS-sufficient claim)" rel="noopener">https://www.freecodecamp.org/news/coding-projects-to-include-in-your-frontend-portfolio/ (verified entry-level + HTML/CSS-sufficient claim)</a></li>
+<li><a href="https://www.freecodecamp.org/news/become-a-better-developer-by-building-projects/ (verified clone + scalable complexity claim)" rel="noopener">https://www.freecodecamp.org/news/become-a-better-developer-by-building-projects/ (verified clone + scalable complexity claim)</a></li>
+<li><a href="https://www.youtube.com/watch?v=sbAmd8kQISQ (alive, title verified)" rel="noopener">https://www.youtube.com/watch?v=sbAmd8kQISQ (alive, title verified)</a></li>
+<li><a href="https://www.youtube.com/watch?v=LTNiNbuqcx4 (alive, title verified)" rel="noopener">https://www.youtube.com/watch?v=LTNiNbuqcx4 (alive, title verified)</a></li>
+<li><a href="https://github.com/zuolizhu/frontendmentor_challenges (alive, 249 stars, 44 solutions)" rel="noopener">https://github.com/zuolizhu/frontendmentor_challenges (alive, 249 stars, 44 solutions)</a></li></ul></details>
+    <p class="note-line">Nguồn thị trường Việt Nam dùng trong mục Portfolio: topdev.vn (portfolio, fresher, lương 2024, React projects), itviec.com (báo cáo lương IT 2025-2026, tag framework), viblo.asia (WebSocket, phỏng vấn, RAG), careerbuilder.vn (bảng tin việc), datareportal.com (Digital 2025 Vietnam), careerviet.vn, coderschool.vn, pretix docs (refund/waitlist). Danh sách đầy đủ theo ứng viên nằm trong các nhóm phía trên.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Snapshot 08.10.2026 · nghiên cứu lấy mẫu có xác minh đối kháng — không phải quét toàn bộ internet · license từng repo ghi ngay trên thẻ · contrast kiểm bằng contrast_calc.py (32/32 PASS).</p>
+    <p>Catalog 15 dự án Việt Nam đã audit nằm ở <a href="du-an-portfolio-web.html">du-an-portfolio-web.html</a> — hai danh sách khác nhau, không thay thế nhau.</p>
+  </div>
+</footer>
+
+<script id="catalog-data" type="application/json">{"generated":"2026-10-08","projects":[{"rank":1,"name":"Portfolio cá nhân (Personal portfolio website)","level":"fresher","problem":"Fresher chưa có kinh nghiệm thì không có nơi nào gửi nhà tuyển dụng; site không deploy thì các project chỉ nằm yên trên máy người viết.","why":"roadmap.sh xếp vào nhóm beginner với 4.870 star; danh sách portfolio của Emma Bostian đạt 27k star; một lời hiring trên HN gọi portfolio cộng to-do là “essential”. Khác biệt chỉ đến từ thiết kế gốc, điểm Lighthouse và demo thật.","stack":["HTML/CSS + responsive layout","React or Next.js","Tailwind CSS","Deploy on Vercel/Netlify with custom domain","Lighthouse performance + a11y audit"],"repos":[{"slug":"arifszn/gitprofile","stars":"2.3k★","lic":"MIT","note":"generator profile, pushed 2026-09-01","kind":"ok"},{"slug":"emmabostian/developer-portfolios","stars":"27k★","lic":"no license","note":"danh sách link — tham khảo, không fork","kind":"warn"}]},{"rank":2,"name":"To-do / task tracker","level":"fresher","problem":"Người mới chưa từng dựng add/edit/delete/complete có lưu trữ thì chưa thật sự quản lý được state — kỹ năng mà mọi project sau đều dùng lại.","why":"Bậc CRUD/state cơ bản mà mọi build sau tái dùng; roadmap.sh xếp beginner. Điểm dừng trung thực: tín hiệu tuyển dụng yếu — “to-do apps, forget about them” (Maddy Zhang); phạm vi mới là thứ phân biệt.","stack":["React + TypeScript","Vitest/Jest for CRUD logic","localStorage first, then REST API (Node/Express or Next.js API routes)","PostgreSQL + Prisma for persistence"],"repos":[{"slug":"tastejs/todomvc","stars":"29k★","lic":"MIT","note":"bản chuẩn của pattern todo, pushed 2026-06-06","kind":"ok"}]},{"rank":3,"name":"Website clone (design-to-code)","level":"fresher","problem":"Junior thường trượt khi chuyển design thành code responsive đúng pixel, và không có bậc nào khác trong lộ trình này luyện đúng kỹ năng đó.","why":"Project #2 của freeCodeCamp mức entry — “HTML and CSS only would work fine” — nhắm thẳng vào độ trung thực design-to-code mà junior thiếu; 5 bậc của Frontend Mentor cho đề bài có phạm vi; Clone-Wars 37k star.","stack":["HTML + CSS (Flexbox/Grid)","Responsive breakpoints, 320-1920px","Figma or live-site reference, optional vanilla JS","Frontend Mentor challenges for scoped specs"],"repos":[{"slug":"GorvGoyl/Clone-Wars","stars":"37k★","lic":"AGPL-3.0","note":"thư mục index dự án — xem tham khảo, không clone xuất bản","kind":"warn"},{"slug":"zuolizhu/frontendmentor_challenges","stars":"249★","lic":"no license","note":"stale 2023-06 — tham khảo","kind":"warn"}]},{"rank":4,"name":"Weather app","level":"fresher","problem":"Người mới chưa từng gọi API bên thứ ba thì sau này không xử lý nổi tích hợp checkout hay các API AI.","why":"Bậc fresher duy nhất phủ async fetch và trạng thái lỗi — tiền đề cho mọi work với API phía sau; florinpop Tier-1, roadmap.sh beginner. Điểm dừng trung thực: 559k repo weather trên GitHub, không employer nào khen.","stack":["React + TypeScript","Open-Meteo API (no key required)","Async fetch with loading/error/empty states","Optional: PWA offline caching via service worker"],"repos":[{"slug":"adrianhajdin/project_weather_pwa","stars":"758★","lic":"no license","note":"chỉ học, không fork xuất bản","kind":"warn"}]},{"rank":5,"name":"WordPress business site (agency deliverable)","level":"fresher","problem":"Agency Việt Nam vẫn tính tiền khách hàng cho site hồ sơ năng lực và WooCommerce; fresher không làm được build child-theme chuẩn thì không có kỹ năng billable để vào nghề.","why":"Đúng deliverable tuần đầu ở agency Việt Nam — child theme, shortcode, chỉnh WooCommerce — nội dung Viblo chứng minh công việc tồn tại. Không hào nhoáng, nhưng đúng việc fresher làm trước tiên.","stack":["WordPress + PHP child theme","ACF/custom fields and shortcodes","WooCommerce customization, basic JS/CSS","Shared-hosting deploy, maintenance workflow"],"repos":[{"slug":"ColorlibHQ/Sparkling","stars":"429★","lic":"GPL-2.0","note":"child theme mẫu, pushed 2026-09-24","kind":"ok"},{"slug":"siteorigin/siteorigin-corp","stars":"21★","lic":"GPL-2.0","note":"theme mẫu thứ hai, pushed 2026-09-15","kind":"ok"}]},{"rank":6,"name":"Air quality dashboard (AQI/PM2.5)","level":"fresher","problem":"Cha mẹ ở Hà Nội muốn biết chiều nay con có được ra ngoài phải tự đọc số PM2.5 rải rác trên các portal cơ quan, mỗi nơi một format.","why":"Quyết định sức khỏe thật cộng nguồn mở (OpenAQ, AQICN, cổng Hà Nội); phạm vi fresher được chứng minh bằng repo 101★ chỉ ba file; dạy chuẩn hóa API mà hầu hết clone beginner bỏ qua.","stack":["React + TypeScript","OpenAQ / AQICN (WAQI) API","Leaflet map + Recharts trend charts","US EPA vs VN_AQI band conversion, error states"],"repos":[{"slug":"Baavanadhaz/Air-Quality-Analysis-and-Monitoring","stars":"—","lic":"không có file LICENSE","note":"nói rõ là không có LICENSE — tham khảo","kind":"warn"},{"slug":"codexanjan/atmosphere","stars":"—","lic":"MIT","note":"demo Vercel, pushed 2026-10-03","kind":"ok"}]},{"rank":7,"name":"URL shortener","level":"junior","problem":"Ai đăng link trong SMS hay ấn phẩm giấy đều cần URL ngắn theo dõi được; tự xây buộc phải lo database, redirect, analytics và rate limiting mà không bị frontend đánh lạc.","why":"Ứng viên được nhắc nhiều nhất (8 lần); roadmap.sh Intermediate, Serkanbyx Level-3 backend fundamentals, chủ đề phỏng vấn system-design kinh điển — phổ biến đến mức chỉ bản hoàn chỉnh, chắc tay mới phân biệt được.","stack":["Node.js + Express or NestJS","PostgreSQL with unique-code generation (hashing)","Redis for cache + rate limiting","Click analytics table, Docker deploy"],"repos":[{"slug":"bradtraversy/url_shortener_service","stars":"245★","lic":"no license","note":"mục tiêu học — không fork xuất bản","kind":"warn"}]},{"rank":8,"name":"Room-rental management (quản lý nhà trọ)","level":"junior","problem":"Chủ trọ nuôi 5-50 phòng trọ ghi tình trạng thuê, CCCD, hợp đồng và chỉ số điện nước vào sổ tay hoặc Excel, nên quên ai đã trả và tính sai tiền điện.","why":"Hơn 14 app thương mại VN chứng minh có người trả tiền; OpenKos (108★) và 311 repo nhà trọ cho thấy scene xây dựng sôi động; thang depth CRUD → đồng hồ → hóa đơn → multi-tenant vượt junior.","stack":["React/Vue + Laravel or NestJS","PostgreSQL (rooms, tenants, meter readings)","Monthly billing + PDF/VietQR invoice generation","Landlord/tenant roles, overdue reminders"],"repos":[{"slug":"PoalNinh/demo-phong-tro-master","stars":"22★","lic":"claim-only","note":"README nói MIT nhưng không có file LICENSE — chỉ là claim","kind":"warn"},{"slug":"NguyenDuy04/RentFlow","stars":"2★","lic":"MIT","note":"pushed 2026-10-02","kind":"ok"}]},{"rank":9,"name":"Clinic appointment booking","level":"junior","problem":"Bệnh nhân xếp hàng từ 2h sáng ở Chợ Rẫy trong khi nhân sự chìm trong giấy tờ; không có đặt lịch online thì phòng khám kín slot buổi sáng và mất giờ bác sĩ vì vắng không báo trước.","why":"Đau đớn được báo chí xác minh (xếp hàng từ 2g); availability suất khám và guard trùng lịch rèn auth, mô hình hóa dữ liệu, concurrency — đúng thứ JD health-tech tìm; ngành bão hòa nên correctness phải gánh.","stack":["React + Node/NestJS or Laravel","PostgreSQL with slot-availability constraints","JWT roles: patient / doctor / admin","Booking lifecycle, confirm-cancel-reschedule notifications"],"repos":[{"slug":"pjborowiecki/ARKA-Veterinary-Clinic-Page-and-Appointment-Booking-System","stars":"165★","lic":"MIT","note":"Next.js 14","kind":"ok"},{"slug":"mahallawy1/Clinico","stars":"—","lic":"no license","note":"active 2026 — clone cẩn thận","kind":"warn"}]},{"rank":10,"name":"Public-service dossier tracking (hồ sơ hành chính)","level":"junior","problem":"Công dân nộp hồ sơ giấy rồi gọi điện hoặc quay lại hỏi “hồ sơ tới đâu rồi”, trong khi nhân viên không theo dõi nổi bộ phận nào đang giữ file.","why":"Chỉ 39,51% hồ sơ Việt Nam làm trực tuyến hoàn toàn so với mục tiêu 80% (đã xác minh); state machine, hai vai trò và notification map thẳng vào workflow mà vendor CNTT nhà nước tuyển người làm.","stack":["React + NestJS or Laravel","PostgreSQL status machine per stage","Tracking codes + notify on transitions","Staff board grouped by department"],"repos":[{"slug":"hiendanang-ai/theodoihoso","stars":"—","lic":"no license","note":"hồ sơ kiểu PA-2026-XXXX — tham khảo","kind":"warn"},{"slug":"chuyendoiso-ctump/dichvucong","stars":"—","lic":"chưa kiểm license","note":"pushed 2026-06","kind":"neutral"}]},{"rank":11,"name":"Tutoring class manager (quản lý lớp học thêm)","level":"junior","problem":"Giáo viên dạy lớp thêm ghi danh sách, điểm danh và học phí theo buổi vào sổ tay hay thread Zalo, nên quên thu phí, vắng mặt tự nhiên làm mất tiền.","why":"Điểm danh feed tính học phí theo buổi là derived-billing domain logic, không phải CRUD; mọi repo GitHub trích dẫn đều dưới 5★, niche chưa bị thống trị — hơn các clone quản lý sinh viên generic.","stack":["React + Node/Express or Laravel","PostgreSQL: class↔student↔session↔payment relations","Attendance grid → automatic fee derivation","Parent role, payment reminders (email/SMS)"],"repos":[{"slug":"t1112000/tutor-management-app","stars":"109★","lic":"MIT","note":"Next.js 15 + Postgres, pushed 2026-08-30","kind":"ok"}]},{"rank":12,"name":"Admin dashboard (role-based CRUD backoffice)","level":"junior","problem":"Công ty nào cũng có backoffice nội bộ cho đơn hàng, nội dung, nhân sự; junior chưa từng dựng form, bảng, RBAC, pagination thì chưa sẵn sàng cho task phổ biến nhất của nghề.","why":"Phủ đủ table-stakes backoffice mà không bậc nào khác phủ riêng — form, bảng, search, pagination, RBAC, biểu đồ; đã xác minh qua 5 nguồn, nhưng là hàng commodity, nên execution phân định.","stack":["React or Vue + Ant Design/MUI","REST API against PostgreSQL","RBAC middleware + JWT","Charts (Recharts/ECharts), Laravel + Filament alternative"],"repos":[{"slug":"minhquan0802/QuanLyVuaCa","stars":"0★","lic":"no license","note":"RBAC ADMIN/STAFF/CUSTOMER, pushed 2026-09-28 — tham khảo","kind":"warn"}]},{"rank":13,"name":"Budget transparency visualizer","level":"junior","problem":"Ngân sách đô thị phần lớn đăng dạng PDF 300 trang — 83% theo khảo cứu của Harvard — resident muốn kiểm một con số đã bỏ cuộc trước khi tìm ra.","why":"Pipeline open-data (SODA/OpenSpending) với treemap drill-down và chuẩn hóa year-over-year — data-viz và ETL vượt tutorial CRUD; bão hòa thấp hơn nhiều; mạnh nhất cho role data/frontend.","stack":["React + TypeScript","D3 or ECharts treemap/sunburst","City open-data SODA API / OpenSpending CSVs","Year-over-year normalization, CSV export"],"repos":[{"slug":"CityOfPhiladelphia/open-budget","stars":"—","lic":"chưa kiểm license","note":"ngân sách Philadelphia, open data","kind":"neutral"},{"slug":"BetaNYC/nyc-budget-viz","stars":"—","lic":"chưa kiểm license","note":"visualizer ngân sách NYC","kind":"neutral"}]},{"rank":14,"name":"Interactive map app (Leaflet/OSM routes & POI)","level":"junior","problem":"Người dùng thành phố cần route, POI, khoảng cách — trạm metro TP.HCM, guide đồ ăn — nhưng wiring Leaflet, GeoJSON và backend phục vụ dữ liệu là kỹ năng không clone CRUD nào dạy.","why":"Đáy fresher (hai thẻ CDN, không API key) lớn dần lên backend phục vụ GeoJSON; taste-map và Lifelink chứng minh dev VN ship mấy cái này thành sản phẩm thật; skill geo hiếm trong portfolio.","stack":["React + Leaflet/OpenLayers","GeoJSON + OpenStreetMap tiles","Backend serving GeoJSON (Node/Laravel), optional PostGIS","Search/filter, markers and drawn routes"],"repos":[{"slug":"dimartarmizi/map-to-poster","stars":"—","lic":"MIT","note":"demo maptoposter.tarmizi.id","kind":"ok"}]},{"rank":15,"name":"Sales & inventory management (quản lý bán hàng/POS)","level":"middle","problem":"Quầy hàng nhỏ ghi nhập xuất tồn, bảng giá, hóa đơn và đơn B2B bằng spreadsheet, nên tồn kho trôi, doanh số không đối chiếu và đặt hàng lại luôn chậm.","why":"Điểm real-world cao nhất vòng 3 (90,5; judge VN số 1); mirror workflow KiotViet/MISA mà recruiter nhận ra; thao tác tồn kho transactional, atomic write và RBAC vượt ngưỡng middle — khác tutorial storefront.","stack":["React + Ant Design","NestJS or Laravel REST API","PostgreSQL with transactional atomic stock ops","RBAC, PDF invoices, sales reports"],"repos":[{"slug":"munuhee/sales-and-inventory-management","stars":"81★","lic":"MIT","note":"Django, pushed 2026-08","kind":"ok"},{"slug":"amirsanni/Mini-Inventory-and-Sales-Management-System","stars":"560★","lic":"MIT","note":"pushed 2026-06","kind":"ok"}]},{"rank":16,"name":"Real-time chat app","level":"middle","problem":"Hỗ trợ và team cần tin nhắn tới ngay với lịch sử và presence; không có websocket thì sản phẩm rơi về polling trông như hỏng.","why":"Bậc concurrency đầu tiên — room, persistence, presence — cổng vào middle tier; dev.to và roadmap.sh xếp intermediate; chỉ vào ở middle scope: socket trần “không có độ phức tạp đáng kể”.","stack":["Socket.IO + Node.js/NestJS","React client with optimistic UI","PostgreSQL for message history, Redis for pub/sub + presence","JWT auth, rooms, typing/receipt indicators"],"repos":[{"slug":"fuma-nama/shark-chat-js","stars":"172★","lic":"Apache-2.0","note":"bản chính — Next.js/tRPC/Redis/Ably, pushed 2026-05","kind":"ok"},{"slug":"adrianhajdin/project_chat_application","stars":"4.1k★","lic":"no license","note":"tutorial Socket.IO — chỉ học","kind":"warn"}]},{"rank":17,"name":"Intra-city delivery dispatch board","level":"middle","problem":"Shop tự giao bằng điện thoại hoặc Zalo: không routing, không trạng thái đơn, khách gọi hỏi đồ ăn ở đâu, và giao hỏng chỉ lộ ra quá muộn.","why":"Mô hình workflow Đông Nam Á thật (Ahamove khoảng 60k đơn/ngày); concurrency gán đơn nhiều dispatcher, state machine và ETA nằm trên boilerplate CRUD — depth mới là tín hiệu, không phải clone.","stack":["Next.js/React + NestJS","WebSocket/SSE live dispatch board","PostgreSQL order status machine + assignment rules","Zone lists, ETA, customer tracking link"],"repos":[{"slug":"kll-92/delivery-dispatch","stars":"—","lic":"chưa kiểm license","note":"Spring Boot, pushed 2026-10-08 — mới nhất","kind":"neutral"},{"slug":"Sayantan-Sinha-GIT/dispatch","stars":"—","lic":"MIT","note":"demo Vercel","kind":"ok"}]},{"rank":18,"name":"E-commerce store (cart, orders, payments)","level":"middle","problem":"Merchant bán online cần catalog, cart, checkout, thanh toán và vòng đời đơn cùng chạy; xây đủ là màn hình production-shaped rộng nhất mà hiring manager từng bấm xem.","why":"Điểm tổng hợp cao nhất (89,3, 6 lần nhắc): auth, modeling, checkout state, Stripe webhook và order lifecycle trong một product deploy được; bão hòa, nên admin panel hoặc niche scope phải phân định.","stack":["Next.js + TypeScript","PostgreSQL + Prisma (catalog, orders)","Stripe test mode + webhook handling","Admin panel for products/orders, deployed with tests"],"repos":[{"slug":"saleor/storefront","stars":"1.6k★","lic":"FSL-1.1-ALv2","note":"KHÔNG phải OSI — hết hạn tự chuyển Apache-2.0 sau 2 năm","kind":"warn"},{"slug":"AlterClassIO/ecommerce-nextjs-stripe-checkout","stars":"—","lic":"MIT","note":"cart + Stripe checkout, pushed 2022-09","kind":"ok"}]},{"rank":19,"name":"AI chatbot / RAG assistant (engineered, not bare wrapper)","level":"middle","problem":"Người dùng muốn câu trả lời lấy từ chính tài liệu của họ thay vì tự đào help center; employer giờ screen luôn phần streaming, retrieval và kỷ luật chi phí.","why":"Điểm khác biệt 2025-26 khi được engineering đúng cách: RAG, streaming UX, token costing và eval chứng minh kỷ luật AI mà JD đòi hỏi; 7.773 repo “chatgpt clone” nghĩa là wrapper trần chìm vào bể.","stack":["Next.js + Vercel AI SDK (streaming UI)","Anthropic/OpenAI API with token cost tracking","pgvector or Chroma for retrieval","Eval set + error handling, rate limiting"],"repos":[{"slug":"LibreChat-AI/LibreChat","stars":"45.4k★","lic":"MIT","note":"bản chuẩn (danny-avila/LibreChat redirect về đây)","kind":"ok"},{"slug":"open-webui/open-webui","stars":"154.2k★","lic":"license riêng","note":"không phải OSI — flag","kind":"warn"}]},{"rank":20,"name":"Real-time collaborative editor","level":"middle","problem":"Team cùng sửa một tài liệu cần sync không xung đột và presence; bản mượt là demo hiring manager bấm chơi được 30 giây.","why":"Quote employer mạnh nhất tìm được (leif: chơi 30 phút “without finding obvious bugs, I'd be extremely impressed”); hệ sinh thái yjs 22.9k, AFFiNE 73.3k; caveat: chỉ một giọng 2010, clone tutorial đọc như boilerplate.","stack":["Yjs CRDT + Tiptap/BlockNote editor","WebSocket provider (y-websocket or custom)","React + auth + presence/awareness","Optional WebRTC for cursor sync, deployed multi-user"],"repos":[{"slug":"adrianhajdin/collaborative-editor","stars":"548★","lic":"no license","note":"bản chính — chỉ học","kind":"warn"},{"slug":"conclave-team/conclave","stars":"726★","lic":"MIT","note":"README: No Longer Maintained, push cuối 2022-12","kind":"warn"}]}]}</script>
+<script>
+(function(){
+  "use strict";
+  var data = JSON.parse(document.getElementById("catalog-data").textContent);
+  var LEVEL_VI = { fresher:"Fresher", junior:"Junior", middle:"Middle" };
+
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];
+    });
+  }
+  function norm(s){
+    return String(s).toLowerCase().normalize("NFD")
+      .replace(/[\u0300-\u036f]/g,"")
+      .replace(/đ/g,"d").replace(/Đ/g,"d");
+  }
+
+  function reposHtml(p){
+    if(!p.repos.length) return "";
+    var lis = p.repos.map(function(r){
+      var stars = r.stars && r.stars !== "—" ? '<span class="stars">'+esc(r.stars)+"</span>" : "";
+      var note = r.note ? '<span class="note">'+esc(r.note)+"</span>" : "";
+      return "<li><a href=\"https://github.com/"+encodeURIComponent(r.slug)+"\">"+esc(r.slug)+"</a>"+
+        '<span class="lic lic-'+esc(r.kind)+'">'+esc(r.lic)+"</span>"+stars+note+"</li>";
+    }).join("");
+    return '<ul class="repos">'+lis+"</ul>";
+  }
+
+  function band(rank){
+    if(rank===1) return "hero";
+    if(rank<=4) return "strip";
+    if(rank<=10) return "card";
+    return "row";
+  }
+
+  function cardHtml(p){
+    var b = band(p.rank);
+    var num = String(p.rank).padStart(2,"0");
+    var wide = (p.rank===8) ? " wide" : "";
+    var hay = norm([p.name, p.problem, p.why, p.level].concat(p.stack).join(" "));
+    var head = '<div class="head"><h3>'+esc(p.name)+'</h3><span class="lvl">'+esc(LEVEL_VI[p.level]||p.level)+"</span></div>";
+    var body = '<div class="body"><p class="problem">'+esc(p.problem)+"</p>"+
+               '<p class="why">'+esc(p.why)+"</p></div>";
+    var foot = '<div class="foot"><ul class="stack">'+
+      p.stack.map(function(s){ return "<li>"+esc(s)+"</li>"; }).join("")+
+      "</ul>"+reposHtml(p)+"</div>";
+    return '<li class="rank rank-'+b+wide+'" id="du-an-'+p.rank+'" data-level="'+esc(p.level)+
+      '" data-hay="'+esc(hay)+'"><div class="rail"><span class="num" aria-hidden="true">'+num+"</span></div>"+
+      '<div class="content">'+head+body+foot+"</div></li>";
+  }
+
+  var ol = document.getElementById("projects");
+  ol.innerHTML = data.projects.map(cardHtml).join("");
+
+  /* summary table */
+  var tbody = document.getElementById("summary-body");
+  tbody.innerHTML = data.projects.map(function(p){
+    var hay = norm([p.name, p.problem, p.why, p.level].concat(p.stack).join(" "));
+    return '<tr data-level="'+esc(p.level)+'" data-hay="'+esc(hay)+'">'+
+      '<th scope="row">'+String(p.rank).padStart(2,"0")+"</th>"+
+      '<td class="name"><a href="#du-an-'+p.rank+'">'+esc(p.name)+"</a></td>"+
+      "<td>"+esc(LEVEL_VI[p.level]||p.level)+"</td>"+
+      '<td class="prob">'+esc(p.problem)+"</td></tr>";
+  }).join("");
+
+  /* filter + search */
+  var items = Array.prototype.slice.call(document.querySelectorAll("#projects .rank"));
+  var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr"));
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-level]"));
+  var qInput = document.getElementById("q");
+  var count = document.getElementById("count");
+  var empty = document.getElementById("empty");
+  var tableEmpty = document.getElementById("table-empty");
+  var active = "all";
+
+  function apply(){
+    var q = norm(qInput.value.trim());
+    var shown = 0;
+    items.forEach(function(el){
+      var ok = (active==="all" || el.dataset.level===active) &&
+               (!q || el.dataset.hay.indexOf(q)!==-1);
+      el.hidden = !ok;
+      if(ok) shown++;
+    });
+    rows.forEach(function(tr){
+      var ok = (active==="all" || tr.dataset.level===active) &&
+               (!q || tr.dataset.hay.indexOf(q)!==-1);
+      tr.hidden = !ok;
+    });
+    count.textContent = shown + " / 20 dự án";
+    empty.hidden = shown > 0;
+    tableEmpty.hidden = shown > 0;
+  }
+
+  chips.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      active = btn.dataset.level;
+      chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c===btn)); });
+      apply();
+    });
+  });
+  qInput.addEventListener("input", apply);
+
+  /* theme toggle: hệ thống → sáng → tối → hệ thống */
+  var btn = document.getElementById("theme");
+  var LABEL = { "":"Giao diện: hệ thống", light:"Giao diện: sáng", dark:"Giao diện: tối" };
+  var order = ["", "light", "dark"];
+  var cur = "";
+  try {
+    var saved = localStorage.getItem("t20-theme");
+    if(saved===null) saved = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "" : "");
+    cur = order.indexOf(saved)!==-1 ? saved : "";
+  } catch(e){ cur = ""; }
+  function paint(){
+    if(cur) document.documentElement.setAttribute("data-theme", cur);
+    else document.documentElement.removeAttribute("data-theme");
+    btn.textContent = LABEL[cur];
+    try { localStorage.setItem("t20-theme", cur); } catch(e){}
+  }
+  paint();
+  btn.addEventListener("click", function(){
+    cur = order[(order.indexOf(cur)+1) % order.length];
+    paint();
+  });
+})();
+</script>
+</body>
+</html>

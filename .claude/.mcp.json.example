@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "context7": { "url": "https://mcp.context7.com/mcp", "headers": { "Authorization": "Bearer YOUR_API_KEY" } },
+    "human-mcp": { "command": "npx", "args": ["@goonnguyen/human-mcp"], "env": { "GOOGLE_GEMINI_API_KEY": "your_gemini_api_key_here" } },
+    "chrome-devtools": { "command": "npx", "args": ["-y", "chrome-devtools-mcp@latest"] },
+    "sequential-thinking": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"] },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_PAT" }
+    },
+    "_composio-pilot": {
+      "_comment": "PILOT — chưa bật. Composio MCP hosted: 1000+ pre-authenticated toolkits (GitHub/Slack/Gmail/Notion/Asana/Shopify...). Bật: đổi key '_composio-pilot' → 'composio', thay YOUR_COMPOSIO_API_KEY + YOUR_SERVER_ID + YOUR_USER_ID. License: Composio TOS (proprietary). Security: toolkit gọi external SaaS qua Composio proxy — review scope trước khi dùng. Docs: https://docs.composio.dev/mcp/config",
+      "type": "http",
+      "url": "https://backend.composio.dev/v3/mcp/YOUR_SERVER_ID?user_id=YOUR_USER_ID",
+      "headers": { "x-api-key": "YOUR_COMPOSIO_API_KEY" }
+    }
+  }
+}

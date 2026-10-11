@@ -1,0 +1,353 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - generic [ref=f4e4]:
+      - generic [ref=f4e5]:
+        - generic [ref=f4e6]:
+          - link "DuckDuckGo home" [ref=f4e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f4e8]: DuckDuckGo
+          - generic [ref=f4e15]:
+            - combobox "Search privately" [ref=f4e17]: collect user feedback widget embed on website why product teams need it
+            - button "Search" [ref=f4e19] [cursor=pointer]
+        - button "Open menu" [ref=f4e24] [cursor=pointer]
+      - navigation [ref=f4e32]:
+        - list [ref=f4e33]:
+          - listitem [ref=f4e34]:
+            - link [ref=f4e35] [cursor=pointer]:
+              - /url: /?q=collect+user+feedback+widget+embed+on+website+why+product+teams+need+it&ia=web
+              - strong [ref=f4e36]: All
+          - listitem [ref=f4e39]:
+            - link [ref=f4e40] [cursor=pointer]:
+              - /url: /?q=collect+user+feedback+widget+embed+on+website+why+product+teams+need+it&ia=images&iax=images
+              - strong [ref=f4e41]: Images
+          - listitem [ref=f4e42]:
+            - link [ref=f4e43] [cursor=pointer]:
+              - /url: /?q=collect+user+feedback+widget+embed+on+website+why+product+teams+need+it&ia=videos&iax=videos
+              - strong [ref=f4e44]: Videos
+          - listitem [ref=f4e45]:
+            - link [ref=f4e46] [cursor=pointer]:
+              - /url: /?q=collect+user+feedback+widget+embed+on+website+why+product+teams+need+it&iaxm=maps
+              - strong [ref=f4e47]: Maps
+        - list [ref=f4e48]:
+          - listitem [ref=f4e49]:
+            - link "Duck.ai" [ref=f4e51] [cursor=pointer]:
+              - /url: /?q=collect+user+feedback+widget+embed+on+website+why+product+teams+need+it&ia=chat&entry=serp
+          - listitem [ref=f4e55]:
+            - button "Search Settings ✀" [ref=f4e57] [cursor=pointer]:
+              - generic [ref=f4e60]: Search Settings
+              - generic [ref=f4e61]: ✀
+    - generic [ref=f4e68]:
+      - navigation [ref=f4e70]:
+        - button [ref=f4e72] [cursor=pointer]:
+          - strong [ref=f4e79]: Private
+        - generic [ref=f4e83]:
+          - switch "Filter by the selected region" [ref=f4e87]
+          - button "Vietnam (en)" [ref=f4e89] [cursor=pointer]
+        - button [ref=f4e94] [cursor=pointer]:
+          - strong [ref=f4e96]: "Safe search: moderate"
+        - button [ref=f4e100] [cursor=pointer]:
+          - strong [ref=f4e102]: Any time
+      - generic [ref=f4e106]:
+        - list [ref=f4e107]:
+          - listitem [ref=f4e108]:
+            - article [ref=f4e109] [cursor=pointer]:
+              - button [ref=f4e111]
+              - generic [ref=f4e115]:
+                - link "Search domain mopinion.com" [ref=f4e117]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:mopinion.com
+                - generic [ref=f4e120]:
+                  - paragraph [ref=f4e121]: Mopinion
+                  - link "https://mopinion.com › website-feedback-widgets-and-ux-best-practices" [ref=f4e122]:
+                    - /url: https://mopinion.com/website-feedback-widgets-and-ux-best-practices/
+                    - paragraph [ref=f4e124]:
+                      - generic [ref=f4e125]: https://mopinion.com
+                      - generic [ref=f4e126]: › website-feedback-widgets-and-ux-best-practices
+              - heading [level=2] [ref=f4e128]:
+                - link "Website feedback widgets and UX best practices - Mopinion" [ref=f4e129]:
+                  - /url: https://mopinion.com/website-feedback-widgets-and-ux-best-practices/
+              - generic [ref=f4e134]:
+                - text: Jun 12, 2026·
+                - generic [ref=f4e135]: Learn how website feedback widgets improve UX, capture user insights and help digital teams optimise website journeys.
+          - listitem [ref=f4e136]:
+            - article [ref=f4e137] [cursor=pointer]:
+              - button [ref=f4e139]
+              - generic [ref=f4e143]:
+                - link "Search domain mopinion.com" [ref=f4e145]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:mopinion.com
+                - generic [ref=f4e148]:
+                  - paragraph [ref=f4e149]: Mopinion
+                  - link "https://mopinion.com › how-to-embed-a-feedback-form-on-your-website" [ref=f4e150]:
+                    - /url: https://mopinion.com/how-to-embed-a-feedback-form-on-your-website/
+                    - paragraph [ref=f4e152]:
+                      - generic [ref=f4e153]: https://mopinion.com
+                      - generic [ref=f4e154]: › how-to-embed-a-feedback-form-on-your-website
+              - heading [level=2] [ref=f4e156]:
+                - link "How to embed a feedback form on your website - Mopinion" [ref=f4e157]:
+                  - /url: https://mopinion.com/how-to-embed-a-feedback-form-on-your-website/
+              - generic [ref=f4e162]:
+                - text: Jul 13, 2026·
+                - generic [ref=f4e163]: Learn how to embed a feedback form on your website and collect insights that improve UX, content and conversions.
+          - listitem [ref=f4e164]:
+            - article [ref=f4e165] [cursor=pointer]:
+              - button [ref=f4e167]
+              - generic [ref=f4e171]:
+                - link "Search domain userback.io" [ref=f4e173]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:userback.io
+                - generic [ref=f4e176]:
+                  - paragraph [ref=f4e177]: Userback
+                  - link "https://userback.io › blog › understanding-the-website-feedback-widget" [ref=f4e178]:
+                    - /url: https://userback.io/blog/understanding-the-website-feedback-widget/
+                    - paragraph [ref=f4e180]:
+                      - generic [ref=f4e181]: https://userback.io
+                      - generic [ref=f4e182]: › blog › understanding-the-website-feedback-widget
+              - heading [level=2] [ref=f4e184]:
+                - 'link "Maximizing Website Engagement: A Guide to Feedback Widgets - Userback" [ref=f4e185]':
+                  - /url: https://userback.io/blog/understanding-the-website-feedback-widget/
+              - generic [ref=f4e190]:
+                - text: Jan 30, 2025·
+                - generic [ref=f4e191]: Adding a feedback widget to your website provides users with a simple and accessible way to share their thoughts, making it easier to collect valuable insights and feedback directly from your audience. Not all feedback widgets and website feedback tools are created equal.
+          - listitem [ref=f4e192]:
+            - article [ref=f4e193] [cursor=pointer]:
+              - button [ref=f4e195]
+              - generic [ref=f4e199]:
+                - link "Search domain quackback.io" [ref=f4e201]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:quackback.io
+                - generic [ref=f4e204]:
+                  - paragraph [ref=f4e205]: quackback.io
+                  - link "https://quackback.io › blog › feedback-widget-tools" [ref=f4e206]:
+                    - /url: https://quackback.io/blog/feedback-widget-tools
+                    - paragraph [ref=f4e208]:
+                      - generic [ref=f4e209]: https://quackback.io
+                      - generic [ref=f4e210]: › blog › feedback-widget-tools
+              - heading [level=2] [ref=f4e212]:
+                - link "Best Feedback Widgets for Your Website in 2026 | Quackback" [ref=f4e213]:
+                  - /url: https://quackback.io/blog/feedback-widget-tools
+              - generic [ref=f4e218]:
+                - text: Jan 25, 2026·
+                - generic [ref=f4e219]: Embeddable tools for collecting user feedback without leaving your product. The best feedback comes from users who are already in your product. A feedback widget removes the friction of switching tabs, finding a form, or remembering to email you later.
+          - listitem [ref=f4e220]:
+            - article [ref=f4e221] [cursor=pointer]:
+              - button [ref=f4e223]
+              - generic [ref=f4e227]:
+                - link "Search domain userback.io" [ref=f4e229]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:userback.io
+                - generic [ref=f4e232]:
+                  - paragraph [ref=f4e233]: Userback
+                  - link "https://userback.io › feature › feedback-widget" [ref=f4e234]:
+                    - /url: https://userback.io/feature/feedback-widget/
+                    - paragraph [ref=f4e236]:
+                      - generic [ref=f4e237]: https://userback.io
+                      - generic [ref=f4e238]: › feature › feedback-widget
+              - heading [level=2] [ref=f4e240]:
+                - link "AI-Powered Feedback Widget for Building Better Products" [ref=f4e241]:
+                  - /url: https://userback.io/feature/feedback-widget/
+              - generic [ref=f4e243]: Why should I use an AI-Powered Feedback Widget for my website or app? An AI-powered widget makes feedback effortless for users and organized for teams. Users submit feedback naturally without forms, while AI handles categorization and analysis automatically.
+          - listitem [ref=f4e248]:
+            - article [ref=f4e249] [cursor=pointer]:
+              - button [ref=f4e251]
+              - generic [ref=f4e255]:
+                - link "Search domain feeqd.com" [ref=f4e257]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:feeqd.com
+                - generic [ref=f4e260]:
+                  - paragraph [ref=f4e261]: feeqd.com
+                  - link "https://feeqd.com › blog › feedback-widget" [ref=f4e262]:
+                    - /url: https://feeqd.com/blog/feedback-widget
+                    - paragraph [ref=f4e264]:
+                      - generic [ref=f4e265]: https://feeqd.com
+                      - generic [ref=f4e266]: › blog › feedback-widget
+              - heading [level=2] [ref=f4e268]:
+                - 'link "Feedback Widget: How to Collect In-App Feedback | Feeqd Blog" [ref=f4e269]':
+                  - /url: https://feeqd.com/blog/feedback-widget
+              - generic [ref=f4e274]:
+                - text: Apr 17, 2026·
+                - generic [ref=f4e275]: Learn what feedback widgets are, how they work, and how to embed one on your site. Compare top widget tools and build better products with in-app user feedback. A feedback widget is a small UI element embedded directly in your product that lets users submit feedback without leaving the page.
+          - listitem [ref=f4e276]:
+            - article [ref=f4e277] [cursor=pointer]:
+              - button [ref=f4e279]
+              - generic [ref=f4e283]:
+                - link "Search domain usersnap.com" [ref=f4e285]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:usersnap.com
+                - generic [ref=f4e288]:
+                  - paragraph [ref=f4e289]: Usersnap
+                  - link "https://usersnap.com › blog › feedback-widget" [ref=f4e290]:
+                    - /url: https://usersnap.com/blog/feedback-widget/
+                    - paragraph [ref=f4e292]:
+                      - generic [ref=f4e293]: https://usersnap.com
+                      - generic [ref=f4e294]: › blog › feedback-widget
+              - heading [level=2] [ref=f4e296]:
+                - link "Top 25 Website Feedback Widgets 2026 - Usersnap Blog" [ref=f4e297]:
+                  - /url: https://usersnap.com/blog/feedback-widget/
+              - generic [ref=f4e299]: With a free feedback widget, website owners can engage their audience, capture user insights, and improve their offerings based on user feedback. These widgets typically come with essential features such as feedback forms, customizable designs, and submission management tools.
+          - listitem [ref=f4e304]:
+            - article [ref=f4e305] [cursor=pointer]:
+              - button [ref=f4e307]
+              - generic [ref=f4e311]:
+                - link "Search domain embeddable.co" [ref=f4e313]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:embeddable.co
+                - generic [ref=f4e316]:
+                  - paragraph [ref=f4e317]: embeddable.co
+                  - link "https://embeddable.co › blog › best-feedback-widgets-for-websites-2026" [ref=f4e318]:
+                    - /url: https://embeddable.co/blog/best-feedback-widgets-for-websites-2026
+                    - paragraph [ref=f4e320]:
+                      - generic [ref=f4e321]: https://embeddable.co
+                      - generic [ref=f4e322]: › blog › best-feedback-widgets-for-websites-2026
+              - heading [level=2] [ref=f4e324]:
+                - link "Best Feedback Widgets for Websites 2026 | Embeddable" [ref=f4e325]:
+                  - /url: https://embeddable.co/blog/best-feedback-widgets-for-websites-2026
+              - generic [ref=f4e330]:
+                - text: Mar 8, 2026·
+                - generic [ref=f4e331]: Discover the best feedback widgets for websites in 2026. Compare top tools for collecting user and customer feedback with embeddable, no-code solutions.
+          - listitem [ref=f4e332]:
+            - article [ref=f4e333] [cursor=pointer]:
+              - button [ref=f4e335]
+              - generic [ref=f4e339]:
+                - link "Search domain featurask.com" [ref=f4e341]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:featurask.com
+                - generic [ref=f4e344]:
+                  - paragraph [ref=f4e345]: featurask.com
+                  - link "https://featurask.com › blog › website-feedback-widget-definition-examples-and-tools" [ref=f4e346]:
+                    - /url: https://featurask.com/blog/website-feedback-widget-definition-examples-and-tools
+                    - paragraph [ref=f4e348]:
+                      - generic [ref=f4e349]: https://featurask.com
+                      - generic [ref=f4e350]: › blog › website-feedback-widget-definition-examples-and-tools
+              - heading [level=2] [ref=f4e352]:
+                - 'link "Website Feedback Widget: Definition, Examples, and Tools for 2026" [ref=f4e353]':
+                  - /url: https://featurask.com/blog/website-feedback-widget-definition-examples-and-tools
+              - generic [ref=f4e358]:
+                - text: May 25, 2026·
+                - generic [ref=f4e359]: Learn what a website feedback widget is, see practical examples, compare tool types, and build a 2026 feedback loop that turns comments into product evidence.
+          - listitem [ref=f4e360]:
+            - article [ref=f4e361] [cursor=pointer]:
+              - button [ref=f4e363]
+              - generic [ref=f4e367]:
+                - link "Search domain zonkafeedback.com" [ref=f4e369]:
+                  - /url: /?q=collect%20user%20feedback%20widget%20embed%20on%20website%20why%20product%20teams%20need%20it+site:www.zonkafeedback.com
+                - generic [ref=f4e372]:
+                  - paragraph [ref=f4e373]: Zonka Feedback
+                  - link "https://www.zonkafeedback.com › blog › feedback-widgets" [ref=f4e374]:
+                    - /url: https://www.zonkafeedback.com/blog/feedback-widgets
+                    - paragraph [ref=f4e376]:
+                      - generic [ref=f4e377]: https://www.zonkafeedback.com
+                      - generic [ref=f4e378]: › blog › feedback-widgets
+              - heading [level=2] [ref=f4e380]:
+                - 'link "Feedback Widgets: 5 Types, Use Cases & How to Add Them" [ref=f4e381]':
+                  - /url: https://www.zonkafeedback.com/blog/feedback-widgets
+              - generic [ref=f4e383]: Compare 5 feedback widget types — popup, slide-up, side tab, popover, bottom bar — with use cases, response rates, and step-by-step setup for your site.
+          - listitem [ref=f4e388]:
+            - generic [ref=f4e390]:
+              - paragraph [ref=f4e391]: Searches related to collect user feedback widget embed on website why product teams need it
+              - generic [ref=f4e392]:
+                - list [ref=f4e393]:
+                  - listitem [ref=f4e394]:
+                    - link "feedback widgets for websites" [ref=f4e395] [cursor=pointer]:
+                      - /url: "?q=feedback%20widgets%20for%20websites&origin=related"
+                - list [ref=f4e398]:
+                  - listitem [ref=f4e399]:
+                    - link "web page engagement widgets" [ref=f4e400] [cursor=pointer]:
+                      - /url: "?q=web%20page%20engagement%20widgets&origin=related"
+              - generic [ref=f4e408]:
+                - text: Was this helpful?
+                - button "Positive feedback" [ref=f4e409] [cursor=pointer]
+                - button "Negative feedback" [ref=f4e413] [cursor=pointer]
+        - button "More results" [ref=f4e419] [cursor=pointer]
+    - list [ref=f4e422]:
+      - button "Close menu" [ref=f4e423] [cursor=pointer]
+      - list [ref=f4e427]:
+        - listitem [ref=f4e428]: Search
+        - listitem [ref=f4e429]:
+          - link "Homepage" [ref=f4e430] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f4e431]:
+          - link "Themes" [ref=f4e432] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f4e433]:
+          - link "Settings" [ref=f4e434] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f4e435]:
+        - listitem [ref=f4e436]: Share Feedback
+        - listitem [ref=f4e437]:
+          - generic [ref=f4e440]:
+            - button "Positive feedback" [ref=f4e441] [cursor=pointer]
+            - button "Negative feedback" [ref=f4e445] [cursor=pointer]
+      - list [ref=f4e449]:
+        - listitem [ref=f4e450]: Downloads
+        - listitem [ref=f4e451]:
+          - link "iOS Browser" [ref=f4e452] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f4e453]:
+          - link "Android Browser" [ref=f4e454] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f4e455]:
+          - link "Mac Browser" [ref=f4e456] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f4e457]:
+          - link "Windows Browser" [ref=f4e458] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f4e459]:
+          - link "Browser Extensions" [ref=f4e460] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f4e461]:
+        - listitem [ref=f4e462]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f4e463]:
+          - link "Duck.ai" [ref=f4e464] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f4e465]:
+          - link "Email Protection" [ref=f4e466] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f4e467]:
+          - link "Newsletter" [ref=f4e468] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f4e469]:
+          - link "Blog" [ref=f4e470] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f4e471]:
+          - link "Podcast" [ref=f4e472] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f4e473]:
+          - link "Collaborations" [ref=f4e474] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f4e475]:
+        - listitem [ref=f4e476]: Learn More
+        - listitem [ref=f4e477]:
+          - link "What’s New" [ref=f4e478] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f4e479]:
+          - link "Compare Privacy" [ref=f4e480] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f4e481]:
+          - link "About Our Browser" [ref=f4e482] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f4e483]:
+          - link "About DuckDuckGo" [ref=f4e484] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f4e485]:
+        - listitem [ref=f4e486]: Other Resources
+        - listitem [ref=f4e487]:
+          - link "Help" [ref=f4e488] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f4e489]:
+          - link "Community" [ref=f4e490] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f4e491]:
+          - link "Careers" [ref=f4e492] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f4e493]:
+          - link "Privacy Policy" [ref=f4e494] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f4e495]:
+          - link "Terms of Service" [ref=f4e496] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f4e497]:
+          - link "Press Kit" [ref=f4e498] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f4e499]:
+          - link "Advertise on Search" [ref=f4e500] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f4e506]:
+    - generic [ref=f4e517]:
+      - heading "Introducing DuckDuckGo Collaborations" [level=3] [ref=f4e518]
+      - paragraph [ref=f4e519]: Expertly crafted products for people who give a duck about privacy.
+    - link "See More" [ref=f4e520] [cursor=pointer]:
+      - /url: https://duckduckgo.com/collaborations
+  - button "Share Feedback" [ref=f4e525] [cursor=pointer]

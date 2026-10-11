@@ -1,0 +1,333 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "DuckDuckGo home" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e8]: DuckDuckGo
+          - generic [ref=e15]:
+            - combobox "Search privately" [ref=e17]: appointment reminder no-show rate study cost
+            - button "Search" [ref=e19] [cursor=pointer]
+        - button "Open menu" [ref=e24] [cursor=pointer]
+      - navigation [ref=e32]:
+        - list [ref=e33]:
+          - listitem [ref=e34]:
+            - link [ref=e35] [cursor=pointer]:
+              - /url: /?q=appointment+reminder+no-show+rate+study+cost&ia=web
+              - strong [ref=e36]: All
+          - listitem [ref=e39]:
+            - link [ref=e40] [cursor=pointer]:
+              - /url: /?q=appointment+reminder+no-show+rate+study+cost&ia=images&iax=images
+              - strong [ref=e41]: Images
+          - listitem [ref=e42]:
+            - link [ref=e43] [cursor=pointer]:
+              - /url: /?q=appointment+reminder+no-show+rate+study+cost&ia=videos&iax=videos
+              - strong [ref=e44]: Videos
+          - listitem [ref=e45]:
+            - link [ref=e46] [cursor=pointer]:
+              - /url: /?q=appointment+reminder+no-show+rate+study+cost&iaxm=maps
+              - strong [ref=e47]: Maps
+        - list [ref=e48]:
+          - listitem [ref=e49]:
+            - link "Duck.ai" [ref=e51] [cursor=pointer]:
+              - /url: /?q=appointment+reminder+no-show+rate+study+cost&ia=chat&entry=serp
+          - listitem [ref=e55]:
+            - button "Search Settings ✀" [ref=e57] [cursor=pointer]:
+              - generic [ref=e60]: Search Settings
+              - generic [ref=e61]: ✀
+    - generic [ref=e68]:
+      - navigation [ref=e70]:
+        - button [ref=e72] [cursor=pointer]:
+          - strong [ref=e79]: Private
+        - generic [ref=e83]:
+          - switch "Filter by the selected region" [ref=e87]
+          - button "Vietnam (en)" [ref=e89] [cursor=pointer]
+        - button [ref=e94] [cursor=pointer]:
+          - strong [ref=e96]: "Safe search: moderate"
+        - button [ref=e100] [cursor=pointer]:
+          - strong [ref=e102]: Any time
+      - generic [ref=e106]:
+        - list [ref=e107]:
+          - listitem [ref=e108]:
+            - article [ref=e109] [cursor=pointer]:
+              - button [ref=e111]
+              - generic [ref=e115]:
+                - link "Search domain appointmentreminder.com" [ref=e117]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:appointmentreminder.com
+                - generic [ref=e120]:
+                  - paragraph [ref=e121]: Appointment Reminder
+                  - link "https://appointmentreminder.com › guides › no-show-statistics" [ref=e122]:
+                    - /url: https://appointmentreminder.com/guides/no-show-statistics/
+                    - paragraph [ref=e124]:
+                      - generic [ref=e125]: https://appointmentreminder.com
+                      - generic [ref=e126]: › guides › no-show-statistics
+              - heading [level=2] [ref=e128]:
+                - link "No-Show Statistics & Data 2026 — Appointment Reminder" [ref=e129]:
+                  - /url: https://appointmentreminder.com/guides/no-show-statistics/
+              - generic [ref=e131]: Appointment no-show rates by industry, the financial cost of missed appointments, and data on how reminders reduce no-shows.
+          - listitem [ref=e136]:
+            - article [ref=e137] [cursor=pointer]:
+              - button [ref=e139]
+              - generic [ref=e143]:
+                - link "Search domain smsreminder.app" [ref=e145]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:www.smsreminder.app
+                - generic [ref=e148]:
+                  - paragraph [ref=e149]: smsreminder.app
+                  - link "https://www.smsreminder.app › guides › no-show-statistics" [ref=e150]:
+                    - /url: https://www.smsreminder.app/guides/no-show-statistics/
+                    - paragraph [ref=e152]:
+                      - generic [ref=e153]: https://www.smsreminder.app
+                      - generic [ref=e154]: › guides › no-show-statistics
+              - heading [level=2] [ref=e156]:
+                - 'link "Appointment No-Show Statistics (2026): Average Rates, Costs & How to ..." [ref=e157]':
+                  - /url: https://www.smsreminder.app/guides/no-show-statistics/
+              - generic [ref=e159]: How common are appointment no-shows, what do they cost, and do reminders actually help? A sourced roundup of no-show rates and the research on text-message reminders.
+          - listitem [ref=e164]:
+            - article [ref=e165] [cursor=pointer]:
+              - button [ref=e167]
+              - generic [ref=e171]:
+                - link "Search domain bookedin.com" [ref=e173]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:bookedin.com
+                - generic [ref=e176]:
+                  - paragraph [ref=e177]: Bookedin
+                  - link "https://bookedin.com › blog › appointment-no-show-statistics" [ref=e178]:
+                    - /url: https://bookedin.com/blog/appointment-no-show-statistics/
+                    - paragraph [ref=e180]:
+                      - generic [ref=e181]: https://bookedin.com
+                      - generic [ref=e182]: › blog › appointment-no-show-statistics
+              - heading [level=2] [ref=e184]:
+                - 'link "Appointment No-Show Statistics 2026: Rates & Fixes" [ref=e185]':
+                  - /url: https://bookedin.com/blog/appointment-no-show-statistics/
+              - generic [ref=e190]:
+                - text: Sep 27, 2026·
+                - generic [ref=e191]: The average no-show rate in published clinic studies is 23%. See no-show rates by setting, what missed appointments cost, and how reminders and deposits help.
+          - listitem [ref=e192]:
+            - article [ref=e193] [cursor=pointer]:
+              - button [ref=e195]
+              - generic [ref=e199]:
+                - link "Search domain trtc.io" [ref=e201]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:trtc.io
+                - generic [ref=e204]:
+                  - paragraph [ref=e205]: trtc.io
+                  - link "https://trtc.io › blog › details › no-show-statistics-cost-by-industry" [ref=e206]:
+                    - /url: https://trtc.io/blog/details/no-show-statistics-cost-by-industry
+                    - paragraph [ref=e208]:
+                      - generic [ref=e209]: https://trtc.io
+                      - generic [ref=e210]: › blog › details › no-show-statistics-cost-by-industry
+              - heading [level=2] [ref=e212]:
+                - 'link "50+ Appointment No-Show Statistics 2026: Rates, Costs & Data by Industry" [ref=e213]':
+                  - /url: https://trtc.io/blog/details/no-show-statistics-cost-by-industry
+              - generic [ref=e218]:
+                - text: May 19, 2026·
+                - generic [ref=e219]: 50+ appointment no-show statistics for 2026 organized by industry. Real costs, causes, and data-backed reduction strategies for healthcare, dental, salons, and fitness.
+          - listitem [ref=e220]:
+            - article [ref=e221] [cursor=pointer]:
+              - button [ref=e223]
+              - generic [ref=e227]:
+                - link "Search domain agentzap.ai" [ref=e229]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:agentzap.ai
+                - generic [ref=e232]:
+                  - paragraph [ref=e233]: agentzap.ai
+                  - link "https://agentzap.ai › blog › appointment-no-show-statistics" [ref=e234]:
+                    - /url: https://agentzap.ai/blog/appointment-no-show-statistics
+                    - paragraph [ref=e236]:
+                      - generic [ref=e237]: https://agentzap.ai
+                      - generic [ref=e238]: › blog › appointment-no-show-statistics
+              - heading [level=2] [ref=e240]:
+                - 'link "Appointment No-Show Statistics: 25 Numbers Every Business Should Know ..." [ref=e241]':
+                  - /url: https://agentzap.ai/blog/appointment-no-show-statistics
+              - generic [ref=e246]:
+                - text: Feb 25, 2026·
+                - generic [ref=e247]: In this complete guide, we have compiled 25 critical statistics on missed appointment data, no-show cost statistics, reminder effectiveness, and cancellation patterns that every business owner and manager should know in 2026.
+          - listitem [ref=e248]:
+            - article [ref=e249] [cursor=pointer]:
+              - button [ref=e251]
+              - generic [ref=e255]:
+                - link "Search domain etisia.com" [ref=e257]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:www.etisia.com
+                - generic [ref=e260]:
+                  - paragraph [ref=e261]: etisia.com
+                  - link "https://www.etisia.com › no-show-statistics" [ref=e262]:
+                    - /url: https://www.etisia.com/no-show-statistics
+                    - paragraph [ref=e264]:
+                      - generic [ref=e265]: https://www.etisia.com
+                      - generic [ref=e266]: › no-show-statistics
+              - heading [level=2] [ref=e268]:
+                - 'link "No-Show Rates by Industry: 2026 Benchmarks and Costs | Etisia" [ref=e269]':
+                  - /url: https://www.etisia.com/no-show-statistics
+              - generic [ref=e274]:
+                - text: Sep 14, 2026·
+                - generic [ref=e275]: Across 105 published studies, the average appointment no-show rate is around 23%. Rates vary by sector - from about 10% for veterinary and legal appointments up to 22% for therapy and counseling. A Cochrane review found SMS reminders improve attendance compared with no reminder, with an effect comparable to phone-call reminders.
+          - listitem [ref=e276]:
+            - article [ref=e277] [cursor=pointer]:
+              - button [ref=e279]
+              - generic [ref=e283]:
+                - link "Search domain healthcareittoday.com" [ref=e285]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:www.healthcareittoday.com
+                - generic [ref=e288]:
+                  - paragraph [ref=e289]: Healthcare IT Today
+                  - link "https://www.healthcareittoday.com › 2026 › 07 › 14 › the-hidden-cost-of-patient-no-shows-and-how-practices-can-reduce-them" [ref=e290]:
+                    - /url: https://www.healthcareittoday.com/2026/07/14/the-hidden-cost-of-patient-no-shows-and-how-practices-can-reduce-them/
+                    - paragraph [ref=e292]:
+                      - generic [ref=e293]: https://www.healthcareittoday.com
+                      - generic [ref=e294]: › 2026 › 07 › 14 › the-hidden-cost-of-patient-no-shows-and-how-practices-can-reduce-them
+              - heading [level=2] [ref=e296]:
+                - link "The Hidden Cost of Patient No-Shows and How Practices Can Reduce Them" [ref=e297]:
+                  - /url: https://www.healthcareittoday.com/2026/07/14/the-hidden-cost-of-patient-no-shows-and-how-practices-can-reduce-them/
+              - generic [ref=e302]:
+                - text: Jul 14, 2026·
+                - generic [ref=e303]: A large study published in BMC Health Services Research found an average no-show rate of 19% with each missed appointment costing about $196. To understand why the rates are so high, we first need to look at the reasons why appointments are missed.
+          - listitem [ref=e304]:
+            - article [ref=e305] [cursor=pointer]:
+              - button [ref=e307]
+              - generic [ref=e311]:
+                - link "Search domain schedulingkit.com" [ref=e313]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:schedulingkit.com
+                - generic [ref=e316]:
+                  - paragraph [ref=e317]: schedulingkit.com
+                  - link "https://schedulingkit.com › statistics › no-show-statistics" [ref=e318]:
+                    - /url: https://schedulingkit.com/statistics/no-show-statistics
+                    - paragraph [ref=e320]:
+                      - generic [ref=e321]: https://schedulingkit.com
+                      - generic [ref=e322]: › statistics › no-show-statistics
+              - heading [level=2] [ref=e324]:
+                - link "50 Appointment No-Show Statistics (2026) | SchedulingKit" [ref=e325]:
+                  - /url: https://schedulingkit.com/statistics/no-show-statistics
+              - generic [ref=e327]: Appointment no-shows are one of the most costly yet preventable problems facing service businesses today. From healthcare clinics losing billions annually to salons dealing with empty chairs, the financial and operational impact of missed appointments is staggering.
+          - listitem [ref=e332]:
+            - article [ref=e333] [cursor=pointer]:
+              - button [ref=e335]
+              - generic [ref=e339]:
+                - link "Search domain noshowcost.com" [ref=e341]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:noshowcost.com
+                - generic [ref=e344]:
+                  - paragraph [ref=e345]: noshowcost.com
+                  - link "https://noshowcost.com › research" [ref=e346]:
+                    - /url: https://noshowcost.com/research
+                    - paragraph [ref=e348]:
+                      - generic [ref=e349]: https://noshowcost.com
+                      - generic [ref=e350]: › research
+              - heading [level=2] [ref=e352]:
+                - link "No-Show Cost Calculator 2026 - NoShowCost.com" [ref=e353]:
+                  - /url: https://noshowcost.com/research
+              - generic [ref=e355]: "Key finding: Text-message reminders increased appointment attendance versus no reminder (risk ratio 1.10, 95% CI 1.03 to 1.17). Text and phone reminders had a similar effect, at lower cost per message."
+          - listitem [ref=e360]:
+            - article [ref=e361] [cursor=pointer]:
+              - button [ref=e363]
+              - generic [ref=e367]:
+                - link "Search domain appointmentreminder.com" [ref=e369]:
+                  - /url: /?q=appointment%20reminder%20no%2Dshow%20rate%20study%20cost+site:appointmentreminder.com
+                - generic [ref=e372]:
+                  - paragraph [ref=e373]: Appointment Reminder
+                  - link "https://appointmentreminder.com › tools › no-show-cost-calculator" [ref=e374]:
+                    - /url: https://appointmentreminder.com/tools/no-show-cost-calculator/
+                    - paragraph [ref=e376]:
+                      - generic [ref=e377]: https://appointmentreminder.com
+                      - generic [ref=e378]: › tools › no-show-cost-calculator
+              - heading [level=2] [ref=e380]:
+                - link "No-Show Cost Calculator — Appointment Reminder" [ref=e381]:
+                  - /url: https://appointmentreminder.com/tools/no-show-cost-calculator/
+              - generic [ref=e383]: Calculate how much appointment no-shows cost your practice. Enter your data and see potential savings from automated reminders.
+        - button "More results" [ref=e390] [cursor=pointer]
+    - list [ref=e393]:
+      - button "Close menu" [ref=e394] [cursor=pointer]
+      - list [ref=e398]:
+        - listitem [ref=e399]: Search
+        - listitem [ref=e400]:
+          - link "Homepage" [ref=e401] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=e402]:
+          - link "Themes" [ref=e403] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=e404]:
+          - link "Settings" [ref=e405] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=e406]:
+        - listitem [ref=e407]: Share Feedback
+        - listitem [ref=e408]:
+          - generic [ref=e411]:
+            - button "Positive feedback" [ref=e412] [cursor=pointer]
+            - button "Negative feedback" [ref=e416] [cursor=pointer]
+      - list [ref=e420]:
+        - listitem [ref=e421]: Downloads
+        - listitem [ref=e422]:
+          - link "iOS Browser" [ref=e423] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=e424]:
+          - link "Android Browser" [ref=e425] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=e426]:
+          - link "Mac Browser" [ref=e427] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=e428]:
+          - link "Windows Browser" [ref=e429] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=e430]:
+          - link "Browser Extensions" [ref=e431] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=e432]:
+        - listitem [ref=e433]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=e434]:
+          - link "Duck.ai" [ref=e435] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=e436]:
+          - link "Email Protection" [ref=e437] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=e438]:
+          - link "Newsletter" [ref=e439] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=e440]:
+          - link "Blog" [ref=e441] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=e442]:
+          - link "Podcast" [ref=e443] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=e444]:
+          - link "Collaborations" [ref=e445] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=e446]:
+        - listitem [ref=e447]: Learn More
+        - listitem [ref=e448]:
+          - link "What’s New" [ref=e449] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=e450]:
+          - link "Compare Privacy" [ref=e451] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=e452]:
+          - link "About Our Browser" [ref=e453] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=e454]:
+          - link "About DuckDuckGo" [ref=e455] [cursor=pointer]:
+            - /url: /about
+      - list [ref=e456]:
+        - listitem [ref=e457]: Other Resources
+        - listitem [ref=e458]:
+          - link "Help" [ref=e459] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=e460]:
+          - link "Community" [ref=e461] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=e462]:
+          - link "Careers" [ref=e463] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=e464]:
+          - link "Privacy Policy" [ref=e465] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=e466]:
+          - link "Terms of Service" [ref=e467] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=e468]:
+          - link "Press Kit" [ref=e469] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=e470]:
+          - link "Advertise on Search" [ref=e471] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=e477]:
+    - generic [ref=e488]:
+      - heading "Introducing DuckDuckGo Collaborations" [level=3] [ref=e489]
+      - paragraph [ref=e490]: Expertly crafted products for people who give a duck about privacy.
+    - link "See More" [ref=e491] [cursor=pointer]:
+      - /url: https://duckduckgo.com/collaborations
+  - button "Share Feedback" [ref=e496] [cursor=pointer]

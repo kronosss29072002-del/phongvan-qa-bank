@@ -1,0 +1,721 @@
+- generic [active] [ref=f269e1]:
+  - link "Skip to content" [ref=f269e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f269e3]:
+    - banner [ref=f269e4]:
+      - navigation [ref=f269e7]:
+        - link [ref=f269e9] [cursor=pointer]:
+          - /url: https://luat24h.com.vn/
+          - img "Luật L24H" [ref=f269e10]
+        - text: 
+        - list [ref=f269e12]:
+          - listitem [ref=f269e13]:
+            - link "Giới thiệu " [ref=f269e14] [cursor=pointer]:
+              - /url: https://luat24h.com.vn/gioi-thieu
+              - text: Giới thiệu
+              - generic [ref=f269e15]: 
+            - list [ref=f269e16]:
+              - listitem [ref=f269e17]:
+                - link "Luật sư và Cộng sự" [ref=f269e18] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/luat-su-va-cong-su
+              - listitem [ref=f269e19]:
+                - link "Tuyển Dụng" [ref=f269e20] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tuyen-dung
+          - listitem [ref=f269e21]:
+            - link "Tư Vấn Luật " [ref=f269e22] [cursor=pointer]:
+              - /url: https://luat24h.com.vn/tu-van-luat
+              - text: Tư Vấn Luật
+              - generic [ref=f269e23]: 
+            - list [ref=f269e24]:
+              - listitem [ref=f269e25]:
+                - link "Đất Đai" [ref=f269e26] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/dat-dai
+              - listitem [ref=f269e27]:
+                - link "Hình Sự" [ref=f269e28] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/hinh-su
+              - listitem [ref=f269e29]:
+                - link "Hôn Nhân Gia Đình" [ref=f269e30] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/hon-nhan-gia-dinh
+              - listitem [ref=f269e31]:
+                - link "Dân Sự" [ref=f269e32] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/dan-su
+              - listitem [ref=f269e33]:
+                - link "Thừa Kế" [ref=f269e34] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/thua-ke
+              - listitem [ref=f269e35]:
+                - link "Lao Động" [ref=f269e36] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/lao-dong
+              - listitem [ref=f269e37]:
+                - link "Doanh Nghiệp" [ref=f269e38] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/doanh-nghiep
+              - listitem [ref=f269e39]:
+                - link "Giao Thông" [ref=f269e40] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/giao-thong
+              - listitem [ref=f269e41]:
+                - link "Xây Dựng" [ref=f269e42] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/xay-dung
+              - listitem [ref=f269e43]:
+                - link "Hợp Đồng" [ref=f269e44] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/soan-thao-hop-dong
+              - listitem [ref=f269e45]:
+                - link "Sở Hữu Trí Tuệ" [ref=f269e46] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/so-huu-tri-tue
+              - listitem [ref=f269e47]:
+                - link "Hành Chính" [ref=f269e48] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/hanh-chinh
+          - listitem [ref=f269e49]:
+            - link "Dịch Vụ Luật Sư " [ref=f269e50] [cursor=pointer]:
+              - /url: https://luat24h.com.vn/dich-vu-luat-su
+              - text: Dịch Vụ Luật Sư
+              - generic [ref=f269e51]: 
+            - list [ref=f269e52]:
+              - listitem [ref=f269e53]:
+                - link "Luật sư tranh tụng" [ref=f269e54] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-luat-su-tranh-tung
+              - listitem [ref=f269e55]:
+                - link "Luật sư bào chữa" [ref=f269e56] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-luat-su/luat-su-bao-chua
+              - listitem [ref=f269e57]:
+                - link "Luật sư nhà đất" [ref=f269e58] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-luat-su-nha-dat
+              - listitem [ref=f269e59]:
+                - link "Luật sư hình sự" [ref=f269e60] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-luat-su-hinh-su
+              - listitem [ref=f269e61]:
+                - link "Luật sư dân sự" [ref=f269e62] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-luat-su-dan-su
+              - listitem [ref=f269e63]:
+                - link "Luật sư lao động" [ref=f269e64] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-luat-su-lao-dong
+              - listitem [ref=f269e65]:
+                - link "Dịch vụ ly hôn" [ref=f269e66] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-ly-hon
+              - listitem [ref=f269e67]:
+                - link "Luật sư doanh nghiệp" [ref=f269e68] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-luat-su-rieng-cho-doanh-nghiep
+              - listitem [ref=f269e69]:
+                - link "Luật sư sở hữu trí tuệ" [ref=f269e70] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-luat-su-so-huu-tri-tue
+          - listitem [ref=f269e71]:
+            - link "Biểu mẫu" [ref=f269e72] [cursor=pointer]:
+              - /url: https://luat24h.com.vn/van-ban-bieu-mau
+          - listitem [ref=f269e73]:
+            - link "Phạm vi hoạt động " [ref=f269e74] [cursor=pointer]:
+              - /url: https://luat24h.com.vn/#
+              - text: Phạm vi hoạt động
+              - generic [ref=f269e75]: 
+            - list [ref=f269e76]:
+              - listitem [ref=f269e77]:
+                - link "TP.HCM" [ref=f269e78] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tag/dich-vu-luat-su-tai-tp-hcm
+              - listitem [ref=f269e79]:
+                - link "TP. Hà Nội" [ref=f269e80] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tag/dich-vu-luat-su-tai-ha-noi
+              - listitem [ref=f269e81]:
+                - link "TP. Cần Thơ" [ref=f269e82] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tag/dich-vu-luat-su-tai-can-tho
+              - listitem [ref=f269e83]:
+                - link "Bình Dương" [ref=f269e84] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tag/dich-vu-luat-su-tai-binh-duong
+              - listitem [ref=f269e85]:
+                - link "Long An" [ref=f269e86] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tag/dich-vu-luat-su-tai-long-an
+          - listitem [ref=f269e87]:
+            - link "Liên hệ" [ref=f269e88] [cursor=pointer]:
+              - /url: https://luat24h.com.vn/lien-he
+        - list [ref=f269e90]:
+          - listitem [ref=f269e91]:
+            - link "1900.633.716" [ref=f269e93] [cursor=pointer]:
+              - /url: tel:1900633716
+          - listitem [ref=f269e95]:
+            - link "Search" [ref=f269e97] [cursor=pointer]:
+              - /url: "#search-lightbox"
+              - generic [ref=f269e98]: 
+            - text: 
+        - text:  
+    - main [ref=f269e102]:
+      - generic [ref=f269e103]:
+        - generic [ref=f269e105]:
+          - heading "Chơi hụi bị giật có kiện được không? Thủ tục khởi kiện đòi tiền hụi" [level=1] [ref=f269e106]
+          - generic [ref=f269e110]:
+            - link "Trang chủ" [ref=f269e111] [cursor=pointer]:
+              - /url: https://luat24h.com.vn/
+            - text: /
+            - generic [ref=f269e112]:
+              - link "Tư Vấn Luật" [ref=f269e113] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat
+              - text: /
+              - generic [ref=f269e114]:
+                - link "Luật Dân Sự" [ref=f269e115] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-van-luat/dan-su
+                - text: / Chơi hụi bị giật có kiện được không? Thủ tục khởi kiện đòi tiền hụi
+        - generic [ref=f269e116]:
+          - generic [ref=f269e117]:
+            - article [ref=f269e118]:
+              - generic [ref=f269e119]:
+                - generic [ref=f269e123]:
+                  - generic [ref=f269e124]:
+                    - generic [ref=f269e125]:
+                      - generic [ref=f269e126]: 
+                      - link "Luật Sư Võ Tấn Lộc" [ref=f269e127] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/luat-su/luat-su-vo-tan-loc
+                    - generic [ref=f269e128]:
+                      - generic [ref=f269e129]: 
+                      - time [ref=f269e130]: 19/03/2024 06:10
+                    - generic [ref=f269e131]:
+                      - generic [ref=f269e132]: 
+                      - link "Luật Dân Sự" [ref=f269e134] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/tu-van-luat/dan-su
+                    - generic [ref=f269e135]:
+                      - generic [ref=f269e136]: 
+                      - text: "0"
+                  - list [ref=f269e137]:
+                    - listitem [ref=f269e138]:
+                      - link [ref=f269e139] [cursor=pointer]:
+                        - /url: javascript:fontZoomer(-1)
+                    - listitem [ref=f269e144]:
+                      - link [ref=f269e145] [cursor=pointer]:
+                        - /url: javascript:fontZoomer(1)
+                - generic [ref=f269e150]:
+                  - generic [ref=f269e151]:
+                    - paragraph [ref=f269e152]:
+                      - link [ref=f269e153] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/choi-hui-bi-giat-co-kien-duoc-khong
+                        - strong [ref=f269e154]: Chơi hụi bị giật có kiện được không
+                      - text: là vấn đề được đông đảo người quan tâm, đặc biệt là những thành viên
+                      - strong [ref=f269e155]: chơi hụi
+                      - text: . Do đã có rất nhiều trường hợp chủ hụi lừa đảo bỏ trốn sau khi lấy được tài sản khiến quyền lợi của người chơi bị ảnh hưởng nghiêm trọng. Vì vậy, người dân nên nắm rõ
+                      - link [ref=f269e156] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/thu-tuc-khoi-kien-dan-su
+                        - strong [ref=f269e157]: thủ tục khởi kiện dân sự
+                      - text: yêu cầu trả lại tiền chơi hụi để đảm bảo quyền lợi hợp pháp của mình được pháp luật bảo vệ. Bài viết sau đây có thể đáp ứng nhu cầu này của quý bạn đọc.
+                    - paragraph [ref=f269e158]:
+                      - img "Chơi hụi bị giật có kiện được không" [ref=f269e159]
+                    - paragraph [ref=f269e160]: Chơi hụi bị giật có kiện được không
+                    - navigation [ref=f269e163]:
+                      - generic [ref=f269e164]:
+                        - generic [ref=f269e165]: 
+                        - button "Mục lục" [ref=f269e166] [cursor=pointer]: 
+                        - heading "Mục lục" [level=6] [ref=f269e167]
+                      - list [ref=f269e168]:
+                        - listitem [ref=f269e169]:
+                          - link "Pháp luật nói gì về hụi?" [ref=f269e170] [cursor=pointer]:
+                            - /url: "#ftoc-heading-1"
+                        - listitem [ref=f269e172]:
+                          - link "Nguyên tắc tổ chức hụi" [ref=f269e173] [cursor=pointer]:
+                            - /url: "#ftoc-heading-2"
+                        - listitem [ref=f269e175]:
+                          - link "Đối tượng tham gia chơi hụi có thể là ai?" [ref=f269e176] [cursor=pointer]:
+                            - /url: "#ftoc-heading-3"
+                        - listitem [ref=f269e178]:
+                          - link "Chơi hụi bị giật có kiện được không?" [ref=f269e179] [cursor=pointer]:
+                            - /url: "#ftoc-heading-4"
+                        - listitem [ref=f269e181]:
+                          - button "" [ref=f269e182] [cursor=pointer]
+                          - link "Dấu hiệu pháp lý cấu thành đối với hành vi giật hụi" [ref=f269e183] [cursor=pointer]:
+                            - /url: "#ftoc-heading-5"
+                          - list [ref=f269e185]:
+                            - listitem [ref=f269e186]:
+                              - link "Tội lạm dụng tín nhiệm chiếm đoạt tài sản" [ref=f269e187] [cursor=pointer]:
+                                - /url: "#ftoc-heading-6"
+                            - listitem [ref=f269e189]:
+                              - link "Xử lý trách nhiệm hình sự" [ref=f269e190] [cursor=pointer]:
+                                - /url: "#ftoc-heading-7"
+                        - listitem [ref=f269e192]:
+                          - link "Thủ tục khởi kiện đòi hụi" [ref=f269e193] [cursor=pointer]:
+                            - /url: "#ftoc-heading-8"
+                        - listitem [ref=f269e195]:
+                          - link "Giật hụi có thể chịu trách nhiệm hình sự không?" [ref=f269e196] [cursor=pointer]:
+                            - /url: "#ftoc-heading-9"
+                        - listitem [ref=f269e198]:
+                          - link "Luật sư tư vấn hướng giải quyết khi chơi hụi bị giật" [ref=f269e199] [cursor=pointer]:
+                            - /url: "#ftoc-heading-10"
+                    - heading "Pháp luật nói gì về hụi?" [level=2] [ref=f269e201]
+                    - paragraph [ref=f269e202]: "Căn cứ quy định tại khoản 1 Điều 471 Bộ luật Dân sự 2015 thì hụi là là hình thức giao dịch về tài sản theo tập quán trên cơ sở thỏa thuận của một nhóm người tập hợp nhau lại cùng định ra số người, thời gian, số tiền hoặc tài sản khác, thể thức góp, lĩnh họ và quyền, nghĩa vụ của các thành viên. Các thỏa thuận cơ bản về hụi bao gồm:"
+                    - list [ref=f269e203]:
+                      - listitem [ref=f269e204]: Số hụi viên;
+                      - listitem [ref=f269e205]: Thời gian chơi hui, kỳ hụi;
+                      - listitem [ref=f269e206]: Số tiền hoặc tài sản khác;
+                      - listitem [ref=f269e207]: Thể thức góp, lãnh hụi;
+                      - listitem [ref=f269e208]: Quyền, nghĩa vụ của các thành viên.
+                    - paragraph [ref=f269e209]: Nghiêm cấm việc tổ chức hụi dưới hình thức cho vay nặng lãi. Theo đó việc tổ chức hụi nhằm mục đích tương trợ trong nhân dân được thực hiện theo quy định của pháp luật.
+                    - paragraph [ref=f269e210]: "Cơ sở pháp lý: Điều 471 Bộ luật Dân sự 2015"
+                    - heading "Nguyên tắc tổ chức hụi" [level=2] [ref=f269e211]
+                    - paragraph [ref=f269e212]: "Hụi được tổ chức với nguyên tắc sau:"
+                    - list [ref=f269e213]:
+                      - listitem [ref=f269e214]: Việc tổ chức phải tuân thủ các nguyên tắc cơ bản của pháp luật dân sự;
+                      - listitem [ref=f269e215]: Việc tổ chức chỉ được thực hiện nhằm mục đích tương trợ lẫn nhau giữa những người tham gia quan hệ về họ;
+                      - listitem [ref=f269e216]: Không được tổ chức để cho vay lãi nặng, lừa đảo chiếm đoạt tài sản, lạm dụng tín nhiệm chiếm đoạt tài sản, huy động vốn trái pháp luật hoặc các hành vi vi phạm pháp luật khác.
+                    - paragraph [ref=f269e217]: "Cơ sở pháp lý: Điều 3 Nghị định 19/2019/NĐ-CP của Chính Phủ, ngày 19 tháng 02 năm 2019 về họ, hụi, biêu, phường."
+                    - paragraph [ref=f269e218]:
+                      - text: ">> Xem thêm:"
+                      - link [ref=f269e219] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/toi-lam-dung-tin-nhiem-chiem-doat-tai-san
+                        - strong [ref=f269e220]: Tội lạm dụng tín nhiệm chiếm đoạt tài sản bị xử lý như thế nào
+                    - heading "Đối tượng tham gia chơi hụi có thể là ai?" [level=2] [ref=f269e221]
+                    - paragraph [ref=f269e222]: "Để tham gia vào dây hụi hụi viên phải đáp ứng các điều kiện quy định tại Điều 5 Nghị định 19/2019/NĐ-CP, cụ thể điều kiện là thành viên như sau:"
+                    - list [ref=f269e223]:
+                      - listitem [ref=f269e224]: Người từ đủ mười tám tuổi trở lên
+                      - listitem [ref=f269e225]: Không thuộc trường hợp mất, hạn chế năng lực hành vi dân sự hoặc có khó khăn trong nhận thức, làm chủ hành vi.
+                      - listitem [ref=f269e226]: Người từ đủ mười lăm đến dưới mười tám tuổi nếu có tài sản riêng có thể tham gia chơi hụi. Nếu tài sản riêng đó là bất động sản, động sản phải đăng ký thì phải được người đại diện theo pháp luật đồng ý.
+                      - listitem [ref=f269e227]: Những người tham gia chơi hụi có thể thỏa thuận để lập nên những điều kiện khác dành cho thành viên của tổ chức mình.
+                    - paragraph [ref=f269e228]: "Đối với chủ hụi thì phải đáp ứng điều kiện quy định tại Điều 6 Nghị định 19/2019/NĐ-CP như sau:"
+                    - list [ref=f269e229]:
+                      - listitem [ref=f269e230]: Người từ đủ mười tám tuổi trở lên
+                      - listitem [ref=f269e231]: Không thuộc trường hợp mất, hạn chế năng lực hành vi dân sự hoặc có khó khăn trong nhận thức, làm chủ hành vi.
+                      - listitem [ref=f269e232]: Trường hợp các thành viên tự tổ chức dây họ thì chủ họ là người được hơn một nửa tổng số thành viên bầu, trừ trường hợp các thành viên có thỏa thuận khác.
+                    - paragraph [ref=f269e233]: Theo đó đối với chủ hụi thì pháp luật không cho phép người chưa thành niên trở thành chủ hụi mặc dù họ có tài sản riêng.
+                    - paragraph [ref=f269e234]:
+                      - img "Đối tượng tham gia chơi hụi có thể là ai?" [ref=f269e235]
+                    - paragraph [ref=f269e236]: Đối tượng tham gia chơi hụi
+                    - heading "Chơi hụi bị giật có kiện được không?" [level=2] [ref=f269e237]
+                    - paragraph [ref=f269e238]: Theo quy định tại Điều 25 Nghị định 19/2019/NĐ-CP có nêu đối với trường hợp có tranh chấp về hụi hoặc phát sinh từ hụi thì tranh chấp đó được giải quyết bằng thương lượng, hoà giải hoặc yêu cầu Tòa án giải quyết.
+                    - paragraph [ref=f269e239]: Do đó, việc chơi hụi bị giật hoàn toàn có thể khởi kiện tại Tòa án nhân dân có thẩm quyền.
+                    - paragraph [ref=f269e240]: "Cơ sở pháp lý: Điều 25 Nghị định 19/2019/NĐ-CP."
+                    - heading "Dấu hiệu pháp lý cấu thành đối với hành vi giật hụi" [level=2] [ref=f269e241]
+                    - heading "Tội lạm dụng tín nhiệm chiếm đoạt tài sản" [level=3] [ref=f269e242]
+                    - paragraph [ref=f269e243]:
+                      - text: Phạm
+                      - link [ref=f269e244] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/toi-lua-dao-chiem-doat-tai-san
+                        - strong [ref=f269e245]: tội lạm dụng tín nhiệm chiếm đoạt tài sản
+                      - text: "khi đáp ứng 02 điều kiện:"
+                    - paragraph [ref=f269e246]: "Thứ nhất, thực hiện một trong các hành vi sau:"
+                    - list [ref=f269e247]:
+                      - listitem [ref=f269e248]: Vay, mượn, thuê tài sản của người khác hoặc nhận được tài sản của người khác bằng hình thức hợp đồng rồi dùng thủ đoạn gian dối hoặc bỏ trốn để chiếm đoạt tài sản đó hoặc đến thời hạn trả lại tài sản mặc dù có điều kiện, khả năng nhưng cố tình không trả;
+                      - listitem [ref=f269e249]: Vay, mượn, thuê tài sản của người khác hoặc nhận được tài sản của người khác bằng hình thức hợp đồng và đã sử dụng tài sản đó vào mục đích bất hợp pháp dẫn đến không có khả năng trả lại tài sản.
+                    - paragraph [ref=f269e250]: "Thứ hai, giá trị tài sản chiếm đoạt thuộc các trường hợp:"
+                    - list [ref=f269e251]:
+                      - listitem [ref=f269e252]: Từ 4.000.000 đồng trở lên;
+                      - listitem [ref=f269e253]: Dưới 4.000.000 đồng nhưng có nhân thân xấu (từng phạm tội về tài sản, chưa được xóa án tích);
+                      - listitem [ref=f269e254]: Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ.
+                    - paragraph [ref=f269e255]: (Điều 175 Bộ luật Hình sự 2015, sửa đổi bổ sung 2017)
+                    - heading "Xử lý trách nhiệm hình sự" [level=3] [ref=f269e256]
+                    - list [ref=f269e257]:
+                      - listitem [ref=f269e258]: Tranh chấp về hụi thông thường được giải quyết theo pháp luật về dân sự, tuy nhiên, trường hợp chủ hụi có hành vi, thủ đoạn gian dối, bỏ trốn để chiếm đoạt tài sản thì có thể cấu thành tội phạm và bị truy cứu trách nhiệm hình sự.
+                      - listitem [ref=f269e259]:
+                        - text: Như vậy, hành vi giật tiền của chủ hụi hoàn toàn có thể phạm tội Lạm dụng tín nhiệm chiếm đoạt tài sản. Trong trường hợp thỏa mãn các điều kiện cấu thành tội này, người chơi hụi có quyền làm
+                        - link [ref=f269e260] [cursor=pointer]:
+                          - /url: https://luat24h.com.vn/mau-don-to-cao-lam-dung-tin-nhiem-chiem-doat-tai-san
+                          - strong [ref=f269e261]: Đơn tố cáo lạm dụng tín nhiệm chiếm đoạt tài sản
+                        - text: đến cơ quan công an để giải quyết.
+                      - listitem [ref=f269e262]: Khi đủ yếu tố cấu thành tội phạm, chủ hụi có thể bị phạt cải tạo không giam giữ đến 03 năm hoặc “phạt tù” từ 06 tháng đến 03 năm, thậm chí bị phạt tù nhiều hơn nếu có tình tiết tăng nặng hoặc giá trị tài sản quá lớn.
+                    - heading "Thủ tục khởi kiện đòi hụi" [level=2] [ref=f269e263]
+                    - paragraph [ref=f269e264]:
+                      - strong [ref=f269e265]: "Bước 1:"
+                      - text: Nộp hồ sơ khởi kiện đến Tòa án.
+                    - paragraph [ref=f269e266]:
+                      - strong [ref=f269e267]: "Bước 2:"
+                      - text: "Tòa án sẽ cấp ngay cho người khởi kiện giấy xác nhận đã nhận đơn. Trong vòng 03 ngày làm việc sau đó; Chánh án sẽ phân công Thẩm phán xem xét đơn khởi kiện và ra một trong các quyết định:"
+                    - list [ref=f269e268]:
+                      - listitem [ref=f269e269]:
+                        - text: Yêu cầu sửa đổi, bổ sung
+                        - strong [ref=f269e270]: đơn khởi kiện dân sự
+                        - text: ;
+                      - listitem [ref=f269e271]: Chuyển đơn khởi kiện cho Tòa án có thẩm quyền và thông báo cho người khởi kiện;
+                      - listitem [ref=f269e272]: Trả lại đơn khởi kiện nếu vụ việc không thuộc thẩm quyền giải quyết của Tòa án.
+                      - listitem [ref=f269e273]: Thụ lý vụ án. Thẩm phán phải thông báo ngay cho người khởi kiện để nộp tiền tạm ứng án phí.
+                    - paragraph [ref=f269e274]:
+                      - strong [ref=f269e275]: "Bước 3:"
+                      - text: Người khởi kiện phải nộp tiền tạm ứng án phí và nộp cho Tòa án biên lai trong vòng 07 ngày.
+                    - paragraph [ref=f269e276]:
+                      - strong [ref=f269e277]: "Bước 4:"
+                      - text: Vụ án được thụ lý và giải quyết vụ án theo đúng trình tự pháp luật.
+                    - paragraph [ref=f269e278]: "Cơ sở pháp lý: Điều 190, 191, 195 Bộ luật Tố tụng Dân sự 2015."
+                    - paragraph [ref=f269e279]:
+                      - strong [ref=f269e281]: ">> Xem thêm:"
+                      - link [ref=f269e282] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/thu-tuc-khoi-kien-doi-tien-choi-hui
+                        - strong [ref=f269e283]: Thủ tục khởi kiện đòi tiền chơi hụi bị chủ hụi giật
+                    - paragraph [ref=f269e284]:
+                      - img "Thủ tục khởi kiện đòi hụi" [ref=f269e285]
+                    - paragraph [ref=f269e286]: Thủ tục khởi kiện đòi hụi
+                    - heading "Giật hụi có thể chịu trách nhiệm hình sự không?" [level=2] [ref=f269e287]
+                    - paragraph [ref=f269e288]: Điều 25 Nghị định 19/2019/NĐ-CP Về họ, hụi, biêu, phường (Chính Phủ ban hành ngày 19 tháng 02 năm 2019) có đưa ra quy định đối với chủ hụi, thành viên, cá nhân, tổ chức liên quan có quyền đề nghị cơ quan có thẩm quyền xử lý vi phạm hành chính hoặc truy cứu trách nhiệm hình sự đối với người có hành vi cho vay lãi nặng, lừa đảo chiếm đoạt tài sản, lạm dụng tín nhiệm chiếm đoạt tài sản, huy động vốn trái pháp luật hoặc các hành vi vi phạm pháp luật khác khi tham gia quan hệ về hụi.
+                    - paragraph [ref=f269e289]: Do đó, việc chơi hụi bị giật cũng có khả năng chịu trách nhiệm hình sự về các tội lừa đảo chiếm đoạt tài sản, lạm dụng tín nhiệm chiếm đoạt tài sản, huy động vốn trái pháp luật hoặc các hành vi vi phạm pháp luật khác.
+                    - paragraph [ref=f269e290]: "Cơ sở pháp lý: Điều 25 Nghị định 19/2019/NĐ-CP của Chính Phủ, ngày 19 tháng 02 năm 2019 về họ, hụi, biêu, phường."
+                    - heading "Luật sư tư vấn hướng giải quyết khi chơi hụi bị giật" [level=2] [ref=f269e291]
+                    - paragraph [ref=f269e292]: "Luật sư giỏi dân sự sẽ tư vấn thủ tục khởi kiện khi bị giật hụi để bảo vệ quyền lợi khách hàng:"
+                    - list [ref=f269e293]:
+                      - listitem [ref=f269e294]: Giải đáp thắc mắc liên quan đến vấn đề chơi hụi bị giật;
+                      - listitem [ref=f269e295]: Hướng dẫn khách hàng hướng xử lý khi bị giật hụi;
+                      - listitem [ref=f269e296]: Thương lượng, đàm phán với bên giật hụi trong trường hợp có yêu cầu;
+                      - listitem [ref=f269e297]: Soạn thảo đơn từ khởi kiện và nộp cho cơ quan có thẩm quyền;
+                      - listitem [ref=f269e298]: Luật sư đại diện khách hàng tham gia tố tụng tại Tòa án để bảo vệ khách hàng.
+                    - paragraph [ref=f269e299]:
+                      - strong [ref=f269e301]: ">> Xem thêm:"
+                      - link [ref=f269e302] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/luat-su-bao-chua-bao-ve-trong-vu-an-lua-dao-chiem-doat-tai-san
+                        - strong [ref=f269e303]: Vai trò luật sư bào chữa, bảo vệ trong vụ án lừa đảo chiếm đoạt tài sản
+                    - paragraph [ref=f269e304]:
+                      - text: Người
+                      - link [ref=f269e305] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/tag/giat-hui
+                        - strong [ref=f269e306]: giật hụi
+                      - text: phải chịu trách nhiệm pháp lý đối với hành vi vi phạm pháp luật của mình. Do đó, mỗi người cần trang bị cho mình kiến thức pháp luật vững chắc để quyền lợi của mình được bảo vệ đúng theo quy định pháp luật. Trong trường hợp cần
+                      - link "hướng dẫn thủ tục khởi kiện đòi tiền chơi hụi bị chủ hụi giật" [ref=f269e307] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/thu-tuc-khoi-kien-doi-tien-choi-hui
+                      - text: có thắc mắc cần giải đáp, đừng ngần ngại liên hệ với Đội ngũ luật sư chuyên về
+                      - link [ref=f269e308] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/tu-van-luat/dan-su
+                        - strong [ref=f269e309]: tư vấn luật dân sự
+                      - text: và hình sự của Luật L24H của chúng tôi qua Hotline
+                      - link [ref=f269e310] [cursor=pointer]:
+                        - /url: tel:1900633716
+                        - strong [ref=f269e311]: 1900.633.716
+                      - text: để được hỗ trợ giải đáp miễn phí.
+                    - generic [ref=f269e312]:
+                      - generic [ref=f269e313] [cursor=pointer]:
+                        - button "★ ☆" [ref=f269e314]
+                        - text: ★ ☆
+                        - button "★ ☆" [ref=f269e315]
+                        - text: ★ ☆
+                        - button "★ ☆" [ref=f269e316]
+                        - text: ★ ☆
+                        - button "★ ☆" [ref=f269e317]
+                        - text: ★ ☆
+                        - button "★ ☆" [ref=f269e318]
+                        - text: ★ ☆
+                      - paragraph [ref=f269e319]: "Scores: 4.67 (50 votes)"
+                  - generic [ref=f269e322]:
+                    - text: 
+                    - link "Share on Facebook" [ref=f269e323] [cursor=pointer]:
+                      - /url: https://www.facebook.com/sharer.php?u=https://luat24h.com.vn/choi-hui-bi-giat-co-kien-duoc-khong
+                      - generic [ref=f269e324]: 
+                    - link "Share on Twitter" [ref=f269e325] [cursor=pointer]:
+                      - /url: https://twitter.com/share?url=https://luat24h.com.vn/choi-hui-bi-giat-co-kien-duoc-khong
+                      - generic [ref=f269e326]: 
+                    - link "Email to a Friend" [ref=f269e327] [cursor=pointer]:
+                      - /url: mailto:enteryour@addresshere.com?subject=Ch%C6%A1i%20h%E1%BB%A5i%20b%E1%BB%8B%20gi%E1%BA%ADt%20c%C3%B3%20ki%E1%BB%87n%20%C4%91%C6%B0%E1%BB%A3c%20kh%C3%B4ng%3F%20Th%E1%BB%A7%20t%E1%BB%A5c%20kh%E1%BB%9Fi%20ki%E1%BB%87n%20%C4%91%C3%B2i%20ti%E1%BB%81n%20h%E1%BB%A5i&body=Check%20this%20out:%20https://luat24h.com.vn/choi-hui-bi-giat-co-kien-duoc-khong
+                      - generic [ref=f269e328]: 
+                    - link "Pin on Pinterest" [ref=f269e329] [cursor=pointer]:
+                      - /url: https://pinterest.com/pin/create/button/?url=https://luat24h.com.vn/choi-hui-bi-giat-co-kien-duoc-khong&media=https://luat24h.com.vn/wp-content/uploads/2022/11/choi-hui-bi-giat-co-kien-doi-duoc-khong.jpg&description=Ch%C6%A1i%20h%E1%BB%A5i%20b%E1%BB%8B%20gi%E1%BA%ADt%20c%C3%B3%20ki%E1%BB%87n%20%C4%91%C6%B0%E1%BB%A3c%20kh%C3%B4ng%3F%20Th%E1%BB%A7%20t%E1%BB%A5c%20kh%E1%BB%9Fi%20ki%E1%BB%87n%20%C4%91%C3%B2i%20ti%E1%BB%81n%20h%E1%BB%A5i
+                      - generic [ref=f269e330]: 
+                    - link "Share on LinkedIn" [ref=f269e331] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/shareArticle?mini=true&url=https://luat24h.com.vn/choi-hui-bi-giat-co-kien-duoc-khong&title=Ch%C6%A1i%20h%E1%BB%A5i%20b%E1%BB%8B%20gi%E1%BA%ADt%20c%C3%B3%20ki%E1%BB%87n%20%C4%91%C6%B0%E1%BB%A3c%20kh%C3%B4ng%3F%20Th%E1%BB%A7%20t%E1%BB%A5c%20kh%E1%BB%9Fi%20ki%E1%BB%87n%20%C4%91%C3%B2i%20ti%E1%BB%81n%20h%E1%BB%A5i
+                      - generic [ref=f269e332]: 
+                - generic [ref=f269e333]:
+                  - strong [ref=f269e334]:
+                    - text: "Chủ đề:"
+                    - link "Luật sư tư vấn xử lý về chủ đề \"Giật hụi\"" [ref=f269e335] [cursor=pointer]:
+                      - /url: https://luat24h.com.vn/tag/giat-hui
+                  - heading "Bài viết cùng chủ đề" [level=2] [ref=f269e336]
+                  - list [ref=f269e337]:
+                    - listitem [ref=f269e338]:
+                      - link "Lãi suất trong trường hợp chậm góp, chậm giao tiền hụi là bao nhiêu?" [ref=f269e339] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/lai-suat-trong-truong-hop-cham-gop-cham-giao-tien-hui
+                    - listitem [ref=f269e340]:
+                      - link "Chơi hụi bị chủ hụi giật tiền thì phải làm gì?" [ref=f269e341] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/choi-hui-bi-chu-hui-giat-tien-thi-phai-lam-gi
+                    - listitem [ref=f269e342]:
+                      - link "Hướng dẫn thủ tục khởi kiện đòi tiền chơi hụi bị chủ hụi giật" [ref=f269e343] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/thu-tuc-khoi-kien-doi-tien-choi-hui
+                    - listitem [ref=f269e344]:
+                      - link "Dịch vụ luật sư khởi kiện chủ hụi đòi tiền chơi hụi bị giật" [ref=f269e345] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/luat-su-khoi-kien-chu-hui-doi-tien-choi-hui-bi-giat
+                    - listitem [ref=f269e346]:
+                      - link "Cần làm gì khi chủ hụi ôm tiền bỏ trốn? hướng dẫn tố cáo, khởi kiện" [ref=f269e347] [cursor=pointer]:
+                        - /url: https://luat24h.com.vn/can-lam-gi-khi-chu-hui-om-tien-bo-tron
+                - generic [ref=f269e348]:
+                  - heading [level=5] [ref=f269e349]:
+                    - text: Bài viết được thực hiện bởi
+                    - link "Luật Sư Võ Tấn Lộc" [ref=f269e350] [cursor=pointer]:
+                      - /url: https://luat24h.com.vn/luat-su/luat-su-vo-tan-loc
+                  - generic [ref=f269e351]:
+                    - link [ref=f269e353] [cursor=pointer]:
+                      - /url: https://luat24h.com.vn/luat-su/luat-su-vo-tan-loc
+                      - img "Luật Sư Võ Tấn Lộc" [ref=f269e354]
+                    - generic [ref=f269e355]:
+                      - paragraph [ref=f269e356]:
+                        - generic [ref=f269e357]:
+                          - generic [ref=f269e358]: 
+                          - text: "Chức vụ:"
+                        - text: Luật sư thành viên
+                      - paragraph [ref=f269e359]:
+                        - generic [ref=f269e360]:
+                          - generic [ref=f269e361]: 
+                          - text: "Lĩnh vực tư vấn:"
+                        - text: Đất Đai, Hình Sự, Dân Sự, Hành Chính, Lao Động, Doanh Nghiệp, Thương Mại, Hợp đồng, Thừa kế, Tranh Tụng, Bào Chữa và một số vấn đề liên quan pháp luật khác
+                      - paragraph [ref=f269e362]:
+                        - generic [ref=f269e363]:
+                          - generic [ref=f269e364]: 
+                          - text: "Trình độ đào tạo:"
+                        - text: Đại học Luật, Luật sư
+                      - paragraph [ref=f269e365]:
+                        - generic [ref=f269e366]:
+                          - generic [ref=f269e367]: 
+                          - text: "Số năm kinh nghiệm thực tế:"
+                        - text: 8 năm
+                      - paragraph [ref=f269e368]:
+                        - generic [ref=f269e369]:
+                          - generic [ref=f269e370]: 
+                          - text: "Tổng số bài viết:"
+                        - text: 2,091 bài viết
+                - generic [ref=f269e374]:
+                  - link "Tư vấn luật qua Email" [ref=f269e376] [cursor=pointer]:
+                    - /url: /tu-van-phap-luat-qua-email
+                  - link "Báo giá trọn gói vụ việc" [ref=f269e379] [cursor=pointer]:
+                    - /url: /lien-he
+                  - link "Đặt lịch hẹn luật sư" [ref=f269e382] [cursor=pointer]:
+                    - /url: /lien-he
+            - generic [ref=f269e385]:
+              - heading "Trả lời" [level=3] [ref=f269e386]
+              - generic [ref=f269e387]:
+                - paragraph [ref=f269e388]:
+                  - text: Email của bạn sẽ không được hiển thị công khai.
+                  - generic [aria-hidden] [ref=f269e389]: Các trường bắt buộc được đánh dấu *
+                - paragraph [ref=f269e390]:
+                  - generic [ref=f269e391]: Tên *
+                  - textbox "Tên" [ref=f269e392]
+                - paragraph [ref=f269e393]:
+                  - generic [ref=f269e394]: Email *
+                  - textbox "Email" [ref=f269e395]
+                - paragraph [ref=f269e396]:
+                  - generic [ref=f269e397]: Điện Thoại *
+                  - spinbutton "Điện Thoại *" [ref=f269e398]
+                - paragraph [ref=f269e399]:
+                  - generic [ref=f269e400]: Bình luận *
+                  - textbox "Bình luận" [ref=f269e401]
+                - paragraph [ref=f269e402]:
+                  - button "Phản hồi" [ref=f269e403] [cursor=pointer]
+          - complementary [ref=f269e405]:
+            - complementary [ref=f269e406]:
+              - generic [ref=f269e407]: Bài viết liên quan
+              - list [ref=f269e409]:
+                - listitem [ref=f269e410]:
+                  - link:
+                    - /url: https://luat24h.com.vn/thoi-han-de-nop-don-de-nghi-giam-doc-tham-trong-vu-an-dan-su
+                  - generic [ref=f269e411]:  16 Tháng Bảy, 2025
+                  - link "Thời hạn để nộp đơn đề nghị giám đốc thẩm trong vụ án dân sự là bao lâu?" [ref=f269e412] [cursor=pointer]:
+                    - /url: https://luat24h.com.vn/thoi-han-de-nop-don-de-nghi-giam-doc-tham-trong-vu-an-dan-su
+                  - text: Thời hạn để nộp đơn đề nghị giám đốc thẩm trong vụ án dân sự được...
+                - listitem [ref=f269e413]:
+                  - link:
+                    - /url: https://luat24h.com.vn/nhung-truong-hop-tang-cho-duoc-mien-thue-tncn
+                  - generic [ref=f269e414]:  17 Tháng Sáu, 2025
+                  - link "Những trường hợp tặng cho được miễn thuế TNCN?" [ref=f269e415] [cursor=pointer]:
+                    - /url: https://luat24h.com.vn/nhung-truong-hop-tang-cho-duoc-mien-thue-tncn
+                  - text: Những trường hợp tặng cho được miễn thuế TNCN là vấn đề được nhiều...
+                - listitem [ref=f269e416]:
+                  - link:
+                    - /url: https://luat24h.com.vn/su-dung-trai-phep-tai-san-cua-nguoi-khac-bi-xu-ly-the-nao
+                  - generic [ref=f269e417]:  24 Tháng Năm, 2025
+                  - link "Sử dụng trái phép tài sản của người khác bị xử lý thế nào?" [ref=f269e418] [cursor=pointer]:
+                    - /url: https://luat24h.com.vn/su-dung-trai-phep-tai-san-cua-nguoi-khac-bi-xu-ly-the-nao
+                  - text: Sử dụng trái phép tài sản của người khác bị xử lý thế nào là câu hỏi...
+                - listitem [ref=f269e419]:
+                  - link:
+                    - /url: https://luat24h.com.vn/chu-tro-co-duoc-tu-y-vao-phong-cua-nguoi-thue-khong
+                  - generic [ref=f269e420]:  23 Tháng Năm, 2025
+                  - link "Chủ trọ có được tự ý vào phòng của người thuê không?" [ref=f269e421] [cursor=pointer]:
+                    - /url: https://luat24h.com.vn/chu-tro-co-duoc-tu-y-vao-phong-cua-nguoi-thue-khong
+                  - text: Chủ trọ có được tự ý vào phòng của người thuê không? hiện nay có không ít...
+                - listitem [ref=f269e422]:
+                  - link:
+                    - /url: https://luat24h.com.vn/cac-truong-hop-dinh-chi-giai-quyet-khieu-nai
+                  - generic [ref=f269e423]:  15 Tháng Năm, 2025
+                  - link "Các trường hợp đình chỉ giải quyết khiếu nại" [ref=f269e424] [cursor=pointer]:
+                    - /url: https://luat24h.com.vn/cac-truong-hop-dinh-chi-giai-quyet-khieu-nai
+                  - text: Các trường hợp đình chỉ giải quyết khiếu nại đã được quy định rõ ràng...
+                - listitem [ref=f269e425]:
+                  - link:
+                    - /url: https://luat24h.com.vn/mua-nha-vi-bang-co-vay-ngan-hang-duoc-khong
+                  - generic [ref=f269e426]:  19 Tháng Tư, 2025
+                  - link "Mua nhà vi bằng có vay ngân hàng được không?" [ref=f269e427] [cursor=pointer]:
+                    - /url: https://luat24h.com.vn/mua-nha-vi-bang-co-vay-ngan-hang-duoc-khong
+                  - text: Mua nhà vi bằng có vay ngân hàng được không là câu hỏi quan trọng mà nhiều Quý...
+                - listitem [ref=f269e428]:
+                  - link:
+                    - /url: https://luat24h.com.vn/dieu-kien-de-duoc-cap-chung-chi-hanh-nghe-dieu-duong
+                  - generic [ref=f269e429]:  18 Tháng Tư, 2025
+                  - link "Điều kiện để được cấp chứng chỉ hành nghề điều dưỡng" [ref=f269e430] [cursor=pointer]:
+                    - /url: https://luat24h.com.vn/dieu-kien-de-duoc-cap-chung-chi-hanh-nghe-dieu-duong
+                  - text: Điều kiện để được cấp chứng chỉ hành nghề điều dưỡng là nội dung quan...
+                - listitem [ref=f269e431]:
+                  - link:
+                    - /url: https://luat24h.com.vn/bao-luu-quyen-so-huu
+                  - generic [ref=f269e432]:  27 Tháng Ba, 2025
+                  - link "Bảo lưu quyền sở hữu là gì" [ref=f269e433] [cursor=pointer]:
+                    - /url: https://luat24h.com.vn/bao-luu-quyen-so-huu
+                  - text: Bảo lưu quyền sở hữu khi các bên trong hợp đồng mua bán cho đến khi bên mua...
+    - contentinfo [ref=f269e434]:
+      - generic [ref=f269e436]:
+        - generic [ref=f269e437]:
+          - text: Giới thiệu
+          - generic [ref=f269e439]:
+            - paragraph [ref=f269e440]:
+              - strong [ref=f269e441]: Văn Phòng Luật L24H
+              - text: cung cấp dịch vụ luật sư, tư vấn pháp luật trực tuyến 24/24 miễn phí toàn quốc. Chúng tôi hoạt động với phương châm "Kịp Thời - Tận Tâm - Hiệu Quả".
+            - paragraph [ref=f269e442]:
+              - text: "Hotline:"
+              - link "1900.633.716" [ref=f269e443] [cursor=pointer]:
+                - /url: tel:1900633716
+            - paragraph [ref=f269e444]: "Địa chỉ: 39 Nguyễn Văn Công, Phường 15, Quận Gò Vấp. TP.HCM"
+            - paragraph [ref=f269e445]: "Trụ sở: 412 Nguyễn Thị Minh Khai, Phường 5, Quận 3, TP.HCM"
+            - paragraph [ref=f269e446]: "Văn phòng tại Hà Nội: Tầng 6 tòa nhà MD Complex, số 68 Nguyễn Cơ Thạch, phường Cầu Diễn, quận Từ Liêm, Tp. Hà Nội"
+            - paragraph [ref=f269e447]: "Văn phòng tại TP. Cần Thơ: 207 Nguyễn Tri Phương, Khu vực 1, phường An Khánh, quận Ninh Kiều, TP. Cần Thơ"
+            - paragraph [ref=f269e448]:
+              - text: "Email:"
+              - link "info@luat24h.com.vn" [ref=f269e449] [cursor=pointer]:
+                - /url: "mailto:info@luat24h.com.vn "
+            - paragraph [ref=f269e450]:
+              - text: "Website:"
+              - link "luat24h.com.vn" [ref=f269e451] [cursor=pointer]:
+                - /url: "https://luat24h.com.vn/ "
+            - paragraph [ref=f269e452]:
+              - generic [aria-hidden] [ref=f269e453]: 
+              - link "Chính sách bảo mật" [ref=f269e454] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/chinh-sach-bao-mat
+        - generic [ref=f269e455]:
+          - text: Tư vấn pháp luật online 24/24
+          - list [ref=f269e458]:
+            - listitem [ref=f269e459]:
+              - link "Tư vấn luật miễn phí qua điện thoại" [ref=f269e460] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat
+            - listitem [ref=f269e461]:
+              - link "Tư vấn pháp luật miễn phí qua Zalo" [ref=f269e462] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-phap-luat-qua-zalo
+            - listitem [ref=f269e463]:
+              - link "Tư vấn pháp luật qua Facebook" [ref=f269e464] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-phap-luat-mien-phi-qua-facebook
+            - listitem [ref=f269e465]:
+              - link "Tư vấn luật đất đai" [ref=f269e466] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat/dat-dai
+            - listitem [ref=f269e467]:
+              - link "Tư vấn luật hình sự" [ref=f269e468] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat/hinh-su
+            - listitem [ref=f269e469]:
+              - link "Tư vấn luật hôn nhân gia đình" [ref=f269e470] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat/hon-nhan-gia-dinh
+            - listitem [ref=f269e471]:
+              - link "Tư vấn ly hôn" [ref=f269e472] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-ly-hon
+            - listitem [ref=f269e473]:
+              - link "Tư vấn luật dân sự" [ref=f269e474] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat/dan-su
+            - listitem [ref=f269e475]:
+              - link "Tư vấn luật thừa kế" [ref=f269e476] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat/thua-ke
+            - listitem [ref=f269e477]:
+              - link "Tư vấn luật lao động" [ref=f269e478] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat/lao-dong
+            - listitem [ref=f269e479]:
+              - link "Tư vấn luật doanh nghiệp" [ref=f269e480] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat/doanh-nghiep
+            - listitem [ref=f269e481]:
+              - link "Tư vấn luật sở hữu trí tuệ" [ref=f269e482] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat/so-huu-tri-tue
+            - listitem [ref=f269e483]:
+              - link "Tư vấn luật đấu thầu" [ref=f269e484] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat-dau-thau
+        - generic [ref=f269e485]:
+          - text: Dịch vụ luật sư
+          - list [ref=f269e488]:
+            - listitem [ref=f269e489]:
+              - link "Luật sư tranh tụng" [ref=f269e490] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/dich-vu-luat-su-tranh-tung
+            - listitem [ref=f269e491]:
+              - link "Luật sư bào chữa" [ref=f269e492] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/dich-vu-luat-su-bao-chua
+            - listitem [ref=f269e493]:
+              - link "Luật sư nhà đất" [ref=f269e494] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/dich-vu-luat-su-nha-dat
+            - listitem [ref=f269e495]:
+              - link "Luật sư hình sự" [ref=f269e496] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/dich-vu-luat-su-hinh-su
+            - listitem [ref=f269e497]:
+              - link "Luật sư dân sự" [ref=f269e498] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/dich-vu-luat-su-dan-su
+            - listitem [ref=f269e499]:
+              - link "Luật sư lao động" [ref=f269e500] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/dich-vu-luat-su-lao-dong
+            - listitem [ref=f269e501]:
+              - link "Dịch vụ ly hôn" [ref=f269e502] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/dich-vu-ly-hon
+            - listitem [ref=f269e503]:
+              - link "Luật sư doanh nghiệp" [ref=f269e504] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/dich-vu-luat-su-rieng-cho-doanh-nghiep
+            - listitem [ref=f269e505]:
+              - link "Luật sư sở hữu trí tuệ" [ref=f269e506] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/dich-vu-luat-su-so-huu-tri-tue
+            - listitem [ref=f269e507]:
+              - link "Soạn thảo hợp đồng" [ref=f269e508] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tu-van-luat/hop-dong
+            - listitem [ref=f269e509]:
+              - link "Dịch vụ luật sư tại Cần Thơ" [ref=f269e510] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tag/dich-vu-luat-su-tai-can-tho
+            - listitem [ref=f269e511]:
+              - link "Dịch vụ luật sư tại Hà Nội" [ref=f269e512] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/tag/dich-vu-luat-su-tai-ha-noi
+            - listitem [ref=f269e513]:
+              - link "Giá thuê luật sư" [ref=f269e514] [cursor=pointer]:
+                - /url: https://luat24h.com.vn/gia-thue-luat-su
+        - generic [ref=f269e515]:
+          - text: Bài Viết Nhiều Người Quan Tâm
+          - generic [ref=f269e517]:
+            - list [ref=f269e518]:
+              - listitem [ref=f269e519]:
+                - link "bị lừa tiền qua mạng báo ai" [ref=f269e520] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/bi-lua-tien-qua-mang
+              - listitem [ref=f269e521]:
+                - link "khi bị lừa đảo vay tiền online phải làm sao" [ref=f269e522] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/khi-bi-lua-dao-vay-tien-online-phai-lam-sao
+              - listitem [ref=f269e523]:
+                - link "cách lấy lại tiền khi bị lừa đảo trên mạng" [ref=f269e524] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/cach-lay-lai-tien-khi-bi-lua-dao-tren-mang
+              - listitem [ref=f269e525]:
+                - link "tranh chấp đất đai về cấp chồng lấn" [ref=f269e526] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/giai-quyet-tranh-chap-dat-dai-ve-cap-chong-lan
+              - listitem [ref=f269e527]:
+                - link "đất đã có sổ đỏ có tranh chấp được không" [ref=f269e528] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dat-da-co-so-do-co-tranh-chap-duoc-khong
+              - listitem [ref=f269e529]:
+                - link "tự ý sang tên sổ đỏ khi bố mẹ đã mất" [ref=f269e530] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/tu-y-sang-ten-so-do-khi-bo-me-da-mat
+              - listitem [ref=f269e531]:
+                - link "cố ý gây thương tích có tổ chức" [ref=f269e532] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/co-y-gay-thuong-tich-co-to-chuc
+              - listitem [ref=f269e533]:
+                - link "bị đe dọa tung ảnh nóng" [ref=f269e534] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/bi-de-doa-tung-anh-nong-can-lam-gi
+              - listitem [ref=f269e535]:
+                - link "chồng chết vợ có được hưởng thừa kế của bố mẹ chồng" [ref=f269e536] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/chong-chet-vo-co-duoc-huong-thua-ke-cua-bo-me-chong
+              - listitem [ref=f269e537]:
+                - link "tội ghi lô đề" [ref=f269e538] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/toi-ghi-lo-so-de
+              - listitem [ref=f269e539]:
+                - link "mẫu đơn yêu cầu bồi thường gây thương tích" [ref=f269e540] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/mau-don-yeu-cau-boi-thuong-gay-thuong-tich
+              - listitem [ref=f269e541]:
+                - link "dịch vụ làm giấy đăng ký kết hôn với người nước ngoài" [ref=f269e542] [cursor=pointer]:
+                  - /url: https://luat24h.com.vn/dich-vu-dang-ky-ket-hon-voi-nguoi-nuoc-ngoai
+            - generic [ref=f269e543]: Kết nối với Luật L24H
+            - generic [ref=f269e545]:
+              - link "Follow on Facebook" [ref=f269e546] [cursor=pointer]:
+                - /url: https://www.facebook.com/LuatL24H
+                - generic [ref=f269e547]: 
+              - link "Follow on Twitter" [ref=f269e548] [cursor=pointer]:
+                - /url: https://twitter.com/i/events/1364834616859795461
+                - generic [ref=f269e549]: 
+              - link "Subscribe to RSS" [ref=f269e550] [cursor=pointer]:
+                - /url: http://feeds2.feedburner.com/luatl24h
+                - generic [ref=f269e551]: 
+              - link "Follow on LinkedIn" [ref=f269e552] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/luatl24h
+                - generic [ref=f269e553]: 
+              - link "Flickr" [ref=f269e554] [cursor=pointer]:
+                - /url: https://www.flickr.com/people/vanphongluatl24h/
+                - generic [ref=f269e555]: 
+      - generic [ref=f269e557]:
+        - generic [ref=f269e559]:
+          - text: "LIÊN HỆ TƯ VẤN PHÁP LUẬT MIỄN PHÍ:"
+          - link "1900.633.716" [ref=f269e560] [cursor=pointer]:
+            - /url: tel:1900633716
+        - generic [ref=f269e561]: Copyright 2026 © Văn Phòng Luật L24H All rights reserved.
+      - link "Go to top":
+        - /url: "#top"
+        - generic: 
+  - text:    
+  - 'link "Tư vấn miễn phí gọi: 1900.633.716" [ref=f269e563] [cursor=pointer]':
+    - /url: tel:1900633716

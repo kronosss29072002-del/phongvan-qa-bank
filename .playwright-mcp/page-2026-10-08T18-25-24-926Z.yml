@@ -1,0 +1,290 @@
+- generic [active] [ref=f52e1]:
+  - generic:
+    - dialog:
+      - generic [ref=f52e2]:
+        - generic [ref=f52e3]:
+          - paragraph
+        - generic [ref=f52e5]:
+          - generic [ref=f52e6]:
+            - generic [ref=f52e7]: Microsoft and our third-party vendors use cookies and similar technologies to deliver, maintain, and improve our services and ads. If you agree, we will use this data for ads personalization and associated analytics.
+            - generic [ref=f52e8]:
+              - text: You can select ‘Accept’ to consent to these uses, ‘Reject’ to decline these uses or click on ‘More options’ to review your options. You can change your selection under ‘Manage Cookie Preferences’ at the bottom of this page.
+              - link "Privacy Statement" [ref=f52e9] [cursor=pointer]:
+                - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+          - generic [ref=f52e10]:
+            - link "Accept" [ref=f52e12] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+            - link "Reject" [ref=f52e14] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+            - link "More options" [ref=f52e15] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+  - banner [ref=f52e16]:
+    - button "Skip to content" [ref=f52e17] [cursor=pointer]
+    - button "Accessibility Feedback" [ref=f52e20] [cursor=pointer]
+    - generic [ref=f52e23]:
+      - link [ref=f52e24] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Back to Bing search" [level=1] [ref=f52e25]
+      - search [ref=f52e26]:
+        - button "Search" [ref=f52e29] [cursor=pointer]
+        - searchbox "Enter your search here - Search suggestions will show as you type" [ref=f52e30]: bé bỏ quên trên ô tô đưa đón trường mạm non vnexpress
+        - generic [ref=f52e31] [cursor=pointer]
+        - button "Search using an image" [ref=f52e36] [cursor=pointer]
+      - link [ref=f52e38] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=321523e83d86b29dadb60a0d58d2cb7ab00caef724353e56168efeec2258c845JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT1iJWMzJWE5K2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbislYzMlYjQrdCVjMyViNCslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24rdHIlYzYlYjAlZTElYmIlOWRuZyttJWUxJWJhJWExbStub24rdm5leHByZXNzJnNlbmRxdWVyeT0xJmZvcm09SEVDT0RY&ntb=1
+        - button "Chat with Copilot" [ref=f52e39]
+    - complementary "Account Rewards and Preferences" [ref=f52e41]:
+      - link "Sign in" [ref=f52e42] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f52e44] [cursor=pointer]
+    - navigation "Search Filter" [ref=f52e45]:
+      - list [ref=f52e46]:
+        - listitem [ref=f52e47]:
+          - link "All" [ref=f52e48] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f52e50]:
+          - link "Web" [ref=f52e51] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=3c8e54cae0ba3420425e308f74fc9565d6ed252c0c9c8a4c29696a7eae9e5d1fJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPWIlYzMlYTkrYiVlMSViYiU4ZitxdSVjMyVhYW4rdHIlYzMlYWFuKyVjMyViNCt0JWMzJWI0KyVjNCU5MSVjNiViMGErJWM0JTkxJWMzJWIzbit0ciVjNiViMCVlMSViYiU5ZG5nK20lZTElYmElYTFtK25vbit2bmV4cHJlc3Mmd2Vic2NwPTEmRk9STT1IRFJXU0M&ntb=1
+        - listitem [ref=f52e52]:
+          - link "Search" [ref=f52e53] [cursor=pointer]:
+            - /url: /copilotsearch?q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&FORM=CSSCOP
+        - listitem [ref=f52e56]:
+          - link "Images" [ref=f52e57] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9528cc8e68cefa2c78df42b1c8ddb06ef377fc91e02a29dc9cbc5b1f9fde5336JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1iJWMzJWE5K2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbislYzMlYjQrdCVjMyViNCslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24rdHIlYzYlYjAlZTElYmIlOWRuZyttJWUxJWJhJWExbStub24rdm5leHByZXNzJkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=f52e58]:
+          - link "Videos" [ref=f52e59] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=637bcf57136ccffd12064dd2cd1ed4f938de61cfb0b3b7d379f7d50f244610b4JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT1iJWMzJWE5K2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbislYzMlYjQrdCVjMyViNCslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24rdHIlYzYlYjAlZTElYmIlOWRuZyttJWUxJWJhJWExbStub24rdm5leHByZXNzJkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=f52e60]:
+          - link "Maps" [ref=f52e61] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9371e0cce6a5046bea39a4ee72aa5973fd105898a6fa263f687408d01b964923JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT1iJWMzJWE5K2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbislYzMlYjQrdCVjMyViNCslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24rdHIlYzYlYjAlZTElYmIlOWRuZyttJWUxJWJhJWExbStub24rdm5leHByZXNzJkZPUk09SERSU0M2&ntb=1
+        - listitem [ref=f52e62]:
+          - button [ref=f52e63] [cursor=pointer]
+  - generic [ref=f52e67]:
+    - main "Search Results" [ref=f52e68]:
+      - list [ref=f52e69]:
+        - listitem [ref=f52e70]:
+          - generic [ref=f52e78]:
+            - generic [ref=f52e81]:
+              - generic [ref=f52e83]:
+                - button "Like" [ref=f52e84]
+                - button "Dislike" [ref=f52e87]
+              - generic [ref=f52e94]:
+                - text: SKĐS - Mới đây, TAND TP Thái Bình (tỉnh Thái Bình) đã mở phiên toà xét xử và tuyên phạt 4 bị cáo trong vụ
+                - strong [ref=f52e95]: trẻ mầm non
+                - text: 5 tuổi tử vong do bị
+                - strong [ref=f52e96]: bỏ quên
+                - text: trên xe
+                - strong [ref=f52e97]: ô tô đưa đón
+                - text: của
+                - strong [ref=f52e98]: Trường Mầm non
+                - text: Hồng Nhung cơ sở 2.
+              - link "Báo Sức khỏe & Đời sống Tuyên án vụ cháu bé 5 tuổi tử vong thương tâm do bị 'bỏ quên' trong ô ... SKĐS - Mới đây, TAND TP Thái Bình (tỉnh Thái Bình) đã mở phiên toà xét xử và tuyên phạt 4 bị cáo trong vụ trẻ mầm non 5 tuổi tử vong do bị bỏ quên trên xe ô tô đưa đón của Trường M…" [ref=f52e102] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=85791e2cd531956cd69f4d182100a45127fee724f7e59c22add89dd16a76117bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9zdWNraG9lZG9pc29uZy52bi90dXllbi1hbi12dS1jaGF1LWJlLTUtdHVvaS10dS12b25nLXRodW9uZy10YW0tZG8tYmktYm8tcXVlbi10cm9uZy1vLXRvLWR1YS1kb24tby10aGFpLWJpbmgtMTY5MjQxMTI3MDYxMjU0MzA0Lmh0bSM6fjp0ZXh0PVNLJUM0JTkwUyUyMC0lMjBNJUUxJUJCJTlCaSUyMCVDNCU5MSVDMyVBMnklMkMlMjBUQU5EJTIwVFAlMjBUaCVDMyVBMWklMjBCJUMzJUFDbmgsVHIlQzYlQjAlRTElQkIlOURuZyUyME0lRTElQkElQTdtJTIwbm9uJTIwSCVFMSVCQiU5M25nJTIwTmh1bmclMjBjJUM2JUExJTIwcyVFMSVCQiU5RiUyMDIu&ntb=1
+                - generic [ref=f52e103]:
+                  - generic [ref=f52e104]: Báo Sức khỏe & Đời sống
+                  - generic [ref=f52e108]: Tuyên án vụ cháu bé 5 tuổi tử vong thương tâm do bị 'bỏ quên' trong ô ...
+                  - generic: SKĐS - Mới đây, TAND TP Thái Bình (tỉnh Thái Bình) đã mở phiên toà xét xử và tuyên phạt 4 bị cáo trong vụ trẻ mầm non 5 tuổi tử vong do bị bỏ quên trên xe ô tô đưa đón của Trường M…
+            - status
+        - listitem [ref=f52e111]:
+          - link "VnExpress" [ref=f52e113] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=31c99bb6f38a1003396180c7f8d7359bfbd955a0260fce970f8902ccadb6e1f0JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92bmV4cHJlc3MubmV0L2tob2ktdG8tdnUtYW4tdHJlLW1hbS1ub24tdHUtdm9uZy12aS1iaS1iby1xdWVuLXRyZW4teGUtNDc1MjExOS5odG1s&ntb=1
+            - generic [ref=f52e118]:
+              - generic [ref=f52e119]: VnExpress
+              - generic [ref=f52e121]:
+                - generic [ref=f52e122]: https://vnexpress.net
+                - generic [ref=f52e123]: Translate this result
+          - heading [level=2] [ref=f52e124]:
+            - link "Khởi tố vụ án trẻ mầm non tử vong vì bị bỏ quên trên xe ở Thái Bình" [ref=f52e125] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=31c99bb6f38a1003396180c7f8d7359bfbd955a0260fce970f8902ccadb6e1f0JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92bmV4cHJlc3MubmV0L2tob2ktdG8tdnUtYW4tdHJlLW1hbS1ub24tdHUtdm9uZy12aS1iaS1iby1xdWVuLXRyZW4teGUtNDc1MjExOS5odG1s&ntb=1
+          - paragraph [ref=f52e127]: May 29, 2024 · Công an khởi tố vụ án vô ý làm chết người và sẽ xem xét tội thiếu trách nhiệm để làm rõ những người liên quan việc …
+        - listitem [ref=f52e128]:
+          - generic [ref=f52e129]:
+            - heading [level=2] [ref=f52e130]:
+              - link "Images of bé bỏ quên trên ô tô đưa đón trường Mạm non VnExpress" [ref=f52e131] [cursor=pointer]:
+                - /url: https://www.bing.com/ck/a?!&&p=d7962edeee9a4fd01d33d68867de8f8348e02529b5b7e3fe752cfcee55972645JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1iJWMzJWE5K2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbislYzMlYjQrdCVjMyViNCslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24rdHIlYzYlYjAlZTElYmIlOWRuZyttJWUxJWJhJWExbStub24rdm5leHByZXNzJnFwdnQ9YiVjMyVhOStiJWUxJWJiJThmK3F1JWMzJWFhbit0ciVjMyVhYW4rJWMzJWI0K3QlYzMlYjQrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK3RyJWM2JWIwJWUxJWJiJTlkbmcrbSVlMSViYSVhMW0rbm9uK3ZuZXhwcmVzcyZGT1JNPUlHUkU&ntb=1
+              - navigation "Related searches" [ref=f52e136]:
+                - list "Please use arrow keys to navigate" [ref=f52e142]:
+                  - listitem [ref=f52e143]:
+                    - link "Xe Đưa Đón Học Sinh" [ref=f52e144] [cursor=pointer]:
+                      - /url: https://www.bing.com/ck/a?!&&p=de42974f14cc7252fe3acb5b2cb95754d777574f97400bbd8857ae6f9b066581JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVhlKyVjNCU5MCVjNiViMGErJWM0JTkwJWMzJWIzbitIJWUxJWJiJThkYytTaW5oJm1tcmVxcnk9cnNnYmltZyZtbXJlcWg9djVjc0hOaXB1bnFJSFl5M21HdEluNHNPek54QUZlOFQlMmJneFBiVWduRThNJTNkJkZPUk09SVJTU1JQ&ntb=1
+                  - listitem [ref=f52e149]:
+                    - link "Học Sinh Đi Du Lịch Di Động Trên Xe" [ref=f52e150] [cursor=pointer]:
+                      - /url: https://www.bing.com/ck/a?!&&p=c23b704a3e5d10bef771a1d166dacb08ee6735a1d803d87646f05fce185e2d80JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPUglZTElYmIlOGRjK1NpbmgrJWM0JTkwaStEdStMJWUxJWJiJThiY2grRGkrJWM0JTkwJWUxJWJiJTk5bmcrVHIlYzMlYWFuK1hlJm1tcmVxcnk9cnNnYmltZyZtbXJlcWg9dHc2YUxlR1EwcDZMc29weDlTN1RTMlk3Y2xYZm1CeFpicll0YktCRGpPOCUzZCZGT1JNPUlSU1NSUA&ntb=1
+                  - listitem [ref=f52e155]:
+                    - link "Trẻ Em Ngồi Ghế Trước Ô Tô" [ref=f52e156] [cursor=pointer]:
+                      - /url: https://www.bing.com/ck/a?!&&p=bcb093ae707a5988caca8e4c35b69e461d3a10fed069540fd0882ebefc193920JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVRyJWUxJWJhJWJiK0VtK05nJWUxJWJiJTkzaStHaCVlMSViYSViZitUciVjNiViMCVlMSViYiU5YmMrJWMzJTk0K1QlYzMlYjQmbW1yZXFyeT1yc2diaW1nJm1tcmVxaD1OWW1OJTJmbHNqV0laZXE3WjVYSDIlMmZ4RUJOZVQ2Mlh2djdHMGdHbTBvMmlObyUzZCZGT1JNPUlSU1NSUA&ntb=1
+                  - listitem [ref=f52e161]:
+                    - link "Xe Đưa Rước Học Sinh" [ref=f52e162] [cursor=pointer]:
+                      - /url: https://www.bing.com/ck/a?!&&p=4cd81d5a1de963d90503f86b4538d7b3eeab2b624beb418ec6faac4689ceabf2JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVhlKyVjNCU5MCVjNiViMGErUiVjNiViMCVlMSViYiU5YmMrSCVlMSViYiU4ZGMrU2luaCZtbXJlcXJ5PXJzZ2JpbWcmbW1yZXFoPVVScTh1UWYlMmYyMmNLY2N4NGZvWWRpR25hZ25IeVUxUUhQSmpGM1d6Qk1hayUzZCZGT1JNPUlSU1NSUA&ntb=1
+                  - listitem [ref=f52e167]:
+                    - link "Xe Trường Thịnh" [ref=f52e168] [cursor=pointer]:
+                      - /url: https://www.bing.com/ck/a?!&&p=c6f77cabeac4225bf6f6cf0e935b66b89f15c7408b709ea1301b087ad4d69766JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVhlK1RyJWM2JWIwJWUxJWJiJTlkbmcrVGglZTElYmIlOGJuaCZtbXJlcXJ5PXJzZ2JpbWcmbW1yZXFoPUpoZ3pZMGw0TzJjUzlTJTJiSGdaemdsJTJiRkJzSXJqelVmbnJaaUFjSFVpelpzJTNkJkZPUk09SVJTU1JQ&ntb=1
+                  - listitem [ref=f52e173]:
+                    - link "Xe Trường Thịnh Quy Nhơn" [ref=f52e174] [cursor=pointer]:
+                      - /url: https://www.bing.com/ck/a?!&&p=5a450cf1c7e531b99c323880c07adcaa29cb3111c2540b4a1184216a1bc95749JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVhlK1RyJWM2JWIwJWUxJWJiJTlkbmcrVGglZTElYmIlOGJuaCtRdXkrTmglYzYlYTFuJm1tcmVxcnk9cnNnYmltZyZtbXJlcWg9ZTdOVm9CJTJiTjJzd0phaUE2QlhsczZYaVZpVE02d0wlMmZONmIycnhnZVVsZzAlM2QmRk9STT1JUlNTUlA&ntb=1
+                  - listitem [ref=f52e179]:
+                    - link "Trẻ Em Đến Trường" [ref=f52e180] [cursor=pointer]:
+                      - /url: https://www.bing.com/ck/a?!&&p=90f11227428108a7b7c98b2ec78197da1cd7ddd9970da2dc6b8bfb74f2772757JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVRyJWUxJWJhJWJiK0VtKyVjNCU5MCVlMSViYSViZm4rVHIlYzYlYjAlZTElYmIlOWRuZyZtbXJlcXJ5PXJzZ2JpbWcmbW1yZXFoPWxHUlB3Q1UlMmZHeHFjenhGNU5vY25FdUlNdVdwUTNWT0pRU1ZrTmtGR3M0cyUzZCZGT1JNPUlSU1NSUA&ntb=1
+                  - listitem [ref=f52e185]:
+                    - link "Xe Trường Sơn" [ref=f52e186] [cursor=pointer]:
+                      - /url: https://www.bing.com/ck/a?!&&p=e5d99e7d6a6ab2cf42effdd3cb9182abea0095ae50144fdcc529e8b507c18af1JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVhlK1RyJWM2JWIwJWUxJWJiJTlkbmcrUyVjNiVhMW4mbW1yZXFyeT1yc2diaW1nJm1tcmVxaD12OHRkMyUyZkVQbThqY2tBVTE4cnJNUjlKSGY4cFd4Y3g0aTJpT0dBTVl3NTQlM2QmRk9STT1JUlNTUlA&ntb=1
+                  - listitem [ref=f52e191]:
+                    - link "Xe Đúng Đón" [ref=f52e192] [cursor=pointer]:
+                      - /url: https://www.bing.com/ck/a?!&&p=2e5e51fa8e4a907075411b0ab56ac145875aaf3eed4861e2a95ccc76dd9d2ecbJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVhlKyVjNCU5MCVjMyViYW5nKyVjNCU5MCVjMyViM24mbW1yZXFyeT1yc2diaW1nJm1tcmVxaD1IWEZpN2clMmJnT2ZzZ2FNWURtOWlDVVVWMmxTRWdSTmFlOERhc0JDMCUyZnVQcyUzZCZGT1JNPUlSU1NSUA&ntb=1
+            - list "Please use arrow keys to navigate" [ref=f52e203]:
+              - listitem [ref=f52e204]:
+                - list [ref=f52e205]:
+                  - listitem [ref=f52e206]:
+                    - link "Từ ngày 01/01/2025 xe đưa đón trẻ em mầm non, học sinh phải có thiết bị ..." [ref=f52e208] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=%2fVRgWBue&id=CC8A2E81C2F5F07269FB7AACF1FCEE14B0AEF22E&thid=OIP._VRgWBueqc4YLF6ykSy71gHaE8&mediaurl=https%3a%2f%2fmedia.thuonghieucongluan.vn%2fuploads%2f2024%2f07%2f09%2fdua-don-hoc-sinh-1720482184.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.fd5460581b9ea9ce182c5eb2912cbbd6%3frik%3dLvKusBTu%252fPGseg%26pid%3dImgRaw%26r%3d0&exph=534&expw=800&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=847C4FD75748CFC994F6B9C25410A757&selectedIndex=0&idpp=serp
+                  - listitem [ref=f52e213]:
+                    - link "Khởi tố vụ án trẻ mầm non bị bỏ quên trên xe đưa đón của trường" [ref=f52e215] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=jO9OSpX5&id=8A280606ADF4DF9849F0FB73A6FB35F3E8FCD1F2&thid=OIP.jO9OSpX5ibiN0HpcdOToEAHaEK&mediaurl=https%3a%2f%2fthegioiphutungoto.net%2fuploads%2f2024%2f05%2fde-quen-tre-tren-xe-3.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8cef4e4a95f989b88dd07a5c74e4e810%3frik%3d8tH86PM1%252b6Zz%252bw%26pid%3dImgRaw%26r%3d0&exph=844&expw=1500&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=CB87B5ED22A824758E49F66B39B83126&selectedIndex=0&idpp=serp
+                  - listitem [ref=f52e220]:
+                    - link "Từ năm 2025, xe đưa đón học sinh phải có camera, thiết bị cảnh báo ..." [ref=f52e222] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=cn2%2bXHAx&id=12C0ED64584C1EB160921A44C4E7268C2AEAFAA0&thid=OIP.cn2-XHAxEbwdpxPT3YjXeQHaE8&mediaurl=https%3a%2f%2fbhd.1cdn.vn%2f2024%2f06%2f29%2fcdn-i.vtcnews.vn-upload-2024-06-29-_xe-dua-don-hs-10545458.jpeg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.727dbe5c703111bc1da713d3dd88d779%3frik%3doPrqKowm58REGg%26pid%3dImgRaw%26r%3d0&exph=1148&expw=1721&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=E80885D09E7278B321E3AE861F253A2E&selectedIndex=0&idpp=serp
+                  - listitem [ref=f52e227]:
+                    - 'link "Vụ bé 5 tuổi bị bỏ quên trên xe ô tô: Kiểm tra quy trình, điều kiện xe ..." [ref=f52e229] [cursor=pointer]':
+                      - /url: /images/search?view=detailV2&ccid=VenMcMT3&id=00100E2FDC53B06D59C3B64E5FFB4753347F5BCA&thid=OIP.VenMcMT3S_NK8m1Y_v2CwgHaE4&mediaurl=https%3a%2f%2fcdn-i.doisongphapluat.com.vn%2fresize%2fth%2fupload%2f2024%2f05%2f30%2fvu-be-5-tuoi-bi-bo-quen-tren-xe-o-to-kiem-tra-quy-trinh-dieu-kien-xe-dua-don-09444562.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.55e9cc70c4f74bf34af26d58fefd82c2%3frik%3dylt%252fNFNH%252b19Otg%26pid%3dImgRaw%26r%3d0&exph=541&expw=820&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=C42EF8BB9A4E6B1DA6755534833DD1AC&selectedIndex=0&idpp=serp
+                  - listitem [ref=f52e234]:
+                    - link "Xe ô tô chở trẻ em mầm non, học sinh phải có thiết bị cảnh báo chống bỏ ..." [ref=f52e236] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=mFOth75I&id=67C2235080A391860E9B628242775184E29DA49C&thid=OIP.mFOth75IDZKptvixkm9KXgHaE8&mediaurl=https%3a%2f%2fcdn.thuvienphapluat.vn%2fphap-luat%2f2022-2%2fVMK%2fxe-o-to-cho-tre-em-mam-non-phai-co-thiet-bi-bao-dong.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.9853ad87be480d92a9b6f8b1926f4a5e%3frik%3dnKSd4oRRd0KCYg%26pid%3dImgRaw%26r%3d0&exph=400&expw=600&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=350F8DE17D9AAB023394B1F5A9FDC7BD&selectedIndex=0&idpp=serp
+                  - listitem [ref=f52e241]:
+                    - link "Khởi tố vụ án trẻ mầm non bị bỏ quên trên xe đưa đón của trường" [ref=f52e243] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=vAaxMdY2&id=8A280606ADF4DF9849F0170CF9DBBBA6E5F93C9F&thid=OIP.vAaxMdY25en9Hte-HTGUbAHaFb&mediaurl=https%3a%2f%2fthegioiphutungoto.net%2fuploads%2f2024%2f05%2fde-quen-tre-tren-xe-2.jpg.webp&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.bc06b131d636e5e9fd1ed7be1d31946c%3frik%3dnzz55aa72%252fkMFw%26pid%3dImgRaw%26r%3d0&exph=1100&expw=1500&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=B8DED271F53B7A18AFAC9E6681866AFC&selectedIndex=0&idpp=serp
+                  - listitem [ref=f52e248]:
+                    - 'link "Vụ trẻ mầm non tử vong do bị bỏ quên trong xe ô tô: Phát hiện vắng cháu ..." [ref=f52e250] [cursor=pointer]':
+                      - /url: /images/search?view=detailV2&ccid=0iE9Mu46&id=784B867693EC38E0B7EDBB77C1EEB805A5609FF5&thid=OIP.0iE9Mu46O6u4bK6jzNiNqwHaEd&mediaurl=https%3a%2f%2fgiadinh.mediacdn.vn%2fthumb_w%2f640%2f296230595582509056%2f2024%2f5%2f29%2fbinh-1717005633118526146665.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.d2213d32ee3a3babb86caea3ccd88dab%3frik%3d9Z9gpQW47sF3uw%26pid%3dImgRaw%26r%3d0&exph=385&expw=640&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=8D32D515D887C6B41B715D7B5BE3CDC3&selectedIndex=0&idpp=serp
+                  - listitem [ref=f52e255]:
+                    - link "Khởi tố vụ án trẻ mầm non bị bỏ quên trên xe đưa đón của trường" [ref=f52e257] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=nteVu0xP&id=8A280606ADF4DF9849F0CD2A5AB87EA78EED792A&thid=OIP.nteVu0xPBTf8u8FeS9t98AHaFb&mediaurl=https%3a%2f%2fthegioiphutungoto.net%2fuploads%2f2024%2f05%2fde-quen-tre-tren-xe-1.jpg.webp&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.9ed795bb4c4f0537fcbbc15e4bdb7df0%3frik%3dKnntjqd%252buFoqzQ%26pid%3dImgRaw%26r%3d0&exph=1100&expw=1500&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=E500FC4AD7163AAB92A96A720D8592AB&selectedIndex=0&idpp=serp
+                  - listitem [ref=f52e262]:
+                    - 'link "Vụ trẻ mầm non tử vong do bị bỏ quên trong xe ô tô: Phát hiện vắng cháu ..." [ref=f52e264] [cursor=pointer]':
+                      - /url: /images/search?view=detailV2&ccid=MRVQNM7C&id=784B867693EC38E0B7EDB665CDE7C8AC4303E451&thid=OIP.MRVQNM7CVoqC7q0aSH4VjwHaEK&mediaurl=https%3a%2f%2fsuckhoedoisong.qltns.mediacdn.vn%2f324455921873985536%2f2024%2f5%2f30%2f20240530080935-17170342045761961110747.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.31155034cec2568a82eead1a487e158f%3frik%3dUeQDQ6zI581ltg%26pid%3dImgRaw%26r%3d0&exph=1126&expw=2000&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=C07EB730A427782542ED78977EFDF42B&selectedIndex=0&idpp=serp
+                  - listitem [ref=f52e269]:
+                    - link "Sắp có thêm quy định mới về màu sơn xe ô tô đưa đón học sinh và trẻ mầm non" [ref=f52e271] [cursor=pointer]:
+                      - /url: /images/search?view=detailV2&ccid=vE2GJwtt&id=7E26E02A0D7415563B2D0C55056C56BE8DCEDB09&thid=OIP.vE2GJwtt-NWVLOpDkUNKeAHaE9&mediaurl=https%3a%2f%2fcdn.24h.com.vn%2fupload%2f3-2024%2fimages%2f2024-08-17%2fSap-co-them-quy-dinh-moi-ve-mau-son-xe-o-to-dua-don-hoc-sinh-va-tre-mam-non-s--2--1723829964-674-width740height495.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.bc4d86270b6df8d5952cea4391434a78%3frik%3dCdvOjb5WbAVVDA%26pid%3dImgRaw%26r%3d0&exph=495&expw=740&q=b%c3%a9+b%e1%bb%8f+qu%c3%aan+tr%c3%aan+%c3%b4+t%c3%b4+%c4%91%c6%b0a+%c4%91%c3%b3n+tr%c6%b0%e1%bb%9dng+m%e1%ba%a1m+non+vnexpress&mode=overlay&FORM=IQFRBA&ck=09BD8BAD508F809FB41899E847E6A739&selectedIndex=0&idpp=serp
+            - link "See all images" [ref=f52e277] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=b2b6fdda85d0146d466c601524256da040866dcbf7806aa0e9e2fbe0c524f6d3JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT1iJWMzJWE5K2IlZTElYmIlOGYrcXUlYzMlYWFuK3RyJWMzJWFhbislYzMlYjQrdCVjMyViNCslYzQlOTElYzYlYjBhKyVjNCU5MSVjMyViM24rdHIlYzYlYjAlZTElYmIlOWRuZyttJWUxJWJhJWExbStub24rdm5leHByZXNzJnFwdnQ9YiVjMyVhOStiJWUxJWJiJThmK3F1JWMzJWFhbit0ciVjMyVhYW4rJWMzJWI0K3QlYzMlYjQrJWM0JTkxJWM2JWIwYSslYzQlOTElYzMlYjNuK3RyJWM2JWIwJWUxJWJiJTlkbmcrbSVlMSViYSVhMW0rbm9uK3ZuZXhwcmVzcyZGT1JNPUlRRlJNTA&ntb=1
+              - button "See all images" [ref=f52e281]
+        - listitem [ref=f52e284]:
+          - link "VnExpress" [ref=f52e286] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=41d64d2569995ce720349807fe1f2b29c242496490f5528958a9fb81638bda98JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92bmV4cHJlc3MubmV0L2hhaS1jby1naWFvLXZhLXRhaS14ZS1iby1xdWVuLWJlLXRyYWktNS10dW9pLXRyZW4teGUtYmkta2hvaS10by00NzUyODY1Lmh0bWw&ntb=1
+            - generic [ref=f52e291]:
+              - generic [ref=f52e292]: VnExpress
+              - generic [ref=f52e294]:
+                - generic [ref=f52e295]: https://vnexpress.net
+                - generic [ref=f52e296]: Translate this result
+          - heading [level=2] [ref=f52e297]:
+            - link "Hai cô giáo và tài xế bỏ quên bé trai 5 tuổi trên xe bị khởi tố" [ref=f52e298] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=41d64d2569995ce720349807fe1f2b29c242496490f5528958a9fb81638bda98JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92bmV4cHJlc3MubmV0L2hhaS1jby1naWFvLXZhLXRhaS14ZS1iby1xdWVuLWJlLXRyYWktNS10dW9pLXRyZW4teGUtYmkta2hvaS10by00NzUyODY1Lmh0bWw&ntb=1
+          - paragraph [ref=f52e300]: May 31, 2024 · Ông Nguyễn Văn Lâm cùng hai cô giáo trường mầm non Hồng Nhung bị khởi tố trong vụ bé Gia Huy 5 tuổi bị bỏ …
+        - listitem [ref=f52e301]:
+          - link "Báo Dân trí" [ref=f52e303] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=a0c9e54ecb9d91b45a2aa274f8bcca9bcfabe6725088bb0cfa520cea453b6771JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9kYW50cmkuY29tLnZuL3BoYXAtbHVhdC90dXllbi1hbi12dS1iZS01LXR1b2ktdHUtdm9uZy1kby1iaS1iby1xdWVuLXRyb25nLXhlLWR1YS1kb24tby10aGFpLWJpbmgtMjAyNDExMjcwODQxMzQ2NzEuaHRt&ntb=1
+            - generic [ref=f52e308]:
+              - generic [ref=f52e309]: Báo Dân trí
+              - generic [ref=f52e311]:
+                - generic [ref=f52e312]: https://dantri.com.vn › phap-luat
+                - generic [ref=f52e313]: Translate this result
+          - heading [level=2] [ref=f52e314]:
+            - link "Tuyên án vụ bé 5 tuổi tử vong do bị bỏ quên trong xe đưa đón ở Thái ..." [ref=f52e315] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=a0c9e54ecb9d91b45a2aa274f8bcca9bcfabe6725088bb0cfa520cea453b6771JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9kYW50cmkuY29tLnZuL3BoYXAtbHVhdC90dXllbi1hbi12dS1iZS01LXR1b2ktdHUtdm9uZy1kby1iaS1iby1xdWVuLXRyb25nLXhlLWR1YS1kb24tby10aGFpLWJpbmgtMjAyNDExMjcwODQxMzQ2NzEuaHRt&ntb=1
+          - paragraph [ref=f52e317]: Nov 27, 2024 · Cơ quan Cảnh sát điều tra Công an TP Thái Bình đã khởi tố vụ án Vô ý làm chết người, để điều tra việc một trẻ mầm …
+        - listitem [ref=f52e318]:
+          - link "Kenh14.vn" [ref=f52e320] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=dcdc8492a73bb2610d38bfe9ee63ff8e6781eabb2dd6bf7b40c58915ca578adcJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9rZW5oMTQudm4vbmdoZS1hbi1iZS1nYWktMi10dW9pLXR1LXZvbmctc2F1LWhvbi01LXRpZW5nLWJpLWJvLWJvLXF1ZW4tdHJlbi1vdG8tMjE1MjYwNDE3MTEwOTMzOTgxLmNobg&ntb=1
+            - generic [ref=f52e325]:
+              - generic [ref=f52e326]: Kenh14.vn
+              - generic [ref=f52e328]:
+                - generic [ref=f52e329]: https://kenh14.vn
+                - generic [ref=f52e330]: Translate this result
+          - heading [level=2] [ref=f52e331]:
+            - 'link "Nghệ An: Bé gái bị bỏ quên trên ôtô, tử vong - Kenh14.vn" [ref=f52e332] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=dcdc8492a73bb2610d38bfe9ee63ff8e6781eabb2dd6bf7b40c58915ca578adcJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9rZW5oMTQudm4vbmdoZS1hbi1iZS1nYWktMi10dW9pLXR1LXZvbmctc2F1LWhvbi01LXRpZW5nLWJpLWJvLWJvLXF1ZW4tdHJlbi1vdG8tMjE1MjYwNDE3MTEwOTMzOTgxLmNobg&ntb=1
+          - paragraph [ref=f52e334]: Apr 17, 2026 · Năm 2019, bé trai 6 tuổi ở Hà Nội bị bỏ quên trên ôtô đưa đón dẫn đến tử vong. Lái xe, giám sát học sinh và cô giáo …
+        - listitem [ref=f52e335]:
+          - link "Báo Sức khỏe & Đời sống" [ref=f52e337] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=8e2ff06f63fcb1291bdbea1ff03dc3c02a230ef841e6a8932a28a8a772a91defJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9zdWNraG9lZG9pc29uZy52bi90dXllbi1hbi12dS1jaGF1LWJlLTUtdHVvaS10dS12b25nLXRodW9uZy10YW0tZG8tYmktYm8tcXVlbi10cm9uZy1vLXRvLWR1YS1kb24tby10aGFpLWJpbmgtMTY5MjQxMTI3MDYxMjU0MzA0Lmh0bQ&ntb=1
+            - generic [ref=f52e342]:
+              - generic [ref=f52e343]: Báo Sức khỏe & Đời sống
+              - generic [ref=f52e345]:
+                - generic [ref=f52e346]: https://suckhoedoisong.vn
+                - generic [ref=f52e347]: Translate this result
+          - heading [level=2] [ref=f52e348]:
+            - link "Tuyên án vụ cháu bé 5 tuổi tử vong thương tâm do bị 'bỏ quên' trong …" [ref=f52e349] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=8e2ff06f63fcb1291bdbea1ff03dc3c02a230ef841e6a8932a28a8a772a91defJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9zdWNraG9lZG9pc29uZy52bi90dXllbi1hbi12dS1jaGF1LWJlLTUtdHVvaS10dS12b25nLXRodW9uZy10YW0tZG8tYmktYm8tcXVlbi10cm9uZy1vLXRvLWR1YS1kb24tby10aGFpLWJpbmgtMTY5MjQxMTI3MDYxMjU0MzA0Lmh0bQ&ntb=1
+          - paragraph [ref=f52e351]: Nov 27, 2024 · SKĐS - Mới đây, TAND TP Thái Bình (tỉnh Thái Bình) đã mở phiên toà xét xử và tuyên phạt 4 bị cáo trong vụ trẻ …
+        - listitem [ref=f52e352]:
+          - link "Báo Lao Động" [ref=f52e354] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=31355886e35834727b85d0fdb91de81fb4d977b5b2108e6f73ef818ca8b7b80bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sYW9kb25nLnZuL2dpYW8tZHVjL3F1YW4tbG9uZy1uaHVuZy12dS10cmUtbmhvLWJpLWJvLXF1ZW4tdHJlbi14ZS1kdWEtZG9uLWhvYy1zaW5oLTEzNDY0NjEubGRv&ntb=1
+            - generic [ref=f52e359]:
+              - generic [ref=f52e360]: Báo Lao Động
+              - generic [ref=f52e362]:
+                - generic [ref=f52e363]: https://laodong.vn › giao-duc › quan-long-nhung-vu-tre...
+                - generic [ref=f52e364]: Translate this result
+          - heading [level=2] [ref=f52e365]:
+            - link "Quặn lòng những vụ trẻ nhỏ bị bỏ quên trên xe đưa đón học sinh" [ref=f52e366] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=31355886e35834727b85d0fdb91de81fb4d977b5b2108e6f73ef818ca8b7b80bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly9sYW9kb25nLnZuL2dpYW8tZHVjL3F1YW4tbG9uZy1uaHVuZy12dS10cmUtbmhvLWJpLWJvLXF1ZW4tdHJlbi14ZS1kdWEtZG9uLWhvYy1zaW5oLTEzNDY0NjEubGRv&ntb=1
+          - paragraph [ref=f52e368]: May 30, 2024 · Cháu bé 5 tuổi tử vong thương tâm vì bị bỏ quên trên xe đưa đón. Theo thông tin ban đầu, ngày 29.5, cô giáo Q.A có …
+        - listitem [ref=f52e369]:
+          - link "Báo Tuổi Trẻ" [ref=f52e371] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b3421a50a6d2c9cbafe118bad7349e3ad9f8e98497857d3c025d0bd19b544927JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90dW9pdHJlLnZuL3RyZS1tYW0tbm9uLWNoZXQtZG8tYmktYm8tcXVlbi10cmVuLXhlLWJhaS1ob2MtY3Utbm9pLWRhdS1tb2ktMjAyNDA1MzAwODQ0Mjc3MjMuaHRt&ntb=1
+            - generic [ref=f52e376]:
+              - generic [ref=f52e377]: Báo Tuổi Trẻ
+              - generic [ref=f52e379]:
+                - generic [ref=f52e380]: https://tuoitre.vn › tre-mam-non-chet-do-bi-bo-quen...
+                - generic [ref=f52e381]: Translate this result
+          - heading [level=2] [ref=f52e382]:
+            - link "Vì sao vẫn còn trẻ chết tức tưởi vì bị bỏ quên trên xe đưa đón? - Tuổi ..." [ref=f52e383] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=b3421a50a6d2c9cbafe118bad7349e3ad9f8e98497857d3c025d0bd19b544927JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly90dW9pdHJlLnZuL3RyZS1tYW0tbm9uLWNoZXQtZG8tYmktYm8tcXVlbi10cmVuLXhlLWJhaS1ob2MtY3Utbm9pLWRhdS1tb2ktMjAyNDA1MzAwODQ0Mjc3MjMuaHRt&ntb=1
+          - paragraph [ref=f52e385]: May 30, 2024 · Bé bị bỏ quên trên xe đưa đón cả chục giờ đồng hồ dưới cái nóng gần 40 độ và người phát hiện ra điều này vẫn …
+        - listitem [ref=f52e386]:
+          - link "VOH - Đài tiếng nói Nhân dân Thành phố Hồ Chí Minh" [ref=f52e388] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ab1b943661c6e9ed0d1069a7a9f151038c024cdb6df38968235399b86d904972JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92b2guY29tLnZuL3BoYXAtbHVhdC92dS1iZS01LXR1b2ktdHUtdm9uZy12aS1iaS1iby1xdWVuLXRyZW4teGUtZHVhLWRvbi10dXllbi1hbi00LWJpLWNhby01NjY0MDcuaHRtbA&ntb=1
+            - generic [ref=f52e393]:
+              - generic [ref=f52e394]: VOH - Đài tiếng nói Nhân dân Thành phố Hồ Chí Minh
+              - generic [ref=f52e396]:
+                - generic [ref=f52e397]: https://voh.com.vn › phap-luat
+                - generic [ref=f52e398]: Translate this result
+          - heading [level=2] [ref=f52e399]:
+            - 'link "Vụ bé 5 tuổi tử vong vì bị bỏ quên trên xe đưa đón: Tuyên án 4 bị cáo" [ref=f52e400] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=ab1b943661c6e9ed0d1069a7a9f151038c024cdb6df38968235399b86d904972JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92b2guY29tLnZuL3BoYXAtbHVhdC92dS1iZS01LXR1b2ktdHUtdm9uZy12aS1iaS1iby1xdWVuLXRyZW4teGUtZHVhLWRvbi10dXllbi1hbi00LWJpLWNhby01NjY0MDcuaHRtbA&ntb=1
+          - paragraph [ref=f52e402]: Nov 26, 2024 · Đến 17h cùng ngày, cậu ruột của bé H đến trường đón thì phát hiện cháu bị bỏ quên trên xe trong tình trạng bất …
+        - listitem [ref=f52e403]:
+          - link "Báo điện tử VTV News" [ref=f52e405] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=3af8c590d32e1b417a99144923d9da1b0d76d8ccdab3b6c32f232aac4d404fe8JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92dHYudm4vYm8tcXVlbi10cmVuLXhlLWR1YS1kb24uaHRtbA&ntb=1
+            - generic [ref=f52e410]:
+              - generic [ref=f52e411]: Báo điện tử VTV News
+              - generic [ref=f52e413]:
+                - generic [ref=f52e414]: https://vtv.vn › bo-quen-tren-xe-dua-don.html
+                - generic [ref=f52e415]: Translate this result
+          - heading [level=2] [ref=f52e416]:
+            - 'link "Bỏ quên trên xe đưa đón : Tuyên án 4 bị cáo trong vụ trẻ 5 tuổi tử …" [ref=f52e417] [cursor=pointer]':
+              - /url: https://www.bing.com/ck/a?!&&p=3af8c590d32e1b417a99144923d9da1b0d76d8ccdab3b6c32f232aac4d404fe8JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92dHYudm4vYm8tcXVlbi10cmVuLXhlLWR1YS1kb24uaHRtbA&ntb=1
+          - paragraph [ref=f52e419]: 4 days ago · VTV.vn - TAND TP Thái Bình đã đưa ra xét xử và tuyên phạt án 4 bị cáo trong vụ trẻ 5 tuổi tử vong do bị bỏ quên trên …
+        - listitem [ref=f52e420]:
+          - link "Báo VietNamNet" [ref=f52e422] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=21d700b34a0b35350c0028f1d67a3d70fc5b19bd33531e9e6a8d223c7741a986JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWV0bmFtbmV0LnZuL3RyZS1tYW0tbm9uLWJpLWJvLXF1ZW4tdHJlbi14ZS1kdWEtZG9uLXBoYXQtaGllbi12YW5nLXRyZS1uaHVuZy1raG9uZy1raWVtLXRyYS0yMjg1ODUwLmh0bWw&ntb=1
+            - generic [ref=f52e427]:
+              - generic [ref=f52e428]: Báo VietNamNet
+              - generic [ref=f52e430]:
+                - generic [ref=f52e431]: https://vietnamnet.vn › tre-mam-non-bi-bo-quen-tren...
+                - generic [ref=f52e432]: Translate this result
+          - 'heading "Trẻ mầm non bị bỏ quên trên xe đưa đón: Phát hiện vắng trẻ nhưng ai ..." [level=2] [ref=f52e433]':
+            - 'link "Trẻ mầm non bị bỏ quên trên xe đưa đón: Phát hiện vắng trẻ nhưng ai ..."':
+              - /url: https://www.bing.com/ck/a?!&&p=21d700b34a0b35350c0028f1d67a3d70fc5b19bd33531e9e6a8d223c7741a986JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cHM6Ly92aWV0bmFtbmV0LnZuL3RyZS1tYW0tbm9uLWJpLWJvLXF1ZW4tdHJlbi14ZS1kdWEtZG9uLXBoYXQtaGllbi12YW5nLXRyZS1uaHVuZy1raG9uZy1raWVtLXRyYS0yMjg1ODUwLmh0bWw&ntb=1
+          - paragraph [ref=f52e435]: May 30, 2024 · Liên quan vụ trẻ mầm non bị bỏ quên trên xe đưa đón, giáo viên điểm danh phát hiện trẻ không có mặt ở lớp nhưng …
+        - listitem [ref=f52e436]:
+          - link "Some results have been removed" [ref=f52e438] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e7e0e4b27a77d08e3ba8e737568a767ff44dde3e84c17c7ede3301285b6ea292JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9NjE3MzUw&ntb=1
+    - complementary "Additional Results"
+  - contentinfo [ref=f52e439]:
+    - generic [ref=f52e440]:
+      - list:
+        - listitem [ref=f52e441]:
+          - link "Privacy" [ref=f52e442] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f52e443]:
+          - link "Terms" [ref=f52e444] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

@@ -1,0 +1,167 @@
+- generic [active] [ref=f28e1]:
+  - generic [ref=f28e2]:
+    - generic [ref=f28e4]:
+      - generic [ref=f28e6]:
+        - link "DuckDuckGo home" [ref=f28e7] [cursor=pointer]:
+          - /url: /?t=h_
+          - generic [ref=f28e8]: DuckDuckGo
+        - generic [ref=f28e15]:
+          - combobox "Search privately" [ref=f28e17]: "\"full-stack developer\" junior entry level \"personal projects\" OR \"side projects\" job posting requirements"
+          - button "Search" [ref=f28e19] [cursor=pointer]
+      - navigation [ref=f28e26]:
+        - list [ref=f28e27]:
+          - listitem [ref=f28e28]:
+            - link [ref=f28e29] [cursor=pointer]:
+              - /url: /?q=%22full-stack+developer%22+junior+entry+level+%22personal+projects%22+OR+%22side+projects%22+job+posting+requirements&t=h_&ia=web
+              - strong [ref=f28e30]: All
+          - listitem [ref=f28e33]:
+            - link [ref=f28e34] [cursor=pointer]:
+              - /url: /?q=%22full-stack+developer%22+junior+entry+level+%22personal+projects%22+OR+%22side+projects%22+job+posting+requirements&t=h_&ia=images&iax=images
+              - strong [ref=f28e35]: Images
+          - listitem [ref=f28e36]:
+            - link [ref=f28e37] [cursor=pointer]:
+              - /url: /?q=%22full-stack+developer%22+junior+entry+level+%22personal+projects%22+OR+%22side+projects%22+job+posting+requirements&t=h_&ia=videos&iax=videos
+              - strong [ref=f28e38]: Videos
+          - listitem [ref=f28e39]:
+            - link [ref=f28e40] [cursor=pointer]:
+              - /url: /?q=%22full-stack+developer%22+junior+entry+level+%22personal+projects%22+OR+%22side+projects%22+job+posting+requirements&t=h_&iaxm=maps
+              - strong [ref=f28e41]: Maps
+        - list [ref=f28e42]:
+          - listitem [ref=f28e43]:
+            - link "Duck.ai" [ref=f28e45] [cursor=pointer]:
+              - /url: /?q=%22full-stack+developer%22+junior+entry+level+%22personal+projects%22+OR+%22side+projects%22+job+posting+requirements&t=h_&ia=chat&entry=serp
+          - listitem [ref=f28e49]:
+            - button "Search Settings ✀" [ref=f28e51] [cursor=pointer]:
+              - generic [ref=f28e54]: Search Settings
+              - generic [ref=f28e55]: ✀
+    - generic [ref=f28e62]:
+      - navigation [ref=f28e64]:
+        - button [ref=f28e66] [cursor=pointer]:
+          - strong [ref=f28e73]: Private
+        - generic [ref=f28e77]:
+          - switch "Filter by the selected region" [ref=f28e81]
+          - button "Vietnam (en)" [ref=f28e83] [cursor=pointer]
+        - button [ref=f28e88] [cursor=pointer]:
+          - strong [ref=f28e90]: "Safe search: moderate"
+        - button [ref=f28e94] [cursor=pointer]:
+          - strong [ref=f28e96]: Any time
+      - generic [ref=f28e102]:
+        - paragraph [ref=f28e103]:
+          - generic [ref=f28e104]: No results found for "full-stack developer" junior entry level "personal projects" OR "side projects" job posting requirements
+        - generic [ref=f28e105]:
+          - paragraph [ref=f28e106]: "Suggestions:"
+          - list [ref=f28e107]:
+            - listitem [ref=f28e108]: Check spelling
+            - listitem [ref=f28e109]: Try related keywords
+            - listitem [ref=f28e110]:
+              - generic [ref=f28e111]:
+                - text: "Retry search without quotes:"
+                - link "full-stack developer junior entry level personal projects OR side projects job posting requirements" [ref=f28e112] [cursor=pointer]:
+                  - /url: /?q=full-stack+developer+junior+entry+level+personal+projects+OR+side+projects+job+posting+requirements&t=h_
+        - generic [ref=f28e113]:
+          - paragraph [ref=f28e114]:
+            - generic [ref=f28e115]: "Try asking Duck.ai, our private AI chat service:"
+          - generic [ref=f28e117]:
+            - textbox "Ask Duck.ai anything" [ref=f28e119]: "\"full-stack developer\" junior entry level \"personal projects\" OR \"side projects\" job posting requirements"
+            - button "Submit to Duck.ai" [ref=f28e121] [cursor=pointer]
+    - list [ref=f28e126]:
+      - button "Close menu" [ref=f28e127] [cursor=pointer]
+      - list [ref=f28e131]:
+        - listitem [ref=f28e132]: Search
+        - listitem [ref=f28e133]:
+          - link "Homepage" [ref=f28e134] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f28e135]:
+          - link "Themes" [ref=f28e136] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f28e137]:
+          - link "Settings" [ref=f28e138] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f28e139]:
+        - listitem [ref=f28e140]: Share Feedback
+        - listitem [ref=f28e141]:
+          - generic [ref=f28e144]:
+            - button "Positive feedback" [ref=f28e145] [cursor=pointer]
+            - button "Negative feedback" [ref=f28e149] [cursor=pointer]
+      - list [ref=f28e153]:
+        - listitem [ref=f28e154]: Downloads
+        - listitem [ref=f28e155]:
+          - link "iOS Browser" [ref=f28e156] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f28e157]:
+          - link "Android Browser" [ref=f28e158] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f28e159]:
+          - link "Mac Browser" [ref=f28e160] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f28e161]:
+          - link "Windows Browser" [ref=f28e162] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f28e163]:
+          - link "Browser Extensions" [ref=f28e164] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f28e165]:
+        - listitem [ref=f28e166]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f28e167]:
+          - link "Duck.ai" [ref=f28e168] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f28e169]:
+          - link "Email Protection" [ref=f28e170] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f28e171]:
+          - link "Newsletter" [ref=f28e172] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f28e173]:
+          - link "Blog" [ref=f28e174] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f28e175]:
+          - link "Podcast" [ref=f28e176] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f28e177]:
+          - link "Collaborations" [ref=f28e178] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f28e179]:
+        - listitem [ref=f28e180]: Learn More
+        - listitem [ref=f28e181]:
+          - link "What’s New" [ref=f28e182] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f28e183]:
+          - link "Compare Privacy" [ref=f28e184] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f28e185]:
+          - link "About Our Browser" [ref=f28e186] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f28e187]:
+          - link "About DuckDuckGo" [ref=f28e188] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f28e189]:
+        - listitem [ref=f28e190]: Other Resources
+        - listitem [ref=f28e191]:
+          - link "Help" [ref=f28e192] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f28e193]:
+          - link "Community" [ref=f28e194] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f28e195]:
+          - link "Careers" [ref=f28e196] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f28e197]:
+          - link "Privacy Policy" [ref=f28e198] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f28e199]:
+          - link "Terms of Service" [ref=f28e200] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f28e201]:
+          - link "Press Kit" [ref=f28e202] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f28e203]:
+          - link "Advertise on Search" [ref=f28e204] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f28e210]:
+    - generic [ref=f28e221]:
+      - heading "See What’s DuckDuckNew" [level=3] [ref=f28e222]
+      - paragraph [ref=f28e223]: Explore DuckDuckGo’s latest product updates.
+    - link "Learn More" [ref=f28e224] [cursor=pointer]:
+      - /url: https://duckduckgo.com/updates
+  - button "Share Feedback" [ref=f28e229] [cursor=pointer]

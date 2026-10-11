@@ -1,0 +1,669 @@
+{
+  "domain": "DATABASE INTERNALS",
+  "entries": [
+    {
+      "term": "ACID",
+      "aliases": [
+        "giao dịch ACID"
+      ],
+      "level": "basic",
+      "problem": "Ghi dữ liệu từ nhiều client song song rất dễ hỏng khi lỗi phần cứng hoặc tranh chấp xảy ra, để lại trạng thái nửa vời.",
+      "origin": "Härder và Reuter đặt tên năm 1983",
+      "how": "Bốn thuộc tính Atomicity, Consistency, Isolation, Durability: ghi hoặc bỏ hẳn, luôn giữ DB ở trạng thái hợp lệ, bền sau crash.",
+      "related": [
+        "Transaction",
+        "Isolation level",
+        "WAL",
+        "MVCC"
+      ]
+    },
+    {
+      "term": "Transaction",
+      "aliases": [
+        "giao dịch",
+        "Transaction & ACID",
+        "giao dịch nguyên tử",
+        "Atomicity",
+        "Consistency",
+        "Isolation",
+        "Durability"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Nhiều thao tác ghi liên quan phải thành công hoặc thất bại cùng nhau; lỗi giữa chừng để dữ liệu lệch nhau. Chuyển tiền là ví dụ: nhiều bước UPDATE riêng lẻ, app crash giữa chừng hoặc hai client ghi đè nhau thì số dư lệch thật, không tự cân đối được, vì code application không thể tự đảm bảo mọi bước thành công hay thất bại cùng nhau khi process chết giữa chừng.",
+      "origin": "Thuật ngữ ACID do Haerder & Reuter đặt trong \"Principles of Transaction-Oriented Database Recovery\" (1983); ý tưởng giao dịch phát triển từ công việc của James Gray (IBM/System R, thập niên 1970)",
+      "how": "DB gói nhiều lệnh thành một đơn vị nguyên tử: commit thì ghi hết, rollback thì hủy hết. Bốn tính chất ACID: Atomicity (thành công hết hoặc rollback hết), Consistency (ràng buộc luôn đúng sau giao dịch), Isolation (giao dịch song song không làm hỏng nhau), Durability (đã commit là sống qua crash nhờ WAL).",
+      "related": [
+        "BEGIN/COMMIT/ROLLBACK",
+        "ACID",
+        "Isolation level",
+        "WAL (Write-Ahead Logging)",
+        "2PC/3PC & distributed transaction"
+      ]
+    },
+    {
+      "term": "BEGIN/COMMIT/ROLLBACK",
+      "aliases": [
+        "vòng đời transaction"
+      ],
+      "level": "basic",
+      "problem": "Cần cơ chế để ứng dụng tự quyết định điểm chốt hoặc hoàn tác một nhóm thao tác ghi.",
+      "origin": "Tiêu chuẩn SQL, thập niên 1980",
+      "how": "BEGIN mở transaction, COMMIT ghi vĩnh viễn và chốt, ROLLBACK đưa dữ liệu về trạng thái trước BEGIN.",
+      "related": [
+        "Transaction",
+        "WAL",
+        "Crash recovery"
+      ]
+    },
+    {
+      "term": "Isolation level",
+      "aliases": [
+        "mức cô lập"
+      ],
+      "level": "intermediate",
+      "problem": "Cô lập hoàn toàn giữa các transaction khiến hệ thống chậm và khó mở rộng, nhưng để tự do quá mức thì các transaction lại đọc được kết quả chưa ổn định của nhau, nên cần nõi lường có kiểm soát từng mức.",
+      "origin": "Tiêu chuẩn SQL-92",
+      "how": "Xác định loại nhiễu được phép: Read Uncommitted thấp nhất, Read Committed, Repeatable Read, Serializable cao nhất.",
+      "related": [
+        "Dirty read",
+        "Phantom read",
+        "Snapshot isolation",
+        "Two-phase locking (2PL)"
+      ]
+    },
+    {
+      "term": "Dirty read",
+      "aliases": [
+        "đọc bẩn"
+      ],
+      "level": "basic",
+      "problem": "Đọc dữ liệu chưa commit của transaction khác; nếu bên đó rollback, bạn giữ giá trị chưa bao giờ tồn tại.",
+      "origin": "Định nghĩa trong tiêu chuẩn SQL-92",
+      "how": "Nâng isolation level lên Read Committed trở lên để engine chỉ trả về dữ liệu đã commit. Ở mức Read Uncommitted, hệ thống đọc thẳng dữ liệu chưa commit của transaction khác nên phải chặn bằng mức cô lập cao hơn.",
+      "related": [
+        "Isolation level",
+        "MVCC",
+        "Snapshot isolation"
+      ]
+    },
+    {
+      "term": "Phantom read",
+      "aliases": [
+        "phantom"
+      ],
+      "level": "intermediate",
+      "problem": "Cùng một query chạy hai lần trong cùng một transaction lại cho hai bộ kết quả khác nhau, vì transaction khác đã chèn thêm dòng thỏa mãn điều kiện lọc giữa hai lần chạy.",
+      "origin": "Định nghĩa trong tiêu chuẩn SQL-92",
+      "how": "Dùng Serializable, predicate locking, hoặc snapshot serialization (SSI) để chặn transaction chèn dòng mới nằm dưới cùng bộ điều kiện quét cho tới khi transaction đọc kết thúc.",
+      "related": [
+        "Isolation level",
+        "Two-phase locking (2PL)",
+        "Snapshot isolation"
+      ]
+    },
+    {
+      "term": "MVCC",
+      "aliases": [
+        "Multi-Version Concurrency Control"
+      ],
+      "level": "advanced",
+      "problem": "Lock đọc-ghi truyền thống làm mọi đọc phải chờ ghi và ngược lại, bóp nghẹt throughput.",
+      "origin": "",
+      "how": "Mỗi transaction thấy một snapshot; bản ghi giữ nhiều phiên bản kèm XID nên đọc không phải chờ ghi.",
+      "related": [
+        "Snapshot isolation",
+        "WAL",
+        "Isolation level"
+      ]
+    },
+    {
+      "term": "WAL (Write-Ahead Logging)",
+      "aliases": [
+        "nhật ký ghi trước"
+      ],
+      "level": "advanced",
+      "problem": "Ghi thẳng vào file dữ liệu rồi crash để trang hỏng; không ghi gì thì mất thay đổi khi mất điện.",
+      "origin": "Nguyên tắc của System R, chuẩn hóa trong ARIES (Mohan và cộng sự, 1992)",
+      "how": "Ghi mọi thay đổi vào log durable trước khi chạm data page; sau crash replay log để khôi phục.",
+      "related": [
+        "Crash recovery",
+        "Checkpoint",
+        "Transaction",
+        "Buffer pool"
+      ]
+    },
+    {
+      "term": "Checkpoint",
+      "aliases": [
+        "fuzzy checkpoint"
+      ],
+      "level": "intermediate",
+      "problem": "Replay toàn bộ WAL từ đầu sau crash quá chậm khi log đã dài.",
+      "origin": "",
+      "how": "Định kỳ ghi lại trạng thái buffer pool và vị trí log, nên recovery chỉ replay từ checkpoint gần nhất.",
+      "related": [
+        "WAL",
+        "Crash recovery",
+        "Buffer pool"
+      ]
+    },
+    {
+      "term": "Crash recovery",
+      "aliases": [
+        "phục hồi sau sự cố"
+      ],
+      "level": "intermediate",
+      "problem": "Máy tắt giữa chừng khi transaction đang ghi dở và mọi thứ trong RAM biến mất.",
+      "origin": "",
+      "how": "Redo các thay đổi đã commit từ log và undo transaction chưa commit, đưa DB về trạng thái nhất quán.",
+      "related": [
+        "WAL",
+        "Checkpoint",
+        "ACID"
+      ]
+    },
+    {
+      "term": "Buffer pool",
+      "aliases": [
+        "buffer cache"
+      ],
+      "level": "intermediate",
+      "problem": "Đọc từng trang từ đĩa chậm hơn RAM hàng nghìn lần, còn ghi trực tiếp thì cản truy vấn.",
+      "origin": "",
+      "how": "Giữ trang hay dùng trong RAM, thay thế theo LRU hoặc clock, ghi dirty page ra đĩa khi cần.",
+      "related": [
+        "Page",
+        "Checkpoint",
+        "Heap file"
+      ]
+    },
+    {
+      "term": "Page",
+      "aliases": [
+        "khối dữ liệu",
+        "block"
+      ],
+      "level": "basic",
+      "problem": "Đọc ghi từng byte trên đĩa kém hiệu quả, I/O nên thực hiện theo lô cỡ cố định.",
+      "origin": "",
+      "how": "Chia file thành khối thường 4-16KB; mọi đọc ghi đều đi theo trang để gộp I/O.",
+      "related": [
+        "Buffer pool",
+        "Slotted page",
+        "Heap file",
+        "B-tree"
+      ]
+    },
+    {
+      "term": "Slotted page",
+      "aliases": [
+        "trang có bảng slot"
+      ],
+      "level": "advanced",
+      "problem": "Trang chứa bản ghi biến đổi độ dài, chèn xóa làm fragment hóa và không xác định được vị trí bản ghi.",
+      "origin": "",
+      "how": "Header giữ mảng slot trỏ tới offset từng bản ghi; xóa chỉ đánh dấu, slot được sắp lại để gom khoảng trống.",
+      "related": [
+        "Page",
+        "Heap file",
+        "B-tree"
+      ]
+    },
+    {
+      "term": "Heap file",
+      "aliases": [
+        "heap table",
+        "file đống"
+      ],
+      "level": "intermediate",
+      "problem": "Bản ghi chèn ngẫu nhiên không theo thứ tự nào nên cần cấu trúc lưu không phân cấp.",
+      "origin": "",
+      "how": "Danh sách trang không phân cấp chứa bản ghi thêm vào; không có index thì phải quét toàn bộ.",
+      "related": [
+        "Slotted page",
+        "Index",
+        "Clustered index"
+      ]
+    },
+    {
+      "term": "B-tree",
+      "aliases": [
+        "cây B"
+      ],
+      "level": "intermediate",
+      "problem": "Index theo mảng phẳng phải duy trì thứ tự khi chèn, còn tìm kiếm thì lại phải quét.",
+      "origin": "Bayer và McCreight, 1970",
+      "how": "Cây đa nhánh cân bằng với mọi lá cùng độ sâu; chèn xẻ nút để giữ cân bằng, tìm kiếm mất O(log n).",
+      "related": [
+        "Index",
+        "Primary key vs Secondary index"
+      ]
+    },
+    {
+      "term": "B+tree",
+      "aliases": [
+        "B-plus tree"
+      ],
+      "level": "intermediate",
+      "problem": "B-tree gốc rải dữ liệu trên mọi nút nên quét range phải đi ngược cây, cache kém hiệu quả.",
+      "origin": "Biến thể thập niên 1970, Comer mô tả trong khảo sát 1979",
+      "how": "Chỉ lá chứa dữ liệu và liên kết với nhau; nút nội chỉ chứa key dẫn nên quét range chạy liền mạch.",
+      "related": [
+        "Clustered index",
+        "Covering index"
+      ]
+    },
+    {
+      "term": "LSM tree",
+      "aliases": [
+        "Log-Structured Merge Tree"
+      ],
+      "level": "advanced",
+      "problem": "Ghi ngẫu hứng lên B+tree tạo random I/O chậm, khó scale khi workload ghi nhiều.",
+      "origin": "Patrick O'Neil, 1996",
+      "how": "Ghi tuần tự vào memtable rồi flush thành SSTable, compaction gộp bản ghi; ghi nhanh, đổi lấy chi phí đọc và nền compaction.",
+      "related": [
+        "B+tree",
+        "Index",
+        "WAL"
+      ]
+    },
+    {
+      "term": "Index",
+      "aliases": [
+        "chỉ mục"
+      ],
+      "level": "basic",
+      "problem": "Query không index phải quét toàn bảng, tốn O(n) trên dữ liệu lớn.",
+      "origin": "",
+      "how": "Cấu trúc phụ thường là B+tree lưu key kèm vị trí bản ghi, đổi dung lượng và chi phí ghi lấy tốc độ đọc.",
+      "related": [
+        "B+tree",
+        "Primary key vs Secondary index",
+        "Query planner"
+      ]
+    },
+    {
+      "term": "Primary key vs Secondary index",
+      "aliases": [
+        "khóa chính",
+        "index phụ"
+      ],
+      "level": "basic",
+      "problem": "Khi truy vấn lọc theo cột không phải khóa chính mà hệ thống không có index phụ, database phải quét toàn bảng, chậm rõ rệt khi bảng hàng triệu dòng. Ngược lại, đường định danh duy nhất của bản ghi phục vụ tra cứu trực tiếp theo khóa, còn index phụ chỉ là đường dẫn hỗ trợ và luôn tốn thêm một bước truy cập ngược về bảng. Nhầm lẫn ranh giới này khiến truy vấn chọn sai kế hoạch đọc.",
+      "origin": "Khái niệm mục lục dữ liệu xuất hiện từ hệ quản trị thế hệ đầu thập niên 1960, chín muồi cùng chuẩn B-tree phổ biến thập niên 1970",
+      "how": "Primary key bắt buộc duy nhất và không null; secondary index trỏ tới bản ghi nên thêm một bước tìm khi đọc.",
+      "related": [
+        "Clustered index",
+        "Index",
+        "Covering index"
+      ]
+    },
+    {
+      "term": "Clustered index",
+      "aliases": [
+        "index gộp"
+      ],
+      "level": "intermediate",
+      "problem": "Index phụ trỏ rời làm tìm theo khóa chính phải lookup ngẫu nhiên sang trang dữ liệu.",
+      "origin": "",
+      "how": "Dữ liệu chính sắp theo thứ tự index, như InnoDB với khóa chính; bản ghi nằm ngay trong nút lá.",
+      "related": [
+        "B+tree",
+        "Heap file",
+        "Primary key vs Secondary index"
+      ]
+    },
+    {
+      "term": "Covering index",
+      "aliases": [
+        "index bao quát"
+      ],
+      "level": "intermediate",
+      "problem": "Query chỉ cần vài cột nhưng vẫn phải quay lại bảng, tốn lookup không cần thiết.",
+      "origin": "",
+      "how": "Đưa các cột cần vào mục lục để trả lời trực tiếp từ index, tránh truy cập bảng (index-only scan).",
+      "related": [
+        "Index",
+        "Query planner",
+        "Clustered index"
+      ]
+    },
+    {
+      "term": "Query planner",
+      "aliases": [
+        "bộ lập kế hoạch truy vấn"
+      ],
+      "level": "intermediate",
+      "problem": "Cùng một câu SQL có thể được thực thi theo nhiều cách khác nhau, mà planner chọn sai thì chậm hơn hàng nghìn lần: quét cả bảng thay vì đi index, ước tính sai số dòng, hoặc chọn thứ tự join không hợp với quy mô dữ liệu.",
+      "origin": "IBM System R với thuật toán Selinger (bài báo 1979) — mô hình cost-based planner mà phần lớn RDBMS dùng theo sau này.",
+      "how": "Bộ planner sinh các plan thay thế cho từng bước (cách scan index hay full, thuật toán join, thứ tự join), ước chi phí I/O và CPU từ thống kê số dòng, rồi chọn plan có tổng chi phí thấp nhất; khi số liệu thống kê đổi, planner tính lại thay vì bám cứng cách chạy cũ.",
+      "related": [
+        "Cost-based optimizer",
+        "Cardinality estimation",
+        "JOIN algorithms (nested loop / hash / sort-merge)"
+      ]
+    },
+    {
+      "term": "Cost-based optimizer",
+      "aliases": [
+        "CBO",
+        "tối ưu theo chi phí"
+      ],
+      "level": "advanced",
+      "problem": "Tối ưu theo quy tắc chọn plan theo thứ tự viết SQL, không tính đặc điểm dữ liệu nên hay chọn sai.",
+      "origin": "System R, Selinger và cộng sự, 1979",
+      "how": "Tính chi phí I/O và CPU cho từng plan dựa trên thống kê bảng và index, chọn tổng chi phí thấp nhất.",
+      "related": [
+        "Query planner",
+        "Cardinality estimation",
+        "JOIN algorithms (nested loop / hash / sort-merge)"
+      ]
+    },
+    {
+      "term": "JOIN algorithms (nested loop / hash / sort-merge)",
+      "aliases": [
+        "thuật toán join"
+      ],
+      "level": "intermediate",
+      "problem": "Join hai bảng có nhiều chiến lược, mỗi kiểu mạnh hay yếu tùy kích thước và thứ tự dữ liệu.",
+      "origin": "",
+      "how": "Nested loop lặp lồng, hash join gộp bảng nhỏ vào bảng băm, sort-merge sắp rồi trộn; planner chọn theo chi phí.",
+      "related": [
+        "Cost-based optimizer",
+        "Cardinality estimation",
+        "Query planner"
+      ]
+    },
+    {
+      "term": "Cardinality estimation",
+      "aliases": [
+        "ước lượng số dòng"
+      ],
+      "level": "advanced",
+      "problem": "Ước sai số dòng làm chọn nhầm thứ tự join, plan xấu đi theo cấp số nhân.",
+      "origin": "",
+      "how": "Dùng histogram, số giá trị distinct và phỏng tuyến tính để dự đoán kết quả; thống kê sai là nguyên nhân plan tồi phổ biến.",
+      "related": [
+        "Cost-based optimizer",
+        "Index",
+        "Query planner"
+      ]
+    },
+    {
+      "term": "Normalization (1NF-3NF)",
+      "aliases": [
+        "chuẩn hóa",
+        "normal form"
+      ],
+      "level": "intermediate",
+      "problem": "Trùng lặp dữ liệu gây update anomaly: sửa một chỗ thì chỗ khác không theo.",
+      "origin": "Codd 1970 (1NF), Fagin 1974 (3NF)",
+      "how": "1NF loại giá trị lồng, 2NF bỏ phụ thuộc một phần, 3NF bỏ phụ thuộc chuyển tiếp; mỗi sự kiện chỉ ghi một nơi.",
+      "related": [
+        "Denormalization",
+        "Primary key vs Secondary index"
+      ]
+    },
+    {
+      "term": "Denormalization",
+      "aliases": [
+        "phi chuẩn hóa"
+      ],
+      "level": "intermediate",
+      "problem": "Chuẩn hóa nhiều join làm truy vấn đọc chậm trên workload đọc nhiều.",
+      "origin": "",
+      "how": "Thêm cột hoặc bảng sao để đọc một lượt, đánh đổi bằng dung lượng và rủi ro dữ liệu lệch.",
+      "related": [
+        "Normalization (1NF-3NF)",
+        "Index",
+        "Covering index"
+      ]
+    },
+    {
+      "term": "Migration",
+      "aliases": [
+        "Schema migration",
+        "migration",
+        "di trú schema",
+        "database migration",
+        "Flyway",
+        "Liquibase",
+        "Prisma Migrate"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Developer A đổi schema trên máy mình, developer B và production vẫn schema cũ nên code deploy lên là crash vì cột biến mất hoặc sai kiểu. Song song đó, dữ liệu production đang chạy nên không thể dừng hệ thống để cập nhật cấu trúc; nếu không ghi lại lịch sử thay đổi thì không biết database hiện ở cấu trúc nào, không review được bước nào đã chạy và không rollback được khi migration sai.",
+      "origin": "Không rõ tác giả đầu tiên; được phổ biến rộng rãi bởi Ruby on Rails (migrations, giữa thập niên 2000)",
+      "how": "Mỗi thay đổi schema được ghi thành script version hóa trong git và chạy có trật tự từng bước trên mọi môi trường, để dev, staging và production cùng một phiên bản cấu trúc. Nhờ lịch sử nằm trong git, ai cũng thấy được bước nào đã chạy, review được thay đổi trước khi áp vào môi trường thật, và quay lại bước trước khi migration gây lỗi.",
+      "related": [
+        "Schema",
+        "ORM",
+        "Relational database (RDBMS)",
+        "Forward engineering",
+        "Expand-contract (database migration trong deploy)"
+      ]
+    },
+    {
+      "term": "Forward engineering",
+      "aliases": [
+        "kỹ thuật tiến"
+      ],
+      "level": "intermediate",
+      "problem": "Cần biến mô tả schema thành database thật một cách lặp lại được giữa các môi trường.",
+      "origin": "",
+      "how": "Chạy DDL từ nguồn mô tả để tạo hoặc cập nhật bảng, index và ràng buộc trên database.",
+      "related": [
+        "Migration",
+        "Expand-contract (database migration trong deploy)"
+      ]
+    },
+    {
+      "term": "Expand-contract (database migration trong deploy)",
+      "aliases": [
+        "Backward compatibility (schema)",
+        "tương thích ngược",
+        "expand-contract",
+        "parallel change",
+        "expand and contract",
+        "migration không downtime"
+      ],
+      "level": "advanced",
+      "domain": "DevOps & Triển khai",
+      "problem": "Rolling deploy cho hai version code chạy song song trên cùng một database, nên thay đổi schema làm một trong hai version vỡ: migration chạy trước thì app cũ đọc/ghi lỗi, code mới chạy trước thì vỡ vì schema cũ (ví dụ đổi tên cột users.name → users.full_name). Thêm cột NOT NULL trên bảng triệu dòng còn khóa bảng hàng phút, user thấy timeout giữa lúc deploy.",
+      "origin": "Được gọi là 'parallel change (expand and contract)' trong bliki của Danilo Sato trên martinfowler.com ngày 13/5/2014; kỹ thuật shadow table/online DDL ứng dụng thực tế có pt-online-schema-change của Percona Toolkit.",
+      "how": "Chia 3 pha: expand (thêm schema mới song song, ví dụ cột nullable, code cũ vẫn chạy), migrate (code mới đọc/ghi cả hai và backfill dữ liệu dần, an toàn roll forward), contract (gỡ cột/schema cũ khi không còn client nào dùng). Nhờ đó deploy và thay đổi schema không cần khớp nhau ở cùng một thời điểm và không phải dừng hệ thống.",
+      "related": [
+        "Migration",
+        "Forward engineering",
+        "Zero-downtime deploy (rolling deploy)",
+        "Blue-green deploy",
+        "Rollback",
+        "Release vs deploy",
+        "CD (continuous delivery / continuous deployment)"
+      ]
+    },
+    {
+      "term": "Row lock vs Table lock",
+      "aliases": [
+        "khóa hàng",
+        "khóa bảng"
+      ],
+      "level": "intermediate",
+      "problem": "Cần chặn ghi trùng; khóa càng rộng càng ít xung đột nhưng càng kém đồng thời.",
+      "origin": "",
+      "how": "Row lock chỉ chặn dòng liên quan, đồng thời cao nhưng dễ deadlock; table lock đơn giản nhưng chặn cả bảng.",
+      "related": [
+        "Two-phase locking (2PL)",
+        "Deadlock detection",
+        "Transaction"
+      ]
+    },
+    {
+      "term": "Deadlock detection",
+      "aliases": [
+        "phát hiện khóa chết"
+      ],
+      "level": "intermediate",
+      "problem": "Hai transaction giữ khóa của nhau và chờ vô hạn, không bên nào thoát ra được.",
+      "origin": "",
+      "how": "Dựng đồ thị chờ đợi và tìm vòng chờ, hoặc đặt timeout rồi hủy một transaction để phá vòng.",
+      "related": [
+        "Two-phase locking (2PL)",
+        "Row lock vs Table lock",
+        "Transaction"
+      ]
+    },
+    {
+      "term": "Two-phase locking (2PL)",
+      "aliases": [
+        "2PL",
+        "hai pha khóa"
+      ],
+      "level": "advanced",
+      "problem": "Cần cách chứng minh lịch song song đúng isolation mà không cấm hẳn đồng thời.",
+      "origin": "Eswaran và cộng sự, 1976",
+      "how": "Pha lấy khóa không giải phóng, pha giải phóng không lấy thêm; giữ khóa đến commit thì được serializable.",
+      "related": [
+        "Isolation level",
+        "Deadlock detection",
+        "Snapshot isolation"
+      ]
+    },
+    {
+      "term": "Snapshot isolation",
+      "aliases": [
+        "SI",
+        "cô lập snapshot"
+      ],
+      "level": "advanced",
+      "problem": "Isolation level Serializable yêu cầu conflict detection chặt nên throughput thấp dưới tải giao dịch ngắn; Read Committed lại cho phép write skew, tức hai transaction đọc hai snapshot khác nhau rồi ghi các bản ghi khác nhau và cho ra trạng thái không nhất quán mà không bị phát hiện. Cần một mức cô lập ở giữa: đủ ổn định cho phần lớn nghiệp vụ transactional mà không trả giá chặn lock toàn cục như 2PL serializable.",
+      "origin": "H. Berenson và cộng sự, bài báo 'A Critique of Snapshot Isolation' (1995); nằm trong khung isolation levels của ANSI SQL và thường được thực thi trên nền MVCC.",
+      "how": "Mỗi transaction lấy snapshot dữ liệu tại thời điểm bắt đầu phiên và chỉ đọc trên snapshot đó. Khi ghi, hệ thống kiểm tra version của bản ghi đã đọc còn sống hay không; nếu transaction khác đã commit bản ghi đó thì phiên bị abort, nếu không thì bản ghi mới được tạo và commit. Quy tắc first-committer-wins loại được lost update trên cùng bản ghi, nhưng write skew giữa hai bản ghi khác nhau vẫn lọt.",
+      "related": [
+        "MVCC",
+        "Isolation level",
+        "Two-phase locking (2PL)"
+      ]
+    },
+    {
+      "term": "Replication (master-slave / read replica)",
+      "aliases": [
+        "sao chép dữ liệu",
+        "master-slave",
+        "primary-replica",
+        "read replica",
+        "Replication (sync/async)"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Một node DB gánh cả read + write thì có giới hạn cứng: tải đọc lớn (báo cáo, feed) làm chậm luồng ghi, và node chết là toàn hệ thống dừng vì không có bản sao nào để chuyển sang. Ghi trên node đơn còn chịu rủi ro mất dữ liệu khi node hỏng, mức độ phụ thuộc vào cơ chế đồng bộ giữa primary và bản sao.",
+      "origin": "Không rõ tác giả — có trong các hệ DB thương mại thập niên 1980-90 (Oracle Data Guard, SQL Server mirroring...)",
+      "how": "Master nhận toàn bộ ghi và đồng bộ sang các replica; client đọc từ replica để giảm tải master, khi master chết thì failover bằng cách promote một slave lên làm primary. Chế độ sync chờ ít nhất một replica xác nhận đã nhận nên an toàn hơn nhưng phải trả độ trễ; chế độ async trả lời ngay nên nhanh, nhưng có thể mất những ghi đã xác nhận nếu primary chết trước khi kịp đồng bộ. Đánh đổi chung: replication lag khiến replica trễ dữ liệu so với master, failover cần bước promote slave, và luôn có khoảng mất dữ liệu trước khi bản sao kịp nhận đủ.",
+      "related": [
+        "Multi-master replication",
+        "Split brain",
+        "CAP theorem",
+        "Failover",
+        "Sharding"
+      ]
+    },
+    {
+      "term": "Failover",
+      "aliases": [
+        "chuyển vai trò"
+      ],
+      "level": "intermediate",
+      "problem": "Primary chết thì hệ thống dừng nếu không có node thay thế sẵn sàng.",
+      "origin": "",
+      "how": "Chuyển truy vấn sang bản sao, promote nó lên primary, để client tự tìm node mới qua DNS hoặc proxy.",
+      "related": [
+        "Replication (master-slave / read replica)",
+        "Split brain"
+      ]
+    },
+    {
+      "term": "Split brain",
+      "aliases": [
+        "Split brain & quorum",
+        "split-brain",
+        "brain split",
+        "chia não",
+        "network partition giữa 2 nút",
+        "quorum",
+        "majority quorum"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Hai node trong cluster HA mất liên lạc qua đường heartbeat nhưng process vẫn sống: mỗi node nghĩ đối phương đã chết nên tự nhận mình là master, cả hai cùng phục vụ client và cùng nhận ghi. Dữ liệu phân nhánh thành hai phiên bản mâu thuẫn của cùng một record; khi mạng heal lại không biết bản nào đúng, resolve sai là corrupt hoặc mất dữ liệu, buộc operator phải xử lý thủ công. Cụm 2 node không có witness thì không ai đủ phiếu quyết định bên nào là 'đúng'.",
+      "origin": "Quorum (weighted voting) do David Gifford đề xuất, 'Weighted voting for replicated data', 1979; thuật ngữ split-brain thuộc vận hành cluster HA, không rõ tác giả đầu tiên, gắn với high-availability clustering và nghiên cứu quorum/Paxos thập niên 1990-2000.",
+      "how": "Quorum majority: nút chỉ phục vụ khi thấy đủ số nút còn sống; nhóm giữ đa số phiếu mới được active, nhóm kia tự fence. Điều kiện Vw > N/2 khiến hai nhóm 'đa số' không thể cùng tồn tại, nên hai bên không thể cùng active-write (MongoDB replica set, Galera). Vận hành dùng thêm fencing kiểu STONITH (kill node cũ trước khi cấp quyền cho node mới) và lease/epoch number để chặn node 'chết đi sống lại' ghi đè. Đánh đổi: hy sinh availability của nhóm thiểu số để giữ consistency.",
+      "related": [
+        "CAP theorem",
+        "Consensus",
+        "Distributed lock & fencing token",
+        "2PC/3PC & distributed transaction",
+        "Multi-master replication"
+      ]
+    },
+    {
+      "term": "Sharding",
+      "aliases": [
+        "phân mảnh dữ liệu",
+        "phân vùng ngang"
+      ],
+      "level": "advanced",
+      "problem": "Một node hết dung lượng và hết sức xử lý, còn tăng cấp dọc thì đắt.",
+      "origin": "",
+      "how": "Chia bảng theo hàng dựa trên shard key sang nhiều node, mỗi node giữ phần dữ liệu và gánh phần tải.",
+      "related": [
+        "Consistent hashing",
+        "Replication (master-slave / read replica)"
+      ]
+    },
+    {
+      "term": "Consistent hashing",
+      "aliases": [
+        "Consistent hashing & virtual node",
+        "băm nhất quán",
+        "virtual node",
+        "vnode",
+        "hash ring"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Phân phối cache hoặc dữ liệu bằng key % N: thêm hoặc bớt một node là N đổi, gần như toàn bộ key phải rehash, cache rỗng cùng lúc và request dồn xuống DB (cache stampede); node chết cũng gây hậu quả tương tự. Cách chia này cũng bỏ qua chuyện các máy không đều sức: hash chia key đồng đều giữa 10 node mạnh yếu khác nhau, nên node yếu vẫn nhận tải ngang node khỏe và chết chìm.",
+      "origin": "David Karger và cộng sự (MIT), 'Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web', STOC 1997; virtual node nằm ngay trong paper này để giảm variance phân phối.",
+      "how": "Đặt node và key lên cùng một vòng tròn (hash ring), key gán cho node kế tiếp theo chiều kim đồng hồ; thêm hoặc bớt node chỉ di chuyển khoảng 1/N số key thay vì remap tất cả. Mỗi máy vật lý được ánh xạ thành nhiều virtual node (điểm ảo trên vòng), nhờ đó load san đều giữa các node khác sức mạnh, và khi một node chết, key của nó được giao cho nhiều node thay vì dồn hết vào một node kế tiếp.",
+      "related": [
+        "Gossip protocol",
+        "Split brain",
+        "Sharding",
+        "Replication (master-slave / read replica)"
+      ]
+    },
+    {
+      "term": "OLTP vs OLAP",
+      "aliases": [
+        "OLTP",
+        "OLAP",
+        "hệ giao dịch",
+        "hệ phân tích"
+      ],
+      "level": "basic",
+      "problem": "Truy vấn giao dịch ngắn và báo cáo tổng hợp lớn có workload trái ngược, không tối ưu chung được.",
+      "origin": "",
+      "how": "OLTP xử lý nhiều transaction ngắn trên dòng, cần index và khóa; OLAP quét khối lớn, ưu tiên cột và hàm tổng hợp.",
+      "related": [
+        "Index",
+        "Normalization (1NF-3NF)",
+        "Clustered index"
+      ]
+    }
+  ],
+  "sources": [
+    "Wikipedia",
+    "Designing Data-Intensive Applications (Kleppmann)"
+  ]
+}

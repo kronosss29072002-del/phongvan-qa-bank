@@ -1,0 +1,381 @@
+{
+  "entries": [
+    {
+      "term": "Insecure deserialization (deserialization tấn công, unserialize)",
+      "aliases": [
+        "deserialization attack",
+        "unserialize",
+        "RCE qua deserialize",
+        "gadget chain"
+      ],
+      "level": "advanced",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Endpoint nhận JSON, XML hoặc pickle từ client rồi dựng object trực tiếp. Kẻ tấn công không cần exploit memory corruption, chỉ gửi payload đúng cú pháp nhưng trỏ tới gadget class có sẵn trong classpath để thực thi lệnh. Java native serialization, Python pickle và PHP unserialize đều đã bị khai thác RCE ngoài thực tế.",
+      "origin": "Công bố rộng qua talk Marshalling Pickles của Chris Frohoff và Gabriel Lawrence tại AppSec California 2015; vào OWASP Top 10 2017 ở vị trí A8",
+      "how": "Không deserialize định dạng có thể biểu diễn hành vi (pickle, Java ObjectInputStream) cho dữ liệu từ nguồn không tin cậy; dùng định dạng dữ liệu thuần như JSON kèm schema hoặc protobuf, kiểm tra kiểu tường minh sau khi parse. Nếu buộc phải giữ, áp class allowlist, loại gadget khỏi classpath và chạy tiến trình parse bằng quyền tối thiểu trong sandbox.",
+      "related": [
+        "OWASP Top 10",
+        "Command injection",
+        "SAST/DAST",
+        "XXE (XML External Entity)"
+      ]
+    },
+    {
+      "term": "XXE (XML External Entity)",
+      "aliases": [
+        "XML External Entity",
+        "external entity attack",
+        "lỗ hổng XXE"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Service SOAP và integration với hệ legacy parse XML từ client bằng parser mặc định bật DTD. Kẻ tấn công chèn DOCTYPE trỏ tới file:///etc/passwd để đọc file nội bộ, trỏ tới URL metadata của cloud để lấy credential, hoặc lồng entity đệ quy làm parser ngốn CPU. Lỗi nằm ở cấu hình parser chứ không ở dòng code nghiệp vụ nào.",
+      "origin": "Được thảo luận từ đầu thập niên 2000 trong tài liệu XML security; OWASP Top 10 2017 xếp hạng A4",
+      "how": "Tắt DTD và external entity ở tầng parser (Java: disallow-doctype-decl, tắt external-general-entities; Python: dùng defusedxml thay xml.etree). Với hệ mới, chuyển sang JSON. Kiểm chứng bằng test gửi payload có SYSTEM entity và khẳng định parser trả lỗi, chạy thêm SAST để bắt các parser instance còn sót trong codebase.",
+      "related": [
+        "OWASP Top 10",
+        "SSRF",
+        "Insecure deserialization (deserialization tấn công, unserialize)"
+      ]
+    },
+    {
+      "term": "KMS & envelope encryption (KMS, HSM, DEK/KEK)",
+      "aliases": [
+        "KMS",
+        "HSM",
+        "DEK/KEK",
+        "mã hóa phong bì",
+        "envelope encryption"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Mã hóa at-rest cần key, nhưng để key nằm chung chỗ với dữ liệu thì chỉ chống được kẻ trộm ổ đĩa, không chống được kẻ đọc được code hoặc file cấu hình. Mã hóa thẳng từng object bằng một master key cũng không scale: mỗi lần xoay key phải giải mã rồi mã hóa lại toàn bộ kho dữ liệu.",
+      "origin": "Thuật ngữ chuẩn của ngành mật mã; AWS KMS (2014) và Google Cloud KMS phổ biến hóa mô hình DEK/KEK trên cloud",
+      "how": "Envelope encryption chia hai tầng. KMS hoặc HSM giữ master key (KEK) không rời khỏi thiết bị; mỗi object sinh một data key (DEK), dữ liệu mã hóa bằng DEK, DEK mã hóa bằng KEK và lưu kèm ciphertext. Giải mã theo chiều ngược qua API KMS. Xoay KEK chỉ cần mã hóa lại các DEK, không đụng tới dữ liệu lớn; key policy giới hạn ai được dùng key nào.",
+      "related": [
+        "encryption symmetric vs asymmetric",
+        "secrets management (quản lý bí mật tập trung, dynamic secrets)",
+        "Secrets in runtime"
+      ]
+    },
+    {
+      "term": "Certificate pinning",
+      "aliases": [
+        "SSL pinning",
+        "public key pinning",
+        "SPKI pinning",
+        "HPKP"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Người dùng cài certificate giả vào máy qua malware hoặc profile cấu hình, hoặc đi qua proxy giải mã của công ty. Trình duyệt và ứng dụng vẫn tin tưởng CA đó, toàn bộ traffic bị đọc giữa đường mà không có cảnh báo nào. Với mobile app, MITM kiểu này đủ để lấy token và dữ liệu người dùng.",
+      "origin": "Chuẩn hóa cho web trong RFC 7469 (2015) với tên HPKP; Chrome bỏ HPKP năm 2018, pinning tồn tại chủ yếu trong mobile/desktop app",
+      "how": "Client lưu sẵn public key hoặc hash certificate của server (pin) và từ chối kết nối khi chuỗi cert hiện tại không khớp, kể cả chuỗi đó hợp lệ theo CA tin cậy. Kinh nghiệm triển khai: pin theo SPKI thay vì cả certificate để sống qua các đợt renew, đặt nhiều pin dự phòng cho key backup, và ghi ngày hết hạn cho từng pin. Thiếu pin dự phòng hoặc để cert hết hạn là nguyên nhân outage diện rộng quen thuộc.",
+      "related": [
+        "X.509 & PKI certificate management",
+        "mTLS (mutual TLS, TLS hai chiều)",
+        "TLS/SSL"
+      ]
+    },
+    {
+      "term": "Audit log / audit trail (nhật ký kiểm toán)",
+      "aliases": [
+        "audit trail",
+        "nhật ký kiểm toán",
+        "nhật ký audit",
+        "audit logging"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Khi điều tra sự cố bảo mật hoặc tranh chấp giao dịch, đội cần biết ai đã đọc, xóa hay sửa bản ghi nào và lúc nào. Log ứng dụng thông thường ghi rải rác, nằm cùng máy với kẻ tấn công và bị xoay vòng theo retention, nên không dùng được làm bằng chứng.",
+      "origin": "Yêu cầu có từ các chuẩn tài chính như SOX (2002); PCI-DSS quy định retention audit log tối thiểu 12 tháng",
+      "how": "Tách audit log khỏi log vận hành, ghi cố định các sự kiện nhạy cảm (đăng nhập, đổi quyền, truy cập và export dữ liệu, thao tác admin) kèm actor, action, resource, thời điểm, source IP. Yêu cầu cốt lõi: append-only, đẩy ngay sang storage chỉ-ghi-thêm (WORM, S3 Object Lock), thêm hash chain hoặc chữ ký để phát hiện sửa đổi, và retention theo quy định; PCI-DSS yêu cầu giữ tối thiểu 12 tháng.",
+      "related": [
+        "Structured logging",
+        "Log aggregation & ELK Stack",
+        "RBAC (Role-Based Access Control, phân quyền theo vai trò)"
+      ]
+    },
+    {
+      "term": "HSTS (HTTP Strict Transport Security)",
+      "aliases": [
+        "HTTP Strict Transport Security",
+        "Strict-Transport-Security",
+        "HSTS preload",
+        "HSTS header"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Người dùng gõ example.com không kèm scheme, request HTTP đầu tiên đi trần qua mạng. Kẻ đứng giữa chỉ cần chặn request đó để trả trang giả hoặc redirect sang bản HTTP đã bị đọc. Mọi redirect phía server đều quá muộn vì request đầu đã lộ trước khi server kịp nói gì.",
+      "origin": "Đề xuất bởi Jeff Hodges, Collin Jackson và Adam Barth; chuẩn hóa trong RFC 6797 (2012)",
+      "how": "Server gắn header Strict-Transport-Security: max-age kèm includeSubDomains vào response HTTPS; trình duyệt ghi nhớ và tự đổi mọi truy cập về sau sang HTTPS ngay từ đầu, kể cả khi người dùng gõ http. Đưa domain vào preload list khóa luôn lần truy cập đầu tiên, đổi lại việc gỡ bỏ chậm vì phải chờ trình duyệt cập nhật; chỉ preload khi mọi subdomain đã phục vụ HTTPS.",
+      "related": [
+        "HTTPS",
+        "TLS/SSL",
+        "CSP (Content Security Policy)",
+        "Cookie vs session token",
+        "OWASP Top 10"
+      ]
+    },
+    {
+      "term": "CSP (Content Security Policy)",
+      "aliases": [
+        "Content Security Policy",
+        "CSP header",
+        "nonce-based CSP",
+        "strict-dynamic"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Escape đúng chỗ vẫn sót đường XSS: một thư viện render HTML từ template string, một inline script còn lại ở trang cũ, hoặc dữ liệu chui vào thuộc tính sự kiện. Trông chờ mọi điểm nối chuỗi đều đúng là cách tiếp cận đã thất bại nhiều lần, nên cần lớp chặn ở phía trình duyệt.",
+      "origin": "Khởi nguồn từ Mozilla (2008), Firefox 4 (2011) hỗ trợ đầu tiên, W3C ban hành CSP Level 1 năm 2012; strict-dynamic thêm ở CSP3",
+      "how": "Header Content-Security-Policy khai báo nguồn được phép cho script, style, frame, connect; trình duyệt chặn mọi thứ ngoài danh sách. Trình tự an toàn: chạy Report-Only để thu violation, thay inline script bằng nonce hoặc hash thay vì 'unsafe-inline', rồi mới bật enforce. Dùng strict-dynamic để cho phép script do script tin cậy nạp tiếp mà không cần liệt kê từng host.",
+      "related": [
+        "XSS",
+        "SameSite cookie",
+        "HSTS (HTTP Strict Transport Security)"
+      ]
+    },
+    {
+      "term": "Threat modeling (STRIDE, DREAD)",
+      "aliases": [
+        "STRIDE",
+        "DREAD",
+        "mô hình hóa mối đe dọa",
+        "security modeling"
+      ],
+      "level": "advanced",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Feature viết xong mới được security review, lúc đó ranh giới tin cậy đã chốt và sửa nghĩa là viết lại. Kết quả thường là review biến thành danh sách lỗi vặt sửa cho có, còn các đường tấn công thật như SSRF từ chức năng import hay leo quyền qua endpoint admin bị bỏ qua.",
+      "origin": "STRIDE do Loren Kohnfelder và Praerit Garg đặt ra tại Microsoft năm 1999; DREAD của Microsoft đầu thập niên 2000",
+      "how": "Vẽ luồng dữ liệu, đánh dấu trust boundary, rồi với mỗi luồng đi qua boundary hỏi sáu câu STRIDE: giả mạo, sửa đổi, chối bỏ, lộ thông tin, từ chối dịch vụ, leo quyền. Chấm từng mối đe dọa bằng DREAD hoặc risk matrix (khả năng × tác động) để chốt giảm thiểu, chấp nhận hay chuyển hướng, kèm người chịu trách nhiệm cho từng kết luận. Mỗi feature lớn một buổi 1-2 giờ, làm trước khi code.",
+      "related": [
+        "OWASP Top 10",
+        "SAST/DAST",
+        "Supply chain security (SBOM, SLSA, dependency scanning)"
+      ]
+    },
+    {
+      "term": "Supply chain security (SBOM, SLSA, dependency scanning)",
+      "aliases": [
+        "SBOM",
+        "SLSA",
+        "dependency scanning",
+        "Software Bill of Materials",
+        "software supply chain",
+        "provenance",
+        "an ninh chuỗi cung ứng",
+        "SBOM & software supply chain inventory (Software Bill of Materials, provenance, SPDX, CycloneDX)"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Log4Shell cuối 2021 khiến nhiều tổ chức mất hàng tuần chỉ để trả lời câu hỏi hệ thống nào dùng log4j-core, phiên bản nào, ở service nào. Một package nhỏ bị chiếm tài khoản maintainer cũng đủ đưa mã độc vào build pipeline của hàng nghìn công ty dù không dòng code nào trong repo thay đổi; npm event-stream 2018 và xz-utils 2024 là hai ví dụ. Không có danh mục dependency thì mỗi CVE thành cuộc điều tra thủ công toàn bộ hệ thống; không có provenance thì không phân biệt được artifact build từ nguồn tin cậy hay bị chèn ở khâu phát hành; kiểm soát source của chính mình không chặn được đường vào qua registry.",
+      "origin": "Được định hình sau vụ SolarWinds 2020; SBOM phổ biến từ Executive Order 14028 của Mỹ (5/2021) sau các sự cố chuỗi cung ứng; NTIA công bố danh mục thành phần tối thiểu của SBOM cùng năm; SLSA do Google đề xuất 2021, nay thuộc OpenSSF",
+      "how": "Kiểm soát gồm: pin version và commit lockfile, verify checksum khi cài, quét lỗ hổng dependency trong CI (Dependabot, npm audit), ký artifact và verify chữ ký (Sigstore, cosign). SBOM liệt kê component, phiên bản, license, quan hệ phụ thuộc theo format SPDX hoặc CycloneDX, sinh tự động trong CI (syft, cyclonedx-npm) và lưu theo từng build; từ đó truy vấn ngược CVE ra hệ thống bị ảnh hưởng rút từ tuần xuống vài phút. Provenance kiểu SLSA ghi artifact build từ commit nào, builder nào, có ký số không; khung SLSA mô tả mức tin cậy của build pipeline, từ build tự động tự chạy tới build cô lập có provenance được ký.",
+      "related": [
+        "Lockfile & deterministic dependency resolution (package-lock.json, go.sum, Cargo.lock)",
+        "Open-source license (MIT, Apache-2.0, GPL, copyleft)",
+        "Build artifact",
+        "CVE & CVSS score",
+        "OWASP Top 10"
+      ]
+    },
+    {
+      "term": "CVE & CVSS score",
+      "aliases": [
+        "CVE",
+        "CVSS",
+        "Common Vulnerabilities and Exposures",
+        "base score"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Mỗi tuần dependency công bố lỗ hổng mới, danh sách cảnh báo dài và mô tả viết ở nhiều mức chất lượng khác nhau. Không có thang chung để xếp thứ tự thì đội dễ cày hết lỗi điểm thấp trước trong khi lỗ hổng RCE từ xa điểm cao vẫn nằm nguyên trong hệ thống.",
+      "origin": "CVE khởi xướng năm 1999 bởi MITRE; CVSS do FIRST công bố lần đầu năm 2005, bản 4.0 ra năm 2023",
+      "how": "CVE là mã định danh duy nhất cho một lỗ hổng (CVE-2024-3094), do các CNA cấp qua hệ thống của MITRE, để mọi công cụ nói về cùng một thứ. CVSS là thang 0-10 theo vector, base score trên 9.0 là Critical; tách base score khỏi temporal và environmental score để ưu tiên theo bối cảnh hệ thống thay vì vá máy móc theo điểm số.",
+      "related": [
+        "OWASP Top 10",
+        "Supply chain security (SBOM, SLSA, dependency scanning)",
+        "SAST/DAST"
+      ]
+    },
+    {
+      "term": "Timing attack & constant-time comparison",
+      "aliases": [
+        "timing attack",
+        "tấn công thời gian",
+        "constant-time comparison",
+        "timingSafeEqual",
+        "so sánh hằng thời gian"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Năm 1996, Paul Kocher chỉ ra rằng so sánh chuỗi bằng toán tử == dừng ngay tại byte đầu khác nhau, nên thời gian phản hồi đo được tiết lộ dần từng byte của secret. Kẻ tấn công gửi hàng nghìn request và đo chênh lệch vài microsecond để dò ra API key hoặc chữ ký HMAC, không cần brute force toàn bộ không gian khóa.",
+      "origin": "Paul Kocher, bài báo \"Timing Attacks on Implementations of Diffie-Hellman, RSA, DSS, and Other Systems\", 1996.",
+      "how": "Hàm so sánh an toàn (crypto.timingSafeEqual của Node, hmac.compare_digest của Python) duyệt hết chiều dài chuỗi và XOR từng cặp byte vào một giá trị tích lũy, trả kết quả ở cuối, nên thời gian chạy không phụ thuộc vị trí byte sai đầu tiên. Quy tắc: mọi so sánh secret, token, chữ ký phải qua hàm constant-time, không dùng == của ngôn ngữ.",
+      "related": [
+        "HMAC",
+        "password hashing (băm mật khẩu, password hash)",
+        "JWT (JSON Web Token, signed token)"
+      ]
+    },
+    {
+      "term": "WebAuthn / Passkey (FIDO2)",
+      "aliases": [
+        "WebAuthn",
+        "passkey",
+        "FIDO2",
+        "passwordless",
+        "credential registration"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Password là gốc của phần lớn sự cố auth: bị phishing, dùng lại giữa các site, rò rỉ từ database hash yếu. WebAuthn ra đời để browser đóng vai trò trung gian ký challenge bằng private key nằm trong secure enclave của thiết bị, server chỉ giữ public key, nên rò rỉ phía server không còn cấp được credential dùng lại.",
+      "origin": "FIDO Alliance khởi động FIDO2 năm 2018-2019; WebAuthn thành W3C Recommendation tháng 3/2019; passkey được Apple, Google, Microsoft đồng loạt đẩy từ 2022.",
+      "how": "Đăng ký: navigator.credentials.create() sinh cặp khóa theo thuật toán server yêu cầu, trả về credential ID và public key để server lưu kèm attestation. Đăng nhập: server phát challenge ngẫu nhiên, authenticator ký bằng private key, server verify chữ ký và counter chống replay. Backend phải xử lý cả conditional UI, thiết bị không hỗ trợ passkey, và luồng fallback.",
+      "related": [
+        "Multi-Factor Authentication (MFA)",
+        "MFA/TOTP",
+        "digital signature"
+      ]
+    },
+    {
+      "term": "JWKS (JSON Web Key Set)",
+      "aliases": [
+        "JSON Web Key Set",
+        "JWK",
+        "jwks_uri",
+        "public key endpoint"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Service nhận JWT RS256 từ identity provider không verify được chữ ký nếu chỉ có token, vì cần public key khớp private key đã ký. Nhúng cứng key vào từng service thì mỗi lần provider xoay khóa phải deploy lại toàn bộ, còn tự parse token để chọn key là logic lặp ở mọi service.",
+      "origin": "RFC 7517 (JSON Web Key) và RFC 7515 (JWS), 2015.",
+      "how": "Provider công bố JWKS tại endpoint /.well-known/jwks.json gồm nhiều JWK, mỗi key có kid, alg, use. Service đọc header kid của token, tìm key khớp trong set, cache theo TTL và refresh khi gặp kid lạ. jwks-rsa hoặc middleware sẵn có làm phần này; verify xong mới đọc claims.",
+      "related": [
+        "JWT (JSON Web Token, signed token)",
+        "OpenID Connect (OIDC)",
+        "key rotation"
+      ]
+    },
+    {
+      "term": "Credential stuffing",
+      "aliases": [
+        "credential stuffing",
+        "nhồi credential",
+        "stuffed credentials",
+        "breach replay"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Diễn đàn bị lộ database, kẻ tấn công đem nguyên cặp email/password thử trên ngân hàng, mạng xã hội, dịch vụ cloud. Tỷ lệ thành công thấp nhưng chi phí bằng 0 nhờ tool chạy hàng nghìn request mỗi phút qua proxy dân cư, nên rate limit theo IP vô dụng vì mỗi IP chỉ thử vài lần.",
+      "origin": "",
+      "how": "Phòng thủ nhiều lớp: phát hiện login thành công từ thiết bị lạ, đối chiếu email với breach corpus, device fingerprint, bắt buộc MFA cho phiên rủi ro. Rate limit theo account thay vì chỉ theo IP, delay tăng dần, và vô hiệu hóa toàn bộ session cũ khi đổi mật khẩu. CAPTCHA chỉ chặn được tool rẻ tiền, không phải biện pháp chính.",
+      "related": [
+        "brute force + rate limiting",
+        "MFA/TOTP",
+        "password hashing (băm mật khẩu, password hash)"
+      ]
+    },
+    {
+      "term": "Penetration testing (pen test, pentest)",
+      "aliases": [
+        "penetration testing",
+        "pentest",
+        "pen test",
+        "kiểm thử xâm nhập"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "SAST/DAST chạy theo rule có sẵn nên chỉ tìm được lớp lỗ hổng đã biết mẫu. Logic flaw kiểu leo thang quyền qua đổi order_id, hay chuỗi SSRF chạm metadata service lấy credential cloud, không rule automation nào phát hiện. Cần người tấn công thật sự đọc business flow và tự dựng exploit chain theo ngữ cảnh.",
+      "origin": "Khái niệm penetration testing xuất hiện trong báo cáo của James P. Anderson (1972) cho Không quân Mỹ; mô hình tiger team phổ biến từ thập niên 1970.",
+      "how": "Chia scope rõ (black-box hoặc gray-box), liệt kê attack surface, khai thác từng lỗ hổng có kiểm soát, ghi bằng chứng request/response. Kỹ thuật gồm automated scan lẫn manual: authz từng object, race condition, business logic, injection. Kết bằng report severity theo CVSS kèm bước reproduce, rồi retest sau khi vá.",
+      "related": [
+        "SAST/DAST",
+        "OWASP Top 10",
+        "Fuzzing (fuzz testing)"
+      ]
+    },
+    {
+      "term": "Fuzzing (fuzz testing)",
+      "aliases": [
+        "fuzzing",
+        "fuzz testing",
+        "fuzzer",
+        "OSS-Fuzz",
+        "AFL"
+      ],
+      "level": "advanced",
+      "domain": "Kiểm thử & Chất lượng",
+      "problem": "Parser, decoder, hàm xử lý định dạng file luôn có edge case không ai nghĩ tới: off-by-one khi gặp length âm, vòng lặp vô hạn khi gặp cyclic reference. Unit test viết tay không cover được vì tác giả chỉ test input mình nghĩ ra. Fuzzing đảo ngược giả định đó, để máy tự sinh input đến khi tìm ra crash.",
+      "origin": "Barton Miller (Đại học Wisconsin) đặt tên năm 1988 sau khi thấy tiện ích Unix crash vì input ngẫu nhiên trong một trận bão; OSS-Fuzz ra mắt năm 2016.",
+      "how": "Fuzzer chạy code trong vòng lặp với input sinh từ corpus mẫu: random (dumb fuzzing) hoặc guided theo coverage (AFL, libFuzzer mutate input nào tăng coverage). Khi crash, seed được lưu lại và công cụ hiện đại thu nhỏ input về mức tối thiểu vẫn reproduce được. OSS-Fuzz của Google chạy liên tục cho open source và báo CVE.",
+      "related": [
+        "Property-based testing",
+        "QuickCheck",
+        "SAST/DAST"
+      ]
+    },
+    {
+      "term": "GDPR & data privacy compliance (PII, right to erasure, data retention)",
+      "aliases": [
+        "GDPR",
+        "data privacy",
+        "PII",
+        "right to erasure",
+        "quyền được xóa",
+        "data retention"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "User yêu cầu xóa tài khoản. Lệnh DELETE chạy trên bảng users, nhưng dữ liệu vẫn nằm trong backup, log đã đẩy vào kho log tập trung, bảng audit, và bản sao analytics. GDPR yêu cầu right to erasure cùng thời hạn retention cụ thể, không trả lời được dữ liệu nằm ở đâu và sống bao lâu là vi phạm, dù code xóa đã chạy.",
+      "origin": "GDPR là Regulation (EU) 2016/679, thông qua 4/2016, áp dụng từ 25/5/2018.",
+      "how": "Privacy by design từ schema: phân loại trường nào là PII, mã hóa khi lưu, mask/redact PII ở tầng logger, đặt TTL từng loại dữ liệu kèm job dọn định kỳ. Xóa user là quy trình xuyên service: soft-delete rồi purge async, xóa hoặc tokenize trong backup, ghi consent và lý do lưu dữ liệu vào audit trail. Data subject request cần API và runbook sẵn.",
+      "related": [
+        "Structured logging",
+        "Log rotation & retention (logrotate)",
+        "least privilege"
+      ]
+    },
+    {
+      "term": "PRNG vs CSPRNG (secure random)",
+      "aliases": [
+        "PRNG",
+        "CSPRNG",
+        "secure random",
+        "pseudorandom",
+        "cryptographically secure random"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Sinh session ID, reset token, hay salt bằng Math.random() là lỗi đã hạ nhiều sản phẩm: PRNG thường chỉ vài chục bit trạng thái, seed từ thời gian, nên quan sát một vài output là dựng lại được trạng thái và đoán token tiếp theo. Lỗi seed trong SSL của Netscape năm 1995 cho phép đoán khóa phiên từ thời điểm bắt tay.",
+      "origin": "Yêu cầu kỹ thuật được hệ thống hóa trong RFC 4086 (2005); lỗi seed đoán được trong SSL của Netscape (1995) là case kinh điển của PRNG yếu.",
+      "how": "CSPRNG (crypto.getRandomValues, crypto.randomBytes, /dev/urandom, getrandom) lấy entropy từ nguồn không đoán được của hệ điều hành, output không suy ra được trạng thái nội bộ. Phân biệt rõ: mô phỏng, game, chọn ngẫu nhiên không nhạy cảm dùng PRNG; token, session, nonce, salt, khóa dùng CSPRNG với độ dài tối thiểu 128 bit.",
+      "related": [
+        "Salt",
+        "nonce",
+        "session-based auth"
+      ]
+    },
+    {
+      "term": "Firewall & security groups (iptables/nftables)",
+      "aliases": [
+        "firewall",
+        "tường lửa",
+        "security group",
+        "iptables",
+        "nftables",
+        "network ACL"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Service backend không có lớp lọc mạng: mọi máy trong VPC gọi được mọi cổng của mọi máy, kể cả database, cache, admin endpoint. Một container bị xâm nhập qua dependency độc sẽ quét nội bộ và chạm ngay database, không cần khai thác thêm. Firewall và security group biến mạng nội bộ từ tin cậy ngầm thành có kiểm soát.",
+      "origin": "iptables gắn với kernel Linux 2.4 (2001), thay ipchains; nftables thay thế từ kernel 3.13 (2014); security group là mô hình của AWS EC2 từ 2006.",
+      "how": "Security group (cloud) là allowlist stateful gắn theo instance/ENI: rule gồm protocol, port, source (CIDR hoặc SG khác). iptables/nftables lọc packet trên host, dùng để giới hạn cổng listen và chặn scan khi hạ tầng không có SG. Nguyên tắc: default deny inbound, mở tối thiểu theo app tier, log drop cho sự kiện bất thường; firewall là một lớp defense-in-depth, không thay authN/authZ tầng app.",
+      "related": [
+        "least privilege",
+        "zero trust"
+      ]
+    }
+  ]
+}

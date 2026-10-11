@@ -1,0 +1,290 @@
+{
+  "entries": [
+    {
+      "term": "Message framing (length-prefix vs delimiter, packet boundary)",
+      "aliases": [
+        "message framing",
+        "framing",
+        "length-prefix framing",
+        "delimited framing"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "TCP là byte stream nên không giữ ranh giới message: hai lần write() có thể gộp vào một segment, hoặc một message lớn bị cắt làm đôi nằm ở hai segment khác nhau. Parser đọc một lần rồi parse thẳng sẽ ăn lỗi 'unexpected end of JSON' khi payload lớn hoặc tải cao, còn môi trường dev chạy một máy gần như không tái hiện được.",
+      "origin": "Netstrings của D. J. Bernstein (1997) là một trong các định dạng length-prefix được chuẩn hóa sớm nhất.",
+      "how": "Bên gửi tự đánh dấu ranh giới: hoặc ghi độ dài trước nội dung (length-prefix, protobuf và Kafka dùng độ dài 4 byte), hoặc kết thúc message bằng delimiter (newline trong JSON-lines, CRLF trong HTTP). Bên đọc giữ buffer tích lũy và chỉ cắt khi đã đủ byte hoặc gặp delimiter; cả hai kiểu đều cần giới hạn độ dài tối đa để chặn message rác khổng lồ.",
+      "related": [
+        "TCP",
+        "WebSocket",
+        "Nagle's algorithm & delayed ACK",
+        "HTTP/2"
+      ]
+    },
+    {
+      "term": "Kafka log compaction (changelog topic)",
+      "aliases": [
+        "log compaction",
+        "compacted topic",
+        "changelog topic",
+        "cleanup.policy=compact"
+      ],
+      "level": "intermediate",
+      "domain": "Messaging & Bất đồng bộ",
+      "problem": "Topic Kafka mặc định xóa dữ liệu theo thời gian, nhưng changelog của state store hoặc read model cần giữ giá trị mới nhất theo key sống vô thời hạn: rebuild state từ log đã hết hạn là mất dữ liệu. Còn để retention thời gian cho topic dạng 'trạng thái theo id' thì consumer đọc được cả loạt bản cũ, phải tự đoán bản nào mới nhất và chọn nhầm.",
+      "origin": "",
+      "how": "cleanup.policy=compact bảo Kafka giữ record cuối cùng của mỗi key và dần dọn record cũ trong segment nền (log cleaner); ghi value=null là tombstone đánh dấu xóa key, tombstone cũng bị dọn sau delete.retention.ms. Đọc compacted topic cho ra ảnh chụp key-value mới nhất, cơ chế đứng sau Kafka Streams state store và read model CQRS.",
+      "related": [
+        "Apache Kafka",
+        "Kafka topic / partition / consumer group",
+        "CQRS",
+        "Event sourcing"
+      ]
+    },
+    {
+      "term": "Kafka ISR & acks durability (acks=all, min.insync.replicas)",
+      "aliases": [
+        "ISR",
+        "in-sync replicas",
+        "acks=all",
+        "min.insync.replicas"
+      ],
+      "level": "intermediate",
+      "domain": "Messaging & Bất đồng bộ",
+      "problem": "Producer để acks=1 thì broker leader ghi xong và trả thành công ngay, chưa chắc replica nào đã có bản sao; leader chết lúc này là message mất im lặng, consumer không bao giờ thấy, còn producer tin rằng đã gửi xong. Đổi acks=all mà quên min.insync.replicas cũng không cứu được: leader vẫn nhận ghi dù ISR chỉ còn một mình nó.",
+      "origin": "",
+      "how": "acks=all buộc leader chờ toàn bộ replica trong ISR xác nhận; min.insync.replicas chốt số replica tối thiểu phải nằm trong ISR thì producer mới ghi được, thiếu thì trả NotEnoughReplicas. Cấu hình phổ biến là replication.factor=3, min.insync.replicas=2, acks=all, chết một broker vẫn ghi tiếp. Replica rời ISR khi tụt hậu quá replica.lag.time.max.ms, kéo theo rủi ro mất dữ liệu lúc failover.",
+      "related": [
+        "Apache Kafka",
+        "Replication (master-slave / read replica)",
+        "Quorum Read/Write",
+        "Kafka topic / partition / consumer group"
+      ]
+    },
+    {
+      "term": "Consumer rebalance (Kafka consumer group)",
+      "aliases": [
+        "rebalance",
+        "rebalance storm",
+        "group rebalancing",
+        "cooperative-sticky"
+      ],
+      "level": "intermediate",
+      "domain": "Messaging & Bất đồng bộ",
+      "problem": "Mỗi lần có consumer join hoặc rời group (pod restart, scale, deploy), partition phải chia lại; giao thức cũ thu hồi mọi partition trước khi assign nên cả group ngừng xử lý trong lúc rebalance. Rolling deploy hàng chục pod tạo chuỗi rebalance liên tiếp, consumer lag tăng vọt và message bị xử lý lặp vì offset chưa kịp commit.",
+      "origin": "Cooperative rebalancing theo KIP-429, có từ Kafka 2.4 (2019).",
+      "how": "Group coordinator bầu một consumer làm leader để tính phân bổ partition; membership đổi là rebalance chạy lại. Eager protocol (range, round-robin) revoke hết rồi mới gán, cooperative-sticky chỉ thu hồi phần cần chuyển. Giảm đau bằng static membership (group.instance.id) để pod restart không kích hoạt chia lại, chỉnh session.timeout.ms và max.poll.interval.ms đủ rộng để consumer không bị đuổi giữa chừng.",
+      "related": [
+        "Kafka topic / partition / consumer group",
+        "Apache Kafka",
+        "Idempotent consumer",
+        "Consumer lag monitoring (offset lag)"
+      ]
+    },
+    {
+      "term": "GraphQL (query language, schema, resolver)",
+      "aliases": [
+        "GraphQL",
+        "query language",
+        "resolver",
+        "schema-first API"
+      ],
+      "level": "intermediate",
+      "domain": "Thiết kế API",
+      "problem": "App mobile màn nhỏ cần 3 field nhưng REST trả cả object lớn, hoặc một màn cần dữ liệu từ 4 resource thì phải gọi 4 endpoint, mỗi lần một round trip. Client muốn thêm một field phải chờ backend mở version mới, backend gánh nhiều biến thể response cho các đời app khác nhau.",
+      "origin": "Facebook dựng năm 2012 cho app mobile, mở mã nguồn 2015, chuyển cho GraphQL Foundation (Linux Foundation) năm 2019.",
+      "how": "Client gửi một query khai báo đúng field cần, server trả JSON khớp schema; một endpoint duy nhất, type system mô tả dữ liệu, resolver ánh xạ từng field tới hàm lấy dữ liệu. Query tự chọn shape nên backend ít phải bump version; đổi lại phải chặn N+1 bằng DataLoader batch theo khóa, giới hạn độ sâu và độ phức tạp query, phân quyền theo từng field.",
+      "related": [
+        "REST (Representational State Transfer)",
+        "gRPC",
+        "BFF (Backend for Frontend)",
+        "N+1 query"
+      ]
+    },
+    {
+      "term": "SNI (Server Name Indication)",
+      "aliases": [
+        "Server Name Indication",
+        "SNI extension",
+        "TLS SNI"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Một IP cổng 443 phục vụ nhiều tên miền, nhưng TLS phải chọn certificate ngay giữa handshake, trước khi HTTP Host header xuất hiện. Không có cách để server biết client muốn host nào thì mỗi site cần một IP riêng, và multi-tenant hay trả nhầm certificate của tenant khác.",
+      "origin": "RFC 4366 (2006), tái bản ở RFC 6066 (2011).",
+      "how": "Client đính tên hostname vào ClientHello dưới extension server_name; server đọc trường này để chọn certificate và cấu hình TLS trước khi HTTP bắt đầu. Reverse proxy và LB terminate TLS dựa vào SNI để route nên cấu hình lệch thường hiện thành 'wrong certificate' hoặc traffic vào nhầm backend; TLS 1.3 mã hóa SNI (ECH) để giảm rò rỉ tên miền.",
+      "related": [
+        "TLS handshake",
+        "certificate",
+        "TLS/SSL",
+        "HTTPS"
+      ]
+    },
+    {
+      "term": "ALPN (Application-Layer Protocol Negotiation)",
+      "aliases": [
+        "Application-Layer Protocol Negotiation",
+        "ALPN extension",
+        "h2 negotiation"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Cùng một cổng 443 phải phục vụ HTTP/1.1, HTTP/2 và gRPC. Chốt cứng một giao thức trong cấu hình thì client không khớp sẽ hỏng ngay từ handshake; lỗi kiểu này hiện ra ở proxy hoặc service mesh dưới dạng 'ALPN negotiation failed' với triệu chứng giống mạng lỗi, mất thời gian lần ra.",
+      "origin": "RFC 7301 (2014), thay thế NPN mà Google dùng cho SPDY.",
+      "how": "Client liệt kê giao thức hỗ trợ trong ClientHello (h2, http/1.1); server chọn một và trả lại trong ServerHello, chốt ngay trong handshake nên không thêm round trip. LB, ingress và service mesh đọc kết quả này để route và health check; lệch thường gặp là health check nói HTTP/1.1 trong khi backend chỉ chấp nhận h2.",
+      "related": [
+        "TLS handshake",
+        "HTTP/2",
+        "gRPC",
+        "TLS/SSL"
+      ]
+    },
+    {
+      "term": "DNS record types (A/AAAA/CNAME/MX/TXT/SRV/PTR)",
+      "aliases": [
+        "A record",
+        "AAAA",
+        "CNAME",
+        "MX",
+        "TXT",
+        "SRV",
+        "PTR"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Một tên miền phải trả nhiều loại thông tin: địa chỉ IPv4, IPv6, mail server, bản ghi xác thực email, tên canonical. Thiếu hệ thống phân loại thì mỗi ứng dụng nhét dữ liệu của mình vào một trường text chung rồi tự parse, và những lỗi như SPF/DKIM gãy sau khi đổi IP đều bắt nguồn từ dùng sai loại bản ghi.",
+      "origin": "RFC 1035 (1987) định nghĩa A, CNAME, MX, TXT, PTR; AAAA ở RFC 3596 (2003), SRV ở RFC 2782 (2000).",
+      "how": "A/AAAA trỏ tên tới IPv4/IPv6; CNAME alias sang tên khác (không đặt ở apex); MX chỉ mail server kèm priority; TXT chở SPF, DKIM, DMARC; SRV khai báo host và port cho service discovery; PTR ánh xạ ngược IP về tên. Resolver hỏi đúng query type nên nhìn bản ghi là debug được từ mail tới endpoint của service.",
+      "related": [
+        "DNS",
+        "DNS resolution chain",
+        "DNS TTL caching",
+        "Service Discovery"
+      ]
+    },
+    {
+      "term": "TCP retransmission & RTO (fast retransmit, duplicate ACK)",
+      "aliases": [
+        "TCP retransmission",
+        "RTO",
+        "retransmission timeout",
+        "fast retransmit",
+        "duplicate ACK"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Một packet mất trên đường làm dữ liệu phải chờ hết RTO mới được gửi lại; RTO tính từ RTT nhưng bị nhân đôi sau mỗi lần thử lại, nên vài lần mất packet đủ đẩy p99 từ vài chục ms lên hàng giây. Nhìn tcpdump hay ss thấy dòng retransmission mà không hiểu RTO và duplicate ACK thì dễ kết luận sai rằng app chậm.",
+      "origin": "RFC 793 (1981) đặt nền; RFC 6298 (2011) là công thức RTO hiện hành.",
+      "how": "Sender tính RTO theo RFC 6298 từ SRTT và RTTVAR (sàn thường 200ms); hết hạn không có ACK thì phát lại và nhân đôi RTO. Mất packet giữa dòng sinh duplicate ACK, ba cái là đủ kích hoạt fast retransmit gửi lại ngay không chờ timeout, kèm fast recovery giảm cwnd một nửa. Tỷ lệ retransmission cao là dấu hiệu mất mát đường truyền, không phải vấn đề của application.",
+      "related": [
+        "TCP congestion control (AIMD)",
+        "TCP slow start",
+        "RTT (Round-Trip Time)",
+        "Network diagnostics (ping, traceroute, mtr, dig, tcpdump)"
+      ]
+    },
+    {
+      "term": "TCP listen backlog & accept queue (SYN backlog)",
+      "aliases": [
+        "listen backlog",
+        "accept queue",
+        "SYN backlog",
+        "somaxconn",
+        "accept queue overflow"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Service vẫn sống nhưng client nhận 'connection refused' hoặc phải chờ handshake lâu bất thường khi tải tăng; thủ phạm thường là accept queue đầy chứ không phải CPU. Lỗi này khó lần vì process không crash, log không có gì, chỉ kết nối mới bị ảnh hưởng.",
+      "origin": "",
+      "how": "Kernel giữ kết nối chưa accept trong hàng đợi có độ dài lấy từ tham số backlog của listen() và bị chặn trên bởi somaxconn; đầy thì SYN mới bị drop hoặc RST tùy tcp_abort_on_overflow. Nguyên nhân thường là app accept() chậm: event loop bận, thread pool cạn, hoặc backlog đặt quá nhỏ. Xử lý bằng tăng backlog, accept nhanh, tách accept loop khỏi xử lý request.",
+      "related": [
+        "TCP",
+        "TCP handshake (three-way handshake)",
+        "SYN flood & SYN cookies",
+        "Overload Protection"
+      ]
+    },
+    {
+      "term": "Forwarded headers & X-Forwarded-For (client IP sau proxy)",
+      "aliases": [
+        "X-Forwarded-For",
+        "XFF",
+        "Forwarded header",
+        "X-Real-IP"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Sau load balancer, remote_addr là IP của proxy: log, rate limit và audit ghi sai hết về một địa chỉ, tính năng khóa theo IP mất tác dụng. Nguy hơn, phần lớn proxy nối giá trị client tự gửi vào X-Forwarded-For, nên code tin cả header sẽ để attacker tự khai IP hoặc giả danh nội bộ.",
+      "origin": "X-Forwarded-For xuất hiện từ thực tế cache/proxy thập niên 1990; RFC 7239 (2014) chuẩn hóa header Forwarded.",
+      "how": "Proxy tin cậy nối thêm vào X-Forwarded-For theo dạng client, proxy1, proxy2; RFC 7239 chuẩn hóa header Forwarded với cú pháp for=proto=host=. App chỉ nên tin hop từ danh sách proxy đã biết, lấy phần tử đầu bên trái hoặc đếm số hop từ phải vào, và dựng URL công khai từ X-Forwarded-Proto/Host thay vì host nội bộ.",
+      "related": [
+        "Proxy (forward/reverse)",
+        "Load Balancer (L4/L7)",
+        "CDN (Content Delivery Network)",
+        "Rate Limiting (Adaptive)"
+      ]
+    },
+    {
+      "term": "HTTP Range requests & 206 Partial Content (If-Range)",
+      "aliases": [
+        "Range header",
+        "206 Partial Content",
+        "If-Range",
+        "resumable download"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Client tải file 2GB giữa chừng mất mạng là phải bắt đầu lại từ byte 0; video player cần seek vào giữa file, trình duyệt cần một đoạn của asset lớn. Nếu server luôn trả 200 kèm toàn bộ body thì băng thông bị đốt gấp nhiều lần nhu cầu và resume download gần như không làm được.",
+      "origin": "Hành vi range có từ HTTP/1.1 (RFC 2616, 1999); gom lại ở RFC 7233 (2014).",
+      "how": "Client gửi Range: bytes=start-end; server hỗ trợ trả 206 kèm Content-Range chỉ đúng phần được xin, ngoài phạm vi thì 416, và quảng cáo Accept-Ranges: bytes. If-Range đính validator (ETag/Last-Modified) để file đổi giữa chừng thì trả 200 toàn bộ thay vì ghép nửa cũ nửa mới; nhiều khoảng trong một request trả multipart/byteranges.",
+      "related": [
+        "ETag / conditional requests (If-None-Match → 304)",
+        "HTTP caching với Cache-Control (freshness)",
+        "CDN edge caching",
+        "HTTP/1.1"
+      ]
+    },
+    {
+      "term": "TCP keepalive (SO_KEEPALIVE) & dead-peer detection",
+      "aliases": [
+        "SO_KEEPALIVE",
+        "TCP keepalive",
+        "dead peer detection",
+        "tcp_keepalive_time"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Kết nối TCP im lặng qua NAT hoặc firewall: bảng NAT hết hạn âm thầm, một đầu đã mất nhưng đầu kia vẫn tin socket còn mở; request tiếp theo rơi vào kết nối chết và timeout ngẫu nhiên, khó tái hiện. Mặc định keepalive của Linux là 7200 giây, dài hơn mọi NAT timeout nên gần như không bao giờ phát hiện được peer đã chết.",
+      "origin": "Keepalive có trong TCP từ RFC 1122 (1989), kế thừa mặc định 2 giờ của BSD.",
+      "how": "SO_KEEPALIVE phát probe sau tcp_keepalive_time im lặng, lặp mỗi tcp_keepalive_intvl và bỏ kết nối sau tcp_keepalive_probes lần không hồi đáp. Thực tế hạ time xuống 60-120 giây để ngắn hơn NAT idle timeout (thường 300 giây, AWS NLB 350 giây), kết hợp idle timeout phía application; HTTP/2 có PING riêng và connection pool của DB validate bằng testOnBorrow vì cùng mục đích.",
+      "related": [
+        "Zombie Connection",
+        "HTTP keep-alive",
+        "TCP",
+        "Heartbeat & watchdog"
+      ]
+    },
+    {
+      "term": "SSH (Secure Shell, tunnel/port forwarding)",
+      "aliases": [
+        "Secure Shell",
+        "ssh",
+        "port forwarding",
+        "SSH tunnel",
+        "jump host"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Quản trị máy chủ qua telnet/rlogin gửi mật khẩu dạng plaintext, bắt được một gói tin là có toàn quyền. Ngoài đăng nhập, kỹ sư còn cần đường hầm vào DB hay service không mở cổng ra ngoài; không có SSH thì phải mở toang port hoặc dựng VPN nặng nề chỉ cho một nhu cầu nhỏ.",
+      "origin": "Tatu Ylonen viết năm 1995 sau vụ password-sniffing tại Đại học Helsinki; OpenSSH mở nguồn năm 1999.",
+      "how": "SSH dựng kênh mã hóa trên cổng 22: trao đổi khóa Diffie-Hellman, host key chống MITM, xác thực bằng khóa công khai hoặc mật khẩu. Port forwarding: -L đẩy một cổng từ phía server về máy local, -R làm ngược lại, -D biến SSH thành SOCKS proxy; một TCP vật lý chia thành nhiều channel logic. Cấu hình chuẩn là tắt đăng nhập bằng mật khẩu, chỉ dùng key, đi qua jump host.",
+      "related": [
+        "mTLS (mutual TLS, TLS hai chiều)",
+        "Port",
+        "TLS/SSL",
+        "Proxy (forward/reverse)",
+        "NAT & port forwarding (masquerade, hairpin, CGNAT)"
+      ]
+    }
+  ],
+  "skipped": []
+}

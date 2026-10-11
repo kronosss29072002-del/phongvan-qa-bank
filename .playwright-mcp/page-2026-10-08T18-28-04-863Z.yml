@@ -1,0 +1,109 @@
+- generic [active] [ref=f248e1]:
+  - generic:
+    - dialog:
+      - generic [ref=f248e2]:
+        - generic [ref=f248e3]:
+          - paragraph
+        - generic [ref=f248e5]:
+          - generic [ref=f248e6]:
+            - generic [ref=f248e7]: Microsoft and our third-party vendors use cookies and similar technologies to deliver, maintain, and improve our services and ads. If you agree, we will use this data for ads personalization and associated analytics.
+            - generic [ref=f248e8]:
+              - text: You can select ‘Accept’ to consent to these uses, ‘Reject’ to decline these uses or click on ‘More options’ to review your options. You can change your selection under ‘Manage Cookie Preferences’ at the bottom of this page.
+              - link "Privacy Statement" [ref=f248e9] [cursor=pointer]:
+                - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+          - generic [ref=f248e10]:
+            - link "Accept" [ref=f248e12] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+            - link "Reject" [ref=f248e14] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+            - link "More options" [ref=f248e15] [cursor=pointer]:
+              - /url: "javascript: void(0)"
+  - banner [ref=f248e16]:
+    - button "Skip to content" [ref=f248e17] [cursor=pointer]
+    - button "Accessibility Feedback" [ref=f248e20] [cursor=pointer]
+    - generic [ref=f248e23]:
+      - link [ref=f248e24] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Back to Bing search" [level=1] [ref=f248e25]
+      - search [ref=f248e26]:
+        - button "Search" [ref=f248e29] [cursor=pointer]
+        - searchbox "Enter your search here - Search suggestions will show as you type" [ref=f248e30]: "\"vổ hủi\" chủ hủi sổ ghi tay tranh chấp đàn thuớc"
+        - generic [ref=f248e31] [cursor=pointer]
+        - button "Search using an image" [ref=f248e36] [cursor=pointer]
+      - link [ref=f248e38] [cursor=pointer]:
+        - /url: https://www.bing.com/ck/a?!&&p=4d4464cbd03d9cacf01f5cde23a04943aa8a3ad3f74d1251ed0a4e784112ac82JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2NoYXQ_cT0lMjJ2JWUxJWJiJTk1K2glZTElYmIlYTdpJTIyK2NoJWUxJWJiJWE3K2glZTElYmIlYTdpK3MlZTElYmIlOTUrZ2hpK3RheSt0cmFuaCtjaCVlMSViYSVhNXArJWM0JTkxJWMzJWEwbit0aHUlZTElYmIlOWJjJnNlbmRxdWVyeT0xJmZvcm09SEVDT0RY&ntb=1
+        - button "Chat with Copilot" [ref=f248e39]
+    - complementary "Account Rewards and Preferences" [ref=f248e41]:
+      - link "Sign in" [ref=f248e42] [cursor=pointer]:
+        - /url: javascript:void(0)
+      - button "Microsoft Rewards" [ref=f248e44] [cursor=pointer]:
+        - generic [ref=f248e45]: Rewards
+    - navigation "Search Filter" [ref=f248e61]:
+      - list [ref=f248e62]:
+        - listitem [ref=f248e63]:
+          - link "All" [ref=f248e64] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f248e66]:
+          - link "Web" [ref=f248e67] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=f5001f330448b73fe77d9cbc8548837a9ee9117eb5ba2075076fbb1a63b12a49JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPSUyMnYlZTElYmIlOTUraCVlMSViYiVhN2klMjIrY2glZTElYmIlYTcraCVlMSViYiVhN2krcyVlMSViYiU5NStnaGkrdGF5K3RyYW5oK2NoJWUxJWJhJWE1cCslYzQlOTElYzMlYTBuK3RodSVlMSViYiU5YmMmd2Vic2NwPTEmRk9STT1IRFJXU0M&ntb=1
+        - listitem [ref=f248e68]:
+          - link "Search" [ref=f248e69] [cursor=pointer]:
+            - /url: /copilotsearch?q=%22v%e1%bb%95+h%e1%bb%a7i%22+ch%e1%bb%a7+h%e1%bb%a7i+s%e1%bb%95+ghi+tay+tranh+ch%e1%ba%a5p+%c4%91%c3%a0n+thu%e1%bb%9bc&FORM=CSSCOP
+        - listitem [ref=f248e72]:
+          - link "Images" [ref=f248e73] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=a1ef7c1fa69c8b0559e162e1e8eceb7f18c9c9deea91b52f4d361653229df0c1JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L2ltYWdlcy9zZWFyY2g_cT0lMjJ2JWUxJWJiJTk1K2glZTElYmIlYTdpJTIyK2NoJWUxJWJiJWE3K2glZTElYmIlYTdpK3MlZTElYmIlOTUrZ2hpK3RheSt0cmFuaCtjaCVlMSViYSVhNXArJWM0JTkxJWMzJWEwbit0aHUlZTElYmIlOWJjJkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=f248e74]:
+          - link "Videos" [ref=f248e75] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=53711947e6b01807a68f509f3f2ec95c682acefa6d741f7ca0d8a3565712ac72JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3ZpZGVvcy9zZWFyY2g_cT0lMjJ2JWUxJWJiJTk1K2glZTElYmIlYTdpJTIyK2NoJWUxJWJiJWE3K2glZTElYmIlYTdpK3MlZTElYmIlOTUrZ2hpK3RheSt0cmFuaCtjaCVlMSViYSVhNXArJWM0JTkxJWMzJWEwbit0aHUlZTElYmIlOWJjJkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=f248e76]:
+          - link "Maps" [ref=f248e77] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=8e8a8096468c81f0428db4698a8619451fe76722a7e354e93a98c913eea27b7bJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L21hcHM_cT0lMjJ2JWUxJWJiJTk1K2glZTElYmIlYTdpJTIyK2NoJWUxJWJiJWE3K2glZTElYmIlYTdpK3MlZTElYmIlOTUrZ2hpK3RheSt0cmFuaCtjaCVlMSViYSVhNXArJWM0JTkxJWMzJWEwbit0aHUlZTElYmIlOWJjJkZPUk09SERSU0M2&ntb=1
+        - listitem [ref=f248e78]:
+          - button [ref=f248e79] [cursor=pointer]
+  - generic [ref=f248e83]:
+    - generic [ref=f248e84]:
+      - main "Search Results" [ref=f248e85]:
+        - list [ref=f248e86]:
+          - listitem [ref=f248e87]:
+            - heading [level=1] [ref=f248e88]:
+              - text: There are no results for
+              - strong [ref=f248e89]: "\"vổ hủi\" chủ hủi sổ ghi tay tranh chấp đàn thuớc"
+            - list [ref=f248e90]:
+              - listitem [ref=f248e91]: Check your spelling or try different keywords
+          - listitem [ref=f248e92]:
+            - generic [ref=f248e93]:
+              - heading "Searches you might like" [level=2] [ref=f248e94]
+              - list [ref=f248e95]:
+                - listitem [ref=f248e96]:
+                  - link "PDF to word" [ref=f248e97] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=143f37e5e4dd3d3ab9c7046e7e4cdd1450842e573187222b9b5f2426cf49a076JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVBERiUyMHRvJTIwd29yZCZGT1JNPVFSRFEwMQ&ntb=1
+                - listitem [ref=f248e100]:
+                  - link "vpn free" [ref=f248e101] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=89a3ca3f90e49079391382c83b0bef2eacfb2f70a9db72926c19c17b0e6438e0JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPXZwbiUyMGZyZWUmRk9STT1RUkRRMDI&ntb=1
+                - listitem [ref=f248e104]:
+                  - link "edit video" [ref=f248e105] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=c8c0744a04b7ed88fdb68113ad8bcc177cc00fa85e2f368609ce6b3e30dea95dJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPWVkaXQlMjB2aWRlbyZGT1JNPVFSRFEwMw&ntb=1
+                - listitem [ref=f248e108]:
+                  - link "AWS ec2" [ref=f248e109] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=b1c8be3eaa232f357903e3a79914a7e1b0948d5af30863ccd989933ea7c77d43JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPUFXUyUyMGVjMiZGT1JNPVFSRFEwNA&ntb=1
+                - listitem [ref=f248e112]:
+                  - link "convert PDF to word free" [ref=f248e113] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=94b47fa5754798adc3263131f5f2f335727c4c7f8753d92cabbbaa7d6116e498JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPWNvbnZlcnQlMjBQREYlMjB0byUyMHdvcmQlMjBmcmVlJkZPUk09UVJEUTA1&ntb=1
+                - listitem [ref=f248e116]:
+                  - link "NordVPN download" [ref=f248e117] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=c7434c4c391230f8ac06781c7db884a7a68b115e278fba0163ba070850e026cdJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPU5vcmRWUE4lMjBkb3dubG9hZCZGT1JNPVFSRFEwNg&ntb=1
+                - listitem [ref=f248e120]:
+                  - link "PDF to word free" [ref=f248e121] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=3b3710f3aa6919d09d124c53dd1c877282907d4d66645cf0ce108b933f841cfaJmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1L3NlYXJjaD9xPVBERiUyMHRvJTIwd29yZCUyMGZyZWUmRk9STT1RUkRRMDc&ntb=1
+          - listitem [ref=f248e124]
+      - complementary "Additional Results" [ref=f248e125]:
+        - list
+    - contentinfo [ref=f248e126]:
+      - generic [ref=f248e127]:
+        - list:
+          - listitem [ref=f248e128]:
+            - link "Privacy" [ref=f248e129] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=e4d1e5ad2d6c48350c03977d9327958ab26ae93e75ac07db3235e0d52cb39725JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+          - listitem [ref=f248e130]:
+            - link "Terms" [ref=f248e131] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=c14f40d4bec44a945e104c2915ccd0023f983e60d4b65cbde24feb52cb61b181JmltdHM9MTc5MTQxNzYwMA&ptn=3&ver=2&hsh=4&fclid=386cf402-b751-6d76-263e-e3eeb6896ca4&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

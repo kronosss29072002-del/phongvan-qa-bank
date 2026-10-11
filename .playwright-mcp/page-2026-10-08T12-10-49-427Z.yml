@@ -1,0 +1,335 @@
+- generic [active] [ref=f41e1]:
+  - generic [ref=f41e2]:
+    - generic [ref=f41e4]:
+      - generic [ref=f41e5]:
+        - generic [ref=f41e6]:
+          - link "DuckDuckGo home" [ref=f41e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f41e8]: DuckDuckGo
+          - generic [ref=f41e15]:
+            - combobox "Search privately" [ref=f41e17]: back and forth scheduling emails study time wasted booking meetings
+            - button "Search" [ref=f41e19] [cursor=pointer]
+        - button "Open menu" [ref=f41e24] [cursor=pointer]
+      - navigation [ref=f41e32]:
+        - list [ref=f41e33]:
+          - listitem [ref=f41e34]:
+            - link [ref=f41e35] [cursor=pointer]:
+              - /url: /?q=back+and+forth+scheduling+emails+study+time+wasted+booking+meetings&ia=web
+              - strong [ref=f41e36]: All
+          - listitem [ref=f41e39]:
+            - link [ref=f41e40] [cursor=pointer]:
+              - /url: /?q=back+and+forth+scheduling+emails+study+time+wasted+booking+meetings&ia=images&iax=images
+              - strong [ref=f41e41]: Images
+          - listitem [ref=f41e42]:
+            - link [ref=f41e43] [cursor=pointer]:
+              - /url: /?q=back+and+forth+scheduling+emails+study+time+wasted+booking+meetings&ia=videos&iax=videos
+              - strong [ref=f41e44]: Videos
+          - listitem [ref=f41e45]:
+            - link [ref=f41e46] [cursor=pointer]:
+              - /url: /?q=back+and+forth+scheduling+emails+study+time+wasted+booking+meetings&iaxm=maps
+              - strong [ref=f41e47]: Maps
+        - list [ref=f41e48]:
+          - listitem [ref=f41e49]:
+            - link "Duck.ai" [ref=f41e51] [cursor=pointer]:
+              - /url: /?q=back+and+forth+scheduling+emails+study+time+wasted+booking+meetings&ia=chat&entry=serp
+          - listitem [ref=f41e55]:
+            - button "Search Settings ✀" [ref=f41e57] [cursor=pointer]:
+              - generic [ref=f41e60]: Search Settings
+              - generic [ref=f41e61]: ✀
+    - generic [ref=f41e68]:
+      - navigation [ref=f41e70]:
+        - button [ref=f41e72] [cursor=pointer]:
+          - strong [ref=f41e79]: Private
+        - generic [ref=f41e83]:
+          - switch "Filter by the selected region" [ref=f41e87]
+          - button "Vietnam (en)" [ref=f41e89] [cursor=pointer]
+        - button [ref=f41e94] [cursor=pointer]:
+          - strong [ref=f41e96]: "Safe search: moderate"
+        - button [ref=f41e100] [cursor=pointer]:
+          - strong [ref=f41e102]: Any time
+      - generic [ref=f41e106]:
+        - list [ref=f41e107]:
+          - listitem [ref=f41e108]:
+            - article [ref=f41e109] [cursor=pointer]:
+              - button [ref=f41e111]
+              - generic [ref=f41e115]:
+                - link "Search domain mahakala.app" [ref=f41e117]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:www.mahakala.app
+                - generic [ref=f41e120]:
+                  - paragraph [ref=f41e121]: mahakala.app
+                  - link "https://www.mahakala.app › blog › stop-email-back-and-forth-scheduling-links-vs-email" [ref=f41e122]:
+                    - /url: https://www.mahakala.app/blog/stop-email-back-and-forth-scheduling-links-vs-email
+                    - paragraph [ref=f41e124]:
+                      - generic [ref=f41e125]: https://www.mahakala.app
+                      - generic [ref=f41e126]: › blog › stop-email-back-and-forth-scheduling-links-vs-email
+              - heading [level=2] [ref=f41e128]:
+                - 'link "Stop the Email Back-and-Forth: When to Use Scheduling Links vs Email" [ref=f41e129]':
+                  - /url: https://www.mahakala.app/blog/stop-email-back-and-forth-scheduling-links-vs-email
+              - generic [ref=f41e134]:
+                - text: May 6, 2026·
+                - generic [ref=f41e135]: We send 47 emails per week just to schedule meetings. Here's a simple framework for when to use email vs scheduling links — and how to cut your coordination time by 80%.
+          - listitem [ref=f41e136]:
+            - article [ref=f41e137] [cursor=pointer]:
+              - button [ref=f41e139]
+              - generic [ref=f41e143]:
+                - link "Search domain bookleta.com" [ref=f41e145]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:bookleta.com
+                - generic [ref=f41e148]:
+                  - paragraph [ref=f41e149]: bookleta.com
+                  - link "https://bookleta.com › blog › how-to-stop-wasting-time-on-back-and-forth-scheduling" [ref=f41e150]:
+                    - /url: https://bookleta.com/blog/how-to-stop-wasting-time-on-back-and-forth-scheduling
+                    - paragraph [ref=f41e152]:
+                      - generic [ref=f41e153]: https://bookleta.com
+                      - generic [ref=f41e154]: › blog › how-to-stop-wasting-time-on-back-and-forth-scheduling
+              - heading [level=2] [ref=f41e156]:
+                - link "How to Stop Wasting Time on Back-and-Forth Scheduling" [ref=f41e157]:
+                  - /url: https://bookleta.com/blog/how-to-stop-wasting-time-on-back-and-forth-scheduling
+              - generic [ref=f41e162]:
+                - text: Feb 21, 2026·
+                - generic [ref=f41e163]: Still coordinating meetings over email? Here's why the "Does Tuesday work?" cycle is costing you more than you think — and how to fix it in minutes.
+          - listitem [ref=f41e164]:
+            - article [ref=f41e165] [cursor=pointer]:
+              - button [ref=f41e167]
+              - generic [ref=f41e171]:
+                - link "Search domain timewith.me" [ref=f41e173]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:www.timewith.me
+                - generic [ref=f41e176]:
+                  - paragraph [ref=f41e177]: timewith.me
+                  - link "https://www.timewith.me › blog › eliminate-meeting-scheduling-emails" [ref=f41e178]:
+                    - /url: https://www.timewith.me/blog/eliminate-meeting-scheduling-emails
+                    - paragraph [ref=f41e180]:
+                      - generic [ref=f41e181]: https://www.timewith.me
+                      - generic [ref=f41e182]: › blog › eliminate-meeting-scheduling-emails
+              - heading [level=2] [ref=f41e184]:
+                - link "How to Eliminate Back-and-Forth Scheduling Emails" [ref=f41e185]:
+                  - /url: https://www.timewith.me/blog/eliminate-meeting-scheduling-emails
+              - generic [ref=f41e190]:
+                - text: Jan 26, 2025·
+                - generic [ref=f41e191]: Stop wasting time on endless scheduling emails. Learn how to streamline meeting coordination and find perfect time slots in seconds instead of days.
+          - listitem [ref=f41e192]:
+            - article [ref=f41e193] [cursor=pointer]:
+              - button [ref=f41e195]
+              - generic [ref=f41e199]:
+                - link "Search domain yourcalendar.co" [ref=f41e201]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:yourcalendar.co
+                - generic [ref=f41e204]:
+                  - paragraph [ref=f41e205]: yourcalendar.co
+                  - link "https://yourcalendar.co › blog › stop-back-and-forth-emails-scheduling-meetings" [ref=f41e206]:
+                    - /url: https://yourcalendar.co/blog/stop-back-and-forth-emails-scheduling-meetings
+                    - paragraph [ref=f41e208]:
+                      - generic [ref=f41e209]: https://yourcalendar.co
+                      - generic [ref=f41e210]: › blog › stop-back-and-forth-emails-scheduling-meetings
+              - heading [level=2] [ref=f41e212]:
+                - link "How to Stop Back and Forth Emails When Scheduling Meetings" [ref=f41e213]:
+                  - /url: https://yourcalendar.co/blog/stop-back-and-forth-emails-scheduling-meetings
+              - generic [ref=f41e215]: If you are tired of back and forth emails when scheduling meetings, you are not alone. Booking a simple call can turn into a long thread of messages. One person suggests a time, the other cannot make it, and the process repeats. What should take a minute ends up taking several emails and unnecessary delays.
+          - listitem [ref=f41e220]:
+            - article [ref=f41e221] [cursor=pointer]:
+              - button [ref=f41e223]
+              - generic [ref=f41e227]:
+                - link "Search domain usecarly.com" [ref=f41e229]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:www.usecarly.com
+                - generic [ref=f41e232]:
+                  - paragraph [ref=f41e233]: usecarly.com
+                  - link "https://www.usecarly.com › blog › schedule-meetings-without-back-and-forth" [ref=f41e234]:
+                    - /url: https://www.usecarly.com/blog/schedule-meetings-without-back-and-forth/
+                    - paragraph [ref=f41e236]:
+                      - generic [ref=f41e237]: https://www.usecarly.com
+                      - generic [ref=f41e238]: › blog › schedule-meetings-without-back-and-forth
+              - heading [level=2] [ref=f41e240]:
+                - link "How to Schedule Meetings Without the Back-and-Forth [2026]" [ref=f41e241]:
+                  - /url: https://www.usecarly.com/blog/schedule-meetings-without-back-and-forth/
+              - generic [ref=f41e246]:
+                - text: Dec 23, 2025·
+                - generic [ref=f41e247]: Tired of endless email chains to schedule meetings? Learn 7 proven methods to eliminate back-and-forth and book meetings faster. AI solutions included.
+          - listitem [ref=f41e248]:
+            - article [ref=f41e249] [cursor=pointer]:
+              - button [ref=f41e251]
+              - generic [ref=f41e255]:
+                - link "Search domain schedly.io" [ref=f41e257]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:schedly.io
+                - generic [ref=f41e260]:
+                  - paragraph [ref=f41e261]: schedly.io
+                  - link "https://schedly.io › solutions › eliminate-back-and-forth" [ref=f41e262]:
+                    - /url: https://schedly.io/solutions/eliminate-back-and-forth
+                    - paragraph [ref=f41e264]:
+                      - generic [ref=f41e265]: https://schedly.io
+                      - generic [ref=f41e266]: › solutions › eliminate-back-and-forth
+              - heading [level=2] [ref=f41e268]:
+                - link "Eliminate Scheduling Back-and-Forth | Schedly" [ref=f41e269]:
+                  - /url: https://schedly.io/solutions/eliminate-back-and-forth
+              - generic [ref=f41e271]: Stop the endless 'What time works for you?' emails. Schedly gives clients your real availability so they can book instantly — zero back-and-forth required.
+          - listitem [ref=f41e276]:
+            - article [ref=f41e277] [cursor=pointer]:
+              - button [ref=f41e279]
+              - generic [ref=f41e283]:
+                - link "Search domain usecarly.com" [ref=f41e285]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:www.usecarly.com
+                - generic [ref=f41e288]:
+                  - paragraph [ref=f41e289]: usecarly.com
+                  - link "https://www.usecarly.com › blog › how-to-avoid-scheduling-back-and-forth" [ref=f41e290]:
+                    - /url: https://www.usecarly.com/blog/how-to-avoid-scheduling-back-and-forth/
+                    - paragraph [ref=f41e292]:
+                      - generic [ref=f41e293]: https://www.usecarly.com
+                      - generic [ref=f41e294]: › blog › how-to-avoid-scheduling-back-and-forth
+              - heading [level=2] [ref=f41e296]:
+                - link "How to Avoid Scheduling Back-and-Forth (7 Methods)" [ref=f41e297]:
+                  - /url: https://www.usecarly.com/blog/how-to-avoid-scheduling-back-and-forth/
+              - generic [ref=f41e302]:
+                - text: Mar 9, 2026·
+                - generic [ref=f41e303]: The email ping-pong when scheduling meetings is fixable. Here are 7 methods ranked by how much back-and-forth they actually eliminate, with free options for each.
+          - listitem [ref=f41e304]:
+            - article [ref=f41e305] [cursor=pointer]:
+              - button [ref=f41e307]
+              - generic [ref=f41e311]:
+                - link "Search domain ownyourcalendar.com" [ref=f41e313]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:ownyourcalendar.com
+                - generic [ref=f41e316]:
+                  - paragraph [ref=f41e317]: ownyourcalendar.com
+                  - link "https://ownyourcalendar.com › how-to-eliminate-back-and-forth-emails-when-scheduling-meetings" [ref=f41e318]:
+                    - /url: https://ownyourcalendar.com/how-to-eliminate-back-and-forth-emails-when-scheduling-meetings/
+                    - paragraph [ref=f41e320]:
+                      - generic [ref=f41e321]: https://ownyourcalendar.com
+                      - generic [ref=f41e322]: › how-to-eliminate-back-and-forth-emails-when-scheduling-meetings
+              - heading [level=2] [ref=f41e324]:
+                - link "How to Eliminate Back-and-Forth Emails When Scheduling Meetings" [ref=f41e325]:
+                  - /url: https://ownyourcalendar.com/how-to-eliminate-back-and-forth-emails-when-scheduling-meetings/
+              - generic [ref=f41e327]: Back-and-forth emails waste time and slow down your momentum. By using a smart scheduler like OwnYourCalendar, you can eliminate the guesswork, reduce no-shows, and free up hours every week.
+          - listitem [ref=f41e332]:
+            - article [ref=f41e333] [cursor=pointer]:
+              - button [ref=f41e335]
+              - generic [ref=f41e339]:
+                - link "Search domain smartmetrics.com" [ref=f41e341]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:smartmetrics.com
+                - generic [ref=f41e344]:
+                  - paragraph [ref=f41e345]: smartmetrics.com
+                  - link "https://smartmetrics.com › resources › reduce-scheduling-back-and-forth" [ref=f41e346]:
+                    - /url: https://smartmetrics.com/resources/reduce-scheduling-back-and-forth
+                    - paragraph [ref=f41e348]:
+                      - generic [ref=f41e349]: https://smartmetrics.com
+                      - generic [ref=f41e350]: › resources › reduce-scheduling-back-and-forth
+              - heading [level=2] [ref=f41e352]:
+                - link "The Essential Guide to Reduce Scheduling Back and Forth 2026" [ref=f41e353]:
+                  - /url: https://smartmetrics.com/resources/reduce-scheduling-back-and-forth
+              - generic [ref=f41e355]: Professionals spend hours each month wrangling calendars instead of collaborating. That's why we've created this guide—to help you reduce scheduling back and forth in 2026. Here, you'll uncover the root causes of scheduling friction, discover modern tools, learn proven strategies, explore automation, and peek into future trends.
+          - listitem [ref=f41e360]:
+            - article [ref=f41e361] [cursor=pointer]:
+              - button [ref=f41e363]
+              - generic [ref=f41e367]:
+                - link "Search domain salescadia.com" [ref=f41e369]:
+                  - /url: /?q=back%20and%20forth%20scheduling%20emails%20study%20time%20wasted%20booking%20meetings+site:www.salescadia.com
+                - generic [ref=f41e372]:
+                  - paragraph [ref=f41e373]: salescadia.com
+                  - link "https://www.salescadia.com › blog › instant-scheduling-vs-email-back-and-forth" [ref=f41e374]:
+                    - /url: https://www.salescadia.com/blog/instant-scheduling-vs-email-back-and-forth
+                    - paragraph [ref=f41e376]:
+                      - generic [ref=f41e377]: https://www.salescadia.com
+                      - generic [ref=f41e378]: › blog › instant-scheduling-vs-email-back-and-forth
+              - heading [level=2] [ref=f41e380]:
+                - link "Instant Scheduling vs. Email Back-and-Forth - salescadia.com" [ref=f41e381]:
+                  - /url: https://www.salescadia.com/blog/instant-scheduling-vs-email-back-and-forth
+              - generic [ref=f41e386]:
+                - text: Jul 15, 2026·
+                - generic [ref=f41e387]: Every scheduling email is a chance for your lead to cool off. Here's why instant scheduling beats back-and-forth every time.
+        - button "More results" [ref=f41e390] [cursor=pointer]
+    - list [ref=f41e393]:
+      - button "Close menu" [ref=f41e394] [cursor=pointer]
+      - list [ref=f41e398]:
+        - listitem [ref=f41e399]: Search
+        - listitem [ref=f41e400]:
+          - link "Homepage" [ref=f41e401] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=f41e402]:
+          - link "Themes" [ref=f41e403] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=f41e404]:
+          - link "Settings" [ref=f41e405] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=f41e406]:
+        - listitem [ref=f41e407]: Share Feedback
+        - listitem [ref=f41e408]:
+          - generic [ref=f41e411]:
+            - button "Positive feedback" [ref=f41e412] [cursor=pointer]
+            - button "Negative feedback" [ref=f41e416] [cursor=pointer]
+      - list [ref=f41e420]:
+        - listitem [ref=f41e421]: Downloads
+        - listitem [ref=f41e422]:
+          - link "iOS Browser" [ref=f41e423] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=f41e424]:
+          - link "Android Browser" [ref=f41e425] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=f41e426]:
+          - link "Mac Browser" [ref=f41e427] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=f41e428]:
+          - link "Windows Browser" [ref=f41e429] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=f41e430]:
+          - link "Browser Extensions" [ref=f41e431] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/desktop/adding-duckduckgo-to-your-browser/
+      - list [ref=f41e432]:
+        - listitem [ref=f41e433]: More From DuckDuckGo
+        - listitem
+        - listitem [ref=f41e434]:
+          - link "Duck.ai" [ref=f41e435] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=f41e436]:
+          - link "Email Protection" [ref=f41e437] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=f41e438]:
+          - link "Newsletter" [ref=f41e439] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=f41e440]:
+          - link "Blog" [ref=f41e441] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=f41e442]:
+          - link "Podcast" [ref=f41e443] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=f41e444]:
+          - link "Collaborations" [ref=f41e445] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=f41e446]:
+        - listitem [ref=f41e447]: Learn More
+        - listitem [ref=f41e448]:
+          - link "What’s New" [ref=f41e449] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=f41e450]:
+          - link "Compare Privacy" [ref=f41e451] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=f41e452]:
+          - link "About Our Browser" [ref=f41e453] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=f41e454]:
+          - link "About DuckDuckGo" [ref=f41e455] [cursor=pointer]:
+            - /url: /about
+      - list [ref=f41e456]:
+        - listitem [ref=f41e457]: Other Resources
+        - listitem [ref=f41e458]:
+          - link "Help" [ref=f41e459] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=f41e460]:
+          - link "Community" [ref=f41e461] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=f41e462]:
+          - link "Careers" [ref=f41e463] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=f41e464]:
+          - link "Privacy Policy" [ref=f41e465] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=f41e466]:
+          - link "Terms of Service" [ref=f41e467] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=f41e468]:
+          - link "Press Kit" [ref=f41e469] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=f41e470]:
+          - link "Advertise on Search" [ref=f41e471] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=f41e477]:
+    - generic [ref=f41e488]:
+      - heading "Introducing DuckDuckGo Collaborations" [level=3] [ref=f41e489]
+      - paragraph [ref=f41e490]: Expertly crafted products for people who give a duck about privacy.
+    - link "See More" [ref=f41e491] [cursor=pointer]:
+      - /url: https://duckduckgo.com/collaborations
+  - button "Share Feedback" [ref=f41e496] [cursor=pointer]

@@ -1,0 +1,494 @@
+- generic [active] [ref=f38e1]:
+  - banner [ref=f38e3]:
+    - generic [ref=f38e9]:
+      - link "Grafana Labs is a Leader in the 2026 Gartner® Magic Quadrant™ for Observability Platforms." [ref=f38e10] [cursor=pointer]:
+        - /url: /analyst-reports/gartner-magic-quadrant-observability-platforms/
+        - generic "Grafana Labs is a Leader in the 2026 Gartner® Magic Quadrant™ for Observability Platforms." [ref=f38e13]
+      - link "Learn more" [ref=f38e14] [cursor=pointer]:
+        - /url: /analyst-reports/gartner-magic-quadrant-observability-platforms/
+    - navigation "Main navigation" [ref=f38e18]:
+      - generic [ref=f38e19]:
+        - link [ref=f38e20] [cursor=pointer]:
+          - /url: /
+          - img "Logo" [ref=f38e21]
+        - button "Open menu" [ref=f38e23] [cursor=pointer]
+  - generic [ref=f38e25]:
+    - button "Blog" [ref=f38e26]
+    - main [ref=f38e28]:
+      - generic [ref=f38e29]:
+        - generic [ref=f38e30]:
+          - 'img "The RED Method: How to Instrument Your Services" [ref=f38e31]'
+          - 'heading "The RED Method: How to Instrument Your Services" [level=1] [ref=f38e32]'
+        - generic [ref=f38e33]:
+          - generic [ref=f38e34]:
+            - link [ref=f38e36] [cursor=pointer]:
+              - /url: /author/jdam?pg=the-red-method-how-to-instrument-your-services
+              - img "Julie Dam" [ref=f38e37]
+              - paragraph [ref=f38e39]: Julie Dam
+            - generic [ref=f38e40]: •
+            - generic [ref=f38e41]:
+              - generic [ref=f38e42]: 2018-08-03
+              - generic [ref=f38e43]: •
+              - generic [ref=f38e44]: 4 min
+          - generic [ref=f38e45]:
+            - link "twitter" [ref=f38e46] [cursor=pointer]:
+              - /url: https://twitter.com/intent/tweet?text=The%20RED%20Method%3A%20How%20to%20Instrument%20Your%20Services&url=
+              - img "Twitter" [ref=f38e48]
+            - link "facebook" [ref=f38e49] [cursor=pointer]:
+              - /url: https://www.facebook.com/sharer/sharer.php?u=
+              - img "Facebook" [ref=f38e51]
+            - link "linkedin" [ref=f38e52] [cursor=pointer]:
+              - /url: https://www.linkedin.com/sharing/share-offsite/?url=
+              - img "LinkedIn" [ref=f38e54]
+      - generic [ref=f38e55]:
+        - generic [ref=f38e57]:
+          - paragraph [ref=f38e58]:
+            - img "Tom Wilkie" [ref=f38e59]
+            - text: Tom Wilkie - Grafana Labs
+          - paragraph [ref=f38e60]:
+            - text: At
+            - link "GrafanaCon EU (opens in new tab)" [ref=f38e61] [cursor=pointer]:
+              - /url: https://www.grafanacon.org/2018/
+              - text: GrafanaCon EU
+            - text: in March, we had the pleasure of introducing one of Grafana Labs’ newest team members, Tom Wilkie, who joined as VP, Product with the
+            - link "acquisition of Kausal (opens in new tab)" [ref=f38e62] [cursor=pointer]:
+              - /url: https://kausal.co/blog/grafana-labs-to-acquire-kausal/
+              - text: acquisition of Kausal
+            - text: .
+          - paragraph [ref=f38e63]: "And he came bearing gifts: his popular talk about the RED Method of monitoring microservices, which he created in 2015."
+          - 'heading "Link to section: The USE Method The USE Method" [level=4] [ref=f38e64]':
+            - 'link "Link to section: The USE Method"':
+              - /url: "#the-use-method"
+              - img [aria-hidden] [ref=f38e65] [cursor=pointer]
+            - text: The USE Method
+          - paragraph [ref=f38e68]:
+            - text: In the talk, Tom first went over the USE Method of instrumenting, which has been popularized by
+            - link "Brendan Gregg (opens in new tab)" [ref=f38e69] [cursor=pointer]:
+              - /url: http://www.brendangregg.com/usemethod.html
+              - text: Brendan Gregg
+            - text: ":"
+          - paragraph [ref=f38e70]:
+            - strong [ref=f38e71]: "For every resource, monitor:"
+          - list [ref=f38e72]:
+            - listitem [ref=f38e73]:
+              - generic [ref=f38e74]: Utilization (% time that the resource was busy)
+            - listitem [ref=f38e75]:
+              - generic [ref=f38e76]: Saturation (amount of work resource has to do, often queue length)
+            - listitem [ref=f38e77]:
+              - generic [ref=f38e78]: Errors (count of error events)
+          - paragraph [ref=f38e79]: “It’s a way of building a checklist that goes through everything,” he said. “It helps you know what you don’t know.” But he pointed out that this method, while useful, is somewhat abstract. Applying it to memory, for instance, is hard. “Memory utilization is tricky. What is it? Do you count caches toward utilization?” he said. “Saturation of memory is kind of a weird one… And what is a memory error? And how do you count them in Linux?”
+          - 'heading "Link to section: The RED Method The RED Method" [level=3] [ref=f38e80]':
+            - 'link "Link to section: The RED Method"':
+              - /url: "#the-red-method"
+              - img [aria-hidden] [ref=f38e81] [cursor=pointer]
+            - text: The RED Method
+          - paragraph [ref=f38e84]: Tom then turned to his RED Method, which he created after a new employee asked what his monitoring philosophy was. “The USE Method doesn’t really apply to services; it applies to hardware, network disks, things like this,” Tom said. “We really wanted a microservices-oriented monitoring philosophy, so we came up with the RED Method.”
+          - paragraph [ref=f38e85]:
+            - strong [ref=f38e86]: "For every resource, monitor:"
+          - list [ref=f38e87]:
+            - listitem [ref=f38e88]:
+              - generic [ref=f38e89]: Rate (the number of requests per second)
+            - listitem [ref=f38e90]:
+              - generic [ref=f38e91]: Errors (the number of those requests that are failing)
+            - listitem [ref=f38e92]:
+              - generic [ref=f38e93]: Duration (the amount of time those requests take)
+          - paragraph [ref=f38e94]:
+            - text: (See his
+            - link "presentation slides (opens in new tab)" [ref=f38e95] [cursor=pointer]:
+              - /url: /files/grafanacon_eu_2018/Tom_Wilkie_GrafanaCon_EU_2018.pdf?pg=the-red-method-how-to-instrument-your-services&plcmt=in-text
+              - text: presentation slides
+            - text: on the
+            - link "Prometheus (opens in new tab)" [ref=f38e96] [cursor=pointer]:
+              - /url: /oss/prometheus/?pg=the-red-method-how-to-instrument-your-services&plcmt=in-text
+              - text: Prometheus
+            - text: implementation of the RED Method)
+          - paragraph [ref=f38e97]: “Everyone should understand the error rate, the request rate, and then some distribution of latency for those requests,” Tom explained. “You model this for every single service in your architecture, and this gives you a nice, consistent view of how your architecture is behaving. Giving this kind of consistency across services allows you to scale your operational team, and allows you to put people on call for code they didn’t write.”
+          - paragraph [ref=f38e98]: Plus, he pointed out, “The RED Method is a good proxy to how happy your customers will be. If you’ve got a high error rate, that’s basically going through to your users and they’re getting page load errors. If you’ve got a high duration, your website is slow. So these are really good metrics for building meaningful alerts and measuring your SLA.”
+          - 'heading "Link to section: The Four Golden Signals The Four Golden Signals" [level=4] [ref=f38e99]':
+            - 'link "Link to section: The Four Golden Signals"':
+              - /url: "#the-four-golden-signals"
+              - img [aria-hidden] [ref=f38e100] [cursor=pointer]
+            - text: The Four Golden Signals
+          - paragraph [ref=f38e103]:
+            - text: "Finally, Tom looked at a third method: The Four Golden Signals, which is from"
+            - link "Google’s SRE book (opens in new tab)" [ref=f38e104] [cursor=pointer]:
+              - /url: https://landing.google.com/sre/book.html
+              - text: Google’s SRE book
+            - text: .
+          - paragraph [ref=f38e105]:
+            - strong [ref=f38e106]: "For each service, monitor:"
+          - list [ref=f38e107]:
+            - listitem [ref=f38e108]:
+              - generic [ref=f38e109]: Latency (time taken to serve a request)
+            - listitem [ref=f38e110]:
+              - generic [ref=f38e111]: Traffic (how much demand is placed on your system)
+            - listitem [ref=f38e112]:
+              - generic [ref=f38e113]: Errors (rate of requests that are failing)
+            - listitem [ref=f38e114]:
+              - generic [ref=f38e115]: Saturation (how “full” your service is)
+          - paragraph [ref=f38e116]:
+            - text: "This is basically the same as the RED Method, but includes saturation. He explained one approach to measuring saturation: “With"
+            - link "kube-state-metrics (opens in new tab)" [ref=f38e117] [cursor=pointer]:
+              - /url: https://github.com/kubernetes/kube-state-metrics
+              - text: kube-state-metrics
+            - text: ", a little job you run on your Kubernetes cluster that scrapes the Kubernetes API and exports really interesting metadata about your jobs and services and pods and so on, you can compare the amount of CPU a service is using against its quota. Like how much it should be using, or how much is it allowed to use, as a proportion between 1 and 0. This gives you a measure of how ‘full’ your service is, or some proxy for how full your service is at least. And this is super useful because you could for instance build an alert on this.”"
+          - 'heading "Link to section: Two Sides of the Same Coin Two Sides of the Same Coin" [level=4] [ref=f38e118]':
+            - 'link "Link to section: Two Sides of the Same Coin"':
+              - /url: "#two-sides-of-the-same-coin"
+              - img [aria-hidden] [ref=f38e119] [cursor=pointer]
+            - text: Two Sides of the Same Coin
+          - paragraph [ref=f38e122]: Tom recommended using the USE and RED Methods together. “It’s like the RED Method is about caring about your users and how happy they are,” Tom said, “and the USE Method is about caring about your machines and how happy they are. It’s really just two different views on the same system. They’re complimentary.”
+          - paragraph [ref=f38e123]: Watch Tom’s full talk in the video below.
+          - 'heading "Link to section: Video: The RED Method: How to Instrument Your Services Video: The RED Method: How to Instrument Your Services" [level=4] [ref=f38e124]':
+            - 'link "Link to section: Video: The RED Method: How to Instrument Your Services"':
+              - /url: "#video-the-red-method-how-to-instrument-your-services"
+              - img [aria-hidden] [ref=f38e125] [cursor=pointer]
+            - text: "Video: The RED Method: How to Instrument Your Services"
+        - region [ref=f38e128]:
+          - paragraph [ref=f38e129]: Tags
+          - list "Post tags" [ref=f38e130]:
+            - listitem "View posts tagged with Grafana" [ref=f38e131] [cursor=pointer]:
+              - generic [ref=f38e132]: Grafana
+            - listitem "View posts tagged with GrafanaCon" [ref=f38e133] [cursor=pointer]:
+              - generic [ref=f38e134]: GrafanaCon
+            - listitem "View posts tagged with Talks" [ref=f38e135] [cursor=pointer]:
+              - generic [ref=f38e136]: Talks
+            - listitem "View posts tagged with Video" [ref=f38e137] [cursor=pointer]:
+              - generic [ref=f38e138]: Video
+    - region [ref=f38e139]:
+      - heading "Related Content" [level=2] [ref=f38e140]
+      - generic [ref=f38e141]:
+        - heading "Up next" [level=3] [ref=f38e142]
+        - generic [ref=f38e143]:
+          - article [ref=f38e144]:
+            - link [ref=f38e146] [cursor=pointer]:
+              - /url: /blog/grafana-and-grafana-cloud-release-cycle-an-end-of-year-update/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=up-next-1
+              - 'img "Grafana and Grafana Cloud release cycle: An end-of-year update" [ref=f38e147]'
+            - paragraph [ref=f38e150]:
+              - 'link "Grafana and Grafana Cloud release cycle: An end-of-year update" [ref=f38e151] [cursor=pointer]':
+                - /url: /blog/grafana-and-grafana-cloud-release-cycle-an-end-of-year-update/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=up-next-1
+          - article [ref=f38e152]:
+            - link [ref=f38e154] [cursor=pointer]:
+              - /url: /blog/explore-what-s-next-in-agentic-operations-introducing-ai-week/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=up-next-2
+              - 'img "Explore what''s next in agentic operations: Introducing AI Week" [ref=f38e155]'
+            - paragraph [ref=f38e158]:
+              - 'link "Explore what''s next in agentic operations: Introducing AI Week" [ref=f38e159] [cursor=pointer]':
+                - /url: /blog/explore-what-s-next-in-agentic-operations-introducing-ai-week/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=up-next-2
+          - article [ref=f38e160]:
+            - link [ref=f38e162] [cursor=pointer]:
+              - /url: /blog/telemetry-driven-development-how-to-gain-confidence-in-your-coding-agents-behavior-with-gcx-and-grafana-mcp/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=up-next-3
+              - 'img "Telemetry-driven development: How to gain confidence in your coding agents'' behavior with gcx and Grafana MCP" [ref=f38e163]'
+            - paragraph [ref=f38e166]:
+              - 'link "Telemetry-driven development: How to gain confidence in your coding agents'' behavior with gcx and Grafana MCP" [ref=f38e167] [cursor=pointer]':
+                - /url: /blog/telemetry-driven-development-how-to-gain-confidence-in-your-coding-agents-behavior-with-gcx-and-grafana-mcp/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=up-next-3
+      - generic [ref=f38e168]:
+        - heading "Related content" [level=3] [ref=f38e169]
+        - generic [ref=f38e170]:
+          - generic [ref=f38e171]:
+            - heading [level=4] [ref=f38e172]:
+              - img "Video" [ref=f38e174]
+              - text: Related videos
+            - list [ref=f38e175]:
+              - listitem [ref=f38e176]:
+                - 'link "Watch video: Getting started with Grafana dashboard design" [ref=f38e177] [cursor=pointer]':
+                  - /url: https://grafana.com/go/webinar/getting-started-with-grafana-dashboard-design/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=related-video-1
+                  - paragraph [ref=f38e178]: Getting started with Grafana dashboard design
+              - listitem [ref=f38e179]:
+                - 'link "Watch video: Scaling and securing your logs with Grafana Loki" [ref=f38e180] [cursor=pointer]':
+                  - /url: https://grafana.com/go/webinar/scaling-and-securing-your-logs-with-grafana-loki/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=related-video-2
+                  - paragraph [ref=f38e181]: Scaling and securing your logs with Grafana Loki
+              - listitem [ref=f38e182]:
+                - 'link "Watch video: Intro to Application and Frontend Observability with Grafana Cloud" [ref=f38e183] [cursor=pointer]':
+                  - /url: https://grafana.com/go/webinar/intro-to-application-and-frontend-observability-with-grafana-cloud/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=related-video-3
+                  - paragraph [ref=f38e184]: Intro to Application and Frontend Observability with Grafana Cloud
+          - generic [ref=f38e185]:
+            - heading [level=4] [ref=f38e186]:
+              - img "Documentation" [ref=f38e188]
+              - text: Related docs
+            - list [ref=f38e189]:
+              - listitem [ref=f38e190]:
+                - 'link "Read documentation: Grafana fundamentals" [ref=f38e191] [cursor=pointer]':
+                  - /url: https://grafana.com/docs/grafana/latest/fundamentals/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=related-doc-1
+                  - paragraph [ref=f38e192]: Grafana fundamentals
+              - listitem [ref=f38e193]:
+                - 'link "Read documentation: Build and manage dashboards" [ref=f38e194] [cursor=pointer]':
+                  - /url: https://grafana.com/docs/grafana/latest/dashboards/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=related-doc-2
+                  - paragraph [ref=f38e195]: Build and manage dashboards
+              - listitem [ref=f38e196]:
+                - 'link "Read documentation: Grafana Alerting" [ref=f38e197] [cursor=pointer]':
+                  - /url: https://grafana.com/docs/grafana/latest/alerting/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=related-doc-3
+                  - paragraph [ref=f38e198]: Grafana Alerting
+          - generic [ref=f38e199]:
+            - heading [level=4] [ref=f38e200]:
+              - img "Product" [ref=f38e202]
+              - text: Related products
+            - list [ref=f38e203]:
+              - listitem [ref=f38e204]:
+                - 'link "View product: Grafana Cloud" [ref=f38e205] [cursor=pointer]':
+                  - /url: https://grafana.com/products/cloud/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=related-product-1
+                  - paragraph [ref=f38e206]: Grafana Cloud
+              - listitem [ref=f38e207]:
+                - 'link "View product: AI Observability" [ref=f38e208] [cursor=pointer]':
+                  - /url: https://grafana.com/products/cloud/ai-observability/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=related-product-2
+                  - paragraph [ref=f38e209]: AI Observability
+              - listitem [ref=f38e210]:
+                - 'link "View product: Grafana Cloud k6" [ref=f38e211] [cursor=pointer]':
+                  - /url: https://grafana.com/products/cloud/performance-load-testing-k6/?pg=blog-the-red-method-how-to-instrument-your-services&plcmt=related-product-3
+                  - paragraph [ref=f38e212]: Grafana Cloud k6
+  - contentinfo "Site footer" [ref=f38e214]:
+    - generic [ref=f38e215]:
+      - generic [ref=f38e217]:
+        - generic [ref=f38e219]:
+          - generic [ref=f38e220]:
+            - heading "Still have questions?" [level=3] [ref=f38e221]
+            - paragraph [ref=f38e222]: Ask your questions. Let AI do the heavy lifting.
+          - generic [ref=f38e223]:
+            - img "Ask AI icon" [ref=f38e224]
+            - textbox "How do I get started with Grafana?" [ref=f38e225]
+            - button "Submit" [ref=f38e226] [cursor=pointer]
+        - generic [ref=f38e229]:
+          - generic [ref=f38e230]:
+            - img "Newsletter icon" [ref=f38e231]
+            - generic [ref=f38e232]:
+              - heading "Get every update" [level=3] [ref=f38e233]
+              - paragraph [ref=f38e234]: Subscribe to our newsletter
+          - generic [ref=f38e236]:
+            - textbox "Email" [ref=f38e237]
+            - button "Subscribe" [ref=f38e238] [cursor=pointer]
+          - paragraph [ref=f38e240]:
+            - text: By submitting, you agree to our
+            - link "Privacy policy" [ref=f38e241] [cursor=pointer]:
+              - /url: /legal/privacy-policy/
+      - generic [ref=f38e243]:
+        - generic [ref=f38e244]:
+          - heading "Grafana Cloud" [level=3] [ref=f38e245]
+          - list [ref=f38e246]:
+            - listitem [ref=f38e247]:
+              - link "Overview" [ref=f38e248] [cursor=pointer]:
+                - /url: /products/cloud/
+            - listitem [ref=f38e249]:
+              - link "Pricing" [ref=f38e250] [cursor=pointer]:
+                - /url: /pricing/
+            - listitem [ref=f38e251]:
+              - link "What's in the free tier?" [ref=f38e252] [cursor=pointer]:
+                - /url: /products/cloud/free-tier/
+            - listitem [ref=f38e253]:
+              - link "AI Assistant" [ref=f38e254] [cursor=pointer]:
+                - /url: /products/cloud/ai-assistant/
+            - listitem [ref=f38e255]:
+              - link "Agent Observability" [ref=f38e256] [cursor=pointer]:
+                - /url: /products/cloud/agent-observability/
+            - listitem [ref=f38e257]:
+              - link "Application Observability" [ref=f38e258] [cursor=pointer]:
+                - /url: /products/cloud/application-observability/
+            - listitem [ref=f38e259]:
+              - link "Kubernetes Monitoring" [ref=f38e260] [cursor=pointer]:
+                - /url: /products/cloud/kubernetes/
+            - listitem [ref=f38e261]:
+              - link "Dashboards & Visualization" [ref=f38e262] [cursor=pointer]:
+                - /url: /products/cloud/grafana/
+            - listitem [ref=f38e263]:
+              - link "Database Observability" [ref=f38e264] [cursor=pointer]:
+                - /url: /products/cloud/database-observability/
+            - listitem [ref=f38e265]:
+              - link "Frontend Observability" [ref=f38e266] [cursor=pointer]:
+                - /url: /products/cloud/frontend-observability/
+            - listitem [ref=f38e267]:
+              - link "Synthetic Monitoring" [ref=f38e268] [cursor=pointer]:
+                - /url: /products/cloud/synthetic-monitoring/
+            - listitem [ref=f38e269]:
+              - link "Performance & Load Testing" [ref=f38e270] [cursor=pointer]:
+                - /url: /products/cloud/performance-load-testing-k6/
+            - listitem [ref=f38e271]:
+              - link "Incident Response & Management" [ref=f38e272] [cursor=pointer]:
+                - /url: /products/cloud/irm/
+            - listitem [ref=f38e273]:
+              - link "AI Investigations" [ref=f38e274] [cursor=pointer]:
+                - /url: /products/cloud/investigations/
+            - listitem [ref=f38e275]:
+              - link "What’s New" [ref=f38e276] [cursor=pointer]:
+                - /url: /whats-new/
+            - listitem [ref=f38e277]:
+              - link "Grafana Cloud Status" [ref=f38e278] [cursor=pointer]:
+                - /url: https://status.grafana.com/
+        - generic [ref=f38e279]:
+          - heading "Solutions" [level=3] [ref=f38e280]
+          - list [ref=f38e281]:
+            - listitem [ref=f38e282]:
+              - link "AI Observability" [ref=f38e283] [cursor=pointer]:
+                - /url: /products/cloud/ai-tools-for-observability/
+            - listitem [ref=f38e284]:
+              - link "Full-Stack Observability" [ref=f38e285] [cursor=pointer]:
+                - /url: /solutions/full-stack-observability/
+            - listitem [ref=f38e286]:
+              - link "Infrastructure & Cloud Observability" [ref=f38e287] [cursor=pointer]:
+                - /url: /solutions/cloud-infrastructure-observability/
+            - listitem [ref=f38e288]:
+              - link "Cloud Provider Observability" [ref=f38e289] [cursor=pointer]:
+                - /url: /solutions/cloud-provider-observability/
+            - listitem [ref=f38e290]:
+              - link "Digital Experience Monitoring" [ref=f38e291] [cursor=pointer]:
+                - /url: /solutions/digital-experience-monitoring/
+            - listitem [ref=f38e292]:
+              - link "Scaled Prometheus" [ref=f38e293] [cursor=pointer]:
+                - /url: /products/cloud/metrics/#why-scale-metrics-with-grafana-cloud
+            - listitem [ref=f38e294]:
+              - link "Cost Management & Optimization" [ref=f38e295] [cursor=pointer]:
+                - /url: /products/cloud/cost-management-optimization/
+            - listitem [ref=f38e296]:
+              - link "Site Reliability" [ref=f38e297] [cursor=pointer]:
+                - /url: /solutions/site-reliability/
+            - listitem [ref=f38e298]:
+              - link "Log Management" [ref=f38e299] [cursor=pointer]:
+                - /url: /products/cloud/logs/
+            - listitem [ref=f38e300]:
+              - link "Migrate to OpenTelemetry" [ref=f38e301] [cursor=pointer]:
+                - /url: /solutions/opentelemetry/#migrate-to-open-telemetry
+        - generic [ref=f38e302]:
+          - heading "Integrations" [level=3] [ref=f38e303]
+          - list [ref=f38e304]:
+            - listitem [ref=f38e305]:
+              - link "All Integrations" [ref=f38e306] [cursor=pointer]:
+                - /url: /integrations/
+            - listitem [ref=f38e307]:
+              - link "All Plugins" [ref=f38e308] [cursor=pointer]:
+                - /url: /plugins/
+            - listitem [ref=f38e309]:
+              - link "AWS" [ref=f38e310] [cursor=pointer]:
+                - /url: /integrations/cloud-monitoring-aws/
+            - listitem [ref=f38e311]:
+              - link "Google Cloud" [ref=f38e312] [cursor=pointer]:
+                - /url: /integrations/cloud-monitoring-google-cloud/
+            - listitem [ref=f38e313]:
+              - link "Microsoft Azure" [ref=f38e314] [cursor=pointer]:
+                - /url: /integrations/cloud-monitoring-microsoft-azure/
+            - listitem [ref=f38e315]:
+              - link "Kubernetes" [ref=f38e316] [cursor=pointer]:
+                - /url: /products/cloud/kubernetes/
+            - listitem [ref=f38e317]:
+              - link "Datadog" [ref=f38e318] [cursor=pointer]:
+                - /url: /integrations/datadog/visualize/
+            - listitem [ref=f38e319]:
+              - link "New Relic" [ref=f38e320] [cursor=pointer]:
+                - /url: /integrations/new-relic/visualize/
+        - generic [ref=f38e321]:
+          - heading "Open Source" [level=3] [ref=f38e322]
+          - list [ref=f38e323]:
+            - listitem [ref=f38e324]:
+              - link "Our Projects" [ref=f38e325] [cursor=pointer]:
+                - /url: /oss/
+            - listitem [ref=f38e326]:
+              - link "GitHub" [ref=f38e327] [cursor=pointer]:
+                - /url: https://github.com/grafana/
+            - listitem [ref=f38e328]:
+              - link "Downloads" [ref=f38e329] [cursor=pointer]:
+                - /url: /get/
+            - listitem [ref=f38e330]:
+              - link "Dashboard Templates" [ref=f38e331] [cursor=pointer]:
+                - /url: /grafana/dashboards/
+        - generic [ref=f38e332]:
+          - heading "Learn" [level=3] [ref=f38e333]
+          - list [ref=f38e334]:
+            - listitem [ref=f38e335]:
+              - link "Documentation" [ref=f38e336] [cursor=pointer]:
+                - /url: /docs/
+            - listitem [ref=f38e337]:
+              - link "Blog" [ref=f38e338] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f38e339]:
+              - link "Community" [ref=f38e340] [cursor=pointer]:
+                - /url: /community/
+            - listitem [ref=f38e341]:
+              - link "Events" [ref=f38e342] [cursor=pointer]:
+                - /url: /events/
+            - listitem [ref=f38e343]:
+              - link "Observability Survey & Reports" [ref=f38e344] [cursor=pointer]:
+                - /url: /observability-benefits-for-business/
+        - generic [ref=f38e345]:
+          - generic [ref=f38e346]:
+            - heading "Company" [level=3] [ref=f38e347]
+            - list [ref=f38e348]:
+              - listitem [ref=f38e349]:
+                - link "About Grafana Labs" [ref=f38e350] [cursor=pointer]:
+                  - /url: /about/grafana-labs/
+              - listitem [ref=f38e351]:
+                - link "Careers" [ref=f38e352] [cursor=pointer]:
+                  - /url: /careers/
+              - listitem [ref=f38e353]:
+                - link "Partnerships" [ref=f38e354] [cursor=pointer]:
+                  - /url: /partnerships/
+              - listitem [ref=f38e355]:
+                - link "Newsroom" [ref=f38e356] [cursor=pointer]:
+                  - /url: /press/
+              - listitem [ref=f38e357]:
+                - link "Success Stories" [ref=f38e358] [cursor=pointer]:
+                  - /url: /success/
+              - listitem [ref=f38e359]:
+                - link "Contact Us" [ref=f38e360] [cursor=pointer]:
+                  - /url: /contact/
+              - listitem [ref=f38e361]:
+                - link "Getting Help" [ref=f38e362] [cursor=pointer]:
+                  - /url: /help/
+              - listitem [ref=f38e363]:
+                - link "Professional Services" [ref=f38e364] [cursor=pointer]:
+                  - /url: /professional-services/
+              - listitem [ref=f38e365]:
+                - link "Hey AI" [ref=f38e366] [cursor=pointer]:
+                  - /url: /ai-info/
+          - generic [ref=f38e367]:
+            - heading "Compare" [level=3] [ref=f38e368]
+            - list [ref=f38e369]:
+              - listitem [ref=f38e370]:
+                - link "Datadog vs. Grafana Cloud" [ref=f38e371] [cursor=pointer]:
+                  - /url: /compare/grafana-vs-datadog/
+              - listitem [ref=f38e372]:
+                - link "Dynatrace vs. Grafana Cloud" [ref=f38e373] [cursor=pointer]:
+                  - /url: /compare/grafana-vs-dynatrace/
+              - listitem [ref=f38e374]:
+                - link "Elasticsearch vs. Grafana Cloud" [ref=f38e375] [cursor=pointer]:
+                  - /url: /compare/grafana-vs-elastic/
+              - listitem [ref=f38e376]:
+                - link "New Relic vs. Grafana Cloud" [ref=f38e377] [cursor=pointer]:
+                  - /url: /compare/grafana-vs-new-relic/
+              - listitem [ref=f38e378]:
+                - link "PagerDuty vs. Grafana Cloud" [ref=f38e379] [cursor=pointer]:
+                  - /url: /compare/grafana-vs-pagerduty/
+              - listitem [ref=f38e380]:
+                - link "Splunk vs. Grafana Cloud" [ref=f38e381] [cursor=pointer]:
+                  - /url: /compare/grafana-vs-splunk/
+      - generic [ref=f38e382]:
+        - generic [ref=f38e383]:
+          - generic:
+            - img "Grafana Labs x unique logomark"
+          - paragraph [ref=f38e385]:
+            - text: Donut take our word for it. Try
+            - link "Grafana Cloud" [ref=f38e386] [cursor=pointer]:
+              - /url: /products/cloud/
+            - text: today.
+        - generic [ref=f38e387]:
+          - generic [ref=f38e388]:
+            - navigation "Footer navigation" [ref=f38e389]:
+              - link "Grafana Cloud Status" [ref=f38e390] [cursor=pointer]:
+                - /url: https://status.grafana.com/
+              - link "Legal & Security" [ref=f38e391] [cursor=pointer]:
+                - /url: /legal/
+              - link "Terms of Service" [ref=f38e392] [cursor=pointer]:
+                - /url: /legal/terms/
+              - link "Privacy Policy" [ref=f38e393] [cursor=pointer]:
+                - /url: /legal/privacy-policy/
+              - link "Trademark Policy" [ref=f38e394] [cursor=pointer]:
+                - /url: /trademark-policy/
+            - paragraph [ref=f38e396]: Copyright 2026 © Grafana Labs
+          - generic [ref=f38e397]:
+            - link "Facebook" [ref=f38e398] [cursor=pointer]:
+              - /url: https://www.facebook.com/grafana/
+            - link "X" [ref=f38e400] [cursor=pointer]:
+              - /url: https://twitter.com/grafana
+            - link "Linkedin" [ref=f38e402] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/grafana-labs/
+            - link "Github" [ref=f38e404] [cursor=pointer]:
+              - /url: https://github.com/grafana/
+            - link "Youtube" [ref=f38e406] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw
+            - link "Reddit" [ref=f38e408] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/grafana/

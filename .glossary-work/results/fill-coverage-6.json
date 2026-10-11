@@ -1,0 +1,228 @@
+{
+  "entries": [
+    {
+      "term": "Docker layer & multi-stage build (Dockerfile, container layer, build cache)",
+      "aliases": [
+        "Docker layer",
+        "multi-stage build",
+        "build cache",
+        "layer cache"
+      ],
+      "level": "intermediate",
+      "domain": "DevOps & Triển khai",
+      "problem": "Image build kiểu một stage (cài dependencies rồi copy source) mang theo compiler, cache package manager và source code, làm image nặng và attack surface rộng. Thứ tự lệnh trong Dockerfile sai còn khiến mỗi thay đổi source đều rebuild toàn bộ dependency, CI chậm không cần thiết.",
+      "origin": "Multi-stage build được thêm trong Docker 17.05 (2017).",
+      "how": "Mỗi instruction trong Dockerfile tạo một layer read-only được cache theo nội dung input; đặt các bước hiếm khi thay đổi (package.json, khai báo dependency) lên trước và copy source sau để cache tái sử dụng được. Multi-stage build dùng stage trung gian chứa toolchain để biên dịch/test rồi copy artifact sang stage cuối chạy production, nhờ đó image không còn compiler và source.",
+      "related": [
+        "Container (Docker, container image)",
+        "Infrastructure as Code (Terraform, Pulumi)",
+        "Continuous Integration (CI)",
+        "Container image registry (image registry, image tag, tag immutability, image signing)"
+      ]
+    },
+    {
+      "term": "Container image registry (image registry, image tag, tag immutability, image signing)",
+      "aliases": [
+        "image registry",
+        "image tag",
+        "tag immutability",
+        "image signing"
+      ],
+      "level": "intermediate",
+      "domain": "DevOps & Triển khai",
+      "problem": "Khi image nằm rải rác trên máy dev hoặc file tar, không ai biết production đang chạy bản nào; tag latest bị đè âm thầm, không có chữ ký hay nguồn gốc. Rollback mất căn cứ và supply chain thành mục tiêu tấn công.",
+      "origin": "",
+      "how": "Registry là kho artifact trung tâm (Docker Hub, GHCR, ECR, GAR) mà deploy kéo image từ đó; tag là con trỏ tới digest (SHA-256 của nội dung), tag immutability chặn ghi đè để audit luôn truy được đúng một digest. Image signing (cosign, Notary) gắn chữ ký lên digest, cho phép policy chặn image không được ký hoặc đã bị sửa trước khi chạy.",
+      "related": [
+        "Docker layer & multi-stage build (Dockerfile, container layer, build cache)",
+        "Build artifact",
+        "digital signature",
+        "Rollback"
+      ]
+    },
+    {
+      "term": "Semantic Versioning (SemVer, breaking change policy)",
+      "aliases": [
+        "SemVer",
+        "semantic versioning",
+        "MAJOR.MINOR.PATCH",
+        "breaking change"
+      ],
+      "level": "basic",
+      "domain": "DevOps & Triển khai",
+      "problem": "Khi version không theo quy ước (1.3, 2.0b, 20191231), không thể biết nâng cấp dependency có an toàn không; tooling không tự động hóa được việc nâng cấp vì mỗi nhà phát hành tự đặt lệ.",
+      "origin": "Do Tom Preston-Werner (GitHub) đề xuất tại semver.org; bản đặc tả 2.0.0 công bố năm 2013.",
+      "how": "Version có dạng MAJOR.MINOR.PATCH: MAJOR tăng khi có breaking change, MINOR khi thêm tính năng tương thích ngược, PATCH khi sửa lỗi. Range như ^1.2.3 hoặc ~1.2.3 được dependency resolver dịch thành quy tắc khóa tương đối, cho phép nhận bản vá nằm trong giới hạn an toàn; breaking change buộc bump MAJOR để npm/pip không kéo bản vỡ vào.",
+      "related": [
+        "API versioning (URL/header/media type)",
+        "API deprecation policy",
+        "Expand-contract (database migration trong deploy)",
+        "Release vs deploy"
+      ]
+    },
+    {
+      "term": "DORA metrics (four keys: deployment frequency, lead time for change, change failure rate, MTTR)",
+      "aliases": [
+        "DORA",
+        "four keys",
+        "deployment frequency",
+        "lead time for change",
+        "change failure rate",
+        "MTTR"
+      ],
+      "level": "intermediate",
+      "domain": "DevOps & Triển khai",
+      "problem": "Các chỉ số delivery tự phát (số commit, số deploy tháng) không nói được nhóm nào vừa nhanh vừa ổn: một nhóm có thể deploy 100 lần/tháng nhưng fail liên tục, nhóm khác ít deploy mà vẫn phục hồi chậm. Không có thước đo chuẩn thì cải tiến process thành cảm tính.",
+      "origin": "Bốn chỉ số công bố trong chương trình nghiên cứu DORA (Nicole Forsgren, Jez Humble, Gene Kim; 2014-2019).",
+      "how": "Bốn chỉ số: tần suất deploy, lead time for change (từ commit tới production), change failure rate (tỉ lệ deploy gây sự cố) và thời gian phục hồi (MTTR). DORA khảo sát hàng nghìn tổ chức, xếp nhóm elite/high/medium/low, đo bằng percentile và khuyến nghị cải tiến đồng thời cả tốc độ lẫn độ ổn định thay vì đánh đổi cái này lấy cái kia.",
+      "related": [
+        "Continuous Integration (CI)",
+        "MTTR/MTBF",
+        "Release vs deploy",
+        "Canary deploy"
+      ]
+    },
+    {
+      "term": "Configuration drift (drift detection, declarative vs imperative, Terraform plan)",
+      "aliases": [
+        "configuration drift",
+        "drift detection",
+        "declarative vs imperative",
+        "Terraform plan"
+      ],
+      "level": "intermediate",
+      "domain": "DevOps & Triển khai",
+      "problem": "Cấu hình server được sửa tay qua SSH, chạy script một lần hay hotfix khẩn cấp, còn Terraform/Ansible từng deploy xong bị bỏ mặc. Sau vài tháng, hạ tầng thật lệch hẳn khỏi code; lần deploy tiếp theo có thể xóa thứ đang chạy, tạo hiệu ứng 'works on my machine' trên production.",
+      "origin": "",
+      "how": "Declarative IaC mô tả trạng thái mong muốn, tool so với trạng thái hiện tại rồi chỉ thực hiện phần chênh lệch; terraform plan hiện diff đó trước khi apply. Drift detection là chạy so sánh định kỳ hoặc liên tục (terraform plan --detailed-exitcode trong CI, dịch vụ như AWS Config, driftctl) để kéo trạng thái về code hoặc ghi nhận thay đổi ngoài luồng trước khi chúng lan rộng.",
+      "related": [
+        "Infrastructure as Code (Terraform, Pulumi)",
+        "GitOps",
+        "Immutable infrastructure",
+        "Config management"
+      ]
+    },
+    {
+      "term": "Cordon, drain & PodDisruptionBudget (graceful node maintenance, node drain, PDB)",
+      "aliases": [
+        "cordon node",
+        "node drain",
+        "PodDisruptionBudget",
+        "PDB",
+        "graceful node maintenance"
+      ],
+      "level": "intermediate",
+      "domain": "DevOps & Triển khai",
+      "problem": "Cần vá kernel hoặc thay node vật lý. Nếu tắt thẳng máy, mọi pod trên node chết cùng lúc: connection rớt giữa request đang xử lý, cụm stateful mất quorum, scheduler dồn pod sang node còn lại làm quá tải dây chuyền. Kubernetes không tự biết thời điểm nào an toàn để rút một node khỏi vòng phục vụ.",
+      "origin": "PodDisruptionBudget beta từ Kubernetes 1.5 (12/2016), GA từ 1.7 (2017)",
+      "how": "Cordon đánh dấu node unschedulable để ngừng nhận pod mới; drain evict từng pod qua eviction API; PodDisruptionBudget chặn eviction khi số pod khỏe mạnh tụt dưới minAvailable (hoặc vượt maxUnavailable), buộc thao tác chờ thay vì phá ứng dụng. PDB chỉ bảo vệ trước gián đoạn chủ động như drain, không bảo vệ trước node crash, nên phải đi kèm readiness probe và số replica đủ.",
+      "related": [
+        "Kubernetes",
+        "Pod",
+        "Zero-downtime deploy (rolling deploy)",
+        "StatefulSet (stateful workload, stable identity, stable storage/PVC)"
+      ]
+    },
+    {
+      "term": "StatefulSet (stateful workload, stable identity, stable storage/PVC)",
+      "aliases": [
+        "stateful workload",
+        "stable identity",
+        "stable storage",
+        "PetSet"
+      ],
+      "level": "intermediate",
+      "domain": "DevOps & Triển khai",
+      "problem": "Chạy PostgreSQL, Kafka hay Elasticsearch bằng Deployment hỏng ở chỗ: pod restart là mất danh tính, volume gắn nhầm replica, các instance không biết peer nào để bầu leader. Deployment giả định mọi bản sao giống hệt nhau và thay thế được tùy ý, giả định đó sai với hệ thống có trạng thái.",
+      "origin": "Ra mắt ở Kubernetes 1.3 (2016) dưới tên PetSet, đổi tên thành StatefulSet từ 1.5, GA ở 1.9 (2017)",
+      "how": "StatefulSet cấp ordinal ổn định (db-0, db-1), PVC riêng giữ nguyên qua các lần reschedule, và DNS nội bộ cố định để peer tìm thấy nhau. Rollout chạy tuần tự từ ordinal cao xuống và chờ từng pod ready trước khi sang pod kế, nên nâng cấp cụm database không mất đồng thuận. Xóa StatefulSet mặc định không xóa PVC, dữ liệu còn cho tới khi xóa tường minh.",
+      "related": [
+        "Kubernetes",
+        "Pod",
+        "Cordon, drain & PodDisruptionBudget (graceful node maintenance, node drain, PDB)",
+        "Backup & point-in-time recovery (WAL archive, incremental)"
+      ]
+    },
+    {
+      "term": "Kubernetes Operator (operator pattern, custom resource, CRD)",
+      "aliases": [
+        "operator pattern",
+        "custom resource",
+        "CRD",
+        "Operator Framework"
+      ],
+      "level": "advanced",
+      "domain": "DevOps & Triển khai",
+      "problem": "Vòng đời hệ stateful gồm backup định kỳ, failover, nâng version theo thứ tự, đổi cấu hình không downtime. Làm bằng runbook thủ công thì bước nào quên cũng trả giá bằng dữ liệu, còn Helm chart và CronJob chỉ mô tả được cấu hình tĩnh, không phản ứng được khi trạng thái cụm lệch đi.",
+      "origin": "Thuật ngữ do CoreOS đặt ra năm 2016 trong bài viết Introducing Operators; sau đó chuẩn hóa qua Operator Framework",
+      "how": "Operator là controller tự viết lắng nghe custom resource (CRD) mô tả trạng thái mong muốn, rồi chạy vòng reconcile liên tục để đưa trạng thái thật về khớp, ví dụ promote replica, chạy backup, rolling upgrade theo đúng hiểu biết về hệ đó. Viết bằng controller-runtime hoặc Operator SDK, đóng gói kèm CRD và RBAC, phân phối qua OperatorHub hoặc Helm.",
+      "related": [
+        "Kubernetes",
+        "Helm",
+        "Service & Ingress (mạng Kubernetes)"
+      ]
+    },
+    {
+      "term": "Kubernetes resource requests & limits (QoS class: Guaranteed/Burstable/BestEffort, OOMKilled)",
+      "aliases": [
+        "QoS class",
+        "Guaranteed/Burstable/BestEffort",
+        "OOMKilled",
+        "resource requests",
+        "resource limits"
+      ],
+      "level": "intermediate",
+      "domain": "DevOps & Triển khai",
+      "problem": "Container không khai báo requests bị scheduler xếp vào node đã chật, rồi ăn hết CPU khiến pod khác cùng node chậm theo. Đặt memory limit thấp quá thì process bị OOMKilled giữa lúc đang xử lý request. Không có con số mặc định nào an toàn cho mọi workload, và chọn số sai chỉ lộ ra khi tải tăng.",
+      "origin": "",
+      "how": "requests quyết định chỗ scheduler đặt pod và phần CPU share tối thiểu; limits chặn trần tài nguyên. Vượt memory limit bị kernel OOM-kill, vượt CPU limit bị CFS throttling theo chu kỳ 100ms làm latency p99 tăng dù CPU còn nhàn. QoS class suy từ requests/limits: Guaranteed khi hai giá trị khớp nhau, Burstable khi chỉ có requests, BestEffort khi không khai báo; hết tài nguyên thì BestEffort bị evict trước.",
+      "related": [
+        "cgroup limits, CPU throttling & noisy neighbor",
+        "Pod",
+        "Health Check"
+      ]
+    },
+    {
+      "term": "Lockfile & deterministic dependency resolution (package-lock.json, go.sum, Cargo.lock)",
+      "aliases": [
+        "lockfile",
+        "package-lock.json",
+        "yarn.lock",
+        "go.sum",
+        "Cargo.lock",
+        "dependency lock"
+      ],
+      "level": "basic",
+      "domain": "DevOps & Triển khai",
+      "problem": "package.json ghi ^4.17.0 nghĩa là mỗi máy, mỗi lần CI chạy có thể cài phiên bản khác nhau, build tháng này pass tháng sau fail vì một transitive dependency phát hành bản lỗi. Kẻ tấn công chiếm được package và phát hành bản mới thì mọi CI không khóa phiên bản tự động kéo mã độc về.",
+      "origin": "Yarn ra yarn.lock năm 2016; npm theo sau với package-lock.json ở npm 5 (2017); go.sum có từ Go modules (Go 1.11, 2018).",
+      "how": "Lockfile ghi chính xác phiên bản và checksum của toàn bộ cây dependency, kể cả transitive. npm ci, cargo build --locked, go mod verify cài đúng nội dung lockfile và từ chối khi lệch, nên CI dùng chế độ này thay vì install tự do. Lockfile commit vào repo và review diff mỗi lần dependency đổi.",
+      "related": [
+        "Continuous Integration (CI)",
+        "Build artifact",
+        "Supply chain security (SBOM, SLSA, dependency scanning)"
+      ]
+    },
+    {
+      "term": "Open-source license (MIT, Apache-2.0, GPL, copyleft)",
+      "aliases": [
+        "open-source license",
+        "MIT license",
+        "Apache-2.0",
+        "GPL",
+        "copyleft",
+        "giấy phép nguồn mở"
+      ],
+      "level": "basic",
+      "domain": "DevOps & Triển khai",
+      "problem": "Startup nhúng một thư viện GPL vào sản phẩm đóng mà không để ý; đến khi bán cho khách doanh nghiệp, legal của khách đòi mã nguồn theo điều khoản copyleft. Kiểm kê dependency chỉ nhìn chức năng mà bỏ cột license là cách tự tạo rủi ro pháp lý, vì mỗi license trả lời câu hỏi khác nhau về commercial, notice, và nghĩa vụ mở mã.",
+      "origin": "GPL do Richard Stallman viết cho GNU, phát hành 1989 (GPLv2 năm 1991, GPLv3 năm 2007); Apache License 2.0 năm 2004; MIT license gắn với bản phát hành X11 cuối thập niên 1980.",
+      "how": "Phân nhóm: permissive (MIT, BSD, Apache-2.0) dùng được trong sản phẩm đóng nếu giữ notice, Apache-2.0 thêm điều khoản patent; copyleft (GPL, AGPL) buộc phát hành mã nguồn phái sinh, AGPL mở rộng tới cả dịch vụ mạng. Quy trình: gắn license vào SBOM, chặn ở CI theo allowlist, review thủ công mọi thư viện copyleft.",
+      "related": [
+        "Supply chain security (SBOM, SLSA, dependency scanning)",
+        "Lockfile & deterministic dependency resolution (package-lock.json, go.sum, Cargo.lock)",
+        "Build artifact"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+- generic [active] [ref=f16e1]:
+  - link [ref=f16e3] [cursor=pointer]:
+    - /url: https://www.reddit.com
+  - generic [ref=f16e5]:
+    - heading "Prove your humanity" [level=1] [ref=f16e8]
+    - paragraph [ref=f16e9]: We’re committed to safety and security. But not for bots. Complete the challenge below and let us know you’re a real person.
+    - iframe [ref=f16e14]:
+      - generic [ref=f17e2]:
+        - generic [ref=f17e3]:
+          - checkbox "I'm not a robot" [ref=f17e7]
+          - generic [aria-hidden] [ref=f17e11]: I'm not a robot
+        - generic [ref=f17e12]: reCAPTCHA
+  - generic [ref=f16e15]:
+    - link "Reddit, Inc. © \"2026\". All rights reserved." [ref=f16e16] [cursor=pointer]:
+      - /url: https://www.redditinc.com/
+    - generic [ref=f16e17]:
+      - link "User Agreement" [ref=f16e18] [cursor=pointer]:
+        - /url: https://www.reddit.com/help/useragreement
+      - link "Privacy Policy" [ref=f16e19] [cursor=pointer]:
+        - /url: https://www.reddit.com/help/privacypolicy
+      - link "Content Policy" [ref=f16e20] [cursor=pointer]:
+        - /url: https://www.reddit.com/help/contentpolicy
+      - link "Help" [ref=f16e21] [cursor=pointer]:
+        - /url: https://support.reddithelp.com/hc/en-us

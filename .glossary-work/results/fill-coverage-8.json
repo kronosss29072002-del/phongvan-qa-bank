@@ -1,0 +1,1866 @@
+{
+  "entries": [
+    {
+      "term": "CPU cache hierarchy (phân cấp cache CPU, L1/L2/L3, cache miss types)",
+      "aliases": [
+        "L1 cache",
+        "L2 cache",
+        "L3 cache",
+        "cache miss",
+        "compulsory miss",
+        "capacity miss",
+        "conflict miss"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Một endpoint tổng hợp duyệt mảng 10 triệu struct và trả JSON, thời gian ổn định 40ms. Sau khi thêm một field boolean vào giữa hai field nóng, latency nhảy lên 130ms dù số phép tính không đổi; profiler chỉ đúng vòng lặp đó, query không đổi, GC không đổi. CPU đang chờ gì trong 90ms tăng thêm kia, và tại sao thứ tự field trong struct lại quyết định?",
+      "origin": "Ulrich Drepper, \"What Every Programmer Should Know About Memory\" (Red Hat, 2007); Jeff Dean, \"Latency Numbers Every Programmer Should Know\" (2012)",
+      "how": "Chuỗi truy cập đi từ L1 (32-64KB, 4-5 chu kỳ) qua L2 (~512KB-1MB, ~12 chu kỳ), L3 (vài chục MB, ~40 chu kỳ) tới DRAM (~200-300 chu kỳ). Cache nạp theo cache line 64 byte; miss chia ba loại: compulsory (lần chạm đầu tiên), capacity (working set lớn hơn cache), conflict (nhiều địa chỉ ánh xạ vào cùng set). Struct phình làm working set vượt L2 là nguyên nhân phổ biến nhất của kiểu chậm này.",
+      "related": [
+        "CPU cache line",
+        "Cache locality (spatial/temporal)",
+        "Branch prediction"
+      ]
+    },
+    {
+      "term": "Fork & exec (tiến trình con, fork, execve, fork bomb)",
+      "aliases": [
+        "fork",
+        "execve",
+        "exec",
+        "fork bomb",
+        "clone"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Một worker Python giữ RSS 3GB chạy subprocess cho mỗi job nặng. Tăng concurrency lên 8 thì container bị OOMKilled dù mỗi subprocess chỉ dùng vài chục MB, và log bắt đầu xuất hiện EAGAIN khi spawn. Đo riêng từng job ở local không tái hiện vì RSS tiến trình cha đứng yên.",
+      "origin": "man 2 fork, man 2 execve; W. Richard Stevens, \"Advanced Programming in the UNIX Environment\"",
+      "how": "fork() tạo tiến trình con bằng cách copy bảng trang của cha; các trang dữ liệu dùng copy-on-write nên chỉ nhân bản khi một bên ghi, nhưng bảng trang và các lần ghi chung làm RSS phồng nhanh khi nhiều con chạy song song. execve() thay không gian địa chỉ bằng chương trình mới, giữ nguyên PID và file descriptor không đặt FD_CLOEXEC. Số tiến trình bị chặn bởi RLIMIT_NPROC (ulimit -u) và pids.max của cgroup, đúng khe mà fork bomb khai thác.",
+      "related": [
+        "Copy-on-write",
+        "Zombie & orphan process (reaping, SIGCHLD)",
+        "Process vs Thread"
+      ]
+    },
+    {
+      "term": "Linux namespaces (không gian tên, PID/net/mount namespace, container isolation)",
+      "aliases": [
+        "namespace",
+        "PID namespace",
+        "network namespace",
+        "mount namespace",
+        "container isolation"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Hai service dev cùng chạy MySQL 3306 trên một máy mà không đụng nhau, mỗi container thấy /proc với PID 1 riêng, và không nhìn thấy filesystem của host. Cùng lúc container bị giới hạn CPU, nhưng hiện tượng cô lập đó không giải thích được bằng cgroup. Cần một cơ chế chặn tầm nhìn tài nguyên, không phải chỉ đếm mức dùng.",
+      "origin": "man 7 namespaces, man 2 clone; Linux kernel documentation (Documentation/namespaces)",
+      "how": "Namespace bọc một loại tài nguyên hệ thống: PID namespace cho mỗi cây tiến trình một dải PID riêng, net namespace cấp interface, bảng định tuyến và iptables riêng, mount namespace tách cây filesystem rồi pivot_root vào root mới. clone()/unshare() tạo namespace; khi tiến trình cuối cùng của PID namespace thoát, kernel xóa namespace đó. Cgroup giới hạn tài nguyên, namespace quyết định ai thấy gì; container runtime ghép cả hai.",
+      "related": [
+        "cgroup limits, CPU throttling & noisy neighbor",
+        "Container (Docker, container image)",
+        "Container vs VM"
+      ]
+    },
+    {
+      "term": "Dynamic linking & shared libraries (liên kết động, ELF, .so, LD_LIBRARY_PATH, dlopen)",
+      "aliases": [
+        "dynamic linking",
+        "shared library",
+        ".so",
+        "ELF",
+        "LD_LIBRARY_PATH",
+        "dlopen",
+        "SONAME"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Một binary build trên Debian 12 với libssl3 chạy tốt trên laptop, copy sang server Ubuntu 20.04 chết ngay lúc khởi động: cannot open shared object file libssl.so.3. Cùng commit, cùng lệnh build, chỉ khác máy. Nguyên nhân nằm ở khâu nạp thư viện chia sẻ lúc chạy.",
+      "origin": "John R. Levine, \"Linkers and Loaders\" (Morgan Kaufmann, 1999); man 8 ld.so; ELF gABI specification",
+      "how": "Binary ELF ghi tên thư viện cần nạp (DT_NEEDED); loader ld.so tìm theo RPATH, LD_LIBRARY_PATH, cache ldconfig rồi tới /lib và /usr/lib, sau đó khớp symbol theo phiên bản (symbol versioning). Máy A có libssl 1.1, máy B có libssl 3 sinh ra hai SONAME khác nhau, tiến trình dừng ngay tại bước resolve. dlopen() và LD_PRELOAD nạp thư viện lúc chạy, đổi lại lỗi chỉ lộ khi nhánh code đó được gọi.",
+      "related": [
+        "Container (Docker, container image)",
+        "Build artifact",
+        "Lockfile & deterministic dependency resolution (package-lock.json, go.sum, Cargo.lock)"
+      ]
+    },
+    {
+      "term": "Memory fragmentation (phân mảnh bộ nhớ, internal/external fragmentation, allocator)",
+      "aliases": [
+        "fragmentation",
+        "internal fragmentation",
+        "external fragmentation",
+        "heap fragmentation",
+        "allocator"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Một service C chạy 12 tiếng leo RSS từ 800MB lên 2.4GB, restart là về bình thường. Heap profiler không thấy object nào lớn bất thường, tổng cấp phát ròng đứng yên. Đội vận hành gọi đó là leak và nâng limit; lần sau OOM vẫn tới, chỉ chậm hơn.",
+      "origin": "glibc malloc internals (malloc.c); Jason Evans, \"A Scalable Concurrent malloc(3) Implementation for FreeBSD\" (2006)",
+      "how": "Internal fragmentation: allocator cấp block lớn hơn yêu cầu (làm tròn lên size class, alignment) nên phần dư không ai dùng. External fragmentation: heap đủ tổng dung lượng nhưng các khoảng trống xen kẽ block còn sống, không ghép thành vùng liên tục cho cấp phát lớn. glibc malloc giữ arena lâu và trim chậm nên RSS cao sau khi giải phóng là chỉ báo điển hình; jemalloc/tcmalloc giảm vấn đề bằng size class và per-thread cache.",
+      "related": [
+        "Memory allocation & GC churn",
+        "Memory leak & heap growth (rò rỉ bộ nhớ, RSS creep)",
+        "Page fault, swap & OOM killer"
+      ]
+    },
+    {
+      "term": "Cache coherence & MESI protocol (nhất quán cache, memory barrier, hàng rào bộ nhớ)",
+      "aliases": [
+        "cache coherence",
+        "MESI",
+        "MESI protocol",
+        "memory barrier",
+        "memory fence",
+        "coherence protocol"
+      ],
+      "level": "advanced",
+      "domain": "Nền tảng máy tính",
+      "problem": "Thread A trên core 1 ghi ready = 1 sau khi đã set payload; thread B trên core 2 poll ready bằng vòng lặp trần. B thấy ready = 1 nhưng payload vẫn là giá trị cũ, hiện tượng biến mất khi thêm một lệnh in debug. Máy single-core không tái hiện; CI nhiều core fail ngẫu nhiên.",
+      "origin": "MESI protocol (Papamarcos & Patel, ISCA 1984); Maurice Herlihy & Nir Shavit, \"The Art of Multiprocessor Programming\"",
+      "how": "Mỗi core có cache riêng nên bản sao cùng một cache line có thể lệch nhau; giao thức MESI giữ trạng thái Modified/Exclusive/Shared/Invalid và phát tín hiệu invalidate khi một core ghi. Store buffer và thực thi out-of-order vẫn đảo thứ tự quan sát, nên cần memory barrier (mfence, acquire/release) để ép thứ tự; std::atomic sinh đúng barrier đó, còn volatile thì không. False sharing khiến hai biến khác nhau nằm cùng cache line ping-pong giữa các core.",
+      "related": [
+        "Memory model & happens-before (memory visibility)",
+        "False sharing",
+        "CPU cache line"
+      ]
+    },
+    {
+      "term": "Symlink vs hard link (liên kết mềm vs liên kết cứng, soft link, ln -s, inode reference)",
+      "aliases": [
+        "symlink",
+        "soft link",
+        "hard link",
+        "ln -s",
+        "symbolic link"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Deploy kiểu Capistrano: current là symlink trỏ vào releases/<timestamp>. Dọn release cũ xong, service vẫn chạy nhưng restart thì chết vì symlink trỏ vào thư mục đã xóa. Câu hỏi đi kèm: xóa một file log đang được process mở, tại sao dung lượng ổ không giảm?",
+      "origin": "man 2 link, man 7 symlink; W. Richard Stevens, \"Advanced Programming in the UNIX Environment\"",
+      "how": "Hard link là tên khác của cùng một inode; file chỉ bị xóa khi link count về 0 và mọi file descriptor đang mở đều đóng, nên rm file log đang mở không trả lại dung lượng. Symlink là file riêng chứa đường dẫn, resolve ở mỗi lần truy cập nên đứt ngay khi đích biến mất. ln -sfn trong script deploy cần cờ -n, nếu thiếu thì link mới bị tạo bên trong thư mục đích thay vì thay thế link cũ.",
+      "related": [
+        "inode & inode exhaustion (df -i, file metadata)",
+        "Blue-green deploy",
+        "Zero-downtime deploy (rolling deploy)"
+      ]
+    },
+    {
+      "term": "Core dump & ulimit (kết xuất bộ nhớ khi crash, core_pattern, coredumpctl, gdb)",
+      "aliases": [
+        "core dump",
+        "coredump",
+        "core_pattern",
+        "ulimit",
+        "coredumpctl",
+        "RLIMIT_CORE"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Ba giờ sáng, một instance nhận SIGSEGV rồi systemd restart ngay; log ứng dụng dừng giữa dòng không kịp flush, trong journal chỉ có một dòng killed by signal 11. Không repro được ở local, không stack trace. Postmortem đang thiếu mảnh bằng chứng ở tầng kernel vì core dump bị tắt cho gọn image.",
+      "origin": "man 5 core, man 8 coredumpctl; systemd-coredump documentation",
+      "how": "Khi tiến trình nhận signal chết người (SIGSEGV, SIGABRT), kernel chạy cơ chế core dump: đọc giới hạn RLIMIT_CORE (ulimit -c) và giá trị /proc/sys/kernel/core_pattern, rồi ghi ảnh bộ nhớ ra file hoặc pipe cho systemd-coredump. coredumpctl list và gdb mở core ra cho phép xem stack từng thread tại thời điểm chết. Trên image tối giản, RLIMIT_CORE = 0 và thiếu debug symbol khiến bước này mất trắng.",
+      "related": [
+        "Unix signals & exit codes (SIGTERM/SIGKILL/SIGINT)",
+        "strace (syscall-level debugging)",
+        "Disk full & ENOSPC (hết dung lượng đĩa)"
+      ]
+    },
+    {
+      "term": "Message key / partition key (thứ tự theo key trong Kafka)",
+      "aliases": [
+        "message key",
+        "partition key",
+        "khóa tin nhắn",
+        "khóa phân vùng"
+      ],
+      "level": "basic",
+      "domain": "Messaging & Bất đồng bộ",
+      "problem": "Producer không chỉ định key thì Kafka gán partition vòng tròn (round robin): hai event 'đơn được tạo' và 'khách đã chuyển khoản' của cùng một user rơi vào hai partition khác nhau, consumer group xử lý song song nên đơn bị tính sai thứ tự. Ép toàn bộ topic vào một partition giữ được thứ tự nhưng tốc độ bị chặn bởi đúng một consumer duy nhất.",
+      "origin": "Kafka (LinkedIn, 2011) — partition mặc định theo murmur2 hash của key (DefaultPartitioner); Kafka Streams và log compaction cũng dựa trên key để nhóm trạng thái.",
+      "how": "Kafka băm key bằng DefaultPartitioner (murmur2) để chọn partition: cùng key luôn về cùng partition, trong một consumer group partition đó do đúng một consumer xử lý nên thứ tự theo key được giữ với chi phí gần bằng không — không cần điều phối thêm, chỉ cần key bất biến theo vòng đời entity. Chọn key theo nghiệp vụ (user_id, order_id), tránh key ít giá trị riêng biệt làm lệch tải giữa các partition.",
+      "related": [
+        "FIFO / Message ordering",
+        "Kafka topic / partition / consumer group",
+        "Hot key",
+        "Apache Kafka"
+      ]
+    },
+    {
+      "term": "Pull vs push consumption (kéo vs đẩy, Kafka poll vs broker push)",
+      "aliases": [
+        "pull model",
+        "push model",
+        "kéo vs đẩy",
+        "Kafka poll",
+        "broker push"
+      ],
+      "level": "intermediate",
+      "domain": "Messaging & Bất đồng bộ",
+      "problem": "Broker push (ActiveMQ, RabbitMQ basic.consume) để broker quyết định tốc độ: consumer xử lý chậm thì message chất đầy local queue, memory đầy phải drop hoặc dựng backpressure phức tạp; ngược lại broker không biết lúc nào consumer thực sự sẵn sàng nên khó gộp lô hiệu quả. Nhưng pull thuần cũng có vấn đề riêng: khi không có message, consumer poll liên tục tốn I/O vô ích.",
+      "origin": "Lựa chọn pull-based của Kafka — Jay Kreps, thiết kế trong kafka.apache.org/documentation (mục 'The Producer'/'Efficiency', 2011).",
+      "how": "Kafka chọn pull: consumer gọi poll() theo nhịp của chính nó, giữ toàn quyền tốc độ — xử lý chậm thì tự khựng lại chứ không bị đè, rebalance cũng dễ vì consumer tự kiểm soát lúc join và commit offset. Broker không đẩy ngay mà đợi đến long.poll.timeout.ms hoặc khi lô đạt min.bytes mới trả về, vừa batching vừa tránh poll rỗng; latency chịu thêm một vòng poll, đổi lại consumer có thể là batch job đọc rất chậm mà không phá broker.",
+      "related": [
+        "Apache Kafka",
+        "Backpressure & rate shaping",
+        "Consumer rebalance (Kafka consumer group)",
+        "Competing consumers"
+      ]
+    },
+    {
+      "term": "Event time vs processing time & watermark (thời gian sự kiện vs thời gian xử lý)",
+      "aliases": [
+        "event time",
+        "processing time",
+        "watermark",
+        "thời gian sự kiện",
+        "thời gian xử lý"
+      ],
+      "level": "advanced",
+      "domain": "Messaging & Bất đồng bộ",
+      "problem": "App ghi event kèm thời gian xảy ra (event time), nhưng Flink/Kafka Streams nhận message theo thời gian đến (processing time); mạng chậm, retry, producer batching khiến event cũ đến muộn vài phút. Tính 'doanh thu 5 phút qua' theo processing time thì số liệu lệch với thực tế, còn window theo event time mà đóng cứng thì bỏ sót event trễ.",
+      "origin": "Watermark trong streaming engine — Tyler Akidau, 'Streaming 101 & 102', các bài của Google Dataflow (2015); triển khai trong Apache Flink, Kafka Streams (timestamp extractor).",
+      "how": "Window theo event time kèm watermark: watermark = max(event time đã thấy) − boundedOutOfOrderness, nó là cam kết 'không còn event cũ hơn mốc này'; Flink đóng window khi watermark vượt biên cửa sổ, event trễ sau watermark rơi vào side output hoặc được nhận lại trong allowedLateness. Kafka Streams làm tương tự qua timestamp extractor và punctuator bắn watermark định kỳ, giúp kết quả aggregate đúng thứ tự thực tế thay vì thứ tự đến.",
+      "related": [
+        "Stream processing vs batch",
+        "Apache Kafka",
+        "Window function (OVER clause, PARTITION BY, ROW_NUMBER, RANK, running total)",
+        "ISO 8601 & timezone handling (lưu UTC, DST)"
+      ]
+    },
+    {
+      "term": "Schema Registry (quản lý schema message, Confluent/Avro)",
+      "aliases": [
+        "schema registry",
+        "Confluent Schema Registry",
+        "Avro schema registry"
+      ],
+      "level": "intermediate",
+      "domain": "Messaging & Bất đồng bộ",
+      "problem": "Producer đổi payload (thêm field, đổi tên trường) thì consumer cũ parse fail hàng loạt, và contract drift lặng lẽ: dev thêm field không báo ai, consumer vỡ lúc 2h sáng khi message mới về. Message qua Kafka không kèm schema nên consumer không biết format, hai đội tự thỏa thuận bằng tay thì rồi cũng lệch.",
+      "origin": "Confluent Schema Registry — ra mắt cùng Confluent Platform 1.0 (2014), kế thừa kinh nghiệm vận hành Avro/Kafka tại LinkedIn.",
+      "how": "Service riêng giữ schema có version; producer đăng ký schema lúc khởi động, message ghi kèm magic byte + 4-byte schema id ở đầu payload, consumer fetch schema theo id về cache local rồi deserialize. Kiểm tra compatibility (BACKWARD/FORWARD/FULL) ngay lúc đăng ký chặn breaking change từ gốc; thêm field với default value là an toàn, xóa field với default cũng ok, đổi kiểu field là break.",
+      "related": [
+        "Serialization formats (JSON/Protobuf/MessagePack/Avro, binary vs text)",
+        "Expand-contract (database migration trong deploy)",
+        "Consumer rebalance (Kafka consumer group)",
+        "Apache Kafka"
+      ]
+    },
+    {
+      "term": "Database per service (mỗi service một DB riêng, shared-database anti-pattern)",
+      "aliases": [
+        "database per service",
+        "shared database anti-pattern",
+        "mỗi service một DB riêng"
+      ],
+      "level": "intermediate",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Khi tách monolith, giữ chung một database là coupling điểm thật: service A đổi schema bảng orders thì service B cùng đọc bảng đó vỡ, mọi migration phải thương lượng giữa các team, một query chậm của B ngốn CPU pool chung kéo A xuống theo. DB chung nghĩa là không bao giờ có deploy độc lập.",
+      "origin": "Martin Fowler, microservices pattern catalog; Sam Newman, 'Building Microservices' (2014); Chris Richardson, microservices.io.",
+      "how": "Mỗi service sở hữu schema riêng, service khác muốn dữ liệu thì gọi API hoặc tiêu thụ event, không đọc thẳng DB của nhau. Lộ trình chuyển đổi: tách theo bounded context, cho mỗi service vùng bảng riêng trong cùng database trước rồi tách vật lý dần; bảng lookup ít biến đổi (reference data) có thể ở lại shared DB, phần còn lại chuẩn bị sẵn saga và outbox cho nhất quán cuối cùng, vì transaction xuyên service không còn tồn tại.",
+      "related": [
+        "Microservices",
+        "Bounded Context",
+        "Saga",
+        "Transactional outbox"
+      ]
+    },
+    {
+      "term": "Hash function & collision resistance (hàm băm và kháng va chạm)",
+      "aliases": [
+        "hash function",
+        "collision resistance",
+        "SHA-2",
+        "SHA-3",
+        "MD5",
+        "SHA-1",
+        "birthday attack",
+        "hàm băm một chiều"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Khi lưu mật khẩu, hệ thống không được giữ plaintext nhưng cũng không thể mã hóa hai chiều, vì lộ key là lộ toàn bộ. Cần một phép biến đổi một chiều: cùng input luôn ra cùng output, còn tìm hai input khác nhau cho cùng output là bất khả thi về mặt tính toán. MD5 bị phá va chạm từ 2004, SHA-1 từ 2017, nên không còn dùng cho safety-critical hashing.",
+      "origin": "Merkle, Secrecy, Authentication, and Public Key Systems (1979); NIST FIPS 180-4 (SHA-2) và FIPS 202 (SHA-3); SHAttered (CWI và Google, 2017).",
+      "how": "Hàm băm ánh xạ dữ liệu độ dài bất kỳ thành digest cố định, SHA-256 ra 256 bit. Kháng va chạm dựa trên birthday bound: tìm cặp đụng nhau trong không gian n bit cần khoảng 2^(n/2) phép thử, nên SHA-1 (80 bit) đã bị phá còn SHA-256 (128 bit) vẫn ngoài tầm với. Vì thế checksum và HMAC dùng SHA-2/SHA-3; mật khẩu không dùng băm SHA trần mà bắt buộc qua bcrypt/Argon2 có salt.",
+      "related": [
+        "HMAC",
+        "password hashing",
+        "rainbow table"
+      ]
+    },
+    {
+      "term": "Encryption at rest vs in transit (mã hóa khi lưu trữ và khi truyền)",
+      "aliases": [
+        "encryption at rest",
+        "encryption in transit",
+        "mã hóa dữ liệu lưu trữ",
+        "mã hóa đường truyền",
+        "disk encryption",
+        "TLS"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Backup database chứa PII upload lên object storage không mã hóa, kẻ đọc được bucket là đọc được toàn bộ dữ liệu, dù mọi request tới API đều qua TLS. Volume đã mã hóa nhưng kết nối nội bộ giữa hai datacenter vẫn đi HTTP thuần. Dữ liệu nằm yên và dữ liệu đang di chuyển có hai rủi ro khác nhau nên cần hai cơ chế riêng.",
+      "origin": "NIST SP 800-57 Part 1 (quản lý khóa); mô hình envelope encryption của AWS KMS và Google Cloud KMS.",
+      "how": "At rest dùng mã hóa volume (LUKS, EBS encryption) hoặc field-level với envelope encryption: DEK mã hóa dữ liệu, KEK trong KMS/HSM bọc DEK. In transit dùng TLS 1.2+ với certificate hợp lệ, hạ cấp chuẩn khi proxy chặn TLS tore-encrypt. Chuẩn bị ít nhất là disk/DB/backup được mã hóa và mọi hop từ client qua LB tới origin đều TLS.",
+      "related": [
+        "HTTPS",
+        "KMS & envelope encryption (KMS, HSM, DEK/KEK)",
+        "TLS handshake",
+        "certificate"
+      ]
+    },
+    {
+      "term": "Path traversal / arbitrary file read (đọc file tùy ý qua đường dẫn)",
+      "aliases": [
+        "path traversal",
+        "directory traversal",
+        "file read",
+        "LFI",
+        "local file inclusion",
+        "chèn đường dẫn"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Endpoint trả về nội dung file theo tham số, ví dụ PUT /api/avatar?path=uploads/1.png, nối trực tiếp filename vào root thư mục để đọc. Attacker truyền ../../etc/passwd hoặc %2e%2e%2f khiến server đọc được file nhạy cảm bất kỳ, kể cả thì file cấu hình chứa secret trong container image.",
+      "origin": "OWASP Top 10 A03:2021 (Injection); CWE-22 (Improper Limitation of a Pathname).",
+      "how": "Validate mọi input là đường dẫn: resolve đường dẫn bằng path.resolve và kiểm tra prefix thực tế, chứ không chỉ chuẩn hóa chuỗi, vì ký tự encoded như %2e vẫn decode trước khi dùng. Cách chắc chắn hơn là không nhận đường dẫn từ client, map id/ten file vào bảng ghi trước, hoặc lưu file vào object store rồi phát qua presigned URL.",
+      "related": [
+        "SSRF",
+        "Command injection",
+        "IDOR"
+      ]
+    },
+    {
+      "term": "DDoS & mitigation (tấn công từ chối dịch vụ phân tán)",
+      "aliases": [
+        "DDoS",
+        "distributed denial of service",
+        "reflection attack",
+        "amplification attack",
+        "L7 flood",
+        "WAF",
+        "blackhole"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Một service đơn lẻ luôn thua trước lượng request khổng lồ: attacker dùng botnet đánh thẳng IP server, hoặc lợi dụng server DNS/NTP mở để phản hồi gấp 50-100 lần băng thông gửi đi (amplification). NFT0 flood SYN chặn bảng kết nối, trong khi L7 flood bắn request tưởng như hợp lệ vào endpoint đắt tiền nhất. Phòng thủ tại một lớp không bao giờ đủ.",
+      "origin": "US-CERT tài liệu về DNS/NTP amplification; RFC 4732 (Internet Denial of Service).",
+      "how": "Phòng thủ phân tầng: CDN/WAF hấp thụ trước cho L7 bằng rate limiting và challenge (JS challenge, CAPTCHA), nhưng chúng đỡ được lượng network tuyệt đối. Anti-DDoS scrubbing của ISP/hosting chuyển hướng qua blackhole hoặc gói bỏ gói tin lạ, rate limiting ở từng lớp và autoscaling chặn sụp đổ. Quan trọng nhất là giảm amplification surface: đóng DNS open resolver, rate limit phản hồi SYN-ACK và giới hạn kích thước payload.",
+      "related": [
+        "SYN flood & SYN cookies",
+        "Rate limiting / login throttling",
+        "Load Shedding"
+      ]
+    },
+    {
+      "term": "Session fixation & session hijacking (đánh cắp và dựng sẵn session ID)",
+      "aliases": [
+        "session fixation",
+        "session hijacking",
+        "session ID trong URL",
+        "regenerate session ID",
+        "cookie theft"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Attacker có thể gửi cho nạn nhân một link chứa session ID đã biết trước (ví dụ ?sid=abc123). Nếu server nhận giá trị này làm session hợp lệ và không đổi sau khi login, nạn nhân đăng nhập xong, attacker dùng đúng sid đó truy cập tài khoản. Dạng phổ biến hơn ngày nay là đánh cắp cookie qua XSS hoặc sniff trên mạng không mã hóa.",
+      "origin": "OWASP Session Management Cheat Sheet; CWE-384 (Session Fixation), CWE-352.",
+      "how": "Khi login thành công, phải regenerate session ID hoàn toàn mới (session_regenerate_id, hoặc tạo token mới trong Redis) và chấm dứt session cũ, không bao giờ chấp nhận session ID do client chỉ định khi chưa có session. Cookie chứa session đặt HttpOnly, Secure, SameSite=Lax, và luôn qua HTTPS để chống đọc và bắt qua mạng. Ngoài ra, gắn session vào một binding không thể giả mạo, ví dụ fingerprint client hoặc chỉ chấp nhận session từ cùng IP/xử lý bất thường bằng invalidate và yêu cầu login lại.",
+      "related": [
+        "Cookie vs session token",
+        "HttpOnly & Secure cookie flags (cookie hardening)",
+        "XSS"
+      ]
+    },
+    {
+      "term": "HttpOnly & Secure cookie flags (cookie hardening)",
+      "aliases": [
+        "HttpOnly",
+        "Secure flag",
+        "cookie flags",
+        "cookie hardening"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Cookie chứa session token và document.cookie đọc được bởi JavaScript. Một lỗ XSS nhỏ (input không escape, thẻ img độc) là attacker lấy trọn session cookie, gửi về server của chúng, chiếm tài khoản mà không cần biết mật khẩu. Cookie cũng có thể bị bắt khi request đi qua HTTP thuần.",
+      "origin": "RFC 6265 (HTTP State Management Mechanism) mục cookie attributes; OWASP Session Management Cheat Sheet.",
+      "how": "HttpOnly làm JavaScript không đọc được cookie qua document.cookie, chỉ trình duyệt mới gửi kèm request, nên ngay cả khi XSS tồn tại, session cookie vẫn an toàn khỏi bị trích xuất. Secure buộc cookie chỉ truyền qua HTTPS, chặn bắt trên đường truyền và dễ dàng bị chuyển hướng MITM. Cả hai flag không tốn gì về hiệu năng, nên mọi cookie phiên bắt buộc đặt, cùng SameSite để cắt đường CSRF.",
+      "related": [
+        "SameSite cookie",
+        "Cookie vs session token",
+        "session-based auth",
+        "XSS"
+      ]
+    },
+    {
+      "term": "Open redirect (redirect mở)",
+      "aliases": [
+        "open redirect",
+        "open redirector",
+        "redirect validation",
+        "whitelist redirect"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Endpoint /login?next=/dashboard hoặc /proxy?url=... nhận đích redirect từ client. Không kiểm tra rằng đích có nằm trong domain mình không. Kẻ tấn công tạo link /login?next=https://evil.com, nạn nhân đăng nhập xong bị chuyển sang trang giả mạo học theo giao diện đăng nhập, nhập lại mật khẩu. Ngoài phishing, open redirect phá hoại luồng OAuth khi redirect_uri không được validate chặt.",
+      "origin": "CWE-601 (URL Redirection to Untrusted Site); RFC 6749 mục 4.1.2.3 (OAuth redirect_uri validation).",
+      "how": "Chỉ redirect tới đường dẫn tương đối hoặc so khớp với allowlist host, không bao giờ chấp nhận URL tuyệt đối bừa bãi; parse bằng URL API rồi so sánh host với domain tin cậy, không dùng regex chuỗi dễ bị bypass qua //evil.com or encoded. Với OAuth, đăng ký trước redirect_uri của client và so khớp chính xác, sai là 400 ngay. Option an toàn hơn là bỏ hẳn tham số redirect, dùng đường dẫn trong session hoặc require khai báo ở config.",
+      "related": [
+        "OAuth 2.0",
+        "PKCE",
+        "SSRF"
+      ]
+    },
+    {
+      "term": "JWT algorithm confusion (nhầm lẫn thuật toán JWT)",
+      "aliases": [
+        "alg=none",
+        "algorithm confusion",
+        "RS256 vs HS256",
+        "JWK confusion",
+        "kid injection",
+        "JWT attack"
+      ],
+      "level": "advanced",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Server verify JWT bằng cách đọc header không kiểm tra thuật toán. Attacker tự ký token với alg=none (bỏ xác thực chữ ký) hoặc đổi RS256 (khóa bất đối xứng, private key bí mật) thành HS256 (khóa đối xứng) và dùng public key của server làm HMAC secret, tự ký token admin hợp lệ. Có cả variant chèn kid để trỏ JWKS hoặc thuật toán khác.",
+      "origin": "CVE-2015-9235 (alg=none); PortSwigger research về algorithm confusion và JWK injection; RFC 7519/7517.",
+      "how": "Verify JWT phải khoá vào thuật toán chính xác: đọc alg trong header, so với danh sách cho phép cố định, sai là reject, không fallback theo tự đoán. Thư viện hiện đại (jose, jsonwebtoken mới) có option algorithms: ['RS256'] bắt buộc truyền, và nên kèm khóa xác định qua kid đã được kiểm tra thuộc JWKS server của mình. Thêm nữa, đừng để server chấp nhận JKU/X5U trỏ URL tùy ý, không fetch JWKS từ internet theo yêu cầu của attacker, và mọi secret HMAC phải có đủ entropy.",
+      "related": [
+        "JWT",
+        "JWKS (JSON Web Key Set)",
+        "digital signature",
+        "OAuth 2.0"
+      ]
+    },
+    {
+      "term": "Security headers & clickjacking (các header phòng thủ trình duyệt)",
+      "aliases": [
+        "security headers",
+        "X-Frame-Options",
+        "frame-ancestors",
+        "X-Content-Type-Options",
+        "nosniff",
+        "Referrer-Policy",
+        "clickjacking"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Backend mặc định không gửi mấy header bảo vệ, trình duyệt nhận file với content-type sai hoặc trang bị nhúng vào iframe của site khác. Clickjacking: attacker đặt trang web của bạn trong iframe trong suốt, lừa nạn nhân click vào nút khác. Người dùng tưởng đang click trò chơi nhưng thực ra là submit form thanh toán lên server của bạn.",
+      "origin": "RFC 7034 (X-Frame-Options); CSP spec (frame-ancestors); CWE-1021 (UI Redress); OWASP Secure Headers Project.",
+      "how": "X-Frame-Options: DENY/SAMEORIGIN hoặc CSP frame-ancestors cấm nhúng trang vào iframe khác domain, frame-ancestors là bản mới hơn và thắng X-Frame-Options khi cả hai có mặt. X-Content-Type-Options: nosniff buộc trình duyệt tôn trọng Content-Type, chặn MIME sniffing dẫn tới thực thi HTML/JS bất ngờ. Referrer-Policy: no-referrer hoặc strict-origin-when-cross-origin ngăn rò rỉ URL chứa token sang bên thứ ba qua header Referer.",
+      "related": [
+        "CSP (Content Security Policy)",
+        "HSTS (HTTP Strict Transport Security)",
+        "CORS vs CSRF"
+      ]
+    },
+    {
+      "term": "PCI DSS & data tokenization (bảo vệ dữ liệu thẻ, tokenization PAN)",
+      "aliases": [
+        "PCI DSS",
+        "PCI compliance",
+        "tokenization",
+        "PAN tokenization",
+        "card data protection"
+      ],
+      "level": "advanced",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Hệ thống thanh toán lưu số thẻ (PAN) trong database để xử lý, hoàn tiền, tái sử dụng. Khi lưu PAN, hệ thống bước vào phạm vi tuân thủ PCI DSS: phải chứng minh kiểm soát toàn diện với dữ liệu thẻ từ khóa mã hóa tới log truy cập. Rò rỉ PAN còn kéo phạt từ acquirer và chi phí forensic. Doanh nghiệp nhỏ không có hạ tầng để đáp ứng hàng trăm requirement.",
+      "origin": "PCI Security Standards Council, PCI DSS v4.0; tokenization guidance (EMVCo Payment Tokenisation).",
+      "how": "Tokenization: thay PAN bằng token ngẫu nhiên đủ dài (không phải mã hóa), PAN thật chỉ nằm trong vault/HSM, hệ thống nghiệp vụ chỉ thao tác token. Nhờ vậy phạm vi PCI (CDE) thu hẹp tới vault và các hệ thống nối trực tiếp, còn ứng dụng dùng token nằm ngoài phạm vi; token không có giá trị ngoài môi trường của bạn nên lộ cũng không lộ thẻ. Càng ít hệ thống chạm PAN thật càng rẻ để audit và ít bề mặt tấn công hơn.",
+      "related": [
+        "KMS & envelope encryption (KMS, HSM, DEK/KEK)",
+        "Secrets in runtime",
+        "TLS/SSL"
+      ]
+    },
+    {
+      "term": "Dependency confusion & typosquatting (tấn công registry package)",
+      "aliases": [
+        "dependency confusion",
+        "typosquatting",
+        "package hijack",
+        "internal package attack",
+        "registry attack"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Package nội bộ có tên trùng package public nhưng tồn tại ở registry nội bộ. Attacker upload package cùng tên lên npm public với version cao hơn; build server cấu hình registry tìm theo thứ tự nhận package malicious thay vì bản nội bộ. Typosquatting tương tự: package tên gần giống thư viện nổi tiếng, ví dụ lodash thay vì lodash, chứa code độc đánh cắp env var.",
+      "origin": "Alex Birsan, Dependency Confusion (2021); nghiên cứu NorthStar về typosquatting trong npm; CWE-477.",
+      "how": "Cấu hình registry nội bộ theo kiểu scope hoặc đúng chỗ: npm package.json dùng @scope/name riêng nội bộ, khoá registry trong config và chặn scope phạm vi public; trong CI, luôn dùng lockfile và install với registry chỉ trỏ internal mirror. Cả hai tool OSS (deps.dev, Socket) quét package mới khi vào build. Trong runtime, env var và secret không nên tồn tại trong code/package để kể cả khi bị đánh cắp, thiệt hại bị giới hạn.",
+      "related": [
+        "Lockfile & deterministic dependency resolution (package-lock.json, go.sum, Cargo.lock)",
+        "Supply chain security (SBOM, SLSA, dependency scanning)",
+        "Secrets in runtime"
+      ]
+    },
+    {
+      "term": "Account enumeration (phát hiện tài khoản tồn tại)",
+      "aliases": [
+        "account enumeration",
+        "user enumeration",
+        "username enumeration"
+      ],
+      "level": "basic",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "API trả 'Mật khẩu không đúng' khi email đăng ký nhưng 'Tài khoản không tồn tại' khi email không có. Attacker quét danh sách email vào /login, /register, /forgot-password, so sánh response và tự xây danh sách tài khoản hợp lệ, phục vụ phishing nhắm đúng, credential stuffing và spam. Chỉ cần khác biệt nhỏ ở status code, message hoặc thời gian phản hồi cũng đủ lộ.",
+      "origin": "OWASP Testing Guide, Testing for Account Enumeration; CWE-204 (Observable Response Discrepancy).",
+      "how": "Đồng bộ phản hồi mọi trạng thái: trả message và status code giống hệt nhau cho email tồn tại/không tồn tại trên login, register, forgot-password. Trả lời chung như 'Nếu tài khoản tồn tại, bạn sẽ nhận email' và về phản hồi dùng generic 'Thông tin đăng nhập không đúng'. Bù lại, thêm rate limit, lockout và log để bảo vệ phía sau, và đừng lộ userId hoặc email trong URL/body khi không cần thiết.",
+      "related": [
+        "brute force + rate limiting",
+        "authentication vs authorization",
+        "Credential stuffing",
+        "Rate limit headers (429 + Retry-After + RateLimit)"
+      ]
+    },
+    {
+      "term": "ReBAC & policy engine (kiểm soát truy cập theo quan hệ)",
+      "aliases": [
+        "ReBAC",
+        "Relationship-Based Access Control",
+        "Zanzibar",
+        "OpenFGA",
+        "OPA",
+        "Rego",
+        "Cedar",
+        "policy engine"
+      ],
+      "level": "advanced",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "RBAC boomen khi quan hệ truy cập phức tạp: ai có quyền truy cập file trong folder của team mà team thuộc organization? Cần kiểm tra chuỗi quan hệ 'user là member của team, team sở hữu folder, folder chứa file'. Viết logic này rải rác trong từng service dẫn tới lệch nhau và lỗ hổng phân quyền. Zanzibar của Google sinh ra để trả lời câu 'user X có quyền Y với object Z' trên phạm vi tỷ object với độ trễ thấp.",
+      "origin": "Google Zanzibar paper (2019); OpenFGA (CNCF); OPA (CNCF, Rego); Cedar (AWS).",
+      "how": "ReBAC mô hình hóa quyền thành đồ thị quan hệ: check thực thi qua câu hỏi tuple (user, relation, object) tính toán trên graph, hỗ trợ quan hệ gián tiếp qua nhóm, điều kiện thuộc tính. Zanzibar dùng bảng tuple thống nhất, snapshot ghi lại và check song song qua nhiều replica; OpenFGA là implement mã nguồn mở theo paper. OPA/Cedar đi hướng khác: policy như code, quyết định ① eval request context qua policy language (Rego, Cedar) nên tách logic phân quyền khỏi service, dùng chung giữa nhiều hệ thống.",
+      "related": [
+        "ABAC",
+        "RBAC",
+        "authorization code",
+        "permission model"
+      ]
+    },
+    {
+      "term": "HTTP request smuggling (lẩn lộn request qua proxy)",
+      "aliases": [
+        "HTTP request smuggling",
+        "TE.CL",
+        "CL.TE",
+        "desync attack",
+        "front-end desync",
+        "back-end desync"
+      ],
+      "level": "advanced",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Khi có proxy/reverse proxy (nginx, CDN) đứng trước origin, hai phần mềm parse độ dài của request khác nhau. Attacker gửi request có cả Content-Length và Transfer-Encoding, hoặc hai header trùng: front-end đọc theo một chuẩn, back-end đọc theo chuẩn kia, tạo request lọt vào request sau của nạn nhân. Hậu quả: truy cập vượt auth, đầu độc cache, đánh cắp request của user khác.",
+      "origin": "PortSwigger, HTTP Request Smuggling research (James Kettle, 2019); CWE-444.",
+      "how": "Phòng thủ chủ yếu là chuẩn hóa ở biên: proxy phải reject request có đồng thời Content-Length và Transfer-Encoding, và TE phải chỉ là 'chunked' với trình tự kết thúc đúng. Chuẩn hóa lại header (chuyển về dạng chuẩn, xóa header trùng) ngay tại tầng đầu, và đỡ phải xử lý front-end/back-end theo hai chuẩn khác nhau. HTTP/2 làm giảm mặt tấn công vì không dùng Content-Length text để phân định frame, nhưng backend vẫn phải xử lý hạ cấp H2 sang H1 cẩn thận.",
+      "related": [
+        "HTTP/1.1",
+        "HTTP/2",
+        "Proxy (forward/reverse)",
+        "CDN"
+      ]
+    },
+    {
+      "term": "Secret scanning & CI gate (quét secret khi commit)",
+      "aliases": [
+        "secret scanning",
+        "gitleaks",
+        "trufflehog",
+        "detect-secrets",
+        "pre-commit scan"
+      ],
+      "level": "intermediate",
+      "domain": "Bảo mật & Xác thực",
+      "problem": "Developer commit file .env hoặc API key vào github một lần, secret nằm vĩnh viễn trong lịch sử git dù có xóa sau đó. Rotate key thì đắt và chậm, nhưng không rotate nghĩa là kẻ quét GitHub công khai có thể dùng key của bạn từ hôm sau. Không có gate, secret sống trong lịch sử nhiều năm trước khi ai nhận ra.",
+      "origin": "gitleaks (GitHub-verified scanner), trufflehog (chỉ phát hiện secret thật), detect-secrets (Yelp); GitHub secret scanning.",
+      "how": "Quét ở ít nhất ba lớp: các tool như gitleaks/detect-secrets kiểm tra pre-commit/pre-push cục bộ, và quét toàn bộ lịch sử trong CI/phân tích repo định kỳ. Trufflehog chỉ báo secret đã verify bằng cách kiểm tra live, giảm false positive. Nếu phát hiện secret đã lộ, xem đã dùng ở đâu và rotate ngay, không chỉ sửa commit, xóa history. Gắn vào CI dưới dạng step thì lỗi secret mới fail build và không bao giờ lên remote.",
+      "related": [
+        "Secrets in runtime",
+        "secrets management",
+        "Supply chain security (SBOM, SLSA, dependency scanning)",
+        "API key"
+      ]
+    },
+    {
+      "term": "Load average & run queue (loadavg, CPU saturation, process state)",
+      "aliases": [
+        "loadavg",
+        "CPU saturation",
+        "run queue",
+        "process state",
+        "saturation"
+      ],
+      "level": "intermediate",
+      "domain": "Hiệu năng",
+      "problem": "uptime ai cũng đọc nhưng load average thường bị hiểu sai: máy 4 core load 4.0 không đồng nghĩa đầy tải. Linux cộng cả tiến trình D-state chờ I/O vào loadavg, nên đĩa chậm hay NFS treo đẩy load cao trong khi CPU rảnh, dashboard đỏ nhưng không chỉ ra nghẽn ở đâu. Không đọc được run queue thì không tách được CPU saturation khỏi I/O wait.",
+      "origin": "Kernel Linux, fs/proc/loadavg; Brendan Gregg, Linux Load Averages: Solving the Mystery (2017)",
+      "how": "Load average là trung bình trượt 1/5/15 phút của độ dài run queue: số tiến trình đang chạy cộng số đang chờ CPU. Chuẩn đoán: so load với số core (trên Linux đã premultiplied), xem xu hướng 1 phút so với 15 phút để phân biệt spike nhất thời với tải kéo dài, và đối chiếu vmstat cột r (run queue) với %steal để loại noisy neighbor trước khi kết luận CPU nghẽn.",
+      "related": [
+        "Profiling: CPU/heap, flame graph",
+        "Queueing Theory Basics (M/M/1)",
+        "CPU scheduling (CFS, preemption, priority inversion)",
+        "cgroup limits, CPU throttling & noisy neighbor"
+      ]
+    },
+    {
+      "term": "Single point of failure (SPOF, điểm lỗi đơn lẻ)",
+      "aliases": [
+        "SPOF",
+        "điểm lỗi đơn lẻ"
+      ],
+      "level": "basic",
+      "domain": "Bền vững & Chị tải",
+      "problem": "Hệ thống 50 service chạy tốt, nhưng một volume EBS đơn lẻ gắn vào máy chủ Postgres chính chết thì toàn bộ API sập; 99.99% uptime tính từ mỗi tầng không còn nghĩa khi một nút gỗ chịu mọi failover. Kiến trúc vẽ kiểu stateful node giữa hai load balancer che giấu điểm chết đó.",
+      "origin": "SRE Book, Google (2016), phần thiết kế chịu lỗi",
+      "how": "SPOF là thành phần mà khi hỏng sẽ lấy xuống toàn bộ hệ thống, không có đường dự phòng. Xử lý: liệt kê mọi đường dữ liệu từ client đến DB, tìm nút chỉ xuất hiện một lần (một broker, một replica, một router, một switch), rồi thêm dự phòng hoặc chấp nhận rủi ro có cam kết. Tiêu chí kiểm tra: giết từng nút trong diagram và xem còn đường nào phục vụ request.",
+      "related": [
+        "Failover",
+        "Redundancy/N+1 Redundancy",
+        "Availability Math (Five Nines)",
+        "Multi-Region / Active-Active"
+      ]
+    },
+    {
+      "term": "Fail-open vs Fail-closed (fail open, fail closed, fail-safe)",
+      "aliases": [
+        "fail open",
+        "fail closed",
+        "fail-safe"
+      ],
+      "level": "intermediate",
+      "domain": "Bền vững & Chị tải",
+      "problem": "Khi Redis chứa rate limiter chết, mỗi request không kiểm tra được giới hạn: cho qua (fail-open) thì bot đập thẳng vào backend, chặn lại (fail-closed) thì service tự cúp vì dependency phụ. Nhóm vận hành phải chọn một trong hai trước khi sự cố, không phải lúc 2h sáng. Theo mặc định của thư viện mà không cân nhắc là lỗi thiết kế.",
+      "origin": "NIST SP 800-160; thuật ngữ fail-safe/fail-secure trong kỹ thuật an toàn",
+      "how": "Fail-open trả về kết quả mặc định chấp nhận được khi dependency lỗi (cho request đi qua, phục vụ cache cũ); fail-closed từ chối yêu cầu để bảo toàn an toàn hoặc nhất quán. Quyết định dựa trên chi phí hai phía: false accept (rò rỉ dữ liệu, mất tiền) so với false reject (mất request). Ví dụ: fail-open cho cache, fail-closed cho authorization service, ghi rõ vào config và test cả hai nhánh bằng fault injection.",
+      "related": [
+        "Circuit Breaker",
+        "Fallback",
+        "Graceful Degradation",
+        "Failover"
+      ]
+    },
+    {
+      "term": "Correlated failure & common-mode failure (lỗi tương quan, common cause failure)",
+      "aliases": [
+        "lỗi tương quan",
+        "common cause failure",
+        "common-mode failure"
+      ],
+      "level": "intermediate",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Chạy 3 replica trên 3 AZ vẫn sập cùng lúc khi cả 3 dùng chung một thư viện cũ bị bug OOM, chung một phiên bản AMI, hoặc chung một upstream. Giả định nhân bản là độc lập sai: nếu các bản sao chết vì cùng nguyên nhân thì redundancy không tăng availability, chỉ tăng hóa đơn. Mọi tính toán N+1 dựa trên xác suất hỏng độc lập vẽ lại hoàn toàn khi lỗi có tương quan.",
+      "origin": "NUREG-0492 (FMEA); IEEE 3806 — phân tích common cause failure",
+      "how": "Phân biệt hai nguồn: correlated failure là lỗi lan theo đường phụ thuộc chung (shared dependency, cùng bản deploy, cùng instance type), common-mode là một root cause duy nhất giết mọi bản sao (cùng image, cùng config). Giảm bằng đa dạng hóa: staggered deploy, canary với version khác nhau, đa vendor, và rà lịch sử incident xem các node có chết cùng cụm thời gian không. Bài tập định kỳ: vẽ ma trận replica x dependency, tìm ô lặp.",
+      "related": [
+        "Cascading Failures",
+        "Redundancy/N+1 Redundancy",
+        "Chaos Engineering",
+        "Availability Math (Five Nines)"
+      ]
+    },
+    {
+      "term": "Game Day (game day exercise, gameday, incident drill)",
+      "aliases": [
+        "game day exercise",
+        "gameday",
+        "incident drill",
+        "diễn tập sự cố"
+      ],
+      "level": "advanced",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Runbook viết xong để tủ, tới lúc thật sự mất một AZ thì người trực làm theo từng bước nhưng bước 3 không khớp môi trường hiện tại, mất 40 phút thay vì 20 phút dự kiến. Không bao giờ chạm tới đường failover trong môi trường thật nghĩa là đường đó chỉ tồn tại trên slide. Cần bằng chứng đội vận hành thao tác được quy trình dưới áp lực, trong môi trường không giả định.",
+      "origin": "Google SRE Book, chương DiRT (Disaster Recovery Testing); AWS Well-Architected Framework, game days",
+      "how": "Game Day là diễn tập có kịch bản xác định, không phải thả hỗn loạn: định mục tiêu đo được (RTO), chọn một kịch bản (mất một region, mất nhà cung cấp DNS, quá tải gấp 3 lần), chạy trong staging hoặc production phạm vi hẹp, có người điều phối và ghi lại từng lệnh. Khác Chaos Engineering ở chỗ tập trung vào quy trình và con người, thay vì truy tìm lỗi mới; kết thúc bằng postmortem và cập nhật runbook theo những chỗ kẹt thật.",
+      "related": [
+        "Blameless Postmortem",
+        "Chaos Engineering",
+        "Fault Injection",
+        "Runbook"
+      ]
+    },
+    {
+      "term": "Gray failure & metastable failure (gray failure, grey failure, gray zone, metastability)",
+      "aliases": [
+        "gray failure",
+        "grey failure",
+        "gray zone",
+        "metastability"
+      ],
+      "level": "advanced",
+      "domain": "Độ tin cậy & Quan sát được",
+      "problem": "Node không chết hẳn: vẫn trả response nhưng chậm gấp 10, health check vẫn 200 vì endpoint /health không chạy qua cùng đường I/O đang nghẽn. Load balancer thấy ok nên tiếp tục gửi traffic vào, hàng đợi dài ra, các node khỏe bị kéo xuống vì phải chờ timeout, hệ thống chuyển sang trạng thái xấu tự duy trì ngay cả sau khi nguyên nhân gốc biến mất. Đây là lớp lỗi monitoring chuẩn không bắt được.",
+      "origin": "Huang et al., Gray Failure: The Achilles' Heel of Cloud-Scale Systems (HotOS 2017); Kelly, Fundamentals of Metastable Failures (2020)",
+      "how": "Gray failure là trạng thái giữa sống và chết: process còn chạy nhưng phục vụ kém. Metastability là hệ thống rơi vào vòng lặp tự củng cố: client retry làm server quá tải, server chậm làm client retry thêm, vòng lặp tồn tại ngay cả khi trigger ban đầu đã hết. Đối phó: health check phải chạy qua đúng đường phục vụ request (deep check), timeout và retry có tổng giới hạn, load shedding chủ động, và thiết kế để recovery nhanh (restart nút xấu) thay vì cố xử lý trong trạng thái suy thoái.",
+      "related": [
+        "Cascading Failures",
+        "Load Shedding",
+        "Tail latency (độ trễ đuôi, tail latency at scale, p99 latency, latency tail)",
+        "Alert Fatigue"
+      ]
+    },
+    {
+      "term": "Off-CPU analysis (off-CPU time, async profiling, off-CPU flame graph)",
+      "aliases": [
+        "off-CPU time",
+        "async profiling",
+        "off-CPU flame graph"
+      ],
+      "level": "advanced",
+      "domain": "Hiệu năng",
+      "problem": "ON-CPU profile chỉ ra hàm chiếm CPU, nhưng service chậm thường dành phần lớn thời gian để chờ: chờ lock, chờ I/O, chờ network response. Profiler lấy mẫu stack khi thread đang chạy hoàn toàn mù với khoảng thời gian này, flame graph đẹp mà p99 vẫn cao vì nguyên nhân nằm giữa các mẫu. Thời gian chờ này chiếm phần lớn latency request nhưng không xuất hiện ở profile thường.",
+      "origin": "Brendan Gregg, Off-CPU Analysis (2015); BCC/offcputime",
+      "how": "Off-CPU analysis đo thời gian thread bị treo kèm lý do chờ: bật tracing trên sự kiện chặn (sched-out, mutex lock, fsync, sock wait) rồi gộp theo stack và trạng thái chờ thành off-CPU flame graph, trục x là thời gian chờ thay vì CPU cycles. Ghép cùng on-CPU profile để phủ toàn bộ thời gian request. Công cụ: Linux sched_switch có stack (kernel 5.8+), BCC offcputime, profiler eBPF-based.",
+      "related": [
+        "Profiling: CPU/heap, flame graph",
+        "Context switch cost",
+        "strace (syscall-level debugging)",
+        "Continuous profiling (always-on profiling, production profiler, Parca/Pyroscope)"
+      ]
+    },
+    {
+      "term": "perf / Linux perf_events (perf record, perf top, perf stat)",
+      "aliases": [
+        "perf record",
+        "perf top",
+        "perf stat",
+        "perf_events"
+      ],
+      "level": "advanced",
+      "domain": "Hiệu năng",
+      "problem": "Production không cài được profiler thương mại, hay gặp code Java/Python chậm mà không biết bắt đầu từ đâu. Mọi bản phân phối Linux đều có sẵn profiler đầy đủ trong /usr/bin nhưng ít người dùng tới: hardware counters (cycles, cache misses, branch mispredictions) và kernel stack trace không cần cài thêm gì, chạy được ngay trên máy đang cháy mà không cần restart service.",
+      "origin": "perf_event_open(2), kernel Documentation/accounting/perf; Brendan Gregg, perf Examples (2014)",
+      "how": "perf_events đọc hardware PMU và software events qua syscall perf_event_open: perf stat cho counter tóm tắt (IPC, cache miss rate, context switch), perf record lấy mẫu stack ở 99Hz trong vài giây, perf report/script dựng flame graph để tìm hàm nóng. Trên production cần kernel.perf_event_paranoid ≤ 1 và quyền profile; thêm --call-graph dwarf để có stack đầy đủ trên JVM/Node. Chi phí sampling ở 99Hz rơi vào 1-2% CPU, chấp nhận được khi điều tra sự cố.",
+      "related": [
+        "eBPF & bpftrace (kernel tracing an toàn)",
+        "Profiling",
+        "strace (syscall-level debugging)",
+        "Context switch cost"
+      ]
+    },
+    {
+      "term": "Cache replacement policy: LRU & LFU (cache eviction, bộ đệm LRU/LFU)",
+      "aliases": [
+        "cache eviction",
+        "bộ đệm LRU",
+        "bộ đệm LFU"
+      ],
+      "level": "basic",
+      "domain": "Caching & Hiệu năng",
+      "problem": "Cache có dung lượng hữu hạn, khi đầy phải đá ra một entry, chọn nhầm entry sẽ hạ hit ratio: giữ key nóng cũ thì truy cập thường xuyên phải xuống DB, giữ key vừa đọc một lần thì phí chỗ. Redis maxmemory-policy, Memcached LRU, buffer pool của Postgres, CDN edge cache đều phải trả lời cùng một câu hỏi: đá ai ra?",
+      "origin": "Belady 1966 (MIN, optimal eviction); Redis docs, eviction policies; PostgreSQL buffer manager (clock sweep)",
+      "how": "LRU đá entry lâu nhất chưa được truy cập: cài bằng doubly linked list + hash map, O(1) mỗi thao tác, nhưng thua trước scan một lần, một batch đọc key lạ đẩy sạch key nóng. LFU đá entry ít được dùng nhất theo counter tần suất, hợp access pattern lệch kiểu Zipf, cần aging để key nóng cũ hạ nhiệt. Redis 4.0+ dùng approximate LRU (lấy mẫu 5 key rồi đá) để né chi phí duy trì list đúng; buffer pool Postgres chạy clock sweep.",
+      "related": [
+        "Cache hit ratio",
+        "Cache stampede / thundering herd",
+        "Cache",
+        "In-memory cache"
+      ]
+    },
+    {
+      "term": "Power-of-two-choices (P2C, power of two choices, least-loaded)",
+      "aliases": [
+        "P2C",
+        "power of two choices",
+        "least-loaded"
+      ],
+      "level": "advanced",
+      "domain": "Bền vững & Chị tải",
+      "problem": "Round-robin đều tay nhưng backend không đều: cache miss, GC pause, slow query làm queue ở vài worker phình lên trong khi nút khác rảnh, p99 tụt vì một số ít nút chậm. Đo tải toàn cục cần đồng bộ trạng thái, tốn kém và nhiễu; chọn ngẫu nhiên thuần thì tải lệch chuẩn quanh trung bình, càng ít server càng tệ. Cần thuật toán cân bằng gần tối ưu chỉ dùng thông tin cục bộ.",
+      "origin": "Mitzenmacher, The Power of Two Choices in Randomized Load Balancing (1996); Envoy load balancer docs",
+      "how": "Mỗi request chọn ngẫu nhiên 2 server, đo tải từng cái (inflight requests, độ dài queue, CPU), gửi đến server ít tải hơn. Mitzenmacher chứng minh với n server, phân bố tải về dạng đuôi mũ kép thay vì sai lệch chuẩn của random thuần: chênh lệch tải giữa nút cao nhất và thấp nhất giảm mạnh, chỉ cần 2 lựa chọn là đủ. Envoy và Linkerd triển khai P2C trên số request đang bay, không cần trạng thái toàn cục.",
+      "related": [
+        "Consistent hashing",
+        "Load Balancer (L4/L7)",
+        "Hot key",
+        "Sticky Session"
+      ]
+    },
+    {
+      "term": "Spike test (spike testing, burst test, đột biến tải)",
+      "aliases": [
+        "spike testing",
+        "burst test",
+        "đột biến tải"
+      ],
+      "level": "basic",
+      "domain": "Bền vững & Chị tải",
+      "problem": "Test tải tăng từ từ không phản ánh đời thật: khi bài đăng viral, chiến dịch sale, hoặc webhook partner phát hàng loạt, request tăng gấp 10-30 lần trong vài giây. Autoscaler phản hồi sau 1-3 phút, nên peak thường rơi đúng vào khoảng trước khi scale kịp. Câu hỏi cần trả lời: hệ thống xử lý cú va đập đó ra sao trong cửa sổ vài phút ấy.",
+      "origin": "k6 docs, spike testing; Google SRE Workbook, chương load testing",
+      "how": "Spike test tăng tải đột ngột lên mức định trước (ví dụ 0 lên 10x tải thường trong 10 giây) rồi giữ vài phút, đo lỗi, latency p99 và trạng thái autoscaler, hàng đợi. Mục tiêu là tìm điểm sập trước khi scale kịp: queue có giới hạn không, rate limiter có cắt đúng tầng không, có load shedding không. Kết quả thường dẫn tới quyết định buffer rõ hoặc over-provision tối thiểu cho cửa sổ scale.",
+      "related": [
+        "Load Testing",
+        "Stress Test vs Soak Test",
+        "Autoscaling (Horizontal/Vertical)",
+        "Traffic burst & burst capacity"
+      ]
+    },
+    {
+      "term": "Back-of-the-envelope estimation (ước lượng phong bì, Fermi estimate)",
+      "aliases": [
+        "ước lượng phong bì",
+        "Fermi estimate",
+        "back-of-the-envelope"
+      ],
+      "level": "basic",
+      "domain": "Hiệu năng",
+      "problem": "Câu hỏi mở đầu mọi buổi phỏng vấn system design ('hệ thống này cần bao nhiêu server?') cũng là bài toán mở đầu mọi quyết định kiến trúc thật: chọn event-driven hay gọi đồng bộ, cần cache không, cần shard không. Không có con số ước lượng thì team tranh luận bằng cảm tính và chọn kiến trúc theo sở thích. Nhưng ước lượng sai một bậc độ lớn thì toàn bộ thiết kế tiếp theo sai theo.",
+      "origin": "Greg Ganger & John Ousterhout, Back-of-the-Envelope Calculations (Stanford CS lectures); Jeff Dean, latency numbers",
+      "how": "Phương pháp Fermi: bắt đầu từ giả định đếm được (số user, QPS trung bình, size payload), nhân chia qua các bước rồi làm tròn lên bậc độ lớn gần nhất, không cần chính xác, cần đúng thứ tự. Đối chiếu kết quả với bảng số tham chiếu (100ns RAM, 1ms SSD, 10ms network round-trip) để phát hiện giả định vô lý. Con số ra thường quyết định ngay kiến trúc: 100 QPS không cần cache, 100k QPS thì phải.",
+      "related": [
+        "Latency numbers every programmer should know",
+        "Capacity Planning",
+        "Little's law (định luật Little, L = λW, L=λW, Little's theorem)",
+        "QPS (Queries Per Second)"
+      ]
+    },
+    {
+      "term": "TCP flow control & receive window (sliding window, zero window)",
+      "aliases": [
+        "TCP flow control",
+        "sliding window",
+        "receive window",
+        "zero window",
+        "cửa sổ nhận"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Congestion control điều tiết theo tình trạng đường truyền, nhưng sender gửi nhanh hơn tốc độ xử lý của receiver thì bộ đệm nhận tràn, packet rơi và TCP phải retransmit. Backend xử lý chậm (parse JSON, ghi DB) mà peer vẫn bơm theo cwnd sẽ thấy throughput tụt vì drop chứ không phải vì mạng nghẽn. Sender làm sao biết receiver không ăn kịp để dừng đúng lúc.",
+      "origin": "RFC 793 (1981) định nghĩa window 16-bit; RFC 1323 (1992) thêm Window Scale.",
+      "how": "Mỗi ACK mang receive window: receiver quảng bá số byte còn trống, sender chỉ gửi tối đa min(cwnd, rcv.wnd). Window Scale nhân hệ số lên tối đa 1 GB. Khi bộ đệm đầy, receiver báo zero window, sender ngừng gửi và probe định kỳ bằng segment 1 byte để phát hiện lúc cửa sổ mở lại. Sliding window là cơ chế chung: send window trượt theo ACK, receive window trượt theo dữ liệu đã đọc.",
+      "related": [
+        "TCP congestion control (AIMD)",
+        "TCP retransmission & RTO (fast retransmit, duplicate ACK)",
+        "TCP slow start",
+        "TCP handshake (three-way handshake)"
+      ]
+    },
+    {
+      "term": "IP",
+      "aliases": [
+        "Internet Protocol",
+        "IPv4",
+        "IPv6",
+        "IPv4 vs IPv6 & subnetting (CIDR, private ranges)",
+        "CIDR",
+        "subnetting",
+        "private ranges",
+        "địa chỉ private"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Nhiều mạng ra đời độc lập (Ethernet, Token Ring, X.25), mỗi mạng có cách đặt địa chỉ và định dạng gói riêng nên máy ở mạng này không giao tiếp được với mạng kia; năm 1974 Cerf và Kahn muốn ghép chúng thành một mạng ảo thống nhất (internetwork). Về sau, kho địa chỉ IPv4 cạn kiệt từ 2011 trong khi thói quen backend vẫn xoay quanh /24, dải private 10/8, 172.16/12, 192.168/16; IPv6 128-bit đã có mặt trong VPC, service Kubernetes, egress cloud nhưng nhiều kỹ sư không đọc nổi fe80::1 hay ::1, cũng không biết chia subnet theo prefix thay vì class A/B/C cũ.",
+      "origin": "Vint Cerf & Bob Kahn, 1974; IPv4 RFC 791 (1981); RFC 4291 (IPv6 addressing, 2006); RFC 4632 (CIDR, 2006); RFC 1918 (private ranges, 1996).",
+      "how": "IP cấp địa chỉ toàn cục cho mọi thiết bị và định tuyến từng gói từ nguồn đến đích theo từng hop; IP không đảm bảo gói đến nơi hay đến đúng thứ tự, phần đó để TCP/UDP phía trên lo. Địa chỉ là IP cộng prefix length, ví dụ 203.0.113.0/24 hay 2a00:1450:4001::/48; IPv4 private theo RFC 1918 không được router route ra internet, IPv6 viết bằng 8 nhóm hex, rút gọn chuỗi số 0 liên tiếp bằng ::, private dùng ULA fc00::/7, link-local fe80::/10 tự cấu hình qua SLAAC, thiết kế không có NAT. Subnet chia theo bit prefix, số host IPv4 = 2^(32-prefix) - 2.",
+      "related": [
+        "TCP",
+        "UDP",
+        "DNS",
+        "ARP",
+        "Firewall & security groups (iptables/nftables)",
+        "DNS record types (A/AAAA/CNAME/MX/TXT/SRV/PTR)"
+      ]
+    },
+    {
+      "term": "ICMP (ping/traceroute, TTL, error reporting)",
+      "aliases": [
+        "ICMP",
+        "Internet Control Message Protocol",
+        "ping",
+        "traceroute",
+        "TTL"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "TCP và UDP chỉ vận chuyển dữ liệu giữa hai đầu, không có kênh nào báo mạng chặn, port đóng hay gói đã hết số hop. Khi request timeout, backend chỉ thấy mất kết nối mà không biết packet chết ở đâu. ping và traceroute, công cụ đầu tiên của mọi kỹ sư khi debug network, cần một giao thức nền làm việc đó.",
+      "origin": "RFC 792 (1981).",
+      "how": "ICMP chạy trực tiếp trên IP (protocol 1), không qua TCP hay UDP. Ping dùng Echo Request (type 8) và Echo Reply (type 0). Traceroute gửi UDP tới đích với TTL tăng dần từ 1; mỗi router làm TTL về 0 thì trả Time Exceeded (type 11), lộ ra từng chặng. Destination Unreachable (type 3) code 4 là fragmentation needed, tín hiệu cho Path MTU Discovery.",
+      "related": [
+        "Network diagnostics (ping, traceroute, mtr, dig, tcpdump)",
+        "UDP",
+        "Firewall & security groups (iptables/nftables)",
+        "ARP"
+      ]
+    },
+    {
+      "term": "MTU, MSS & IP fragmentation (Path MTU Discovery)",
+      "aliases": [
+        "MTU",
+        "MSS",
+        "fragmentation",
+        "Path MTU Discovery",
+        "PMTUD",
+        "MSS clamp"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "Ethernet cổ điển chở tối đa 1500 byte mỗi khung. Chèn một tunnel (GRE, IPsec, WireGuard, VXLAN) cộng 30-80 byte header vào, khung chuẩn bỗng vượt 1500, bị fragment hoặc drop. Backend deploy qua VPN thấy throughput tụt, upload treo, mà tcpdump không phát hiện lỗi vì gói chết im lặng ở tầng dưới; sender không biết giới hạn thật để tự điều chỉnh.",
+      "origin": "RFC 1191 (Path MTU Discovery, 1990); RFC 8200 (IPv6, 2017) cấm router fragment; MSS clamp phổ biến trong CPE và VPN client (PPPoE 1492, MSS 1452).",
+      "how": "MSS là payload tối đa của TCP, bằng MTU trừ 40 byte với IPv4, trừ 60 với IPv6. Router hoặc VPN cần MSS clamp: chặn SYN, giảm option MSS (thường về 1360-1400) rồi chuyển tiếp, để sender không bao giờ tạo segment to hơn tunnel chịu được. PMTUD: sender đặt DF=1, router quá nhỏ trả ICMP Fragmentation Needed, sender hạ dần kích thước; IPv6 cấm router fragment, mọi host phải tự PMTUD.",
+      "related": [
+        "TCP",
+        "UDP",
+        "IP",
+        "Network diagnostics (ping, traceroute, mtr, dig, tcpdump)"
+      ]
+    },
+    {
+      "term": "NAT & port forwarding (masquerade, hairpin, CGNAT)",
+      "aliases": [
+        "NAT",
+        "Network Address Translation",
+        "port forwarding",
+        "masquerade",
+        "CGNAT",
+        "hairpin NAT"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "IPv4 không đủ địa chỉ công cộng, nên máy trong LAN sống bằng IP private và ra ngoài qua một thiết bị dịch địa chỉ. Hệ quả cho backend: server trong nhà không nhận được kết nối vào, log thấy toàn IP của NAT thay vì client thật, cloud egress tính tiền theo IP và hàng nghìn pod dùng chung một địa chỉ ra.",
+      "origin": "RFC 1631 (1994); RFC 3022 (traditional NAT, 2001); RFC 6598 (CGNAT, /100.64.0.0/10, 2012).",
+      "how": "NAT giữ bảng ánh xạ và viết lại địa chỉ, port khi gói đi qua. Masquerade là SNAT động, lấy IP của interface ra làm nguồn. Port forwarding ánh xạ một port công cộng vào internal IP:port để lộ dịch vụ sau NAT. Hairpin NAT cho phép client trong LAN gọi public IP của chính router, nhiều thiết bị cũ làm rơi trường hợp này. CGNAT là NAT tầng nhà mạng, khiến rate limit theo IP của service đánh trúng hàng nghìn người dùng cùng lúc.",
+      "related": [
+        "IP",
+        "Firewall & security groups (iptables/nftables)",
+        "Forwarded headers & X-Forwarded-For (client IP sau proxy)",
+        "Port",
+        "SSH (Secure Shell, tunnel/port forwarding)"
+      ]
+    },
+    {
+      "term": "TLS cipher suite & forward secrecy (ECDHE, TLS 1.3 key exchange)",
+      "aliases": [
+        "cipher suite",
+        "forward secrecy",
+        "perfect forward secrecy",
+        "PFS",
+        "ECDHE",
+        "TLS 1.3 key exchange"
+      ],
+      "level": "advanced",
+      "domain": "Mạng & Giao thức",
+      "problem": "Chọn đúng handshake mới là nửa câu chuyện an toàn. RSA key exchange nghĩa là khóa phiên được bọc bằng public key của server: kẻ ghi lại toàn bộ traffic hôm nay, mai lấy được private key thì giải mã được tất cả. Nhiều backend vẫn cấu hình cipher cũ (RC4, CBC) hoặc TLS 1.2 với suite yếu mà không biết rủi ro để lại.",
+      "origin": "RFC 8446 (TLS 1.3, 2018); ECDHE từ RFC 4492 (2006).",
+      "how": "Cipher suite là tổ hợp key exchange + authentication + bulk cipher + MAC, ví dụ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384. ECDHE tạo khóa Diffie-Hellman ephemeral mỗi phiên: private key server chỉ dùng để ký, không khôi phục được session key, traffic ghi lại trước đây trở nên vô dụng. TLS 1.3 thu về 5 suite chuẩn, loại RSA key exchange và CBC, giảm handshake còn 1-RTT, 0-RTT khi resume bằng session ticket.",
+      "related": [
+        "TLS/SSL",
+        "TLS handshake",
+        "HTTPS",
+        "certificate"
+      ]
+    },
+    {
+      "term": "URI vs URL vs URN (cú pháp, path/query/fragment, percent-encoding)",
+      "aliases": [
+        "URI",
+        "URL",
+        "URN",
+        "percent-encoding"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Trong code và log, URL, URI, URN bị dùng lẫn lộn. Hệ quả cụ thể: parser tách nhầm chỗ path kết thúc và query bắt đầu, router không phân biệt được fragment (thứ client xử lý, không bao giờ lên server), chuỗi có dấu hoặc ký tự đặc biệt bị decode sai vì quy ước percent-encoding giữa path và query khác nhau.",
+      "origin": "RFC 3986 (2005), thay RFC 2396 (1998).",
+      "how": "URI là khái niệm bao trùm: URL định vị tài nguyên (scheme://authority/path?query), URN định danh (urn:isbn:0451450523). Cú pháp chuẩn RFC 3986: scheme \":\" hier-part [\"?\" query] [\"#\" fragment]. Ký tự không thuộc unreserved (A-Z a-z 0-9 - . _ ~) phải percent-encode; space trong path là %20, còn trong query có thể là %20 hoặc + tùy chuẩn form. Fragment bị cắt trước khi gửi yêu cầu, nên so khớp log bằng URL đầy đủ có fragment sẽ lệch.",
+      "related": [
+        "HTTP",
+        "HTTP methods semantics",
+        "Content negotiation",
+        "Filtering/sorting query params"
+      ]
+    },
+    {
+      "term": "HTTP Transfer-Encoding & chunked (chunked response, trailer)",
+      "aliases": [
+        "Transfer-Encoding",
+        "chunked",
+        "chunked response",
+        "trailer"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "HTTP/1.1 cần biết trước độ dài body để client biết khi nào hết dữ liệu. Nhưng streaming response (SSE, video, live log), upload lớn hoặc response sinh dần không biết trước kích thước. Gửi Content-Length sai thì client đứng chờ hoặc cắt xén, không gửi thì client không có điểm dừng.",
+      "origin": "RFC 7230 (2014), hiện RFC 9112 (2022).",
+      "how": "Transfer-Encoding: chunked chia body thành các chunk, mỗi chunk mở đầu bằng dòng hex chỉ độ dài, kết thúc bằng chunk size 0. Trailer là header gửi sau chunk cuối (checksum, server-timing, hạn mức rate limit) mà lúc bắt đầu chưa tính được. HTTP/2 và HTTP/3 cấm chunked vì đã có DATA frame riêng. Content-Length và Transfer-Encoding cùng xuất hiện là vector request smuggling, RFC 9112 cấm nhưng proxy cũ dễ trúng.",
+      "related": [
+        "HTTP/1.1",
+        "HTTP",
+        "Server-Sent Events (SSE)",
+        "Compression (gzip/Brotli)"
+      ]
+    },
+    {
+      "term": "HTTPS via proxy: CONNECT & tunneling (absolute-form, MITM proxy)",
+      "aliases": [
+        "CONNECT method",
+        "HTTP tunnel",
+        "tunneling",
+        "absolute-form",
+        "MITM proxy"
+      ],
+      "level": "advanced",
+      "domain": "Mạng & Giao thức",
+      "problem": "Forward proxy điều hướng HTTP bằng cách đọc request, nhưng HTTPS mã hóa toàn bộ nội dung. Proxy không còn thấy host để định tuyến, cache hay lọc. Client trong mạng công ty, và mọi request qua proxy nói chung, cần một cách nói ra host đích mà không để lộ dữ liệu phiên.",
+      "origin": "RFC 7231 §4.3.6 (CONNECT, 2014); absolute-form từ RFC 2616, hiện RFC 9110 §7.3.2.",
+      "how": "Client gửi CONNECT host:port dạng plaintext tới proxy; proxy trả 200 Connection Established rồi chỉ copy byte hai chiều, TLS vẫn end-to-end giữa client và server thật. HTTP đi qua proxy dùng absolute-form, yêu cầu mang đủ URI tuyệt đối. MITM proxy (Squid, Charles, mitmproxy) chặn CONNECT, tự terminate TLS và cấp certificate giả từ CA do tổ chức cài vào máy client, nhờ đó đọc và sửa được traffic; SNI vẫn lộ hostname.",
+      "related": [
+        "Proxy (forward/reverse)",
+        "HTTPS",
+        "TLS handshake",
+        "Forwarded headers & X-Forwarded-For (client IP sau proxy)"
+      ]
+    },
+    {
+      "term": "SO_REUSEPORT / SO_REUSEADDR (nhiều process share port)",
+      "aliases": [
+        "SO_REUSEPORT",
+        "SO_REUSEADDR",
+        "port sharing",
+        "share port",
+        "reuse port"
+      ],
+      "level": "advanced",
+      "domain": "Mạng & Giao thức",
+      "problem": "SO_REUSEADDR chỉ cho phép bind lại socket đang ở TIME_WAIT (và vài case wildcard) — nó KHÔNG cho phép nhiều process bind cùng addr:port đồng thời. Chia sẻ port giữa nhiều process là đặc quyền của SO_REUSEPORT (Linux 3.9+), kernel dùng hash 4-tuple phân phối connection vào từng socket. Gộp chung 2 option gây nhầm lẫn cho phỏng vấn và debug accept lock.",
+      "origin": "SO_REUSEADDR từ BSD 4.2 (1983); SO_REUSEPORT thêm vào Linux 3.9 (2013), dùng bởi Nginx worker, HAProxy, Envoy, systemd socket activation.",
+      "how": "SO_REUSEADDR: bật trước bind() để bypass TIME_WAIT khi restart nhanh; không cho hai socket đang sống cùng bind. SO_REUSEPORT: nhiều socket khác process/thread cùng bind một addr:port, kernel hash 4-tuple để cân bằng connection (giảm tranh chấp accept lock); mọi socket phải bind cùng cờ và không có migration nóng.",
+      "related": [
+        "Socket",
+        "TCP listen backlog & accept queue (SYN backlog)",
+        "C10K / C10M problem",
+        "Load Balancer (L4/L7)"
+      ]
+    },
+    {
+      "term": "GSLB (Global Server Load Balancing, geo DNS, DNS steering)",
+      "aliases": [
+        "GSLB",
+        "Global Server Load Balancing",
+        "geo DNS",
+        "DNS steering",
+        "DNS load balancing"
+      ],
+      "level": "advanced",
+      "domain": "Mạng & Giao thức",
+      "problem": "Load balancer tầng 4/7 chỉ chọn backend trong một region. Client ở Việt Nam gọi API chỉ có điểm nút US-West chịu 150-250 ms RTT mỗi request; khi một region sập, DNS cache giữ IP chết tới hết TTL. Cần định tuyến ngay ở tầng phân giải tên miền, theo vị trí người dùng, sức khỏe và tải từng region.",
+      "origin": "EDNS Client Subnet RFC 7871 (2016); GSLB là khái niệm thương mại (F5 GTM, Citrix NetScaler, AWS Route 53).",
+      "how": "GSLB là hệ DNS có logic steering: khi client hỏi tên miền, nó trả IP của region gần nhất dựa trên EDNS Client Subnet (resolver khai báo subnet của client thay vì IP của chính resolver), kết hợp health check HTTP/HTTPS xuống từng region và chính sách geo/weighted. TTL giữ 30-60 giây để failover nhanh. Anycast quảng bá cùng một IP từ nhiều nơi qua BGP; thực tế ghép cả hai: GSLB chọn region, LB chọn node.",
+      "related": [
+        "Anycast",
+        "DNS",
+        "Load Balancer (L4/L7)",
+        "Geo-Replication"
+      ]
+    },
+    {
+      "term": "DNS over HTTPS / DNS over TLS (DoH, DoT)",
+      "aliases": [
+        "DoH",
+        "DoT",
+        "DNS over HTTPS",
+        "DNS over TLS"
+      ],
+      "level": "intermediate",
+      "domain": "Mạng & Giao thức",
+      "problem": "DNS mặc định chạy plaintext trên UDP/53: resolver, nhà mạng và kẻ đứng giữa đường đọc được toàn bộ tên miền client truy cập, và có thể sửa đáp án để trỏ về IP giả. DNSSEC chỉ ký xác thực, không mã hóa. Crawler, service egress và người dùng cuối cần đường hỏi tên miền riêng tư.",
+      "origin": "DoT RFC 7858 (2016); DoH RFC 8484 (2018).",
+      "how": "DoT bọc DNS query trong TLS trên port 853, tái sử dụng một kết nối cho nhiều query. DoH gửi query dạng application/dns-message qua HTTPS port 443, trộn lẫn với traffic web nên khó chặn theo dấu hiệu, và hưởng cache cùng multiplexing của HTTP/2. Cả hai chống spoofing bằng xác thực TLS và cần cấu hình thủ công resolver (1.1.1.1, 8.8.8.8, 9.9.9.9). Vận hành khác nhau: DoT dễ chặn theo port và SNI, DoH khó chặn hơn nhưng có thể chặn theo IP resolver.",
+      "related": [
+        "DNS",
+        "DNS resolution chain",
+        "HTTPS",
+        "TLS handshake"
+      ]
+    },
+    {
+      "term": "PROXY protocol (v1/v2, client IP qua nhiều lớp proxy)",
+      "aliases": [
+        "PROXY protocol",
+        "PROXY v1",
+        "PROXY v2",
+        "proxy-protocol"
+      ],
+      "level": "advanced",
+      "domain": "Mạng & Giao thức",
+      "problem": "X-Forwarded-For là header HTTP nên client tự đặt được: attacker ghi giả IP để né rate limit và ACL. Tệ hơn, load balancer tầng 4 passthrough TCP không đọc HTTP nên không thể sửa header, và qua nhiều lớp proxy thì chuỗi XFF không còn đáng tin ở bất kỳ hop nào.",
+      "origin": "Willy Tarreau (HAProxy), 2010; spec tại haproxy.org/proxy-protocol/.",
+      "how": "PROXY protocol chèn một header ngay sau TCP connect, trước dữ liệu ứng dụng. v1 là dòng text: PROXY TCP4 203.0.113.9 10.0.0.1 5555 443\\r\\n. v2 đóng gói nhị phân 12 byte kèm TLV, hỗ trợ IPv6. Backend phải bật nhận proxy header (Nginx proxy_protocol on, HAProxy accept-proxy, ELB/NLB) và chỉ chấp nhận header từ port proxy đáng tin cậy, nếu không bất kỳ client nào cũng giả được IP. Khi đã tin, lấy client IP từ header thay vì từ socket.",
+      "related": [
+        "Forwarded headers & X-Forwarded-For (client IP sau proxy)",
+        "Load Balancer (L4/L7)",
+        "Proxy (forward/reverse)",
+        "TCP"
+      ]
+    },
+    {
+      "term": "Write skew (ghi lệch, write skew anomaly)",
+      "aliases": [
+        "ghi lệch",
+        "write skew anomaly"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Hai bác sĩ cùng xem bảng ca trực lúc 3 giờ sáng, mỗi người thấy vẫn đủ người nên tự rút lui. Cả hai transaction đọc snapshot trước khi người kia ghi, điều kiện \"còn ít nhất hai người trực\" đều thấy đúng, rồi UPDATE hai hàng khác nhau. Kết quả: ca trực còn 0 người, không có write-write conflict nào để database chặn, và không ai biết cho tới khi có sự cố.",
+      "origin": "Berenson et al., \"A Critique of ANSI SQL Isolation Levels\" (SIGMOD 1995); Ports & Grittner, \"Serializable Snapshot Isolation in PostgreSQL\" (VLDB 2012)",
+      "how": "Snapshot Isolation chỉ kiểm tra xung đột ghi trên cùng hàng, còn write skew là xung đột đọc-ghi (rw-dependency): T1 đọc dữ liệu mà T2 ghi và ngược lại. Serializable Snapshot Isolation (PostgreSQL 9.1+) theo dõi chuỗi phụ thuộc này và abort một transaction khi phát hiện chu kỳ nguy hiểm, trả SQLSTATE 40001 để client retry. Cái giá là workload nhiều tranh chấp sẽ abort thường xuyên, phải có retry ở tầng ứng dụng.",
+      "related": [
+        "Snapshot isolation",
+        "Isolation level",
+        "MVCC (Multiversion Concurrency Control)",
+        "Two-phase locking (2PL)"
+      ]
+    },
+    {
+      "term": "Leftmost prefix rule (quy tắc tiền tố trái, composite index order)",
+      "aliases": [
+        "quy tắc tiền tố trái",
+        "composite index order"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Bảng orders 40 triệu dòng có composite index (tenant_id, status, created_at). Query WHERE status = 'pending' AND created_at < now() - interval '1 day' chạy 9 giây, EXPLAIN cho thấy Seq Scan. Người trực thêm hai index nữa mà không thấy cải thiện, vì chưa ai hỏi vì sao optimizer từ chối index sẵn có.",
+      "origin": "Markus Winand, \"Use The Index, Luke!\"; MySQL 8.0 Reference Manual — Skip Scan Range Access Method",
+      "how": "Composite B-tree sắp xếp theo tuple (tenant_id, status, created_at) như từ điển: chỉ khi cột đầu được ràng buộc bằng điều kiện thì các cột sau mới seek thẳng được; điều kiện chỉ đặt lên cột thứ hai buộc optimizer đọc toàn bộ index hoặc bỏ luôn. PostgreSQL không có skip scan cho tình huống này; MySQL 8.0.13+ có, nhưng nó chỉ là nhiều range seek và hiệu quả khi cột đầu ít giá trị phân biệt. Cách chữa: đổi thứ tự cột hoặc tạo index riêng bắt đầu bằng cột hay bị query.",
+      "related": [
+        "Index (B-tree, hash, composite)",
+        "Covering index",
+        "Partial index (filtered index, index có WHERE clause)",
+        "Query plan / EXPLAIN"
+      ]
+    },
+    {
+      "term": "SQL NULL & three-valued logic (3VL, IS NULL, COALESCE, NULL-safe comparison)",
+      "aliases": [
+        "three-valued logic",
+        "3VL",
+        "IS NULL",
+        "COALESCE",
+        "NULL-safe comparison"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Bộ lọc deleted_at != '2025-01-01' bỏ sót toàn bộ hàng có deleted_at IS NULL, vì WHERE chỉ chấp nhận điều kiện trả về TRUE. Chỗ khác: NOT IN (SELECT assignee_id FROM tasks) trả về 0 dòng dù có assignee hợp lệ, chỉ vì một assignee NULL lọt vào tập so sánh.",
+      "origin": "E. F. Codd, \"Extending the Database Relational Model to Capture More Meaning\" (ACM TODS 1979); SQL:1992",
+      "how": "SQL dùng logic ba giá trị TRUE/FALSE/UNKNOWN; NULL là UNKNOWN, mọi so sánh =, <, <> với NULL đều cho UNKNOWN, và UNKNOWN lan qua AND/OR theo bảng chân trị riêng. WHERE và ON chỉ giữ hàng khi kết quả là TRUE, nên điều kiện UNKNOWN bị loại im lặng. UNIQUE coi hai NULL là khác nhau (trừ NULLS NOT DISTINCT của PostgreSQL 15), JOIN không khớp hai NULL. Công cụ đúng: IS NULL, IS DISTINCT FROM, COALESCE, và NULLS FIRST/LAST khi sắp xếp.",
+      "related": [
+        "Database constraint (CHECK, UNIQUE, NOT NULL)",
+        "UPSERT (INSERT ... ON CONFLICT, ON DUPLICATE KEY UPDATE, merge)",
+        "Primary key & Foreign key",
+        "JOIN algorithms (nested loop / hash / sort-merge)"
+      ]
+    },
+    {
+      "term": "Prepared statement & query plan cache (bind variable, soft/hard parse, plan reuse)",
+      "aliases": [
+        "prepared statement",
+        "bind variable",
+        "soft parse",
+        "hard parse",
+        "plan reuse",
+        "Parameterized query",
+        "bind parameter",
+        "placeholder binding",
+        "truy vấn tham số hóa",
+        "câu lệnh chuẩn bị"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Search endpoint nhận 4.000 request/s, mỗi request ghép SQL bằng chuỗi nối; parser hard parse lại từng câu, CPU database thành nút thắt đầu tiên. Đổi sang tham số hóa thì gặp cảnh ngược: plan cache dùng chung cho mọi tham số, nhưng phân bố lệch (tenant lớn gấp nghìn lần tenant nhỏ) khiến plan chọn cho tenant nhỏ bị tái sử dụng cho tenant lớn và chậm đi hàng trăm lần.",
+      "origin": "PostgreSQL official docs — PREPARE / plan caching; MySQL Reference Manual, Server-Side Prepared Statements",
+      "how": "Prepared statement tách câu SQL khỏi dữ liệu: parse, rewrite và plan một lần, các lần sau chỉ bind giá trị, nên hard parse biến mất và tham số không thể thoát ra thành cú pháp. Giới hạn: tham số hóa chỉ cứu giá trị, không cứu identifier/DDL phải nội suy. Plan cache giữ plan theo session hoặc toàn cục; với tham số lệch, PostgreSQL dùng generic plan vài lần rồi có thể quay lại custom plan khi ước lượng generic tệ hơn, vì vậy cần theo dõi pg_stat_statements để biết plan nào đang chạy.",
+      "related": [
+        "SQL injection (SQLi, tiêm SQL, chèn lệnh SQL)",
+        "Query planner",
+        "Slow query triage (slow query log, pg_stat_statements)",
+        "Query plan / EXPLAIN",
+        "Input validation / Data validation (kiểm tra đầu vào)",
+        "SQL injection",
+        "CORS vs CSRF",
+        "Same-origin policy (SOP, chính sách cùng nguồn)"
+      ]
+    },
+    {
+      "term": "Surrogate key vs natural key (khóa thay thế vs khóa tự nhiên, UUID vs auto-increment)",
+      "aliases": [
+        "khóa thay thế vs khóa tự nhiên",
+        "UUID vs auto-increment",
+        "surrogate key",
+        "natural key"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Bảng orders chọn số hóa đơn làm khóa chính vì nó unique và có sẵn. Một năm sau khách đổi quy tắc đánh số theo chi nhánh, đội phải UPDATE khóa ở orders và 6 bảng tham chiếu trong lúc hệ thống đang chạy. Chiều ngược lại cũng có giá: UUIDv4 làm khóa chính trong InnoDB khiến mỗi insert chèn vào giữa cây B-tree, gây page split ngẫu nhiên và index phình ra.",
+      "origin": "RFC 9562 (UUIDv7); InnoDB clustered index documentation",
+      "how": "Surrogate key (bigint identity, Snowflake, UUIDv7) tách định danh khỏi nghiệp vụ nên đổi quy tắc nghiệp vụ không kéo theo migration khóa. Natural key (email, số hóa đơn, ISBN) mang nghĩa sẵn, tiện debug, nhưng chỉ an toàn khi thực sự bất biến. Với clustered index/InnoDB, khóa tăng đơn điệu giữ insert ở cuối cây; khóa ngẫu nhiên rải ghi khắp các trang. UUIDv7 và ULID có tiền tố thời gian nên gần đơn điệu mà không lộ số lượng bản ghi như auto-increment.",
+      "related": [
+        "Primary key & Foreign key",
+        "Distributed ID generation (Snowflake, UUIDv7, ULID)",
+        "Clustered index",
+        "Index (B-tree, hash, composite)"
+      ]
+    },
+    {
+      "term": "Logical replication (publication/subscription, replication slot, logical vs physical)",
+      "aliases": [
+        "publication/subscription",
+        "replication slot",
+        "logical vs physical replication"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Cần nâng cấp PostgreSQL 13 lên 16 với downtime vài phút thay vì vài giờ, hoặc đẩy thay đổi của 5 bảng trong 200 bảng sang Kafka để đánh index lại search. Physical replication không giúp được: nó gửi nguyên khối WAL nhị phân, đòi hỏi cùng major version, không chọn được bảng, và phía nhận chỉ có thể là một bản sao y hệt của cả cụm.",
+      "origin": "PostgreSQL official docs — Logical Replication (publication/subscription, replication slots)",
+      "how": "Logical replication decode WAL thành thay đổi mức hàng qua output plugin (pgoutput): publication khai báo bảng nguồn, subscription kết nối tới và apply, có thể lọc bảng và chạy trên major version khác. Replication slot giữ WAL chưa được consumer xác nhận, nên một slot bị bỏ quên sẽ tích WAL tới lúc đầy đĩa; phải theo dõi pg_replication_slots. DDL không được replicate, và apply mặc định single-threaded nên throughput phụ thuộc độ trễ commit của subscriber.",
+      "related": [
+        "Replication (master-slave / read replica)",
+        "Change Data Capture (CDC, Debezium, binlog/WAL-based CDC)",
+        "WAL (Write-Ahead Logging)"
+      ]
+    },
+    {
+      "term": "Resharding & data migration (di chuyển dữ liệu giữa shard, rebalance, scale-out)",
+      "aliases": [
+        "di chuyển dữ liệu giữa shard",
+        "scale-out"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Cụm 8 shard, hai shard chạm 85% dung lượng; thêm shard thứ 9 làm hash ring dịch chuyển, khoảng 1/9 số key phải chuyển nhà. Đêm rebalance không phải bài toán copy file: app vẫn ghi vào key cũ trong lúc dữ liệu đang bay sang shard mới, và cắt đọc quá sớm thì request rơi vào shard chưa kịp backfill.",
+      "origin": "Stripe Engineering — \"Online migrations at scale\" (2015)",
+      "how": "Cách làm chịu được ghi đồng thời: double-write vào cả shard cũ và mới, backfill theo batch bằng cursor trên khóa chính với throttle để không đè I/O production, theo dõi lag giữa hai phía, chuyển đọc dần sang shard mới rồi mới tắt ghi cũ và dọn dữ liệu — về bản chất là expand-contract ở tầng shard. Routing table nên đẩy vào coordination service để đổi ánh xạ không cần deploy; write phải idempotent theo key vì retry trong lúc di trú là bình thường.",
+      "related": [
+        "Sharding",
+        "Consistent hashing",
+        "Backfill (data backfill, backfill job, batch backfill)",
+        "Hot key"
+      ]
+    },
+    {
+      "term": "Idle-in-transaction & long-running transaction (transaction treo, session chết giữ lock)",
+      "aliases": [
+        "transaction treo",
+        "session chết giữ lock",
+        "idle in transaction"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Một transaction mở BEGIN, gọi API thanh toán bên thứ ba mất 30 giây, rồi mới UPDATE. Trong 30 giây đó nó giữ snapshot cũ khiến vacuum không dọn được dead tuple phía sau, giữ row lock, và chặn ALTER TABLE. Khi pool cạn vì request dồn, hàng trăm session nằm ở trạng thái idle in transaction, chiếm connection mà không làm gì; hệ thống trông như chết vì pool chứ không vì query.",
+      "origin": "PostgreSQL official docs — idle_in_transaction_session_timeout; pg_stat_activity",
+      "how": "Idle in transaction nghĩa là session đã BEGIN nhưng không chạy câu lệnh nào (pg_stat_activity state = 'idle in transaction'), vẫn giữ snapshot và lock, ghim xmin khiến autovacuum không cắt được phiên bản cũ qua hàng đó. PostgreSQL có idle_in_transaction_session_timeout để kill loại session này; MySQL kill theo wait_timeout nhưng không tách riêng trạng thái. Phòng ngừa: không gọi mạng hay IO ngoài trong transaction, giữ transaction ngắn, đặt statement_timeout và alert trên các session idle in transaction lâu.",
+      "related": [
+        "PostgreSQL VACUUM & table bloat (autovacuum, dead tuples)",
+        "Connection leak & pool exhaustion",
+        "MVCC (Multiversion Concurrency Control)",
+        "Timeout"
+      ]
+    },
+    {
+      "term": "Index selectivity & optimizer statistics (độ chọn lọc, ANALYZE, stale statistics)",
+      "aliases": [
+        "độ chọn lọc",
+        "ANALYZE",
+        "stale statistics"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Bảng events 50 triệu dòng, WHERE user_id = 42 chỉ trả 30 hàng nhưng optimizer chọn Seq Scan; hoặc hash join cho hai bảng mà ước lượng 1.000 dòng còn thực tế 4 triệu, spill ra đĩa. Index đúng, query đúng. Vấn đề nằm ở chỗ planner tin vào con số statistics đã cũ sau đợt bulk load, và ở cặp cột tương quan chặt mà histogram độc lập không thấy.",
+      "origin": "PostgreSQL official docs — ANALYZE, pg_statistic, CREATE STATISTICS",
+      "how": "Planner là cost-based: nó ước lượng số dòng mỗi bước từ pg_statistic (histogram, most-common values, n_distinct) rồi so chi phí các phương án. Selectivity là tỉ lệ dòng qua bộ lọc; cột càng nhiều giá trị phân biệt thì index scan càng rẻ so với đọc cả bảng, còn giá trị lặp nhiều (status, is_deleted) thì ngược lại. Chữa đúng chỗ: ANALYZE sau bulk load, chỉnh autovacuum_analyze_scale_factor cho bảng lớn, CREATE STATISTICS cho cặp cột tương quan, và đọc EXPLAIN (ANALYZE, BUFFERS) thay vì đoán.",
+      "related": [
+        "Query planner",
+        "Cardinality estimation",
+        "Slow query triage (slow query log, pg_stat_statements)",
+        "Query plan / EXPLAIN"
+      ]
+    },
+    {
+      "term": "Soft delete (tombstone, xóa mềm)",
+      "aliases": [
+        "tombstone",
+        "xóa mềm"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Cần undo xóa và giữ lịch sử nên thêm cột deleted_at. Sáu tháng sau: UNIQUE(email) chặn tạo lại tài khoản của người vừa xóa, một query quên WHERE deleted_at IS NULL nên user đã xóa vẫn đăng nhập được, và join giữa hai bảng soft delete càng dễ sót điều kiện vì mỗi bảng một cột riêng.",
+      "origin": "PostgreSQL official docs — Partial Indexes; GDPR Article 17 (right to erasure)",
+      "how": "Soft delete đánh dấu tombstone thay vì DELETE, đổi lại mọi đường đọc phải lọc đúng, kể cả count, join và report. Unique constraint phải chuyển thành partial unique index (WHERE deleted_at IS NULL) hoặc khóa ghép với cột trạng thái; FK và cascade phải tự xử lý vì ON DELETE CASCADE không kích hoạt khi chỉ UPDATE cột. Bảng chỉ phình theo thời gian, nên thường phải kèm job archive/anonymize cho yêu cầu xóa thật, hoặc tách hàng cứng vào audit log.",
+      "related": [
+        "GDPR & data privacy compliance (PII, right to erasure, data retention)",
+        "Partial index (filtered index, index có WHERE clause)",
+        "Database constraint (CHECK, UNIQUE, NOT NULL)",
+        "Audit log / audit trail (nhật ký kiểm toán)"
+      ]
+    },
+    {
+      "term": "JSONB & semi-structured column (jsonb vs json, lưu dữ liệu linh hoạt)",
+      "aliases": [
+        "jsonb vs json",
+        "lưu dữ liệu linh hoạt",
+        "semi-structured column"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Payload webhook mỗi merchant một schema, thêm cột cho từng field nghĩa là một migration mỗi tuần, nên cả payload được nhét vào cột jsonb. Sáu tháng sau cần query metadata.coupon = 'TET2026' trên 200 triệu hàng: expression index phải khai báo đúng path, GIN index phình nhanh, và query kiểu này full scan nếu thiếu index.",
+      "origin": "PostgreSQL official docs — JSON Types (jsonb, jsonb_path_ops, GIN)",
+      "how": "jsonb lưu binary đã parse, bỏ whitespace và key trùng, hỗ trợ toán tử containment @> cùng GIN index (jsonb_path_ops khi chỉ cần containment) hoặc expression index trên một path cố định; json giữ nguyên text và parse lại mỗi lần đọc. JSON hợp cho metadata thưa và hay đổi, ít khi là điều kiện lọc chính. Field nào vào WHERE, ORDER BY hay JOIN thường xuyên vẫn nên là cột thật, vì mỗi update phải ghi lại cả document.",
+      "related": [
+        "GIN / GiST index",
+        "NoSQL (MongoDB / Redis / Cassandra)",
+        "Denormalization",
+        "Schema"
+      ]
+    },
+    {
+      "term": "Database sequence & identity gap (AUTO_INCREMENT, identity column, số nhảy do rollback)",
+      "aliases": [
+        "AUTO_INCREMENT",
+        "identity column",
+        "số nhảy do rollback"
+      ],
+      "level": "basic",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Khách đối soát thấy hóa đơn nhảy từ 1002 lên 1010; không có hóa đơn nào bị mất, chỉ là sequence đã cấp số cho hai lần rollback và một lần restart làm mất cache. Nếu nghiệp vụ cần số hóa đơn liên tục để kiểm toán hoặc để công bố trước khi commit, thiết kế dựa vào AUTO_INCREMENT không đáp ứng được.",
+      "origin": "PostgreSQL official docs — Sequence Manipulation Functions; MySQL AUTO_INCREMENT",
+      "how": "Sequence là counter dùng chung cấp số ngoài transaction: nextval cấp phát tức thì và không rollback, nên gap sinh ra từ rollback, unique conflict, hay cache bị mất khi session/instance chết; cache càng lớn gap càng lớn khi restart. Muốn số liên tục phải đánh số bên trong transaction bằng counter có row lock (SELECT ... FOR UPDATE trên bảng counters), đổi lại ghi bị serialize; hoặc cấp dải số theo lô cho từng node và chấp nhận gap khi một node bỏ dải chưa dùng hết.",
+      "related": [
+        "Distributed ID generation (Snowflake, UUIDv7, ULID)",
+        "Primary key & Foreign key",
+        "Transaction"
+      ]
+    },
+    {
+      "term": "Database trigger & stored procedure (trigger, stored procedure, nghiệp vụ trong DB)",
+      "aliases": [
+        "trigger",
+        "stored procedure",
+        "nghiệp vụ trong DB"
+      ],
+      "level": "intermediate",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "Đặt logic trừ tồn kho vào trigger AFTER INSERT trên order_items để mọi đường ghi đều đi qua đó. Ba năm sau: một bulk update vô tình kích trigger hàng triệu lần, deadlock xuất hiện ở luồng khác, và không ai dám xóa trigger vì không biết còn đường ghi nào phụ thuộc vào nó. Logic nghiệp vụ nằm rải ở bốn trigger mà không có test nào chạy qua.",
+      "origin": "PostgreSQL official docs — PL/pgSQL Trigger Functions",
+      "how": "Trigger chạy trong cùng transaction và cùng process với câu lệnh, không thể unit test bằng cách gọi service, và không xuất hiện trong log ứng dụng nên debug phải đọc pg_stat_activity hoặc log database. Stored procedure đổi lại giữ được round-trip khi một thao tác cần nhiều bước SQL. Nguyên tắc thực dụng: trigger cho audit, ràng buộc toàn vẹn và đồng bộ bắt buộc ở tầng DB; nghiệp vụ cần evolve nhanh và test độc lập nên ở tầng ứng dụng.",
+      "related": [
+        "Cascade & referential action (ON DELETE CASCADE, SET NULL, RESTRICT)",
+        "Audit log / audit trail (nhật ký kiểm toán)",
+        "Domain Event (sự kiện miền)",
+        "Migration"
+      ]
+    },
+    {
+      "term": "Row-level security (RLS, phân quyền theo hàng, tenant isolation trong DB)",
+      "aliases": [
+        "RLS",
+        "phân quyền theo hàng",
+        "tenant isolation trong DB"
+      ],
+      "level": "advanced",
+      "domain": "Cơ sở dữ liệu & Lưu trữ",
+      "problem": "SaaS đa tenant, mọi query phải có AND tenant_id = :id do app tự thêm; một endpoint mới quên điều kiện là tenant A đọc được dữ liệu của tenant B, và review code bằng mắt không đảm bảo nổi trên hàng nghìn query. Câu hỏi: làm sao để tầng DB cưỡng chế điều kiện tenant thay vì tin vào kỷ luật của lập trình viên.",
+      "origin": "PostgreSQL official docs — Row Security Policies (RLS)",
+      "how": "PostgreSQL RLS gắn policy USING/WITH CHECK lên từng table; role thường chỉ thấy hàng thỏa policy, trừ role có thuộc tính BYPASSRLS, và FORCE ROW LEVEL SECURITY áp cả cho table owner. App chạy SET LOCAL app.current_tenant_id = ... trong transaction rồi policy so sánh tenant_id với current_setting('app.current_tenant_id'), nên cần index trên cột tenant để không scan toàn bảng mỗi lần. Lưu ý với connection pool kiểu transaction: SET LOCAL chỉ sống trong transaction, phải set lại ở mỗi lần checkout connection.",
+      "related": [
+        "Multi-Tenancy",
+        "RBAC (Role-Based Access Control, phân quyền theo vai trò)",
+        "Principle of Least Privilege (PoLP)",
+        "ABAC (Attribute-Based Access Control, phân quyền theo thuộc tính)"
+      ]
+    },
+    {
+      "term": "OOP principles / 4 pillars",
+      "aliases": [
+        "encapsulation",
+        "inheritance",
+        "polymorphism",
+        "abstraction",
+        "đóng gói",
+        "kế thừa",
+        "đa hình",
+        "trừu tượng hóa"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Code viết toàn function thao tác struct trần: thêm luồng nghiệp vụ mới phải mở lại mọi nơi đọc state, hai luồng sửa cùng object không ai giữ thứ tự hợp lệ, đổi tên field là build vỡ hàng chục chỗ. Đây là câu mở đầu mọi vòng phỏng vấn OOP: bốn pillar giải quyết gì mà function thuần không làm được.",
+      "origin": "Thuật ngữ 'object-oriented programming' do Alan Kay đặt khoảng 1967; bốn pillar hệ thống hóa trong 'Object-Oriented Analysis and Design with Applications' (Grady Booch, 1991).",
+      "how": "Encapsulation giấu state sau method, inheritance chia sẻ hành vi giữa class, polymorphism cho một interface nhiều implementation, abstraction giấu chi tiết sau khế ước. Hệ quả backend: repository interface cho phép swap database, strategy pattern cho phép đổi thuật toán thanh toán mà call site không đổi.",
+      "related": [
+        "SOLID",
+        "Composition over Inheritance & Law of Demeter",
+        "Anemic Domain Model"
+      ]
+    },
+    {
+      "term": "Entity (DDD)",
+      "aliases": [
+        "thực thể miền",
+        "identity-based equality"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Hai bản ghi khách hàng khác nhau trong DB nhưng cùng customerId: so sánh theo nội dung thì một object vừa đổi địa chỉ vẫn bằng bản ghi cũ, nhưng theo nghiệp vụ chúng là cùng một khách sửa trạng thái qua thời gian. Cần một định danh bất biến xuyên suốt vòng đời, không phụ thuộc field có thể thay đổi.",
+      "origin": "Eric Evans, 'Domain-Driven Design' (2003).",
+      "how": "Entity giữ identity riêng và định nghĩa equals/hashCode theo identity, không theo nội dung; state thay đổi nhưng identity không đổi. Trong DDD, entity đối lập value object: entity so bằng danh tính, value object so bằng giá trị.",
+      "related": [
+        "Value Object (DDD)",
+        "Aggregate Root",
+        "Identity Map"
+      ]
+    },
+    {
+      "term": "Interface vs Abstract class",
+      "aliases": [
+        "interface",
+        "abstract class",
+        "lớp trừu tượng"
+      ],
+      "level": "basic",
+      "domain": "OOP & Design Patterns",
+      "problem": "Khi thiết kế repository cho nhiều database, mỗi ngôn ngữ cho phép cả interface lẫn abstract class làm khế ước chung; chọn sai loại dẫn đến base class bám chặt theo state kế thừa, hoặc interface thêm method làm vỡ mọi implementation bên ngoài. Câu hỏi phỏng vấn kinh điển kiểm tra hiểu khế ước vs khuôn mẫu tái sử dụng.",
+      "origin": "Gang of Four, 'Design Patterns' (1994) — nguyên tắc 'program to an interface, not an implementation'.",
+      "how": "Interface khai báo hành vi không có state, một class implement nhiều interface; abstract class kèm state và method có sẵn, một class chỉ extends một base. Cần đa kế thừa khế ước và không ràng buộc cây kế thừa thì dùng interface; cần chia sẻ state và code mặc định thì dùng abstract class.",
+      "related": [
+        "SOLID",
+        "Composition over Inheritance & Law of Demeter",
+        "Template Method pattern"
+      ]
+    },
+    {
+      "term": "Application Service / Service Layer",
+      "aliases": [
+        "application service",
+        "service layer"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Đưa use case logic vào controller khiến controller phình và test phải dựng cả HTTP; đẩy hết vào domain service thì domain phụ thuộc repository lẫn transaction. Cần một lớp điều phối use case riêng: nhận input, gọi domain, khởi tạo transaction, trả DTO.",
+      "origin": "Martin Fowler, 'Patterns of Enterprise Application Architecture' (2002), mẫu Service Layer.",
+      "how": "Application service nằm ngoài domain layer, stateless, mỗi method ứng một use case: validate input, load aggregate qua repository, chạy domain logic, commit trong một transaction, map kết quả ra DTO. Khác domain service ở chỗ nó điều phối và phụ thuộc infrastructure, không chứa quy tắc nghiệp vụ thuần.",
+      "related": [
+        "Domain Service (service miền)",
+        "Layered Architecture",
+        "Hexagonal Architecture / Ports & Adapters",
+        "Unit of Work"
+      ]
+    },
+    {
+      "term": "Context Map",
+      "aliases": [
+        "bản đồ ngữ cảnh",
+        "partnership",
+        "customer-supplier",
+        "conformist",
+        "shared kernel"
+      ],
+      "level": "advanced",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Hai bounded context vay chung bảng orders: team A đổi schema làm team B vỡ test; không ai vẽ mối quan hệ giữa các context nên mỗi lần tích hợp tự nghĩ ra quy tắc riêng, tích lũy thành nợ không lối thoát. Cần bản đồ chỉ rõ context nào phụ thuộc context nào và theo kiểu gì.",
+      "origin": "Eric Evans, 'Domain-Driven Design' (2003).",
+      "how": "Context map vẽ các context và relationship của chúng: partnership (hai bên cùng phối hợp đổi), customer-supplier (bên cung quyết định, bên cầu chấp nhận), conformist (một bên bám chuẩn bên kia), shared kernel (dùng chung code), anti-corruption layer chặn nhiễm. Mỗi quan hệ quy định giao thức tích hợp và mức độ tự do đổi model.",
+      "related": [
+        "Bounded Context",
+        "DDD (Domain-Driven Design)",
+        "Anti-corruption Layer",
+        "Ubiquitous Language (ngôn ngữ dùng chung)"
+      ]
+    },
+    {
+      "term": "Subdomain & Core Domain",
+      "aliases": [
+        "subdomain",
+        "core domain",
+        "supporting/generic subdomain"
+      ],
+      "level": "advanced",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Ngân sách kỹ thuật có hạn mà mọi module đều được tuyên bố quan trọng: team đầu tư bằng nhau cho billing, thứ tạo khác biệt cạnh tranh, và email notification, thứ vendor làm tốt hơn; kết quả phần tạo khác biệt lại có code chất lượng thấp nhất. Cần tiêu chí phân loại để biết đặt kỹ sư giỏi ở đâu.",
+      "origin": "Eric Evans, 'Domain-Driven Design' (2003); Vaughn Vernon nhấn mạnh lại trong 'Implementing Domain-Driven Design' (2013).",
+      "how": "Chia domain thành core domain (khác biệt cạnh tranh, tự viết và đầu tư nhất), supporting subdomain (cần nhưng không tạo lợi thế, viết đơn giản), generic subdomain (mua vendor hoặc dùng mã nguồn mở, như auth chuẩn hóa). Kiến trúc phức tạp, testing sâu và hiring chuẩn cao chỉ dành cho core.",
+      "related": [
+        "DDD (Domain-Driven Design)",
+        "Bounded Context",
+        "Modular Monolith"
+      ]
+    },
+    {
+      "term": "Strangler Fig pattern",
+      "aliases": [
+        "strangler pattern",
+        "cây si"
+      ],
+      "level": "advanced",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Rewrite toàn bộ monolith 1,2 triệu dòng sang microservices trong một dự án duy nhất thường chết giữa chừng: feature mới phải merge vào hai codebase song song, deadline trượt mãi, và không ai dám tắt hệ cũ khi hệ mới chưa phủ hết nghiệp vụ. Cần chiến lược chuyển đổi từng phần, mỗi bước ship và rollback độc lập.",
+      "origin": "Martin Fowler, bliki 'StranglerFigApplication' (2004); tên lấy từ cây si mọc bao quanh và thay thế dần cây chủ.",
+      "how": "Đặt một router lớp ngoài, thường là API gateway, định tuyến từng URI: đường đã chuyển đi service mới, đường còn lại về monolith cũ. Mỗi release bóc một slice nghiệp vụ, khi slice cuối đi hết thì xóa monolith; dữ liệu trong giai đoạn trung gian dùng database view hoặc dual write.",
+      "related": [
+        "Monolith",
+        "Microservices",
+        "Blue-green deploy"
+      ]
+    },
+    {
+      "term": "Conway's Law & reverse Conway maneuver",
+      "aliases": [
+        "định luật Conway"
+      ],
+      "level": "advanced",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Team chia theo technical layer (backend, frontend, DB), mỗi thay đổi nhỏ xuyên ba team mới deploy được; tổ chức muốn năm domain service sửa độc lập nhưng biên service cứ kéo theo biên team, kết quả là các service phải deploy đồng bộ. Cấu trúc tổ chức đang định hình kiến trúc ngược ý muốn.",
+      "origin": "Melvin Conway, 'How Do Committees Invent?' (Datamation, 1968); thuật ngữ 'reverse Conway maneuver' do Matthew Skelton và Manuel Pais phổ biến trong 'Team Topologies' (2019).",
+      "how": "Định luật Conway: hệ thống phản chiếu cấu trúc giao tiếp của tổ chức tạo ra nó. Reverse Conway maneuver dùng ngược: sắp xếp lại team theo biên nghiệp vụ mong muốn, mỗi team sở hữu trọn một domain service, để kiến trúc tự kéo theo; điều kiện tiên quyết là team có đủ năng lực end-to-end và quyền tự quyết trong biên của mình.",
+      "related": [
+        "Microservices",
+        "Modular Monolith",
+        "Bounded Context"
+      ]
+    },
+    {
+      "term": "Distributed Monolith",
+      "aliases": [
+        "monolith phân tán",
+        "distributed monolith anti-pattern"
+      ],
+      "level": "intermediate",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Split theo layer thay vì theo nghiệp vụ: service users chứa mọi logic user của cả sản phẩm, mọi use case xuyên năm service gọi nhau đồng bộ, một lỗi nhỏ ở service giữa kéo theo chuỗi timeout; vẫn phải deploy đồng bộ như monolith nhưng giờ thêm chi phí network và vận hành.",
+      "origin": "Thuật ngữ phổ biến trong cộng đồng microservices khoảng 2013-2015; Sam Newman phân tích trong 'Monolith to Microservices' (2019).",
+      "how": "Triệu chứng nhận diện: graph gọi service mọc như mạng nhện, một use case đi qua nhiều hop, không service nào sở hữu trọn một use case. Hướng ra: bóc transaction theo từng use case về đúng service sở hữu, chuyển gọi đồng bộ sang event, merge các service luôn đổi cùng nhau để giảm hop.",
+      "related": [
+        "Microservices",
+        "Monolith",
+        "Modular Monolith"
+      ]
+    },
+    {
+      "term": "Interpreter pattern",
+      "aliases": [
+        "mẫu thông dịch",
+        "AST",
+        "abstract syntax tree"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Rule ưu đãi, coupon, member level, khuyến mãi, thay đổi hằng tuần; hardcode chuỗi if/else thì mỗi lần thêm rule là mở code, deploy, và business không thể tự thử nghiệm. Cần biểu diễn rule thành dữ liệu có cấu trúc mà một engine đọc và thực thi được.",
+      "origin": "Gang of Four, 'Design Patterns' (1994).",
+      "how": "Mỗi quy tắc là một node trong AST, mỗi dạng node một class implement interpret(context) trả kết quả; grammar ánh xạ 1-1 sang cây class nên ngữ pháp mới chỉ là node mới, không đụng node cũ. Đây là pattern GoF thường bị bỏ sót khi luyện bộ 23, nhưng chi phí class-per-rule cao nên chỉ đáng dùng khi rule nhiều và thay đổi thường xuyên.",
+      "related": [
+        "Composite pattern (cây đối tượng)",
+        "Visitor pattern (mẫu khách thăm)",
+        "Iterator pattern"
+      ]
+    },
+    {
+      "term": "Code smell",
+      "aliases": [
+        "mùi code",
+        "long method",
+        "feature envy",
+        "primitive obsession",
+        "shotgun surgery"
+      ],
+      "level": "intermediate",
+      "domain": "OOP & Design Patterns",
+      "problem": "Review không có từ vựng chung: method 200 dòng bị gọi là khó đọc, field kiểu String thay vì object bị gọi là không clean, tranh luận lan man không chốt được sửa gì. Cần danh mục triệu chứng có tên, có cách sửa tương ứng để review và refactor nói được thứ tự ưu tiên.",
+      "origin": "Kent Beck đặt thuật ngữ (khoảng 1997); Martin Fowler danh mục hóa trong 'Refactoring' (1999).",
+      "how": "Danh mục khoảng 22 smell: long method thì tách method, feature envy là method quan tâm data class khác nhiều hơn class của nó, chuyển hành vi về nơi data, primitive obsession thì bọc primitive vào value object, shotgun surgery là một thay đổi lan nhiều class, gom về một chỗ. Smell là triệu chứng, không phải lỗi: ghi nhận rồi dùng làm tín hiệu refactor, không tự sửa máy móc.",
+      "related": [
+        "refactoring",
+        "technical debt",
+        "Antipattern (god object, golden hammer)"
+      ]
+    },
+    {
+      "term": "MVC",
+      "aliases": [
+        "Model-View-Controller"
+      ],
+      "level": "basic",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Mỗi màn hình tự query DB, tự render HTML, tự xử lý submit; sửa logic phải sửa cả view, hai màn hình hiển thị cùng data là copy-paste cùng một đoạn query. Khi GUI Smalltalk cần vừa hiển thị vừa cập nhật theo model, nhu cầu tách presentation khỏi logic trở thành hiển nhiên.",
+      "origin": "Trygve Reenskaug, ghi chú 'Models-Views-Controllers' tại Xerox PARC (1979).",
+      "how": "Model giữ dữ liệu và nghiệp vụ, view render state của model, controller nhận input của user và gọi model; model đổi thì thông báo cho view qua observer. Trong backend thực tế, controller chỉ nhận request và gọi service, view là template hoặc serializer, model là domain cùng persistence.",
+      "related": [
+        "Layered Architecture",
+        "Clean Architecture",
+        "BFF (Backend for Frontend)"
+      ]
+    },
+    {
+      "term": "Microkernel / Plugin architecture",
+      "aliases": [
+        "microkernel",
+        "plugin-based",
+        "extension points"
+      ],
+      "level": "intermediate",
+      "domain": "Kiến trúc & Khả năng mở rộng",
+      "problem": "Sản phẩm SaaS cần hỗ trợ nhiều kênh thanh toán, nhiều nhà cung cấp SMS, nhiều format export; cứ thêm kênh mới là sửa core code và re-deploy toàn bộ, khách enterprise yêu cầu plugin riêng mà không muốn chờ release chung. Cần tách lõi tối thiểu với extension point đóng gói được.",
+      "origin": "Ý tưởng microkernel từ hệ điều hành (Mach, CMU, khoảng 1985); Mark Richards đưa vào 'Software Architecture Patterns' (2015) như một architecture style.",
+      "how": "Core system giữ chức năng tối thiểu và định nghĩa extension points rõ ràng, registry nạp plugin đúng contract lúc runtime, không sửa core; contract phải version hóa. Quyết định then chốt là chọn đúng plugin point: quá ít thì core phình, quá nhiều thì contract cứng lại không ai dám đổi.",
+      "related": [
+        "Modular Monolith",
+        "Microservices",
+        "Abstract Factory pattern"
+      ]
+    },
+    {
+      "term": "Sequential consistency (nhất quán tuần tự)",
+      "aliases": [
+        "nhất quán tuần tự",
+        "sequential consistency",
+        "SC"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Hai client cùng thao tác trên một khối dữ liệu được replicate: client A ghi x=1 rồi ghi x=2; client B đọc lần lượt thấy x=2 rồi x=1. Từng bản sao đều tự nhất quán, nhưng thứ tự quan sát được khác nhau, nên không ai suy luận được 'giá trị nào mới hơn'. Câu hỏi: mô hình nhất quán yếu nhất nào đủ để mọi node nhìn thấy cùng một thứ tự thao tác, mà không đòi hỏi đồng hồ thời gian thực?",
+      "how": "Định nghĩa: tồn tại thứ tự toàn cục của mọi thao tác sao cho mỗi tiến trình giữ nguyên program order của mình và mọi tiến trình quan sát cùng thứ tự đó. Yếu hơn linearizability vì không ràng buộc mốc thời gian thực giữa các tiến trình khác nhau; mạnh hơn eventual consistency vì thứ tự đúng ngay, không hội tụ dần. Nhiều CPU hiện đại yếu hơn mức này (x86 chỉ bảo đảm TSO), nên code đa luồng cần fence khi muốn suy luận kiểu SC.",
+      "origin": "Leslie Lamport, 'How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs', IEEE Transactions on Computers, 1979.",
+      "related": [
+        "Linearizability",
+        "Memory model & happens-before (memory visibility)",
+        "Causal consistency"
+      ]
+    },
+    {
+      "term": "Token bucket & Leaky bucket (thuật toán rate limiting)",
+      "aliases": [
+        "token bucket",
+        "leaky bucket",
+        "thuật toán giới hạn tần suất"
+      ],
+      "level": "basic",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "API mở cho đối tác: bình thường 200 QPS, đến lúc họ đồng bộ đầu ngày thì surge lên 2.000 QPS trong vài chục giây. Chặn bằng 'mỗi giây 300 request' cố định khiến traffic hợp lệ dạng burst bị đánh rớt, còn mở toang thì DB quá tải lúc cao điểm. Làm sao giới hạn tốc độ trung bình mà vẫn cho phép tích lũy hạn mức để hấp thụ burst ngắn?",
+      "how": "Token bucket: bộ đếm token nạp đều tốc độ r token/giây tới mức chứa b; request lấy 1 token, hết token trả 429. Burst tối đa bằng b, tốc độ dài hạn bằng r, hai tham số tách bạch. Leaky bucket: hàng đợi xả ra với tốc độ cố định nên đầu ra phẳng, không cho burst; dùng khi cần bảo vệ downstream khỏi mọi đỉnh, ví dụ luồng ghi xuống DB.",
+      "origin": "Leaky bucket: J. Turner, 'New Directions in Communications', IEEE Communications Magazine, 1986. Token bucket: chuẩn hóa trong RFC 2697 (srTCM) và RFC 2698 (trTCM).",
+      "related": [
+        "Rate Limiting (Adaptive)",
+        "Traffic burst & burst capacity",
+        "Backpressure & rate shaping"
+      ]
+    },
+    {
+      "term": "Condition variable & Wait/Notify (condvar, producer-consumer)",
+      "aliases": [
+        "condvar",
+        "condition variable",
+        "wait/notify",
+        "pthread_cond_wait"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Worker thread cần chờ 'queue có việc' nhưng phải nhả mutex để producer còn đẩy item vào. Tự viết vòng lặp quay nóng thì đốt CPU cả core; ngủ một khoảng cố định thì hoặc xử lý trễ, hoặc dậy liên tục mà queue vẫn rỗng. Cần cơ chế nào để thread ngủ hẳn và được thread khác đánh thức đúng lúc điều kiện đổi?",
+      "how": "Condvar gắn với một mutex: wait() nhả mutex rồi ngủ nguyên tử, signal()/broadcast() đánh thức một hoặc mọi waiter, và thread thức phải giành lại mutex trước khi tiếp tục. Điều kiện phải kiểm tra lại trong vòng while vì spurious wakeup và lost wakeup đều có thật (signal bắn khi chưa ai wait). Bộ ba hoàn chỉnh: mutex bảo vệ dữ liệu chung, condvar báo trạng thái đổi, semaphore đếm tài nguyên.",
+      "origin": "C. A. R. Hoare, 'Monitors: An Operating System Structuring Concept', CACM 17(10), 1974; Per Brinch Hansen, 'Operating System Principles', 1973.",
+      "related": [
+        "Mutex & Semaphore",
+        "Thundering Herd",
+        "Race condition"
+      ]
+    },
+    {
+      "term": "State machine replication (SMR, nhân bản máy trạng thái, replicated log)",
+      "aliases": [
+        "SMR",
+        "nhân bản máy trạng thái",
+        "replicated log",
+        "replicated state machine"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Một cụm 5 node giữ metadata cho lock service. Node có thể restart giữa chừng, mạng có thể chia cắt, vậy làm sao để sau mọi biến động, cả 5 node đều ở cùng trạng thái và không node nào trả lời khác node nào? Gửi 'state cuối' cho nhau không đủ: hai node nhận cùng tập cập nhật theo hai thứ tự khác nhau sẽ kết thúc ở hai trạng thái khác nhau.",
+      "how": "Nếu các máy trạng thái là deterministic, cho chúng cùng trạng thái khởi tạo và cùng một chuỗi lệnh theo cùng thứ tự thì chúng kết thúc ở cùng trạng thái. Bài toán nhân bản vì vậy quy về đồng thuận trên một replicated log: thống nhất nội dung từng vị trí log, các node tự áp dụng lệnh theo đúng vị trí. Raft/Paxos giữ log không lệch, snapshot định kỳ để nén log và đuổi kịp node mới.",
+      "origin": "Fred B. Schneider, 'Implementing Fault-Tolerant Services Using the State Machine Approach: A Tutorial', ACM Computing Surveys 22(4), 1990.",
+      "related": [
+        "Consensus",
+        "Raft",
+        "Paxos"
+      ]
+    },
+    {
+      "term": "Total order broadcast / atomic broadcast (phát quảng bá thứ tự toàn cục)",
+      "aliases": [
+        "total order broadcast",
+        "atomic broadcast",
+        "phát quảng bá thứ tự toàn cục"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Nhiều service cùng subscribe luồng sự kiện 'cấu hình thay đổi'. Broker giao cho mỗi subscriber một thứ tự khác nhau, thế là node X apply 'bật tính năng' rồi 'tắt tính năng', node Y ngược lại, hai node kết thúc ở hai trạng thái dù nhận đủ sự kiện. Cần bảo đảm gì để mọi node nhận cùng tập message theo cùng thứ tự, kể cả khi node gửi chết giữa đường?",
+      "how": "Total order broadcast: mọi node còn sống giao cùng các message đã gửi, theo cùng một thứ tự tại mọi node (tính chất nguyên tử + thứ tự). Primitive này tương đương consensus: mỗi slot của chuỗi được thống nhất, nên hiện thực kèm leader và quorum. ZooKeeper dùng Zab, etcd dùng Raft, Kafka dùng leader + ISR chốt thứ tự append vào log — log chính là total order, consumer đọc tuần tự theo offset.",
+      "origin": "V. Hadzilacos & S. Toueg, 'Fault-Tolerant Broadcasts and Related Problems', 1994; X. Défago et al., 'Total Order Broadcast and Multicast Algorithms: Taxonomy and Survey', ACM CSUR 36(4), 2004.",
+      "related": [
+        "Consensus",
+        "Coordination service (ZooKeeper, etcd)",
+        "Kafka ISR & acks durability (acks=all, min.insync.replicas)"
+      ]
+    },
+    {
+      "term": "ABA problem (bài toán ABA trong CAS)",
+      "aliases": [
+        "ABA problem",
+        "bài toán ABA",
+        "ABA trong CAS"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Lock-free stack dùng CAS trên đỉnh stack: thread A đọc đỉnh là node X rồi bị preempt, trong khi thread B pop X, pop Y, rồi push lại một node đúng địa chỉ X. A chạy lại, thấy con trỏ vẫn bằng X nên CAS 'thành công', nhưng next của X giờ trỏ vào vùng nhớ đã được cấp phát cho mục đích khác. Giá trị không đổi, lịch sử đã đổi — làm sao CAS phát hiện được?",
+      "how": "CAS chỉ so giá trị nên không phân biệt 'chưa ai đụng' với 'đổi rồi quay lại giá trị cũ'. Chống bằng tagged pointer: nhét thêm counter tăng đơn điệu vào cùng word, dùng CAS 128-bit (cmpxchg16b trên x86-64) để so cả cặp con trỏ-counter. Với tái sử dụng bộ nhớ, hazard pointer hoặc epoch-based reclamation giữ node không bị cấp phát lại khi còn thread giữ con trỏ.",
+      "origin": "Gắn với double-width CAS trên IBM System/370; giải pháp trong Maged M. Michael, 'Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic Reads and Writes' (PODC 2002) và 'Hazard Pointers' (2004).",
+      "related": [
+        "Atomic operation & CAS",
+        "Lock-free queue & ring buffer (MPSC)",
+        "Race condition"
+      ]
+    },
+    {
+      "term": "Spinlock & busy-wait (khóa quay, spin-wait)",
+      "aliases": [
+        "spinlock",
+        "khóa quay",
+        "busy-wait",
+        "spin-wait"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Trong kernel hoặc runtime, lock được giữ cực ngắn: sửa một con trỏ, tăng một counter, tổng thời gian vài chục nanosecond. Dùng mutex đầy đủ thì chi phí syscall và context switch (hàng microsecond) còn lớn hơn cả thời gian chờ. Nhưng thay bằng cách nào để không đốt CPU vô ích khi chẳng may thread giữ lock bị treo lâu?",
+      "how": "Spinlock quay tại chỗ bằng vòng atomic exchange/test-and-set, tránh context switch; chỉ đáng dùng khi lock ngắn và có đủ core để thread giữ lock thực sự chạy. Quay lâu thì phí CPU, tệ nhất trên máy một core vì kẻ giữ lock chưa được lên lịch. Thực tế dùng hybrid: quay một số vòng giới hạn rồi park, kèm biến thể queued spinlock (MCS) cho mỗi waiter một ô riêng trên queue thay vì cả đàn cùng đập một cache line.",
+      "origin": "Busy-wait mutual exclusion có từ các thuật toán đầu (Dijkstra 1965); dạng hiện đại: Linux spinlock_t, queued spinlock theo Mellor-Crummey & Scott, 'Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors', TOCS 1991.",
+      "related": [
+        "Mutex & Semaphore",
+        "Context switch cost",
+        "Thundering Herd"
+      ]
+    },
+    {
+      "term": "Monotonic reads / monotonic writes (đọc/ghi đơn điệu)",
+      "aliases": [
+        "monotonic reads",
+        "monotonic writes",
+        "đọc đơn điệu",
+        "ghi đơn điệu"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Ứng dụng đọc từ read replica. Request 1 rơi vào replica đã bắt kịp và thấy comment mới; request 2 load-balancer đẩy sang replica trễ hơn, thấy comment cũ, UI nhảy lùi thời gian dù user chỉ refresh. Chiều ghi cũng vậy: user sửa hồ sơ hai lần, hai write tới hai node khác nhau và node nhận write sau lại apply trước write trước, kết quả lưu sai bản mới nhất.",
+      "how": "Monotonic reads: một process đã đọc phiên bản v thì các lần đọc sau không bao giờ thấy phiên bản cũ hơn v; hiện thực bằng ghim session vào một replica, hoặc mang version đã thấy và bắt replica chờ đuổi kịp (read-your-writes thường đi kèm). Monotonic writes: các write của cùng một process được áp dụng theo đúng thứ tự phát ra. Cả hai là session guarantee — gắn với một client/session, không phải thuộc tính toàn hệ thống.",
+      "origin": "Douglas B. Terry, Alan J. Demers et al., 'Session Guarantees for Weakly Consistent Replicated Data', PDIS 1994.",
+      "related": [
+        "Causal consistency",
+        "Replication Lag Tolerance",
+        "Sticky Session"
+      ]
+    },
+    {
+      "term": "Producer-consumer pattern (mô hình sản xuất-tiêu thụ, bounded buffer)",
+      "aliases": [
+        "producer-consumer",
+        "mô hình sản xuất-tiêu thụ",
+        "bounded buffer"
+      ],
+      "level": "basic",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Mỗi request web cần gọi API bên thứ ba mất 300ms. Xử lý ngay trong luồng nhận request thì throughput bị chặn ở số luồng, và khi tải tăng thì request dồn ứ. Tách producer (nhận request) khỏi consumer (gọi API) là hướng rõ, nhưng hàng đợi nên không giới hạn, hay có giới hạn để producer phải chờ, và khi đầy thì chờ hay trả lỗi?",
+      "how": "Producer đẩy item vào bounded buffer, consumer lấy ra xử lý; buffer đầy thì producer chờ hoặc bị từ chối, buffer rỗng thì consumer chờ. Đồng bộ dựng trên mutex + condvar, hoặc semaphore đếm slot trống và item có sẵn; số consumer là tham số điều chỉnh mức song song. Trong backend, biến thể chuẩn là message queue có backpressure, giới hạn độ sâu và consumer tách rời, restart độc lập.",
+      "origin": "E. W. Dijkstra, 'Cooperating Sequential Processes' (1965/1968) — phát biểu bài toán và giải bằng semaphore.",
+      "related": [
+        "Mutex & Semaphore",
+        "Thread pool & pool exhaustion",
+        "Queue Backpressure"
+      ]
+    },
+    {
+      "term": "TCC (Try-Confirm-Cancel, giao dịch thử-xác nhận-hủy)",
+      "aliases": [
+        "Try-Confirm-Cancel",
+        "giao dịch thử-xác nhận-hủy",
+        "TCC pattern"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Đặt phòng khách sạn cần ba bước ở ba service: giữ phòng, trừ tiền, ghi hóa đơn. 2PC đòi giữ lock qua hai pha và không hợp với service chỉ mở API; Saga cần mọi bước cam kết rồi mới bù trừ, trong khi nghiệp vụ chỉ cho phép giữ chỗ tạm thời trước khi chốt thật. Vậy mô hình giao dịch nào cho phép đặt trước tài nguyên rồi mới xác nhận?",
+      "how": "TCC chia mỗi bước thành ba hành động: Try kiểm tra và giữ tài nguyên kèm hạn dùng, Confirm chốt vĩnh viễn (sau Confirm không còn lỗi nghiệp vụ, chỉ retry tới thành công), Cancel nhả tài nguyên đã giữ. Coordinator chỉ gọi Confirm khi mọi Try thành công; một Try hỏng thì Cancel các Try đã xong, có thể chạy nền sau khi hết hạn. Đổi lại, hệ thống chấp nhận trạng thái 'đã giữ, chưa chốt', nên cả ba hành động phải idempotent và có retry.",
+      "origin": "Đề xuất trong ngành thanh toán (Alipay/Alibaba, 2007); hiện thực tham chiếu: Seata (Alibaba, trước là Fescar, 2019) với TCC mode.",
+      "related": [
+        "Saga",
+        "2PC/3PC & distributed transaction",
+        "Exactly-once semantics"
+      ]
+    },
+    {
+      "term": "Work stealing (work-stealing scheduler, đánh cắp công việc)",
+      "aliases": [
+        "work stealing",
+        "đánh cắp công việc",
+        "work-stealing scheduler"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Server chạy task song song trên một thread pool, vài task nặng (parse file 100MB, tính toán) rơi vào một worker trong khi ba worker còn lại hết việc ngồi không; tải không đoán trước được vì task đến động. Đẩy hết vào một hàng đợi trung tâm thì mọi worker tranh CAS trên cùng một biến, thành điểm nghẽn mới. Cân tải động sao cho giao tiếp giữa các core rẻ nhất?",
+      "how": "Mỗi worker giữ deque riêng: đẩy và lấy việc ở đầu deque của mình theo LIFO (task vừa tạo còn nóng cache), khi rỗng thì đánh cắp từ đuôi deque của worker khác theo FIFO; thao tác đánh cắp là một CAS, chỉ xảy ra lúc worker rảnh nên hiếm. Kẻ bị đánh cắp lấy task cũ nhất, ít đụng cache nhất. Blumofe và Leiserson chứng minh thời gian kỳ vọng gần tối ưu so với scheduler biết trước tương lai.",
+      "origin": "Robert D. Blumofe & Charles E. Leiserson, 'Scheduling Multithreaded Computations by Work Stealing', FOCS 1994 / JACM 1999; dùng trong Java ForkJoinPool và Go runtime.",
+      "related": [
+        "Thread Pool Sizing",
+        "Actor model, CSP & goroutine",
+        "Context switch cost"
+      ]
+    },
+    {
+      "term": "Distributed cron / leader-based scheduling (không chạy trùng job)",
+      "aliases": [
+        "distributed cron",
+        "leader-based scheduling",
+        "cron phân tán",
+        "leader election + lease"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Service chạy 3 instance và có job đối soát lúc 0h, cả 3 cùng kích hoạt: gửi thông báo trùng 3 lần, tranh nhau update cùng bảng. Ghim job vào một instance 'chính' bằng tay thì instance đó chết là job im lặng dừng, không ai biết cho tới khi thiếu dữ liệu. Làm sao đảm bảo đúng một instance chạy job mỗi kỳ, kể cả khi instance đó chết giữa job?",
+      "how": "Leader-based scheduling: các instance tranh một lease có TTL trên coordination service (ZooKeeper/etcd) hoặc qua khóa trong DB; ai giữ lease được phép trigger job, lease gia hạn định kỳ và tự hết hạn khi node chết nên node khác tiếp quản sau vài giây. Job phải idempotent và có dedup window vì leader có thể chạy lại sau failover; nên thêm jitter khi mọi instance cùng chờ mốc thời gian để không cùng lúc đập vào khóa.",
+      "origin": "Không có paper gốc; hiện thực tham chiếu: Kubernetes CronJob (concurrencyPolicy), Quartz Scheduler (JDBCJobStore clustering, trigger recovery), Celery beat.",
+      "related": [
+        "Cron job & Scheduler",
+        "Leader election",
+        "Distributed lock & fencing token"
+      ]
+    },
+    {
+      "term": "Merkle tree (cây Merkle, so sánh replica)",
+      "aliases": [
+        "Merkle tree",
+        "cây Merkle",
+        "hash tree",
+        "anti-entropy tree"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Cụm Cassandra 100 node: node B restart sau sự cố và lệch dữ liệu với node A. So sánh từng key bằng cách truyền danh sách hash toàn bộ dữ liệu tốn cả GB băng thông mỗi lần repair chạy định kỳ hằng ngày, trong khi dữ liệu đổi liên tục nên snapshot không đứng yên. Tìm vùng lệch mà chỉ gửi metadata nhỏ hơn nhiều lần bằng cách nào?",
+      "how": "Merkle tree: băm từng key vào lá theo range, băm ghép cặp dần lên tới root. Hai replica so root; nếu khác thì đệ quy xuống các nhánh có hash khác nhau, cuối cùng chỉ truyền những key thực sự lệch, chi phí O(log n) mỗi lần so. Anti-entropy (repair) định kỳ so từng range bằng cây; mỗi lần ghi phải cập nhật hash trên đường đi tới root, và nén range để cây không phình.",
+      "origin": "Ralph Merkle, bằng sáng chế 1979 và 'A Digital Signature Based on a Conventional Encryption Function', CRYPTO '87; dùng cho anti-entropy trong Amazon Dynamo (SOSP 2007) và Cassandra.",
+      "related": [
+        "Gossip protocol",
+        "Read repair & hinted handoff",
+        "Eventual consistency"
+      ]
+    },
+    {
+      "term": "Two Generals Problem (bài toán hai vị tướng)",
+      "aliases": [
+        "hai vị tướng",
+        "Two Generals",
+        "bài toán hai vị tướng"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Hai service bắt tay xác nhận đơn hàng qua mạng có thể mất gói. Bên gửi chờ ACK cho chắc; ACK có thể mất nên bên nhận chờ ACK của ACK, rồi lại chờ tiếp. Câu hỏi thiết kế: có tồn tại giao thức hữu hạn nào để hai bên cùng biết chắc thời điểm thỏa thuận đã được cả hai xác nhận, trong khi kênh có thể nuốt mọi message cuối cùng?",
+      "how": "Không tồn tại, và bất khả thi này chứng minh được: giả sử có giao thức hữu hạn kết thúc an toàn, lập luận quy nạp chỉ ra luôn có message cuối cùng mà bên gửi không biết chắc đã tới, nên vẫn tồn tại vết chạy kết thúc mà một bên chưa chắc chắn. Hệ quả kỹ thuật: không thể đồng thuận atomic chỉ bằng ack trên kênh không tin cậy; thực tế chọn at-least-once kèm idempotency key để xử lý trùng thay vì theo đuổi 'biết chắc' tuyệt đối.",
+      "origin": "E. A. Akkoyunlu, K. Ekanadham, R. V. Huber, 'Some Constraints and Tradeoffs in the Design of Network Communications', SOSP 1975; phổ biến qua J. Gray, 'Notes on Data Base Operating Systems', 1978.",
+      "related": [
+        "FLP impossibility",
+        "Byzantine fault & BFT",
+        "TCP retransmission & RTO (fast retransmit, duplicate ACK)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "entries": [
+    {
+      "term": "Big-O notation & độ phức tạp tiệm cận",
+      "aliases": [
+        "Big O",
+        "time complexity",
+        "space complexity",
+        "asymptotic complexity"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Cần đánh giá quy mô tăng trưởng của thuật toán khi dữ liệu lớn mà không phụ thuộc máy cụ thể.",
+      "origin": "Donald Knuth, Landau (big-O notation) — phát triển từ lý thuyết toán học về tiệm cận",
+      "how": "Chỉ xét bậc tăng trưởng: O(1), O(log n), O(n), O(n log n), O(n^2), O(2^n); bỏ hằng số và thành phần bậc thấp; phân biệt best/average/worst.",
+      "related": []
+    },
+    {
+      "term": "Stack vs Heap (bộ nhớ, stack overflow)",
+      "aliases": [
+        "stack memory",
+        "heap memory",
+        "call stack"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Kiến thức phân vùng bộ nhớ ảnh hưởng đến lifetime, tốc độ, lỗi tràn bộ nhớ (stack overflow) và quản lý động.",
+      "origin": "",
+      "how": "Stack: LIFO, tự động allocate/free theo call stack, tốc độ cao, kích thước giới hạn. Heap: allocate động, phải quản lý (GC hoặc manual), lớn hơn nhưng có overhead; stack overflow xảy ra khi đệ quy sâu quá giới hạn stack.",
+      "related": [
+        "Garbage collection cơ bản (mark & sweep, reference counting)"
+      ]
+    },
+    {
+      "term": "UTF-8 & Unicode (code point, BOM)",
+      "aliases": [
+        "Unicode",
+        "UTF-8",
+        "UTF-16",
+        "UTF-32"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Cần biểu diễn đa ngôn ngữ nhất quán giữa hệ thống, tránh lỗi mã hóa/giải mã.",
+      "origin": "Unicode Consortium (1991+); UTF-8 thiết kế bởi Ken Thompson, Rob Pike (1992).",
+      "how": "Unicode ánh xạ ký tự → code point (U+...). UTF-8 là biến chiều, backward compatible với ASCII, 1-4 byte; BOM (Byte Order Mark) chỉ có ý nghĩa trong một số định dạng file (UTF-8 BOM ít dùng).",
+      "related": []
+    },
+    {
+      "term": "Base64 & hex encoding",
+      "aliases": [
+        "base64",
+        "hexadecimal",
+        "hex",
+        "binary-to-text"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Chuyển dữ liệu nhị phân an toàn qua kênh chỉ chấp nhận văn bản (email, HTTP header/body, token).",
+      "origin": "Base64: MIME (RFC 1421, 2045); Hex: phổ biến từ thời sơ khai máy tính.",
+      "how": "Hex (base16): mỗi byte → 2 hex char (tiện đọc). Base64: nhóm 3 byte → 4 char ASCII (nén tốt hơn), padding '='; dùng khi cần compact hơn hex.",
+      "related": [
+        "HTTP"
+      ]
+    },
+    {
+      "term": "Sync/Async vs Blocking/Non-blocking (ma trận 2x2)",
+      "aliases": [
+        "synchronous",
+        "asynchronous",
+        "blocking",
+        "non-blocking"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Kết hợp 2 trục (sync/async về luồng điều khiển; blocking/non-blocking về tài nguyên) thường bị nhầm lẫn khi thiết kế I/O.",
+      "origin": "",
+      "how": "Blocking/Non-blocking: caller có bị chờ thread/resource không. Sync/Async: caller có nhận kết quả ngay (sync) hay nhận sau qua callback/promise/future (async). Ví dụ: non-blocking I/O + event loop → async hiệu quả; blocking + sync đơn giản nhưng kém mở rộng.",
+      "related": [
+        "Event loop"
+      ]
+    },
+    {
+      "term": "Garbage collection cơ bản (mark & sweep, reference counting)",
+      "aliases": [
+        "GC",
+        "garbage collection",
+        "mark and sweep",
+        "reference counting"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Tự động thu hồi bộ nhớ tránh leak, nhưng GC gây stop-the-world/ngắt quãng cần hiểu để tránh vấn đề hiệu năng.",
+      "origin": "John McCarthy (1959) — reference counting/GC lý thuyết; mark-and-sweep George E. Collins (1960).",
+      "how": "Reference counting: đếm tham chiếu, giải phóng khi 0 (dễ cycle). Mark-and-sweep: đánh dấu root → traverse → quét bỏ đánh dấu (giải quyết cycle). Modern GC: generational, incremental/concurrent để giảm pause.",
+      "related": []
+    },
+    {
+      "term": "User mode vs Kernel mode (ranh giới syscall)",
+      "aliases": [
+        "user space",
+        "kernel space",
+        "ring 0",
+        "system call"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Cần phân biệt ranh giới bảo mật/ổn định: ứng dụng không thể truy cập trực tiếp phần cứng, phải qua syscall.",
+      "origin": "Intel x86 protection rings (1978); UNIX thiết kế user/kernel rõ rệt.",
+      "how": "User mode: quyền hạn hạn chế. Kernel mode (ring 0): toàn quyền. Khi cần I/O/điều khiển phần cứng: trap → syscall (read/write/open) → context switch; overhead syscall nhỏ nhưng đáng kể nếu gọi nhiều (batching).",
+      "related": [
+        "Context switch cost"
+      ]
+    },
+    {
+      "term": "Hash table & collision resolution (load factor, rehash)",
+      "aliases": [
+        "hash table",
+        "hash map",
+        "dictionary",
+        "collision"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Tra cứu O(1) trung bình rất hữu ích; cần xử lý va chạm và duy trì load factor để tránh suy giảm hiệu năng.",
+      "origin": "Hans Peter Luhn (1953) ý tưởng; hash table ứng dụng rộng rãi từ 1950s.",
+      "how": "Hash function ánh xạ key→index. Collision: chaining (linked list) hoặc open addressing (linear/quadratic probing, double hashing). Load factor = entries/buckets; vượt ngưỡng → rehash (resize + rehash keys). Chaining đơn giản, open addressing tiết kiệm bộ nhớ hơn với tải hợp lý.",
+      "related": []
+    },
+    {
+      "term": "Virtual memory & paging (page table, TLB)",
+      "aliases": [
+        "virtual memory",
+        "paging",
+        "page table",
+        "TLB",
+        "MMU"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Cho phép process có không gian địa chỉ riêng, lớn hơn RAM, isolation, demand paging; trade-off giữa không gian/hiệu năng (page fault).",
+      "origin": "Atlas computer (1960s, Ferranti) — virtual memory đầu tiên; paging phổ biến từ MULTICS/UNIX.",
+      "how": "MMU dịch virtual address → physical qua page tables (multi-level). TLB (Translation Lookaside Buffer) cache mapping hot để giảm truy vấn memory. Page fault: không có trang trong RAM → load từ disk (demand paging); thrashing khi quá nhiều page fault.",
+      "related": []
+    },
+    {
+      "term": "IEEE 754 floating point (precision, NaN)",
+      "aliases": [
+        "IEEE 754",
+        "floating point",
+        "float",
+        "double",
+        "NaN"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Số thực nhị phân không biểu diễn chính xác mọi decimal (0.1+0.2!=0.3); cần hiểu precision, rounding, đặc biệt trị NaN/Infinity.",
+      "origin": "IEEE 754-1985 (William Kahan chủ trì) — chuẩn hoá biểu diễn số thực.",
+      "how": "Cấu trúc sign/exponent/mantissa (binary scientific). Single/double precision; floating point bị rounding error. So sánh: tránh == trực tiếp với float, dùng epsilon. NaN (Not a Number), Inf, denormal — có ý nghĩa đặc biệt trong tính toán.",
+      "related": []
+    },
+    {
+      "term": "Integer overflow & two's complement",
+      "aliases": [
+        "integer overflow",
+        "two's complement",
+        "signed integer",
+        "wrap around"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Overflow gây wrap-around ngầm (undefined behavior trong C một số trường hợp, hoặc wrap 2's complement) → lỗi bảo mật/logic nghiêm trọng.",
+      "origin": "John von Neumann, von Neumann architecture; two's complement phổ biến từ 1960s.",
+      "how": "Two's complement biểu diễn signed integer hiệu quả (cùng phép cộng). Overflow: kết quả vượt bit width → modulo 2^n (wrap). Cần check bounds (checked arithmetic), dùng type đủ rộng, hoặc sanitizer; tránh dựa vào wrap.",
+      "related": []
+    },
+    {
+      "term": "CPU scheduling (CFS, preemption, priority inversion)",
+      "aliases": [
+        "CPU scheduling",
+        "scheduler",
+        "CFS",
+        "preemption",
+        "context switch"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Fairness, latency, throughput cần cân bằng; preemption ngăn starving, priority inversion cần tránh (mutex inheritance).",
+      "origin": "Early OS (batch); modern: Linux CFS (Completely Fair Scheduler, Ingo Molnar ~2007).",
+      "how": "Schedulers: FCFS, SJF, RR, Priority, Multi-level. Preemptive vs non-preemptive. Linux CFS dùng vruntime (virtual runtime) để phân bổ công bằng. Priority inversion: task cao chờ tài nguyên task thấp giữ → giải quyết bằng priority inheritance/protocol.",
+      "related": [
+        "Context switch cost"
+      ]
+    },
+    {
+      "term": "Interrupt vs polling",
+      "aliases": [
+        "interrupt",
+        "polling",
+        "IRQ",
+        "hardware interrupt"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "I/O hiệu năng vs đơn giản: polling tốn CPU liên tục, interrupt event-driven hiệu quả hơn nhưng phức tạp (latency, interrupt storm).",
+      "origin": "",
+      "how": "Polling (busy-wait): CPU hỏi thiết bị liên tục. Interrupt: thiết bị báo khi sẵn sàng (IRQ) → CPU context switch vào ISR. Hybrid: polling ngắn hạn giảm interrupt storm (NIC high throughput).",
+      "related": [
+        "Non-blocking I/O",
+        "Spinlock & busy-wait (khóa quay, spin-wait)"
+      ]
+    },
+    {
+      "term": "Zombie & orphan process (reaping, SIGCHLD)",
+      "aliases": [
+        "zombie process",
+        "orphan process",
+        "defunct",
+        "SIGCHLD",
+        "waitpid"
+      ],
+      "level": "intermediate",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "Zombie chiếm entry trong process table (PID) → có thể cạn kiệt PID nếu không reaped; orphan được init/adopted xử lý.",
+      "origin": "",
+      "how": "When child exits before parent calls wait(), it becomes a zombie (defunct) until reaped. Orphan: parent exits while child alive → adopted by PID 1 (init/systemd). Reap bằng wait()/waitpid() hoặc signal handler SIGCHLD; tránh bằng double-fork hoặc process supervision.",
+      "related": []
+    },
+    {
+      "term": "Monotonic clock vs wall clock (NTP drift)",
+      "aliases": [
+        "monotonic clock",
+        "wall clock",
+        "real-time clock",
+        "NTP"
+      ],
+      "level": "intermediate",
+      "domain": "Nền tảng máy tính",
+      "problem": "Đo thời lượng (elapsed) phải dùng monotonic (tăng liên tục, không bị chỉnh), đo thời điểm tuyệt đối (timestamp) dùng wall clock có thể bị NTP drift/adjustment.",
+      "origin": "",
+      "how": "Wall clock (real-time): có thể bị set lại (NTP, admin) → backward/forward. Monotonic: chỉ tăng, không phụ thuộc hệ thống time change, lý tưởng đo duration (benchmark, timeout, deadline). Distributed systems: dùng monotonic + clock skew awareness; lưu UTC cho timestamps.",
+      "related": [
+        "Latency SLO"
+      ]
+    },
+    {
+      "term": "OSI model (7 tầng)",
+      "aliases": [
+        "OSI 7 layers",
+        "Open Systems Interconnection",
+        "physical layer",
+        "data link",
+        "network",
+        "transport",
+        "session",
+        "presentation",
+        "application"
+      ],
+      "level": "basic",
+      "domain": "Mạng & Giao thức",
+      "problem": "Mô hình tham chiếu giúp phân tích/debug mạng (encapsulation, trách nhiệm tầng), tương phản với TCP/IP 4 tầng.",
+      "origin": "ISO (International Organization for Standardization) — OSI Reference Model ISO 7498 (1984).",
+      "how": "7 tầng: Physical (1), Data Link (2), Network (3), Transport (4), Session (5), Presentation (6), Application (7). Mỗi tầng thêm header/trailer (encapsulation). TCP/IP gộp 5-6-7; OSI lý thuyết, TCP/IP thực tế. Dùng để mô tả trách nhiệm khi debug (firewall L3/L4, TLS L6).",
+      "related": []
+    },
+    {
+      "term": "ISO 8601 & timezone handling (lưu UTC, DST)",
+      "aliases": [
+        "ISO 8601",
+        "UTC",
+        "timezone",
+        "DST",
+        "timestamp"
+      ],
+      "level": "basic",
+      "domain": "Nền tảng máy tính",
+      "problem": "Lưu/trao đổi thời gian đa vùng gây nhầm lẫn DST, offset; best practice lưu UTC, hiển thị theo timezone người dùng.",
+      "origin": "ISO 8601:1988, cập nhật nhiều lần (2000, 2004, 2019).",
+      "how": "ISO 8601: 2025-10-09T10:30:00Z (UTC) hoặc +07:00. Lưu trong DB: UTC (timestamp/timestamptz). Tránh lưu local time không offset. Xử lý DST cẩn thận (ambiguous/non-existent times). Ứng dụng: parse với timezone-aware, format theo locale.",
+      "related": []
+    },
+    {
+      "term": "Memory model & happens-before (memory visibility)",
+      "aliases": [
+        "memory model",
+        "happens-before",
+        "memory visibility",
+        "data race",
+        "atomicity"
+      ],
+      "level": "advanced",
+      "domain": "Phân tán & Đồng thời",
+      "problem": "CPU và trình biên dịch tự sắp xếp lại thứ tự lệnh, mỗi lõi có cache riêng nên ghi của thread này chưa hiện ra cho thread khác: hai thread cộng chung biến đếm không đồng bộ cho kết quả sai, cờ báo đã xử lý bị đọc trễ. Lỗi phụ thuộc kiến trúc máy và mức tối ưu biên dịch nên khó tái hiện trên máy dev.",
+      "origin": "Leslie Lamport (happens-before, sequential consistency); Java Memory Model (JSR-133), C++11 memory model.",
+      "how": "Happens-before: quan hệ đảm bảo thứ tự/visibility (lock release→acquire, volatile/read-write, thread start/join, sync). Memory barrier/fence ngăn reorder. Atomic operations (compare-and-swap) cơ sở lock-free. Data race: 2 thread access shared non-atomic không sync → undefined/bug khó tái hiện.",
+      "related": [
+        "Race condition",
+        "Atomic operation & CAS",
+        "Mutex & Semaphore"
+      ]
+    }
+  ]
+}
