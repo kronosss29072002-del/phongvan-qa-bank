@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>18 Ý Tưởng Side Project Java Spring Boot — Giải Quyết Vấn Đề Thực Tế</title>
+<meta name="description" content="18 ý tưởng side project Spring Boot giải quyết vấn đề thật, xếp theo điểm phỏng vấn / khả thi / realness. Workflow 10 agent, corpus 1962 Q&A phỏng vấn Java. 16.10.2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:wght@400;600;700&display=swap">
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:#F2F7FA; --surface:#FFFFFF; --text:#0F202B; --text-muted:#506878;
+  --primary:#046688; --primary-btn:#025F7F; --fg-on-primary:#F3F8FA;
+  --accent:#A65A07; --accent-bg:#FFE4D0; --accent-ink:#743D04;
+  --border-subtle:#CDD6DB; --border-strong:#818E97; --focus:#AD5D00;
+  --hover-blend:#000000;
+  --font-sans:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-serif:"Lora",Georgia,"Times New Roman",serif;
+  --font-mono:ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#081016; --surface:#131C24; --text:#E2E9EE; --text-muted:#8E9CA5;
+    --primary:#4FBAE8; --primary-btn:#4FBAE8; --fg-on-primary:#081016;
+    --accent:#FEB379; --accent-bg:#4A2604; --accent-ink:#FEE2CD;
+    --border-subtle:#2C373F; --border-strong:#5A6C79; --focus:#FFA65F;
+    --hover-blend:#FFFFFF;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#081016; --surface:#131C24; --text:#E2E9EE; --text-muted:#8E9CA5;
+  --primary:#4FBAE8; --primary-btn:#4FBAE8; --fg-on-primary:#081016;
+  --accent:#FEB379; --accent-bg:#4A2604; --accent-ink:#FEE2CD;
+  --border-subtle:#2C373F; --border-strong:#5A6C79; --focus:#FFA65F;
+  --hover-blend:#FFFFFF;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{overflow-x:clip}
+body{
+  margin:0; overflow-x:clip;
+  background:var(--bg); color:var(--text);
+  font-family:var(--font-sans); font-size:1rem; line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+a{color:var(--primary)}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus); outline-offset:2px; border-radius:inherit}
+.wrap{max-width:1200px; margin-inline:auto; padding-inline:1rem}
+@media (min-width:768px){.wrap{padding-inline:clamp(1.5rem,4vw,2.5rem)}}
+.skip{
+  position:absolute; left:1rem; top:-100px; z-index:10;
+  background:var(--surface); color:var(--text);
+  padding:.5rem .75rem; border:1px solid var(--border-strong); border-radius:.375rem;
+}
+.skip:focus{top:.5rem}
+.sr-only{
+  position:absolute; width:1px; height:1px; margin:-1px;
+  overflow:hidden; clip-path:inset(50%); white-space:nowrap;
+}
+.masthead{padding-block:clamp(1.5rem,4vw,3rem)}
+.kicker{
+  font-family:var(--font-mono); font-size:.8rem; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--text-muted); margin:0 0 .75rem;
+}
+h1{
+  font-family:var(--font-serif); font-weight:700;
+  font-size:clamp(1.75rem,5vw,2.75rem); line-height:1.2;
+  margin:0 0 1rem; color:var(--text); max-width:28ch;
+}
+.deck{
+  margin:0 0 1.5rem; color:var(--text-muted);
+  font-size:clamp(1rem,2vw,1.125rem); max-width:64ch;
+}
+.tools{display:flex; gap:.75rem; flex-wrap:wrap; margin:0 0 1.25rem}
+.stats{
+  list-style:none; margin:0; padding:0;
+  display:flex; flex-wrap:wrap; gap:.5rem 1.75rem;
+}
+.stats li{display:flex; flex-direction:column; gap:.125rem}
+.stats b{
+  font-family:var(--font-mono); font-variant-numeric:tabular-nums;
+  font-size:1.25rem; font-weight:600; color:var(--primary);
+}
+.stats span{font-size:.8125rem; color:var(--text-muted)}
+@media (min-width:1024px){
+  .masthead .inner{
+    display:grid; grid-template-columns:1fr auto;
+    grid-template-areas:"words tools" "stats stats";
+    column-gap:2.5rem; row-gap:1.25rem;
+  }
+  .masthead .words{grid-area:words}
+  .masthead .tools{grid-area:tools; margin:0; align-self:start}
+  .masthead .stats{grid-area:stats}
+}
+.btn{
+  font:inherit; font-size:.875rem; padding:.375rem .75rem;
+  border:1px solid var(--border-strong); border-radius:.375rem;
+  background:var(--surface); color:var(--text); cursor:pointer;
+}
+.btn:hover{background:color-mix(in oklch,var(--primary) 88%,var(--hover-blend)); color:var(--fg-on-primary); border-color:var(--primary-btn)}
+.btn:active{filter:brightness(.92)}
+.chip{
+  font:inherit; font-size:.875rem; padding:.3rem .8rem;
+  border:1px solid var(--border-strong); border-radius:999px;
+  background:var(--surface); color:var(--text); cursor:pointer;
+}
+.chip:hover{background:color-mix(in oklch,var(--primary) 88%,var(--hover-blend)); color:var(--fg-on-primary); border-color:var(--primary-btn)}
+.chip:active{filter:brightness(.92)}
+.chip[aria-pressed="true"]{
+  background:var(--primary-btn); color:var(--fg-on-primary);
+  border-color:var(--primary-btn);
+}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:var(--fg-on-primary)}
+.filterbar{
+  padding-block:1rem;
+  display:flex; flex-wrap:wrap; align-items:center; gap:.75rem 1rem;
+}
+.filterbar .chips{display:flex; flex-wrap:wrap; gap:.5rem}
+.filterbar input[type="search"]{
+  font:inherit; font-size:.9375rem; padding:.375rem .75rem;
+  min-width:min(100%,16rem); flex:1 1 12rem;
+  background:var(--surface); color:var(--text);
+  border:1px solid var(--border-strong); border-radius:.375rem;
+}
+.filterbar input::placeholder{color:var(--text-muted); opacity:1}
+.count{
+  font-family:var(--font-mono); font-size:.875rem; color:var(--text-muted);
+  white-space:nowrap;
+}
+main{padding-bottom:3rem}
+section{margin-top:2.75rem; scroll-margin-top:1rem}
+h2{
+  font-family:var(--font-serif); font-weight:700;
+  font-size:clamp(1.25rem,3vw,1.625rem); line-height:1.3;
+  margin:0 0 .75rem; color:var(--text);
+}
+h3{
+  font-family:var(--font-serif); font-weight:600;
+  font-size:1.0625rem; line-height:1.35; margin:0 0 .375rem; color:var(--text);
+}
+p{margin:.375rem 0 .75rem; max-width:72ch}
+.lede{color:var(--text-muted)}
+ul.plain{margin:.375rem 0 .75rem; padding-left:1.25rem; max-width:80ch}
+ul.plain li{margin:.25rem 0; overflow-wrap:anywhere}
+code{
+  font-family:var(--font-mono); font-size:.875em;
+  background:var(--bg); border:1px solid var(--border-subtle);
+  border-radius:.25rem; padding:.0625rem .3em;
+}
+.tablewrap{overflow-x:auto; margin-top:.75rem}
+table{border-collapse:collapse; width:100%; min-width:52rem; font-size:.9375rem}
+caption{
+  text-align:left; font-size:.875rem; color:var(--text-muted);
+  padding-bottom:.5rem;
+}
+th,td{text-align:left; vertical-align:top; padding:.5rem .75rem; border-bottom:1px solid var(--border-subtle)}
+thead th{
+  font-family:var(--font-mono); font-size:.75rem; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-muted); font-weight:600;
+}
+tbody th{
+  font-family:var(--font-mono); font-variant-numeric:tabular-nums;
+  color:var(--primary); font-weight:600; white-space:nowrap;
+}
+td.name a{font-weight:600; text-decoration:none}
+td.name a:hover{text-decoration:underline}
+td.prob{color:var(--text-muted)}
+td.num{font-family:var(--font-mono); font-variant-numeric:tabular-nums; white-space:nowrap}
+#projects{
+  list-style:none; margin:.75rem 0 0; padding:0;
+  display:grid; gap:clamp(1rem,2vw,2rem);
+}
+@media (min-width:768px){#projects{grid-template-columns:1fr 1fr}}
+.rank{
+  background:var(--surface); border-radius:.5rem;
+  padding:clamp(1rem,2vw,1.5rem);
+  display:grid; grid-template-columns:minmax(2.5rem,auto) 1fr;
+  gap:.5rem clamp(.75rem,1.5vw,1.25rem);
+  align-content:start;
+  overflow-wrap:anywhere;
+}
+.rank .num{
+  font-family:var(--font-mono); font-variant-numeric:tabular-nums;
+  font-size:1rem; font-weight:600; color:var(--primary); display:block;
+}
+.rank .content{display:grid; grid-template-rows:auto 1fr auto; gap:.625rem; min-width:0}
+.rank .head{display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem .75rem}
+.rank .head h3{margin:0}
+.rank .lvl{
+  font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-muted);
+  border:1px solid var(--border-strong); border-radius:999px; padding:.125rem .5rem;
+}
+.rank .scores{
+  font-family:var(--font-mono); font-size:.75rem; color:var(--text-muted);
+  font-variant-numeric:tabular-nums; white-space:nowrap;
+}
+.problem{margin:0; font-size:.9375rem}
+.why{margin:0; font-size:.875rem; color:var(--text-muted)}
+.stack{list-style:none; display:flex; flex-wrap:wrap; gap:.375rem; margin:0; padding:0}
+.stack li{
+  font-size:.75rem; background:var(--bg); color:var(--text);
+  border-radius:999px; padding:.1875rem .625rem;
+}
+.note{color:var(--text-muted); font-size:.8125rem}
+.mvp{font-size:.875rem; margin:.25rem 0 0}
+.mvp strong{font-weight:600}
+.risk{
+  font-size:.8125rem; color:var(--accent-ink); background:var(--accent-bg);
+  border-radius:.375rem; padding:.5rem .75rem; margin:.5rem 0 0; max-width:none;
+}
+.rank-hero{grid-column:1/-1}
+.rank-hero .problem{
+  font-family:var(--font-serif); font-size:clamp(1.375rem,3.5vw,2rem);
+  line-height:1.3; color:var(--text); margin:.25rem 0 .5rem;
+}
+.rank-hero .head h3{font-size:clamp(1.25rem,3vw,1.5rem)}
+.rank-strip{grid-column:1/-1; padding-block:clamp(.875rem,1.5vw,1.125rem)}
+@media (min-width:768px){
+  .rank-strip .content{
+    grid-template-rows:none;
+    grid-template-columns:minmax(14rem,1fr) 2fr;
+    gap:.375rem 1.5rem; align-items:baseline;
+  }
+  .rank-strip .head{grid-column:1}
+  .rank-strip .body{grid-column:2; display:grid; gap:.375rem}
+  .rank-strip .foot{grid-column:1/-1}
+}
+.rank-card{grid-column:span 1}
+.rank-card.wide{grid-column:1/-1}
+.rank-row{grid-column:1/-1; padding-block:clamp(.75rem,1.2vw,1rem)}
+.rank-row .content{gap:.375rem}
+.rank-row .problem{font-size:.875rem}
+.rank-row .why{font-size:.8125rem}
+#empty,#db-empty{
+  background:var(--surface); border-radius:.5rem;
+  padding:1.25rem 1.5rem; margin-top:.75rem; color:var(--text-muted);
+}
+.callout{
+  background:var(--accent-bg); color:var(--accent-ink);
+  border-radius:.5rem; padding:.875rem 1.125rem; margin:.75rem 0;
+  font-size:.9375rem; max-width:72ch;
+}
+.callout p{margin:0; color:inherit}
+.callout code, .callout em{color:inherit}
+.note-line{font-size:.875rem; color:var(--text-muted)}
+details{margin:.5rem 0; max-width:90ch}
+summary{cursor:pointer; font-weight:600; font-size:.9375rem}
+details ul{margin:.375rem 0 .75rem; padding-left:1.25rem}
+details li{font-size:.8125rem; margin:.1875rem 0; word-break:break-word}
+footer{
+  border-top:1px solid var(--border-subtle);
+  padding-block:1.5rem 2.5rem; margin-top:1rem;
+}
+footer p{font-size:.8125rem; color:var(--text-muted); max-width:80ch; margin:.25rem 0}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    transition-duration:.01ms !important; animation-duration:.01ms !important;
+    animation-iteration-count:1 !important; scroll-behavior:auto !important;
+  }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Bỏ qua nội dung chính</a>
+
+<header class="masthead">
+  <div class="wrap inner">
+    <div class="words">
+      <p class="kicker">Side project Spring Boot · 16.10.2026 · 10 lượt agent</p>
+      <h1>18 ý tưởng side project Java Spring Boot giải quyết vấn đề thật</h1>
+      <p class="deck">Không phải CRUD toy. Mỗi ý tưởng được chấm theo 3 thang 0–10 (tín hiệu phỏng vấn, khả thi solo, mức độ pain thật) rồi tổng hợp thành điểm chuẩn hóa (phỏng vấn ×0.35 + realness ×0.4 + khả thi ×0.25). Workflow 10 agent chạy 4 pha; corpus ground truth là 1962 Q&amp;A phỏng vấn Java trong chính repo này.</p>
+    </div>
+    <div class="tools">
+      <button type="button" class="btn" id="theme" aria-live="polite">Giao diện: hệ thống</button>
+    </div>
+    <ul class="stats">
+      <li><b>30</b><span>ý tưởng thô</span></li>
+      <li><b>18</b><span>sau dedup</span></li>
+      <li><b>8</b><span>vào top chốt</span></li>
+      <li><b>1962</b><span>Q&amp;A phỏng vấn Java</span></li>
+      <li><b>10</b><span>lượt agent, 708k token</span></li>
+    </ul>
+  </div>
+</header>
+
+<nav class="filterbar wrap" aria-label="Lọc ý tưởng">
+  <div class="chips" role="group" aria-label="Lọc theo nhóm">
+    <button type="button" class="chip" data-filter="all" aria-pressed="true">Tất cả</button>
+    <button type="button" class="chip" data-filter="top8" aria-pressed="false">Top 8</button>
+    <button type="button" class="chip" data-filter="event" aria-pressed="false">Sự kiện / outbox</button>
+    <button type="button" class="chip" data-filter="concurrency" aria-pressed="false">Đồng thời</button>
+    <button type="button" class="chip" data-filter="domain" aria-pressed="false">Domain nghiệp vụ</button>
+    <button type="button" class="chip" data-filter="platform" aria-pressed="false">Nền tảng / API</button>
+  </div>
+  <input type="search" id="q" placeholder="Tìm: outbox, SePay, lịch, rate limit…" aria-label="Tìm trong danh sách ý tưởng">
+  <span class="count" id="count">18 / 18 ý tưởng</span>
+  <span id="ideas-status" class="sr-only" role="status"></span>
+</nav>
+
+<main id="main" class="wrap">
+  <section aria-labelledby="khuyen">
+    <h2 id="khuyen">Nên bắt đầu từ đâu</h2>
+    <div class="callout"><p>Điểm chuẩn hóa cao nhất là <strong>Đối soát ngân hàng bằng webhook idempotent + outbox</strong> (7.675). MVP 2–3 tuần với SePay sandbox hoặc fixture payload, Redpanda docker-compose; repo đã có sẵn <code>.claude/commands/integrate/sepay.md</code> và <code>sepay-webhook-verify.js</code>, không bắt đầu từ zero. Corpus phỏng vấn trong repo (1962 Q&amp;A) ghi nguyên văn ứng viên middle: <em>“…hoặc dùng outbox pattern để đảm bảo message không bị mất giữa database và message queue. Em chưa có cơ hội làm đúng chuẩn nên em không dám nói là đã làm.”</em> Rủi ro phải chấp nhận: SePay và MISA đã tự khớp giao dịch vào đơn hàng — nên đóng khung MVP là đối soát riêng cho shop Facebook/Zalo 1–3 người đang tick Sheet mỗi tối, tự host bằng Spring. Nếu muốn pain người dùng nặng hơn thị trường ngay từ đầu, ứng viên kế là <strong>SổNợ Online</strong> (7.6): pain quan sát được ở khu chợ, nhưng MVP 3–4 tuần và persona khó adopt web app self-host.</p></div>
+    <p class="note-line">Điểm tổng hợp lấy từ journal của workflow, không phải chấm tay lại. Công thức: phỏng vấn ×0.35 + realness ×0.4 + khả thi ×0.25 trên thang 0–10.</p>
+  </section>
+
+  <section aria-labelledby="tongquat">
+    <h2 id="tongquat">Bảng tổng hợp 18 ý tưởng</h2>
+    <p class="lede">Bấm tên để nhảy tới thẻ chi tiết. Bộ lọc và ô tìm kiếm phía trên tác động cả bảng lẫn danh sách.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Bảng tổng hợp 18 ý tưởng, cuộn ngang được">
+      <table>
+        <caption>Xếp theo điểm tổng hợp, dữ liệu workflow 16.10.2026</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ý tưởng</th>
+            <th scope="col">Tổng</th>
+            <th scope="col">PV</th>
+            <th scope="col">KT</th>
+            <th scope="col">Thật</th>
+            <th scope="col">Vấn đề</th>
+          </tr>
+        </thead>
+        <tbody id="summary-body"></tbody>
+      </table>
+    </div>
+    <p id="table-empty" class="note-line" hidden>Không ý tưởng nào khớp bộ lọc.</p>
+  </section>
+
+  <section aria-labelledby="chitiet">
+    <h2 id="chitiet">Chi tiết từng ý tưởng</h2>
+    <p class="lede">Thẻ đầu (hero) là đề xuất bắt đầu ngay; 2–4 là dải ngang; 5–8 xếp hai cột; 9–18 là hàng gọn. Mỗi thẻ có vấn đề, stack Spring, phạm vi MVP và rủi ro.</p>
+    <ol id="projects"></ol>
+    <p id="empty" hidden>Không ý tưởng nào khớp bộ lọc hiện tại.</p>
+  </section>
+
+  <section aria-labelledby="congthuc">
+    <h2 id="congthuc">Ba thang chấm là gì</h2>
+    <h3>Phỏng vấn (0–10)</h3>
+    <p>Mức ý tưởng này trả lời được câu JD Java backend hỏi thật. Idea top cùng đúng lỗ hổng corpus ghi nhận: ứng viên middle trượt khi được hỏi cách đưa message an toàn từ DB sang queue.</p>
+    <h3>Khả thi (0–10)</h3>
+    <p>Solo làm xong MVP trong 2–5 tuần với dependency kiểm soát được (sandbox, fixture, docker-compose), không cần team, không cần data thật của người dùng khác.</p>
+    <h3>Realness (0–10)</h3>
+    <p>Pain có persona cụ thể và cách giải quyết hiện tại đang đau (Sheet, sổ tay, Zalo). Idea có thể thật nhưng đối thủ free/rẻ đã lấp đầy thì bị trừ điểm — ví dụ SePay/MISA đã tự khớp tiền về đơn.</p>
+  </section>
+
+  <section aria-labelledby="hong">
+    <h2 id="hong">Lỗ hổng mà 18 ý tưởng chưa lấp</h2>
+    <p class="lede">Critic cuối của workflow liệt kê 6 khoảng trống. Nếu bạn muốn đi ngược danh sách và làm thứ không ai làm, chọn một trong các mục dưới.</p>
+    <ul class="plain">
+      <li>Offline-first & conflict resolution khi mạng yếu: chỉ POS HKD nhắc 'offline queue stub', không idea nào làm sync algorithm thật (2 thiết bị offline ghi cùng lúc) — quan trọng với hộ KD VN và là câu hỏi system design hiếm ai có</li><li>Observability production-grade: mọi idea mới có structured logging, không idea nào cover metrics (Prometheus/Grafana), distributed tracing, SLO/alerting — Log Shelf chỉ gom log text, không đo lỗi theo thời gian thực</li><li>Bảo mật chiều sâu beyond JWT: không idea nào cover OWASP (IDOR, CSRF, injection), NĐ 13/2023 về bảo vệ dữ liệu cá nhân — trong khi LịchBook/SổNợ lưu dữ liệu khách hàng thật, RBAC có nhưng không ai test permission/audit trail bằng kỹ thuật</li><li>Go-to-market &amp; vận hành thương mại: 3 giám khảo đều chấm WTP nhưng chưa có ý tưởng nào đề xuất kế hoạch phân phối tới persona 52 tuổi, chi phí infra/deployment thực tế hoặc mô hình pricing hợp lý — góc thương mại cần làm rõ thêm.</li><li>AI/OCR/NLP làm lõi: scan hóa đơn (chỉ là stretch của Tiền Chung), gợi ý mức nhắc nợ, chống fraud vote bằng tín hiệu hành vi — chưa idea nào đưa AI vào phần cốt lõi</li><li>Frontend/mobile UX demo end-to-end: cả 18 idea đều backend-centric; persona không rành công nghệ cần UI chạy được để demo phỏng vấn — portfolio Spring Boot giờ nào cũng cần ít nhất 1 trang demo React/thymeleaf chỉn chu</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="phuongphap">
+    <h2 id="phuongphap">Phương pháp và dữ liệu đã xác minh</h2>
+
+    <h3>Thứ tự đã chạy</h3>
+    <p>Workflow 4 pha, 10 lượt agent, 707.990 token subagent, 196 tool call. Ideate 5 lens song song sinh 30 ý tưởng → Dedup còn 18 → Judge 3 giám khảo độc lập (phỏng vấn, khả thi, realness — mỗi giám khảo chấm đủ 18/18) → Synthesize chốt top 8 và recommendation. Điểm tổng hợp trong trang này khớp journal từng giám khảo tới chữ số thập phân thứ 3.</p>
+
+    <h3>Corpus ground truth</h3>
+    <p>Số liệu đếm lại trên <code>phongvan_qa_java.html</code> (1962 entry Q&amp;A JSON, key q/a/topic/level/note), ngày 16.10.2026:</p>
+    <ul class="plain">
+      <li><strong>47</strong> entry nhắc Kafka — tín hiệu JD hỏi cao, ứng viên hay nói “chưa làm”.</li>
+      <li><strong>17</strong> entry nhắc <code>@Transactional</code>.</li>
+      <li><strong>32</strong> entry nhắc Redis; <strong>7</strong> Saga; <strong>5</strong> idempotent; <strong>3</strong> optimistic; <strong>3</strong> webhook; <strong>3</strong> outbox.</li>
+      <li>Trích dẫn trực tiếp (topic SQL, level middle): <em>“…hoặc dùng outbox pattern để đảm bảo message không bị mất giữa database và message queue. Em chưa có cơ hội làm đúng chuẩn nên em không dám nói là đã làm.”</em></li>
+      <li>Trích dẫn trực tiếp (topic Khác, level intern): <em>“…chỉ cho phép tối đa 60 request mỗi phút cho một client. Đây là những kiến thức hệ thống mà em chưa học tới.”</em></li>
+    </ul>
+    <p class="note-line">Lưu ý độ hiếm: “outbox” chỉ xuất hiện 3/1962 entry — không phải chủ đề tràn lan. Kafka mới là tín hiệu volume. Ý tưởng #1 nhắm đúng chỗ ít người trả lời được, không phải chỗ nhiều người nhắc.</p>
+
+    <h3>Scaffolding đã có trong repo</h3>
+    <p>Ý tưởng #1 không bắt đầu từ zero:</p>
+    <ul class="plain">
+      <li><code>.claude/commands/integrate/sepay.md</code> — slash command kích hoạt skill tích hợp SePay.</li>
+      <li><code>.claude/skills/payment-integration/scripts/sepay-webhook-verify.js</code> — script verify webhook SePay (5.5KB).</li>
+    </ul>
+
+    <h3>Giới hạn</h3>
+    <ul class="plain">
+      <li>18 ý tưởng là sample từ 5 lens, không phải quét toàn bộ không gian side project Spring Boot.</li>
+      <li>Chấm điểm bởi 1 agent/judge mỗi thang, không phải panel người thật. Dùng để so sánh tương đối giữa các idea, không phải absolute quality score.</li>
+      <li>Số đếm Kafka/outbox/idempotent thống nhất theo substring lowercase trên JSON text; cùng entry có thể đếm vào nhiều cụm.</li>
+      <li>Persona (Cô Hạnh, chị Mai…) là persona mẫu của judge, không phải khảo sát người dùng thật. Realness = pain logic + đối thủ hiện có, không phải WTP đo được.</li>
+      <li>Điểm tổng hợp có trọng số (0.35/0.4/0.25); đổi trọng số là đổi thứ tự — đặc biệt nhóm 6.8–7.0 gần nhau.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="phongvan-db">
+    <h2 id="phongvan-db">Phỏng vấn Database — 25 câu ghi lại từ transcript</h2>
+    <p class="lede">Corpus có 247 entry thuộc hai topic SQL và Database &amp; Thiết kế DB; 240 câu còn lại sau khi bỏ 7 câu kiểm tra hồ sơ kiểu “em có học database không”, “dự án cá nhân của em có gì”. Trang chọn 25 câu theo 9 nhóm, xếp từ nền tảng (index, transaction, JOIN) qua thiết kế (khóa, chuẩn hóa) tới tầng truy cập từ Java. Bấm từng câu để xem đáp án và nhận xét của người phỏng vấn.</p>
+    <div class="filterbar">
+      <input type="search" id="db-search" placeholder="Tìm: index, rollback, NOT IN, N+1…" aria-label="Tìm trong 25 câu phỏng vấn Database">
+      <span class="count" id="db-count">25 / 25 câu</span>
+      <span id="db-status" class="sr-only" role="status"></span>
+    </div>
+    <div id="dbqa-list"></div>
+    <p id="db-empty" hidden>Không có câu nào khớp từ khóa. Xóa từ khóa để xem lại toàn bộ 25 câu.</p>
+    <p class="note-line">25 câu: 16 intern, 5 middle, 2 senior, 1 junior, 1 fresher; 21 câu topic SQL, 4 câu topic Database &amp; Thiết kế DB. Đáp án ghi lại từ transcript, biên tập lại chỗ người phỏng vấn chen ngang; nhận xét bám sát lời người phỏng vấn, kể cả chỗ ứng viên bị bắt lỗi. Toàn bộ 240 câu kỹ thuật xem trong <a href="phongvan_qa_java.html">phongvan_qa_java.html</a>.</p>
+  </section>
+
+  <section aria-labelledby="nguon">
+    <h2 id="nguon">Nguồn và file liên quan</h2>
+    <details open>
+      <summary>File trong repo</summary>
+      <ul>
+        <li><a href="phongvan_qa_java.html">phongvan_qa_java.html</a> — 1962 Q&amp;A phỏng vấn Java (corpus chính)</li>
+        <li><a href="lo-trinh-java-backend.html">lo-trinh-java-backend.html</a> — lộ trình 6 tháng backend</li>
+        <li><a href="top-20-du-an-web-dev.html">top-20-du-an-web-dev.html</a> — 20 dự án web (danh sách khác, không thay thế)</li>
+        <li><a href="du-an-portfolio-web.html">du-an-portfolio-web.html</a> — catalog portfolio web</li>
+        <li><code>.claude/commands/integrate/sepay.md</code> — scaffolding SePay</li>
+        <li><code>.claude/skills/payment-integration/</code> — skill tích hợp thanh toán</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Workflow</summary>
+      <ul>
+        <li>taskId <code>waj9co5nf</code> (runId <code>wf_1f61c80f-96b</code>) — 4 pha Ideate → Dedup → Judge → Synthesize</li>
+        <li>30 raw → 18 unique → 3 judge × 18 idea → top 8 + 6 missing angles</li>
+        <li>Journal ghi từng score/rationale; trang này render lại từ journal, không chấm tay</li>
+      </ul>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Snapshot 16.10.2026 · workflow research, không phải khảo sát thị trường · điểm tổng hợp có trọng số, so sánh tương đối trong bộ 18.</p>
+    <p>Danh sách này bổ sung, không thay thế catalog web tại <a href="du-an-portfolio-web.html">du-an-portfolio-web.html</a>.</p>
+  </div>
+</footer>
+
+<script id="ideas-data" type="application/json">{"generated": "2026-10-16", "rawCount": 30, "uniqueCount": 18, "judgesRun": 3, "agents": 10, "tokens": 707990, "missing_angles": ["Offline-first & conflict resolution khi mạng yếu: chỉ POS HKD nhắc 'offline queue stub', không idea nào làm sync algorithm thật (2 thiết bị offline ghi cùng lúc) — quan trọng với hộ KD VN và là câu hỏi system design hiếm ai có", "Observability production-grade: mọi idea mới có structured logging, không idea nào cover metrics (Prometheus/Grafana), distributed tracing, SLO/alerting — Log Shelf chỉ gom log text, không đo lỗi theo thời gian thực", "Bảo mật chiều sâu beyond JWT: không idea nào cover OWASP (IDOR, CSRF, injection), NĐ 13/2023 về bảo vệ dữ liệu cá nhân — trong khi LịchBook/SổNợ lưu dữ liệu khách hàng thật, RBAC có nhưng không ai test permission/audit trail bằng kỹ thuật", "Go-to-market & vận hành thương mại: 3 giám khảo đều chấm WTP nhưng chưa có ý tưởng nào đề xuất kế hoạch phân phối tới persona 52 tuổi, chi phí infra/deployment thực tế hoặc mô hình pricing hợp lý — góc thương mại cần làm rõ thêm.", "AI/OCR/NLP làm lõi: scan hóa đơn (chỉ là stretch của Tiền Chung), gợi ý mức nhắc nợ, chống fraud vote bằng tín hiệu hành vi — chưa idea nào đưa AI vào phần cốt lõi", "Frontend/mobile UX demo end-to-end: cả 18 idea đều backend-centric; persona không rành công nghệ cần UI chạy được để demo phỏng vấn — portfolio Spring Boot giờ nào cũng cần ít nhất 1 trang demo React/thymeleaf chỉn chu"], "projects": [{"rank": 1, "title": "Đối soát ngân hàng bằng webhook idempotent + outbox", "score": 7.675, "i": 9, "f": 8.5, "r": 6, "problem": "Chủ shop online 1-3 người bán qua Facebook/Zalo mỗi tối mở app ngân hàng dò sao kê với cột 'đã thu' trong Google Sheet rồi tick tay. Webhook báo giao dịch gọi lại nhiều lần khi server timeout; server restart đúng lúc ngân hàng push là mất báo; tick nhầm Sheet thì chở hàng không hoặc báo trùng. Hôm nay 'hệ thống' là một file Sheet và trí nhớ của một người.", "tags": ["event", "concurrency", "platform"], "band": "pick", "stack": ["Transactional outbox: business write + row outbox trong CÙNG 1 @Transactional", "Relay @Scheduled đẩy Kafka (Redpanda) — message không mất giữa DB và queue", "Idempotency: event_id unique + consumer idempotent (upsert, ledger đúng 1 dòng)", "Spring Security filter xác minh chữ ký/secret webhook", "Testcontainers Postgres + Kafka: trùng payload x5, kill service giữa chừng rồi replay", "Structured logging JSON correlation id theo giao dịch"], "mvp": "2-3 tuần. CÓ: nhận webhook SePay (sandbox hoặc fixture payload), verify secret, lưu event với event_id unique, bảng outbox ghi cùng transaction khi đơn chuyển 'đã thu', relay @Scheduled → Kafka, consumer idempotent, endpoint replay, test trùng x5 và test crash-midway, log JSON correlation id. KHÔNG: hoàn tiền/chargeback, nhiều ngân hàng, dashboard đối soát đầy đủ, Debezium CDC.", "interview": "Trả lời thẳng câu corpus ghi ứng viên trượt: 'cách chuẩn là Saga hoặc outbox pattern… em chưa có cơ hội làm đúng chuẩn'. Mở ra các câu drill: một chức năng đi qua nhiều service, bước thất bại rollback thế nào (ranh giới transaction business write + outbox row); vì sao chọn Kafka; message bị xử lý lại nhiều lần xử lý ra sao (idempotent upsert); 'nhấn nút like xử lý thế nào'.", "risk": "SePay/MISA đã tự khớp giao dịch vào đơn hàng — giải pháp khó chứng minh 'tốt hơn tool free/rẻ'. Phải đóng khung là tự host cho shop dùng Sheet, nếu không pain mới giảm thành demo kỹ thuật."}, {"rank": 2, "title": "SổNợ Online — sổ công nợ & nhắc nợ cho tạp quán, quán ăn, hộ bán buôn", "score": 7.6, "i": 8, "f": 8, "r": 7, "problem": "Cô Hạnh (52 tuổi) tạp hóa đầu ngõ ~40 khách quen, anh Bình chủ quán nhậu 3 nhân viên ca ghi nợ vào vở hoặc nhóm Zalo; cuối tuần không nhớ ai nợ bao nhiêu, 2 nhân viên ghi đè nhau không ai có log ai ghi gì. Nhắc nợ đang làm tay từng người qua Zalo cá nhân — quên 1 lần là mất tiền hoặc mất mối; Excel không nhắc tự động, không phân quyền.", "tags": ["concurrency", "domain"], "band": "pick", "stack": ["Spring Security JWT multi-role (chủ / nhân viên / khách chỉ-đọc) + audit log bất biến trước/sau", "@Transactional + optimistic locking @Version: 2 nhân viên ghi cùng khoản không ghi đè", "Idempotency-Key cho endpoint ghi có (retry không ghi đôi)", "Outbox + @Scheduled quét công nợ quá hạn theo zone giờ, gửi nhắc idempotent", "Flyway, rate-limit Bucket4j, Redis cache báo cáo tổng nợ, Testcontainers tranh chấp"], "mvp": "3-4 tuần. CÓ: JWT, multi-tenant theo cửa hàng, sổ nợ per khách, ghi nợ/ghi có timestamp + người ghi, tổng nợ & lịch sử, nhắc nợ định kỳ (stub), báo cáo nợ quá hạn, log thay đổi mọi khoản. KHÔNG: SMS/Zalo thật, POS, kế toán thuế, app native, OCR, cho vay/lãi suất, đối soát ngân hàng.", "interview": "Case '2 nhân viên ghi cùng khoản thanh toán' để drill chọn @Version thay vì SELECT FOR UPDATE, ranh giới transaction khi ghi có + trừ nợ, idempotency retry không ghi đôi; RBAC 3 tầng cho người không rành công nghệ.", "risk": "KiotViet/MISA đã có công nợ với 300k shop và persona 52 tuổi khó tự adopt web app self-host — khó có người dùng thật, chỉ dùng làm case study."}, {"rank": 3, "title": "LịchBook — đặt lịch + đặt cọc online cho salon / nail / studio / nha khoa nhỏ", "score": 7.35, "i": 8, "f": 7, "r": 7, "problem": "Chị Mai (34 tuổi) chủ tiệm nail Q.7, 4 thợ, ~30 khách/ngày nhận đặt lịch qua Zalo ghi sổ tay; 2 khách cùng khung giờ 9h = double-book, Sheet không chặn được. Khách bỏ hẹn không cọc mất nguyên buổi 2-3 giờ (300-600k); nhắc lịch nhắn tay từng người, cọc chuyển khoản check tay.", "tags": ["concurrency", "domain"], "band": "pick", "stack": ["Optimistic locking @Version trên Slot/Booking — race 2 khách cùng slot trả 409", "RBAC JWT 3 tầng owner / staff / khách đặt", "Redis cache slot availability + SSE push lịch realtime cho dashboard tiệm", "@Scheduled nhắc T-24h/T-2h + auto-hủy giữ chỗ hết hạn cọc, outbox idempotent", "Webhook đối soát cọc idempotent (mock gateway), Testcontainers concurrency, Flyway"], "mvp": "4-5 tuần. CÓ: multi-tenant theo tiệm, cấu hình dịch vụ/nhân viên/khung giờ, khách book online + đặt cọc (mock), tự xác nhận/hủy khi hết hạn cọc, trạng thái booking (đã-book/no-show/đã-hủy), nhắc lịch, dashboard slot trống, báo cáo no-show. KHÔNG: POS, kho mỹ phẩm, payroll tip, VNPay thật, app native, marketplace tìm tiệm.", "interview": "Race 2 khách cùng slot trả 409 = case optimistic locking kinh điển; drill thêm idempotency webhook cọc, notification qua outbox, SSE cho dashboard realtime.", "risk": "Booking là portfolio trùng chiêu nhất và MABY/Tanca đã làm tốt hơn; nhiều moving parts (SSE + payment + reminder) dễ phình quá 5 tuần nếu không siết scope."}, {"rank": 4, "title": "API tính giá bán & biên lợi nhuận đa kênh cho người bán sàn TMĐT", "score": 6.975, "i": 7, "f": 8.5, "r": 6, "problem": "Người bán Shopee/TikTok/Lazada cộng tay vào Excel: giá niêm yết − hoa hồng sàn − phí thanh toán − voucher − flash sale = giá cuối và margin. Mỗi lần sàn đổi khung phí là sửa tay; sai 1 hệ số là bán lỗ hàng trăm đơn mà không biết đến khi đối sổ. Google Sheet free không cảnh báo ô công thức bị kéo nhầm.", "tags": ["platform", "domain"], "band": "pick", "stack": ["Rate limiting theo API key (Bucket4j) + phân cấp quota gói credit", "Cache (Caffeine/Redis) kết quả tính giá cho tổ hợp input lặp lại", "Idempotency key cho POST quote cần lưu làm căn cứ chốt giá", "API versioning /v1 + OpenAPI spec làm hợp đồng với client", "Structured logging + correlation ID truy vết mỗi lần gọi giá", "JUnit5 + Testcontainers property-based test trên case phí/voucher biên"], "mvp": "2-3 tuần. CÓ: endpoint tính giá cuối + margin theo input, API key + quota, dashboard lịch sử gọi, tài liệu OpenAPI. KHÔNG: crawl phí sàn real-time, tích hợp API chính thức của sàn, thu phí tự động, nhiều SDK ngôn ngữ, tính giá livestream.", "interview": "Góc API-product hiếm idea nào có: rate limit theo gói, versioning/OpenAPI làm hợp đồng service, property-based test, cache kết quả tính — trả lời được câu về giới hạn gọi API và contract-first.", "risk": "Persona dev gọi API hẹp hơn persona 'người bán' mô tả; người bán VN nhỏ thường xài Sapo/công cụ free nên khó có người dùng thật gọi API."}, {"rank": 5, "title": "Nhắc học phí định kỳ không gửi trùng", "score": 6.925, "i": 8, "f": 8.5, "r": 5, "problem": "Quản lý trung tâm Anh ngữ/nhà trẻ 300-800 học viên đầu tháng đối chiếu Sheet thu phí với sao kê rồi nhắn Zalo từng người. Cách tự động hóa đầu tiên là cron đọc Sheet rồi gửi tin — deploy 2 instance hoặc restart đúng lúc job chạy là học viên nhận 2 tin 'bạn còn nợ học phí'; tệ hơn gửi nhầm người đã đóng vì Sheet chưa cập nhật.", "tags": ["platform"], "band": "pick", "stack": ["Distributed lock ShedLock (JDBC) hoặc Redis SET NX cho @Scheduled đa instance", "Job idempotent: bảng job_run unique (job, kỳ) — lock fail cũng không gửi trùng", "@Scheduled + retry có số lần giới hạn + bảng dead-letter cho gửi thất bại", "Test 2 ApplicationContext cùng 1 DB chạy job đồng thời (Testcontainers) + graceful shutdown", "Structured log JSON (hocVienId, runId) + Flyway seed 500 học viên"], "mvp": "2 tuần. CÓ: import học viên và kỳ nợ (seed), job nhắc đầu tháng có ShedLock, bảng run idempotent, adapter gửi tin HTTP stub (mock Zalo OA), retry + bảng thất bại, test 2 instance không trùng, log JSON. KHÔNG: Zalo OA thật, SMS thật, dashboard nợ cước đầy đủ, nhiều template.", "interview": "Lấp lỗ hổng 'Hệ phân tán' trong corpus: @Scheduled chạy 2 instance xử lý sao, distributed lock là gì, vì sao lock fail vẫn không gửi trùng nhờ bảng idempotent — câu corpus gần như không ai trả lời được; test 2 ApplicationContext là bằng chứng kỹ thuật mạnh.", "risk": "Scope thực chất là cron + ShedLock nên quá mỏng để thành side project lớn; pain 'gửi trùng' là failure mode của automation mà persona chưa có, câu chuyện người dùng yếu."}, {"rank": 6, "title": "Bình chọn online chống gian lận", "score": 6.925, "i": 8, "f": 8.5, "r": 5, "problem": "Ban tổ chức cuộc thi bình chọn (ảnh, đại sứ) nhận vài nghìn lượt vote qua Google Form chia sẻ trong group: script farm vote trúng dễ, Form ghi trùng không phân biệt, khiếu nại thì BTC không tra được lịch sử, cuối cùng chốt tay bị phản đối kết quả. Bảng xếp hạng cần không sập vào giờ chốt.", "tags": ["concurrency", "domain"], "band": "pick", "stack": ["Rate limit vote theo IP/user bằng Redis INCR + EXPIRE (Lua)", "Vote idempotent: unique constraint (user, đợt vote) + upsert", "Phân trang keyset + index tổ hợp trên vote log 1-2 triệu dòng, EXPLAIN ANALYZE trước/sau", "Leaderboard top-N Redis ZSET + cache TTL evict khi có vote mới", "@Scheduled đóng cổng bình chọn đúng giờ + ghi row audit", "Testcontainers đua 100 vote trong 1 giây → đúng 100 dòng, mỗi người 1 dòng"], "mvp": "2-3 tuần. CÓ: danh sách thí sinh seed vài trăm, vote + rate limit + idempotency, bảng xếp hạng phân trang keyset, vote log seed 1-2 triệu dòng kèm số đo EXPLAIN trước/sau, job chốt kết quả có khóa thời gian, trang admin tối giản. KHÔNG: captcha/device fingerprint, SMS OTP, push realtime, trang thiệp đẹp.", "interview": "Trả lời thẳng 2 câu corpus: 'hạn chế 60 request/phút' mà ứng viên intern thú nhận 'không biết' (Redis INCR+EXPIRE/Lua) và 'nhấn nút like xử lý thế nào?' (unique constraint + idempotent); lấp gap 'hiệu năng truy vấn và index' bằng số đo EXPLAIN thật.", "risk": "Ý tưởng được rút từ corpus phỏng vấn hơn là BTC đang khóc; thị trường đã có nền tảng vote/trao giải sẵn — dễ bị coi là demo kỹ thuật bọc persona."}, {"rank": 7, "title": "Giữ chỗ & bán vé workshop, lớp học, sự kiện nhỏ — chống oversell", "score": 6.875, "i": 9, "f": 8.5, "r": 4, "problem": "Ban tổ chức workshop 30-200 chỗ nhận đăng ký qua Google Form + chuyển khoản, admin trừ chỗ trong Sheet chốt tay qua Zalo; 2 người xác nhận suất cuối → 'hết chỗ rồi, chuyển khoản lại giúp em' hoàn tiền tay. Không có giữ chỗ có hạn (hold 15 phút) nên Sheet vừa ghi nhận vừa tranh chấp; ngày diễn ra check-in bằng mắt nhìn danh sách in giấy.", "tags": ["concurrency", "domain"], "band": "pick", "stack": ["Đồng thời DB: SELECT FOR UPDATE vs @Version vs UPDATE có điều kiện — demo 20 thread tranh 10 slot", "@Transactional propagation + ranh giới rollback, giải thích khi nào REQUIRES_NEW", "Idempotent check-in endpoint: quét QR 2 lần không trừ 2 lần", "@Scheduled mở/đóng đăng ký theo lịch + giải phóng giữ chỗ hết hạn + reminder", "Rate limit mở giờ G bằng Redis INCR/EXPIRE + JWT RBAC organizer/check-in/attendee", "Testcontainers concurrency fail-first: 10 slot không bao giờ giao cho người thứ 11"], "mvp": "3-4 tuần. CÓ: API giữ chỗ 15 phút + job giải phóng chỗ hết hạn, xác nhận cọc bằng mã giao dịch nhập tay, seat counter chống oversell (1 trong 3 cách + giải thích 2 cách còn lại), QR vé gửi (stub), trang check-in quét QR trên điện thoại, concurrency test Postgres thật, rate limit giờ mở bán, README case study 300-500 chữ. KHÔNG: cổng thanh toán thật, captcha/antibot, hoàn vé qua ngân hàng, resale, tách microservice.", "interview": "Chạm câu interviewer chủ động dò trong corpus: 'Lỡ hai người cùng đặt một lúc thì sao?' — tranh luận được 3 cách chống oversell, ranh giới rollback, và chứng minh bằng test concurrency thay vì chỉ mô tả; roadmap ghi 'đồ án chỉ CRUD với phân trang bị đánh giá thấp ngay lập tức'.", "risk": "Điểm realness thấp nhất top 8 (giám khảo realness chấm 4): ban sự kiện nhỏ thường đã có nền tảng vé sẵn hoặc chấp nhận xử lý tay — vấn đề sinh ra để trả lời phỏng vấn nhiều hơn người dùng thật đang kêu."}, {"rank": 8, "title": "Webhook Inspector — hứng, xác thực, replay webhook", "score": 6.8, "i": 8, "f": 8, "r": 5, "problem": "Backend dev team 2-5 người tích hợp SePay/Momo/VNPAY/GitHub: webhook chỉ gửi được tới URL public, chạy localhost không nhận được, chữ ký verify sai thì provider im lặng hoặc retry lộn xộn. Hôm nay họ dán URL webhook.site (payload treo vài giờ rồi mất, không gắn với đơn thật), vào group Zalo nhờ 'anh resend lại giúp', hoặc copy payload từ log tự curl tay.", "tags": ["event", "platform"], "band": "pick", "stack": ["Spring Security filter xác thực HMAC-SHA256 theo header từng provider, secret per-provider trong DB", "Idempotency: unique constraint theo event id — provider retry không tạo bản ghi trùng", "@Transactional + bảng delivery-queue: gửi thất bại vào outbox, @Scheduled gửi lại có kiểm soát", "Jakarta validation payload theo schema từng provider trước khi lưu", "Testcontainers (Postgres/Redis) e2e verify→lưu→replay không mock tay + Redis rate limit IP provider"], "mvp": "3-4 tuần. CÓ: URL hứng webhook riêng mỗi project kèm token bí mật; lưu payload + headers + timestamp; verify HMAC-SHA256 cho 2 provider mẫu (kiểu SePay, GitHub) với secret cấu hình trong DB; UI đăng nhập JWT: danh sách event, chi tiết payload pretty-print, nút replay gửi lại URL đích; replay thất bại ghi trạng thái + retry tay. KHÔNG: tunnel CLI, biến đổi payload, cảnh báo độ trễ provider, multi-tenant tổ chức.", "interview": "Drill design decision secret-per-provider, xác thực chữ ký qua Security filter, idempotency khi provider retry, delivery queue + @Scheduled retry có kiểm soát — dev-tool có UI demo, pain được chứng minh bằng script sepay-webhook-verify.js tự viết trong chính repo.", "risk": "Hookdeck/webhook.site/ngrok đã làm đúng việc này tốt hơn với free tier — project phục vụ portfolio/hội thoại phỏng vấn chứ không lấp khoảng trống thị trường; case trùng lặp nhiều với idea Đối soát."}, {"rank": 9, "title": "Tiền Chung — sổ chi tiêu chung cho nhóm ở trọ, du lịch, couple", "score": 6.725, "i": 7, "f": 7.5, "r": 6, "problem": "4 đứa ở trọ góp tiền điện nước internet, 6 đứa đi Đà Lạt, couple sống chung chia tiền ăn. Google Sheet ghi chung rồi quên, Splitwise app ngoại không thân VND/banking VN, cuối kỳ 'mày nợ tao bao nhiêu nhỉ' cãi nhau rồi ai cũng tự thấy mình đóng nhiều hơn.", "tags": ["concurrency", "domain"], "band": "rest", "stack": ["Multi-user group + invite token (JWT), OAuth2 optional login", "Split algorithm (even / exact / percent / shares) + debt-simplification graph tối ưu số lần chuyển khoản — unit test thuần + Testcontainers", "Optimistic locking @Version khi 2 thành viên thêm chi tiêu cùng lúc", "Idempotency cho expense create & settle-up (double-tap mobile không ghi đôi)", "Pagination/filter theo ngày category; Redis cache group balance; rate limit create-expense; JWT + refresh token, Flyway, structured logging, Docker compose"], "mvp": "3 tuần. CÓ: tạo nhóm, mời qua link, thêm chi tiêu với 4 kiểu split, tính nợ tối giản, settle-up ghi nhận thanh toán, lịch sử + balance realtime. KHÔNG: OCR scan bill, tích hợp bank/Zalo API, recurring expense, web push, app native.", "interview": "Debt-simplification graph + optimistic locking + idempotency cho settle-up vẫn drill được các chủ đề cốt lõi, nhưng ứng viên có thể bị coi là toy/social app và thiếu trọng tâm transaction/async. Kém điểm CV hơn các idea infra vì conflict chính là 'cãi nhau' thay vì kỹ thuật.", "risk": "Chia tiền bằng Sheet rồi 'mày nợ tao bao nhiêu' là pain hằng ngày quan sát được ở mọi nhóm VN; nhưng Splitwise free đã làm gần hết (kể cả VND), phần hơn hiện tại chỉ là tiện banking nội địa, và app consumer khó đến tay người dùng thật dù problem không bịa.", "users": "Sinh viên năm 3 ở trọ ĐH Kinh tế Quốc dân; nhóm 6 người đi du lịch Sa Pa; couple 27 tuổi sống chung Hà Nội; nhóm GYM 10 người góp quỹ thuê sân.", "why_real": "Google Sheet là tool free mặc định mọi nhóm VN dùng cho split bill — chính việc 'phải tự dựng sheet rồi công thức' là dấu hiệu tool đúng chưa tồn tại cho nhóm casual. Splitwise/Splittr phổ biến nhưng app ngoại: UI tiếng Anh, không format VND quen, không 'settle qua chuyển khoản N"}, {"rank": 10, "title": "ChannelOps 90 ngày — trạm vận hành kênh YouTube theo playbook", "score": 6.65, "i": 6, "f": 7, "r": 7, "problem": "Playbook 90 ngày đặt quy trình vận hành cụ thể: 4-6 video/tuần, time study ghi phút thực tế từng bước mỗi video, mỗi video chỉ đổi 1 biến A/B, review bảng metric (CTR, retention 30s) 30 phút mỗi Chủ nhật, kill-switch nếu ≥18 video mà CTR trung bình <2% và retention 30s <50%. Toàn bộ việc theo dõi hiện không có công cụ — deadline cadence, số phút/video, nhật ký biến A/B và ngưỡng kill-switch phải nhớ hoặc ghi rải rác; số liệu thật nằm trong YouTube Studio tách rời kế hoạch nên dễ trôi lịch và bỏ lỡ điều kiện chuyển niche ở ngày 45.", "tags": ["domain", "platform"], "band": "rest", "stack": ["Spring Security OAuth2 login (Google) + JWT cho API riêng", "@Scheduled sync 1 lần/ngày YouTube Data API, tôn trọng quota qua rate limiter + Redis cache metrics (không gọi lại khi xem dashboard)", "@Transactional upsert idempotent theo videoId (sync lại không nhân đôi số liệu)", "Jakarta validation cho DTO video/time-study/experiment; PATCH → PartialType; pagination filter lịch sử video theo phase (tuần 1-2/3-6/7-12)", "Testcontainers (Postgres + WireMock giả lập YouTube API) + JUnit5 cho rule kill-switch; SSE/@Async 'weekly digest' 1 nút thay vì tự nhớ Chủ nhật; Flyway + structured logging correlationId mỗi lần sync"], "mvp": "3-4 tuần. CÓ: CRUD video theo trạng thái playbook (idea→quay→edit→đăng), nhập time study phút/bước, nhật ký experiment (1 trục/video) kèm con số trước/sau, sync CTR/retention/views hàng ngày, dashboard Chủ nhật (cadence vs mục tiêu, giờ/tuần vs 16h), cảnh báo tự động khi điều kiện kill-switch/approach-YPP tới ngưỡng. KHÔNG: auto-upload/điều khiển CapCut, phân tích comment AI, dự báo thu nhập chi tiết, multi-channel.", "interview": "Story cá nhân rất thật và idempotent upsert theo videoId + rate limit YouTube API có giá trị, nhưng phần lớn là CRUD + sync một nguồn — gần typical CRUD app hơn cả nhóm 7 điểm. Các chủ đề transaction, concurrency, async gần như không có conflict để drill.", "risk": "Playbook 90 ngày trong repo cam kết cadence 4 video/tuần, time study, ngưỡng kill-switch cụ thể trong khi không có tracker nào — persona và ngày tháng pain là thật (không phải problem bịa cho portfolio), giải pháp tốt hơn hẳn việc ghi rải rác markdown; trừ vì niche (một playbook faceless) nên chỉ phục vụ nhóm cùng cách vận hành.", "users": "Creator faceless tiếng Anh làm 20h/tuần bên cạnh việc chính (kênh khởi động 2026-10-07); persona rộng: solo YouTuber 4-6 video/tuần cần kỷ luật cadence + experiment thay vì bảng tính rời.", "why_real": "Đã đọc trực tiếp `youtube/playbook-90-ngay.md`: mục 3 quy định '4 video/tuần', 'time study (bắt buộc 4 video đầu)… Cadence chính thức = giờ đo được ≤16h/tuần', 'A/B một trục mỗi video', 'Review bảng metric mỗi Chủ nhật 30 phút', kill-switch '≥18 video … CTR trung bình <2% và rete"}, {"rank": 11, "title": "Hóa đơn & báo giá online cho freelancer và hộ kinh doanh", "score": 6.45, "i": 7, "f": 8, "r": 5, "problem": "Freelancer B2B và hộ KD 1-5 người phải xuất hóa đơn GTGT (thuế suất 5/8/10%) và báo giá có theo dõi: đánh Word/Excel, tra suất thuế bằng trí nhớ, gửi scan qua Zalo, theo dõi thu bằng Sheet → sai suất thuế, trùng dãy số, mất chứng từ, cộng tay cuối kỳ. Riêng thợ xây/nội thất: vật liệu giá đổi liên tục, báo giá 1 tuần tuổi đã lỗi → khách book thợ khác hoặc anh lỗ; không nhớ đã gửi báo giá nào cho ai.", "tags": ["domain", "platform"], "band": "rest", "stack": ["JWT RBAC: chủ hộ / nhân viên / khách chỉ-đọc báo giá qua public link (approve/reject không cần đăng ký)", "@Version optimistic locking + immutable quote snapshot — giá lúc tạo báo giá không đổi khi bảng giá cập nhật (line-item copy)", "Jakarta validation DTO (thuế suất ∈ {5,8,10}, tổng dòng = tổng tiền) + global ValidationPipe-style pipe", "@Transactional + idempotency key chống phát hành trùng khi client retry; Flyway migration dãy số hóa đơn theo kỳ", "PDF generation (OpenPDF); Redis cache bảng giá TTL tường minh; audit qua structured logging; pagination/filter tìm hóa đơn theo kỳ/khách/trạng thái thu; Testcontainers e2e báo giá → hóa đơn → ghi nhận thu"], "mvp": "3-4 tuần. CÓ: đăng nhập JWT, danh mục + bảng giá theo thời điểm, tạo báo giá (snapshot giá), link khách xem + approve/reject, chuyển báo giá 1-click thành hóa đơn thuế suất 5/8/10, sinh PDF, sổ đã thu/chưa thu, export CSV kế toán, báo cáo conversion. KHÔNG: chữ ký số/HSM thật, kết nối cổng thuế, thanh toán online, multi-tenant kế toán nhiều công ty.", "interview": "Quote snapshot + optimistic locking và idempotency khi phát hành hóa đơn là drill được, nhưng phần lớn project là validation/PDF/CRUD — ít tình huống transaction concurrency thật sự để kể thành conflict. Cover trung bình các chủ đề hay hỏi, vẫn trên mức CRUD điển hình nhờ immutable snapshot.", "risk": "Pain báo giá lỗi giá vật liệu với thợ xây/nội thất là cụ thể và chưa có tool VN tốt, nhưng phần hóa đơn GTGT đã bị SePay/Sapo/MISA phủ với giá rẻ nên 'tốt hơn hiện tại' chỉ đúng ở nửa báo giá; persona thợ xây tự do phần lớn cũng không xuất hóa đơn GTGT.", "users": "Freelancer design/ảnh/content có khách doanh nghiệp (cần khấu trừ VAT); hộ kinh doanh nhỏ có khách B2B; anh Dũng thợ xây tự do Q.Thủ Đức 5-10 công/tháng; xưởng nội thất 6 thợ Bình Dương. Trả ~50-150k/", "why_real": "Regulation check được: NĐ 70/2025/NĐ-CP yêu cầu hộ KD dùng HĐĐT từ máy tính tiền; Cục Thuế ban hành Thông tư 91/2026/TT-BTC (30/6/2026) về nhà cung cấp giải pháp HĐĐT. WTP chứng minh bằng bảng giá SePay (sepay.vn/bang-gia.html) và Sapo (sapo.vn/bang-gia.html). Pain tiền thật: 1 l"}, {"rank": 12, "title": "Flaky Test Radar — dashboard test CI hay chập chờn", "score": 6.25, "i": 6, "f": 7, "r": 6, "problem": "CI team chạy JUnit/Playwright, có test fail ngắt quãng. Cách xử lý quen là bấm re-run, không ai biết test nào flaky, mỗi ngày mất 10-30 phút chờ re-run và tranh luận 'test hay bug'. Kết quả run nằm rải rác trong GitHub Actions, không so sánh được theo thời gian, người mới vào team không biết test nào được phép nghi ngờ.", "tags": ["platform"], "band": "rest", "stack": ["REST endpoint nhận kết quả run (token CI), @Async ingest để webhook không bị chặn", "Phân trang + filter theo branch/test name/thời gian, index migration qua Flyway", "Cache thống kê top flaky trong Redis với TTL tường minh (CacheInterceptor chỉ GET read-only)", "JUnit5 + Testcontainers cho chính radar; Docker compose 1 lệnh demo", "Structured logging + correlation id theo từng run, Security JWT cho UI"], "mvp": "3-4 tuần. CÓ: endpoint nhận report kết quả test (JUnit XML hoặc JSON) từ CI kèm token; tính flakiness theo test (fail rồi pass ở re-run cùng commit, hoặc đổi trạng thái qua các run lân cận); dashboard top flaky theo cửa sổ thời gian, filter theo branch; xem lịch sử từng test với link build. KHÔNG: GitHub App tự pull, auto-quarantine test, parse trace/video, phân tích log failure.", "interview": "Đau thật trong workspace nhưng đây là ingest + dashboard khá CRUD, các chủ đề hay hỏi về transaction/concurrency/security chỉ xuất hiện nhẹ. Meta-testing thú vị khi kể nhưng interviewer khó drill sâu vào design decision backend nặng.", "risk": "Văn hóa bấm re-run + tranh luận 'test hay bug' tốn 10-30 phút/ngày là đau có thật, và chính workspace có sẵn anti_rationalization 'Flaky = defect' làm bằng chứng persona; chỉ trừ vì GitHub Actions/BuildPulse/Trunk đã có bắt flaky, nên 'tốt hơn hiện tại' đúng nhất với team chưa trả tiền tool.", "users": "QA automation engineer + dev team CI trên GitHub Actions/GitLab; maintainer chịu trách nhiệm giữ suite xanh.", "why_real": "Đau nằm ngay trong workspace: `.claude/rules/anti_rationalization.md` có hẳn mục 'Test này flaky do môi trường, bỏ qua → Flaky = defect. Fix root cause'; `.claude/skills/flaky_test_analyzer` tồn tại; playwright config quy định retries policy riêng cho CI. Rule được viết ra nhưng "}, {"rank": 13, "title": "Job Heartbeat — cảnh báo scheduled job chết im", "score": 6.05, "i": 7, "f": 8, "r": 4, "problem": "@Scheduled/cron đồng bộ đơn, gửi email, tính phí chạy lúc 3h sáng; job fail hoặc treo thì không ai biết vì exception bị nuốt trong log hoặc job kẹt lock. Team chỉ phát hiện khi khách khiếu nại trưa hôm sau. Hôm nay: không monitor gì, hoặc bot Zalo chỉ notify khi job throw — còn job không chạy thì im lặng, không phát tín hiệu nào.", "tags": ["platform"], "band": "rest", "stack": ["@Scheduled poll bảng check-state định kỳ — scheduler của chính monitor", "Redis lưu last-seen + TTL, chuyển trạng thái UP/LATE/DOWN theo period/grace", "Spring Security JWT + RBAC: ping key riêng theo project, không lộ key chung", "SSE push dashboard realtime + Flyway migration schema (check, event log)", "Idempotency: ping trùng lặp/đến sớm không phá state; Testcontainers test chuyển trạng thái"], "mvp": "2-3 tuần. CÓ: project + check (period, grace time, timezone); endpoint ping /ping/{uuid} (GET/POST kèm thời lượng chạy); máy trạng thái UP→LATE→DOWN chạy @Scheduled; alert email SMTP + webhook Slack/Zalo URL khi chuyển DOWN và khi hồi phục; dashboard + lịch sử ping từng check. KHÔNG: cron expression editor, SMS/điện thoại, badge công khai, nhiều tổ chức.", "interview": "Dead-man's-switch cho @Scheduled là pain thật và state machine UP/LATE/DOWN + SSE drill được, nhưng project thiên về poll + dashboard — thiếu transaction, concurrency, testing story sâu. Kém điểm CV hơn các idea có race condition hoặc message reliability.", "risk": "Job cron chết im bị bỏ qua nhiều ngày là rủi ro có thật (healthchecks.io xác nhận 'failed cron job can go unnoticed for a long time'), nhưng họ cho free đúng 20 check — build lại bằng Spring không hơn công cụ free đang chạy đúng việc này, rõ dấu hiệu chọn problem để trưng @Scheduled/Redis/SSE.", "users": "Backend dev trực hệ thống có 5+ @Scheduled job (đồng bộ dữ liệu, nightly report, retry job), tech lead chịu trách nhiệm khi incident.", "why_real": "healthchecks.io mô tả đúng nỗi đau: 'Failed jobs often go unnoticed for a long time', free tới 20 job, 'Trusted by Thousands of Developers and Teams' — bằng chứng đội team nhỏ cần công cụ dead-man's-switch mỗi ngày. Repo convention (swe_conventions §3) bắt buộc @Scheduled trong c"}, {"rank": 14, "title": "Quầy POS HKD — sổ thu chi ngày + báo cáo thuế khoán cho quán ăn, tạp hóa", "score": 5.95, "i": 7, "f": 6, "r": 5, "problem": "Nghị định 70/2025/NĐ-CP buộc hộ kinh doanh dùng hóa đơn điện tử từ máy tính tiền. Quán bún, tạp hóa, quán cà phê nhỏ vẫn sổ tay/Excel: cuối tháng không chắc doanh thu bao nhiêu, thuế khoán ước lượng, bị kiểm tra không có chứng từ. 2 thu ngân cùng ca ghi tay đè nhau, 'quên' ghi 1-2 món = thất thoát nội bộ.", "tags": ["platform", "concurrency"], "band": "rest", "stack": ["Multi-device POS write path: @Transactional + optimistic locking trên phiên bán hàng (2 thu ngân cùng ca không ghi đè)", "Idempotency-Key cho từng giao dịch POS (mạng yếu retry không ghi đôi — offline queue stub)", "@Scheduled daily close + reconciliation report (cash counted vs system)", "Redis cache báo cáo doanh thu (GET read-only TTL tường minh) + rate limit POS endpoints", "Flyway expand-contract; structured logging + correlation ID audit trail ai sửa/xóa giao dịch; Testcontainers e2e POS flow; /health + /ready; pagination theo ca/ngày/hàng"], "mvp": "4-5 tuần. CÓ: đăng ký cửa hàng + danh mục hàng, POS ghi bán hàng (ca, 2 device), sổ thu chi ngày, báo cáo doanh thu + thuế khoán ước tính theo tháng, export Excel đối soát, audit log. KHÔNG: phát hành HĐĐT hợp pháp với cơ quan thuế (cần provider), kho phức tạp, nhân sự lương, QR thanh toán.", "interview": "Multi-device POS write path + idempotency + audit trail cover được concurrency, security, testing, nhưng phần compliance thuế khoán dễ kéo drill sang nghiệp vụ thay vì design decision kỹ thuật. Có case kỹ thuật đáng kể trên CV so với CRUD thường, chỉ là conflict kỹ thuật không sắc bằng các idea chống race hệ thống.", "risk": "Sổ tay cuối tháng và NĐ 70/2025 là pain thật với persona cụ thể, nhưng MVP lại tự loại đúng phần giải quyết regulation (HĐĐT thật với cơ quan thuế) và MISA/KiotViet ~100-300k/tháng đã làm trọn hơn — giải pháp không vượt được tool sẵn có.", "users": "Chị Loan (45 tuổi) chủ quán bún bò Huế Q.10 TP.HCM, 2 nhân viên thu ngân; chủ tạp hóa Long An; quán cà phê takeaway Q.7; thuế viên phường hỏi doanh thu thì lục sổ vở.", "why_real": "MISA tung 'Bộ giải pháp Hộ kinh doanh' gắn nhãn HOT với 'Hóa đơn điện tử từ máy tính tiền' + 'tuân thủ NĐ 70/2025/NĐ-CP' — regulatory push được big-4 software VN xác nhận bằng product line riêng; KiotViet 300k merchants chứng minh quy mô. Nhưng MISA/KiotViet là SaaS trả phí + onb"}, {"rank": 15, "title": "Log Shelf — gom log service nhỏ về 1 chỗ", "score": 5.95, "i": 7, "f": 6, "r": 5, "problem": "Team 3 người chạy 2-3 service Docker trên 1 VPS; mỗi sự cố production là mỗi người `docker logs` một nơi, grep tay, dán log vào group Zalo hỏi 'ai thấy gì không'. ELK/Loki quá nặng cho box 2GB RAM. Correlation id có sẵn trong log nhưng không có nơi gom để tìm theo.", "tags": ["concurrency", "domain"], "band": "rest", "stack": ["Ingest HTTP POST log JSON (mỗi service 1 ingest token) + @Async ghi không chặn caller", "RabbitMQ tách ingest khỏi truy vấn; Testcontainers RabbitMQ + Postgres test luồng đầy đủ", "Search + pagination filter theo correlationId/level/service/time range, index migration qua Flyway", "SSE live tail; Redis cache câu query hot với TTL tường minh", "Security JWT cho UI + rate limit ingest token; @Scheduled prune log vượt retention"], "mvp": "3-4 tuần. CÓ: endpoint ingest log JSON qua token từng service; lưu Postgres + retention @Scheduled dọn log cũ; search filter theo service/level/correlationId/khoảng thời gian + pagination; live tail qua SSE; JWT đăng nhập UI. KHÔNG: full-text search nâng cao (stretch tsvector), alerting theo pattern, dashboard metrics, tracing phân tán.", "interview": "@Async + RabbitMQ ingest, SSE live tail, retention job cover tốt async/messaging và observability đang là trend JD. Tuy nhiên transaction/concurrency gần như vắng, câu chuyện 'grep docker logs' chưa đủ sắc để thành case study conflict đặc trưng.", "risk": "Grep docker logs giữa VPS 2GB lúc sự cố là đau quen thật của team nhỏ; nhưng Dozzle (MIT, free, 7MB, 14.6k★) xem log realtime và Loki vẫn vừa sức box nhỏ — pain thật nhưng giải pháp Postgres+SSE của ta không hơn lựa chọn free sẵn có, trừ khi mục tiêu là tự host bằng Spring.", "users": "Backend dev duy nhất hoặc team 3-5 người sở hữu vài service nhỏ, trực on-call khi khách khiếu nại.", "why_real": "Repo tự ghi 'Fills gap: không có observability integration' trong claude_dev_integrations.md, trong khi swe_conventions §3 bắt buộc structured logging + correlation IDs — log sinh ra nhưng không có chỗ xem. Thay thế hiện có hoặc quá thô (docker logs) hoặc quá nặng (ELK); khoảng t"}, {"rank": 16, "title": "Feature Flag nội bộ — bật/tắt tính năng không cần deploy", "score": 5.925, "i": 7, "f": 7.5, "r": 4, "problem": "Team nhỏ cần kill switch khi bug trên prod, hoặc bật dần tính năng theo % user. Hôm nay: boolean trong env/DB rồi restart, hoặc comment code, hoặc sửa config rồi deploy lại; không ai biết ai bật lúc nào, cờ cũ không ai dọn. Dùng Unleash free thì thiếu RBAC và chỉ 2 môi trường, mua SaaS thì quá tầm team 5 người.", "tags": ["event", "platform"], "band": "rest", "stack": ["Spring Security JWT + RBAC: chỉ role admin đổi cờ ở môi trường prod", "Redis cache flag theo application + TTL: endpoint đọc cờ không tốn query mỗi request", "@Transactional + optimistic locking (version field) khi 2 người cùng sửa 1 cờ", "Flyway + bảng audit log (ai, đổi gì, lúc nào, giá trị cũ→mới); Jakarta validation DTO", "Testcontainers: test rollout % (hash user id) + concurrency collision; rate limit API đọc cờ"], "mvp": "3-4 tuần. CÓ: CRUD project/env/flag bật tắt theo môi trường; rule rollout % theo hash userId hoặc allowlist user; endpoint đọc cờ theo application (SDK-lite REST + starter Spring Boot mỏng để service khác nhúng); audit log đổi cờ + optimistic locking; JWT + RBAC admin/dev. KHÔNG: A/B metrics, realtime push tới frontend SDK, workflow approval 2 bước.", "interview": "RBAC security, optimistic locking khi 2 người sửa cờ, Redis cache TTL, audit log — cover decent 3-4/6 chủ đề, có drillable decision về rollout % hash. Nhưng conflict câu chuyện (boolean trong DB vs Unleash) không gay cấn và thiếu async/transaction depth.", "risk": "Kill switch trên prod là nhu cầu thật nhưng Unleash OSS self-host free đã có (2 môi trường, chỉ RBAC tính phí — đã verify trên README), LaunchDarkly/Flagsmith cũng sẵn; build flag riêng không hơn tool free, vấn đề được chọn để trưng Spring Security/cache/optimistic lock.", "users": "Tech lead + dev team 3-8 người có tính năng nhạy cảm (thanh toán, UI mới) cần bật theo môi trường; QA cần bật cờ để test trên staging.", "why_real": "Unleash (13.9k★) thừa nhận pain: 'A homegrown flag system is easy for a single boolean toggle, scaling adds pain — targeting, environments, audit trails, access control'; free tier giới hạn 2 môi trường, RBAC thuộc Pro (github.com/Unleash/unleash) → team nhỏ vẫn kẹt giữa boolean "}, {"rank": 17, "title": "Bảng giá quán ăn một nguồn — chống lệch giá bằng cache invalidation", "score": 5.8, "i": 7, "f": 7, "r": 4, "problem": "Chuỗi 2-3 quán ăn/đồ uống đổi giá và combo mỗi tuần. Người quản lý cập nhật Google Sheet rồi dán ảnh lên Zalo OA; trang menu web còn giá cũ đến khi khách cự cại 'cái này giá 79k mà anh tính 89k'. Ba nơi (Sheet, quầy, web) không có nguồn sự thật duy nhất; khi thêm API đọc nhiều cho giờ cao điểm mà không có chiến lược invalidate sẽ lặp lại đúng cảnh giá cũ.", "tags": ["platform"], "band": "rest", "stack": ["@Cacheable/@CacheEvict/@CachePut và cache theo level", "Invalidation chủ động khi admin sửa giá: versioned key + application event (write-through một chạm)", "Chống cache stampede (Redis lock khi rebuild) + TTL tường minh — experiment restart Redis giữa giờ cao điểm", "@Scheduled warm-up trước giờ mở quán; Testcontainers Redis với test 'đổi giá 23h00, 23h01 đọc API trả giá mới' và test Redis sụp hệ thống vẫn đúng dữ liệu từ DB", "Đo số thật trước/sau (số query, độ trễ p95); seed 500-1000 món qua Flyway để đo có ý nghĩa"], "mvp": "2 tuần. CÓ: API menu/nhà hàng read-heavy, trang admin sửa giá tối giản, cache-aside + versioned key, evict on update, chống stampede, TTL 5-10 phút tường minh, test invalidation và test cache-down, đếm query/độ trễ trước-sau. KHÔNG: POS bán hàng, đặt món/gọi món, CDN, SaaS nhiều quán, quản lý kho.", "interview": "Chạm đúng gap corpus ghi 'ứng viên hay trả lời em chưa làm' về cache invalidation, stampede, TTL tường minh, test Redis sụp hệ thống vẫn đúng — drill sâu một chủ đề xuất sắc. Nhưng project một chủ đề nên thiếu transaction, concurrency, async; coverage tổng thể chỉ đạt một phần của nhóm 6 chủ đề.", "risk": "Lệch giá Sheet/quầy/web có xảy ra nhưng quán 2-3 điểm bán thường đã chốt bằng bảng giá in + Zalo OA, 'khách cự cại giá web menu' của quán nhỏ hiếm; đề bài thực chất là demo cache invalidation bọc persona — dấu hiệu problem fitting theo kỹ thuật cần trưng bày.", "users": "Chủ chuỗi quán 2-3 điểm bán, quản lý cửa hàng phụ trách cập nhật giá; nhân viên order phải tra giá qua điện thoại.", "why_real": "Roadmap viết rõ đây là lỗ hổng cần lấp: 'cache và các chế độ hỏng của cache' nằm trong nhóm JD ghi rõ nhưng 'ứng viên hay trả lời em chưa làm'. Corpus có nguyên cặp câu 'Hệ thống đang dùng cache như vậy có bao giờ bị sụp không?' và 'Trong dự án em dùng thư viện gì để xử lý cache?"}, {"rank": 18, "title": "Contract Diff Gate — chặn breaking change OpenAPI trước khi merge", "score": 5.45, "i": 6, "f": 7, "r": 4, "problem": "Backend sửa response (đổi tên/bỏ field, đổi kiểu, đổi status code) giữa sprint, frontend và service khác chỉ phát hiện lúc ghép đôi hoặc khi lên prod. Hôm nay: review PR bằng mắt, Swagger để stale, trao đổi qua Zalo 'sao anh đổi field' rồi ai đó sửa gấp. Không có bước gate tự động trước merge.", "tags": ["platform"], "band": "rest", "stack": ["Parse + diff OpenAPI 3 (JSON/YAML) 2 nhánh, phân loại breaking vs additive bằng rule có tên", "Spring Security JWT + RBAC: token cho CI pipeline, tách quyền đọc spec/nhận xét", "@Transactional lưu snapshot spec theo commit; pagination + filter lịch sử diff", "Redis cache kết quả diff theo commit SHA (GET read-only, TTL tường minh)", "JUnit5 + Testcontainers: regression test cho từng loại breaking change (bug-fix protocol: test fail trước)"], "mvp": "3-4 tuần. CÓ: API nhận 2 spec OpenAPI từ CI (base commit + head commit); diff và phân loại breaking (xóa field/endpoint, đổi kiểu, thêm required param) vs additive; lưu snapshot theo commit SHA + phân trang lịch sử; endpoint trả báo cáo markdown để CI in ra log + exit code theo kết quả. KHÔNG: GitHub App tự hook, tự comment PR, generate client SDK, diff GraphQL.", "interview": "Pain contract drift thật nhưng lõi là parse/diff OpenAPI — phần lớn thời gian dành cho logic text, ít đụng transaction, concurrency, async, caching. Interviewer khó drill sâu vào các design decision backend cl, chủ yếu khoe được testing + JWT RBAC cơ bản.", "risk": "Breaking change làm frontend vỡ là pain có thật ở team nhiều service, nhưng oasdiff (open source), Optic, Bump.sh đã làm đúng việc này; đề bài sinh từ convention repo + câu phỏng vấn, không có team nào đang kêu đau, và diff OpenAPI lặp lại thứ đã có free.", "users": "Tech lead backend + frontend dev trong team có từ 2 service trở lên dùng chung REST API; người mở PR sửa OpenAPI spec.", "why_real": "Bump.sh bán đúng thứ này với câu mô tả sản phẩm 'Docs go stale, breaking changes ship silently' (bump.sh) — drift contract là pain tiền tệ hóa được. Repo tự ghi trong swe_conventions: 'Zod schema làm single source of truth cho DTO + frontend types (chống drift)' — pain được nhận "}]}</script>
+<script>
+(function(){
+  "use strict";
+  var data = JSON.parse(document.getElementById("ideas-data").textContent);
+  var TAG_VI = { event:"Sự kiện", concurrency:"Đồng thời", domain:"Domain", platform:"Nền tảng" };
+
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];
+    });
+  }
+  function norm(s){
+    return String(s).toLowerCase().normalize("NFD")
+      .replace(/[\u0300-\u036f]/g,"")
+      .replace(/đ/g,"d").replace(/Đ/g,"d");
+  }
+  function fmt(n){
+    return (Math.round(n*1000)/1000).toFixed(3).replace(/0+$/,"").replace(/\.$/,"");
+  }
+  function fmt1(n){ return (Math.round(n*10)/10).toFixed(1).replace(/\.0$/,""); }
+
+  function band(rank){
+    if(rank===1) return "hero";
+    if(rank<=4) return "strip";
+    if(rank<=8) return "card";
+    return "row";
+  }
+  function label(p){
+    if(p.rank===1) return "Bắt đầu ngay";
+    if(p.rank<=4) return "Ứng viên mạnh";
+    if(p.rank<=8) return "Top 8";
+    return "Còn lại";
+  }
+
+  function cardHtml(p){
+    var b = band(p.rank);
+    var num = String(p.rank).padStart(2,"0");
+    var wide = (p.rank===8 || p.rank===4) ? " wide" : "";
+    var hay = norm([p.title, p.problem, p.mvp, p.risk||"", p.interview||""].concat(p.stack).concat(p.tags||[]).join(" "));
+    var tagLis = (p.tags||[]).map(function(t){
+      return "<li>"+esc(TAG_VI[t]||t)+"</li>";
+    }).join("");
+    var stackLis = p.stack.map(function(s){ return "<li>"+esc(s)+"</li>"; }).join("");
+    var scores = "Tổng "+fmt(p.score)+" · PV "+fmt1(p.i)+" · KT "+fmt1(p.f)+" · Thật "+fmt1(p.r);
+    var head = '<div class="head"><h3>'+esc(p.title)+'</h3><span class="lvl">'+esc(label(p))+'</span><span class="scores">'+esc(scores)+'</span></div>';
+    var risk = p.risk ? '<p class="risk"><strong>Rủi ro:</strong> '+esc(p.risk)+"</p>" : "";
+    var body = '<div class="body"><p class="problem">'+esc(p.problem)+"</p>"+
+               (p.mvp ? '<p class="mvp"><strong>MVP:</strong> '+esc(p.mvp)+"</p>" : "")+
+               risk+"</div>";
+    var foot = '<div class="foot"><ul class="stack">'+tagLis+stackLis+"</ul></div>";
+    return '<li class="rank rank-'+b+wide+'" id="y-tuong-'+p.rank+'" data-tags="'+esc((p.tags||[]).join(" "))+
+      '" data-band="'+esc(p.band||"")+'" data-hay="'+esc(hay)+'"><div class="rail"><span class="num" aria-hidden="true">'+num+"</span></div>"+
+      '<div class="content">'+head+body+foot+"</div></li>";
+  }
+
+  var ol = document.getElementById("projects");
+  ol.innerHTML = data.projects.map(cardHtml).join("");
+
+  var tbody = document.getElementById("summary-body");
+  tbody.innerHTML = data.projects.map(function(p){
+    var hay = norm([p.title, p.problem].concat(p.tags||[]).join(" "));
+    return '<tr data-tags="'+esc((p.tags||[]).join(" "))+'" data-band="'+esc(p.band||"")+'" data-hay="'+esc(hay)+'">'+
+      '<th scope="row">'+String(p.rank).padStart(2,"0")+"</th>"+
+      '<td class="name"><a href="#y-tuong-'+p.rank+'">'+esc(p.title)+"</a></td>"+
+      '<td class="num">'+fmt(p.score)+"</td>"+
+      '<td class="num">'+fmt1(p.i)+"</td>"+
+      '<td class="num">'+fmt1(p.f)+"</td>"+
+      '<td class="num">'+fmt1(p.r)+"</td>"+
+      '<td class="prob">'+esc(p.problem.slice(0,140))+(p.problem.length>140?"…":"")+"</td></tr>";
+  }).join("");
+
+  var items = Array.prototype.slice.call(document.querySelectorAll("#projects .rank"));
+  var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr"));
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-filter]"));
+  var qInput = document.getElementById("q");
+  var count = document.getElementById("count");
+  var empty = document.getElementById("empty");
+  var tableEmpty = document.getElementById("table-empty");
+  var statusEl = document.getElementById("ideas-status");
+  var active = "all";
+  var TOTAL = data.projects.length;
+  var statusTimer = null;
+  var ready = false;
+
+  function match(el, filter, q){
+    var tags = el.dataset.tags || "";
+    var band = el.dataset.band || "";
+    var okF;
+    if(filter==="all") okF = true;
+    else if(filter==="top8") okF = band==="pick";
+    else okF = (" "+tags+" ").indexOf(" "+filter+" ")!==-1;
+    return okF && (!q || el.dataset.hay.indexOf(q)!==-1);
+  }
+
+  function apply(){
+    var q = norm(qInput.value.trim());
+    var shown = 0;
+    items.forEach(function(el){
+      var ok = match(el, active, q);
+      el.hidden = !ok;
+      if(ok) shown++;
+    });
+    rows.forEach(function(tr){
+      var ok = match(tr, active, q);
+      tr.hidden = !ok;
+    });
+    count.textContent = shown + " / " + TOTAL + " ý tưởng";
+    empty.hidden = shown > 0;
+    tableEmpty.hidden = shown > 0;
+    // Debounce announcement sau khi gõ ngừng: cập nhật live region theo từng phím
+    // làm screen reader đọc lè cả chuỗi "n / 18 ý tưởng" trong lúc đánh máy.
+    if (ready){
+      if (statusTimer !== null) clearTimeout(statusTimer);
+      statusTimer = setTimeout(function(){
+        statusEl.textContent = shown + " / " + TOTAL + " ý tưởng" +
+          (shown === 0 ? ". Không ý tưởng nào khớp bộ lọc hiện tại." : "");
+        statusTimer = null;
+      }, 700);
+    }
+  }
+
+  chips.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      active = btn.dataset.filter;
+      chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c===btn)); });
+      apply();
+    });
+  });
+  qInput.addEventListener("input", apply);
+  apply();
+  ready = true;
+
+  var btn = document.getElementById("theme");
+  var LABEL = { "":"Giao diện: hệ thống", light:"Giao diện: sáng", dark:"Giao diện: tối" };
+  var order = ["", "light", "dark"];
+  var cur = "";
+  try {
+    var saved = localStorage.getItem("spri-theme");
+    cur = order.indexOf(saved)!==-1 ? saved : "";
+  } catch(e){ cur = ""; }
+  function paint(){
+    if(cur) document.documentElement.setAttribute("data-theme", cur);
+    else document.documentElement.removeAttribute("data-theme");
+    btn.textContent = LABEL[cur];
+    try { localStorage.setItem("spri-theme", cur); } catch(e){}
+  }
+  paint();
+  btn.addEventListener("click", function(){
+    cur = order[(order.indexOf(cur)+1) % order.length];
+    paint();
+  });
+})();
+</script>
+<script id="dbqa-data" type="application/json">{"generated": "2026-10-16", "source": "phongvan_qa_java.html", "dbEntries": 247, "metaDropped": 7, "technicalEntries": 240, "groups": [{"title": "Index", "items": [{"q": "Vì sao đánh index thì truy vấn chạy nhanh hơn? Cấu trúc index là gì?", "a": "Index là một cấu trúc dữ liệu phụ được tạo trên một hoặc nhiều cột, lưu giá trị đã sắp xếp kèm tham chiếu tới dòng gốc trong bảng. Khi truy vấn có điều kiện trên cột đó, database tra trong index trước để tìm nhanh vị trí các dòng cần lấy, rồi mới đọc dữ liệu ở bảng chính, nên giảm số dòng phải quét. Cấu trúc phổ biến là B-tree, nhưng không phải hệ quản trị nào cũng dùng B-tree — còn có hash index, bitmap index hoặc các biến thể khác tùy hệ quản trị và tùy loại truy vấn.", "level": "intern", "topic": "SQL", "note": "Người phỏng vấn lưu ý: không phải database nào cũng dùng cấu trúc cây cân bằng, và đó cũng không phải cấu trúc tối ưu cho mọi trường hợp."}, {"q": "Đánh index có ưu điểm và nhược điểm gì?", "a": "Ưu điểm là tăng tốc các câu truy vấn có điều kiện lọc, sắp xếp hoặc join trên cột được đánh index, vì database tra trong cấu trúc index thay vì quét toàn bộ bảng. Nhược điểm là làm chậm các thao tác ghi: mỗi lần INSERT/UPDATE/DELETE, database phải cập nhật cả bảng chính lẫn cấu trúc index, và với index dạng cây thì cần thêm thời gian để giữ cây cân bằng. Ngoài ra index chiếm thêm dung lượng lưu trữ, và đánh quá nhiều index sẽ làm hiệu năng ghi giảm rõ rệt.", "level": "intern", "topic": "SQL", "note": ""}, {"q": "Một bảng có 10 cột thì mình đánh được index cho mấy cột? Có đánh index cho hai cột cùng lúc được không?", "a": "Về nguyên tắc đánh index cho cột nào cũng được, nhưng thực tế nên đánh cho những cột hay xuất hiện trong WHERE, JOIN hoặc ORDER BY. Có thể đánh index cho hai cột cùng lúc — gọi là composite index trên (cot_a, cot_b). Nếu tạo hai index riêng lẻ thì mỗi lần truy vấn database chỉ dùng được một trong hai, không gộp lại thành lợi thế. Composite index lưu cả hai cột trong cùng một cấu trúc nên truy vấn lọc theo cả hai sẽ nhanh hơn. Cần chú ý thứ tự cột trong index rất quan trọng: index (cot_a, cot_b) dùng được cho truy vấn lọc theo cot_a hoặc cả hai cột, nhưng không dùng được cho truy vấn chỉ lọc cot_b.", "level": "intern", "topic": "SQL", "note": "Người phỏng vấn sửa quan trọng: đánh hai index riêng lẻ thì “chạy hai lần không có gì đâu nhanh”; phải tạo một composite index chung cho cả hai cột."}]}, {"title": "Transaction & tính nguyên tử", "items": [{"q": "Em có biết khái niệm transaction không? Transaction nghĩa là gì?", "a": "Transaction là một đơn vị công việc gồm nhiều thao tác trên database và phải thỏa mãn tính chất ACID: Atomicity (hoặc làm hết, hoặc không làm gì cả), Consistency (dữ liệu luôn ở trạng thái hợp lệ), Isolation (các transaction chạy song song không phá nhau) và Durability (đã commit thì dữ liệu được ghi bền vững). Ví dụ chuyển tiền từ tài khoản A sang B gồm hai bước trừ A và cộng B — nếu bước hai lỗi thì bước một phải bị hủy, không thể để trừ tiền mà không cộng. Trong Java, transaction được quản lý ở tầng JDBC với setAutoCommit, commit, rollback, hoặc ở tầng framework: Spring với @Transactional tự mở/commit/rollback transaction, mặc định chỉ rollback khi gặp RuntimeException. Điều quan trọng là các thao tác song song vẫn có thể va nhau, nên phải hiểu isolation level, khóa và optimistic locking — không thể coi mỗi transaction là một phiên hoàn toàn tách biệt.", "level": "middle", "topic": "SQL", "note": ""}, {"q": "Khi nào thì dùng commit, khi nào thì dùng rollback?", "a": "Commit dùng khi tất cả thao tác trong transaction đã thành công và mình muốn xác nhận ghi vĩnh viễn xuống database. Rollback dùng khi có bất kỳ thao tác nào thất bại giữa chừng, hoặc khi phát hiện dữ liệu không thỏa điều kiện nghiệp vụ — lúc đó phải hủy toàn bộ thay đổi của transaction để database không rơi vào trạng thái dở dang. Ví dụ một transaction gồm trừ tiền tài khoản A, cộng tiền tài khoản B và ghi log: cả ba bước thuộc cùng một transaction nên nếu bước ghi log lỗi thì phải rollback hết. Trong Spring, @Transactional mặc định rollback khi gặp RuntimeException hoặc Error, còn checked exception thì không — muốn đổi phải cấu hình rollbackFor. Ngoài ra có thể chủ động gọi setRollbackOnly() khi biết chắc transaction phải hủy.", "level": "middle", "topic": "SQL", "note": ""}, {"q": "Một câu UPDATE cập nhật 1 triệu dòng, đến dòng cuối cùng mới bị lỗi — nếu KHÔNG dùng transaction thì 999.000 dòng đã cập nhật có bị roll back không? Và chạy lại câu lệnh lần thứ hai thì xử lý thế nào?", "a": "Không dùng transaction thì không có roll back: 999.000 dòng đã update được giữ nguyên, chỉ dòng cuối cùng lỗi là không được cập nhật. Hệ quả là chạy lại câu UPDATE lần hai thì dữ liệu bị thao tác lần nữa — như tình huống tăng lương 10%, chạy hai lần thì nhân viên bị tăng hai lần. Cách giải quyết là dùng transaction để thao tác là nguyên tử: có lỗi thì toàn bộ quay về trạng thái ban đầu, chạy lại mới an toàn.", "level": "junior", "topic": "SQL", "note": "Người phỏng vấn dẫn tình huống tăng lương 10% chạy lần hai thành tăng hai lần rồi chốt “giải quyết bài toán như thế nào thì mình phải dùng transaction”; trước đó ứng viên tự tin “một câu thì dùng transaction làm gì”."}, {"q": "Còn vấn đề xử lý giao dịch transaction thì sao? Ví dụ một chức năng đi qua nhiều service và phải đảm bảo transactional — chỉ cần một bước thất bại là rollback toàn bộ. Em có gặp trường hợp đó chưa?", "a": "Trường hợp này em có tìm hiểu và biết hướng chuẩn là Saga pattern, nhưng em chưa dùng trong thực tế. Em từng gặp một bài tương tự khi tích hợp chữ ký số cho hệ thống của một công ty chứng khoán: đối tác khi họ đăng ký chứng từ số xong thì họ không rollback được, nên nếu bước lưu dữ liệu bên em bị lỗi là không thể hoàn tác phía họ. Cách em xử lý lúc đó là ghi trước một bản ghi ở trạng thái chờ trong database; nếu đối tác đăng ký thành công mà lưu bên em lỗi thì bản ghi vẫn còn ở trạng thái chưa xử lý. Sau đó có job chạy hàng ngày quét lại những bản ghi chưa xử lý để xử lý tiếp.", "level": "middle", "topic": "SQL", "note": "Người phỏng vấn có hai nhận xét đáng giá: (1) câu dồn “Xử lý tay à?” làm lộ cách xử lý thật là thủ công, xử lý tiếp bằng job chạy hàng ngày; (2) “dự án của em nó vẫn to tới mức dùng microservice rồi… dự án cũng đâu có nhỏ nữa đâu” — nhận xét về quy mô dự án."}]}, {"title": "JOIN và thứ tự thực thi câu lệnh", "items": [{"q": "Em có làm INNER JOIN và LEFT JOIN chưa? Hai cái đó giống và khác nhau như thế nào?", "a": "Điểm giống nhau là cả hai đều dùng để kết hợp dữ liệu từ hai hay nhiều bảng dựa trên điều kiện join. Điểm khác nhau cốt lõi: INNER JOIN chỉ trả về những bản ghi khớp ở cả hai bảng, bản ghi nào không có cặp khớp sẽ bị loại bỏ. LEFT JOIN trả về toàn bộ bản ghi của bảng bên trái, và với những bản ghi không tìm thấy dữ liệu khớp ở bảng phải thì các cột của bảng phải sẽ nhận giá trị NULL. Ví dụ muốn liệt kê tất cả học sinh kể cả những bạn chưa đăng ký lớp nào thì phải dùng LEFT JOIN; còn chỉ muốn danh sách học sinh đã có lớp thì dùng INNER JOIN. Tương tự còn có RIGHT JOIN và FULL OUTER JOIN tùy vào việc muốn giữ toàn bộ bên nào.", "level": "intern", "topic": "SQL", "note": "Người phỏng vấn nhấn mạnh phải diễn đạt cho rõ ràng, dễ hiểu: hiểu đúng mà nói lộn xộn thì đi phỏng vấn vẫn rớt."}, {"q": "Em có phân biệt được GROUP BY và ORDER BY trong SQL không?", "a": "GROUP BY dùng để nhóm các bản ghi có cùng giá trị ở một hoặc nhiều cột, thường đi kèm các hàm tổng hợp như COUNT, SUM, AVG, MAX, MIN — ví dụ: SELECT department, COUNT(*) FROM employee GROUP BY department; cho biết số nhân viên từng phòng ban. ORDER BY dùng để sắp xếp kết quả theo một hoặc nhiều cột, tăng dần ASC hoặc giảm dần DESC — ví dụ: SELECT * FROM employee ORDER BY salary DESC;. Hai mệnh đề khác nhau hoàn toàn về mục đích: một cái nhóm dữ liệu để tính toán, một cái sắp xếp thứ tự hiển thị, và hoàn toàn có thể dùng đồng thời trong cùng một câu truy vấn.", "level": "intern", "topic": "SQL", "note": "Ứng viên trả lời “ORDER BY là chọn lọc theo nhiều thành phần” — anh Huy nhấn mạnh SQL không nắm được thì gần như chắc chắn trượt vị trí backend."}, {"q": "Em có biết thứ tự thực thi của câu lệnh SELECT không? Cái nào chạy trước, cái nào chạy sau?", "a": "Thứ tự logic thực thi của một câu SELECT là FROM xác định nguồn dữ liệu, rồi WHERE lọc từng dòng, rồi GROUP BY gom nhóm, rồi HAVING lọc theo nhóm, rồi SELECT chọn và tính toán cột bao gồm cả các hàm tổng hợp, rồi ORDER BY sắp xếp kết quả, cuối cùng là LIMIT và OFFSET. Điểm gây nhầm lẫn nhiều nhất là SELECT tuy được viết đầu tiên trong câu lệnh nhưng lại chạy gần cuối, sau GROUP BY và HAVING. Điều này giải thích vì sao alias đặt ở SELECT không dùng được trong WHERE nhưng lại dùng được trong ORDER BY, vì ORDER BY chạy sau SELECT. Hiểu thứ tự này giúp viết truy vấn phức tạp và debug lỗi logic dễ hơn nhiều.", "level": "intern", "topic": "SQL", "note": "Anh Huy nhấn mạnh: nhớ thứ tự thực thi sẽ giải thích được vì sao alias của SELECT không dùng được trong WHERE."}]}, {"title": "Subquery, tập hợp & logic NULL", "items": [{"q": "Em có biết khi nào dùng IN và khi nào dùng EXISTS không?", "a": "IN dùng để kiểm tra một giá trị có nằm trong một danh sách hay một subquery trả về một cột nào đó, phù hợp khi danh sách nhỏ và tĩnh. EXISTS là correlated subquery, nó trả về true/false và chỉ cần tìm thấy một dòng là dừng nên thường hiệu quả hơn khi kiểm tra tồn tại trên bảng lớn. Một điểm rất hay bị hỏi: NOT IN sẽ trả về tập rỗng nếu subquery có giá trị NULL, còn NOT EXISTS thì không bị vấn đề đó. Nên dùng NOT EXISTS khi có khả năng gặp NULL.", "level": "intern", "topic": "SQL", "note": ""}, {"q": "Em phân biệt được NOT IN và NOT EXISTS không? Cho ví dụ về NOT IN.", "a": "NOT IN kiểm tra một giá trị không nằm trong một tập hợp giá trị (danh sách hoặc subquery), còn NOT EXISTS kiểm tra subquery không trả về dòng nào. Ví dụ NOT IN: SELECT name FROM users WHERE name NOT IN ('Nam', 'Thành', 'Lan') — dùng ngoặc đơn, không dùng ngoặc nhọn. Lưu ý khi dùng NOT IN: nếu tập hợp con có chứa NULL thì kết quả có thể luôn rỗng vì so sánh với NULL trả về unknown — đây là lý do nhiều trường hợp nên dùng NOT EXISTS.", "level": "intern", "topic": "SQL", "note": "Ứng viên chưa dùng NOT EXISTS bao giờ và nhầm loại dấu ngoặc trong SQL."}, {"q": "Em có học UNION và UNION ALL chưa? Chúng khác nhau thế nào?", "a": "UNION dùng để gộp kết quả của hai câu SELECT với điều kiện cùng số cột và kiểu dữ liệu tương thích. UNION loại bỏ các dòng trùng nhau nên tốn thêm bước khử trùng, còn UNION ALL giữ nguyên tất cả các dòng nên nhanh hơn. Khi chắc chắn hai tập kết quả không trùng thì nên dùng UNION ALL để tránh chi phí vô ích.", "level": "intern", "topic": "SQL", "note": ""}, {"q": "Em phân biệt được NULL và chuỗi rỗng trong SQL không?", "a": "NULL nghĩa là không có giá trị, hoàn toàn khác với chuỗi rỗng '' là có giá trị nhưng độ dài bằng 0. Vì NULL không so sánh được bằng dấu bằng, muốn kiểm tra phải dùng IS NULL hoặc IS NOT NULL. Đây là nguồn lỗi rất phổ biến khi viết điều kiện WHERE, và cũng ảnh hưởng tới các hàm tổng hợp vì COUNT(cot) bỏ qua NULL còn COUNT(*) thì không.", "level": "intern", "topic": "SQL", "note": "Ứng viên không trả lời được câu này và được yêu cầu về nghiên cứu lại."}]}, {"title": "Quan hệ & khóa chính", "items": [{"q": "Em có phân biệt được quan hệ 1-1, 1-n và n-n không? Cho ví dụ cụ thể. Khi gặp quan hệ n-n thì mình xử lý thế nào trong database?", "a": "Quan hệ 1-1: một bảng user tương ứng với một bảng account, mỗi user có đúng một tài khoản. Quan hệ 1-n: một danh mục có nhiều sản phẩm, mỗi sản phẩm thuộc một danh mục. Quan hệ n-n: một sản phẩm có thể thuộc nhiều danh mục và một danh mục có nhiều sản phẩm, ví dụ sữa gà có thể thuộc cả danh mục Đồ uống và Sức khỏe. Để biểu diễn quan hệ n-n, tạo thêm một bảng trung gian (ví dụ product_category) lấy khóa chính của hai bảng kia làm hai cột — thường là khóa chính tổng hợp. Bảng trung gian tồn tại vì hai bảng chính không thể chứa trực tiếp mối quan hệ nhiều-nhiều.", "level": "intern", "topic": "SQL", "note": ""}, {"q": "Trong một bảng cơ sở dữ liệu thì có bao nhiêu khóa chính?", "a": "Một bảng chỉ có duy nhất một khóa chính. Tuy nhiên khóa chính đó có thể là khóa phức hợp (composite key) gồm nhiều cột cùng nhau, ví dụ bảng điểm danh dùng cặp maSinhVien và maMonHoc làm khóa chính. Nhiều cột tham gia không có nghĩa là nhiều khóa chính, mà là một khóa được hợp thành từ nhiều cột, và tổ hợp đó vẫn phải đảm bảo duy nhất và không được NULL. Ngoài khóa chính, một bảng có thể có nhiều khóa duy nhất (UNIQUE) và nhiều khóa ngoại, nhưng đó là khái niệm khác.", "level": "intern", "topic": "SQL", "note": "Câu này dễ bị lừa: nhiều người trả lời 'nhiều khóa chính' chỉ vì thấy cột có thể gồm nhiều trường."}]}, {"title": "Ràng buộc toàn vẹn khi xóa, khi tạo trùng", "items": [{"q": "Khi xóa một học sinh mà bản ghi đó đã có kết quả học tập (khóa ngoại nối bảng) thì xóa được luôn không — xử lý thế nào?", "a": "Bảng kết quả học tập tham chiếu bảng học sinh bằng khóa ngoại, nên khi học sinh đó còn bản ghi kết quả học tập thì không thể xóa thẳng bản ghi học sinh; thực tế thường gặp lỗi khi xóa vì vướng khóa ngoại. Muốn xóa được thì phải xử lý ràng buộc trước: xóa các bản ghi kết quả học tập của học sinh đó trước, rồi mới xóa bản ghi học sinh. Nếu muốn kết quả tự mất theo khi xóa học sinh thì phải thiết lập ràng buộc cho phép xóa kèm; còn để mặc định thì cơ sở dữ liệu sẽ chặn thao tác xóa để giữ toàn vẹn tham chiếu.", "level": "fresher", "topic": "Database & Thiết kế DB", "note": "Ứng viên diễn đạt chưa chuẩn (“hai khóa thuộc vào nhau thì xóa học sinh là kết quả mất theo luôn”); người phỏng vấn bác bằng câu hỏi ngược rồi chuyển câu khác. Ứng viên tự nhận thực tế từng bị lỗi khi xóa vì khóa ngoại."}, {"q": "Nếu chuyến bay có khóa riêng, vậy làm sao xử lý trùng? Ví dụ VN123 ngày 01 tháng 6 lỡ bị tạo thành hai dòng thì sao?", "a": "Em làm theo kiểu trước khi tạo chuyến bay thì kiểm tra trong vòng 24 giờ trước đã có chuyến bay nào cùng số hiệu chưa, nếu có thì chặn không cho tạo. Nhưng quy tắc 24 giờ này em tự nghĩ ra chứ không dựa trên yêu cầu nghiệp vụ. Cách đúng là dùng ràng buộc duy nhất (unique constraint) trên cặp số hiệu chuyến bay và ngày khởi hành, để database tự chặn việc tạo trùng. Như vậy vừa chính xác vừa không phụ thuộc vào logic ở tầng ứng dụng.", "level": "intern", "topic": "SQL", "note": "Người phỏng vấn phản biện rằng quy tắc 24 giờ do ứng viên tự đặt ra, không xuất phát từ yêu cầu nghiệp vụ."}]}, {"title": "Chuẩn hóa & dữ liệu lịch sử", "items": [{"q": "Thực tế project chuẩn hóa database tới mức nào? Vì sao không thể đạt 3NF hoàn toàn?", "a": "Thực tế không dự án nào đạt chuẩn 3NF hoàn toàn, thường nằm giữa 2NF và 3NF (khoảng “2.5NF”) vì phải đánh đổi giữa chuẩn hóa với hiệu năng và độ đơn giản khi truy vấn. BCNF gần như không dự án nào đạt. Cần biết thêm NoSQL (ví dụ MongoDB) cho các bài toán không dùng SQL.", "level": "middle", "topic": "Database & Thiết kế DB", "note": ""}, {"q": "Bảng product có lưu giá tiền, bảng order detail cũng lưu giá tiền — vì sao lưu giá hai lần, có bị dư thừa dữ liệu không?", "a": "Đây là dư thừa có chủ đích, không phải lỗi thiết kế. Giá trong bảng product là giá hiện tại và sẽ thay đổi theo thời gian, còn giá trong order detail là giá tại thời điểm mua và phải bất biến vì liên quan tới hóa đơn và đối soát tài chính. Nếu không lưu lại giá ở order detail thì khi sản phẩm tăng giá, tất cả các đơn hàng cũ sẽ hiển thị sai số tiền người dùng đã trả. Vì vậy đây là trường hợp denormalization cần thiết, tức là chấp nhận dư thừa để đảm bảo tính đúng đắn của dữ liệu lịch sử.", "level": "intern", "topic": "SQL", "note": "Ứng viên trả lời chưa chính xác; điểm mấu chốt là giá phải chốt tại thời điểm mua, không phụ thuộc giá hiện hành của sản phẩm."}]}, {"title": "Đo hiệu năng & cạm bẫy ORM", "items": [{"q": "Em làm sao để tối ưu hiệu suất của một câu SQL, ví dụ tìm kiếm theo họ tên hay địa chỉ?", "a": "Với các bài toán chung chung thì đánh index cho các cột hay được WHERE, JOIN, ORDER BY là bước đầu tiên. Nhưng khi cần tối ưu một câu SQL cụ thể thì bên em dùng EXPLAIN/EXPLAIN ANALYZE để xem database thực hiện từng bước như thế nào, mỗi bước tốn bao nhiêu effort, từ đó biết chỗ nào đang chậm. Một best practice quan trọng là filter dữ liệu trước khi join: nếu business cho phép, nên lọc bớt để số dòng ít lại rồi mới join, thay vì join hai bảng lớn rồi mới lọc, vì khi số record nhiều thì join sẽ chạy rất lâu. Cần lưu ý là kế hoạch thực thi chỉ mang tính dự đoán: cùng một câu query nhưng bảng A nhiều dữ liệu và bảng B ít dữ liệu sẽ cho kết quả khác với trường hợp ngược lại, và mỗi hệ quản trị cơ sở dữ liệu lại triển khai join theo cách khác nhau. Vì vậy phải đo trên dữ liệu thật và kiểm chứng lại sau khi tối ưu.", "level": "senior", "topic": "SQL", "note": ""}, {"q": "Em giải thích vấn đề N+1 query là gì?", "a": "N+1 thường xảy ra khi dùng các annotation như @OneToMany hoặc @ManyToMany trong entity. Khi Hibernate truy vấn database, nhìn bên ngoài chỉ là một câu query, nhưng logic nghiệp vụ cần select dữ liệu từ nhiều bảng, và mỗi record của bảng này lại map với các record của bảng khác, nên bên trong câu SQL sinh ra rất nhiều subquery. Việc đó dẫn đến vấn đề N+1 và làm chương trình chạy rất chậm. Trước đó khi nói về nhược điểm của ORM, em cũng kể N+1 hay gặp ở quan hệ one-to-many, many-to-many và khá khó khi check debug; muốn tránh thì phải hiểu rõ vấn đề nằm ở đâu để xử lý.", "level": "middle", "topic": "Database & Thiết kế DB", "note": ""}]}, {"title": "SQL hay NoSQL, và tầng truy cập từ Java", "items": [{"q": "Vậy tóm lại khi nào nên dùng SQL và khi nào nên dùng NoSQL?", "a": "Theo em, chọn SQL khi: dữ liệu có cấu trúc ổn định, ít thay đổi; cần quan hệ chặt chẽ giữa các bảng; cần transaction và đảm bảo toàn vẹn dữ liệu — điển hình là nghiệp vụ tài chính, phân quyền, quản lý user. Chọn NoSQL khi: cấu trúc dữ liệu thay đổi thường xuyên, schema không ổn định, cần đọc/ghi nhanh theo document mà không cần join nhiều — ví dụ dữ liệu case bên em. Cách nhớ đơn giản: SQL mạnh về quan hệ và tính đúng đắn; NoSQL mạnh về tính linh hoạt và khả năng mở rộng ngang. Dự án thực tế thường dùng cả hai: database quan hệ làm nguồn sự thật cho dữ liệu nghiệp vụ, NoSQL cho dữ liệu dạng document, log hoặc event.", "level": "senior", "topic": "Database & Thiết kế DB", "note": ""}, {"q": "Nếu dùng Spring Data JPA thì giải quyết truy vấn trên như thế nào?", "a": "Với truy vấn đơn giản có thể dùng derived query method trong repository như countByUserId để Spring tự sinh câu SQL. Với truy vấn phức tạp cần gom nhóm và đếm, cách làm là viết JPQL bằng @Query trong repository và map kết quả vào một projection hoặc DTO chứa thông tin người dùng và số đơn, ví dụ SELECT a.user.id, COUNT(a) FROM Applicant a GROUP BY a.user.id ORDER BY COUNT(a) DESC. Nếu truy vấn quá đặc thù hoặc cần tối ưu thì có thể dùng nativeQuery để viết SQL thuần, nhưng nên là phương án cuối. Điểm quan trọng là Spring Data JPA vẫn giải quyết được, không phải viết SQL thuần rồi nhét vào là xong, vì khi đó mất hết lợi ích của ORM.", "level": "intern", "topic": "SQL", "note": "Anh Huy nhấn mạnh: viết câu lệnh thuần rồi nhét vào thì Spring Data JPA vô nghĩa — cần biết JPQL và projection."}, {"q": "Em có biết kết nối cơ sở dữ liệu bằng JDBC không? Phân biệt java.util và java.sql?", "a": "JDBC là chuẩn API của Java để kết nối và làm việc với cơ sở dữ liệu, gồm các bước: nạp driver, mở Connection, tạo PreparedStatement, thực thi truy vấn, đọc ResultSet rồi đóng tài nguyên. Về hai package: java.util chứa các lớp tiện ích tiêu chuẩn như collection, Date, Optional; còn java.sql chứa các lớp làm việc với database như Connection, Statement, PreparedStatement, ResultSet, SQLException. Điểm cần nhớ là JDBC dùng PreparedStatement để truyền tham số an toàn, chống SQL Injection, và hiện nay thường được framework như Spring Data JPA hay Hibernate bọc lại nên ít khi viết trực tiếp.", "level": "intern", "topic": "SQL", "note": "Em chưa học JDBC và trả lời không được; anh Huy khuyên vẫn cần biết nền để hiểu framework làm gì bên dưới."}]}]}</script>
+<script>
+(function(){
+  "use strict";
+  var data = JSON.parse(document.getElementById("dbqa-data").textContent);
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];
+    });
+  }
+  function norm(s){
+    return String(s).toLowerCase().normalize("NFD")
+      .replace(/[̀-ͯ]/g,"")
+      .replace(/đ/g,"d");
+  }
+  var root = document.getElementById("dbqa-list");
+  root.innerHTML = data.groups.map(function(g){
+    var body = g.items.map(function(it){
+      var meta = "Mức: " + it.level + " · Chủ đề: " + it.topic;
+      var note = it.note
+        ? '<p class="note-line"><strong>Nhận xét của người phỏng vấn:</strong> ' + esc(it.note) + "</p>"
+        : "";
+      return '<details data-hay="' + esc(norm(it.q + " " + it.a + " " + it.topic + " " + it.level)) + '">' +
+        "<summary>" + esc(it.q) + "</summary>" +
+        '<p class="note-line">' + esc(meta) + "</p>" +
+        "<p>" + esc(it.a) + "</p>" + note + "</details>";
+    }).join("");
+    return '<div class="dbqa-group"><h3>' + esc(g.title) + "</h3>" + body + "</div>";
+  }).join("");
+
+  var input = document.getElementById("db-search");
+  var countEl = document.getElementById("db-count");
+  var emptyEl = document.getElementById("db-empty");
+  var statusEl = document.getElementById("db-status");
+  var groups = [].slice.call(root.querySelectorAll(".dbqa-group"));
+  var total = data.groups.reduce(function(n, g){ return n + g.items.length; }, 0);
+  var statusTimer = null;
+  var ready = false;
+  function apply(){
+    var q = norm(input.value.trim());
+    var shown = 0;
+    groups.forEach(function(g){
+      var visible = 0;
+      [].slice.call(g.querySelectorAll("details")).forEach(function(d){
+        var hit = !q || d.getAttribute("data-hay").indexOf(q) !== -1;
+        d.hidden = !hit;
+        if (hit) visible++;
+      });
+      g.hidden = visible === 0;
+      shown += visible;
+    });
+    countEl.textContent = shown + " / " + total + " câu";
+    emptyEl.hidden = shown !== 0;
+    // Debounce announcement sau khi gõ ngừng: cập nhật live region theo từng phím
+    // làm screen reader đọc lè cả chuỗi "n / 25 câu" trong lúc đánh máy.
+    if (ready){
+      if (statusTimer !== null) clearTimeout(statusTimer);
+      statusTimer = setTimeout(function(){
+        statusEl.textContent = shown + " / " + total + " câu" +
+          (shown === 0 ? ". Không có câu nào khớp từ khóa." : "");
+        statusTimer = null;
+      }, 700);
+    }
+  }
+  input.addEventListener("input", apply);
+  input.addEventListener("search", apply);
+  apply();
+  ready = true;
+})();
+</script>
+</body>
+</html>
